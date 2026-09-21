@@ -104,15 +104,24 @@ SINGLE_VALUE_FACETS = ("effort",)
 # 首页问题列表：kind=question 的条目必须指向一个存在的内容条目
 QUESTION_LINK_REQUIRED = True
 
+# docs/<dir> → 「专题」下的二级分组。顺序即导航顺序。
+SUBSECTIONS = [
+    ("timelines", "时间线"),
+    ("countries", "国家与地区"),
+    ("careers", "行业与职业"),
+    ("research", "科研方法"),
+    ("competitions", "竞赛专题"),
+    ("tools", "工具与模板"),
+    ("sources", "来源与核实"),
+]
+SUBSECTION_LABELS = dict(SUBSECTIONS)
+SUBSECTION_ORDER = {k: i for i, (k, _) in enumerate(SUBSECTIONS)}
+
+# 章节顺序由各文件 front matter 的 section_order 决定，这里只定义一级分组名。
 SECTION_LABELS = {
     "index": "目录",
-    "timelines": "时间线",
-    "countries": "国家与地区",
-    "careers": "行业与职业",
-    "research": "科研方法",
-    "competitions": "竞赛专题",
-    "sources": "来源与核实",
     "meta": "内容规范",
+    "docs": "专题",
 }
 
 # ---------------------------------------------------------------- 极简 YAML
@@ -294,6 +303,7 @@ def split_entries(body: str) -> list[dict]:
     buf: list[str] = []
     entry: dict | None = None
     fence = None
+    group = ""  # 当前所属的 ## 分组标题，供侧栏导航使用
 
     def flush_entry():
         nonlocal entry
@@ -342,11 +352,16 @@ def split_entries(body: str) -> list[dict]:
                 continue
             flush_entry()
             flush_text()
-            entry = {"kind": "entry", "title": title, "meta": meta, "lines": [], "line": i + 1}
+            entry = {"kind": "entry", "title": title, "meta": meta,
+                     "group": group, "lines": [], "line": i + 1}
             i = body_start
             continue
         if hm and len(hm.group(1)) <= 2:
             flush_entry()
+            if len(hm.group(1)) == 1:
+                group = ""
+            elif len(hm.group(1)) == 2:
+                group = hm.group(2)
             buf.append(line)
             i += 1
             continue
@@ -454,6 +469,11 @@ def validate(root: Path, docs: list[Doc]) -> tuple[list[str], list[str], dict]:
         dtype = str(f.get("type") or "")
         if dtype and dtype not in DOC_TYPES:
             err(doc, f"type 取值非法：{dtype}")
+        if doc.rel.startswith("book/") and dtype in ("chapter", "intro"):
+            if not f.get("section"):
+                err(doc, "front matter 缺少 section（一级导航分组）")
+            if f.get("section_order") in (None, ""):
+                err(doc, "front matter 缺少 section_order（决定导航顺序的整数）")
         if doc.status and doc.status not in DOC_STATUS:
             err(doc, f"status 取值非法：{doc.status}")
         lv = str(f.get("last_verified") or "")
@@ -500,6 +520,7 @@ def validate(root: Path, docs: list[Doc]) -> tuple[list[str], list[str], dict]:
                     err(doc, f"问题条目 {eid} 缺少 link")
                 entries.append({"id": eid, "kind": "question", "link": link, "title": e["title"],
                                 "doc": doc.rel, "route": doc.entry_route(eid),
+                                "group": e.get("group") or "",
                                 "stages": _as_list(meta.get("stages")), "topics": _as_list(meta.get("topics")),
                                 "status": status})
                 continue
@@ -550,6 +571,8 @@ def validate(root: Path, docs: list[Doc]) -> tuple[list[str], list[str], dict]:
                 "location": doc.location,
                 "route": doc.entry_route(eid),
                 "doc_title": doc.title,
+                "section": _doc_section(doc),
+                "group": e.get("group") or "",
                 "order": doc.front.get("order"),
                 "stages": _as_list(meta.get("stages")),
                 "topics": _as_list(meta.get("topics")),
@@ -605,6 +628,176 @@ def stale_threshold() -> str:
     return (datetime.date.today() - datetime.timedelta(days=STALE_DAYS)).isoformat()
 
 
+# ---------------------------------------------------------------- 导航树
+
+def _int(v, default: int = 0) -> int:
+    try:
+        return int(str(v))
+    except (TypeError, ValueError):
+        return default
+
+
+def doc_nav_hidden(doc: Doc) -> bool:
+    v = doc.front.get("nav")
+    if v is None or v == "":
+        return False
+    return str(v).strip().lower() in ("false", "no", "0", "off")
+
+
+def _doc_section(doc: Doc) -> str:
+    """一级分组：docs/ 归入「专题」，meta/ 归入「内容规范」，book 章节读 front matter。"""
+    if doc.rel.startswith("docs/"):
+        return SECTION_LABELS["docs"]
+    if doc.rel.startswith("meta/"):
+        return SECTION_LABELS["meta"]
+    return str(doc.front.get("section") or "").strip() or "其它"
+
+
+def _doc_subsection(doc: Doc) -> tuple[str, int]:
+    explicit = str(doc.front.get("subsection") or "").strip()
+    if explicit:
+        return explicit, _int(doc.front.get("sub_order"), 500)
+    head = doc.rel.split("/")[1] if "/" in doc.rel else ""
+    if head in SUBSECTION_LABELS:
+        return SUBSECTION_LABELS[head], SUBSECTION_ORDER[head]
+    return "", 500
+
+
+def _doc_section_order(doc: Doc) -> int:
+    explicit = doc.front.get("section_order")
+    if explicit not in (None, ""):
+        return _int(explicit, 500)
+    if doc.rel.startswith("docs/"):
+        return 90
+    if doc.rel.startswith("meta/"):
+        return 95
+    return 500
+
+
+def _entry_node(e: dict) -> dict:
+    return {
+        "kind": "entry",
+        "label": e["title"],
+        "id": e["id"],
+        "href": e["route"],
+        "status": e["status"],
+        "count": 1 if e["status"] == "complete" else 0,
+    }
+
+
+def _doc_children(doc: Doc, items: list[dict], use_groups: bool) -> list[dict]:
+    """items 为本文档的条目（不含问题条目）。use_groups 决定是否保留 ## 分组层。"""
+    if not use_groups:
+        return [_entry_node(e) for e in items]
+    groups: list[dict] = []
+    index: dict[str, dict] = {}
+    for e in items:
+        label = e.get("group") or ""
+        if label not in index:
+            index[label] = {"kind": "group", "label": label, "href": doc.route, "children": []}
+            groups.append(index[label])
+        index[label]["children"].append(_entry_node(e))
+    # 只有一个匿名分组（文档里没有 ## 分组）时拍平，避免多余一层
+    if len(groups) == 1 and not groups[0]["label"].strip():
+        return groups[0]["children"]
+    return groups
+
+
+def _count(node: dict) -> int:
+    return node.get("count", 0) + sum(_count(c) for c in node.get("children", []))
+
+
+def _first_doc_href(children: list[dict]) -> str:
+    """取子树里第一个「文档级」链接（跳过条目级链接），用作分组标题的入口。"""
+    for c in children or []:
+        if c.get("kind") == "entry":
+            continue
+        if c.get("href"):
+            return c["href"]
+        h = _first_doc_href(c.get("children", []))
+        if h:
+            return h
+    return ""
+
+
+def build_nav(docs: list[Doc], entries: list[dict]) -> list[dict]:
+    """构建「一级分组 → （二级分组）→ 文档 → ## 分组 → 条目」的导航树。"""
+    by_doc: dict[str, list[dict]] = {}
+    for e in entries:
+        if e["kind"] != "question":  # 首页问答只在首页正文里呈现
+            by_doc.setdefault(e["doc"], []).append(e)
+
+    sections: dict[str, dict] = {}
+    order: list[str] = []
+    for doc in docs:
+        if doc_nav_hidden(doc):
+            continue
+        if str(doc.front.get("type") or "") not in ("intro", "chapter", "doc"):
+            continue
+        label = _doc_section(doc)
+        sec = sections.get(label)
+        if sec is None:
+            sec = sections[label] = {"kind": "section", "label": label,
+                                     "order": _doc_section_order(doc), "subs": {}, "docs": []}
+            order.append(label)
+        sec["order"] = min(sec["order"], _doc_section_order(doc))
+        sub_label, sub_order = _doc_subsection(doc)
+        bucket = sec["subs"].get(sub_label)
+        if bucket is None:
+            bucket = sec["subs"][sub_label] = {"kind": "subsection", "label": sub_label,
+                                               "order": sub_order, "docs": []}
+        bucket["docs"].append(doc)
+
+    nav: list[dict] = []
+    for label in order:
+        sec = sections[label]
+        groups = sorted(sec["subs"].values(), key=lambda g: (g["order"], g["label"], ))
+        multi_doc = sum(len(g["docs"]) for g in groups) > 1 or len(groups) > 1
+        sec_href = ""
+
+        if len(groups) == 1 and not groups[0]["label"]:
+            # 普通章节：直接展开文档
+            docs_sorted = sorted(groups[0]["docs"], key=lambda d: (_int(d.front.get("order")), d.title))
+            children = _section_children(sec["label"], docs_sorted, by_doc, multi_doc)
+            same = next((d for d in docs_sorted if d.title == sec["label"]), None)
+            sec_href = same.route if same else _first_doc_href(children)
+        else:
+            children = []
+            for g in groups:
+                docs_sorted = sorted(g["docs"], key=lambda d: (_int(d.front.get("order")), d.title))
+                sub = {"kind": "subsection", "label": g["label"],
+                       "children": _section_children(g["label"], docs_sorted, by_doc, True)}
+                sub["href"] = _first_doc_href(sub["children"])
+                sub["count"] = _count(sub)
+                children.append(sub)
+
+        node = {"kind": "section", "label": sec["label"], "children": children}
+        node["href"] = sec_href or _first_doc_href(children)
+        node["count"] = _count(node)
+        nav.append(node)
+    return nav
+
+
+def _section_children(label: str, docs_sorted: list[Doc], by_doc: dict, multi_doc: bool) -> list[dict]:
+    """一个分组内部：单文档时展开其 ## 分组，多文档时每篇文档一个节点。"""
+    if len(docs_sorted) == 1:
+        doc = docs_sorted[0]
+        return _doc_children(doc, by_doc.get(doc.rel, []), use_groups=True)
+
+    out: list[dict] = []
+    for doc in docs_sorted:
+        items = by_doc.get(doc.rel, [])
+        if doc.title == label:
+            # 文档名与分组名相同（例如「从这里开始」）：拍平，不再多一层
+            out.extend(_doc_children(doc, items, use_groups=False))
+            continue
+        node = {"kind": "doc", "label": doc.title, "href": doc.route,
+                "children": _doc_children(doc, items, use_groups=False)}
+        node["count"] = _count(node)
+        out.append(node)
+    return out
+
+
 def build_index(root: Path) -> tuple[dict, list[str], list[str]]:
     docs = load_docs(root)
     errors, warnings, extra = validate(root, docs)
@@ -612,54 +805,7 @@ def build_index(root: Path) -> tuple[dict, list[str], list[str]]:
     real_entries = [e for e in entries if e["kind"] == "entry" and e["status"] == "complete"]
     questions = [e for e in entries if e["kind"] == "question" and e["status"] == "complete"]
 
-    by_section: dict[str, dict] = {}
-    for doc in docs:
-        dtype = str(doc.front.get("type") or "doc")
-        section = str(doc.front.get("section") or "") or ("book" if dtype in ("chapter", "intro") else "other")
-        group = "book" if dtype in ("chapter", "intro") else ("index" if section == "index" else doc.rel.split("/")[0] if "/" in doc.rel and section not in SECTION_LABELS else section)
-        if dtype in ("chapter", "intro"):
-            group = "book"
-        elif section in SECTION_LABELS:
-            group = section
-        by_section.setdefault(group, {"key": group, "label": SECTION_LABELS.get(group, "正文" if group == "book" else group),
-                                      "items": []})
-        complete = sum(1 for e in doc.entries
-                       if (e["meta"] or {}).get("status") == "complete"
-                       and str((e["meta"] or {}).get("kind") or "entry") != "question")
-        todo = sum(1 for e in doc.entries if (e["meta"] or {}).get("status") == "todo")
-        qcount = sum(1 for e in doc.entries
-                     if str((e["meta"] or {}).get("kind") or "") == "question")
-        raw_order = doc.front.get("order")
-        try:
-            order = int(str(raw_order))
-        except (TypeError, ValueError):
-            order = 0
-        by_section[group]["items"].append({
-            "id": str(doc.front.get("id") or doc.rel),
-            "title": doc.title,
-            "location": doc.location,
-            "route": doc.route,
-            "status": doc.status,
-            "order": order,
-            "summary": str(doc.front.get("summary") or ""),
-            "complete": complete,
-            "todo": todo,
-            "questions": qcount,
-            "entries": len(doc.entries),
-            "last_verified": str(doc.front.get("last_verified") or ""),
-        })
-
-    group_order = ["book", "index", "timelines", "countries", "careers", "research", "competitions", "sources", "meta"]
-    nav = []
-    for key in group_order:
-        if key in by_section:
-            g = by_section.pop(key)
-            g["items"].sort(key=lambda x: (x["order"], x["title"]))
-            nav.append(g)
-    for key in sorted(by_section):
-        g = by_section[key]
-        g["items"].sort(key=lambda x: (x["order"], x["title"]))
-        nav.append(g)
+    nav = build_nav(docs, entries)
 
     index = {
         "generated_at": datetime.datetime.now().astimezone().isoformat(timespec="seconds"),
@@ -671,6 +817,12 @@ def build_index(root: Path) -> tuple[dict, list[str], list[str]]:
                        "multi": k not in SINGLE_VALUE_FACETS}
                    for k, v in FACETS.items()},
         "nav": nav,
+        "docs": [
+            {"location": d.location, "title": d.title, "route": d.route,
+             "status": d.status, "summary": str(d.front.get("summary") or ""),
+             "last_verified": str(d.front.get("last_verified") or "")}
+            for d in docs if not doc_nav_hidden(d)
+        ],
         "entries": [
             {k: v for k, v in e.items() if k != "kind" or True}
             for e in sorted(real_entries, key=lambda e: (str(e.get("order") or 0), e["doc"], e["title"]))
