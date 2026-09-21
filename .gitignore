@@ -14,3 +14,6 @@ Thumbs.db
 .idea/
 .vscode/
 *.swp
+
+# 工作区数据（本地会话/记忆，不随仓库发布）
+.workbuddy/
