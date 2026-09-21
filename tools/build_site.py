@@ -58,7 +58,6 @@ def entry_badges(meta_block: dict, today_iso: str, threshold: str) -> str:
     return '<p class="entry-badges">' + "".join(p for p in parts if p) + "</p>"
 
 
-FIELD_LABEL_RE = re.compile(r"^-\s*([^：:\n]{2,14})\s*[:：]\s*")
 H1_RE = re.compile(r"^#\s+(.*?)\s*#*\s*$")
 
 
@@ -79,92 +78,11 @@ def _join_content(parts: list[str]) -> str:
     return out
 
 
-# 这些字段内容长、查阅频率低，默认折叠，避免把正文拉得很长
-COLLAPSIBLE_FIELDS = ("证据与来源",)
-
-
-def _split_field_blocks(lines: list[str]) -> list[tuple[str, str, list[str]]]:
-    """把条目正文切成「普通文本块」与「字段块」，字段块保留自己的缩进内容。
-
-    字段块 = `- 字段：` 行 + 其后所有缩进行（含缩进的列表与多级子项），
-    遇到不缩进的新字段行或正文行即结束。
-    """
-    blocks: list[tuple[str, str, list[str]]] = []
-    i, n = 0, len(lines)
-    while i < n:
-        ln = lines[i]
-        m = FIELD_LABEL_RE.match(ln)
-        if not m:
-            blocks.append(("text", "", [ln]))
-            i += 1
-            continue
-        name = m.group(1).strip()
-        content: list[str] = []
-        head = ln[m.end():].strip()
-        if head:
-            content.append(head)
-        i += 1
-        while i < n:
-            nxt = lines[i]
-            if not nxt.strip():
-                j = i + 1
-                while j < n and not lines[j].strip():
-                    j += 1
-                if j < n and lines[j].startswith((" ", "\t")):
-                    content.append("")
-                    i = j
-                    continue
-                # 吃掉空行，别让它变成独立文本块，否则会把字段列表切断
-                i = j
-                break
-            if nxt.startswith((" ", "\t")):
-                content.append(nxt)
-                i += 1
-                continue
-            break
-        body = textwrap.dedent("\n".join(content)).strip("\n")
-        blocks.append(("field", name, body.splitlines() if body else []))
-    return blocks
-
-
-def prepare_entry_body(lines: list[str]) -> str:
-    """把「- 字段：」渲染成统一的字段列表：字段名与内容同一行、段间距一致；
-    长字段（如「证据与来源」）折叠成可展开的一块。"""
-    out: list[str] = []
-    open_fields = False
-    for kind, name, content in _split_field_blocks(lines):
-        if kind == "text":
-            if open_fields:
-                out.append("</ul>")
-                open_fields = False
-            html_text, _ = mdrender.render("\n".join(content))
-            out.append(html_text)
-            continue
-        if not open_fields:
-            out.append('<ul class="fields">')
-            open_fields = True
-        inner, _ = mdrender.render("\n".join(content))
-        inner = inner.strip()
-        if inner.startswith("<p>") and inner.endswith("</p>") and inner.count("<p>") == 1:
-            inner = inner[3:-4]
-        if name in COLLAPSIBLE_FIELDS and inner:
-            out.append(
-                '<li class="field-collapsible">'
-                f"<details><summary><strong>{html.escape(name)}</strong></summary>"
-                f'<div class="detail-body">{inner}</div></details></li>'
-            )
-        else:
-            out.append(f"<li><strong>{html.escape(name)}</strong>：{inner}</li>")
-    if open_fields:
-        out.append("</ul>")
-    return "\n".join(out)
-
-
 def render_entry_section(seg: dict, threshold: str, today_iso: str) -> tuple[str, str]:
     """渲染一个条目为 <section>，同时返回它的 id（供索引与 SEO 页复用）。"""
     meta_block = seg["meta"] or {}
     eid = str(meta_block.get("id") or M.slugify(seg["title"]))
-    inner = prepare_entry_body(seg["lines"])
+    inner, _ = mdrender.render("\n".join(seg["lines"]).strip("\n"))
     html_str = (
         f'<section class="entry" id="{html.escape(eid)}">'
         f"<h3>{mdrender._inline(seg['title'])}</h3>"

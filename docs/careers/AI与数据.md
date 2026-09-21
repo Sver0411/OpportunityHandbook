@@ -7,7 +7,7 @@ section: 09 专题手册
 section_order: 90
 subsection: 行业与职业
 sub_order: 2
-status: complete
+status: partial
 stages: [college, undergraduate, master, new_grad, work_1_3, career_change]
 topics: [job]
 summary: AI 与数据方向的现实路径与常见门槛。
@@ -26,7 +26,7 @@ AI 与数据方向看重**问题定义与评估能力**：指标如何定义、�
 
 ## 怎么用本手册
 
-- 数据能力见第二章；项目与作品见第三章。
+- 数据能力见 [学业与技能](../../book/02-在学校里先把基础打好.md)；项目与作品见 [积累经历](../../book/03-开始积累真正能留下来的经历.md)。
 
 ## 来源与更新
 

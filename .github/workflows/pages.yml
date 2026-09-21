@@ -25,9 +25,9 @@ jobs:
         with:
           python-version: "3.12"
 
-      # 与 CI 使用同一个严格入口：CI 不合格的内容不会被部署
-      - name: 严格校验并构建
-        run: python3 tools/build.py --strict
+      # 与 CI 使用完全相同的发布校验：内容不合格就不会被部署
+      - name: 发布校验（Release Validation）
+        run: python3 tools/validate_release.py --quick
 
 
       - uses: actions/configure-pages@v5

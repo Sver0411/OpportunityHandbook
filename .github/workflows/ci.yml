@@ -24,28 +24,20 @@ jobs:
         with:
           node-version: "20"
 
-      # 统一入口：元数据 / 重复 id / 内部链接与锚点 / 构建 / 前端语法 / 外链永久失效
-      # strict 下任何警告（含元数据解析警告）都会失败；403/429/5xx/超时不阻塞
-      - name: 严格校验与构建
+      # 统一发布校验：与 Pages 使用同一个入口 tools/validate_release.py
+      # （构建与元数据 / IA 一致性 / Markdown / 文档一致性 / 内容硬门 / 内容规则测试）
+      - name: 发布校验（Release Validation）
+        run: python3 tools/validate_release.py --quick
+
+      # 构建产物清单与导航一致性（构建后校验，避免产物缺失被漏掉）
+      - name: 构建与元数据报告
         run: python3 tools/build.py --strict --report
-
-      - name: Canonical IA 一致性（导航与正文 parity）
-        run: python3 tools/check_ia.py
-
-      - name: Markdown 格式质量
-        run: python3 tools/check_markdown_quality.py
-
-      - name: 内容质量硬门（旧模板/缺 summary 必须为零）
-        run: python3 tools/check_content_quality.py --hard
 
       - name: 正文深度审计（报告级，不阻塞）
         run: python3 tools/check_content_quality.py --depth
 
       - name: Metadata 审计（报告级，不阻塞）
         run: python3 tools/metadata_audit.py || true
-
-      - name: 内容规则测试
-        run: python3 tools/run_tests.py
 
       - name: 断言构建产物齐全
         run: |

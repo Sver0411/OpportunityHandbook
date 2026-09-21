@@ -420,47 +420,6 @@ body.nav-collapsed .shell { margin-left: 0; }
 .chip-stale { background: var(--warn-soft); border-color: var(--warn-line); color: var(--warn); }
 .chip-todo { background: transparent; border: 1px dashed var(--line-strong); color: var(--muted); }
 
-/* 十个字段：字段名用近黑加重，段落间距拉开 */
-.entry ul.fields { list-style: none; padding-left: 15px; margin: 0; }
-.entry ul.fields > li {
-  margin: 0 0 16px; font-size: var(--read-size); line-height: 1.78; color: var(--ink);
-}
-.entry ul.fields > li > strong:first-child { color: var(--ink); font-weight: 650; }
-.entry ul.fields ol, .entry ul.fields ul { margin: 9px 0 0; padding-left: 1.35em; }
-.entry ul.fields li li { margin: 6px 0; font-size: 16px; line-height: 1.72; }
-
-/* 「证据与来源」默认折叠：正文更短，需要时点开核对 */
-.entry ul.fields > li.field-collapsible > details {
-  border-top: 1px solid var(--line); margin-top: 2px; padding-top: 12px;
-}
-.entry ul.fields > li.field-collapsible > details > summary {
-  display: flex; align-items: center; cursor: pointer; list-style: none;
-  font-size: var(--read-size); line-height: 1.78; color: var(--ink);
-}
-.entry ul.fields > li.field-collapsible > details > summary::-webkit-details-marker { display: none; }
-.entry ul.fields > li.field-collapsible > details > summary::after {
-  content: "展开"; margin-left: 10px; padding: 1px 9px;
-  font-size: 11.5px; color: var(--muted);
-  border: 1px solid var(--line); border-radius: var(--pill);
-}
-.entry ul.fields > li.field-collapsible > details[open] > summary::after { content: "收起"; }
-.entry ul.fields > li.field-collapsible > details > summary:hover::after {
-  color: var(--ink); border-color: var(--line-strong);
-}
-.entry .detail-body {
-  margin-top: 12px; color: var(--ink-2);
-  animation: oh-reveal var(--dur) var(--ease);
-}
-.entry .detail-body > p { margin: 0 0 12px; font-size: 16px; line-height: 1.72; }
-.entry .detail-body ul, .entry .detail-body ol { margin: 0; padding-left: 1.35em; }
-.entry .detail-body li { font-size: 16px; margin: 6px 0; line-height: 1.72; }
-
-.todo-list { list-style: none; padding: 0; margin: 0; display: flex; flex-wrap: wrap; gap: 7px; }
-.todo-list li {
-  font-size: 12.5px; color: var(--muted); padding: 3px 11px;
-  border: 1px dashed var(--line-strong); border-radius: var(--pill);
-}
-
 /* ================================================================ 浏览与筛选 */
 
 .browse-head { margin-bottom: 24px; }
