@@ -11,7 +11,8 @@
   4. check_docs_consistency.py      规范/README 不得退回旧正文模型
   5. check_content_quality.py --hard 内容硬门（旧模板 / 缺 summary / P0 过薄）
   6. run_tests.py                   内容规则测试
-  7. smoke_test.py                  浏览器冒烟（--quick 时跳过）
+  7. check_links.py --strict        外部链接（仅永久失效 404/410 阻塞）
+  8. smoke_test.py                  浏览器冒烟（--quick 时跳过）
 
 这样「内容不合格就不能上线」在 CI 与 Pages 两端同时成立。
 """
@@ -34,6 +35,9 @@ STEPS: list[tuple[str, list[str]]] = [
     ("文档一致性", [PY, "tools/check_docs_consistency.py"]),
     ("内容质量硬门", [PY, "tools/check_content_quality.py", "--hard"]),
     ("内容规则测试", [PY, "tools/run_tests.py"]),
+    # 外链可达性：只有真正的永久失效（HTTP 404/410）才失败；
+    # SSL / 超时 / 代理出口问题一律记为「无法判定」
+    ("外部链接可达性", [PY, "tools/check_links.py", "--strict"]),
 ]
 
 SMOKE = ("浏览器冒烟", [PY, "tools/smoke_test.py"])

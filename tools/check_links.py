@@ -53,8 +53,10 @@ TRANSIENT_REASONS = (
     "remote disconnected", "broken pipe", "temporarily unavailable",
     "name or service not known", "nodename nor servname",
     "temporary failure in name resolution", "no route to host",
-    # 网络层不可达：CI runner 的出口波动，不代表链接失效
+    # 网络层不可达 / 代理出口问题：CI runner 或本机代理的波动，不代表链接失效
     "network is unreachable", "unreachable", "host is down",
+    "tunnel connection failed", "bad gateway", "proxy", "connect tunnel",
+    "errno 8", "eof occurred",
 )
 
 

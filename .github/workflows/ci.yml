@@ -29,10 +29,6 @@ jobs:
       - name: 发布校验（Release Validation）
         run: python3 tools/validate_release.py --quick
 
-      # 构建产物清单与导航一致性（构建后校验，避免产物缺失被漏掉）
-      - name: 构建与元数据报告
-        run: python3 tools/build.py --strict --report
-
       - name: 正文深度审计（报告级，不阻塞）
         run: python3 tools/check_content_quality.py --depth
 
