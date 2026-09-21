@@ -1,0 +1,42 @@
+# 正文内容许可协议
+
+本仓库的**正文内容**采用 **Creative Commons Attribution 4.0 International（CC BY 4.0）**。
+
+适用范围：
+
+- `book/`（16 章正文与条目）
+- `docs/`（时间线、国家、行业、科研、竞赛、来源等专题）
+- `meta/`（条目格式、元数据、证据与来源、写作规范）
+- `README.md`、`CONTRIBUTING.md`
+
+代码部分（`tools/`、`site/`、`.github/`）采用 MIT，见 LICENSE。
+
+## 你可以做什么
+
+- 复制、分发、转载、节选、翻译、改写本仓库的任何正文内容，包括商业用途。
+- 把内容用于课程、内部培训、讲义、公众号、视频、播客、AI 训练语料。
+- 基于本仓库做衍生知识库、离线版、电子书、检索工具。
+
+## 唯一的要求
+
+**署名（Attribution）**：
+
+- 保留出处：项目名「机会与成长指南（OpportunityHandbook）」与仓库地址。
+- 标注是否做过修改（例如「节选自……，有删改」）。
+- 不要暗示原作者为你或你的衍生作品背书。
+
+合适的署名示例：
+
+> 内容来自「机会与成长指南」（OpportunityHandbook），
+> https://github.com/Sver0411/OpportunityHandbook ，采用 CC BY 4.0 许可，本文有删改。
+
+## 注意事项
+
+- 本仓库正文引用的第三方内容（论文摘要、官方文件原文、图表、数据）版权归原权利人，转载时请以原始来源的许可为准。
+- 本仓库正文是信息整理与判断框架，不构成法律、医疗、投资或职业决策建议。
+- 完整的法律条款以官方文本为准：https://creativecommons.org/licenses/by/4.0/legalcode.zh-hans
+  许可摘要（人话版）：https://creativecommons.org/licenses/by/4.0/deed.zh-hans
+
+---
+
+为什么内容与代码分两个许可：正文的价值在于被引用与传播，CC BY 4.0 是知识库类内容最通用的署名型开放许可，也明确覆盖翻译与商业使用；而工具与站点代码用 MIT，避免与其它项目的代码混用时产生兼容问题。
