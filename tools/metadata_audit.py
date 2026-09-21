@@ -26,6 +26,9 @@ sys.path.insert(0, str(HERE))
 import meta as M  # noqa: E402
 
 WORK_STAGES = {"work_1_3", "work_3_5", "senior", "career_change"}
+# 学生阶段：明显职场中后期的条目不应再挂这些
+STUDENT_STAGES = {"highschool", "secondary_vocational", "college", "undergraduate",
+                  "master", "phd", "new_grad"}
 # 06/07 章里明显属于职场阶段的主题关键词（标题级匹配）
 WORK_TOPICS = ("晋升", "Senior", "Staff", "Principal", "Manager", "Team Lead", "跳槽",
                "绩效", "招聘", "第一次带人", "行业影响力", "Ownership", "试用期",
@@ -44,6 +47,7 @@ def main() -> int:
     entries = [e for e in extra["entries"] if e.get("status") == "complete" and e.get("kind") == "entry"]
 
     suspicious = []
+    overbroad = []
     invalid = []
     for e in entries:
         stages = set(e.get("stages") or [])
@@ -61,11 +65,17 @@ def main() -> int:
         if (in_work_chapter or title_is_work) and not (stages & WORK_STAGES):
             suspicious.append({"id": e.get("id"), "title": title, "file": loc,
                                "stages": sorted(stages)})
+        # 第二类：明显职场中后期条目仍混入大量学生阶段
+        late_career = {"senior"} <= stages or ({"work_3_5"} <= stages and not stages & STUDENT_STAGES)
+        if title_is_work and (stages & STUDENT_STAGES) and late_career:
+            overbroad.append({"id": e.get("id"), "title": title, "file": loc,
+                              "stages": sorted(stages)})
 
     report = {
         "generated_at": datetime.datetime.now().astimezone().isoformat(timespec="seconds"),
         "total_complete_entries": len(entries),
         "stage_suspicious": suspicious,
+        "stage_overbroad": overbroad,
         "stage_invalid": invalid,
     }
     out = ROOT / "METADATA_AUDIT_REPORT.md"
@@ -76,6 +86,7 @@ def main() -> int:
         "",
         f"complete 条目：{len(entries)}",
         f"- stages 可疑（职场主题但无职场阶段标注）：{len(suspicious)}",
+        f"- stages 过宽（职场中后期仍挂学生阶段）：{len(overbroad)}",
         f"- stages 非法或为空：{len(invalid)}",
         "",
         "说明：可疑项只做提示，不自动修改；需要按内容逐条重判 stages。",
@@ -84,6 +95,10 @@ def main() -> int:
     if suspicious:
         lines += ["## stages 可疑清单", "", "| entry_id | 标题 | 文件 | 当前 stages |", "| --- | --- | --- | --- |"]
         lines += [f"| {x['id']} | {x['title']} | {x['file']} | {', '.join(x['stages'])} |" for x in suspicious]
+        lines.append("")
+    if overbroad:
+        lines += ["## stage_overbroad 清单", "", "| entry_id | 标题 | 文件 | 当前 stages |", "| --- | --- | --- | --- |"]
+        lines += [f"| {x['id']} | {x['title']} | {x['file']} | {', '.join(x['stages'])} |" for x in overbroad]
         lines.append("")
     if invalid:
         lines += ["## stages 非法清单", ""]
@@ -94,7 +109,7 @@ def main() -> int:
     if args.json:
         print(json.dumps(report, ensure_ascii=False, indent=2))
     else:
-        print(f"stages 可疑：{len(suspicious)}，非法：{len(invalid)}")
+        print(f"stages 可疑：{len(suspicious)}，过宽：{len(overbroad)}，非法：{len(invalid)}")
         for x in suspicious[:15]:
             print(f"  {x['id']} 《{x['title']}》 {x['stages']}")
         print(f"报告已写出：{out.relative_to(ROOT)}")

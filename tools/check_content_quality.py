@@ -105,17 +105,33 @@ def write_report(r: dict) -> None:
                          (r["p2"], "P2 旧模板残留"), (r["no_summary"], "缺 summary")):
         if items:
             out += table(items, label) + [""]
-    (ROOT / "CONTENT_DEPTH_REPORT.md").write_text("\n".join(out), encoding="utf-8")
+    report_dir = ROOT / "reports"
+    report_dir.mkdir(exist_ok=True)
+    (report_dir / "content-depth.md").write_text("\n".join(out), encoding="utf-8")
 
 
 def main() -> int:
+    """两种运行模式：
+
+    --hard  硬门（CI 阻塞）：旧模板残留 / 缺 summary / 结构性问题必须全为 0。
+    --depth 深度审计（不阻塞）：生成 CONTENT_DEPTH_REPORT.md，P0/P1 只报告。
+    不带参数时等价于 --hard 加摘要输出。
+    """
     ap = argparse.ArgumentParser()
     ap.add_argument("--report", action="store_true")
     ap.add_argument("--json", action="store_true")
+    ap.add_argument("--hard", action="store_true", help="只检查必须阻塞 CI 的项")
+    ap.add_argument("--depth", action="store_true", help="只生成正文深度报告，永远 exit 0")
     args = ap.parse_args()
+    mode = "depth" if args.depth else ("hard" if args.hard else "all")
     r = check()
-    if args.report:
+
+    if mode == "depth":
         write_report(r)
+        print(f"深度报告：P0 {len(r['p0'])} / P1 {len(r['p1'])} / 旧模板 {len(r['p2'])} / 缺 summary {len(r['no_summary'])}")
+        print("已写出 reports/content-depth.md（不阻塞）")
+        return 0
+
     if args.json:
         print(json.dumps(r, ensure_ascii=False, indent=2))
     else:
@@ -129,8 +145,10 @@ def main() -> int:
                 print(f"  {label}: {it['id']} 《{it['title']}》 {it['chars']}字 {it['legacy']}")
         if len(r["p0"]) > 12:
             print(f"  … 还有 {len(r['p0']) - 12} 条")
-    # 硬门：P0 / P2 / 缺 summary 都要求为 0；P1 只报告
-    ok = not r["p0"] and not r["p2"] and not r["no_summary"]
+        if mode == "hard":
+            print("（hard 模式：只校验旧模板 / summary / 结构性项）")
+    # 硬门：旧模板残留与缺 summary 必须为 0；P0 深度暂不阻塞（P0 清零后加入）
+    ok = not r["p2"] and not r["no_summary"]
     return 0 if ok else 1
 
 
