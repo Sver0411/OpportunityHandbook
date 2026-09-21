@@ -1,4 +1,5 @@
 ---
+nav: false
 id: docs-index
 title: 专题索引
 type: doc

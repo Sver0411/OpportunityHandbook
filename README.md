@@ -17,8 +17,8 @@
 - [本科生怎么开始科研？](book/08-科研与学术.md#research-undergrad-start)
 - [第一份工作应该怎么看？](book/05-实习与第一份工作.md#first-job-what-to-trade-for)
 - [两个 Offer 应该怎么比较？](book/06-找工作.md#offer-comparison)
-- [工作几年以后应该怎么升职？](book/07-工作后的晋升跳槽与转行.md#promotion-first-years)
-- [转行要不要从零开始？](book/07-工作后的晋升跳槽与转行.md#career-change-keep-capital)
+- [工作几年以后应该怎么升职？](book/07-工作后的发展.md#promotion-first-years)
+- [转行要不要从零开始？](book/07-工作后的发展.md#career-change-keep-capital)
 - [我的 GitHub 项目算项目经历吗？](book/10-项目作品与开源.md#project-what-counts-as-experience)
 - [什么证书值得考？](book/11-技能语言与证书.md#certificate-what-is-worth-it)
 - [怎么比较两个完全不同的机会？](book/02-怎么判断一个机会值不值得.md#judge-compare-two-opportunities)
@@ -45,7 +45,7 @@
 | 04 | [留学与海外教育](book/04-留学与海外教育.md) |
 | 05 | [实习与第一份工作](book/05-实习与第一份工作.md) |
 | 06 | [找工作](book/06-找工作.md) |
-| 07 | [工作后的晋升跳槽与转行](book/07-工作后的晋升跳槽与转行.md) |
+| 07 | [工作后的发展](book/07-工作后的发展.md) |
 | 08 | [科研与学术](book/08-科研与学术.md) |
 | 09 | [竞赛与挑战](book/09-竞赛与挑战.md) |
 | 10 | [项目作品与开源](book/10-项目作品与开源.md) |
@@ -54,9 +54,11 @@
 | 13 | [社群、导师与行业影响力](book/13-社群导师与行业影响力.md) |
 | 14 | [创业、自由职业与副业](book/14-创业自由职业与副业.md) |
 | 15 | [不知道自己想做什么](book/15-不知道自己想做什么.md) |
-| 16 | [常见低价值投入与陷阱](book/16-常见低价值投入与陷阱.md) |
+| 16 | [避坑：常见低价值投入与陷阱](book/16-避坑.md) |
 
-专题资料在 `docs/`：[时间线](docs/timelines/) · [国家与地区](docs/countries/) · [行业与职业](docs/careers/) · [科研方法](docs/research/) · [竞赛专题](docs/competitions/) · [来源与核实](docs/sources/)。
+专题资料在 `docs/`：[时间线](docs/timelines/) · [国家与地区](docs/countries/) · [行业与职业](docs/careers/) · [科研方法](docs/research/) · [竞赛专题](docs/competitions/) · [工具与模板](docs/tools/) · [来源与核实](docs/sources/)。
+
+在线页面的左侧目录按同一套结构组织：**主题分组 → 章节 → 分组 → 条目**，可以逐级展开，也可以整栏折叠。
 
 ## 每条长什么样
 
@@ -120,6 +122,12 @@ python3 tools/check_links.py                  # 外部链接可达性
 - 代码（`tools/`、`site/`、`.github/`）：**MIT**，见 [LICENSE](LICENSE)。
 
 为什么分开：正文的价值在于被引用与传播，CC BY 4.0 是知识库类内容最通用的署名型开放许可；代码用 MIT，避免与其它项目混用时产生兼容问题。
+
+## 内容边界
+
+本项目的组织方式、字段设计、证据分级、页面视觉与实现都是独立设计的。正文只做两件事：**整理已有公开事实**（并给出原始来源）和**给出可被反驳的判断框架**（并标出这是判断而非事实）。
+
+不收录：未经核实的数据、无来源的经验结论、付费推广性质的“机会推荐”。
 
 ---
 
