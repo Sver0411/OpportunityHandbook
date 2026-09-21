@@ -56,12 +56,17 @@ class PlannedContent(unittest.TestCase):
         self.assertGreater(len(self.planned), 0, "应当仍有 planned 文档作为路线图")
 
     def test_not_in_nav(self):
-        """planned 文档不应进导航；但 Canonical IA 明确列出的专题页例外（它们已写完）。"""
-        canonical = {"日本", "科研手册", "Offer 对比表", "AI 与数据",
-                     "信息差、机会焦虑与从众", "转行时间线", "导师筛选表"}
-        labels = {n["label"] for n in walk(INDEX["nav"])}
-        hit = (labels & self.planned_titles) - canonical
-        self.assertEqual(hit, set(), f"planned 文档出现在导航里：{sorted(hit)[:3]}")
+        """planned 文档的 location 不应出现在任何导航链接里。"""
+        hrefs = set()
+        def collect(nodes):
+            for n in nodes:
+                if n.get("href"):
+                    hrefs.add(n["href"])
+                collect(n.get("children") or [])
+        collect(INDEX["nav"])
+        for d in INDEX["roadmap"]:
+            self.assertNotIn(d["location"], str(hrefs),
+                             f"planned 文档出现在导航里：{d['location']}")
 
     def test_not_in_user_docs(self):
         locs = {d["location"] for d in INDEX["docs"]}

@@ -1,6 +1,6 @@
 # IA Parity Report
 
-生成时间：2026-09-21T21:55:13+08:00
+生成时间：2026-09-21T22:50:35+08:00
 
 核对对象：`meta/navigation.json`（Canonical IA，唯一事实源）与线上左栏目录（`site/data/index.json` 的 `nav`）。
 

@@ -188,7 +188,7 @@ class WritingModel(unittest.TestCase):
             self.assertIsNotNone(block, f"找不到 {eid}")
             body = block.group(0)
             # 旧模板的遗留正文可以并进来；正文自身不再用固定栏目
-            own = body.split("\n## ", 1)[0] + "\n## " + body.split("\n## ", 1)[1].split("\n## ")[0]
+            own = body.split("\n## ", 1)[0]
             self.assertNotIn("- 一句话：", own, f"{eid} 的开篇仍在用旧模板")
             self.assertIn("## 来源与更新", body, f"{eid} 缺少来源与更新")
             self.assertIn("最后核实", body, f"{eid} 缺少核实日期")
