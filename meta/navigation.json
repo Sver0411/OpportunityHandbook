@@ -2041,7 +2041,7 @@
               "title": "怎么找职场 Mentor",
               "target": {
                 "type": "entry",
-                "entry_id": "community-mentorship"
+                "entry_id": "find-workplace-mentor"
               },
               "nav_id": "06-01-05"
             }
@@ -2151,7 +2151,7 @@
               "title": "工作后重新读书",
               "target": {
                 "type": "entry",
-                "entry_id": "career-study-after-work"
+                "entry_id": "work-study-again"
               },
               "nav_id": "06-03-06"
             }

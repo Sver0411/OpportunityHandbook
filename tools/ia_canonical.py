@@ -258,7 +258,7 @@ TREE = """
     怎么真正学会一份工作 @n:work-learn-the-job
     怎么理解业务 @n:work-understand-business
     怎么和直属领导合作 @n:work-with-manager
-    怎么找职场 Mentor @e:community-mentorship
+    怎么找职场 Mentor @e:find-workplace-mentor
   从执行到独立负责
     Ownership @n:work-ownership
     怎么承担更大的项目 @n:work-bigger-projects
@@ -266,12 +266,12 @@ TREE = """
     怎么积累业务影响 @n:work-business-impact
     怎么记录职业成果 @n:work-record-achievements
   工作后继续学习
-    技能还要不要继续学 @n:work-learn-skills
+    技能还要不要继续学 @e:work-learn-skills
     工作后考证 @n:work-certificates
     工作后学语言 @n:work-learn-language
     工作后做个人项目 @n:work-side-project
     工作后做开源 @n:work-open-source
-    工作后重新读书 @e:career-study-after-work
+    工作后重新读书 @e:work-study-again
   建立行业关系
     Networking @e:community-networking
     专业社群 @n:community-professional-group
