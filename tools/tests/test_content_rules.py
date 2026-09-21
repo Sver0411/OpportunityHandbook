@@ -56,8 +56,11 @@ class PlannedContent(unittest.TestCase):
         self.assertGreater(len(self.planned), 0, "应当仍有 planned 文档作为路线图")
 
     def test_not_in_nav(self):
+        """planned 文档不应进导航；但 Canonical IA 明确列出的专题页例外（它们已写完）。"""
+        canonical = {"日本", "科研手册", "Offer 对比表", "AI 与数据",
+                     "信息差、机会焦虑与从众", "转行时间线", "导师筛选表"}
         labels = {n["label"] for n in walk(INDEX["nav"])}
-        hit = labels & self.planned_titles
+        hit = (labels & self.planned_titles) - canonical
         self.assertEqual(hit, set(), f"planned 文档出现在导航里：{sorted(hit)[:3]}")
 
     def test_not_in_user_docs(self):
@@ -94,9 +97,21 @@ class NavigationDepth(unittest.TestCase):
         worst = max(self.max_depth(n) for n in INDEX["nav"])
         self.assertLessEqual(worst, 3, f"导航最深 {worst} 层")
 
-    def test_no_entry_nodes_in_nav(self):
+    def test_entry_nodes_are_in_nav(self):
+        """左栏必须显示到具体文章：树里要有 entry 叶子节点。"""
         kinds = {n.get("kind") for n in walk(INDEX["nav"])}
-        self.assertNotIn("entry", kinds)
+        self.assertIn("entry", kinds)
+        leaves = [n for n in walk(INDEX["nav"]) if n.get("kind") == "entry"]
+        self.assertGreater(len(leaves), 200, f"左栏条目太少：{len(leaves)}")
+
+
+    def test_nav_comes_from_navigation_json(self):
+        """导航必须由 meta/navigation.json 决定，一级栏目逐项对应 Canonical IA。"""
+        import json
+        nav = json.loads((ROOT / "meta" / "navigation.json").read_text(encoding="utf-8"))
+        want = [n["title"] for n in nav["items"]]
+        got = [n["label"] for n in INDEX["nav"]]
+        self.assertEqual(got, want, "左栏一级栏目与 Canonical IA 不一致")
 
     def test_entries_still_searchable(self):
         self.assertGreater(len(INDEX["entries"]), 100)

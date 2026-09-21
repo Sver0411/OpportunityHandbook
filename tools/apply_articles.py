@@ -88,6 +88,37 @@ def _meta_block(entry_id: str, art: dict, title: str) -> str:
     return "```meta\n" + "\n".join(lines) + "\n```"
 
 
+def _block_spans(text: str):
+    """把正文切成 ### 条目块，返回 [(起, 止, 标题行下标)]。线性扫描，避免回溯。"""
+    lines = text.splitlines(keepends=True)
+    starts = [i for i, l in enumerate(lines) if l.startswith("### ")]
+    if not starts:
+        return [], lines
+    spans = []
+    for k, s in enumerate(starts):
+        e = starts[k + 1] if k + 1 < len(starts) else len(lines)
+        for j in range(s + 1, e):
+            if lines[j].startswith("## "):
+                e = j
+                break
+        # 去掉尾部空行
+        while e - 1 > s and not lines[e - 1].strip():
+            e -= 1
+        spans.append((s, e))
+    return spans, lines
+
+
+def _block_span_with_id(text: str, entry_id: str):
+    spans, lines = _block_spans(text)
+    for s, e in spans:
+        blk = "".join(lines[s:e])
+        if re.search(r"^id:\s*" + re.escape(entry_id) + r"\s*$", blk, re.M):
+            off_s = sum(len(x) for x in lines[:s])
+            off_e = sum(len(x) for x in lines[:e])
+            return off_s, off_e
+    return None
+
+
 def apply(articles: dict) -> int:
     """写入/替换条目正文。返回处理的条目数。"""
     by_file: dict[str, list[tuple[str, dict]]] = {}
@@ -109,11 +140,24 @@ def apply(articles: dict) -> int:
             block = _meta_block(entry_id, art, title)
             body = art["body"].strip()
             block_text = f"### {title}\n\n{block}\n\n{body}\n"
-            pat = re.compile(r"^### " + re.escape(title) + r"(.*?)(?=^### |\Z)", re.S | re.M)
-            if pat.search(rest):
-                rest = pat.sub(lambda _m: block_text, rest, count=1)
+            # 1) 先按 id 精确定位（同一章节里可能有同名标题，例如两个「推荐信」）
+            span = _block_span_with_id(rest, entry_id)
+            if span:
+                s, e = span
+                rest = rest[:s] + block_text + rest[e:]
             else:
-                rest = rest.rstrip() + "\n\n" + block_text
+                pat = re.compile(r"^### " + re.escape(title) + r"(.*?)(?=^### |\Z)", re.S | re.M)
+                pm = pat.search(rest)
+                if pm:
+                    # 标题相同但 id 不同、且该块属于 Canonical IA 里的另一个条目时，
+                    # 说明是同名的不同条目（如两个「推荐信」）：追加而不是覆盖。
+                    mid = re.search(r"^id:\s*(\S+)", pm.group(1), re.M)
+                    if mid and mid.group(1) != entry_id and mid.group(1) in NAV_MAP:
+                        rest = rest.rstrip() + "\n\n" + block_text
+                    else:
+                        rest = pat.sub(lambda _m: block_text, rest, count=1)
+                else:
+                    rest = rest.rstrip() + "\n\n" + block_text
             touched += 1
 
         path.write_text(head + rest.rstrip() + "\n", encoding="utf-8")

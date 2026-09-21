@@ -868,7 +868,103 @@ def _first_doc_href(children: list[dict]) -> str:
     return ""
 
 
+def _entry_href(entry_id: str, entry_doc: dict[str, str]) -> str:
+    loc = entry_doc.get(entry_id)
+    if not loc:
+        return ""
+    return "#/doc/" + loc + "/" + entry_id
+
+
+def _target_href(target: dict, entry_doc: dict[str, str], docs_by_loc: set[str]) -> str:
+    if not target:
+        return ""
+    t = target.get("type")
+    if t == "entry":
+        return _entry_href(target.get("entry_id") or "", entry_doc)
+    if t == "doc":
+        loc = target.get("location") or ""
+        if loc not in docs_by_loc:
+            return ""
+        anchor = (target.get("anchor") or "").strip()
+        return "#/doc/" + loc + ("/" + anchor if anchor else "")
+    return ""
+
+
+def build_nav_from_ia(docs: list[Doc], entries: list[dict]) -> tuple[list[dict], list[str]]:
+    """用户侧导航树：完全由 meta/navigation.json 决定（Canonical IA）。
+
+    不再从正文的 section / subsection / ## 标题推导层级；Markdown 只负责正文。
+    返回 (nav, 未解析的节点路径列表)。
+    """
+    path_nav = Path(__file__).resolve().parent.parent / "meta" / "navigation.json"
+    if not path_nav.is_file():
+        return build_nav(docs, entries), []
+
+    spec = json.loads(path_nav.read_text(encoding="utf-8"))
+    entry_doc: dict[str, str] = {}
+    entry_status: dict[str, str] = {}
+    for e in entries:
+        eid = str(e.get("id") or "")
+        if eid:
+            entry_doc.setdefault(eid, e.get("location") or "")
+            entry_status[eid] = e.get("status") or ""
+    def _norm_loc(loc: str) -> str:
+        return loc[:-3] if str(loc).endswith(".md") else str(loc)
+
+    docs_by_loc = {_norm_loc(d.rel) for d in docs}
+
+    unresolved: list[str] = []
+
+    def convert(nodes: list[dict], depth: int, trail: list[str]) -> list[dict]:
+        out: list[dict] = []
+        for n in nodes:
+            title = n.get("title") or ""
+            kids = n.get("children") or []
+            target = n.get("target") or {}
+            here = trail + [title]
+            children = convert(kids, depth + 1, here) if kids else []
+            kind = "section" if depth == 0 else ("entry" if not kids and target.get("type") == "entry"
+                                                 else ("doc" if not kids else "group"))
+            href = _target_href(target, entry_doc, docs_by_loc)
+            # 只有「明确写了 target 却解析不到」或「叶子节点没有落脚点」才算问题；
+            # 纯分组节点没有 target 是正常的，它的链接沿用第一个子节点。
+            if (target and not href) or (not href and not kids):
+                unresolved.append(" > ".join(here))
+            href = href or first_href(children)
+            node = {
+                "kind": kind,
+                "label": title,
+                "nav_id": n.get("nav_id") or "",
+                "href": href,
+                "children": children,
+            }
+            leaves = _leaf_count(node)
+            if leaves:
+                node["count"] = leaves
+            out.append(node)
+        return out
+
+    def first_href(children: list[dict]) -> str:
+        for c in children:
+            if c.get("href"):
+                return c["href"]
+            h = first_href(c.get("children") or [])
+            if h:
+                return h
+        return ""
+
+    def _leaf_count(node: dict) -> int:
+        kids = node.get("children") or []
+        if not kids:
+            return 1 if node.get("href") else 0
+        return sum(_leaf_count(k) for k in kids)
+
+    nav = convert(spec.get("items") or [], 0, [])
+    return nav, unresolved
+
+
 def build_nav(docs: list[Doc], entries: list[dict]) -> list[dict]:
+    """旧版：从正文结构推导导航。navigation.json 存在时不再使用，仅作兜底。"""
     """用户侧导航树：一级「领域」→ 二级「问题组 / 专题分组」→ 三级「文档」。
 
     只收录 complete / partial 的文档；planned 不进导航。条目不再展开到左栏
@@ -951,7 +1047,9 @@ def build_index(root: Path) -> tuple[dict, list[str], list[str]]:
     real_entries = [e for e in entries if e["kind"] == "entry" and e["status"] == "complete"]
     questions = [e for e in entries if e["kind"] == "question" and e["status"] == "complete"]
 
-    nav = build_nav(docs, entries)
+    nav, nav_unresolved = build_nav_from_ia(docs, entries)
+    for p in nav_unresolved:
+        warnings.append(f"navigation.json：节点无法解析到正文：{p}")
 
     index = {
         "generated_at": datetime.datetime.now().astimezone().isoformat(timespec="seconds"),

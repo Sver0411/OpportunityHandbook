@@ -284,7 +284,7 @@ TREE = """
     什么时候适合第一次跳槽 @e:career-job-hopping
     什么情况下应该留下 @n:work-when-to-stay
     内部转岗 @n:work-internal-transfer
-    工作后读研 @n:work-study-again
+    工作后读研 @n:work-grad-school-after-work
     海外工作 @n:work-overseas-job
 
 07 当职业开始出现分岔

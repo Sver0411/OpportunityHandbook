@@ -29,6 +29,9 @@ jobs:
       - name: 严格校验与构建
         run: python3 tools/build.py --strict --report
 
+      - name: Canonical IA 一致性（导航与正文 parity）
+        run: python3 tools/check_ia.py
+
       - name: 内容规则测试
         run: python3 tools/run_tests.py
 
@@ -38,9 +41,23 @@ jobs:
           test -f site/sitemap.xml
           test -f site/robots.txt
           test -f "site/content/book/02-在学校里先把基础打好.html"
+          test -f "site/content/book/09-专题手册.html"
+          test -f "site/content/book/10-时间线与工具.html"
           test -f "site/content/docs/manuals/科研手册.html"
+          test -f "site/content/docs/countries/日本.html"
+          test -f "site/content/docs/tools/Offer对比表.html"
           test -f "site/pages/research-undergrad-start/index.html"
           test -f "site/pages/offer-comparison/index.html"
+          # 左栏导航必须来自 navigation.json：一级栏目与 Canonical IA 完全一致
+          python3 - <<'PYEOF'
+          import json, pathlib
+          idx = json.loads(pathlib.Path("site/data/index.json").read_text())
+          nav = json.loads(pathlib.Path("meta/navigation.json").read_text())
+          labels = [n["label"] for n in idx["nav"]]
+          want = [n["title"] for n in nav["items"]]
+          assert labels == want, f"左栏一级栏目与 Canonical IA 不一致：{labels} != {want}"
+          print("一级栏目一致：", len(labels), "个")
+          PYEOF
           # 旧地址的重定向表必须随构建产物一起存在
           python3 - <<'PYEOF'
           import json, pathlib

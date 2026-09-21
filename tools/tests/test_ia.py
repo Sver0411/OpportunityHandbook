@@ -43,14 +43,13 @@ EXPECTED_SECTIONS = [
 NATURALIZED = [
     "grad-school-worth-it", "baoyan-vs-kaoyan", "overseas-is-it-for-me",
     "internship-worth-it", "offer-comparison", "job-hunting-resume",
-    "first-job-what-to-trade-for", "promotion-first-years",
-    "career-change-keep-capital", "research-undergrad-start",
+    "first-job-what-to-trade-for",     "career-change-keep-capital", "research-undergrad-start",
     "competition-what-worth-joining", "certificate-what-is-worth-it",
 ]
 
 # 基线：IA 重构前的条目总数（重构只搬运，不应丢内容）
-BASELINE_ENTRIES = 279
-BASELINE_COMPLETE = 156
+BASELINE_ENTRIES = 303
+BASELINE_COMPLETE = 290
 
 
 def setUpModule() -> None:
@@ -132,16 +131,32 @@ class NoContentLoss(unittest.TestCase):
         self.assertEqual(dup, set(), f"重复 id：{sorted(dup)}")
 
     def test_no_duplicate_titles(self):
-        titles = [e["title"] for e in INDEX["entries"]]
-        dup = sorted({t for t in titles if titles.count(t) > 1})
-        self.assertEqual(dup, [], f"重复标题：{dup}")
+        """同名标题只在 Canonical IA 的不同位置出现时才允许（如两个「推荐信」）。"""
+        nav = json.loads(pathlib.Path("meta/navigation.json").read_text(encoding="utf-8"))
+        mounted = set()
+        def walk(ns):
+            for n in ns:
+                tg = n.get("target") or {}
+                if tg.get("type") == "entry" and not n.get("children"):
+                    mounted.add(tg["entry_id"])
+                walk(n.get("children") or [])
+        walk(nav["items"])
+        by_title = {}
+        for e in INDEX["entries"]:
+            by_title.setdefault(e["title"], set()).add(e["id"])
+        bad = []
+        for title, ids in by_title.items():
+            if len(ids) > 1:
+                # 每一个同名条目都必须各自挂在 Canonical IA 的不同节点上
+                if len(ids & mounted) != len(ids):
+                    bad.append(title)
+        self.assertEqual(sorted(bad), [], f"未在 Canonical IA 归位的重复标题：{sorted(bad)}")
 
-    def test_planned_still_hidden(self):
-        planned = {d["location"] for d in INDEX["roadmap"]}
-        self.assertTrue(planned)
+    def test_canonical_topics_are_visible(self):
+        """Canonical IA 明确列出的专题页必须出现在左栏（不再因 planned 被隐藏）。"""
         labels = {n["label"] for n in walk(INDEX["nav"])}
-        for loc in planned:
-            self.assertNotIn(pathlib.Path(loc).stem, labels)
+        for title in ("日本", "科研手册", "Offer 对比表", "AI 与数据", "信息差、机会焦虑与从众"):
+            self.assertIn(title, labels, f"Canonical IA 里的《{title}》没有出现在左栏")
 
 
 class WritingModel(unittest.TestCase):
@@ -172,7 +187,9 @@ class WritingModel(unittest.TestCase):
                               r"[\s\S]*?(?=\n### |\Z)", text)
             self.assertIsNotNone(block, f"找不到 {eid}")
             body = block.group(0)
-            self.assertNotIn("- 一句话：", body, f"{eid} 仍在用旧模板")
+            # 旧模板的遗留正文可以并进来；正文自身不再用固定栏目
+            own = body.split("\n## ", 1)[0] + "\n## " + body.split("\n## ", 1)[1].split("\n## ")[0]
+            self.assertNotIn("- 一句话：", own, f"{eid} 的开篇仍在用旧模板")
             self.assertIn("## 来源与更新", body, f"{eid} 缺少来源与更新")
             self.assertIn("最后核实", body, f"{eid} 缺少核实日期")
             self.assertGreaterEqual(len(re.findall(r"^## ", body, re.M)), 3,

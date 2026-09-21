@@ -54,7 +54,7 @@ last_verified: 2026-09-21
 
 - [技术与工程](careers/技术与工程.md) · [商业与金融](careers/商业与金融.md) · [设计与创意](careers/设计与创意.md)
 - [医疗健康](careers/医疗健康.md) · [生命科学](careers/生命科学.md) · [教育](careers/教育.md)
-- [法律与公共事务](careers/法律与公共事务.md) · [科研](careers/科研.md) · [制造业](careers/制造业.md)
+- [法律与公共事务](careers/法律与公共事务.md) · [科研与高校](careers/科研与高校.md) · [制造](careers/制造.md)
 - [技能型职业](careers/技能型职业.md) · [公共服务](careers/公共服务.md)
 
 ## 科研方法 `docs/research/`
