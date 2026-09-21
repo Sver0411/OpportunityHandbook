@@ -108,6 +108,22 @@ python3 tools/build.py
 python3 -m http.server 8000 --directory site
 ```
 
+## 维护工具
+
+| 命令 | 作用 |
+| --- | --- |
+| `python3 tools/build.py --strict` | 元数据、内部链接与构建校验（严格模式） |
+| `python3 tools/check_ia.py` | 目录（Canonical IA）与正文的一致性 |
+| `python3 tools/check_markdown_quality.py` | Markdown 格式检查 |
+| `python3 tools/check_content_quality.py --hard` | 内容质量硬门（旧模板 / 缺 summary / 过薄） |
+| `python3 tools/check_content_quality.py --depth` | 正文深度审计，输出 `reports/content-depth.md` |
+| `python3 tools/metadata_audit.py` | 人生阶段（stages）标注审计 |
+| `python3 tools/run_tests.py` | 内容规则测试 |
+| `python3 tools/smoke_test.py` | 浏览器冒烟测试 |
+
+审计报告统一放在 `reports/`；一次性迁移脚本放在 `tools/migrations/`，
+说明见 [tools/migrations/README.md](tools/migrations/README.md)。
+
 ## 许可
 
 正文（`book/`、`docs/`、`meta/`、README）采用 **CC BY 4.0**：署名后可自由复制、翻译、商用，见 [LICENSE-CONTENT](LICENSE-CONTENT)；工具与站点代码采用 **MIT**，见 [LICENSE](LICENSE)。

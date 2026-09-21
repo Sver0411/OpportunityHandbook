@@ -2,7 +2,7 @@
 """Content Quality Gate：扫描所有 status: complete 条目的正文质量。
 
     python3 tools/check_content_quality.py            # 检查，问题返回 1
-    python3 tools/check_content_quality.py --report   # 同时生成 CONTENT_DEPTH_REPORT.md
+    python3 tools/check_content_quality.py --report   # 同时生成 reports/content-depth.md
 
 检查项（complete 条目）：
   P0  有效正文 < 120 个中文字符（去掉 metadata、来源段、链接、纯标题后）
@@ -115,7 +115,7 @@ def main() -> int:
     """两种运行模式：
 
     --hard  硬门（CI 阻塞）：旧模板残留 / 缺 summary / 结构性问题必须全为 0。
-    --depth 深度审计（不阻塞）：生成 CONTENT_DEPTH_REPORT.md，P0/P1 只报告。
+    --depth 深度审计（不阻塞）：生成 reports/content-depth.md，P0/P1 只报告。
     不带参数时等价于 --hard 加摘要输出。
     """
     ap = argparse.ArgumentParser()
@@ -147,9 +147,9 @@ def main() -> int:
         if len(r["p0"]) > 12:
             print(f"  … 还有 {len(r['p0']) - 12} 条")
         if mode == "hard":
-            print("（hard 模式：只校验旧模板 / summary / 结构性项）")
-    # 硬门：旧模板残留与缺 summary 必须为 0；P0 深度暂不阻塞（P0 清零后加入）
-    ok = not r["p2"] and not r["no_summary"]
+            print("（hard 模式：校验旧模板 / summary / P0 过薄）")
+    # 硬门：旧模板残留、缺 summary、P0 过薄都必须为 0（P1 仍只报告）
+    ok = not r["p2"] and not r["no_summary"] and not r["p0"]
     return 0 if ok else 1
 
 

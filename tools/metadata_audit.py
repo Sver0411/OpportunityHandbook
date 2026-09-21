@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """Metadata Audit：检查 complete 条目的 stages 与内容主题是否一致。
 
-    python3 tools/metadata_audit.py            # 生成 METADATA_AUDIT_REPORT.md 并打印摘要
+    python3 tools/metadata_audit.py            # 生成 reports/metadata-audit.md 并打印摘要
     python3 tools/metadata_audit.py --json
 
 规则（WARNING 级，不自动修改）：
@@ -79,7 +79,7 @@ def main() -> int:
         "stage_overbroad": overbroad,
         "stage_invalid": invalid,
     }
-    out = ROOT / "METADATA_AUDIT_REPORT.md"
+    out = ROOT / "reports" / "metadata-audit.md"
     lines = [
         "# Metadata Audit Report",
         "",

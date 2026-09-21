@@ -27,7 +27,7 @@ import sys
 from pathlib import Path
 
 HERE = Path(__file__).resolve().parent
-ROOT = HERE.parent
+ROOT = HERE.parent.parent
 sys.path.insert(0, str(HERE))
 
 FIELDS = ["一句话", "适合谁", "不太适合谁", "能换回什么", "要付出什么",

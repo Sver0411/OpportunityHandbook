@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""生成 IA_PARITY_REPORT.md：把线上左栏目录与 Canonical IA 逐节点核对。
+"""生成 reports/ia-parity.md：把线上左栏目录与 Canonical IA 逐节点核对。
 
     python3 tools/ia_report.py
 
@@ -125,7 +125,7 @@ def main() -> int:
         "",
     ]
 
-    out = ROOT / "IA_PARITY_REPORT.md"
+    out = ROOT / "reports" / "ia-parity.md"
     out.write_text("\n".join(lines), encoding="utf-8")
     print("\n".join(lines[:22]))
     print(f"\n已写出：{out.relative_to(ROOT)}")

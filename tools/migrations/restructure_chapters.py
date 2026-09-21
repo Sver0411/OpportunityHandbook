@@ -13,8 +13,8 @@
 关键约定：`##` 只有在「后面紧跟 `###`」时才是分组标题，
 否则它是文章内部的 H2 小节，属于当前条目，不能截断条目正文。
 
-    python3 tools/restructure_chapters.py          # 预览
-    python3 tools/restructure_chapters.py --write  # 写盘
+    python3 tools/migrations/restructure_chapters.py          # 预览
+    python3 tools/migrations/restructure_chapters.py --write  # 写盘
 """
 
 from __future__ import annotations
@@ -26,7 +26,7 @@ import sys
 from pathlib import Path
 
 HERE = Path(__file__).resolve().parent
-ROOT = HERE.parent
+ROOT = HERE.parent.parent
 sys.path.insert(0, str(HERE))
 
 import meta as M  # noqa: E402
