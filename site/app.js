@@ -19,6 +19,8 @@
     flat: [],           // 文档顺序（用于上一页/下一页）
     cache: {},
     entries: [],
+    aliases: {},        // 搜索同义词表（search_aliases.json）
+    showAdvanced: false, // 筛选页是否展开高级条件
     expanded: {},       // 展开过的节点 key
     params: new URLSearchParams()
   };
@@ -105,39 +107,48 @@
   function prepare() {
     var idx = state.index;
     var docMeta = {};
-    (idx.docs || []).forEach(function (d) { docMeta[d.location] = d; });
+    // all_docs 含 planned：只用于路由解析与元数据，保证旧深链不失效
+    (idx.all_docs || idx.docs || []).forEach(function (d) { docMeta[d.location] = d; });
 
-    // 按目录顺序（深度优先）登记文档级节点，用于路由与上一页/下一页
-    (function collect(nodes) {
+    function locOf(href) {
+      var raw = String(href || "").replace(/^#\/doc\//, "");
+      if (!raw) return "";
+      var best = "";
+      for (var i = 0; i < state.locations.length; i++) {
+        var loc = state.locations[i];
+        if (raw === loc || raw.indexOf(loc + "/") === 0) return loc;
+      }
+      return best;
+    }
+
+    // 路由表：所有文档（含 planned）都能被深链打开
+    Object.keys(docMeta).forEach(function (loc) {
+      var m = docMeta[loc];
+      state.byLocation[loc] = {
+        title: m.title, location: loc, route: m.route || ("#/doc/" + loc),
+        last_verified: m.last_verified || "", status: m.status || ""
+      };
+    });
+    state.locations = Object.keys(state.byLocation).sort(function (a, b) { return b.length - a.length; });
+
+    // 阅读序列（上一页/下一页）：只含用户可读的文档，planned 不参与
+    var seen = {};
+    (function walk(nodes) {
       (nodes || []).forEach(function (n) {
-        var h = n.href || "";
-        if (n.kind !== "entry" && h.indexOf("#/doc/") === 0) {
-          var loc = h.replace(/^#\/doc\//, "");
-          if (!state.byLocation[loc] && loc.split("/").length >= 2) {
-            var m = docMeta[loc] || {};
-            state.byLocation[loc] = {
-              title: n.label, location: loc, route: h,
-              last_verified: m.last_verified || "", status: m.status || ""
-            };
-            state.flat.push(state.byLocation[loc]);
-          }
+        var loc = locOf(n.href);
+        if (loc && !seen[loc] && state.byLocation[loc]) {
+          seen[loc] = 1;
+          state.flat.push(state.byLocation[loc]);
         }
-        collect(n.children);
+        walk(n.children);
       });
     })(idx.nav);
-
-    // 有些章节（单文档分组）在目录里没有独立节点，补登记，保证路由与翻页完整
     (idx.docs || []).forEach(function (d) {
-      if (!state.byLocation[d.location]) {
-        state.byLocation[d.location] = {
-          title: d.title, location: d.location, route: d.route,
-          last_verified: d.last_verified || "", status: d.status || ""
-        };
+      if (!seen[d.location] && state.byLocation[d.location]) {
+        seen[d.location] = 1;
         state.flat.push(state.byLocation[d.location]);
       }
     });
-
-    state.locations = Object.keys(state.byLocation).sort(function (a, b) { return b.length - a.length; });
 
     var home = state.flat.filter(function (i) { return i.location.indexOf("00-") >= 0; })[0];
     state.homeLocation = home ? home.location : (state.flat[0] || {}).location;
@@ -147,12 +158,15 @@
       outputs: labelMap("outputs"), effort: labelMap("effort"), evidence: labelMap("evidence")
     };
     state.labels = L;
+    var evidenceEn = {};
+    (((idx.facets || {}).evidence || {}).values || []).forEach(function (v) { evidenceEn[v.key] = v.en || ""; });
     state.entries = idx.entries.map(function (e) {
       var tags = []
         .concat(e.stages.map(function (v) { return L.stages[v] || v; }))
         .concat(e.topics.map(function (v) { return L.topics[v] || v; }))
         .concat(e.outputs.map(function (v) { return L.outputs[v] || v; }))
-        .concat(e.evidence.map(function (v) { return L.evidence[v] || v; }));
+        .concat(e.evidence.map(function (v) { return L.evidence[v] || v; }))
+        .concat(e.evidence.map(function (v) { return evidenceEn[v] || ""; }));
       var hay = [e.title, e.summary, e.text, e.doc_title, tags.join(" ")].join(" ").toLowerCase();
       return Object.assign({}, e, { _hay: hay, _title: e.title.toLowerCase(), _tags: tags });
     });
@@ -269,14 +283,38 @@
       return best;
     }
 
+    function pickPrefix(want) {
+      if (!want) return null;
+      var best = null, bestScore = -1;
+      rows.forEach(function (r) {
+        var a = r.querySelector("a.nav-label");
+        if (!a) return;
+        var href = a.getAttribute("href") || "";
+        if (href !== want && href.indexOf(want + "/") !== 0) return;
+        var score = KIND_PRIORITY[r.dataset.kind] || 1;
+        if (score > bestScore) { bestScore = score; best = r; }
+      });
+      return best;
+    }
+
     // 章节页里 section 与它下面所有分组指向同一个 href，必须只留一行，
     // 否则一次会点亮好几行（看起来像随机变灰）
     var hit = pick(hash);
     if (!hit) {
-      // 条目深链：退一步匹配所属文档
-      var loc = hash.replace(/^#\/doc\//, "").split("/")[0];
-      hit = pick("#/doc/" + loc);
+      // 分组锚点可能指向更深的位置：先按前缀匹配（例如 #/doc/book/03-升学/本科-硕士）
+      var prefix = hash.replace(/\/[^/]*$/, "");
+      hit = pick(prefix);
     }
+    if (!hit) {
+      // 再退一步：匹配所属文档（保证章节页至少高亮它的领域）
+      var raw = hash.replace(/^#\/doc\//, "");
+      var parts = raw.split("/");
+      for (var depth = parts.length; depth > 1 && !hit; depth--) {
+        hit = pick("#/doc/" + parts.slice(0, depth - 1).join("/"));
+        if (!hit) hit = pickPrefix("#/doc/" + parts.slice(0, depth - 1).join("/"));
+      }
+    }
+    if (!hit) hit = pickPrefix(hash);
     if (!hit) return;
     hit.classList.add("active");
 
@@ -319,7 +357,6 @@
           "本页最后核实于 " + item.last_verified + "，已经超过 12 个月，其中的制度性信息可能需要重新核实。" }),
           header.nextSibling);
       }
-      if (location === state.homeLocation) insertStats(article, header);
       buildToc();
       buildDocNav(location);
       focusTarget(entryId);
@@ -328,17 +365,6 @@
       main.appendChild(el("p", { class: "empty", text: "内容加载失败（" + err.message + "）。如果是在本地打开，请用 http 方式访问，例如：python3 -m http.server 8000 --directory site" }));
       clear(tocEl);
     });
-  }
-
-  function insertStats(article, header) {
-    var s = state.index.stats;
-    var box = el("div", { class: "stats" }, [
-      el("div", { class: "stat", html: "<b>" + s.complete + "</b>已写完条目" }),
-      el("div", { class: "stat", html: "<b>" + state.index.nav.length + "</b>主题分组" }),
-      el("div", { class: "stat", html: "<b>" + s.todo + "</b>规划中条目" }),
-      el("div", { class: "stat", html: "<b>" + state.index.generated_at.slice(0, 10) + "</b>页面构建日期" })
-    ]);
-    header.parentNode.insertBefore(box, header.nextSibling);
   }
 
   function buildToc() {
@@ -409,6 +435,7 @@
   // ------------------------------------------------------------ 浏览与筛选
 
   var FACET_ORDER = ["stages", "topics", "outputs", "effort", "evidence"];
+  var FACET_LABELS_FOR_MATCH = FACET_ORDER;  // 匹配顺序与展示顺序一致
 
   function matchFilters(e, params) {
     for (var i = 0; i < FACET_ORDER.length; i++) {
@@ -427,35 +454,62 @@
     return true;
   }
 
-  function scoreEntry(e, tokens) {
-    if (!tokens.length) return 0;
+  function scoreEntry(e, groups) {
+    if (!groups.length) return 0;
     var score = 0;
-    for (var i = 0; i < tokens.length; i++) {
-      var t = tokens[i];
-      if (e._hay.indexOf(t) < 0) return -1;
-      if (e._title.indexOf(t) >= 0) score += 60;
-      if ((e.summary || "").toLowerCase().indexOf(t) >= 0) score += 20;
-      if (e._tags.join(" ").toLowerCase().indexOf(t) >= 0) score += 12;
-      score += 2;
+    for (var i = 0; i < groups.length; i++) {
+      var terms = groups[i];
+      var hit = null;
+      for (var j = 0; j < terms.length; j++) {
+        var t = terms[j];
+        if (e._hay.indexOf(t) < 0) continue;
+        if (e._title === t) hit = Math.max(hit === null ? 0 : hit, 200);           // 标题完全一致
+        else if (e._title.indexOf(t) === 0) hit = Math.max(hit === null ? 0 : hit, 120); // 标题前缀
+        else if (e._title.indexOf(t) >= 0) hit = Math.max(hit === null ? 0 : hit, 80);   // 标题包含
+        else if ((e.summary || "").toLowerCase().indexOf(t) >= 0) hit = Math.max(hit === null ? 0 : hit, 30);
+        else if (e._tags.join(" ").toLowerCase().indexOf(t) >= 0) hit = Math.max(hit === null ? 0 : hit, 20);
+        else hit = Math.max(hit === null ? 0 : hit, 8);                            // 正文命中
+      }
+      if (hit === null) return -1;   // 同一词（含同义词组）一个都没命中
+      score += hit;
     }
     if (e.last_verified) score += 1;
     return score;
   }
 
+  // 查询词 → 同义词组：组内取「或」，组间取「与」
+  // 例：「日本 套磁」→ 日本 AND (套磁 OR 联系导师 OR 联系教授)
+  function queryGroups(q) {
+    var tokens = String(q || "").toLowerCase().split(/\s+/).filter(Boolean);
+    return tokens.map(function (t) {
+      var syn = (state.aliases && state.aliases[t]) || [];
+      var terms = [t];
+      syn.forEach(function (s) {
+        var v = String(s).toLowerCase();
+        if (terms.indexOf(v) < 0) terms.push(v);
+      });
+      return terms;
+    });
+  }
+
   function runSearch(params) {
     var q = (params.get("q") || "").trim().toLowerCase();
-    var tokens = q.split(/\s+/).filter(Boolean);
+    var groups = queryGroups(q);
     var filtered = state.entries.filter(function (e) { return matchFilters(e, params); });
-    if (!tokens.length) {
+    if (!groups.length) {
       return filtered.slice().sort(function (a, b) {
         return (a.order - b.order) || a.doc.localeCompare(b.doc) || a.title.localeCompare(b.title);
       });
     }
-    return filtered.map(function (e) { return { e: e, s: scoreEntry(e, tokens) }; })
+    return filtered.map(function (e) { return { e: e, s: scoreEntry(e, groups) }; })
       .filter(function (x) { return x.s >= 0; })
       .sort(function (a, b) { return b.s - a.s || a.e.title.localeCompare(b.e.title); })
       .map(function (x) { return x.e; });
   }
+
+  // 默认只展开最常用的两维；其余收进「更多筛选」，但已选条件始终在顶部可见
+  var PRIMARY_FACETS = ["stages", "topics"];
+  var ADVANCED_FACETS = ["outputs", "effort", "evidence"];
 
   function chipRow(facet) {
     var spec = state.index.facets[facet];
@@ -465,9 +519,12 @@
     var selected = (params.get(facet) || "").split(",").filter(Boolean);
     spec.values.forEach(function (v) {
       var on = selected.indexOf(v.key) >= 0;
-      var b = el("button", {
-        class: "facet-chip", type: "button", text: v.label, "aria-pressed": on ? "true" : "false"
-      });
+      var attrs = {
+        class: "facet-chip", type: "button", text: v.label,
+        "aria-pressed": on ? "true" : "false"
+      };
+      if (v.en) attrs.title = v.en;          // 证据类型：中文为主，英文标识放 tooltip
+      var b = el("button", attrs);
       b.addEventListener("click", function () {
         var next = new URLSearchParams(state.params.toString());
         toggleInList(next, facet, v.key);
@@ -477,6 +534,69 @@
     });
     row.appendChild(vals);
     return row;
+  }
+
+  // 已选中的高级条件：折叠状态下也要看得见，并且能逐个去掉
+  function activeAdvancedRow(params) {
+    var chips = [];
+    ADVANCED_FACETS.forEach(function (facet) {
+      var spec = state.index.facets[facet];
+      var selected = (params.get(facet) || "").split(",").filter(Boolean);
+      selected.forEach(function (key) {
+        var label = key;
+        spec.values.forEach(function (v) { if (v.key === key) label = v.label; });
+        var b = el("button", {
+          class: "facet-chip facet-chip-active", type: "button",
+          text: spec.label + "：" + label, title: "点击去掉这个条件"
+        });
+        b.addEventListener("click", function () {
+          var next = new URLSearchParams(state.params.toString());
+          toggleInList(next, facet, key);
+          location.hash = buildHash(["browse"], next);
+        });
+        chips.push(b);
+      });
+    });
+    if (!chips.length) return null;
+    var row = el("div", { class: "facet facet-active" }, [
+      el("div", { class: "facet-label", text: "已选高级条件" }),
+      el("div", { class: "facet-values" }, chips)
+    ]);
+    return row;
+  }
+
+  function facetsPanel(params) {
+    var panel = el("div", { class: "facets" });
+    var summary = activeAdvancedRow(params);
+    if (summary) panel.appendChild(summary);
+    PRIMARY_FACETS.forEach(function (f) { panel.appendChild(chipRow(f)); });
+
+    var advancedBox = el("div", { class: "facets-advanced" });
+    var toggle = el("button", {
+      class: "facet-more", type: "button",
+      "aria-expanded": state.showAdvanced ? "true" : "false",
+      text: state.showAdvanced ? "收起高级筛选" : "更多筛选：能换回什么 / 投入 / 证据类型"
+    });
+    toggle.addEventListener("click", function () {
+      state.showAdvanced = !state.showAdvanced;
+      var next = new URLSearchParams(state.params.toString());
+      location.hash = buildHash(["browse"], next);   // 重绘（状态保留在内存里）
+    });
+    panel.appendChild(el("div", { class: "facet-actions facet-more-row" }, [toggle]));
+    if (state.showAdvanced) {
+      ADVANCED_FACETS.forEach(function (f) { advancedBox.appendChild(chipRow(f)); });
+      panel.appendChild(advancedBox);
+    }
+    panel.appendChild(el("div", { class: "facet-actions" }, [
+      el("button", { type: "button", text: "清除全部筛选", onclick: function () {
+        var next = new URLSearchParams();
+        var q = params.get("q");
+        if (q) next.set("q", q);
+        location.hash = buildHash(["browse"], next);
+      } }),
+      el("span", { text: "证据类型中「官方规则」表示有政府、院校或机构的官方文件依据（内部标识 Official）" })
+    ]));
+    return panel;
   }
 
   function renderBrowse(params) {
@@ -495,20 +615,10 @@
     clear(main);
     main.appendChild(el("div", { class: "browse-head" }, [
       el("h1", { text: "按条件筛选" }),
-      el("p", { class: "browse-count", text: "共 " + results.length + " 条已写完的条目" +
+      el("p", { class: "browse-count", text: "共 " + results.length + " 条可读条目" +
         (q ? "，匹配「" + q + "」" : "") + "。多个条件可以叠加，同一组内为“或”。" })
     ]));
-    var facets = el("div", { class: "facets" });
-    FACET_ORDER.forEach(function (f) { facets.appendChild(chipRow(f)); });
-    facets.appendChild(el("div", { class: "facet-actions" }, [
-      el("button", { type: "button", text: "清除全部筛选", onclick: function () {
-        var next = new URLSearchParams();
-        if (q) next.set("q", q);
-        location.hash = buildHash(["browse"], next);
-      } }),
-      el("span", { text: "证据类型中 Official 表示有官方文件依据" })
-    ]));
-    main.appendChild(facets);
+    main.appendChild(facetsPanel(params));
 
     if (!results.length) {
       main.appendChild(el("p", { class: "empty", text: "没有符合条件的条目。可以去掉一两个条件，或换一个关键词试试。" }));
@@ -640,16 +750,34 @@
     });
   }
 
-  fetch("data/index.json")
-    .then(function (r) { if (!r.ok) throw new Error("HTTP " + r.status); return r.json(); })
-    .then(function (data) {
-      state.index = data;
-      prepare();
-      buildNav();
-      bind();
-      if (read(NAV_KEY) === "collapsed" && !isMobile()) applyCollapsed(true);
-      route();
-    })
+  // 同义词表：缺失也不影响搜索（只是没有别名扩展）
+  function loadAliases() {
+    return fetch("search_aliases.json")
+      .then(function (r) { return r.ok ? r.json() : {}; })
+      .then(function (data) {
+        var out = {};
+        Object.keys(data || {}).forEach(function (k) {
+          if (k.charAt(0) === "_") return;            // 跳过注释字段
+          var v = data[k];
+          if (Object.prototype.toString.call(v) === "[object Array]") out[k.toLowerCase()] = v;
+        });
+        state.aliases = out;
+      })
+      .catch(function () { state.aliases = {}; });
+  }
+
+  loadAliases().then(function () {
+    return fetch("data/index.json")
+      .then(function (r) { if (!r.ok) throw new Error("HTTP " + r.status); return r.json(); })
+      .then(function (data) {
+        state.index = data;
+        prepare();
+        buildNav();
+        bind();
+        if (read(NAV_KEY) === "collapsed" && !isMobile()) applyCollapsed(true);
+        route();
+      });
+  })
     .catch(function (err) {
       clear(main);
       main.appendChild(el("p", { class: "empty", text:

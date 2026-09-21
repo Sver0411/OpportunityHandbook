@@ -25,8 +25,10 @@ jobs:
         with:
           python-version: "3.12"
 
-      - name: 校验并构建
-        run: python3 tools/build.py
+      # 与 CI 使用同一个严格入口：CI 不合格的内容不会被部署
+      - name: 严格校验并构建
+        run: python3 tools/build.py --strict
+
 
       - uses: actions/configure-pages@v5
 

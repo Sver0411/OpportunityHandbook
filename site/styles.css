@@ -612,3 +612,26 @@ body.nav-collapsed .shell { margin-left: 0; }
     scroll-behavior: auto !important;
   }
 }
+
+/* ---------------------------------------------------------------- 静态入口页（SEO permalink） */
+
+.permalink-main { max-width: 44rem; margin: 0 auto; padding: 48px 24px 88px; }
+.permalink-back { font-size: 13px; color: var(--muted); margin: 0 0 28px; }
+.permalink-back a { color: var(--ink-2); }
+.permalink-foot {
+  margin-top: 48px; padding-top: 20px; border-top: 1px solid var(--line);
+  font-size: 13px; color: var(--muted); line-height: 1.7;
+}
+
+/* 筛选页：默认只展开两维，高级条件收进「更多筛选」 */
+.facet-more-row { border-top: 1px solid var(--line); padding: 10px 20px; }
+.facet-more {
+  font: inherit; font-size: 12.5px; color: var(--ink-2); cursor: pointer;
+  background: #fff; border: 1px solid var(--line); border-radius: var(--pill);
+  padding: 3px 12px;
+  transition: border-color var(--dur-fast) ease, color var(--dur-fast) ease;
+}
+.facet-more:hover { border-color: var(--line-strong); color: var(--ink); }
+.facet-active { background: rgba(120, 120, 128, 0.04); }
+.facet-chip-active { background: var(--surface-2); border-color: transparent; color: var(--ink); }
+.facet-chip-active:hover { border-color: transparent; background: rgba(120, 120, 128, 0.16); }

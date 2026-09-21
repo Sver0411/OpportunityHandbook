@@ -11,7 +11,7 @@ permissions:
 
 jobs:
   validate:
-    name: 校验元数据、内部链接与构建
+    name: 校验内容、构建与内容测试
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -20,20 +20,26 @@ jobs:
         with:
           python-version: "3.12"
 
-      - name: 校验 Markdown 元数据、重复 id、内部链接与 last_verified
-        run: python3 tools/build_index.py --report --report-stale
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "20"
 
-      - name: 构建静态站点与搜索索引
-        run: python3 tools/build_site.py
+      # 统一入口：元数据 / 重复 id / 内部链接与锚点 / 构建 / 前端语法 / 外链永久失效
+      # strict 下任何警告（含元数据解析警告）都会失败；403/429/5xx/超时不阻塞
+      - name: 严格校验与构建
+        run: python3 tools/build.py --strict --report
 
-      - name: 检查站点前端脚本语法
-        run: node --check site/app.js
+      - name: 内容规则测试
+        run: python3 tools/run_tests.py
 
-      - name: 确认构建产物齐全
+      - name: 断言构建产物齐全
         run: |
           test -f site/data/index.json
+          test -f site/sitemap.xml
+          test -f site/robots.txt
           test -f "site/content/book/02-怎么判断一个机会值不值得.html"
+          test -f "site/pages/research-undergrad-start/index.html"
           echo "构建产物正常"
 
-      - name: 外部链接可达性（不阻塞合并）
-        run: python3 tools/check_links.py --jobs 16 || true
+      - name: 声明审计（只报告，不阻塞）
+        run: python3 tools/audit_claims.py || true

@@ -19,14 +19,18 @@ REPO = {
     "name": "机会与成长指南",
     "slug": "OpportunityHandbook",
     "url": "https://github.com/Sver0411/OpportunityHandbook",
+    "site_url": "https://sver0411.github.io/OpportunityHandbook",
     "radar_url": "https://github.com/Sver0411/OpportunityRadar",
 }
 
-STALE_DAYS = 396  # 约 13 个月，超过视为「可能需要重新核实」
+STALE_DAYS = 365  # 超过 12 个月未重新核实，视为「可能需要重新核实」
 SCAN_DIRS = ("book", "docs", "meta")
 DOC_TYPES = ("intro", "chapter", "doc")
 DOC_STATUS = ("complete", "partial", "planned")
 ENTRY_STATUS = ("complete", "todo", "needs_review")
+
+# 用户侧可见的文档状态：planned 只作为仓库内的内容路线图，不进导航、搜索与阅读序列
+USER_VISIBLE_STATUS = ("complete", "partial")
 
 # ---------------------------------------------------------------- 词表
 
@@ -88,14 +92,30 @@ FACETS: dict[str, dict] = {
     },
     "evidence": {
         "label": "证据类型",
+        # UI 显示中文，内部 schema 仍是 official / research_backed / …（英文名见 EVIDENCE_EN）
         "values": [
-            ("official", "Official"),
-            ("research_backed", "Research-backed"),
-            ("industry_data", "Industry-data"),
-            ("experience_based", "Experience-based"),
-            ("uncertain", "Uncertain"),
+            ("official", "官方规则"),
+            ("research_backed", "研究支持"),
+            ("industry_data", "行业数据"),
+            ("experience_based", "实践经验"),
+            ("uncertain", "证据不足"),
         ],
     },
+}
+
+# 中英对照：界面主显示中文，英文作为 tooltip / 兼容搜索用
+EVIDENCE_EN = {
+    "official": "Official",
+    "research_backed": "Research-backed",
+    "industry_data": "Industry-data",
+    "experience_based": "Experience-based",
+    "uncertain": "Uncertain",
+}
+
+# 条目状态与文档状态在界面上的说明（供页面与筛选页使用）
+STATUS_NOTE = {
+    "partial": "内容仍在补充",
+    "planned": "尚未撰写正文",
 }
 
 VALID = {k: {v for v, _ in spec["values"]} for k, spec in FACETS.items()}
@@ -168,8 +188,18 @@ def _clean(v: str) -> str:
     return v.strip()
 
 
-def parse_simple_yaml(text: str) -> dict:
-    """解析标量、行内列表与缩进列表；不支持嵌套结构。"""
+def parse_simple_yaml(text: str, issues: list[str] | None = None, where: str = "") -> dict:
+    """解析标量、行内列表与缩进列表；不支持嵌套结构。
+
+    fail-closed：无法识别的行、重复键、缩进（嵌套）结构、孤立列表项、
+    引号或方括号不配对，都会记进 issues（由调用方升级为 warning/error），
+    不做静默忽略——strict 模式下必须被发现。
+    """
+    def flag(msg: str, lineno: int) -> None:
+        if issues is not None:
+            prefix = f"{where}第 {lineno} 行: " if where else f"第 {lineno} 行: "
+            issues.append(prefix + msg)
+
     data: dict = {}
     lines = text.splitlines()
     i = 0
@@ -179,11 +209,22 @@ def parse_simple_yaml(text: str) -> dict:
         if not stripped or stripped.startswith("#"):
             i += 1
             continue
+        if line[:1] in (" ", "\t"):
+            flag(f"不支持嵌套结构（缩进行 {stripped[:40]!r}）", i + 1)
+            i += 1
+            continue
+        if stripped.startswith("-"):
+            flag(f"孤立的列表项 {stripped[:40]!r}，前面缺少键", i + 1)
+            i += 1
+            continue
         m = _KEY_RE.match(line)
         if not m:
+            flag(f"无法识别的行 {stripped[:40]!r}", i + 1)
             i += 1
             continue
         key, raw = m.group(1), m.group(2)
+        if key in data:
+            flag(f"重复的键 {key!r}", i + 1)
         if raw.strip() == "":
             items, j = [], i + 1
             while j < len(lines):
@@ -198,6 +239,8 @@ def parse_simple_yaml(text: str) -> dict:
                 continue
             data[key] = ""
         else:
+            if raw.count("[") != raw.count("]") or raw.count('"') % 2:
+                flag(f"取值里的括号或引号不配对：{raw.strip()[:40]!r}", i + 1)
             data[key] = _scalar(raw)
         i += 1
     return data
@@ -206,11 +249,11 @@ def parse_simple_yaml(text: str) -> dict:
 _FM_RE = re.compile(r"^---[ \t]*\r?\n(.*?)\r?\n---[ \t]*\r?\n?", re.S)
 
 
-def split_front_matter(text: str) -> tuple[dict | None, str]:
+def split_front_matter(text: str, issues: list[str] | None = None) -> tuple[dict | None, str]:
     m = _FM_RE.match(text)
     if not m:
         return None, text
-    return parse_simple_yaml(m.group(1)), text[m.end():]
+    return parse_simple_yaml(m.group(1), issues, "front matter "), text[m.end():]
 
 
 # ---------------------------------------------------------------- 文本工具
@@ -344,7 +387,9 @@ def split_entries(body: str) -> list[dict]:
                 while j < len(lines) and not _FENCE_RE.match(lines[j]):
                     meta_lines.append(lines[j])
                     j += 1
-                meta = parse_simple_yaml("\n".join(meta_lines))
+                meta_issues: list[str] = []
+                meta = parse_simple_yaml("\n".join(meta_lines), meta_issues,
+                                         f"条目「{title}」的 meta 块")
                 body_start = j + 1
             if meta is None:
                 # 普通小标题：留在文本段里
@@ -354,7 +399,7 @@ def split_entries(body: str) -> list[dict]:
             flush_entry()
             flush_text()
             entry = {"kind": "entry", "title": title, "meta": meta,
-                     "group": group, "lines": [], "line": i + 1}
+                     "meta_issues": meta_issues, "group": group, "lines": [], "line": i + 1}
             i = body_start
             continue
         if hm and len(hm.group(1)) <= 2:
@@ -404,7 +449,8 @@ class Doc:
         self.rel = path.relative_to(root).as_posix()
         self.location = self.rel[:-3]  # 去掉 .md
         self.raw = path.read_text(encoding="utf-8")
-        self.front, self.body = split_front_matter(self.raw)
+        self.front_issues: list[str] = []
+        self.front, self.body = split_front_matter(self.raw, self.front_issues)
         self.front = self.front or {}
         self.segments = split_entries(self.body)
         self.entries = [s for s in self.segments if s["kind"] == "entry"]
@@ -462,6 +508,12 @@ def validate(root: Path, docs: list[Doc]) -> tuple[list[str], list[str], dict]:
 
     for doc in docs:
         f = doc.front
+        # 元数据解析的 fail-closed：识别不了的写法不静默忽略
+        for issue in doc.front_issues:
+            warnings.append(f"{doc.rel}: {issue}")
+        for e in doc.entries:
+            for issue in e.get("meta_issues") or []:
+                warnings.append(f"{doc.rel}: {issue}")
         if not f:
             err(doc, "缺少 front matter")
         for key in ("id", "title", "type"):
@@ -601,6 +653,10 @@ def validate(root: Path, docs: list[Doc]) -> tuple[list[str], list[str], dict]:
                 errors.append(f"{doc.rel}: 链接指向仓库外：{href}")
                 continue
             if rel not in known:
+                # 允许指向非正文文件（README / CONTRIBUTING / LICENSE 等），
+                # 只要它真的在仓库里存在即可；这类文件不校验锚点。
+                if resolved.is_file():
+                    continue
                 errors.append(f"{doc.rel}: 内部链接目标不存在：{href}")
                 continue
             if anchor and anchor not in known[rel].anchors:
@@ -620,7 +676,21 @@ def validate(root: Path, docs: list[Doc]) -> tuple[list[str], list[str], dict]:
             if q["kind"] == "question" and q["status"] == "complete" and q["title"] not in text:
                 warnings.append(f"README.md: 缺少首页问题「{q['title']}」")
 
+    # 内容路线图必须列出所有 planned 文档（防止隐藏内容被遗忘）
+    roadmap = root / "docs" / "ROADMAP.md"
+    planned = [d for d in docs if d.status == "planned" and not doc_nav_hidden(d)]
+    if planned and not roadmap.is_file():
+        warnings.append("docs/ROADMAP.md 不存在：planned 文档需要有集中的内容路线图")
+    elif planned:
+        text = roadmap.read_text(encoding="utf-8")
+        missing = [d.title for d in planned if d.title not in text]
+        if missing:
+            warnings.append(f"docs/ROADMAP.md: 未列出 {len(missing)} 个计划中的文档"
+                            f"（例如 {', '.join(missing[:3])}）")
+
     stats["docs"] = len(docs)
+    stats["planned_docs"] = len(planned)
+    stats["user_docs"] = sum(1 for d in docs if doc_user_visible(d) and not doc_nav_hidden(d))
     stats["entries_total"] = len(entries)
     return errors, warnings, {"entries": entries, "ids": ids, "stale": stale, "stats": stats}
 
@@ -643,6 +713,11 @@ def doc_nav_hidden(doc: Doc) -> bool:
     if v is None or v == "":
         return False
     return str(v).strip().lower() in ("false", "no", "0", "off")
+
+
+def doc_user_visible(doc: Doc) -> bool:
+    """planned 文档只在仓库里作内容路线图，不进用户侧导航、搜索与阅读序列。"""
+    return doc.status in USER_VISIBLE_STATUS
 
 
 def _doc_section(doc: Doc) -> str:
@@ -675,33 +750,41 @@ def _doc_section_order(doc: Doc) -> int:
     return 500
 
 
-def _entry_node(e: dict) -> dict:
-    return {
-        "kind": "entry",
-        "label": e["title"],
-        "id": e["id"],
-        "href": e["route"],
-        "status": e["status"],
-        "count": 1 if e["status"] == "complete" else 0,
-    }
+def _group_route(doc: Doc, label: str) -> str:
+    """分组节点的入口：章节文档 + 该 ## 标题的锚点（与渲染时的 id 规则一致）。"""
+    if not label:
+        return doc.route
+    return f"{doc.route}/{slugify(label)}"
 
 
-def _doc_children(doc: Doc, items: list[dict], use_groups: bool) -> list[dict]:
-    """items 为本文档的条目（不含问题条目）。use_groups 决定是否保留 ## 分组层。"""
-    if not use_groups:
-        return [_entry_node(e) for e in items]
+def _group_nodes(doc: Doc, items: list[dict]) -> list[dict]:
+    """文档内的 ## 分组节点。条目本身不进左栏，由正文与页内目录承担。"""
     groups: list[dict] = []
     index: dict[str, dict] = {}
     for e in items:
         label = e.get("group") or ""
         if label not in index:
-            index[label] = {"kind": "group", "label": label, "href": doc.route, "children": []}
+            index[label] = {"kind": "group", "label": label,
+                            "href": _group_route(doc, label), "status": doc.status,
+                            "count": 0, "children": []}
             groups.append(index[label])
-        index[label]["children"].append(_entry_node(e))
-    # 只有一个匿名分组（文档里没有 ## 分组）时拍平，避免多余一层
-    if len(groups) == 1 and not groups[0]["label"].strip():
-        return groups[0]["children"]
+        index[label]["count"] += 1
+    if len(groups) == 1 and not groups[0]["label"]:
+        return []                       # 文档里没有 ## 分组：文档节点本身就是入口
+    for g in groups:
+        if not g["label"]:
+            g["label"] = "本章条目"
     return groups
+
+
+def _doc_node(doc: Doc, items: list[dict], with_groups: bool) -> dict:
+    node = {"kind": "doc", "label": doc.title, "href": doc.route,
+            "status": doc.status, "count": len(items), "children": []}
+    if with_groups:
+        groups = _group_nodes(doc, items)
+        if groups:
+            node["children"] = groups
+    return node
 
 
 def _count(node: dict) -> int:
@@ -722,16 +805,20 @@ def _first_doc_href(children: list[dict]) -> str:
 
 
 def build_nav(docs: list[Doc], entries: list[dict]) -> list[dict]:
-    """构建「一级分组 → （二级分组）→ 文档 → ## 分组 → 条目」的导航树。"""
+    """用户侧导航树：一级「领域」→ 二级「问题组 / 专题分组」→ 三级「文档」。
+
+    只收录 complete / partial 的文档；planned 不进导航。条目不再展开到左栏
+    （条目的检索、筛选与深链由 index.json 的 entries 承担）。
+    """
     by_doc: dict[str, list[dict]] = {}
     for e in entries:
-        if e["kind"] != "question":  # 首页问答只在首页正文里呈现
+        if e["kind"] != "question" and e["status"] == "complete":
             by_doc.setdefault(e["doc"], []).append(e)
 
     sections: dict[str, dict] = {}
     order: list[str] = []
     for doc in docs:
-        if doc_nav_hidden(doc):
+        if doc_nav_hidden(doc) or not doc_user_visible(doc):
             continue
         if str(doc.front.get("type") or "") not in ("intro", "chapter", "doc"):
             continue
@@ -752,51 +839,44 @@ def build_nav(docs: list[Doc], entries: list[dict]) -> list[dict]:
     nav: list[dict] = []
     for label in order:
         sec = sections[label]
-        groups = sorted(sec["subs"].values(), key=lambda g: (g["order"], g["label"], ))
-        multi_doc = sum(len(g["docs"]) for g in groups) > 1 or len(groups) > 1
-        sec_href = ""
+        groups = sorted(sec["subs"].values(), key=lambda g: (g["order"], g["label"]))
+        children: list[dict] = []
 
         if len(groups) == 1 and not groups[0]["label"]:
-            # 普通章节：直接展开文档
+            # 章节型分组：一级是领域，二级是 ## 问题组
             docs_sorted = sorted(groups[0]["docs"], key=lambda d: (_int(d.front.get("order")), d.title))
-            children = _section_children(sec["label"], docs_sorted, by_doc, multi_doc)
-            same = next((d for d in docs_sorted if d.title == sec["label"]), None)
-            sec_href = same.route if same else _first_doc_href(children)
+            children = _section_children(docs_sorted, by_doc, with_groups=True)
         else:
-            children = []
+            # 专题型分组：一级是领域，二级是专题分类，三级是具体文档
             for g in groups:
                 docs_sorted = sorted(g["docs"], key=lambda d: (_int(d.front.get("order")), d.title))
+                sub_children = _section_children(docs_sorted, by_doc, with_groups=False)
+                if not sub_children:
+                    continue
                 sub = {"kind": "subsection", "label": g["label"],
-                       "children": _section_children(g["label"], docs_sorted, by_doc, True)}
-                sub["href"] = _first_doc_href(sub["children"])
+                       "href": _first_doc_href(sub_children), "children": sub_children}
                 sub["count"] = _count(sub)
                 children.append(sub)
 
+        if not children:
+            continue                     # 该领域下暂时没有可读内容，整块隐藏
+
         node = {"kind": "section", "label": sec["label"], "children": children}
-        node["href"] = sec_href or _first_doc_href(children)
+        node["href"] = _first_doc_href(children)
         node["count"] = _count(node)
         nav.append(node)
     return nav
 
 
-def _section_children(label: str, docs_sorted: list[Doc], by_doc: dict, multi_doc: bool) -> list[dict]:
-    """一个分组内部：单文档时展开其 ## 分组，多文档时每篇文档一个节点。"""
-    if len(docs_sorted) == 1:
+def _section_children(docs_sorted: list[Doc], by_doc: dict, with_groups: bool) -> list[dict]:
+    """一个分组内部：with_groups 时展开文档的 ## 分组，否则只给文档节点。"""
+    if len(docs_sorted) == 1 and with_groups:
         doc = docs_sorted[0]
-        return _doc_children(doc, by_doc.get(doc.rel, []), use_groups=True)
-
-    out: list[dict] = []
-    for doc in docs_sorted:
         items = by_doc.get(doc.rel, [])
-        if doc.title == label:
-            # 文档名与分组名相同（例如「从这里开始」）：拍平，不再多一层
-            out.extend(_doc_children(doc, items, use_groups=False))
-            continue
-        node = {"kind": "doc", "label": doc.title, "href": doc.route,
-                "children": _doc_children(doc, items, use_groups=False)}
-        node["count"] = _count(node)
-        out.append(node)
-    return out
+        groups = _group_nodes(doc, items)
+        return groups or [_doc_node(doc, items, with_groups=False)]
+
+    return [_doc_node(d, by_doc.get(d.rel, []), with_groups) for d in docs_sorted]
 
 
 def build_index(root: Path) -> tuple[dict, list[str], list[str]]:
@@ -814,17 +894,32 @@ def build_index(root: Path) -> tuple[dict, list[str], list[str]]:
         "stale_threshold": stale_threshold(),
         "stale_days": STALE_DAYS,
         "facets": {k: {"label": v["label"],
-                       "values": [{"key": vv, "label": ll} for vv, ll in v["values"]],
+                       "values": [{"key": vv, "label": ll,
+                                   **({"en": EVIDENCE_EN[vv]} if k == "evidence" and vv in EVIDENCE_EN else {})}
+                                  for vv, ll in v["values"]],
                        "multi": k not in SINGLE_VALUE_FACETS}
                    for k, v in FACETS.items()},
+        "status_note": STATUS_NOTE,
         "nav": nav,
+        # docs：用户侧文档（无 planned），供阅读序列使用
         "docs": [
             {"location": d.location, "title": d.title, "route": d.route,
              "status": d.status, "summary": str(d.front.get("summary") or ""),
              "last_verified": str(d.front.get("last_verified") or "")}
+            for d in docs if not doc_nav_hidden(d) and doc_user_visible(d)
+        ],
+        # all_docs：含 planned，仅供路由解析与元数据查询（保证旧深链不失效）
+        "all_docs": [
+            {"location": d.location, "title": d.title, "route": d.route,
+             "status": d.status, "last_verified": str(d.front.get("last_verified") or "")}
             for d in docs if not doc_nav_hidden(d)
         ],
-        "entries": [
+        # roadmap：planned 文档的清单（只在内容路线图页面呈现）
+        "roadmap": [
+            {"location": d.location, "title": d.title, "route": d.route,
+             "section": _doc_section(d), "group": _doc_subsection(d)[0]}
+            for d in docs if d.status == "planned" and not doc_nav_hidden(d)
+        ],        "entries": [
             {k: v for k, v in e.items() if k != "kind" or True}
             for e in sorted(real_entries, key=lambda e: (str(e.get("order") or 0), e["doc"], e["title"]))
         ],

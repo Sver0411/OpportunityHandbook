@@ -29,7 +29,7 @@ jobs:
           {
             echo "## 需要重新核实的内容"
             echo ""
-            echo "以下条目最后核实时间超过 12 个月，邀请贡献者打开官方来源确认后更新 \`last_verified\`。"
+            echo "以下条目最后核实时间已超过 12 个月（365 天），邀请贡献者打开官方来源确认后更新 \`last_verified\`。"
             echo ""
             echo '```'
             cat stale-report.txt
