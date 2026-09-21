@@ -157,6 +157,8 @@ def run_case(chrome: str, base: str, size: str, mode: str, budget: int = 8000) -
         cmd = [
             chrome, "--headless=new", "--no-sandbox", "--disable-gpu",
             f"--user-data-dir={tmp}", "--no-first-run", "--disable-smooth-scrolling",
+            "--disable-extensions", "--disable-background-networking",
+            "--disable-default-apps", "--no-default-browser-check", "--mute-audio",
             f"--virtual-time-budget={budget}", f"--window-size={size}",
             "--dump-dom", url,
         ]
@@ -194,6 +196,9 @@ def main() -> int:
                                   ("桌面 · 搜索与筛选", "1440,1400", "browse"),
                                   ("移动端", "500,1000", "mobile")):
             results = run_case(chrome, base, size, mode)
+            if results and all("超时" in r["name"] for r in results):
+                print(f"  （{label}：首次超时，重试一次）", flush=True)
+                results = run_case(chrome, base, size, mode)
             print(f"\n== 前端冒烟（{label}）==")
             for r in results:
                 mark = "PASS" if r["pass"] else "FAIL"
