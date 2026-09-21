@@ -1,14 +1,14 @@
 # Content Depth Report
 
-生成时间：2026-09-22T01:33:58+08:00
+生成时间：2026-09-22T01:37:09+08:00
 
 complete 条目总数：303
-- P0（<120 字，必须补写）：93
+- P0（<120 字，必须补写）：73
 - P1（120–250 字，人工审查）：39
 - P2（仍含旧模板字段）：0
 - 缺 summary：0
 
-## P0 正文过薄（93）
+## P0 正文过薄（73）
 
 | entry_id | 标题 | 文件 | 有效正文 | 旧模板字段 | summary |
 | --- | --- | --- | --- | --- | --- |
@@ -66,32 +66,13 @@ complete 条目总数：303
 | interview-hr | HR 面 | book/05-从学校走向第一份工作 | 85 | — | 有 |
 | offer-equity-bonus | 股票与奖金 | book/05-从学校走向第一份工作 | 91 | — | 有 |
 | work-learn-the-job | 怎么真正学会一份工作 | book/06-进入职场以后继续积累 | 86 | — | 有 |
-| work-understand-business | 怎么理解业务 | book/06-进入职场以后继续积累 | 75 | — | 有 |
-| work-with-manager | 怎么和直属领导合作 | book/06-进入职场以后继续积累 | 74 | — | 有 |
-| work-ownership | Ownership | book/06-进入职场以后继续积累 | 74 | — | 有 |
-| work-bigger-projects | 怎么承担更大的项目 | book/06-进入职场以后继续积累 | 72 | — | 有 |
-| work-prove-results | 怎么证明自己的成果 | book/06-进入职场以后继续积累 | 70 | — | 有 |
-| work-business-impact | 怎么积累业务影响 | book/06-进入职场以后继续积累 | 70 | — | 有 |
-| work-learn-skills | 技能还要不要继续学 | book/06-进入职场以后继续积累 | 72 | — | 有 |
 | work-learn-language | 工作后学语言 | book/06-进入职场以后继续积累 | 72 | — | 有 |
-| work-side-project | 工作后做个人项目 | book/06-进入职场以后继续积累 | 75 | — | 有 |
-| work-open-source | 工作后做开源 | book/06-进入职场以后继续积累 | 73 | — | 有 |
 | work-study-again | 工作后重新读书 | book/06-进入职场以后继续积累 | 79 | — | 有 |
 | community-professional-group | 专业社群 | book/06-进入职场以后继续积累 | 69 | — | 有 |
 | work-mentor-role | Mentor | book/06-进入职场以后继续积累 | 74 | — | 有 |
 | community-organizer | Organizer | book/06-进入职场以后继续积累 | 59 | — | 有 |
 | community-speaker | Speaker | book/06-进入职场以后继续积累 | 53 | — | 有 |
-| work-internal-transfer | 内部转岗 | book/06-进入职场以后继续积累 | 69 | — | 有 |
-| work-overseas-job | 海外工作 | book/06-进入职场以后继续积累 | 76 | — | 有 |
-| promotion-stalled | 长期不晋升怎么办 | book/07-当职业开始出现分岔 | 99 | — | 有 |
-| track-ic-depth | 专业深度 | book/07-当职业开始出现分岔 | 71 | — | 有 |
-| track-ic-cross-team | 跨团队影响 | book/07-当职业开始出现分岔 | 64 | — | 有 |
-| track-ic-industry | 行业影响 | book/07-当职业开始出现分岔 | 68 | — | 有 |
 | track-staff-principal | Staff / Principal 等角色 | book/07-当职业开始出现分岔 | 105 | — | 有 |
-| mgmt-first-team | 第一次带人 | book/07-当职业开始出现分岔 | 73 | — | 有 |
-| mgmt-team-lead | Team Lead | book/07-当职业开始出现分岔 | 67 | — | 有 |
-| mgmt-hiring | 招聘 | book/07-当职业开始出现分岔 | 59 | — | 有 |
-| mgmt-performance | 绩效 | book/07-当职业开始出现分岔 | 65 | — | 有 |
 | freelance-clients | 找客户 | book/08-其他同样成立的人生路径 | 92 | — | 有 |
 | freelance-pricing | 定价 | book/08-其他同样成立的人生路径 | 81 | — | 有 |
 | freelance-stability | 收入稳定性 | book/08-其他同样成立的人生路径 | 83 | — | 有 |
@@ -104,7 +85,6 @@ complete 条目总数：303
 | startup-business-model | 商业模式 | book/08-其他同样成立的人生路径 | 68 | — | 有 |
 | startup-incubator | Incubator | book/08-其他同样成立的人生路径 | 102 | — | 有 |
 | startup-accelerator | Accelerator | book/08-其他同样成立的人生路径 | 94 | — | 有 |
-| direction-again | 再次不知道方向时怎么办 | book/08-其他同样成立的人生路径 | 87 | — | 有 |
 
 ## P1 偏薄（39）
 
