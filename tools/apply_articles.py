@@ -73,14 +73,19 @@ def _meta_block(entry_id: str, art: dict, title: str) -> str:
     effort = art.get("effort", "medium")
     evidence = art.get("evidence", "[experience_based]")
     extra = art.get("meta_extra", [])
+
+    def _lst(v):
+        v = str(v).strip()
+        return v if v.startswith("[") else "[" + v + "]"
+
     lines = [
         f"id: {entry_id}",
         "status: complete",
-        f"stages: {stages}",
-        f"topics: {topics}",
-        f"outputs: {outputs}",
+        f"stages: {_lst(stages)}",
+        f"topics: {_lst(topics)}",
+        f"outputs: {_lst(outputs)}",
         f"effort: {effort}",
-        f"evidence: {evidence}",
+        f"evidence: {_lst(evidence)}",
         f"summary: {summary}",
         f"last_verified: {LAST_VERIFIED}",
     ]
