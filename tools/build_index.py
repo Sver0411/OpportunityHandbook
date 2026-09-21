@@ -41,11 +41,9 @@ def main() -> int:
 
     if args.report:
         say("章节统计")
-        for group in index["nav"]:
-            say(f"  [{group['label']}]")
-            for item in group["items"]:
-                extra = f" / 问题入口 {item['questions']}" if item.get("questions") else ""
-                say(f"    {item['title']}: 完成 {item['complete']} / 待写 {item['todo']}{extra}")
+        for item in index.get("docs", []):
+            extra = f" / 问题入口 {item['questions']}" if item.get("questions") else ""
+            say(f"  {item['title']}: 完成 {item['complete']} / 待写 {item['todo']}{extra}")
 
     if args.report_stale:
         say(f"\n需要重新核实（最后核实早于 {index['stale_threshold']}）")
