@@ -261,7 +261,8 @@ def first_sentence(body: str) -> str:
     m = re.search(r"^-\s*一句话\s*[:：]\s*\n((?:\s{2,}.*\n?)+)", body, re.M)
     if not m:
         return ""
-    return " ".join(x.strip() for x in m.group(1).splitlines() if x.strip())
+    text = " ".join(x.strip() for x in m.group(1).splitlines() if x.strip())
+    return re.sub(r"\*\*(.+?)\*\*", r"\1", text)
 
 
 # ---------------------------------------------------------------- 结构解析
