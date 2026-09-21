@@ -143,6 +143,9 @@ def rebuild(path: Path, layout, pool, head, h1, intro, write: bool):
     groups = layout.get(loc)
     if groups is None:
         return 0, [f"（跳过未登记章节 {loc}）"]
+    if not any(n.get("target", {}).get("type") == "entry"
+               for g in groups for n in g["entries"]):
+        return 0, [f"（跳过索引章节 {loc}，不重建）"]
 
     out: list[str] = list(h1 or [f"# {path.stem.split('-', 1)[-1]}\n"])
     if intro:
