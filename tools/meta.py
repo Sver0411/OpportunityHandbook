@@ -12,6 +12,7 @@
 from __future__ import annotations
 
 import datetime
+import json
 import re
 from pathlib import Path
 
@@ -299,11 +300,36 @@ def strip_markdown(text: str) -> str:
     return " ".join(out)
 
 
+def first_paragraph(body: str) -> str:
+    """取正文第一个「自然段」：跳过标题、列表、meta 块、引用与分隔线。"""
+    for raw in strip_fenced(body).splitlines():
+        s = raw.strip()
+        if not s or s.startswith(("#", "-", "*", ">", "|", "`", "---")):
+            continue
+        text = strip_markdown(s)
+        text = re.sub(r"\*\*(.+?)\*\*", r"\1", text)
+        text = re.sub(r"`(.+?)`", r"\1", text)
+        if len(text) >= 20:
+            return text
+    return ""
+
+
+def entry_summary(meta_block: dict, body: str) -> str:
+    """摘要：metadata.summary 优先；没有就用正文第一个自然段。
+
+    正文不再被要求写成固定栏目，所以摘要也不依赖任何栏目名。
+    """
+    explicit = str((meta_block or {}).get("summary") or "").strip()
+    if explicit:
+        return re.sub(r"\s+", " ", explicit)
+    return first_paragraph(body)
+
+
 def first_sentence(body: str) -> str:
-    """取条目正文里「一句话」字段的内容，作为索引摘要。"""
+    """兼容旧调用：优先取「一句话」栏，取不到再退回第一个自然段。"""
     m = re.search(r"^-\s*一句话\s*[:：]\s*\n((?:\s{2,}.*\n?)+)", body, re.M)
     if not m:
-        return ""
+        return first_paragraph(body)
     text = " ".join(x.strip() for x in m.group(1).splitlines() if x.strip())
     return re.sub(r"\*\*(.+?)\*\*", r"\1", text)
 
@@ -334,6 +360,21 @@ def strip_fenced(text: str) -> str:
                 fence = None
             out.append("")
     return "\n".join(out)
+
+
+def _is_group_heading(lines: list[str], i: int) -> bool:
+    """判断第 i 行的 `## ` 是「章节分组标题」还是「文章小节标题」。
+
+    约定：分组标题后面直接跟条目（或另一个分组），文章小节标题后面是正文。
+    这样条目内部就可以自由使用 `##` 组织文章结构。
+    """
+    j = i + 1
+    while j < len(lines) and not lines[j].strip():
+        j += 1
+    if j >= len(lines):
+        return True
+    nxt = lines[j]
+    return nxt.startswith("### ") or nxt.startswith("## ")
 
 
 def split_entries(body: str) -> list[dict]:
@@ -403,6 +444,11 @@ def split_entries(body: str) -> list[dict]:
             i = body_start
             continue
         if hm and len(hm.group(1)) <= 2:
+            if hm.group(1) == "##" and not _is_group_heading(lines, i):
+                # 条目内部的小节标题：留在条目正文里，让文章自己组织结构
+                (entry["lines"] if entry is not None else buf).append(line)
+                i += 1
+                continue
             flush_entry()
             if len(hm.group(1)) == 1:
                 group = ""
@@ -598,11 +644,16 @@ def validate(root: Path, docs: list[Doc]) -> tuple[list[str], list[str], dict]:
                     err(doc, f"条目 {eid} 的 last_verified 缺失或格式错误")
                 else:
                     body_text = "\n".join(e["lines"])
-                    m_body = re.search(r"^-\s*最后核实\s*[:：]\s*\n?\s*(\d{4}-\d{2}-\d{2})", body_text, re.M)
+                    m_body = re.search(r"最后核实\s*[:：]\s*(\d{4}-\d{2}-\d{2})", body_text)
                     if m_body and m_body.group(1) != elv:
                         err(doc, f"条目 {eid} 的正文「最后核实」({m_body.group(1)}) 与 meta ({elv}) 不一致")
-                    if not m_body:
-                        warnings.append(f"{doc.rel}: 条目 {eid} 的正文缺少「最后核实」栏")
+                    if m_body is None:
+                        # 正文不再强制固定栏目：写明「最后核实」或「来源与更新」都可以
+                        pass
+                    if not str(meta.get("summary") or "").strip() and not first_paragraph(
+                            "\n".join(e["lines"])):
+                        warnings.append(f"{doc.rel}: 条目 {eid} 没有 summary，正文也没有可用的首段，"
+                                        f"搜索结果里会没有摘要")
                     try:
                         d = datetime.date.fromisoformat(elv)
                         if (today - d).days > STALE_DAYS:
@@ -633,7 +684,7 @@ def validate(root: Path, docs: list[Doc]) -> tuple[list[str], list[str], dict]:
                 "effort": (eff[0] if status == "complete" and eff else ""),
                 "evidence": _as_list(meta.get("evidence")),
                 "last_verified": str(meta.get("last_verified") or ""),
-                "summary": first_sentence("\n".join(e["lines"])),
+                "summary": entry_summary(e.get("meta") or {}, "\n".join(e["lines"])),
                 "text": strip_markdown("\n".join(e["lines"]))[:4000],
             })
 
@@ -695,6 +746,17 @@ def validate(root: Path, docs: list[Doc]) -> tuple[list[str], list[str], dict]:
     return errors, warnings, {"entries": entries, "ids": ids, "stale": stale, "stats": stats}
 
 
+def _load_redirects(root: Path) -> dict:
+    path = root / "meta" / "ia-redirects.json"
+    if not path.is_file():
+        return {"docs": {}, "entries": {}}
+    try:
+        data = json.loads(path.read_text(encoding="utf-8"))
+    except Exception:
+        return {"docs": {}, "entries": {}}
+    return {"docs": data.get("docs") or {}, "entries": data.get("entries") or {}}
+
+
 def stale_threshold() -> str:
     return (datetime.date.today() - datetime.timedelta(days=STALE_DAYS)).isoformat()
 
@@ -721,12 +783,15 @@ def doc_user_visible(doc: Doc) -> bool:
 
 
 def _doc_section(doc: Doc) -> str:
-    """一级分组：docs/ 归入「专题」，meta/ 归入「内容规范」，book 章节读 front matter。"""
+    """一级分组：一律优先读 front matter 的 section（IA 重构后 book 与 docs 都显式声明）。"""
+    explicit = str(doc.front.get("section") or "").strip()
+    if explicit:
+        return explicit
     if doc.rel.startswith("docs/"):
         return SECTION_LABELS["docs"]
     if doc.rel.startswith("meta/"):
         return SECTION_LABELS["meta"]
-    return str(doc.front.get("section") or "").strip() or "其它"
+    return "其它"
 
 
 def _doc_subsection(doc: Doc) -> tuple[str, int]:
@@ -837,7 +902,8 @@ def build_nav(docs: list[Doc], entries: list[dict]) -> list[dict]:
         bucket["docs"].append(doc)
 
     nav: list[dict] = []
-    for label in order:
+    # 一级栏目按 section_order 排列（book 与 docs 混排时不能依赖文件路径顺序）
+    for label in sorted(order, key=lambda l: (sections[l]["order"], l)):
         sec = sections[label]
         groups = sorted(sec["subs"].values(), key=lambda g: (g["order"], g["label"]))
         children: list[dict] = []
@@ -901,6 +967,8 @@ def build_index(root: Path) -> tuple[dict, list[str], list[str]]:
                    for k, v in FACETS.items()},
         "status_note": STATUS_NOTE,
         "nav": nav,
+        # IA 重构留下的旧地址 → 新地址（保证旧 hash 深链不失效）
+        "redirects": _load_redirects(root),
         # docs：用户侧文档（无 planned），供阅读序列使用
         "docs": [
             {"location": d.location, "title": d.title, "route": d.route,

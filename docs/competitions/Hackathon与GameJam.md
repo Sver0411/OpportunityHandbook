@@ -2,8 +2,11 @@
 id: doc-competition-hackathon-gamejam
 title: Hackathon 与 Game Jam
 type: doc
-section: competitions
 order: 4
+section: 09 专题手册
+section_order: 90
+subsection: 竞赛手册
+sub_order: 2
 status: planned
 stages: [highschool, college, undergraduate, master]
 topics: [competition]
@@ -13,7 +16,7 @@ last_verified: 2026-09-21
 
 # Hackathon 与 Game Jam
 
-> 本页是专题资料。判断与方法见主指南 [竞赛与挑战](../../book/09-竞赛与挑战.md)。
+> 本页是专题资料。判断与方法见主指南 [竞赛与挑战](../../book/03-开始积累真正能留下来的经历.md)。
 
 短周期创作类活动的产出上限、真实价值与后续开发。
 

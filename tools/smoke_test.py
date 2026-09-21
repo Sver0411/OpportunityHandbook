@@ -47,7 +47,8 @@ try { delete window.IntersectionObserver; } catch (e) {}
 </script>
 """
 
-HASHES = {"home": "/", "deep": "/", "browse": "/browse?q=%E4%BF%9D%E7%A0%94", "mobile": "/"}
+HASHES = {"home": "/", "deep": "/", "browse": "/browse?q=%E4%BF%9D%E7%A0%94",
+          "mobile": "/", "legacy": "/doc/book/03-%E5%8D%87%E5%AD%A6/grad-school-worth-it"}
 
 PROBE = r"""
 <pre id="smoke" style="position:fixed;left:0;bottom:0;z-index:9999;background:#fff;color:#000;font:11px monospace;padding:6px;max-width:100%;white-space:pre-wrap"></pre>
@@ -81,7 +82,18 @@ PROBE = r"""
       await wait(1200);
       var deep = document.querySelector("#grad-school-worth-it");
       ok("深链能定位", !!deep && deep.classList.contains("highlight"));
-      ok("深链页面有正文", count("#grad-school-worth-it ul.fields") > 0);
+      ok("深链页面有正文", count("#grad-school-worth-it h2") > 0 ||
+         count("#grad-school-worth-it ul.fields") > 0);   // 文章格式与旧格式都算
+    }
+
+    if (mode === "legacy") {
+      // IA 重构前的旧地址：应当自动跳转到新地址并渲染出同一篇文章
+      await wait(1500);
+      var legacy = document.querySelector("#grad-school-worth-it");
+      ok("旧深链能打开", !!legacy);
+      ok("旧深链被改写成新地址", location.hash.indexOf("#/doc/book/04-") === 0, location.hash);
+      ok("旧深链页面有正文", count("#grad-school-worth-it h2") > 0 ||
+         count("#grad-school-worth-it ul.fields") > 0);
     }
 
     if (mode === "browse") {
@@ -194,6 +206,7 @@ def main() -> int:
         for label, size, mode in (("桌面 · 首页与文档", "1440,1400", "home"),
                                   ("桌面 · 深链", "1440,1400", "deep"),
                                   ("桌面 · 搜索与筛选", "1440,1400", "browse"),
+                                  ("旧深链重定向", "1440,1400", "legacy"),
                                   ("移动端", "500,1000", "mobile")):
             results = run_case(chrome, base, size, mode)
             if results and all("超时" in r["name"] for r in results):

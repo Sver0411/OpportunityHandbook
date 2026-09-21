@@ -48,23 +48,27 @@
 
 **想按自己的处境找**——在线页面支持叠加筛选：人生阶段、方向、能换回什么、投入大小、证据类型。例如“专科 + 想拿学历 + 低投入”，或“工作 3–5 年 + 想转行 + 能接受降薪”。
 
-**想系统读一遍**——从 [从这里开始](book/00-从这里开始.md) 顺着章节读；每章的判断框架比单个条目更值得读。
+**想系统读一遍**——从 [从这里开始](book/00-从这里开始.md) 顺着主线读：先决定往哪走，再打基础、积累经历、面对第一次分流、进入职场、处理职业分岔，最后是其他同样成立的路径。目录按「你会先遇到什么」排列，不按学科分类。
+
+**想按阶段进入**——`docs/timelines/` 里的路径时间线（本科四年、保研、考研、留学申请、校招、转行）把每个阶段该看的东西串成一条线。
+
+**想查一件事**——专题手册（科研、竞赛、国家与地区、行业与职业）与工具模板只做检索入口，判断仍然只有一份，都在正文里。
 
 ## 从哪里开始
 
-- [我到底要不要读研？](book/03-升学.md#grad-school-worth-it)
-- [保研和考研应该怎么选？](book/03-升学.md#baoyan-vs-kaoyan)
-- [什么比赛值得参加？](book/09-竞赛与挑战.md#competition-what-worth-joining)
-- [这个比赛是不是交了钱就能拿奖？](book/09-竞赛与挑战.md#competition-pay-to-win-recognition)
-- [本科生怎么开始科研？](book/08-科研与学术.md#research-undergrad-start)
-- [第一份工作应该怎么看？](book/05-实习与第一份工作.md#first-job-what-to-trade-for)
-- [两个 Offer 应该怎么比较？](book/06-找工作.md#offer-comparison)
-- [工作几年以后应该怎么升职？](book/07-工作后的发展.md#promotion-first-years)
-- [转行要不要从零开始？](book/07-工作后的发展.md#career-change-keep-capital)
-- [我的 GitHub 项目算项目经历吗？](book/10-项目作品与开源.md#project-what-counts-as-experience)
-- [什么证书值得考？](book/11-技能语言与证书.md#certificate-what-is-worth-it)
-- [怎么比较两个完全不同的机会？](book/02-怎么判断一个机会值不值得.md#judge-compare-two-opportunities)
-- [不知道自己想做什么怎么办？](book/15-不知道自己想做什么.md#explore-low-cost-experiments)
+- [我到底要不要读研？](book/04-当你开始面对第一次重要分流.md#grad-school-worth-it)
+- [保研和考研应该怎么选？](book/04-当你开始面对第一次重要分流.md#baoyan-vs-kaoyan)
+- [什么比赛值得参加？](book/03-开始积累真正能留下来的经历.md#competition-what-worth-joining)
+- [这个比赛是不是交了钱就能拿奖？](book/03-开始积累真正能留下来的经历.md#competition-pay-to-win-recognition)
+- [本科生怎么开始科研？](book/03-开始积累真正能留下来的经历.md#research-undergrad-start)
+- [第一份工作应该怎么看？](book/05-从学校走向第一份工作.md#first-job-what-to-trade-for)
+- [两个 Offer 应该怎么比较？](book/05-从学校走向第一份工作.md#offer-comparison)
+- [工作几年以后应该怎么升职？](book/06-进入职场以后继续积累.md#promotion-first-years)
+- [转行要不要从零开始？](book/07-当职业开始出现分岔.md#career-change-keep-capital)
+- [我的 GitHub 项目算项目经历吗？](book/03-开始积累真正能留下来的经历.md#project-what-counts-as-experience)
+- [什么证书值得考？](book/02-在学校里先把基础打好.md#certificate-what-is-worth-it)
+- [怎么比较两个完全不同的机会？](book/00-从这里开始.md#judge-compare-two-opportunities)
+- [不知道自己想做什么怎么办？](book/02-在学校里先把基础打好.md#explore-low-cost-experiments)
 
 ## 能在这里找到什么
 

@@ -2,9 +2,11 @@
 id: tool-offer-comparison-table
 title: Offer 对比表
 type: doc
-subsection: 工具与模板
-sub_order: 5
 order: 1
+section: 10 时间线与工具
+section_order: 100
+subsection: 工具与模板
+sub_order: 2
 status: complete
 stages: [new_grad, work_1_3, work_3_5, career_change]
 topics: [job]
@@ -66,9 +68,9 @@ last_verified: 2026-09-21
 
 ## 相关
 
-- [Offer 应该怎么比较](../../book/06-找工作.md#offer-comparison)
-- [第一份工作最应该换回什么](../../book/05-实习与第一份工作.md#first-job-what-to-trade-for)
-- [三方协议与毁约](../../book/06-找工作.md#job-hunting-tripartite-agreement)
+- [Offer 应该怎么比较](../../book/05-从学校走向第一份工作.md#offer-comparison)
+- [第一份工作最应该换回什么](../../book/05-从学校走向第一份工作.md#first-job-what-to-trade-for)
+- [三方协议与毁约](../../book/05-从学校走向第一份工作.md#job-hunting-tripartite-agreement)
 
 ## 证据与来源
 

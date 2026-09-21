@@ -667,10 +667,32 @@
 
     if (parts.length && parts[0] === "doc") {
       var rest = parts.slice(1).join("/");
+
+      // IA 重构前的旧地址：先查重定向，再按新地址渲染（顺带把地址栏换成规范地址）
+      var redirects = state.index.redirects || { docs: {}, entries: {} };
+      var oldRoute = "#/doc/" + rest;
+      var target = (redirects.entries || {})[oldRoute];
+      if (target) {
+        history.replaceState(null, "", target);
+        var tparts = target.replace(/^#\//, "").split("/");
+        rest = tparts.slice(1).join("/");
+      }
+
       for (var i = 0; i < state.locations.length; i++) {
         var loc = state.locations[i];
         if (rest === loc) { renderDoc(loc, ""); return; }
         if (rest.indexOf(loc + "/") === 0) { renderDoc(loc, decodeURIComponent(rest.slice(loc.length + 1))); return; }
+      }
+
+      // 整份文档被搬走：把旧 location 映射到新 location
+      var slash = rest.indexOf("/");
+      var oldLoc = slash < 0 ? rest : rest.slice(0, slash);
+      var entryId = slash < 0 ? "" : decodeURIComponent(rest.slice(slash + 1));
+      var newLoc = (redirects.docs || {})[oldLoc];
+      if (newLoc && state.byLocation[newLoc]) {
+        history.replaceState(null, "", "#/doc/" + newLoc + (entryId ? "/" + entryId : ""));
+        renderDoc(newLoc, entryId);
+        return;
       }
     }
     renderDoc(state.homeLocation, "");
