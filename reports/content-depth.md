@@ -1,33 +1,19 @@
 # Content Depth Report
 
-生成时间：2026-09-22T01:39:46+08:00
+生成时间：2026-09-22T01:42:25+08:00
 
 complete 条目总数：303
-- P0（<120 字，必须补写）：61
-- P1（120–250 字，人工审查）：35
+- P0（<120 字，必须补写）：47
+- P1（120–250 字，人工审查）：27
 - P2（仍含旧模板字段）：0
 - 缺 summary：0
 
-## P0 正文过薄（61）
+## P0 正文过薄（47）
 
 | entry_id | 标题 | 文件 | 有效正文 | 旧模板字段 | summary |
 | --- | --- | --- | --- | --- | --- |
 | guide-no-single-path | 人生并不是只有一条标准路线 | book/00-从这里开始 | 79 | — | 有 |
 | apprenticeship | 学徒制与技能路线 | book/01-先决定下一步往哪里走 | 35 | — | 有 |
-| study-life-balance | 学业、实践和生活怎么平衡 | book/02-在学校里先把基础打好 | 96 | — | 有 |
-| understand-role | 怎么了解一个岗位 | book/02-在学校里先把基础打好 | 88 | — | 有 |
-| find-practitioners | 怎么找到真实从业者 | book/02-在学校里先把基础打好 | 107 | — | 有 |
-| skill-information-retrieval | 信息检索 | book/02-在学校里先把基础打好 | 79 | — | 有 |
-| skill-writing | 写作 | book/02-在学校里先把基础打好 | 79 | — | 有 |
-| skill-presentation | 表达与演讲 | book/02-在学校里先把基础打好 | 76 | — | 有 |
-| skill-collaboration | 沟通协作 | book/02-在学校里先把基础打好 | 77 | — | 有 |
-| skill-data | 数据能力 | book/02-在学校里先把基础打好 | 96 | — | 有 |
-| skill-project-management | 项目管理 | book/02-在学校里先把基础打好 | 83 | — | 有 |
-| skill-ai-tools | AI 与数字工具 | book/02-在学校里先把基础打好 | 90 | — | 有 |
-| skill-mastery-check | 怎么判断自己真的掌握了 | book/02-在学校里先把基础打好 | 89 | — | 有 |
-| skill-second-language | 第二外语 | book/02-在学校里先把基础打好 | 94 | — | 有 |
-| language-timing-for-abroad | 如果以后可能留学，什么时候准备 | book/02-在学校里先把基础打好 | 81 | — | 有 |
-| certificate-vendor | 厂商认证 | book/02-在学校里先把基础打好 | 87 | — | 有 |
 | overseas-gpa | GPA | book/04-当你开始面对第一次重要分流 | 86 | — | 有 |
 | research-experiment-data | 实验与数据 | book/04-当你开始面对第一次重要分流 | 117 | — | 有 |
 | internship-daily | 日常实习 | book/04-当你开始面对第一次重要分流 | 80 | — | 有 |
@@ -74,7 +60,7 @@ complete 条目总数：303
 | startup-incubator | Incubator | book/08-其他同样成立的人生路径 | 102 | — | 有 |
 | startup-accelerator | Accelerator | book/08-其他同样成立的人生路径 | 94 | — | 有 |
 
-## P1 偏薄（35）
+## P1 偏薄（27）
 
 | entry_id | 标题 | 文件 | 有效正文 | 旧模板字段 | summary |
 | --- | --- | --- | --- | --- | --- |
@@ -93,14 +79,6 @@ complete 条目总数：303
 | education-cost-budget | 为教育投入多少钱才合理 | book/01-先决定下一步往哪里走 | 139 | — | 有 |
 | optionality-why-not-lock | 为什么不要过早把路线锁死 | book/01-先决定下一步往哪里走 | 130 | — | 有 |
 | optionality-transferable | 哪些能力可以跨路线使用 | book/01-先决定下一步往哪里走 | 122 | — | 有 |
-| gpa-matters | GPA 与排名到底重要吗 | book/02-在学校里先把基础打好 | 249 | — | 有 |
-| failing-courses | 挂科会带来什么影响 | book/02-在学校里先把基础打好 | 193 | — | 有 |
-| coursework-depth | 专业课应该学到什么程度 | book/02-在学校里先把基础打好 | 142 | — | 有 |
-| general-education-value | 通识课有没有价值 | book/02-在学校里先把基础打好 | 120 | — | 有 |
-| understand-industry | 怎么了解一个行业 | book/02-在学校里先把基础打好 | 186 | — | 有 |
-| skill-reverse-engineer | 怎么从岗位要求反推技能 | book/02-在学校里先把基础打好 | 121 | — | 有 |
-| english-cet | 四六级与校内英语 | book/02-在学校里先把基础打好 | 122 | — | 有 |
-| certificate-not-for-certificates | 不要为了证书而考证 | book/02-在学校里先把基础打好 | 157 | — | 有 |
 | fork-study-or-work | 升学还是工作 | book/04-当你开始面对第一次重要分流 | 146 | — | 有 |
 | fork-home-or-abroad | 国内还是海外 | book/04-当你开始面对第一次重要分流 | 186 | — | 有 |
 | study-choose-school | 选学校 | book/04-当你开始面对第一次重要分流 | 139 | — | 有 |
