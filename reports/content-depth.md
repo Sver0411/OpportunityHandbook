@@ -1,14 +1,14 @@
 # Content Depth Report
 
-生成时间：2026-09-22T01:37:09+08:00
+生成时间：2026-09-22T01:39:46+08:00
 
 complete 条目总数：303
-- P0（<120 字，必须补写）：73
-- P1（120–250 字，人工审查）：39
+- P0（<120 字，必须补写）：61
+- P1（120–250 字，人工审查）：35
 - P2（仍含旧模板字段）：0
 - 缺 summary：0
 
-## P0 正文过薄（73）
+## P0 正文过薄（61）
 
 | entry_id | 标题 | 文件 | 有效正文 | 旧模板字段 | summary |
 | --- | --- | --- | --- | --- | --- |
@@ -28,16 +28,6 @@ complete 条目总数：303
 | skill-second-language | 第二外语 | book/02-在学校里先把基础打好 | 94 | — | 有 |
 | language-timing-for-abroad | 如果以后可能留学，什么时候准备 | book/02-在学校里先把基础打好 | 81 | — | 有 |
 | certificate-vendor | 厂商认证 | book/02-在学校里先把基础打好 | 87 | — | 有 |
-| project-demo | Demo | book/03-开始积累真正能留下来的经历 | 83 | — | 有 |
-| project-data-test-metrics | 数据、测试和指标 | book/03-开始积累真正能留下来的经历 | 80 | — | 有 |
-| project-users-feedback | 真实用户与反馈 | book/03-开始积累真正能留下来的经历 | 72 | — | 有 |
-| competition-vocational-skills | 职业技能竞赛 | book/03-开始积累真正能留下来的经历 | 40 | — | 有 |
-| opensource-pr | PR | book/03-开始积累真正能留下来的经历 | 96 | — | 有 |
-| project-documentation | Documentation | book/03-开始积累真正能留下来的经历 | 78 | — | 有 |
-| project-code-review | Review | book/03-开始积累真正能留下来的经历 | 89 | — | 有 |
-| community-club-value | 社团有没有价值 | book/03-开始积累真正能留下来的经历 | 74 | — | 有 |
-| community-professional-association | 专业协会 | book/03-开始积累真正能留下来的经历 | 103 | — | 有 |
-| community-meetup | Meetup | book/03-开始积累真正能留下来的经历 | 70 | — | 有 |
 | overseas-gpa | GPA | book/04-当你开始面对第一次重要分流 | 86 | — | 有 |
 | research-experiment-data | 实验与数据 | book/04-当你开始面对第一次重要分流 | 117 | — | 有 |
 | internship-daily | 日常实习 | book/04-当你开始面对第一次重要分流 | 80 | — | 有 |
@@ -70,8 +60,6 @@ complete 条目总数：303
 | work-study-again | 工作后重新读书 | book/06-进入职场以后继续积累 | 79 | — | 有 |
 | community-professional-group | 专业社群 | book/06-进入职场以后继续积累 | 69 | — | 有 |
 | work-mentor-role | Mentor | book/06-进入职场以后继续积累 | 74 | — | 有 |
-| community-organizer | Organizer | book/06-进入职场以后继续积累 | 59 | — | 有 |
-| community-speaker | Speaker | book/06-进入职场以后继续积累 | 53 | — | 有 |
 | track-staff-principal | Staff / Principal 等角色 | book/07-当职业开始出现分岔 | 105 | — | 有 |
 | freelance-clients | 找客户 | book/08-其他同样成立的人生路径 | 92 | — | 有 |
 | freelance-pricing | 定价 | book/08-其他同样成立的人生路径 | 81 | — | 有 |
@@ -86,7 +74,7 @@ complete 条目总数：303
 | startup-incubator | Incubator | book/08-其他同样成立的人生路径 | 102 | — | 有 |
 | startup-accelerator | Accelerator | book/08-其他同样成立的人生路径 | 94 | — | 有 |
 
-## P1 偏薄（39）
+## P1 偏薄（35）
 
 | entry_id | 标题 | 文件 | 有效正文 | 旧模板字段 | summary |
 | --- | --- | --- | --- | --- | --- |
@@ -113,10 +101,6 @@ complete 条目总数：303
 | skill-reverse-engineer | 怎么从岗位要求反推技能 | book/02-在学校里先把基础打好 | 121 | — | 有 |
 | english-cet | 四六级与校内英语 | book/02-在学校里先把基础打好 | 122 | — | 有 |
 | certificate-not-for-certificates | 不要为了证书而考证 | book/02-在学校里先把基础打好 | 157 | — | 有 |
-| competition-should-i-join | 要不要参加比赛 | book/03-开始积累真正能留下来的经历 | 178 | — | 有 |
-| competition-business | 商业与创业竞赛 | book/03-开始积累真正能留下来的经历 | 122 | — | 有 |
-| research-do-i-like-it | 怎么判断自己是否喜欢科研 | book/03-开始积累真正能留下来的经历 | 123 | — | 有 |
-| opensource-what-is | 什么是开源贡献 | book/03-开始积累真正能留下来的经历 | 128 | — | 有 |
 | fork-study-or-work | 升学还是工作 | book/04-当你开始面对第一次重要分流 | 146 | — | 有 |
 | fork-home-or-abroad | 国内还是海外 | book/04-当你开始面对第一次重要分流 | 186 | — | 有 |
 | study-choose-school | 选学校 | book/04-当你开始面对第一次重要分流 | 139 | — | 有 |

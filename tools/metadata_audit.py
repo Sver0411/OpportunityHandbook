@@ -62,7 +62,8 @@ def main() -> int:
             continue
         in_work_chapter = loc.startswith("book/06") or loc.startswith("book/07")
         title_is_work = any(k in title for k in WORK_TOPICS)
-        if (in_work_chapter or title_is_work) and not (stages & WORK_STAGES):
+        # 可疑项只看职场章节（06/07）：05 校招章节按定义保留学生阶段
+        if in_work_chapter and not (stages & WORK_STAGES):
             suspicious.append({"id": e.get("id"), "title": title, "file": loc,
                                "stages": sorted(stages)})
         # 第二类：明显职场中后期条目仍混入大量学生阶段
