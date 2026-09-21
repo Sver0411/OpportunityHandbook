@@ -40,10 +40,13 @@ def main() -> int:
             print(*a)
 
     if args.report:
+        from collections import Counter
         say("章节统计")
-        for item in index.get("docs", []):
-            extra = f" / 问题入口 {item['questions']}" if item.get("questions") else ""
-            say(f"  {item['title']}: 完成 {item['complete']} / 待写 {item['todo']}{extra}")
+        done = Counter(e["doc"] for e in index["entries"])
+        todo = Counter(t["doc"] for t in index["todos"])
+        titles = {d["location"]: d["title"] for d in index["docs"]}
+        for loc in sorted(set(done) | set(todo)):
+            say(f"  {titles.get(loc, loc)}: 完成 {done.get(loc, 0)} / 待写 {todo.get(loc, 0)}")
 
     if args.report_stale:
         say(f"\n需要重新核实（最后核实早于 {index['stale_threshold']}）")
