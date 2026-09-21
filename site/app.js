@@ -174,6 +174,7 @@
     li.dataset.key = key;
 
     var row = el("div", { class: "nav-row" });
+    row.dataset.kind = node.kind || "";
     if (kids.length) {
       var btn = el("button", {
         class: "nav-toggle", type: "button",
@@ -236,48 +237,49 @@
   }
 
   function buildNav() {
+    // 首屏挂载时先关掉过渡，避免恢复上次展开状态时目录"抽"一下
+    navTree.classList.add("no-anim");
     clear(navTree);
-    var lastSection = null;
     state.index.nav.forEach(function (node) {
       var ul = el("ul", { class: "nav-group-block" });
       ul.appendChild(renderNode(node, 0, ""));
       navTree.appendChild(ul);
-      lastSection = node;
     });
-    navTree.appendChild(el("div", { class: "nav-group-block" }, [
-      el("ul", null, [
-        el("li", { class: "nav-item nav-l1" }, [
-          el("div", { class: "nav-row" }, [
-            el("span", { class: "nav-dot" }),
-            el("a", { class: "nav-label", href: "#/browse", text: "按条件筛选全部条目" })
-          ])
-        ])
-      ])
-    ]));
-    void lastSection;
+    // 侧栏只放全书目录；「按条件筛选」入口统一由顶栏提供，避免同一界面多处重复
+    requestAnimationFrame(function () {
+      requestAnimationFrame(function () { navTree.classList.remove("no-anim"); });
+    });
   }
 
+  // 节点类型优先级：越精确越优先，保证同一时刻只高亮一行
+  var KIND_PRIORITY = { entry: 5, doc: 4, section: 3, group: 2, subsection: 2 };
+
   function markActive(hash) {
-    var links = navTree.querySelectorAll("a.nav-label");
-    var hit = null;
-    Array.prototype.forEach.call(links, function (a) {
-      var on = a.getAttribute("href") === hash;
-      var row = a.closest(".nav-row");
-      if (row) row.classList.toggle("active", on);
-      if (on) hit = a;
-    });
-    if (!hit) {
-      // 条目深链：退一步高亮它所属的文档
-      var loc = hash.replace(/^#\/doc\//, "").split("/")[0];
-      Array.prototype.forEach.call(links, function (a) {
-        if (a.getAttribute("href") === "#/doc/" + loc) {
-          var row = a.closest(".nav-row");
-          if (row) row.classList.add("active");
-          hit = a;
-        }
+    var rows = Array.prototype.slice.call(navTree.querySelectorAll(".nav-row"));
+    rows.forEach(function (r) { r.classList.remove("active"); });
+
+    function pick(want) {
+      var best = null, bestScore = -1;
+      rows.forEach(function (r) {
+        var a = r.querySelector("a.nav-label");
+        if (!a || a.getAttribute("href") !== want) return;
+        var score = KIND_PRIORITY[r.dataset.kind] || 1;
+        if (score > bestScore) { bestScore = score; best = r; }
       });
+      return best;
+    }
+
+    // 章节页里 section 与它下面所有分组指向同一个 href，必须只留一行，
+    // 否则一次会点亮好几行（看起来像随机变灰）
+    var hit = pick(hash);
+    if (!hit) {
+      // 条目深链：退一步匹配所属文档
+      var loc = hash.replace(/^#\/doc\//, "").split("/")[0];
+      hit = pick("#/doc/" + loc);
     }
     if (!hit) return;
+    hit.classList.add("active");
+
     var li = hit.closest(".nav-item");
     while (li) {
       setOpen(li, true);
