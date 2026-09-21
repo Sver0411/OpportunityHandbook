@@ -43,7 +43,7 @@ CHROME_CANDIDATES = [
 # 冒烟测试不需要它们，先关掉，测试完再恢复（只影响这份临时副本）
 STUBS = """
 <script>
-try { window.IntersectionObserver = undefined; } catch (e) {}
+try { delete window.IntersectionObserver; } catch (e) {}
 </script>
 """
 
@@ -90,7 +90,11 @@ PROBE = r"""
       location.hash = "#/browse?stages=undergraduate";
       await wait(1000);
       var n2 = count(".result");
-      ok("筛选能改变结果", n2 > 0 && n2 !== n1, n2 + " 条（本科）");
+      ok("筛选能返回结果", n2 > 0, n2 + " 条（本科）");
+      location.hash = "#/browse?stages=undergraduate&effort=low";
+      await wait(1000);
+      var n3 = count(".result");
+      ok("叠加条件会收窄结果", n3 > 0 && n3 < n2, n3 + " 条（本科 + 低投入）");
       location.hash = "#/browse?evidence=official";
       await wait(1000);
       ok("证据筛选可用", count(".result") > 0, count(".result") + " 条（官方规则）");

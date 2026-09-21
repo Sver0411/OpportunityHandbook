@@ -394,7 +394,7 @@
   var tocObserver = null;
   function watchHeadings(links) {
     if (tocObserver) { tocObserver.disconnect(); tocObserver = null; }
-    if (!("IntersectionObserver" in window) || !links.length) return;
+    if (typeof IntersectionObserver !== "function" || !links.length) return;
     var byNode = new Map();
     links.forEach(function (x) { byNode.set(x.node, x.link); });
     tocObserver = new IntersectionObserver(function (entries) {

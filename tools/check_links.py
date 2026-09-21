@@ -33,8 +33,14 @@ sys.path.insert(0, str(Path(__file__).resolve().parent))
 
 import meta as M  # noqa: E402
 
-LINK_RE = re.compile(r"\[[^\]]*\]\((https?://[^)\s]+?)\)")
+# 两种写法都要收：Markdown 链接，以及「证据与来源」里常见的纯文本 URL
 UA = "Mozilla/5.0 (compatible; OpportunityHandbook link checker; +https://github.com/Sver0411/OpportunityHandbook)"
+
+# 两种写法都要收：Markdown 链接，以及「证据与来源」里常见的纯文本 URL
+MD_LINK_RE = re.compile(r'\[[^\]]*\]\((https?://[^)\s]+?)\)')
+BARE_URL_RE = re.compile(r'''(?<![(\[<"'])(https?://[^\s)<>（）"'，。；、]+)''')
+LINK_RE = MD_LINK_RE          # 向后兼容
+TRIM = ".,;:)】」》"
 
 # 永久失效：这些状态直接判定链接坏了
 PERMANENT_CODES = (404, 410, 451)
@@ -54,8 +60,11 @@ def collect(root: Path, only: list[str]) -> dict[str, list[str]]:
     for doc in M.load_docs(root):
         if only and not any(doc.rel.startswith(p) for p in only):
             continue
-        for url in LINK_RE.findall(doc.raw):
-            url = url.rstrip(".,;)")
+        body = M.strip_fenced(doc.raw)      # 跳过代码块里的示例地址
+        for url in MD_LINK_RE.findall(body) + BARE_URL_RE.findall(body):
+            url = url.rstrip(TRIM)
+            if url.endswith((")", "）")):
+                url = url[:-1]
             found.setdefault(url, []).append(doc.rel)
     return found
 

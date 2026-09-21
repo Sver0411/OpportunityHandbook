@@ -360,12 +360,26 @@ def main() -> int:
     routes = {doc.rel: doc.route for doc in docs}
     threshold = index["stale_threshold"]
     count = 0
+    written: set[Path] = set()
     for doc in docs:
         mdrender.set_context(doc.rel, routes)
         target = out_root / (doc.location + ".html")
         target.parent.mkdir(parents=True, exist_ok=True)
         target.write_text(render_doc(doc, threshold), encoding="utf-8")
+        written.add(target)
         count += 1
+
+    # 清掉改名/删除后留下的陈旧页面，避免它们被一起部署（也不让搜索引擎抓到两份）
+    stale_removed = 0
+    if out_root.is_dir():
+        for page in sorted(out_root.rglob("*.html")):
+            if page in written:
+                continue
+            page.unlink()
+            stale_removed += 1
+            parent = page.parent
+            if parent != out_root and not any(parent.iterdir()):
+                parent.rmdir()
 
     data_dir = root / "site" / "data"
     data_dir.mkdir(parents=True, exist_ok=True)
@@ -378,7 +392,8 @@ def main() -> int:
         print(f"已生成 {pages} 个静态入口页（pages/）+ sitemap.xml + robots.txt{extra}")
 
     if not args.quiet:
-        print(f"已渲染 {count} 个页面到 site/content/，索引写入 site/data/index.json")
+        extra = f"，清理 {stale_removed} 个陈旧页面" if stale_removed else ""
+        print(f"已渲染 {count} 个页面到 site/content/，索引写入 site/data/index.json{extra}")
         if warnings:
             print(f"（{len(warnings)} 条警告，详见 build_index.py --report）")
     return 0
