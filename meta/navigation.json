@@ -1,0 +1,3453 @@
+{
+  "version": 1,
+  "items": [
+    {
+      "title": "00 从这里开始",
+      "target": {
+        "type": "doc",
+        "location": "book/00-从这里开始",
+        "anchor": ""
+      },
+      "children": [
+        {
+          "title": "这本指南怎么用",
+          "target": {
+            "type": "entry",
+            "entry_id": "guide-how-to-use"
+          },
+          "nav_id": "00-01"
+        },
+        {
+          "title": "人生并不是只有一条标准路线",
+          "target": {
+            "type": "entry",
+            "entry_id": "guide-no-single-path"
+          },
+          "nav_id": "00-02"
+        },
+        {
+          "title": "怎么判断一个选择值不值得",
+          "target": {
+            "type": "entry",
+            "entry_id": "judge-worth-it"
+          },
+          "nav_id": "00-03"
+        },
+        {
+          "title": "怎么比较两个完全不同的机会",
+          "target": {
+            "type": "entry",
+            "entry_id": "judge-compare-two-opportunities"
+          },
+          "nav_id": "00-04"
+        },
+        {
+          "title": "什么东西值得长期积累",
+          "target": {
+            "type": "entry",
+            "entry_id": "judge-long-term-accumulation"
+          },
+          "nav_id": "00-05"
+        },
+        {
+          "title": "什么叫机会成本",
+          "target": {
+            "type": "entry",
+            "entry_id": "judge-opportunity-cost"
+          },
+          "nav_id": "00-06"
+        },
+        {
+          "title": "什么叫可验证成果",
+          "target": {
+            "type": "entry",
+            "entry_id": "judge-verifiable-outcomes"
+          },
+          "nav_id": "00-07"
+        },
+        {
+          "title": "什么叫未来选择权",
+          "target": {
+            "type": "entry",
+            "entry_id": "judge-optionality"
+          },
+          "nav_id": "00-08"
+        },
+        {
+          "title": "不知道自己想做什么时怎么办",
+          "target": {
+            "type": "entry",
+            "entry_id": "start-when-no-direction"
+          },
+          "nav_id": "00-09"
+        }
+      ],
+      "nav_id": "00"
+    },
+    {
+      "title": "01 先决定下一步往哪里走",
+      "target": {
+        "type": "doc",
+        "location": "book/01-先决定下一步往哪里走",
+        "anchor": ""
+      },
+      "children": [
+        {
+          "title": "认识你面前的几条主要路线",
+          "target": {
+            "type": "doc",
+            "location": "book/01-先决定下一步往哪里走",
+            "anchor": "认识你面前的几条主要路线"
+          },
+          "children": [
+            {
+              "title": "继续读书",
+              "target": {
+                "type": "entry",
+                "entry_id": "paths-continue-study-default"
+              },
+              "nav_id": "01-01-01"
+            },
+            {
+              "title": "直接工作",
+              "target": {
+                "type": "entry",
+                "entry_id": "paths-direct-work"
+              },
+              "nav_id": "01-01-02"
+            },
+            {
+              "title": "职业教育与技能路线",
+              "target": {
+                "type": "entry",
+                "entry_id": "paths-vocational-and-trades"
+              },
+              "nav_id": "01-01-03"
+            },
+            {
+              "title": "海外发展",
+              "target": {
+                "type": "entry",
+                "entry_id": "paths-overseas"
+              },
+              "nav_id": "01-01-04"
+            },
+            {
+              "title": "参军与公共服务",
+              "target": {
+                "type": "entry",
+                "entry_id": "paths-military"
+              },
+              "nav_id": "01-01-05"
+            },
+            {
+              "title": "Gap Year",
+              "target": {
+                "type": "entry",
+                "entry_id": "paths-gap-year"
+              },
+              "nav_id": "01-01-06"
+            },
+            {
+              "title": "自由职业",
+              "target": {
+                "type": "entry",
+                "entry_id": "paths-freelance"
+              },
+              "nav_id": "01-01-07"
+            },
+            {
+              "title": "创业",
+              "target": {
+                "type": "entry",
+                "entry_id": "paths-startup"
+              },
+              "nav_id": "01-01-08"
+            }
+          ],
+          "nav_id": "01-01"
+        },
+        {
+          "title": "选学校与选专业",
+          "target": {
+            "type": "doc",
+            "location": "book/01-先决定下一步往哪里走",
+            "anchor": "选学校与选专业"
+          },
+          "children": [
+            {
+              "title": "学校和专业哪个更重要",
+              "target": {
+                "type": "entry",
+                "entry_id": "choose-school-vs-major"
+              },
+              "nav_id": "01-02-01"
+            },
+            {
+              "title": "城市要不要纳入选择",
+              "target": {
+                "type": "entry",
+                "entry_id": "choose-city"
+              },
+              "nav_id": "01-02-02"
+            },
+            {
+              "title": "兴趣应该占多大比重",
+              "target": {
+                "type": "entry",
+                "entry_id": "choose-interest-weight"
+              },
+              "nav_id": "01-02-03"
+            },
+            {
+              "title": "就业前景应该怎么看",
+              "target": {
+                "type": "entry",
+                "entry_id": "choose-job-outlook"
+              },
+              "nav_id": "01-02-04"
+            },
+            {
+              "title": "转专业",
+              "target": {
+                "type": "entry",
+                "entry_id": "choose-change-major"
+              },
+              "nav_id": "01-02-05"
+            },
+            {
+              "title": "辅修与双学位",
+              "target": {
+                "type": "entry",
+                "entry_id": "choose-minor-double-degree"
+              },
+              "nav_id": "01-02-06"
+            },
+            {
+              "title": "如果第一次选择不理想怎么办",
+              "target": {
+                "type": "entry",
+                "entry_id": "choose-major-mismatch"
+              },
+              "nav_id": "01-02-07"
+            }
+          ],
+          "nav_id": "01-02"
+        },
+        {
+          "title": "专科与职业教育",
+          "target": {
+            "type": "doc",
+            "location": "book/01-先决定下一步往哪里走",
+            "anchor": "专科与职业教育"
+          },
+          "children": [
+            {
+              "title": "专科毕业后的主要出口",
+              "target": {
+                "type": "entry",
+                "entry_id": "vocational-outcomes"
+              },
+              "nav_id": "01-03-01"
+            },
+            {
+              "title": "专升本",
+              "target": {
+                "type": "entry",
+                "entry_id": "study-zhuanshengben"
+              },
+              "nav_id": "01-03-02"
+            },
+            {
+              "title": "职业本科",
+              "target": {
+                "type": "entry",
+                "entry_id": "vocational-undergraduate"
+              },
+              "nav_id": "01-03-03"
+            },
+            {
+              "title": "学徒制与技能路线",
+              "target": {
+                "type": "entry",
+                "entry_id": "apprenticeship"
+              },
+              "nav_id": "01-03-04"
+            },
+            {
+              "title": "技能型职业的发展空间",
+              "target": {
+                "type": "entry",
+                "entry_id": "trades-career-room"
+              },
+              "nav_id": "01-03-05"
+            }
+          ],
+          "nav_id": "01-03"
+        },
+        {
+          "title": "家庭经济与教育成本",
+          "target": {
+            "type": "doc",
+            "location": "book/01-先决定下一步往哪里走",
+            "anchor": "家庭经济与教育成本"
+          },
+          "children": [
+            {
+              "title": "学费与生活费",
+              "target": {
+                "type": "entry",
+                "entry_id": "education-tuition-living"
+              },
+              "nav_id": "01-04-01"
+            },
+            {
+              "title": "奖助学金",
+              "target": {
+                "type": "entry",
+                "entry_id": "funding-scholarship-system"
+              },
+              "nav_id": "01-04-02"
+            },
+            {
+              "title": "助学贷款",
+              "target": {
+                "type": "entry",
+                "entry_id": "funding-student-loan"
+              },
+              "nav_id": "01-04-03"
+            },
+            {
+              "title": "为教育投入多少钱才合理",
+              "target": {
+                "type": "entry",
+                "entry_id": "education-cost-budget"
+              },
+              "nav_id": "01-04-04"
+            }
+          ],
+          "nav_id": "01-04"
+        },
+        {
+          "title": "给自己保留退路",
+          "target": {
+            "type": "doc",
+            "location": "book/01-先决定下一步往哪里走",
+            "anchor": "给自己保留退路"
+          },
+          "children": [
+            {
+              "title": "为什么不要过早把路线锁死",
+              "target": {
+                "type": "entry",
+                "entry_id": "optionality-why-not-lock"
+              },
+              "nav_id": "01-05-01"
+            },
+            {
+              "title": "哪些能力可以跨路线使用",
+              "target": {
+                "type": "entry",
+                "entry_id": "optionality-transferable"
+              },
+              "nav_id": "01-05-02"
+            },
+            {
+              "title": "走错以后怎么切换",
+              "target": {
+                "type": "entry",
+                "entry_id": "paths-switching-between-paths"
+              },
+              "nav_id": "01-05-03"
+            }
+          ],
+          "nav_id": "01-05"
+        }
+      ],
+      "nav_id": "01"
+    },
+    {
+      "title": "02 在学校里先把基础打好",
+      "target": {
+        "type": "doc",
+        "location": "book/02-在学校里先把基础打好",
+        "anchor": ""
+      },
+      "children": [
+        {
+          "title": "学业",
+          "target": {
+            "type": "doc",
+            "location": "book/02-在学校里先把基础打好",
+            "anchor": "学业"
+          },
+          "children": [
+            {
+              "title": "GPA 与排名到底重要吗",
+              "target": {
+                "type": "entry",
+                "entry_id": "gpa-matters"
+              },
+              "nav_id": "02-01-01"
+            },
+            {
+              "title": "挂科会带来什么影响",
+              "target": {
+                "type": "entry",
+                "entry_id": "failing-courses"
+              },
+              "nav_id": "02-01-02"
+            },
+            {
+              "title": "专业课应该学到什么程度",
+              "target": {
+                "type": "entry",
+                "entry_id": "coursework-depth"
+              },
+              "nav_id": "02-01-03"
+            },
+            {
+              "title": "通识课有没有价值",
+              "target": {
+                "type": "entry",
+                "entry_id": "general-education-value"
+              },
+              "nav_id": "02-01-04"
+            },
+            {
+              "title": "学业、实践和生活怎么平衡",
+              "target": {
+                "type": "entry",
+                "entry_id": "study-life-balance"
+              },
+              "nav_id": "02-01-05"
+            }
+          ],
+          "nav_id": "02-01"
+        },
+        {
+          "title": "开始认识真实世界",
+          "target": {
+            "type": "doc",
+            "location": "book/02-在学校里先把基础打好",
+            "anchor": "开始认识真实世界"
+          },
+          "children": [
+            {
+              "title": "怎么了解一个行业",
+              "target": {
+                "type": "entry",
+                "entry_id": "understand-industry"
+              },
+              "nav_id": "02-02-01"
+            },
+            {
+              "title": "怎么了解一个岗位",
+              "target": {
+                "type": "entry",
+                "entry_id": "understand-role"
+              },
+              "nav_id": "02-02-02"
+            },
+            {
+              "title": "招聘 JD 应该怎么看",
+              "target": {
+                "type": "entry",
+                "entry_id": "read-jd"
+              },
+              "nav_id": "02-02-03"
+            },
+            {
+              "title": "怎么找到真实从业者",
+              "target": {
+                "type": "entry",
+                "entry_id": "find-practitioners"
+              },
+              "nav_id": "02-02-04"
+            },
+            {
+              "title": "不知道方向时怎么低成本试错",
+              "target": {
+                "type": "entry",
+                "entry_id": "explore-low-cost-experiments"
+              },
+              "nav_id": "02-02-05"
+            }
+          ],
+          "nav_id": "02-02"
+        },
+        {
+          "title": "通用能力",
+          "target": {
+            "type": "doc",
+            "location": "book/02-在学校里先把基础打好",
+            "anchor": "通用能力"
+          },
+          "children": [
+            {
+              "title": "信息检索",
+              "target": {
+                "type": "entry",
+                "entry_id": "skill-information-retrieval"
+              },
+              "nav_id": "02-03-01"
+            },
+            {
+              "title": "写作",
+              "target": {
+                "type": "entry",
+                "entry_id": "skill-writing"
+              },
+              "nav_id": "02-03-02"
+            },
+            {
+              "title": "表达与演讲",
+              "target": {
+                "type": "entry",
+                "entry_id": "skill-presentation"
+              },
+              "nav_id": "02-03-03"
+            },
+            {
+              "title": "沟通协作",
+              "target": {
+                "type": "entry",
+                "entry_id": "skill-collaboration"
+              },
+              "nav_id": "02-03-04"
+            },
+            {
+              "title": "数据能力",
+              "target": {
+                "type": "entry",
+                "entry_id": "skill-data"
+              },
+              "nav_id": "02-03-05"
+            },
+            {
+              "title": "项目管理",
+              "target": {
+                "type": "entry",
+                "entry_id": "skill-project-management"
+              },
+              "nav_id": "02-03-06"
+            },
+            {
+              "title": "AI 与数字工具",
+              "target": {
+                "type": "entry",
+                "entry_id": "skill-ai-tools"
+              },
+              "nav_id": "02-03-07"
+            }
+          ],
+          "nav_id": "02-03"
+        },
+        {
+          "title": "专业技能",
+          "target": {
+            "type": "doc",
+            "location": "book/02-在学校里先把基础打好",
+            "anchor": "专业技能"
+          },
+          "children": [
+            {
+              "title": "什么技能值得学",
+              "target": {
+                "type": "entry",
+                "entry_id": "skill-what-to-learn"
+              },
+              "nav_id": "02-04-01"
+            },
+            {
+              "title": "怎么从岗位要求反推技能",
+              "target": {
+                "type": "entry",
+                "entry_id": "skill-reverse-engineer"
+              },
+              "nav_id": "02-04-02"
+            },
+            {
+              "title": "学课程还是直接实践",
+              "target": {
+                "type": "entry",
+                "entry_id": "skill-course-or-practice"
+              },
+              "nav_id": "02-04-03"
+            },
+            {
+              "title": "怎么判断自己真的掌握了",
+              "target": {
+                "type": "entry",
+                "entry_id": "skill-mastery-check"
+              },
+              "nav_id": "02-04-04"
+            }
+          ],
+          "nav_id": "02-04"
+        },
+        {
+          "title": "语言",
+          "target": {
+            "type": "doc",
+            "location": "book/02-在学校里先把基础打好",
+            "anchor": "语言"
+          },
+          "children": [
+            {
+              "title": "英语为什么仍然重要",
+              "target": {
+                "type": "entry",
+                "entry_id": "skill-english"
+              },
+              "nav_id": "02-05-01"
+            },
+            {
+              "title": "四六级与校内英语",
+              "target": {
+                "type": "entry",
+                "entry_id": "english-cet"
+              },
+              "nav_id": "02-05-02"
+            },
+            {
+              "title": "IELTS / TOEFL / TOEIC",
+              "target": {
+                "type": "entry",
+                "entry_id": "english-standardized-tests"
+              },
+              "nav_id": "02-05-03"
+            },
+            {
+              "title": "第二外语",
+              "target": {
+                "type": "entry",
+                "entry_id": "skill-second-language"
+              },
+              "nav_id": "02-05-04"
+            },
+            {
+              "title": "如果以后可能留学，什么时候准备",
+              "target": {
+                "type": "entry",
+                "entry_id": "language-timing-for-abroad"
+              },
+              "nav_id": "02-05-05"
+            }
+          ],
+          "nav_id": "02-05"
+        },
+        {
+          "title": "证书",
+          "target": {
+            "type": "doc",
+            "location": "book/02-在学校里先把基础打好",
+            "anchor": "证书"
+          },
+          "children": [
+            {
+              "title": "哪些证书值得考",
+              "target": {
+                "type": "entry",
+                "entry_id": "certificate-what-is-worth-it"
+              },
+              "nav_id": "02-06-01"
+            },
+            {
+              "title": "法定准入型证书",
+              "target": {
+                "type": "entry",
+                "entry_id": "skill-occupational-certificates"
+              },
+              "nav_id": "02-06-02"
+            },
+            {
+              "title": "行业认证",
+              "target": {
+                "type": "entry",
+                "entry_id": "skill-industry-certification"
+              },
+              "nav_id": "02-06-03"
+            },
+            {
+              "title": "厂商认证",
+              "target": {
+                "type": "entry",
+                "entry_id": "certificate-vendor"
+              },
+              "nav_id": "02-06-04"
+            },
+            {
+              "title": "不要为了证书而考证",
+              "target": {
+                "type": "entry",
+                "entry_id": "certificate-not-for-certificates"
+              },
+              "nav_id": "02-06-05"
+            }
+          ],
+          "nav_id": "02-06"
+        }
+      ],
+      "nav_id": "02"
+    },
+    {
+      "title": "03 开始积累真正能留下来的经历",
+      "target": {
+        "type": "doc",
+        "location": "book/03-开始积累真正能留下来的经历",
+        "anchor": ""
+      },
+      "children": [
+        {
+          "title": "项目与作品",
+          "target": {
+            "type": "doc",
+            "location": "book/03-开始积累真正能留下来的经历",
+            "anchor": "项目与作品"
+          },
+          "children": [
+            {
+              "title": "什么才算真正的项目",
+              "target": {
+                "type": "entry",
+                "entry_id": "project-what-is-real"
+              },
+              "nav_id": "03-01-01"
+            },
+            {
+              "title": "教程项目有没有价值",
+              "target": {
+                "type": "entry",
+                "entry_id": "project-tutorial"
+              },
+              "nav_id": "03-01-02"
+            },
+            {
+              "title": "第一个个人项目怎么开始",
+              "target": {
+                "type": "entry",
+                "entry_id": "project-personal"
+              },
+              "nav_id": "03-01-03"
+            },
+            {
+              "title": "团队项目",
+              "target": {
+                "type": "entry",
+                "entry_id": "project-team"
+              },
+              "nav_id": "03-01-04"
+            },
+            {
+              "title": "作品集",
+              "target": {
+                "type": "entry",
+                "entry_id": "project-portfolio"
+              },
+              "nav_id": "03-01-05"
+            },
+            {
+              "title": "Demo",
+              "target": {
+                "type": "entry",
+                "entry_id": "project-demo"
+              },
+              "nav_id": "03-01-06"
+            },
+            {
+              "title": "数据、测试和指标",
+              "target": {
+                "type": "entry",
+                "entry_id": "project-data-test-metrics"
+              },
+              "nav_id": "03-01-07"
+            },
+            {
+              "title": "真实用户与反馈",
+              "target": {
+                "type": "entry",
+                "entry_id": "project-users-feedback"
+              },
+              "nav_id": "03-01-08"
+            }
+          ],
+          "nav_id": "03-01"
+        },
+        {
+          "title": "竞赛",
+          "target": {
+            "type": "doc",
+            "location": "book/03-开始积累真正能留下来的经历",
+            "anchor": "竞赛"
+          },
+          "children": [
+            {
+              "title": "要不要参加比赛",
+              "target": {
+                "type": "entry",
+                "entry_id": "competition-should-i-join"
+              },
+              "nav_id": "03-02-01"
+            },
+            {
+              "title": "什么比赛值得参加",
+              "target": {
+                "type": "entry",
+                "entry_id": "competition-what-worth-joining"
+              },
+              "nav_id": "03-02-02"
+            },
+            {
+              "title": "奖项和过程哪个更重要",
+              "target": {
+                "type": "entry",
+                "entry_id": "competition-award-vs-process"
+              },
+              "nav_id": "03-02-03"
+            },
+            {
+              "title": "学科竞赛",
+              "target": {
+                "type": "entry",
+                "entry_id": "competition-mathematical-modeling"
+              },
+              "nav_id": "03-02-04"
+            },
+            {
+              "title": "工程竞赛",
+              "target": {
+                "type": "entry",
+                "entry_id": "competition-engineering"
+              },
+              "nav_id": "03-02-05"
+            },
+            {
+              "title": "编程与数据竞赛",
+              "target": {
+                "type": "entry",
+                "entry_id": "competition-programming-contest"
+              },
+              "nav_id": "03-02-06"
+            },
+            {
+              "title": "商业与创业竞赛",
+              "target": {
+                "type": "entry",
+                "entry_id": "competition-business"
+              },
+              "nav_id": "03-02-07"
+            },
+            {
+              "title": "设计与创作竞赛",
+              "target": {
+                "type": "entry",
+                "entry_id": "competition-design-creative"
+              },
+              "nav_id": "03-02-08"
+            },
+            {
+              "title": "职业技能竞赛",
+              "target": {
+                "type": "entry",
+                "entry_id": "competition-vocational-skills"
+              },
+              "nav_id": "03-02-09"
+            }
+          ],
+          "nav_id": "03-02"
+        },
+        {
+          "title": "科研初体验",
+          "target": {
+            "type": "doc",
+            "location": "book/03-开始积累真正能留下来的经历",
+            "anchor": "科研初体验"
+          },
+          "children": [
+            {
+              "title": "科研到底是什么",
+              "target": {
+                "type": "entry",
+                "entry_id": "research-what-is-research"
+              },
+              "nav_id": "03-03-01"
+            },
+            {
+              "title": "哪些人值得接触科研",
+              "target": {
+                "type": "entry",
+                "entry_id": "research-who-suits"
+              },
+              "nav_id": "03-03-02"
+            },
+            {
+              "title": "怎么找到第一次科研机会",
+              "target": {
+                "type": "entry",
+                "entry_id": "research-undergrad-start"
+              },
+              "nav_id": "03-03-03"
+            },
+            {
+              "title": "怎么找导师",
+              "target": {
+                "type": "entry",
+                "entry_id": "research-find-supervisor"
+              },
+              "nav_id": "03-03-04"
+            },
+            {
+              "title": "怎么判断一个实验室",
+              "target": {
+                "type": "entry",
+                "entry_id": "research-choosing-a-lab"
+              },
+              "nav_id": "03-03-05"
+            },
+            {
+              "title": "怎么判断自己是否喜欢科研",
+              "target": {
+                "type": "entry",
+                "entry_id": "research-do-i-like-it"
+              },
+              "nav_id": "03-03-06"
+            }
+          ],
+          "nav_id": "03-03"
+        },
+        {
+          "title": "开源与公共贡献",
+          "target": {
+            "type": "doc",
+            "location": "book/03-开始积累真正能留下来的经历",
+            "anchor": "开源与公共贡献"
+          },
+          "children": [
+            {
+              "title": "什么是开源贡献",
+              "target": {
+                "type": "entry",
+                "entry_id": "opensource-what-is"
+              },
+              "nav_id": "03-04-01"
+            },
+            {
+              "title": "第一次贡献怎么开始",
+              "target": {
+                "type": "entry",
+                "entry_id": "opensource-first-contribution"
+              },
+              "nav_id": "03-04-02"
+            },
+            {
+              "title": "Issue",
+              "target": {
+                "type": "entry",
+                "entry_id": "project-issue-pr"
+              },
+              "nav_id": "03-04-03"
+            },
+            {
+              "title": "PR",
+              "target": {
+                "type": "entry",
+                "entry_id": "opensource-pr"
+              },
+              "nav_id": "03-04-04"
+            },
+            {
+              "title": "Documentation",
+              "target": {
+                "type": "entry",
+                "entry_id": "project-documentation"
+              },
+              "nav_id": "03-04-05"
+            },
+            {
+              "title": "Review",
+              "target": {
+                "type": "entry",
+                "entry_id": "project-code-review"
+              },
+              "nav_id": "03-04-06"
+            },
+            {
+              "title": "Maintainer",
+              "target": {
+                "type": "entry",
+                "entry_id": "project-maintainer"
+              },
+              "nav_id": "03-04-07"
+            }
+          ],
+          "nav_id": "03-04"
+        },
+        {
+          "title": "社群与活动",
+          "target": {
+            "type": "doc",
+            "location": "book/03-开始积累真正能留下来的经历",
+            "anchor": "社群与活动"
+          },
+          "children": [
+            {
+              "title": "社团有没有价值",
+              "target": {
+                "type": "entry",
+                "entry_id": "community-club-value"
+              },
+              "nav_id": "03-05-01"
+            },
+            {
+              "title": "专业协会",
+              "target": {
+                "type": "entry",
+                "entry_id": "community-professional-association"
+              },
+              "nav_id": "03-05-02"
+            },
+            {
+              "title": "Student Chapter",
+              "target": {
+                "type": "entry",
+                "entry_id": "community-student-chapter"
+              },
+              "nav_id": "03-05-03"
+            },
+            {
+              "title": "志愿活动",
+              "target": {
+                "type": "entry",
+                "entry_id": "paths-volunteering"
+              },
+              "nav_id": "03-05-04"
+            },
+            {
+              "title": "Meetup",
+              "target": {
+                "type": "entry",
+                "entry_id": "community-meetup"
+              },
+              "nav_id": "03-05-05"
+            },
+            {
+              "title": "怎么从“参加”变成真正的贡献",
+              "target": {
+                "type": "entry",
+                "entry_id": "community-from-join-to-contribute"
+              },
+              "nav_id": "03-05-06"
+            }
+          ],
+          "nav_id": "03-05"
+        },
+        {
+          "title": "实习准备",
+          "target": {
+            "type": "doc",
+            "location": "book/03-开始积累真正能留下来的经历",
+            "anchor": "实习准备"
+          },
+          "children": [
+            {
+              "title": "实习有什么用",
+              "target": {
+                "type": "entry",
+                "entry_id": "internship-worth-it"
+              },
+              "nav_id": "03-06-01"
+            },
+            {
+              "title": "什么时候开始找第一段实习",
+              "target": {
+                "type": "entry",
+                "entry_id": "internship-types"
+              },
+              "nav_id": "03-06-02"
+            },
+            {
+              "title": "没经验怎么找实习",
+              "target": {
+                "type": "entry",
+                "entry_id": "internship-how-to-find"
+              },
+              "nav_id": "03-06-03"
+            },
+            {
+              "title": "实习和项目怎么选",
+              "target": {
+                "type": "entry",
+                "entry_id": "internship-vs-project"
+              },
+              "nav_id": "03-06-04"
+            },
+            {
+              "title": "实习和科研怎么选",
+              "target": {
+                "type": "entry",
+                "entry_id": "internship-vs-research"
+              },
+              "nav_id": "03-06-05"
+            },
+            {
+              "title": "怎么判断一段实习值不值得",
+              "target": {
+                "type": "entry",
+                "entry_id": "internship-remote"
+              },
+              "nav_id": "03-06-06"
+            }
+          ],
+          "nav_id": "03-06"
+        }
+      ],
+      "nav_id": "03"
+    },
+    {
+      "title": "04 当你开始面对第一次重要分流",
+      "target": {
+        "type": "doc",
+        "location": "book/04-当你开始面对第一次重要分流",
+        "anchor": ""
+      },
+      "children": [
+        {
+          "title": "先决定主线",
+          "target": {
+            "type": "doc",
+            "location": "book/04-当你开始面对第一次重要分流",
+            "anchor": "先决定主线"
+          },
+          "children": [
+            {
+              "title": "升学还是工作",
+              "target": {
+                "type": "entry",
+                "entry_id": "fork-study-or-work"
+              },
+              "nav_id": "04-01-01"
+            },
+            {
+              "title": "国内还是海外",
+              "target": {
+                "type": "entry",
+                "entry_id": "fork-home-or-abroad"
+              },
+              "nav_id": "04-01-02"
+            },
+            {
+              "title": "科研还是产业",
+              "target": {
+                "type": "entry",
+                "entry_id": "fork-research-or-industry"
+              },
+              "nav_id": "04-01-03"
+            },
+            {
+              "title": "可以同时准备几条路线",
+              "target": {
+                "type": "entry",
+                "entry_id": "fork-parallel-tracks"
+              },
+              "nav_id": "04-01-04"
+            },
+            {
+              "title": "怎么设置主线和备选",
+              "target": {
+                "type": "entry",
+                "entry_id": "fork-main-and-backup"
+              },
+              "nav_id": "04-01-05"
+            }
+          ],
+          "nav_id": "04-01"
+        },
+        {
+          "title": "国内升学",
+          "target": {
+            "type": "doc",
+            "location": "book/04-当你开始面对第一次重要分流",
+            "anchor": "国内升学"
+          },
+          "children": [
+            {
+              "title": "读研值不值得",
+              "target": {
+                "type": "entry",
+                "entry_id": "grad-school-worth-it"
+              },
+              "nav_id": "04-02-01"
+            },
+            {
+              "title": "保研",
+              "target": {
+                "type": "entry",
+                "entry_id": "study-baoyan"
+              },
+              "nav_id": "04-02-02"
+            },
+            {
+              "title": "考研",
+              "target": {
+                "type": "entry",
+                "entry_id": "study-kaoyan"
+              },
+              "nav_id": "04-02-03"
+            },
+            {
+              "title": "保研和考研怎么选",
+              "target": {
+                "type": "entry",
+                "entry_id": "baoyan-vs-kaoyan"
+              },
+              "nav_id": "04-02-04"
+            },
+            {
+              "title": "学硕和专硕",
+              "target": {
+                "type": "entry",
+                "entry_id": "study-academic-vs-professional"
+              },
+              "nav_id": "04-02-05"
+            },
+            {
+              "title": "跨专业",
+              "target": {
+                "type": "entry",
+                "entry_id": "study-cross-major"
+              },
+              "nav_id": "04-02-06"
+            },
+            {
+              "title": "选学校",
+              "target": {
+                "type": "entry",
+                "entry_id": "study-choose-school"
+              },
+              "nav_id": "04-02-07"
+            },
+            {
+              "title": "选导师",
+              "target": {
+                "type": "entry",
+                "entry_id": "study-choose-supervisor"
+              },
+              "nav_id": "04-02-08"
+            },
+            {
+              "title": "复试",
+              "target": {
+                "type": "entry",
+                "entry_id": "study-second-round-interview"
+              },
+              "nav_id": "04-02-09"
+            },
+            {
+              "title": "调剂",
+              "target": {
+                "type": "entry",
+                "entry_id": "study-transfer-adjustment"
+              },
+              "nav_id": "04-02-10"
+            },
+            {
+              "title": "二战",
+              "target": {
+                "type": "entry",
+                "entry_id": "study-retake-exam"
+              },
+              "nav_id": "04-02-11"
+            }
+          ],
+          "nav_id": "04-02"
+        },
+        {
+          "title": "海外升学",
+          "target": {
+            "type": "doc",
+            "location": "book/04-当你开始面对第一次重要分流",
+            "anchor": "海外升学"
+          },
+          "children": [
+            {
+              "title": "留学值不值得",
+              "target": {
+                "type": "entry",
+                "entry_id": "overseas-is-it-for-me"
+              },
+              "nav_id": "04-03-01"
+            },
+            {
+              "title": "国家和地区怎么选",
+              "target": {
+                "type": "entry",
+                "entry_id": "overseas-choose-country"
+              },
+              "nav_id": "04-03-02"
+            },
+            {
+              "title": "授课型与研究型",
+              "target": {
+                "type": "entry",
+                "entry_id": "overseas-taught-vs-research-master"
+              },
+              "nav_id": "04-03-03"
+            },
+            {
+              "title": "GPA",
+              "target": {
+                "type": "entry",
+                "entry_id": "overseas-gpa"
+              },
+              "nav_id": "04-03-04"
+            },
+            {
+              "title": "语言与标化考试",
+              "target": {
+                "type": "entry",
+                "entry_id": "overseas-admission-tests"
+              },
+              "nav_id": "04-03-05"
+            },
+            {
+              "title": "推荐信",
+              "target": {
+                "type": "entry",
+                "entry_id": "overseas-recommendation-letters"
+              },
+              "nav_id": "04-03-06"
+            },
+            {
+              "title": "SOP / PS",
+              "target": {
+                "type": "entry",
+                "entry_id": "overseas-sop-ps"
+              },
+              "nav_id": "04-03-07"
+            },
+            {
+              "title": "Research Proposal",
+              "target": {
+                "type": "entry",
+                "entry_id": "overseas-research-proposal"
+              },
+              "nav_id": "04-03-08"
+            },
+            {
+              "title": "联系教授",
+              "target": {
+                "type": "entry",
+                "entry_id": "overseas-contacting-professors"
+              },
+              "nav_id": "04-03-09"
+            },
+            {
+              "title": "奖学金与 Funding",
+              "target": {
+                "type": "entry",
+                "entry_id": "overseas-funding"
+              },
+              "nav_id": "04-03-10"
+            },
+            {
+              "title": "留学总成本",
+              "target": {
+                "type": "entry",
+                "entry_id": "overseas-total-cost"
+              },
+              "nav_id": "04-03-11"
+            }
+          ],
+          "nav_id": "04-03"
+        },
+        {
+          "title": "深入科研",
+          "target": {
+            "type": "doc",
+            "location": "book/04-当你开始面对第一次重要分流",
+            "anchor": "深入科研"
+          },
+          "children": [
+            {
+              "title": "RA",
+              "target": {
+                "type": "entry",
+                "entry_id": "research-ra"
+              },
+              "nav_id": "04-04-01"
+            },
+            {
+              "title": "暑研",
+              "target": {
+                "type": "entry",
+                "entry_id": "research-summer-program"
+              },
+              "nav_id": "04-04-02"
+            },
+            {
+              "title": "Research Internship",
+              "target": {
+                "type": "entry",
+                "entry_id": "overseas-research-internship"
+              },
+              "nav_id": "04-04-03"
+            },
+            {
+              "title": "文献阅读",
+              "target": {
+                "type": "entry",
+                "entry_id": "research-literature-reading"
+              },
+              "nav_id": "04-04-04"
+            },
+            {
+              "title": "研究问题",
+              "target": {
+                "type": "entry",
+                "entry_id": "research-question"
+              },
+              "nav_id": "04-04-05"
+            },
+            {
+              "title": "实验与数据",
+              "target": {
+                "type": "entry",
+                "entry_id": "research-experiment-data"
+              },
+              "nav_id": "04-04-06"
+            },
+            {
+              "title": "论文写作",
+              "target": {
+                "type": "entry",
+                "entry_id": "research-writing-and-submission"
+              },
+              "nav_id": "04-04-07"
+            },
+            {
+              "title": "学术会议",
+              "target": {
+                "type": "entry",
+                "entry_id": "research-conference"
+              },
+              "nav_id": "04-04-08"
+            },
+            {
+              "title": "推荐信",
+              "target": {
+                "type": "entry",
+                "entry_id": "research-recommendation-letter"
+              },
+              "nav_id": "04-04-09"
+            }
+          ],
+          "nav_id": "04-04"
+        },
+        {
+          "title": "实习进一步升级",
+          "target": {
+            "type": "doc",
+            "location": "book/04-当你开始面对第一次重要分流",
+            "anchor": "实习进一步升级"
+          },
+          "children": [
+            {
+              "title": "日常实习",
+              "target": {
+                "type": "entry",
+                "entry_id": "internship-daily"
+              },
+              "nav_id": "04-05-01"
+            },
+            {
+              "title": "暑期实习",
+              "target": {
+                "type": "entry",
+                "entry_id": "internship-summer"
+              },
+              "nav_id": "04-05-02"
+            },
+            {
+              "title": "Off-cycle",
+              "target": {
+                "type": "entry",
+                "entry_id": "internship-off-cycle"
+              },
+              "nav_id": "04-05-03"
+            },
+            {
+              "title": "留用实习",
+              "target": {
+                "type": "entry",
+                "entry_id": "internship-return-offer"
+              },
+              "nav_id": "04-05-04"
+            },
+            {
+              "title": "海外实习",
+              "target": {
+                "type": "entry",
+                "entry_id": "internship-overseas"
+              },
+              "nav_id": "04-05-05"
+            },
+            {
+              "title": "Research Intern",
+              "target": {
+                "type": "entry",
+                "entry_id": "internship-research-intern"
+              },
+              "nav_id": "04-05-06"
+            }
+          ],
+          "nav_id": "04-05"
+        },
+        {
+          "title": "资助",
+          "target": {
+            "type": "doc",
+            "location": "book/04-当你开始面对第一次重要分流",
+            "anchor": "资助"
+          },
+          "children": [
+            {
+              "title": "Scholarship",
+              "target": {
+                "type": "entry",
+                "entry_id": "funding-scholarship"
+              },
+              "nav_id": "04-06-01"
+            },
+            {
+              "title": "Fellowship",
+              "target": {
+                "type": "entry",
+                "entry_id": "funding-fellowship-grant"
+              },
+              "nav_id": "04-06-02"
+            },
+            {
+              "title": "Grant",
+              "target": {
+                "type": "entry",
+                "entry_id": "funding-grant"
+              },
+              "nav_id": "04-06-03"
+            },
+            {
+              "title": "Stipend",
+              "target": {
+                "type": "entry",
+                "entry_id": "funding-stipend"
+              },
+              "nav_id": "04-06-04"
+            },
+            {
+              "title": "Fee Waiver",
+              "target": {
+                "type": "entry",
+                "entry_id": "funding-fee-waiver"
+              },
+              "nav_id": "04-06-05"
+            },
+            {
+              "title": "Travel Grant",
+              "target": {
+                "type": "entry",
+                "entry_id": "funding-travel-and-conference-grant"
+              },
+              "nav_id": "04-06-06"
+            },
+            {
+              "title": "怎么找全额资助机会",
+              "target": {
+                "type": "entry",
+                "entry_id": "funding-full-funding"
+              },
+              "nav_id": "04-06-07"
+            }
+          ],
+          "nav_id": "04-06"
+        }
+      ],
+      "nav_id": "04"
+    },
+    {
+      "title": "05 从学校走向第一份工作",
+      "target": {
+        "type": "doc",
+        "location": "book/05-从学校走向第一份工作",
+        "anchor": ""
+      },
+      "children": [
+        {
+          "title": "校招是怎么运作的",
+          "target": {
+            "type": "doc",
+            "location": "book/05-从学校走向第一份工作",
+            "anchor": "校招是怎么运作的"
+          },
+          "children": [
+            {
+              "title": "提前批",
+              "target": {
+                "type": "entry",
+                "entry_id": "recruit-early-batch"
+              },
+              "nav_id": "05-01-01"
+            },
+            {
+              "title": "秋招",
+              "target": {
+                "type": "entry",
+                "entry_id": "campus-recruiting-timeline"
+              },
+              "nav_id": "05-01-02"
+            },
+            {
+              "title": "春招",
+              "target": {
+                "type": "entry",
+                "entry_id": "recruit-spring"
+              },
+              "nav_id": "05-01-03"
+            },
+            {
+              "title": "补录",
+              "target": {
+                "type": "entry",
+                "entry_id": "recruit-supplement"
+              },
+              "nav_id": "05-01-04"
+            },
+            {
+              "title": "内推",
+              "target": {
+                "type": "entry",
+                "entry_id": "job-hunting-referral"
+              },
+              "nav_id": "05-01-05"
+            }
+          ],
+          "nav_id": "05-01"
+        },
+        {
+          "title": "找岗位",
+          "target": {
+            "type": "doc",
+            "location": "book/05-从学校走向第一份工作",
+            "anchor": "找岗位"
+          },
+          "children": [
+            {
+              "title": "公司官网",
+              "target": {
+                "type": "entry",
+                "entry_id": "job-channel-company-site"
+              },
+              "nav_id": "05-02-01"
+            },
+            {
+              "title": "招聘平台",
+              "target": {
+                "type": "entry",
+                "entry_id": "job-channel-platform"
+              },
+              "nav_id": "05-02-02"
+            },
+            {
+              "title": "校友与内推",
+              "target": {
+                "type": "entry",
+                "entry_id": "job-channel-alumni"
+              },
+              "nav_id": "05-02-03"
+            },
+            {
+              "title": "招聘会",
+              "target": {
+                "type": "entry",
+                "entry_id": "job-channel-fair"
+              },
+              "nav_id": "05-02-04"
+            },
+            {
+              "title": "怎么看招聘 JD",
+              "target": {
+                "type": "entry",
+                "entry_id": "job-read-jd"
+              },
+              "nav_id": "05-02-05"
+            }
+          ],
+          "nav_id": "05-02"
+        },
+        {
+          "title": "简历与作品",
+          "target": {
+            "type": "doc",
+            "location": "book/05-从学校走向第一份工作",
+            "anchor": "简历与作品"
+          },
+          "children": [
+            {
+              "title": "简历怎么写",
+              "target": {
+                "type": "entry",
+                "entry_id": "job-hunting-resume"
+              },
+              "nav_id": "05-03-01"
+            },
+            {
+              "title": "项目经历怎么写",
+              "target": {
+                "type": "entry",
+                "entry_id": "resume-projects"
+              },
+              "nav_id": "05-03-02"
+            },
+            {
+              "title": "实习经历怎么写",
+              "target": {
+                "type": "entry",
+                "entry_id": "resume-internship"
+              },
+              "nav_id": "05-03-03"
+            },
+            {
+              "title": "科研经历怎么写",
+              "target": {
+                "type": "entry",
+                "entry_id": "resume-research"
+              },
+              "nav_id": "05-03-04"
+            },
+            {
+              "title": "竞赛经历怎么写",
+              "target": {
+                "type": "entry",
+                "entry_id": "resume-competition"
+              },
+              "nav_id": "05-03-05"
+            },
+            {
+              "title": "作品集",
+              "target": {
+                "type": "entry",
+                "entry_id": "resume-portfolio"
+              },
+              "nav_id": "05-03-06"
+            }
+          ],
+          "nav_id": "05-03"
+        },
+        {
+          "title": "笔试与面试",
+          "target": {
+            "type": "doc",
+            "location": "book/05-从学校走向第一份工作",
+            "anchor": "笔试与面试"
+          },
+          "children": [
+            {
+              "title": "在线测评",
+              "target": {
+                "type": "entry",
+                "entry_id": "job-hunting-written-test"
+              },
+              "nav_id": "05-04-01"
+            },
+            {
+              "title": "专业面",
+              "target": {
+                "type": "entry",
+                "entry_id": "job-hunting-interview"
+              },
+              "nav_id": "05-04-02"
+            },
+            {
+              "title": "技术面",
+              "target": {
+                "type": "entry",
+                "entry_id": "interview-technical"
+              },
+              "nav_id": "05-04-03"
+            },
+            {
+              "title": "Case Interview",
+              "target": {
+                "type": "entry",
+                "entry_id": "interview-case"
+              },
+              "nav_id": "05-04-04"
+            },
+            {
+              "title": "行为面",
+              "target": {
+                "type": "entry",
+                "entry_id": "interview-behavioral"
+              },
+              "nav_id": "05-04-05"
+            },
+            {
+              "title": "HR 面",
+              "target": {
+                "type": "entry",
+                "entry_id": "interview-hr"
+              },
+              "nav_id": "05-04-06"
+            }
+          ],
+          "nav_id": "05-04"
+        },
+        {
+          "title": "Offer",
+          "target": {
+            "type": "doc",
+            "location": "book/05-从学校走向第一份工作",
+            "anchor": "offer"
+          },
+          "children": [
+            {
+              "title": "Offer 怎么比较",
+              "target": {
+                "type": "entry",
+                "entry_id": "offer-comparison"
+              },
+              "nav_id": "05-05-01"
+            },
+            {
+              "title": "薪资和总包怎么看",
+              "target": {
+                "type": "entry",
+                "entry_id": "offer-total-comp"
+              },
+              "nav_id": "05-05-02"
+            },
+            {
+              "title": "股票与奖金",
+              "target": {
+                "type": "entry",
+                "entry_id": "offer-equity-bonus"
+              },
+              "nav_id": "05-05-03"
+            },
+            {
+              "title": "谈薪",
+              "target": {
+                "type": "entry",
+                "entry_id": "job-hunting-salary-negotiation"
+              },
+              "nav_id": "05-05-04"
+            },
+            {
+              "title": "三方",
+              "target": {
+                "type": "entry",
+                "entry_id": "job-hunting-tripartite-agreement"
+              },
+              "nav_id": "05-05-05"
+            },
+            {
+              "title": "背调",
+              "target": {
+                "type": "entry",
+                "entry_id": "job-hunting-background-check"
+              },
+              "nav_id": "05-05-06"
+            },
+            {
+              "title": "毁约",
+              "target": {
+                "type": "entry",
+                "entry_id": "offer-renege"
+              },
+              "nav_id": "05-05-07"
+            }
+          ],
+          "nav_id": "05-05"
+        },
+        {
+          "title": "第一份工作",
+          "target": {
+            "type": "doc",
+            "location": "book/05-从学校走向第一份工作",
+            "anchor": "第一份工作"
+          },
+          "children": [
+            {
+              "title": "第一份工作最应该换回什么",
+              "target": {
+                "type": "entry",
+                "entry_id": "first-job-what-to-trade-for"
+              },
+              "nav_id": "05-06-01"
+            },
+            {
+              "title": "大公司还是小公司",
+              "target": {
+                "type": "entry",
+                "entry_id": "first-job-big-vs-small"
+              },
+              "nav_id": "05-06-02"
+            },
+            {
+              "title": "国企、民企还是外企",
+              "target": {
+                "type": "entry",
+                "entry_id": "first-job-company-types"
+              },
+              "nav_id": "05-06-03"
+            },
+            {
+              "title": "行业还是岗位",
+              "target": {
+                "type": "entry",
+                "entry_id": "first-job-role-vs-industry"
+              },
+              "nav_id": "05-06-04"
+            },
+            {
+              "title": "城市还是机会",
+              "target": {
+                "type": "entry",
+                "entry_id": "first-job-city"
+              },
+              "nav_id": "05-06-05"
+            },
+            {
+              "title": "工资还是成长",
+              "target": {
+                "type": "entry",
+                "entry_id": "first-job-pay-vs-growth"
+              },
+              "nav_id": "05-06-06"
+            }
+          ],
+          "nav_id": "05-06"
+        },
+        {
+          "title": "如果没有顺利进入下一站",
+          "target": {
+            "type": "doc",
+            "location": "book/05-从学校走向第一份工作",
+            "anchor": "如果没有顺利进入下一站"
+          },
+          "children": [
+            {
+              "title": "长期找不到工作怎么办",
+              "target": {
+                "type": "entry",
+                "entry_id": "job-hunting-long-search"
+              },
+              "nav_id": "05-07-01"
+            },
+            {
+              "title": "要不要降低岗位要求",
+              "target": {
+                "type": "entry",
+                "entry_id": "job-lower-requirements"
+              },
+              "nav_id": "05-07-02"
+            },
+            {
+              "title": "要不要换城市",
+              "target": {
+                "type": "entry",
+                "entry_id": "job-change-city"
+              },
+              "nav_id": "05-07-03"
+            },
+            {
+              "title": "要不要继续升学",
+              "target": {
+                "type": "entry",
+                "entry_id": "job-or-further-study"
+              },
+              "nav_id": "05-07-04"
+            },
+            {
+              "title": "空窗期怎么处理",
+              "target": {
+                "type": "entry",
+                "entry_id": "job-gap-period"
+              },
+              "nav_id": "05-07-05"
+            },
+            {
+              "title": "第一次选择错了怎么办",
+              "target": {
+                "type": "entry",
+                "entry_id": "job-first-choice-wrong"
+              },
+              "nav_id": "05-07-06"
+            }
+          ],
+          "nav_id": "05-07"
+        }
+      ],
+      "nav_id": "05"
+    },
+    {
+      "title": "06 进入职场以后继续积累",
+      "target": {
+        "type": "doc",
+        "location": "book/06-进入职场以后继续积累",
+        "anchor": ""
+      },
+      "children": [
+        {
+          "title": "刚进入职场",
+          "target": {
+            "type": "doc",
+            "location": "book/06-进入职场以后继续积累",
+            "anchor": "刚进入职场"
+          },
+          "children": [
+            {
+              "title": "怎么度过试用期",
+              "target": {
+                "type": "entry",
+                "entry_id": "work-probation"
+              },
+              "nav_id": "06-01-01"
+            },
+            {
+              "title": "怎么真正学会一份工作",
+              "target": {
+                "type": "entry",
+                "entry_id": "work-learn-the-job"
+              },
+              "nav_id": "06-01-02"
+            },
+            {
+              "title": "怎么理解业务",
+              "target": {
+                "type": "entry",
+                "entry_id": "work-understand-business"
+              },
+              "nav_id": "06-01-03"
+            },
+            {
+              "title": "怎么和直属领导合作",
+              "target": {
+                "type": "entry",
+                "entry_id": "work-with-manager"
+              },
+              "nav_id": "06-01-04"
+            },
+            {
+              "title": "怎么找职场 Mentor",
+              "target": {
+                "type": "entry",
+                "entry_id": "community-mentorship"
+              },
+              "nav_id": "06-01-05"
+            }
+          ],
+          "nav_id": "06-01"
+        },
+        {
+          "title": "从执行到独立负责",
+          "target": {
+            "type": "doc",
+            "location": "book/06-进入职场以后继续积累",
+            "anchor": "从执行到独立负责"
+          },
+          "children": [
+            {
+              "title": "Ownership",
+              "target": {
+                "type": "entry",
+                "entry_id": "work-ownership"
+              },
+              "nav_id": "06-02-01"
+            },
+            {
+              "title": "怎么承担更大的项目",
+              "target": {
+                "type": "entry",
+                "entry_id": "work-bigger-projects"
+              },
+              "nav_id": "06-02-02"
+            },
+            {
+              "title": "怎么证明自己的成果",
+              "target": {
+                "type": "entry",
+                "entry_id": "work-prove-results"
+              },
+              "nav_id": "06-02-03"
+            },
+            {
+              "title": "怎么积累业务影响",
+              "target": {
+                "type": "entry",
+                "entry_id": "work-business-impact"
+              },
+              "nav_id": "06-02-04"
+            },
+            {
+              "title": "怎么记录职业成果",
+              "target": {
+                "type": "entry",
+                "entry_id": "work-record-achievements"
+              },
+              "nav_id": "06-02-05"
+            }
+          ],
+          "nav_id": "06-02"
+        },
+        {
+          "title": "工作后继续学习",
+          "target": {
+            "type": "doc",
+            "location": "book/06-进入职场以后继续积累",
+            "anchor": "工作后继续学习"
+          },
+          "children": [
+            {
+              "title": "技能还要不要继续学",
+              "target": {
+                "type": "entry",
+                "entry_id": "work-learn-skills"
+              },
+              "nav_id": "06-03-01"
+            },
+            {
+              "title": "工作后考证",
+              "target": {
+                "type": "entry",
+                "entry_id": "work-certificates"
+              },
+              "nav_id": "06-03-02"
+            },
+            {
+              "title": "工作后学语言",
+              "target": {
+                "type": "entry",
+                "entry_id": "work-learn-language"
+              },
+              "nav_id": "06-03-03"
+            },
+            {
+              "title": "工作后做个人项目",
+              "target": {
+                "type": "entry",
+                "entry_id": "work-side-project"
+              },
+              "nav_id": "06-03-04"
+            },
+            {
+              "title": "工作后做开源",
+              "target": {
+                "type": "entry",
+                "entry_id": "work-open-source"
+              },
+              "nav_id": "06-03-05"
+            },
+            {
+              "title": "工作后重新读书",
+              "target": {
+                "type": "entry",
+                "entry_id": "career-study-after-work"
+              },
+              "nav_id": "06-03-06"
+            }
+          ],
+          "nav_id": "06-03"
+        },
+        {
+          "title": "建立行业关系",
+          "target": {
+            "type": "doc",
+            "location": "book/06-进入职场以后继续积累",
+            "anchor": "建立行业关系"
+          },
+          "children": [
+            {
+              "title": "Networking",
+              "target": {
+                "type": "entry",
+                "entry_id": "community-networking"
+              },
+              "nav_id": "06-04-01"
+            },
+            {
+              "title": "专业社群",
+              "target": {
+                "type": "entry",
+                "entry_id": "community-professional-group"
+              },
+              "nav_id": "06-04-02"
+            },
+            {
+              "title": "Mentor",
+              "target": {
+                "type": "entry",
+                "entry_id": "work-mentor-role"
+              },
+              "nav_id": "06-04-03"
+            },
+            {
+              "title": "Organizer",
+              "target": {
+                "type": "entry",
+                "entry_id": "community-organizer"
+              },
+              "nav_id": "06-04-04"
+            },
+            {
+              "title": "Speaker",
+              "target": {
+                "type": "entry",
+                "entry_id": "community-speaker"
+              },
+              "nav_id": "06-04-05"
+            },
+            {
+              "title": "Reviewer",
+              "target": {
+                "type": "entry",
+                "entry_id": "community-reviewer"
+              },
+              "nav_id": "06-04-06"
+            },
+            {
+              "title": "行业影响力",
+              "target": {
+                "type": "entry",
+                "entry_id": "community-industry-influence"
+              },
+              "nav_id": "06-04-07"
+            }
+          ],
+          "nav_id": "06-04"
+        },
+        {
+          "title": "第一次重新选择",
+          "target": {
+            "type": "doc",
+            "location": "book/06-进入职场以后继续积累",
+            "anchor": "第一次重新选择"
+          },
+          "children": [
+            {
+              "title": "什么时候适合第一次跳槽",
+              "target": {
+                "type": "entry",
+                "entry_id": "career-job-hopping"
+              },
+              "nav_id": "06-05-01"
+            },
+            {
+              "title": "什么情况下应该留下",
+              "target": {
+                "type": "entry",
+                "entry_id": "work-when-to-stay"
+              },
+              "nav_id": "06-05-02"
+            },
+            {
+              "title": "内部转岗",
+              "target": {
+                "type": "entry",
+                "entry_id": "work-internal-transfer"
+              },
+              "nav_id": "06-05-03"
+            },
+            {
+              "title": "工作后读研",
+              "target": {
+                "type": "entry",
+                "entry_id": "work-study-again"
+              },
+              "nav_id": "06-05-04"
+            },
+            {
+              "title": "海外工作",
+              "target": {
+                "type": "entry",
+                "entry_id": "work-overseas-job"
+              },
+              "nav_id": "06-05-05"
+            }
+          ],
+          "nav_id": "06-05"
+        }
+      ],
+      "nav_id": "06"
+    },
+    {
+      "title": "07 当职业开始出现分岔",
+      "target": {
+        "type": "doc",
+        "location": "book/07-当职业开始出现分岔",
+        "anchor": ""
+      },
+      "children": [
+        {
+          "title": "晋升",
+          "target": {
+            "type": "doc",
+            "location": "book/07-当职业开始出现分岔",
+            "anchor": "晋升"
+          },
+          "children": [
+            {
+              "title": "Senior 意味着什么",
+              "target": {
+                "type": "entry",
+                "entry_id": "career-senior-ic-track"
+              },
+              "nav_id": "07-01-01"
+            },
+            {
+              "title": "晋升标准",
+              "target": {
+                "type": "entry",
+                "entry_id": "promotion-criteria"
+              },
+              "nav_id": "07-01-02"
+            },
+            {
+              "title": "晋升材料",
+              "target": {
+                "type": "entry",
+                "entry_id": "career-promotion-package"
+              },
+              "nav_id": "07-01-03"
+            },
+            {
+              "title": "怎么证明影响力",
+              "target": {
+                "type": "entry",
+                "entry_id": "career-influence"
+              },
+              "nav_id": "07-01-04"
+            },
+            {
+              "title": "长期不晋升怎么办",
+              "target": {
+                "type": "entry",
+                "entry_id": "promotion-stalled"
+              },
+              "nav_id": "07-01-05"
+            }
+          ],
+          "nav_id": "07-01"
+        },
+        {
+          "title": "专家路线",
+          "target": {
+            "type": "doc",
+            "location": "book/07-当职业开始出现分岔",
+            "anchor": "专家路线"
+          },
+          "children": [
+            {
+              "title": "专业深度",
+              "target": {
+                "type": "entry",
+                "entry_id": "track-ic-depth"
+              },
+              "nav_id": "07-02-01"
+            },
+            {
+              "title": "跨团队影响",
+              "target": {
+                "type": "entry",
+                "entry_id": "track-ic-cross-team"
+              },
+              "nav_id": "07-02-02"
+            },
+            {
+              "title": "行业影响",
+              "target": {
+                "type": "entry",
+                "entry_id": "track-ic-industry"
+              },
+              "nav_id": "07-02-03"
+            },
+            {
+              "title": "Staff / Principal 等角色",
+              "target": {
+                "type": "entry",
+                "entry_id": "track-staff-principal"
+              },
+              "nav_id": "07-02-04"
+            }
+          ],
+          "nav_id": "07-02"
+        },
+        {
+          "title": "管理路线",
+          "target": {
+            "type": "doc",
+            "location": "book/07-当职业开始出现分岔",
+            "anchor": "管理路线"
+          },
+          "children": [
+            {
+              "title": "第一次带人",
+              "target": {
+                "type": "entry",
+                "entry_id": "mgmt-first-team"
+              },
+              "nav_id": "07-03-01"
+            },
+            {
+              "title": "Team Lead",
+              "target": {
+                "type": "entry",
+                "entry_id": "mgmt-team-lead"
+              },
+              "nav_id": "07-03-02"
+            },
+            {
+              "title": "Manager",
+              "target": {
+                "type": "entry",
+                "entry_id": "career-management-track"
+              },
+              "nav_id": "07-03-03"
+            },
+            {
+              "title": "招聘",
+              "target": {
+                "type": "entry",
+                "entry_id": "mgmt-hiring"
+              },
+              "nav_id": "07-03-04"
+            },
+            {
+              "title": "绩效",
+              "target": {
+                "type": "entry",
+                "entry_id": "mgmt-performance"
+              },
+              "nav_id": "07-03-05"
+            },
+            {
+              "title": "技术还是管理",
+              "target": {
+                "type": "entry",
+                "entry_id": "mgmt-ic-or-manager"
+              },
+              "nav_id": "07-03-06"
+            }
+          ],
+          "nav_id": "07-03"
+        },
+        {
+          "title": "跳槽",
+          "target": {
+            "type": "doc",
+            "location": "book/07-当职业开始出现分岔",
+            "anchor": "跳槽"
+          },
+          "children": [
+            {
+              "title": "为什么跳",
+              "target": {
+                "type": "entry",
+                "entry_id": "hop-why"
+              },
+              "nav_id": "07-04-01"
+            },
+            {
+              "title": "什么时候跳",
+              "target": {
+                "type": "entry",
+                "entry_id": "hop-when"
+              },
+              "nav_id": "07-04-02"
+            },
+            {
+              "title": "平薪跳槽",
+              "target": {
+                "type": "entry",
+                "entry_id": "hop-same-pay"
+              },
+              "nav_id": "07-04-03"
+            },
+            {
+              "title": "涨薪跳槽",
+              "target": {
+                "type": "entry",
+                "entry_id": "hop-higher-pay"
+              },
+              "nav_id": "07-04-04"
+            },
+            {
+              "title": "换行业",
+              "target": {
+                "type": "entry",
+                "entry_id": "hop-change-industry"
+              },
+              "nav_id": "07-04-05"
+            },
+            {
+              "title": "换城市",
+              "target": {
+                "type": "entry",
+                "entry_id": "hop-change-city"
+              },
+              "nav_id": "07-04-06"
+            }
+          ],
+          "nav_id": "07-04"
+        },
+        {
+          "title": "转行",
+          "target": {
+            "type": "doc",
+            "location": "book/07-当职业开始出现分岔",
+            "anchor": "转行"
+          },
+          "children": [
+            {
+              "title": "转行前先判断什么",
+              "target": {
+                "type": "entry",
+                "entry_id": "switch-before-decide"
+              },
+              "nav_id": "07-05-01"
+            },
+            {
+              "title": "为什么不要清零过去经历",
+              "target": {
+                "type": "entry",
+                "entry_id": "career-change-keep-capital"
+              },
+              "nav_id": "07-05-02"
+            },
+            {
+              "title": "可迁移技能",
+              "target": {
+                "type": "entry",
+                "entry_id": "career-transferable-capital"
+              },
+              "nav_id": "07-05-03"
+            },
+            {
+              "title": "可迁移行业经验",
+              "target": {
+                "type": "entry",
+                "entry_id": "switch-transferable-domain"
+              },
+              "nav_id": "07-05-04"
+            },
+            {
+              "title": "Bridge Opportunity",
+              "target": {
+                "type": "entry",
+                "entry_id": "career-bridge-opportunity"
+              },
+              "nav_id": "07-05-05"
+            },
+            {
+              "title": "Side Project",
+              "target": {
+                "type": "entry",
+                "entry_id": "switch-side-project"
+              },
+              "nav_id": "07-05-06"
+            },
+            {
+              "title": "降薪转行",
+              "target": {
+                "type": "entry",
+                "entry_id": "career-pay-cut-transition"
+              },
+              "nav_id": "07-05-07"
+            }
+          ],
+          "nav_id": "07-05"
+        },
+        {
+          "title": "再次进入教育体系",
+          "target": {
+            "type": "doc",
+            "location": "book/07-当职业开始出现分岔",
+            "anchor": "再次进入教育体系"
+          },
+          "children": [
+            {
+              "title": "工作后读硕士",
+              "target": {
+                "type": "entry",
+                "entry_id": "edu-master-after-work"
+              },
+              "nav_id": "07-06-01"
+            },
+            {
+              "title": "MBA / MPA 等职业学位",
+              "target": {
+                "type": "entry",
+                "entry_id": "edu-mba-mpa"
+              },
+              "nav_id": "07-06-02"
+            },
+            {
+              "title": "第二硕士",
+              "target": {
+                "type": "entry",
+                "entry_id": "edu-second-master"
+              },
+              "nav_id": "07-06-03"
+            },
+            {
+              "title": "博士",
+              "target": {
+                "type": "entry",
+                "entry_id": "research-phd-worth-it"
+              },
+              "nav_id": "07-06-04"
+            },
+            {
+              "title": "海外教育",
+              "target": {
+                "type": "entry",
+                "entry_id": "edu-abroad-again"
+              },
+              "nav_id": "07-06-05"
+            }
+          ],
+          "nav_id": "07-06"
+        }
+      ],
+      "nav_id": "07"
+    },
+    {
+      "title": "08 其他同样成立的人生路径",
+      "target": {
+        "type": "doc",
+        "location": "book/08-其他同样成立的人生路径",
+        "anchor": ""
+      },
+      "children": [
+        {
+          "title": "自由职业",
+          "target": {
+            "type": "doc",
+            "location": "book/08-其他同样成立的人生路径",
+            "anchor": "自由职业"
+          },
+          "children": [
+            {
+              "title": "怎么开始",
+              "target": {
+                "type": "entry",
+                "entry_id": "startup-freelance"
+              },
+              "nav_id": "08-01-01"
+            },
+            {
+              "title": "找客户",
+              "target": {
+                "type": "entry",
+                "entry_id": "freelance-clients"
+              },
+              "nav_id": "08-01-02"
+            },
+            {
+              "title": "定价",
+              "target": {
+                "type": "entry",
+                "entry_id": "freelance-pricing"
+              },
+              "nav_id": "08-01-03"
+            },
+            {
+              "title": "合同",
+              "target": {
+                "type": "entry",
+                "entry_id": "freelance-contract"
+              },
+              "nav_id": "08-01-04"
+            },
+            {
+              "title": "收入稳定性",
+              "target": {
+                "type": "entry",
+                "entry_id": "freelance-stability"
+              },
+              "nav_id": "08-01-05"
+            }
+          ],
+          "nav_id": "08-01"
+        },
+        {
+          "title": "副业",
+          "target": {
+            "type": "doc",
+            "location": "book/08-其他同样成立的人生路径",
+            "anchor": "副业"
+          },
+          "children": [
+            {
+              "title": "什么副业值得做",
+              "target": {
+                "type": "entry",
+                "entry_id": "startup-side-project"
+              },
+              "nav_id": "08-02-01"
+            },
+            {
+              "title": "接单",
+              "target": {
+                "type": "entry",
+                "entry_id": "side-gig-orders"
+              },
+              "nav_id": "08-02-02"
+            },
+            {
+              "title": "咨询",
+              "target": {
+                "type": "entry",
+                "entry_id": "side-consulting"
+              },
+              "nav_id": "08-02-03"
+            },
+            {
+              "title": "内容创作",
+              "target": {
+                "type": "entry",
+                "entry_id": "side-content"
+              },
+              "nav_id": "08-02-04"
+            },
+            {
+              "title": "独立开发",
+              "target": {
+                "type": "entry",
+                "entry_id": "startup-indie-hacker"
+              },
+              "nav_id": "08-02-05"
+            },
+            {
+              "title": "小生意",
+              "target": {
+                "type": "entry",
+                "entry_id": "side-small-business"
+              },
+              "nav_id": "08-02-06"
+            }
+          ],
+          "nav_id": "08-02"
+        },
+        {
+          "title": "创业",
+          "target": {
+            "type": "doc",
+            "location": "book/08-其他同样成立的人生路径",
+            "anchor": "创业"
+          },
+          "children": [
+            {
+              "title": "创业前应该验证什么",
+              "target": {
+                "type": "entry",
+                "entry_id": "startup-validate-before-quit"
+              },
+              "nav_id": "08-03-01"
+            },
+            {
+              "title": "MVP",
+              "target": {
+                "type": "entry",
+                "entry_id": "startup-mvp"
+              },
+              "nav_id": "08-03-02"
+            },
+            {
+              "title": "第一批用户",
+              "target": {
+                "type": "entry",
+                "entry_id": "startup-first-users"
+              },
+              "nav_id": "08-03-03"
+            },
+            {
+              "title": "商业模式",
+              "target": {
+                "type": "entry",
+                "entry_id": "startup-business-model"
+              },
+              "nav_id": "08-03-04"
+            },
+            {
+              "title": "Incubator",
+              "target": {
+                "type": "entry",
+                "entry_id": "startup-incubator"
+              },
+              "nav_id": "08-03-05"
+            },
+            {
+              "title": "Accelerator",
+              "target": {
+                "type": "entry",
+                "entry_id": "startup-accelerator"
+              },
+              "nav_id": "08-03-06"
+            },
+            {
+              "title": "融资",
+              "target": {
+                "type": "entry",
+                "entry_id": "startup-funding"
+              },
+              "nav_id": "08-03-07"
+            }
+          ],
+          "nav_id": "08-03"
+        },
+        {
+          "title": "副业转主业",
+          "target": {
+            "type": "entry",
+            "entry_id": "side-project-to-main-business"
+          },
+          "nav_id": "08-04"
+        },
+        {
+          "title": "职业中断后重新进入职场",
+          "target": {
+            "type": "entry",
+            "entry_id": "career-break-return"
+          },
+          "nav_id": "08-05"
+        },
+        {
+          "title": "第二职业",
+          "target": {
+            "type": "entry",
+            "entry_id": "second-career"
+          },
+          "nav_id": "08-06"
+        },
+        {
+          "title": "再次不知道方向时怎么办",
+          "target": {
+            "type": "entry",
+            "entry_id": "direction-again"
+          },
+          "nav_id": "08-07"
+        }
+      ],
+      "nav_id": "08"
+    },
+    {
+      "title": "09 专题手册",
+      "target": {
+        "type": "doc",
+        "location": "book/09-专题手册",
+        "anchor": ""
+      },
+      "children": [
+        {
+          "title": "科研手册",
+          "target": {
+            "type": "doc",
+            "location": "docs/manuals/科研手册",
+            "anchor": ""
+          },
+          "nav_id": "09-01"
+        },
+        {
+          "title": "竞赛手册",
+          "target": {
+            "type": "doc",
+            "location": "docs/manuals/竞赛手册",
+            "anchor": ""
+          },
+          "nav_id": "09-02"
+        },
+        {
+          "title": "项目与作品手册",
+          "target": {
+            "type": "doc",
+            "location": "docs/manuals/项目与作品手册",
+            "anchor": ""
+          },
+          "nav_id": "09-03"
+        },
+        {
+          "title": "开源手册",
+          "target": {
+            "type": "doc",
+            "location": "docs/manuals/开源手册",
+            "anchor": ""
+          },
+          "nav_id": "09-04"
+        },
+        {
+          "title": "技能学习手册",
+          "target": {
+            "type": "doc",
+            "location": "docs/manuals/技能学习手册",
+            "anchor": ""
+          },
+          "nav_id": "09-05"
+        },
+        {
+          "title": "语言与考试",
+          "target": {
+            "type": "doc",
+            "location": "docs/manuals/语言与考试",
+            "anchor": ""
+          },
+          "nav_id": "09-06"
+        },
+        {
+          "title": "证书",
+          "target": {
+            "type": "doc",
+            "location": "docs/manuals/证书",
+            "anchor": ""
+          },
+          "nav_id": "09-07"
+        },
+        {
+          "title": "奖学金与资助",
+          "target": {
+            "type": "doc",
+            "location": "docs/manuals/奖学金与资助",
+            "anchor": ""
+          },
+          "nav_id": "09-08"
+        },
+        {
+          "title": "社群与行业组织",
+          "target": {
+            "type": "doc",
+            "location": "docs/manuals/社群与行业组织",
+            "anchor": ""
+          },
+          "nav_id": "09-09"
+        },
+        {
+          "title": "创业与自由职业",
+          "target": {
+            "type": "doc",
+            "location": "docs/manuals/创业与自由职业",
+            "anchor": ""
+          },
+          "nav_id": "09-10"
+        },
+        {
+          "title": "国家与地区",
+          "target": {
+            "type": "doc",
+            "location": "book/09-专题手册",
+            "anchor": "国家与地区"
+          },
+          "children": [
+            {
+              "title": "中国大陆",
+              "target": {
+                "type": "doc",
+                "location": "docs/countries/中国大陆",
+                "anchor": ""
+              },
+              "nav_id": "09-11-01"
+            },
+            {
+              "title": "中国香港",
+              "target": {
+                "type": "doc",
+                "location": "docs/countries/中国香港",
+                "anchor": ""
+              },
+              "nav_id": "09-11-02"
+            },
+            {
+              "title": "美国",
+              "target": {
+                "type": "doc",
+                "location": "docs/countries/美国",
+                "anchor": ""
+              },
+              "nav_id": "09-11-03"
+            },
+            {
+              "title": "加拿大",
+              "target": {
+                "type": "doc",
+                "location": "docs/countries/加拿大",
+                "anchor": ""
+              },
+              "nav_id": "09-11-04"
+            },
+            {
+              "title": "英国",
+              "target": {
+                "type": "doc",
+                "location": "docs/countries/英国",
+                "anchor": ""
+              },
+              "nav_id": "09-11-05"
+            },
+            {
+              "title": "欧洲大陆",
+              "target": {
+                "type": "doc",
+                "location": "docs/countries/欧洲大陆",
+                "anchor": ""
+              },
+              "nav_id": "09-11-06"
+            },
+            {
+              "title": "日本",
+              "target": {
+                "type": "doc",
+                "location": "docs/countries/日本",
+                "anchor": ""
+              },
+              "nav_id": "09-11-07"
+            },
+            {
+              "title": "韩国",
+              "target": {
+                "type": "doc",
+                "location": "docs/countries/韩国",
+                "anchor": ""
+              },
+              "nav_id": "09-11-08"
+            },
+            {
+              "title": "新加坡",
+              "target": {
+                "type": "doc",
+                "location": "docs/countries/新加坡",
+                "anchor": ""
+              },
+              "nav_id": "09-11-09"
+            },
+            {
+              "title": "澳大利亚",
+              "target": {
+                "type": "doc",
+                "location": "docs/countries/澳大利亚",
+                "anchor": ""
+              },
+              "nav_id": "09-11-10"
+            },
+            {
+              "title": "新西兰",
+              "target": {
+                "type": "doc",
+                "location": "docs/countries/新西兰",
+                "anchor": ""
+              },
+              "nav_id": "09-11-11"
+            }
+          ],
+          "nav_id": "09-11"
+        },
+        {
+          "title": "行业与职业",
+          "target": {
+            "type": "doc",
+            "location": "book/09-专题手册",
+            "anchor": "行业与职业"
+          },
+          "children": [
+            {
+              "title": "技术与工程",
+              "target": {
+                "type": "doc",
+                "location": "docs/careers/技术与工程",
+                "anchor": ""
+              },
+              "nav_id": "09-12-01"
+            },
+            {
+              "title": "AI 与数据",
+              "target": {
+                "type": "doc",
+                "location": "docs/careers/AI与数据",
+                "anchor": ""
+              },
+              "nav_id": "09-12-02"
+            },
+            {
+              "title": "制造",
+              "target": {
+                "type": "doc",
+                "location": "docs/careers/制造",
+                "anchor": ""
+              },
+              "nav_id": "09-12-03"
+            },
+            {
+              "title": "商业与金融",
+              "target": {
+                "type": "doc",
+                "location": "docs/careers/商业与金融",
+                "anchor": ""
+              },
+              "nav_id": "09-12-04"
+            },
+            {
+              "title": "设计与创意",
+              "target": {
+                "type": "doc",
+                "location": "docs/careers/设计与创意",
+                "anchor": ""
+              },
+              "nav_id": "09-12-05"
+            },
+            {
+              "title": "医疗健康",
+              "target": {
+                "type": "doc",
+                "location": "docs/careers/医疗健康",
+                "anchor": ""
+              },
+              "nav_id": "09-12-06"
+            },
+            {
+              "title": "生命科学",
+              "target": {
+                "type": "doc",
+                "location": "docs/careers/生命科学",
+                "anchor": ""
+              },
+              "nav_id": "09-12-07"
+            },
+            {
+              "title": "教育",
+              "target": {
+                "type": "doc",
+                "location": "docs/careers/教育",
+                "anchor": ""
+              },
+              "nav_id": "09-12-08"
+            },
+            {
+              "title": "法律与公共事务",
+              "target": {
+                "type": "doc",
+                "location": "docs/careers/法律与公共事务",
+                "anchor": ""
+              },
+              "nav_id": "09-12-09"
+            },
+            {
+              "title": "科研与高校",
+              "target": {
+                "type": "doc",
+                "location": "docs/careers/科研与高校",
+                "anchor": ""
+              },
+              "nav_id": "09-12-10"
+            },
+            {
+              "title": "公共服务",
+              "target": {
+                "type": "doc",
+                "location": "docs/careers/公共服务",
+                "anchor": ""
+              },
+              "nav_id": "09-12-11"
+            },
+            {
+              "title": "技能型职业",
+              "target": {
+                "type": "doc",
+                "location": "docs/careers/技能型职业",
+                "anchor": ""
+              },
+              "nav_id": "09-12-12"
+            }
+          ],
+          "nav_id": "09-12"
+        }
+      ],
+      "nav_id": "09"
+    },
+    {
+      "title": "10 时间线与工具",
+      "target": {
+        "type": "doc",
+        "location": "book/10-时间线与工具",
+        "anchor": ""
+      },
+      "children": [
+        {
+          "title": "路径时间线",
+          "target": {
+            "type": "doc",
+            "location": "book/10-时间线与工具",
+            "anchor": "路径时间线"
+          },
+          "children": [
+            {
+              "title": "高中毕业后的选择",
+              "target": {
+                "type": "doc",
+                "location": "docs/timelines/高中到大学",
+                "anchor": ""
+              },
+              "nav_id": "10-01-01"
+            },
+            {
+              "title": "本科四年",
+              "target": {
+                "type": "doc",
+                "location": "docs/timelines/本科四年",
+                "anchor": ""
+              },
+              "nav_id": "10-01-02"
+            },
+            {
+              "title": "保研",
+              "target": {
+                "type": "doc",
+                "location": "docs/timelines/保研时间线",
+                "anchor": ""
+              },
+              "nav_id": "10-01-03"
+            },
+            {
+              "title": "考研",
+              "target": {
+                "type": "doc",
+                "location": "docs/timelines/考研时间线",
+                "anchor": ""
+              },
+              "nav_id": "10-01-04"
+            },
+            {
+              "title": "留学申请",
+              "target": {
+                "type": "doc",
+                "location": "docs/timelines/留学申请时间线",
+                "anchor": ""
+              },
+              "nav_id": "10-01-05"
+            },
+            {
+              "title": "博士申请",
+              "target": {
+                "type": "doc",
+                "location": "docs/timelines/博士申请时间线",
+                "anchor": ""
+              },
+              "nav_id": "10-01-06"
+            },
+            {
+              "title": "校招",
+              "target": {
+                "type": "doc",
+                "location": "docs/timelines/校招时间线",
+                "anchor": ""
+              },
+              "nav_id": "10-01-07"
+            },
+            {
+              "title": "科研入门",
+              "target": {
+                "type": "doc",
+                "location": "docs/timelines/科研入门时间线",
+                "anchor": ""
+              },
+              "nav_id": "10-01-08"
+            },
+            {
+              "title": "转行",
+              "target": {
+                "type": "doc",
+                "location": "docs/timelines/转行时间线",
+                "anchor": ""
+              },
+              "nav_id": "10-01-09"
+            }
+          ],
+          "nav_id": "10-01"
+        },
+        {
+          "title": "工具与模板",
+          "target": {
+            "type": "doc",
+            "location": "book/10-时间线与工具",
+            "anchor": "工具与模板"
+          },
+          "children": [
+            {
+              "title": "机会价值判断表",
+              "target": {
+                "type": "doc",
+                "location": "docs/tools/机会价值判断表",
+                "anchor": ""
+              },
+              "nav_id": "10-02-01"
+            },
+            {
+              "title": "Offer 对比表",
+              "target": {
+                "type": "doc",
+                "location": "docs/tools/Offer对比表",
+                "anchor": ""
+              },
+              "nav_id": "10-02-02"
+            },
+            {
+              "title": "导师筛选表",
+              "target": {
+                "type": "doc",
+                "location": "docs/tools/导师筛选表",
+                "anchor": ""
+              },
+              "nav_id": "10-02-03"
+            },
+            {
+              "title": "联系导师邮件模板",
+              "target": {
+                "type": "doc",
+                "location": "docs/tools/联系导师邮件模板",
+                "anchor": ""
+              },
+              "nav_id": "10-02-04"
+            },
+            {
+              "title": "留学选校表",
+              "target": {
+                "type": "doc",
+                "location": "docs/tools/留学选校表",
+                "anchor": ""
+              },
+              "nav_id": "10-02-05"
+            },
+            {
+              "title": "求职追踪表",
+              "target": {
+                "type": "doc",
+                "location": "docs/tools/求职追踪表",
+                "anchor": ""
+              },
+              "nav_id": "10-02-06"
+            },
+            {
+              "title": "探索复盘模板",
+              "target": {
+                "type": "doc",
+                "location": "docs/tools/探索复盘模板",
+                "anchor": ""
+              },
+              "nav_id": "10-02-07"
+            },
+            {
+              "title": "职业资本盘点表",
+              "target": {
+                "type": "doc",
+                "location": "docs/tools/职业资本盘点表",
+                "anchor": ""
+              },
+              "nav_id": "10-02-08"
+            },
+            {
+              "title": "转行 Bridge Plan",
+              "target": {
+                "type": "doc",
+                "location": "docs/tools/转行BridgePlan",
+                "anchor": ""
+              },
+              "nav_id": "10-02-09"
+            },
+            {
+              "title": "时间线检查表",
+              "target": {
+                "type": "doc",
+                "location": "docs/tools/时间线检查表",
+                "anchor": ""
+              },
+              "nav_id": "10-02-10"
+            }
+          ],
+          "nav_id": "10-02"
+        }
+      ],
+      "nav_id": "10"
+    },
+    {
+      "title": "11 避坑",
+      "target": {
+        "type": "doc",
+        "location": "book/11-避坑",
+        "anchor": ""
+      },
+      "children": [
+        {
+          "title": "升学与留学",
+          "target": {
+            "type": "entry",
+            "entry_id": "trap-guaranteed-admission"
+          },
+          "nav_id": "11-01"
+        },
+        {
+          "title": "求职与实习",
+          "target": {
+            "type": "entry",
+            "entry_id": "trap-fake-internships-and-paid-research"
+          },
+          "nav_id": "11-02"
+        },
+        {
+          "title": "科研",
+          "target": {
+            "type": "entry",
+            "entry_id": "trap-predatory-journals"
+          },
+          "nav_id": "11-03"
+        },
+        {
+          "title": "竞赛",
+          "target": {
+            "type": "entry",
+            "entry_id": "trap-paid-competitions"
+          },
+          "nav_id": "11-04"
+        },
+        {
+          "title": "证书与培训",
+          "target": {
+            "type": "entry",
+            "entry_id": "trap-certificate-hoarding"
+          },
+          "nav_id": "11-05"
+        },
+        {
+          "title": "项目与履历",
+          "target": {
+            "type": "entry",
+            "entry_id": "trap-collecting-courses-and-half-projects"
+          },
+          "nav_id": "11-06"
+        },
+        {
+          "title": "创业与副业",
+          "target": {
+            "type": "entry",
+            "entry_id": "trap-startup-side-gig"
+          },
+          "nav_id": "11-07"
+        },
+        {
+          "title": "信息差、机会焦虑与从众",
+          "target": {
+            "type": "entry",
+            "entry_id": "trap-information-asymmetry"
+          },
+          "nav_id": "11-08"
+        }
+      ],
+      "nav_id": "11"
+    }
+  ]
+}

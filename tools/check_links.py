@@ -49,8 +49,12 @@ TRANSIENT_CODES = (401, 403, 405, 406, 407, 409, 418, 429,
                    500, 502, 503, 504, 520, 521, 522, 523, 524)
 TRANSIENT_REASONS = (
     "timeout", "timed out", "ssl", "tls", "certificate", "connection reset",
-    "connection refused", "remote end closed", "temporarily unavailable",
+    "connection refused", "connection aborted", "remote end closed",
+    "remote disconnected", "broken pipe", "temporarily unavailable",
     "name or service not known", "nodename nor servname",
+    "temporary failure in name resolution", "no route to host",
+    # 网络层不可达：CI runner 的出口波动，不代表链接失效
+    "network is unreachable", "unreachable", "host is down",
 )
 
 

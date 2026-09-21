@@ -661,8 +661,7 @@ def validate(root: Path, docs: list[Doc]) -> tuple[list[str], list[str], dict]:
                                           "path": doc.rel, "route": doc.entry_route(eid)})
                     except ValueError:
                         err(doc, f"条目 {eid} 的 last_verified 不是合法日期")
-                if not first_sentence("\n".join(e["lines"])):
-                    warnings.append(f"{doc.rel}: 条目 {eid} 的正文缺少「一句话」栏")
+                # 新写作模型下不再要求正文存在任何固定栏目；缺摘要已在上面单独告警。
             else:
                 stats["todo"] += 1
             entries.append({

@@ -221,7 +221,11 @@ def main() -> int:
                 print(f"  [{mark}] {r['name']}{extra}", flush=True)
     finally:
         httpd.shutdown()
-        probe_path.unlink(missing_ok=True)
+        try:
+            probe_path.unlink(missing_ok=True)
+        except OSError as e:
+            # 某些环境会拦截删除（批量删除保护等），不影响测试结论
+            print(f"（临时页未能删除：{e.__class__.__name__}，可手动清理 site/_smoke.html）")
 
     print(f"\n冒烟测试：{'全部通过' if not failures else str(failures) + ' 项失败'}", flush=True)
     return 1 if failures else 0
