@@ -1,14 +1,14 @@
 # Content Depth Report
 
-生成时间：2026-09-22T01:42:25+08:00
+生成时间：2026-09-22T01:45:02+08:00
 
 complete 条目总数：303
-- P0（<120 字，必须补写）：47
+- P0（<120 字，必须补写）：31
 - P1（120–250 字，人工审查）：27
 - P2（仍含旧模板字段）：0
 - 缺 summary：0
 
-## P0 正文过薄（47）
+## P0 正文过薄（31）
 
 | entry_id | 标题 | 文件 | 有效正文 | 旧模板字段 | summary |
 | --- | --- | --- | --- | --- | --- |
@@ -24,23 +24,7 @@ complete 条目总数：303
 | funding-grant | Grant | book/04-当你开始面对第一次重要分流 | 112 | — | 有 |
 | funding-stipend | Stipend | book/04-当你开始面对第一次重要分流 | 110 | — | 有 |
 | funding-fee-waiver | Fee Waiver | book/04-当你开始面对第一次重要分流 | 105 | — | 有 |
-| recruit-spring | 春招 | book/05-从学校走向第一份工作 | 106 | — | 有 |
-| recruit-supplement | 补录 | book/05-从学校走向第一份工作 | 84 | — | 有 |
-| job-channel-company-site | 公司官网 | book/05-从学校走向第一份工作 | 80 | — | 有 |
-| job-channel-platform | 招聘平台 | book/05-从学校走向第一份工作 | 115 | — | 有 |
-| job-channel-alumni | 校友与内推 | book/05-从学校走向第一份工作 | 78 | — | 有 |
-| job-channel-fair | 招聘会 | book/05-从学校走向第一份工作 | 75 | — | 有 |
 | job-read-jd | 怎么看招聘 JD | book/05-从学校走向第一份工作 | 80 | — | 有 |
-| resume-projects | 项目经历怎么写 | book/05-从学校走向第一份工作 | 82 | — | 有 |
-| resume-internship | 实习经历怎么写 | book/05-从学校走向第一份工作 | 71 | — | 有 |
-| resume-research | 科研经历怎么写 | book/05-从学校走向第一份工作 | 88 | — | 有 |
-| resume-competition | 竞赛经历怎么写 | book/05-从学校走向第一份工作 | 58 | — | 有 |
-| resume-portfolio | 作品集 | book/05-从学校走向第一份工作 | 64 | — | 有 |
-| interview-technical | 技术面 | book/05-从学校走向第一份工作 | 78 | — | 有 |
-| interview-case | Case Interview | book/05-从学校走向第一份工作 | 80 | — | 有 |
-| interview-behavioral | 行为面 | book/05-从学校走向第一份工作 | 117 | — | 有 |
-| interview-hr | HR 面 | book/05-从学校走向第一份工作 | 85 | — | 有 |
-| offer-equity-bonus | 股票与奖金 | book/05-从学校走向第一份工作 | 91 | — | 有 |
 | work-learn-the-job | 怎么真正学会一份工作 | book/06-进入职场以后继续积累 | 86 | — | 有 |
 | work-learn-language | 工作后学语言 | book/06-进入职场以后继续积累 | 72 | — | 有 |
 | work-study-again | 工作后重新读书 | book/06-进入职场以后继续积累 | 79 | — | 有 |
