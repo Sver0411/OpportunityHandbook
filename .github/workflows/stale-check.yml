@@ -1,0 +1,42 @@
+name: 时效检查
+
+on:
+  schedule:
+    # 每月 1 日 01:00 UTC（北京时间 09:00）
+    - cron: "0 1 1 * *"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  stale:
+    name: 列出需要重新核实的条目
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: 生成时效报告
+        run: |
+          python3 tools/build_index.py --report-stale | tee stale-report.txt
+
+      - name: 写入任务摘要
+        run: |
+          {
+            echo "## 需要重新核实的内容"
+            echo ""
+            echo "以下条目最后核实时间超过 12 个月，邀请贡献者打开官方来源确认后更新 \`last_verified\`。"
+            echo ""
+            echo '```'
+            cat stale-report.txt
+            echo '```'
+          } >> "$GITHUB_STEP_SUMMARY"
+
+      - uses: actions/upload-artifact@v4
+        with:
+          name: stale-report
+          path: stale-report.txt

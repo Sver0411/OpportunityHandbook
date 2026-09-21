@@ -1,0 +1,39 @@
+name: 内容校验
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  validate:
+    name: 校验元数据、内部链接与构建
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: 校验 Markdown 元数据、重复 id、内部链接与 last_verified
+        run: python3 tools/build_index.py --report --report-stale
+
+      - name: 构建静态站点与搜索索引
+        run: python3 tools/build_site.py
+
+      - name: 检查站点前端脚本语法
+        run: node --check site/app.js
+
+      - name: 确认构建产物齐全
+        run: |
+          test -f site/data/index.json
+          test -f "site/content/book/02-怎么判断一个机会值不值得.html"
+          echo "构建产物正常"
+
+      - name: 外部链接可达性（不阻塞合并）
+        run: python3 tools/check_links.py --jobs 16 || true
