@@ -191,11 +191,24 @@
 
     var href = node.href || (node.kind === "entry" ? "" : firstHref(node));
     if (href) {
-      row.appendChild(el("a", { class: "nav-label", href: href, text: node.label, title: node.label }));
+      var link = el("a", { class: "nav-label", href: href, text: node.label, title: node.label });
+      if (kids.length) {
+        // 分组行：点标题进入该组对应章节，同时确保展开
+        link.addEventListener("click", function () { setOpen(li, true); });
+      }
+      row.appendChild(link);
+    } else if (kids.length) {
+      // 无对应章节的分组行：点标题即展开/收起（整行可点，不必瞄准小箭头）
+      var groupLabel = el("span", { class: "nav-label static clickable", text: node.label, title: node.label });
+      groupLabel.addEventListener("click", function () {
+        setOpen(li, !li.classList.contains("open"));
+      });
+      row.appendChild(groupLabel);
     } else {
       row.appendChild(el("span", { class: "nav-label static", text: node.label }));
     }
-    if (node.count) {
+    // 计数只出现在有子节点的分组行上，叶子条目不显示，避免右侧数字成排噪点
+    if (node.count && kids.length) {
       row.appendChild(el("span", {
         class: "nav-count", text: String(node.count),
         title: "这一组里已写完 " + node.count + " 条"
@@ -249,14 +262,19 @@
     var hit = null;
     Array.prototype.forEach.call(links, function (a) {
       var on = a.getAttribute("href") === hash;
-      a.classList.toggle("active", on);
+      var row = a.closest(".nav-row");
+      if (row) row.classList.toggle("active", on);
       if (on) hit = a;
     });
     if (!hit) {
       // 条目深链：退一步高亮它所属的文档
       var loc = hash.replace(/^#\/doc\//, "").split("/")[0];
       Array.prototype.forEach.call(links, function (a) {
-        if (a.getAttribute("href") === "#/doc/" + loc) { a.classList.add("active"); hit = a; }
+        if (a.getAttribute("href") === "#/doc/" + loc) {
+          var row = a.closest(".nav-row");
+          if (row) row.classList.add("active");
+          hit = a;
+        }
       });
     }
     if (!hit) return;
@@ -326,18 +344,44 @@
     var heads = main.querySelectorAll(".doc h2, .entry > h3");
     if (!heads.length) return;
     var list = el("ul", { class: "toc-list" });
+    var links = [];
     Array.prototype.forEach.call(heads, function (h) {
       var id = h.id || "";
+      // 条目标题没有自己的 id，就退到所属条目的锚点，保证点了能跳
+      var target = id ? main.querySelector("#" + CSS.escape(id)) : h.closest(".entry");
       var a = el("a", { href: "#", text: h.textContent, "data-target": id });
       a.addEventListener("click", function (ev) {
         ev.preventDefault();
-        var t = id ? main.querySelector("#" + CSS.escape(id)) : null;
-        if (t) { t.scrollIntoView({ block: "start" }); }
+        (target || h).scrollIntoView({ block: "start" });
       });
+      links.push({ link: a, node: target || h });
       list.appendChild(el("li", { class: h.tagName === "H3" ? "lvl-3" : "lvl-2" }, [a]));
     });
     tocEl.appendChild(el("p", { class: "toc-title", text: "本页目录" }));
     tocEl.appendChild(list);
+    watchHeadings(links);
+  }
+
+  // 滚动时高亮当前小节（轻量：只比较各标题的文档位置）
+  var tocObserver = null;
+  function watchHeadings(links) {
+    if (tocObserver) { tocObserver.disconnect(); tocObserver = null; }
+    if (!("IntersectionObserver" in window) || !links.length) return;
+    var byNode = new Map();
+    links.forEach(function (x) { byNode.set(x.node, x.link); });
+    tocObserver = new IntersectionObserver(function (entries) {
+      entries.forEach(function (en) {
+        var link = byNode.get(en.target);
+        if (!link) return;
+        if (en.isIntersecting) {
+          Array.prototype.forEach.call(tocEl.querySelectorAll("a.active"), function (a) {
+            a.classList.remove("active");
+          });
+          link.classList.add("active");
+        }
+      });
+    }, { rootMargin: "-72px 0px -70% 0px", threshold: 0 });
+    links.forEach(function (x) { tocObserver.observe(x.node); });
   }
 
   function buildDocNav(location) {
