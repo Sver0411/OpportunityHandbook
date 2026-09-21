@@ -1,14 +1,14 @@
 # Content Depth Report
 
-生成时间：2026-09-22T01:25:20+08:00
+生成时间：2026-09-22T01:33:58+08:00
 
 complete 条目总数：303
-- P0（<120 字，必须补写）：124
+- P0（<120 字，必须补写）：93
 - P1（120–250 字，人工审查）：39
 - P2（仍含旧模板字段）：0
 - 缺 summary：0
 
-## P0 正文过薄（124）
+## P0 正文过薄（93）
 
 | entry_id | 标题 | 文件 | 有效正文 | 旧模板字段 | summary |
 | --- | --- | --- | --- | --- | --- |
@@ -16,7 +16,6 @@ complete 条目总数：303
 | apprenticeship | 学徒制与技能路线 | book/01-先决定下一步往哪里走 | 35 | — | 有 |
 | study-life-balance | 学业、实践和生活怎么平衡 | book/02-在学校里先把基础打好 | 96 | — | 有 |
 | understand-role | 怎么了解一个岗位 | book/02-在学校里先把基础打好 | 88 | — | 有 |
-| read-jd | 招聘 JD 应该怎么看 | book/02-在学校里先把基础打好 | 14 | — | 有 |
 | find-practitioners | 怎么找到真实从业者 | book/02-在学校里先把基础打好 | 107 | — | 有 |
 | skill-information-retrieval | 信息检索 | book/02-在学校里先把基础打好 | 79 | — | 有 |
 | skill-writing | 写作 | book/02-在学校里先把基础打好 | 79 | — | 有 |
@@ -39,18 +38,11 @@ complete 条目总数：303
 | community-club-value | 社团有没有价值 | book/03-开始积累真正能留下来的经历 | 74 | — | 有 |
 | community-professional-association | 专业协会 | book/03-开始积累真正能留下来的经历 | 103 | — | 有 |
 | community-meetup | Meetup | book/03-开始积累真正能留下来的经历 | 70 | — | 有 |
-| internship-vs-project | 实习和项目怎么选 | book/03-开始积累真正能留下来的经历 | 56 | — | 有 |
-| internship-vs-research | 实习和科研怎么选 | book/03-开始积累真正能留下来的经历 | 52 | — | 有 |
-| fork-research-or-industry | 科研还是产业 | book/04-当你开始面对第一次重要分流 | 99 | — | 有 |
-| fork-parallel-tracks | 可以同时准备几条路线 | book/04-当你开始面对第一次重要分流 | 83 | — | 有 |
-| fork-main-and-backup | 怎么设置主线和备选 | book/04-当你开始面对第一次重要分流 | 81 | — | 有 |
-| study-choose-supervisor | 选导师 | book/04-当你开始面对第一次重要分流 | 113 | — | 有 |
 | overseas-gpa | GPA | book/04-当你开始面对第一次重要分流 | 86 | — | 有 |
 | research-experiment-data | 实验与数据 | book/04-当你开始面对第一次重要分流 | 117 | — | 有 |
 | internship-daily | 日常实习 | book/04-当你开始面对第一次重要分流 | 80 | — | 有 |
 | internship-summer | 暑期实习 | book/04-当你开始面对第一次重要分流 | 78 | — | 有 |
 | internship-off-cycle | Off-cycle | book/04-当你开始面对第一次重要分流 | 66 | — | 有 |
-| internship-overseas | 海外实习 | book/04-当你开始面对第一次重要分流 | 28 | — | 有 |
 | funding-scholarship | Scholarship | book/04-当你开始面对第一次重要分流 | 103 | — | 有 |
 | funding-fellowship-grant | Fellowship | book/04-当你开始面对第一次重要分流 | 114 | — | 有 |
 | funding-grant | Grant | book/04-当你开始面对第一次重要分流 | 112 | — | 有 |
@@ -72,14 +64,7 @@ complete 条目总数：303
 | interview-case | Case Interview | book/05-从学校走向第一份工作 | 80 | — | 有 |
 | interview-behavioral | 行为面 | book/05-从学校走向第一份工作 | 117 | — | 有 |
 | interview-hr | HR 面 | book/05-从学校走向第一份工作 | 85 | — | 有 |
-| offer-total-comp | 薪资和总包怎么看 | book/05-从学校走向第一份工作 | 111 | — | 有 |
 | offer-equity-bonus | 股票与奖金 | book/05-从学校走向第一份工作 | 91 | — | 有 |
-| offer-renege | 毁约 | book/05-从学校走向第一份工作 | 113 | — | 有 |
-| job-lower-requirements | 要不要降低岗位要求 | book/05-从学校走向第一份工作 | 86 | — | 有 |
-| job-change-city | 要不要换城市 | book/05-从学校走向第一份工作 | 73 | — | 有 |
-| job-or-further-study | 要不要继续升学 | book/05-从学校走向第一份工作 | 71 | — | 有 |
-| job-gap-period | 空窗期怎么处理 | book/05-从学校走向第一份工作 | 69 | — | 有 |
-| job-first-choice-wrong | 第一次选择错了怎么办 | book/05-从学校走向第一份工作 | 77 | — | 有 |
 | work-learn-the-job | 怎么真正学会一份工作 | book/06-进入职场以后继续积累 | 86 | — | 有 |
 | work-understand-business | 怎么理解业务 | book/06-进入职场以后继续积累 | 75 | — | 有 |
 | work-with-manager | 怎么和直属领导合作 | book/06-进入职场以后继续积累 | 74 | — | 有 |
@@ -107,20 +92,6 @@ complete 条目总数：303
 | mgmt-team-lead | Team Lead | book/07-当职业开始出现分岔 | 67 | — | 有 |
 | mgmt-hiring | 招聘 | book/07-当职业开始出现分岔 | 59 | — | 有 |
 | mgmt-performance | 绩效 | book/07-当职业开始出现分岔 | 65 | — | 有 |
-| mgmt-ic-or-manager | 技术还是管理 | book/07-当职业开始出现分岔 | 77 | — | 有 |
-| hop-why | 为什么跳 | book/07-当职业开始出现分岔 | 70 | — | 有 |
-| hop-when | 什么时候跳 | book/07-当职业开始出现分岔 | 73 | — | 有 |
-| hop-same-pay | 平薪跳槽 | book/07-当职业开始出现分岔 | 76 | — | 有 |
-| hop-higher-pay | 涨薪跳槽 | book/07-当职业开始出现分岔 | 75 | — | 有 |
-| hop-change-industry | 换行业 | book/07-当职业开始出现分岔 | 61 | — | 有 |
-| hop-change-city | 换城市 | book/07-当职业开始出现分岔 | 70 | — | 有 |
-| switch-before-decide | 转行前先判断什么 | book/07-当职业开始出现分岔 | 79 | — | 有 |
-| switch-transferable-domain | 可迁移行业经验 | book/07-当职业开始出现分岔 | 69 | — | 有 |
-| switch-side-project | Side Project | book/07-当职业开始出现分岔 | 79 | — | 有 |
-| edu-master-after-work | 工作后读硕士 | book/07-当职业开始出现分岔 | 113 | — | 有 |
-| edu-mba-mpa | MBA / MPA 等职业学位 | book/07-当职业开始出现分岔 | 118 | — | 有 |
-| edu-second-master | 第二硕士 | book/07-当职业开始出现分岔 | 108 | — | 有 |
-| edu-abroad-again | 海外教育 | book/07-当职业开始出现分岔 | 106 | — | 有 |
 | freelance-clients | 找客户 | book/08-其他同样成立的人生路径 | 92 | — | 有 |
 | freelance-pricing | 定价 | book/08-其他同样成立的人生路径 | 81 | — | 有 |
 | freelance-stability | 收入稳定性 | book/08-其他同样成立的人生路径 | 83 | — | 有 |
@@ -133,8 +104,6 @@ complete 条目总数：303
 | startup-business-model | 商业模式 | book/08-其他同样成立的人生路径 | 68 | — | 有 |
 | startup-incubator | Incubator | book/08-其他同样成立的人生路径 | 102 | — | 有 |
 | startup-accelerator | Accelerator | book/08-其他同样成立的人生路径 | 94 | — | 有 |
-| career-break-return | 职业中断后重新进入职场 | book/08-其他同样成立的人生路径 | 67 | — | 有 |
-| second-career | 第二职业 | book/08-其他同样成立的人生路径 | 78 | — | 有 |
 | direction-again | 再次不知道方向时怎么办 | book/08-其他同样成立的人生路径 | 87 | — | 有 |
 
 ## P1 偏薄（39）

@@ -106,7 +106,8 @@ def write_report(r: dict) -> None:
         if items:
             out += table(items, label) + [""]
     report_dir = ROOT / "reports"
-    report_dir.mkdir(exist_ok=True)
+    if not report_dir.exists():
+        report_dir.mkdir()
     (report_dir / "content-depth.md").write_text("\n".join(out), encoding="utf-8")
 
 
