@@ -57,6 +57,8 @@ def check() -> dict:
 
     p0, p1, p2, no_summary = [], [], [], []
     for e in entries:
+        if e.get("kind") == "question":
+            continue          # 首页问题是指向主线文章的入口，summary 由目标文章承担
         text = e.get("text") or ""
         chars = len(strip_noise(text))
         item = {

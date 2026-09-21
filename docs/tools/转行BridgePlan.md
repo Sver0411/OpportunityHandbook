@@ -16,6 +16,8 @@ last_verified: 2026-09-21
 
 # 转行 Bridge Plan
 
+转行前先判断什么，见主线 [转行前先判断什么](../../book/07-当职业开始出现分岔.md#switch-before-decide)。
+
 Bridge Plan 的作用是避免「先辞职再想」。它把转行拆成四段，每段都有可检查的产出。
 
 ## 四段结构

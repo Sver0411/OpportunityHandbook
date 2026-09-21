@@ -32,6 +32,16 @@ jobs:
       - name: Canonical IA 一致性（导航与正文 parity）
         run: python3 tools/check_ia.py
 
+      - name: Markdown 格式质量
+        run: python3 tools/check_markdown_quality.py
+
+      - name: 内容质量门（旧模板=0，缺 summary=0 已达标；P0 过薄清单见 CONTENT_DEPTH_REPORT）
+        # P0 过薄正文（124 篇）清零后，把本步改为阻塞式：去掉 "|| true"
+        run: python3 tools/check_content_quality.py || true
+
+      - name: Metadata 审计（报告级，不阻塞）
+        run: python3 tools/metadata_audit.py || true
+
       - name: 内容规则测试
         run: python3 tools/run_tests.py
 

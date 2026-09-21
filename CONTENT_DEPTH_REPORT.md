@@ -1,14 +1,14 @@
 # Content Depth Report
 
-生成时间：2026-09-22T00:31:44+08:00
+生成时间：2026-09-22T00:49:37+08:00
 
 complete 条目总数：303
-- P0（<120 字，必须补写）：137
+- P0（<120 字，必须补写）：124
 - P1（120–250 字，人工审查）：39
-- P2（仍含旧模板字段）：14
-- 缺 summary：13
+- P2（仍含旧模板字段）：0
+- 缺 summary：0
 
-## P0 正文过薄（137）
+## P0 正文过薄（124）
 
 | entry_id | 标题 | 文件 | 有效正文 | 旧模板字段 | summary |
 | --- | --- | --- | --- | --- | --- |
@@ -136,19 +136,6 @@ complete 条目总数：303
 | career-break-return | 职业中断后重新进入职场 | book/08-其他同样成立的人生路径 | 67 | — | 有 |
 | second-career | 第二职业 | book/08-其他同样成立的人生路径 | 78 | — | 有 |
 | direction-again | 再次不知道方向时怎么办 | book/08-其他同样成立的人生路径 | 87 | — | 有 |
-| q-grad-school | 我到底要不要读研？ | None | 0 | — | 缺 |
-| q-baoyan-kaoyan | 保研和考研应该怎么选？ | None | 0 | — | 缺 |
-| q-competitions | 什么比赛值得参加？ | None | 0 | — | 缺 |
-| q-undergrad-research | 本科生怎么开始科研？ | None | 0 | — | 缺 |
-| q-first-job | 第一份工作应该怎么看？ | None | 0 | — | 缺 |
-| q-promotion | 工作几年以后应该怎么升职？ | None | 0 | — | 缺 |
-| q-career-change | 转行要不要从零开始？ | None | 0 | — | 缺 |
-| q-certificates | 什么证书值得考？ | None | 0 | — | 缺 |
-| q-unknown-direction | 不知道自己想做什么怎么办？ | None | 0 | — | 缺 |
-| q-pay-to-win | 这个比赛是不是交了钱就能拿奖？ | None | 0 | — | 缺 |
-| q-github-project | 我的 GitHub 项目算项目经历吗？ | None | 0 | — | 缺 |
-| q-offer | 两个 Offer 应该怎么比较？ | None | 0 | — | 缺 |
-| q-compare-opportunities | 怎么比较两个完全不同的机会？ | None | 0 | — | 缺 |
 
 ## P1 偏薄（39）
 
@@ -193,40 +180,3 @@ complete 条目总数：303
 | promotion-criteria | 晋升标准 | book/07-当职业开始出现分岔 | 138 | — | 有 |
 | freelance-contract | 合同 | book/08-其他同样成立的人生路径 | 120 | — | 有 |
 | trap-startup-side-gig | 创业与副业 | book/11-避坑 | 176 | — | 有 |
-
-## P2 旧模板残留（14）
-
-| entry_id | 标题 | 文件 | 有效正文 | 旧模板字段 | summary |
-| --- | --- | --- | --- | --- | --- |
-| paths-overseas | 海外发展 | book/01-先决定下一步往哪里走 | 663 | 常见误区： | 有 |
-| research-literature-reading | 文献阅读 | book/04-当你开始面对第一次重要分流 | 481 | 常见误区： | 有 |
-| research-question | 研究问题 | book/04-当你开始面对第一次重要分流 | 452 | 常见误区： | 有 |
-| work-when-to-stay | 什么情况下应该留下 | book/06-进入职场以后继续积累 | 544 | 常见误区： | 有 |
-| startup-freelance | 怎么开始 | book/08-其他同样成立的人生路径 | 713 | 一句话：、适合谁：、不太适合谁：、能换回什么：、要付出什么：、怎么开始：、常见误区：、下一步可能打开什么：、证据与来源： | 有 |
-| startup-side-project | 什么副业值得做 | book/08-其他同样成立的人生路径 | 601 | 一句话：、适合谁：、不太适合谁：、能换回什么：、要付出什么：、怎么开始：、常见误区：、下一步可能打开什么：、证据与来源： | 有 |
-| startup-indie-hacker | 独立开发 | book/08-其他同样成立的人生路径 | 649 | 一句话：、适合谁：、不太适合谁：、能换回什么：、要付出什么：、怎么开始：、常见误区：、下一步可能打开什么：、证据与来源： | 有 |
-| startup-validate-before-quit | 创业前应该验证什么 | book/08-其他同样成立的人生路径 | 1702 | 一句话：、适合谁：、不太适合谁：、能换回什么：、要付出什么：、怎么开始：、常见误区：、下一步可能打开什么：、证据与来源： | 有 |
-| startup-funding | 融资 | book/08-其他同样成立的人生路径 | 682 | 一句话：、适合谁：、不太适合谁：、能换回什么：、要付出什么：、怎么开始：、常见误区：、下一步可能打开什么：、证据与来源： | 有 |
-| side-project-to-main-business | 副业转主业 | book/08-其他同样成立的人生路径 | 990 | 一句话：、适合谁：、不太适合谁：、能换回什么：、要付出什么：、怎么开始：、常见误区：、下一步可能打开什么：、证据与来源： | 有 |
-| trap-guaranteed-admission | 升学与留学 | book/11-避坑 | 646 | 一句话：、适合谁：、不太适合谁：、能换回什么：、要付出什么：、怎么开始：、常见误区：、下一步可能打开什么：、证据与来源： | 有 |
-| trap-fake-internships-and-paid-research | 求职与实习 | book/11-避坑 | 1059 | 一句话：、适合谁：、不太适合谁：、能换回什么：、要付出什么：、怎么开始：、常见误区：、下一步可能打开什么：、证据与来源： | 有 |
-| trap-collecting-courses-and-half-projects | 项目与履历 | book/11-避坑 | 685 | 一句话：、适合谁：、不太适合谁：、能换回什么：、要付出什么：、怎么开始：、常见误区：、下一步可能打开什么：、证据与来源： | 有 |
-| trap-information-asymmetry | 信息差、机会焦虑与从众 | book/11-避坑 | 2550 | 一句话：、适合谁：、不太适合谁：、能换回什么：、要付出什么：、怎么开始：、常见误区：、下一步可能打开什么：、证据与来源： | 有 |
-
-## 缺 summary（13）
-
-| entry_id | 标题 | 文件 | 有效正文 | 旧模板字段 | summary |
-| --- | --- | --- | --- | --- | --- |
-| q-grad-school | 我到底要不要读研？ | None | 0 | — | 缺 |
-| q-baoyan-kaoyan | 保研和考研应该怎么选？ | None | 0 | — | 缺 |
-| q-competitions | 什么比赛值得参加？ | None | 0 | — | 缺 |
-| q-undergrad-research | 本科生怎么开始科研？ | None | 0 | — | 缺 |
-| q-first-job | 第一份工作应该怎么看？ | None | 0 | — | 缺 |
-| q-promotion | 工作几年以后应该怎么升职？ | None | 0 | — | 缺 |
-| q-career-change | 转行要不要从零开始？ | None | 0 | — | 缺 |
-| q-certificates | 什么证书值得考？ | None | 0 | — | 缺 |
-| q-unknown-direction | 不知道自己想做什么怎么办？ | None | 0 | — | 缺 |
-| q-pay-to-win | 这个比赛是不是交了钱就能拿奖？ | None | 0 | — | 缺 |
-| q-github-project | 我的 GitHub 项目算项目经历吗？ | None | 0 | — | 缺 |
-| q-offer | 两个 Offer 应该怎么比较？ | None | 0 | — | 缺 |
-| q-compare-opportunities | 怎么比较两个完全不同的机会？ | None | 0 | — | 缺 |

@@ -20,6 +20,7 @@ id: q-grad-school
 kind: question
 status: complete
 link: grad-school-worth-it
+summary: 先看目标岗位有没有把硕士写成硬门槛，再比较保研、考研与留学的路径与成本。
 topics: [study]
 stages: [undergraduate, new_grad, work_1_3]
 ```
@@ -34,6 +35,7 @@ id: q-baoyan-kaoyan
 kind: question
 status: complete
 link: baoyan-vs-kaoyan
+summary: 先确认有没有推免资格；有资格再比较保研与考研的学校、方向与时间成本。
 topics: [study]
 stages: [undergraduate]
 ```
@@ -48,6 +50,7 @@ id: q-competitions
 kind: question
 status: complete
 link: competition-what-worth-joining
+summary: 看比赛结束后能留下什么可验证的成果：作品、报告、协作经历或被认可的奖项。
 topics: [competition]
 stages: [highschool, secondary_vocational, college, undergraduate, master]
 ```
@@ -62,6 +65,7 @@ id: q-undergrad-research
 kind: question
 status: complete
 link: research-undergrad-start
+summary: 从一个具体问题、几篇核心论文、一个真实课题组开始，用小任务换取第一次研究经历。
 topics: [research]
 stages: [undergraduate]
 ```
@@ -76,6 +80,7 @@ id: q-first-job
 kind: question
 status: complete
 link: first-job-what-to-trade-for
+summary: 第一份工作最该换回的是可迁移的技能与平台；起薪差距通常小于三年后的差距。
 topics: [job]
 stages: [new_grad, undergraduate]
 ```
@@ -90,6 +95,7 @@ id: q-promotion
 kind: question
 status: complete
 link: work-record-achievements
+summary: 先按目标职级做事，再让证据被评审看见——晋升材料只是把这两件事写下来。
 topics: [job]
 stages: [work_1_3, work_3_5]
 ```
@@ -104,6 +110,7 @@ id: q-career-change
 kind: question
 status: complete
 link: career-change-keep-capital
+summary: 转行不是清零：先盘点可迁移技能，用过渡性机会一步步靠近目标行业。
 topics: [job]
 stages: [work_1_3, work_3_5, career_change]
 ```
@@ -118,6 +125,7 @@ id: q-certificates
 kind: question
 status: complete
 link: certificate-what-is-worth-it
+summary: 只考目标岗位写明的证书：法定准入类必考，目录外证书由招聘市场定价。
 topics: [skill]
 stages: [college, undergraduate, new_grad, work_1_3, career_change]
 ```
@@ -132,6 +140,7 @@ id: q-unknown-direction
 kind: question
 status: complete
 link: explore-low-cost-experiments
+summary: 做一次两到八周的低成本真实尝试，拿到外部反馈再判断方向。
 topics: [explore]
 stages: [highschool, college, undergraduate, new_grad, work_1_3, career_change]
 ```
@@ -146,6 +155,7 @@ id: q-pay-to-win
 kind: question
 status: complete
 link: competition-what-worth-joining
+summary: 看比赛结束后能留下什么可验证的成果：作品、报告、协作经历或被认可的奖项。
 topics: [competition]
 stages: [highschool, college, undergraduate, new_grad]
 ```
@@ -160,6 +170,7 @@ id: q-github-project
 kind: question
 status: complete
 link: project-what-is-real
+summary: 有人用、可验证、五分钟能看懂并跑起来——三关都过才算项目经历。
 topics: [project]
 stages: [undergraduate, master, new_grad, work_1_3]
 ```
@@ -174,6 +185,7 @@ id: q-offer
 kind: question
 status: complete
 link: offer-comparison
+summary: 用同一组字段对照：能换回的、要付出的、可验证性、以及放弃它意味着放弃什么。
 topics: [job]
 stages: [new_grad, work_1_3]
 ```
@@ -188,6 +200,7 @@ id: q-compare-opportunities
 kind: question
 status: complete
 link: judge-compare-two-opportunities
+summary: 对照表只填可验证的内容；两边差异很小时，选失败后还能退回来的那个。
 topics: [explore]
 stages: [undergraduate, new_grad, work_1_3, career_change]
 ```
