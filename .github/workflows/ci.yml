@@ -37,8 +37,18 @@ jobs:
           test -f site/data/index.json
           test -f site/sitemap.xml
           test -f site/robots.txt
-          test -f "site/content/book/02-怎么判断一个机会值不值得.html"
+          test -f "site/content/book/02-在学校里先把基础打好.html"
+          test -f "site/content/docs/manuals/科研手册.html"
           test -f "site/pages/research-undergrad-start/index.html"
+          test -f "site/pages/offer-comparison/index.html"
+          # 旧地址的重定向表必须随构建产物一起存在
+          python3 - <<'PYEOF'
+          import json, pathlib
+          red = json.loads(pathlib.Path("site/data/index.json").read_text())["redirects"]
+          assert red["docs"], "文档级重定向为空"
+          assert len(red["entries"]) > 100, "条目级重定向数量异常"
+          print("重定向表正常：", len(red["docs"]), "个文档 /", len(red["entries"]), "个条目")
+          PYEOF
           echo "构建产物正常"
 
       - name: 声明审计（只报告，不阻塞）
