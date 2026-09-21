@@ -46,12 +46,25 @@
 ## 提交之前
 
 ```bash
-python3 tools/build.py                 # 必须通过：元数据、重复 id、内部链接、渲染
-python3 tools/build_index.py --report    # 看看本章完成 / 待写统计
-python3 tools/check_links.py             # 如果改动了外部链接
+python3 tools/build.py --strict --report   # 必须通过：元数据、重复 id、内部链接、构建、外链永久失效
+python3 tools/run_tests.py                 # 内容与工程规则测试
+python3 tools/smoke_test.py                # 有 Chrome 时：前端冒烟测试（可选）
+python3 tools/audit_claims.py             # 高风险绝对化措辞报告（只报告，不阻塞）
 ```
 
-`tools/build.py` 失败时不要提交。校验规则都在 `tools/meta.py` 里，改规则请同时更新 [元数据规范](meta/元数据规范.md)。
+`--strict` 的含义：任何警告（含元数据解析警告）都会失败；外链里 403 / 429 / 5xx / 超时只警告，
+但 404 / 410 / 域名不存在会失败。CI 与 Pages 用的是同一个入口，所以本地过不了的改动不会被部署。
+
+校验规则都在 `tools/meta.py` 里，改规则请同时更新 [元数据规范](meta/元数据规范.md)。
+
+## 还没写的内容怎么标记
+
+未撰写的文档用 `status: planned`：它们**不会**出现在在线导航、搜索结果与筛选里，只汇总在
+[docs/ROADMAP.md](docs/ROADMAP.md)。写完后把 `status` 改成 `complete` 并补上 `last_verified`，
+构建会检查路线图里有没有遗漏的条目。
+
+`book/` 与 `docs/` 的分工见 [写作规范](meta/写作规范.md)：正文写判断与方法，专题写资料与模板，
+专题里不要重复正文已经给出的判断。
 
 ## 提交信息
 
