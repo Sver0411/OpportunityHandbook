@@ -430,7 +430,8 @@ def serve(directory: pathlib.Path):
     return httpd, httpd.server_address[1]
 
 
-def run_case(chrome: str, base: str, size: str, mode: str, budget: int = 8000) -> list[dict]:
+def run_case(chrome: str, base: str, size: str, mode: str, budget: int = 8000,
+             timeout: int = 90) -> list[dict]:
     url = f"{base}?mode={mode}#" + HASHES[mode]
     with tempfile.TemporaryDirectory() as tmp:
         cmd = [
@@ -442,7 +443,7 @@ def run_case(chrome: str, base: str, size: str, mode: str, budget: int = 8000) -
             "--dump-dom", url,
         ]
         try:
-            r = subprocess.run(cmd, capture_output=True, text=True, timeout=90)
+            r = subprocess.run(cmd, capture_output=True, text=True, timeout=timeout)
             out = r.stdout
         except subprocess.TimeoutExpired as e:
             out = (e.stdout or b"").decode("utf-8", "replace") if isinstance(e.stdout, bytes) else (e.stdout or "")
@@ -496,10 +497,12 @@ def main() -> int:
                                   ("滚动跟随当前条目", "1440,1400", "scroll"),
                                   ("移动端", "500,1000", "mobile")):
             budget = 45000 if mode in ("nav", "toc", "sources", "scroll") else 8000
-            results = run_case(chrome, base, size, mode, budget)
+            # toc 模式逐条目切换页面，真实耗时远高于其他模式
+            real_timeout = 420 if mode == "toc" else (240 if mode in ("nav", "scroll", "sources") else 90)
+            results = run_case(chrome, base, size, mode, budget, real_timeout)
             if results and all("超时" in r["name"] for r in results):
                 print(f"  （{label}：首次超时，重试一次）", flush=True)
-                results = run_case(chrome, base, size, mode)
+                results = run_case(chrome, base, size, mode, 45000, real_timeout)
             print(f"\n== 前端冒烟（{label}）==")
             for r in results:
                 mark = "PASS" if r["pass"] else "FAIL"
