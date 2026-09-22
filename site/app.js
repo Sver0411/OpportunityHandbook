@@ -360,6 +360,7 @@
       buildToc(entryId);
       buildDocNav(location);
       focusTarget(entryId);
+      watchEntries(location);
     }).catch(function (err) {
       clear(main);
       main.appendChild(el("p", { class: "empty", text: "内容加载失败（" + err.message + "）。如果是在本地打开，请用 http 方式访问，例如：python3 -m http.server 8000 --directory site" }));
@@ -381,6 +382,7 @@
     var list = el("ul", { class: "toc-list" });
     var links = [];
     Array.prototype.forEach.call(heads, function (h) {
+      if (h.closest(".sources-details")) return;   // 来源折叠块不进右栏目录
       var id = h.id || "";
       // 条目标题没有自己的 id，就退到所属条目的锚点，保证点了能跳
       var target = id ? main.querySelector("#" + CSS.escape(id)) : h.closest(".entry");
@@ -392,9 +394,61 @@
       links.push({ link: a, node: target || h });
       list.appendChild(el("li", { class: h.tagName === "H3" ? "lvl-3" : "lvl-2" }, [a]));
     });
-    tocEl.appendChild(el("p", { class: "toc-title", text: "本页目录" }));
+    var title = "本章目录";
+    if (entry) {
+      var h3 = entry.querySelector("h3");
+      title = h3 ? h3.textContent.trim() : (entry.id || "本条");
+    }
+    tocEl.appendChild(el("p", { class: "toc-title", text: title }));
     tocEl.appendChild(list);
     watchHeadings(links);
+  }
+
+  // ------------------------------------------------------ 滚动跟随当前条目
+  //
+  // 目标：右侧目录 + 左栏高亮随阅读位置自动切换，但**不修改 location.hash 与
+  // history**（自然滚动不应产生历史记录，否则浏览器「后退」会逐个条目回退）。
+  var entryWatch = { location: "", current: "", handler: null, last: 0, timer: null };
+
+  function readingLine() {
+    // 顶部阅读线：随视口高度取约 1/3（并夹在 120–240px 之间）。
+    // 固定 120px 在长页面上偏严——刚滚到下一个条目时它的 top 仍在 150px 左右，
+    // 会被误判为「还没进入」。
+    var h = window.innerHeight || 800;
+    return Math.min(Math.max(120, h * 0.33), 240);
+  }
+
+  function currentEntryId() {
+    var entries = main.querySelectorAll("section.entry");
+    if (!entries.length) return "";
+    var line = readingLine();
+    var best = "";
+    Array.prototype.forEach.call(entries, function (s) {
+      var rect = s.getBoundingClientRect();
+      // 以实时几何位置判断：选择最后一个「顶部已在阅读线上方」的条目
+      if (rect.top - line <= 0.5) best = s.id;
+    });
+    return best;
+  }
+
+  function watchEntries(location) {
+    if (entryWatch.handler) window.removeEventListener("scroll", entryWatch.handler);
+    if (entryWatch.timer) { window.clearInterval(entryWatch.timer); entryWatch.timer = null; }
+    entryWatch.location = location;
+    entryWatch.current = "";
+    entryWatch.handler = function () {
+      var now = Date.now();
+      if (entryWatch.last && now - entryWatch.last < 80) return;   // 轻量节流
+      entryWatch.last = now;
+      var id = currentEntryId();
+      if (id === entryWatch.current) return;
+      entryWatch.current = id;
+      buildToc(id);
+      // 只同步视觉状态：高亮左栏 + 展开当前条目祖先路径，不改 URL
+      markActive("#/doc/" + location + (id ? "/" + id : ""));
+    };
+    window.addEventListener("scroll", entryWatch.handler, { passive: true });
+    entryWatch.handler();
   }
 
   // 滚动时高亮当前小节（轻量：只比较各标题的文档位置）

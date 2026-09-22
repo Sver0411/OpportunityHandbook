@@ -25,20 +25,11 @@ import meta as M  # noqa: E402
 
 INDEX: dict = {}
 
-EXPECTED_SECTIONS = [
-    "00 从这里开始",
-    "01 先决定下一步往哪里走",
-    "02 在学校里先把基础打好",
-    "03 开始积累真正能留下来的经历",
-    "04 当你开始面对第一次重要分流",
-    "05 从学校走向第一份工作",
-    "06 进入职场以后继续积累",
-    "07 当职业开始出现分岔",
-    "08 其他同样成立的人生路径",
-    "09 专题手册",
-    "10 时间线与工具",
-    "11 避坑",
-]
+def _expected_sections() -> list[str]:
+    """左栏一级栏目：由 navigation.json 决定（可用 nav_label 覆盖显示名）。"""
+    import json
+    nav = json.loads((ROOT / "meta" / "navigation.json").read_text(encoding="utf-8"))
+    return [(n.get("nav_label") or n["title"]) for n in nav["items"]]
 
 NATURALIZED = [
     "grad-school-worth-it", "baoyan-vs-kaoyan", "overseas-is-it-for-me",
@@ -67,7 +58,7 @@ def walk(nodes):
 class Architecture(unittest.TestCase):
     def test_sections_and_order(self):
         labels = [s["label"] for s in INDEX["nav"]]
-        self.assertEqual(labels, EXPECTED_SECTIONS, f"实际：{labels}")
+        self.assertEqual(labels, _expected_sections(), f"实际：{labels}")
 
     def test_depth_still_three(self):
         def depth(n):

@@ -78,6 +78,23 @@ def _join_content(parts: list[str]) -> str:
     return out
 
 
+SOURCES_RE = re.compile(
+    r'<h2 id="([^"]*)">来源与更新</h2>(.*?)(?=<h2 |</section>|<h3 |\Z)', re.S)
+
+
+def wrap_sources(html_text: str) -> str:
+    """把「来源与更新」小节包成默认折叠的 <details>。
+
+    Markdown 仍是唯一正文源：这里只做渲染后的结构包装，不改源文件。
+    """
+    def repl(m: re.Match) -> str:
+        hid, body = m.group(1), m.group(2).strip("\n")
+        return (f'<details class="sources-details" id="{html.escape(hid)}">'
+                f'<summary>来源与更新</summary>'
+                f'<div class="sources-body">{body}</div></details>')
+    return SOURCES_RE.sub(repl, html_text)
+
+
 def render_entry_section(seg: dict, threshold: str, today_iso: str) -> tuple[str, str]:
     """渲染一个条目为 <section>，同时返回它的 id（供索引与 SEO 页复用）。"""
     meta_block = seg["meta"] or {}
@@ -85,6 +102,7 @@ def render_entry_section(seg: dict, threshold: str, today_iso: str) -> tuple[str
     mdrender.set_id_prefix(eid)          # 条目内 heading id = {entry_id}--{slug}
     inner, _ = mdrender.render("\n".join(seg["lines"]).strip("\n"))
     mdrender.set_id_prefix("")
+    inner = wrap_sources(inner)
     html_str = (
         f'<section class="entry" id="{html.escape(eid)}">'
         f"<h3>{mdrender._inline(seg['title'])}</h3>"
@@ -111,7 +129,7 @@ def render_doc(doc: M.Doc, threshold: str) -> str:
                         dropped_h1 = True
                     break
             html_text, _ = mdrender.render("\n".join(lines))
-            body_parts.append(html_text)
+            body_parts.append(wrap_sources(html_text))
         else:
             _, html_str = render_entry_section(seg, threshold, today_iso)
             body_parts.append(html_str)

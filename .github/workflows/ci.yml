@@ -59,8 +59,9 @@ jobs:
           import json, pathlib
           idx = json.loads(pathlib.Path("site/data/index.json").read_text())
           nav = json.loads(pathlib.Path("meta/navigation.json").read_text())
+          # 左栏显示名可以是 nav_label；章节标题(title)保持不变
           labels = [n["label"] for n in idx["nav"]]
-          want = [n["title"] for n in nav["items"]]
+          want = [(n.get("nav_label") or n["title"]) for n in nav["items"]]
           assert labels == want, f"左栏一级栏目与 Canonical IA 不一致：{labels} != {want}"
           print("一级栏目一致：", len(labels), "个")
           PYEOF

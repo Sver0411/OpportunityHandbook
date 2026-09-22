@@ -5,8 +5,8 @@
     python3 tools/check_content_quality.py --report   # 同时生成 reports/content-depth.md
 
 检查项（complete 条目）：
-  P0  有效正文 < 120 个中文字符（去掉 metadata、来源段、链接、纯标题后）
-  P1  有效正文 120–250 字
+  P0  有效正文 < 250 个中文字符（去掉 metadata、来源段、链接、纯标题后）→ 硬门
+  P1  有效正文 250–400 字 → 人工审查
   P2  旧模板字段仍出现在正文（一句话/适合谁/能换回什么……）
   -   缺 summary
   -   Markdown 明显损坏（交给 tools/check_markdown_quality.py，这里只汇总）
@@ -70,9 +70,9 @@ def check() -> dict:
             no_summary.append(item)
         if item["legacy"]:
             p2.append(item)
-        if chars < 120:
+        if chars < 250:
             p0.append(item)
-        elif chars < 250:
+        elif chars < 400:
             p1.append(item)
 
     return {"total_complete": len(entries), "p0": p0, "p1": p1, "p2": p2,
@@ -110,6 +110,28 @@ def check_docs(root: Path) -> dict:
     return {"leaks": leaks, "title_mismatch": title_mismatch, "thin": thin}
 
 
+DECISION_HINTS = ("要不要", "还是", "怎么选", "怎么比较", "值不值得", "怎么办", "应该怎么看",
+                  "什么时候", "该不该")
+
+
+def decision_review(root: Path) -> list[dict]:
+    """复杂决策题审查：标题像决策问题但有效正文偏短，需要人工判断。"""
+    docs = M.load_docs(root)
+    errors, warnings, extra = M.validate(root, docs)
+    out = []
+    for e in extra["entries"]:
+        if e.get("status") != "complete" or e.get("kind") == "question":
+            continue
+        title = str(e.get("title") or "")
+        if not any(h in title for h in DECISION_HINTS):
+            continue
+        chars = len(strip_noise(e.get("text") or ""))
+        if chars < 400:
+            out.append({"id": e.get("id"), "title": title, "chars": chars,
+                        "file": e.get("location")})
+    return sorted(out, key=lambda x: x["chars"])
+
+
 def write_report(r: dict) -> None:
     def table(items, label):
         lines = [f"## {label}（{len(items)}）", "",
@@ -126,8 +148,8 @@ def write_report(r: dict) -> None:
         f"生成时间：{datetime.datetime.now().astimezone().isoformat(timespec='seconds')}",
         "",
         f"complete 条目总数：{r['total_complete']}",
-        f"- P0（<120 字，必须补写）：{len(r['p0'])}",
-        f"- P1（120–250 字，人工审查）：{len(r['p1'])}",
+        f"- P0（<250 字，必须补写）：{len(r['p0'])}",
+        f"- P1（250–400 字，人工审查）：{len(r['p1'])}",
         f"- P2（仍含旧模板字段）：{len(r['p2'])}",
         f"- 缺 summary：{len(r['no_summary'])}",
         "",
@@ -164,14 +186,17 @@ def main() -> int:
         print("已写出 reports/content-depth.md（不阻塞）")
         return 0
 
+    r["decision_review"] = decision_review(ROOT)
     if args.json:
         print(json.dumps(r, ensure_ascii=False, indent=2))
     else:
         print(f"complete 总数：{r['total_complete']}")
-        print(f"P0 <120 字：{len(r['p0'])}")
-        print(f"P1 120–250 字：{len(r['p1'])}")
+        print(f"P0 <250 字：{len(r['p0'])}")
+        print(f"P1 250–400 字：{len(r['p1'])}")
         print(f"P2 旧模板残留：{len(r['p2'])}")
         print(f"缺 summary：{len(r['no_summary'])}")
+        if r["decision_review"]:
+            print(f"复杂决策题偏短（<400 字，report-only）：{len(r['decision_review'])}")
         doc_preview = check_docs(ROOT)
         print(f"施工语言泄漏：{len(doc_preview['leaks'])}")
         print(f"H1 与 title 不一致：{len(doc_preview['title_mismatch'])}")

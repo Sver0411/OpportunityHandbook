@@ -51,7 +51,11 @@ HASHES = {"home": "/", "deep": "/", "browse": "/browse?q=%E4%BF%9D%E7%A0%94",
           "mobile": "/", "legacy": "/doc/book/03-%E5%8D%87%E5%AD%A6/grad-school-worth-it",
           "nav": "/",
           # toc 模式：初始路由在 main() 里用 toc_cases() 的第一条填充
-          "toc": "/"}
+          "toc": "/",
+          # sources 模式：随便挑一个条目，检查来源折叠
+          "sources": "/",
+          # scroll 模式：起始条目由 SCROLL_CASE 决定
+          "scroll": "/"}
 
 # Canonical IA 里必须能「展开 → 点击 → 进入 → 高亮」的节点（用户点名要求的路径）
 NAV_PATHS = [
@@ -91,6 +95,24 @@ def toc_cases() -> list[dict]:
         else:
             print(f"  （navigation.json 里找不到 entry：{eid}）")
     return out
+
+
+# 滚动跟随用例：从 04 的「升学还是工作」滚到「国内还是海外」
+SCROLL_PAIR = ("fork-study-or-work", "fork-home-and-abroad-todo")  # 第二个 id 在运行时解析
+
+
+def scroll_case() -> dict | None:
+    """构造滚动用例：起始条目 + 同章的下一个条目。"""
+    import json as _json
+    idx = _json.loads((ROOT / "site" / "data" / "index.json").read_text(encoding="utf-8"))
+    by_id = {e["id"]: e for e in idx["entries"]}
+    first = by_id.get("fork-study-or-work")
+    second = by_id.get("fork-home-or-abroad")
+    if not first or not second:
+        print("  （滚动用例缺少条目）")
+        return None
+    return {"first_id": first["id"], "first_route": first["route"],
+            "second_id": second["id"], "second_route": second["route"]}
 
 
 def nav_cases() -> list[dict]:
@@ -152,6 +174,16 @@ PROBE = r"""
       ok("专题页在目录可见（日本）", navText.indexOf("日本") >= 0);
       ok("专题页在目录可见（科研手册）", navText.indexOf("科研手册") >= 0);
       ok("工具页在目录可见（Offer 对比表）", navText.indexOf("Offer 对比表") >= 0);
+      // 一级栏目使用 nav_label（章节标题保持 canonical 不变）
+      var L1 = window.__NAV_LABELS__ || [];
+      var l1Rows = Array.prototype.slice.call(document.querySelectorAll("#navTree li.nav-l1 > .nav-row"));
+      var l1Texts = l1Rows.map(function (r) {
+        var a = r.querySelector("a.nav-label");
+        return a ? a.textContent.trim() : "";
+      });
+      ok("一级栏目使用 nav_label", L1.length > 0 && JSON.stringify(l1Texts) === JSON.stringify(L1),
+         l1Texts.length + " 项 · 首项：" + (l1Texts[0] || ""));
+      ok("一级栏目不是旧的章节标题", l1Texts.indexOf("01 先决定下一步往哪里走") < 0);
       location.hash = "#/doc/book/03-升学";
       await wait(900);
       ok("文档能加载", count(".doc .entry") > 0, count(".doc .entry") + " 个条目");
@@ -260,6 +292,77 @@ PROBE = r"""
       }
     }
 
+    if (mode === "sources") {
+      var SC = window.__SCROLL_CASE__ || null;
+      location.hash = SC ? SC.first_route : location.hash;
+      await wait(900);
+      var box = document.querySelector(".sources-details");
+      ok("来源与更新已折叠为 details", !!box);
+      if (box) {
+        ok("默认折叠", !box.hasAttribute("open"));
+        var tocHrefs = Array.prototype.slice.call(document.querySelectorAll("#toc a[data-target]"))
+          .map(function (a) { return a.getAttribute("data-target"); });
+        ok("来源不进入右栏目录", tocHrefs.every(function (x) { return x.indexOf("来源与更新") < 0; }),
+           tocHrefs.length + " 项");
+        var sum = box.querySelector("summary");
+        sum.click();
+        await wait(300);
+        ok("可以展开", box.hasAttribute("open"));
+        ok("展开后正文可见", (box.querySelector(".sources-body") || {}).textContent.length > 10);
+        sum.click();
+        await wait(200);
+        ok("可以再次折叠", !box.hasAttribute("open"));
+      }
+    }
+
+    if (mode === "scroll") {
+      // 滚动跟随：右栏主题、左栏高亮随阅读位置切换，且不产生 history 记录
+      var SC2 = window.__SCROLL_CASE__ || null;
+      if (!SC2) { ok("滚动用例已配置", false, "缺少 SCROLL_CASE"); }
+      else {
+        location.hash = SC2.first_route;
+        await wait(900);
+        var histBefore = history.length;
+        var hashBefore = location.hash;
+        var first = document.getElementById(SC2.first_id);
+        var second = document.getElementById(SC2.second_id);
+        ok("起始条目已加载", !!first, SC2.first_id);
+        ok("第二个条目已加载", !!second, SC2.second_id);
+        var titleBefore = text("#toc .toc-title");
+        var y0 = window.scrollY;
+        ok("页面可滚动（高度）", document.documentElement.scrollHeight > 1500,
+           document.documentElement.scrollHeight + "px");
+        // 滚到第二个条目
+        second.scrollIntoView({ block: "start" });
+        window.scrollBy(0, -80);
+        // 无头 Chrome 的虚拟时间会在页面加载后停摆，定时器与原生 scroll 事件可能不再投递，
+        // 这里显式派发一次 scroll，验证的是「监听器是否正确处理滚动」这一条链路。
+        window.dispatchEvent(new Event("scroll"));
+        await wait(600);
+        var titleAfter = text("#toc .toc-title");
+        ok("滚动后 scrollY 变化", window.scrollY !== y0, y0 + " → " + window.scrollY);
+        var e2top = Math.round(second.getBoundingClientRect().top);
+        var line = Math.min(Math.max(120, (window.innerHeight || 800) * 0.33), 240);
+        ok("第二个条目进入阅读线", e2top <= line, "top=" + e2top + " line=" + Math.round(line));
+        var secondTitle = second.querySelector("h3") ? second.querySelector("h3").textContent.trim() : "";
+        ok("右栏主题随滚动切换", titleAfter === secondTitle && titleAfter !== titleBefore,
+           titleBefore + " → " + titleAfter);
+        var links = Array.prototype.slice.call(document.querySelectorAll("#toc a[data-target]"));
+        ok("右栏目录属于新条目",
+           links.length > 0 && links.every(function (a) {
+             return (a.getAttribute("data-target") || "").indexOf(SC2.second_id + "--") === 0;
+           }), links.length + " 项");
+        var active = document.querySelector("#navTree .nav-row.active a.nav-label");
+        ok("左栏高亮跟随当前条目",
+           !!active && (active.getAttribute("href") || "").indexOf(SC2.second_id) >= 0,
+           active ? active.textContent.trim() : "无高亮");
+        ok("滚动不产生 history 记录", history.length === histBefore,
+           histBefore + " → " + history.length);
+        ok("滚动不改变 URL hash", location.hash === hashBefore,
+           hashBefore + " → " + location.hash);
+      }
+    }
+
     if (mode === "nav") {
       // Canonical IA 逐节点验证：能展开 / 能点击 / 进入正确目标 / 高亮正确节点
       var CASES = window.__NAV_CASES__ || [];
@@ -363,6 +466,16 @@ def main() -> int:
     src = src.replace("<script src=\"app.js\"></script>", STUBS + "<script src=\"app.js\"></script>")
     cases = nav_cases()
     probe = PROBE.replace("window.__NAV_CASES__", json.dumps(cases, ensure_ascii=False))
+    import json as _j
+    _nav = _j.loads((ROOT / "meta" / "navigation.json").read_text(encoding="utf-8"))
+    probe = probe.replace("window.__NAV_LABELS__",
+                          _j.dumps([(n.get("nav_label") or n["title"]) for n in _nav["items"]],
+                                   ensure_ascii=False))
+    scase = scroll_case()
+    probe = probe.replace("window.__SCROLL_CASE__", json.dumps(scase, ensure_ascii=False))
+    if scase:
+        HASHES["sources"] = scase["first_route"].lstrip("#")
+        HASHES["scroll"] = scase["first_route"].lstrip("#")
     tcases = toc_cases()
     if tcases:
         HASHES["toc"] = tcases[0]["route"].lstrip("#")
@@ -379,8 +492,10 @@ def main() -> int:
                                   ("旧深链重定向", "1440,1400", "legacy"),
                                   ("Canonical IA 目录导航", "1440,1400", "nav"),
                                   ("右侧目录作用域", "1440,1400", "toc"),
+                                  ("来源与更新折叠", "1440,1400", "sources"),
+                                  ("滚动跟随当前条目", "1440,1400", "scroll"),
                                   ("移动端", "500,1000", "mobile")):
-            budget = 45000 if mode in ("nav", "toc") else 8000
+            budget = 45000 if mode in ("nav", "toc", "sources", "scroll") else 8000
             results = run_case(chrome, base, size, mode, budget)
             if results and all("超时" in r["name"] for r in results):
                 print(f"  （{label}：首次超时，重试一次）", flush=True)

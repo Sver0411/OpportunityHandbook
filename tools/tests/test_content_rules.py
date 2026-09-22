@@ -114,7 +114,8 @@ class NavigationDepth(unittest.TestCase):
         """导航必须由 meta/navigation.json 决定，一级栏目逐项对应 Canonical IA。"""
         import json
         nav = json.loads((ROOT / "meta" / "navigation.json").read_text(encoding="utf-8"))
-        want = [n["title"] for n in nav["items"]]
+        # 左栏显示名可用 nav_label 覆盖章节标题；title / nav_id / target 不变
+        want = [(n.get("nav_label") or n["title"]) for n in nav["items"]]
         got = [n["label"] for n in INDEX["nav"]]
         self.assertEqual(got, want, "左栏一级栏目与 Canonical IA 不一致")
 

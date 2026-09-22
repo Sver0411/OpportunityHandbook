@@ -3,6 +3,7 @@
   "items": [
     {
       "title": "00 从这里开始",
+      "nav_label": "00 使用指南与选择方法",
       "target": {
         "type": "doc",
         "location": "book/00-从这里开始",
@@ -86,6 +87,7 @@
     },
     {
       "title": "01 先决定下一步往哪里走",
+      "nav_label": "01 升学、就业与教育选择",
       "target": {
         "type": "doc",
         "location": "book/01-先决定下一步往哪里走",
@@ -368,6 +370,7 @@
     },
     {
       "title": "02 在学校里先把基础打好",
+      "nav_label": "02 学业、技能、语言与证书",
       "target": {
         "type": "doc",
         "location": "book/02-在学校里先把基础打好",
@@ -693,6 +696,7 @@
     },
     {
       "title": "03 开始积累真正能留下来的经历",
+      "nav_label": "03 项目、竞赛、科研与实习",
       "target": {
         "type": "doc",
         "location": "book/03-开始积累真正能留下来的经历",
@@ -1106,6 +1110,7 @@
     },
     {
       "title": "04 当你开始面对第一次重要分流",
+      "nav_label": "04 考研、保研、留学与科研",
       "target": {
         "type": "doc",
         "location": "book/04-当你开始面对第一次重要分流",
@@ -1575,6 +1580,7 @@
     },
     {
       "title": "05 从学校走向第一份工作",
+      "nav_label": "05 校招、求职与第一份工作",
       "target": {
         "type": "doc",
         "location": "book/05-从学校走向第一份工作",
@@ -1991,6 +1997,7 @@
     },
     {
       "title": "06 进入职场以后继续积累",
+      "nav_label": "06 职场入门与成长",
       "target": {
         "type": "doc",
         "location": "book/06-进入职场以后继续积累",
@@ -2281,6 +2288,7 @@
     },
     {
       "title": "07 当职业开始出现分岔",
+      "nav_label": "07 晋升、跳槽、转行与再深造",
       "target": {
         "type": "doc",
         "location": "book/07-当职业开始出现分岔",
@@ -2622,6 +2630,7 @@
     },
     {
       "title": "08 其他同样成立的人生路径",
+      "nav_label": "08 自由职业、副业、创业与第二职业",
       "target": {
         "type": "doc",
         "location": "book/08-其他同样成立的人生路径",
@@ -2842,6 +2851,7 @@
     },
     {
       "title": "09 专题手册",
+      "nav_label": "09 专题索引",
       "target": {
         "type": "doc",
         "location": "book/09-专题手册",
@@ -3172,6 +3182,7 @@
     },
     {
       "title": "10 时间线与工具",
+      "nav_label": "10 时间线与实用工具",
       "target": {
         "type": "doc",
         "location": "book/10-时间线与工具",
@@ -3376,6 +3387,7 @@
     },
     {
       "title": "11 避坑",
+      "nav_label": "11 常见陷阱与避坑",
       "target": {
         "type": "doc",
         "location": "book/11-避坑",

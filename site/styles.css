@@ -420,6 +420,27 @@ body.nav-collapsed .shell { margin-left: 0; }
 .chip-stale { background: var(--warn-soft); border-color: var(--warn-line); color: var(--warn); }
 .chip-todo { background: transparent; border: 1px dashed var(--line-strong); color: var(--muted); }
 
+/* 来源与更新：默认折叠，保持简洁 */
+.sources-details { margin: 18px 0 6px; border-top: 1px solid var(--line); padding-top: 10px; }
+.sources-details > summary {
+  cursor: pointer; list-style: none; font-size: 13px; color: var(--muted);
+  display: flex; align-items: center; gap: 6px; padding: 2px 0;
+}
+.sources-details > summary::-webkit-details-marker { display: none; }
+.sources-details > summary::before { content: "▸"; font-size: 11px; transition: transform .15s ease; }
+.sources-details[open] > summary::before { transform: rotate(90deg); }
+.sources-details > summary:hover { color: var(--ink-2); }
+.sources-body { padding-top: 6px; }
+.sources-body p { font-size: 13px; color: var(--ink-2); margin: 0 0 8px; line-height: 1.7; }
+.sources-body ul { margin: 0; padding-left: 1.2em; }
+.sources-body li { font-size: 13px; color: var(--ink-2); margin: 4px 0; line-height: 1.7; }
+.sources-body a { color: var(--ink-2); word-break: break-all; }
+
+/* 左侧一级目录允许两行，箭头垂直居中（class 在 li.nav-item 上） */
+.nav-item.nav-l1 > .nav-row { align-items: flex-start; }
+.nav-item.nav-l1 > .nav-row .nav-label { white-space: normal; line-height: 1.35; padding-top: 1px; }
+.nav-item.nav-l1 > .nav-row .nav-toggle { margin-top: 1px; }
+
 /* ================================================================ 浏览与筛选 */
 
 .browse-head { margin-bottom: 24px; }

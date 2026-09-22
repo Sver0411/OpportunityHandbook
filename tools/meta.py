@@ -932,6 +932,8 @@ def build_nav_from_ia(docs: list[Doc], entries: list[dict]) -> tuple[list[dict],
         out: list[dict] = []
         for n in nodes:
             title = n.get("title") or ""
+            # 左栏显示名可与章节标题不同（nav_label）：不改变 title / nav_id / target
+            label = n.get("nav_label") or title
             kids = n.get("children") or []
             target = n.get("target") or {}
             here = trail + [title]
@@ -946,7 +948,8 @@ def build_nav_from_ia(docs: list[Doc], entries: list[dict]) -> tuple[list[dict],
             href = href or first_href(children)
             node = {
                 "kind": kind,
-                "label": title,
+                "label": label,
+                "title": title,
                 "nav_id": n.get("nav_id") or "",
                 "href": href,
                 "children": children,
