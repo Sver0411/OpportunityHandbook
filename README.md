@@ -1,6 +1,8 @@
-# OpportunityHandbook
-
 <div align="center">
+
+**简体中文**
+
+# OpportunityHandbook
 
 **不是替你规划一条标准人生，而是让你看清：世界上到底有哪些路。**
 
