@@ -578,6 +578,19 @@ def validate(root: Path, docs: list[Doc]) -> tuple[list[str], list[str], dict]:
         lv = str(f.get("last_verified") or "")
         if dtype in ("chapter", "doc") and not re.fullmatch(r"\d{4}-\d{2}-\d{2}", lv):
             err(doc, "front matter 的 last_verified 缺失或格式不是 YYYY-MM-DD")
+        # 文档级 facet 校验：docs/ 专题页的 front matter 与条目用同一套枚举，
+        # 非法取值不得静默进入索引（此前只校验条目，文档页漏掉了）
+        if dtype in ("chapter", "doc", "intro"):
+            for key in ("stages", "topics", "outputs", "evidence"):
+                for v in _as_list(f.get(key)):
+                    if v not in VALID[key]:
+                        err(doc, f"front matter 的 {key} 取值非法：{v}")
+            # 只有 docs/ 下的专题页（type: doc）参与筛选，因此必须写 stages；
+            # 章节页（chapter/intro）的阶段由正文条目承担，不强制
+            if (dtype == "doc" and f.get("nav") is not False
+                    and not _as_list(f.get("stages"))):
+                err(doc, "front matter 缺少 stages（筛选用的阶段维度）")
+
         doc_id = str(f.get("id") or "")
         if doc_id:
             if doc_id in ids:

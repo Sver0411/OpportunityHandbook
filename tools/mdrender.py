@@ -49,7 +49,31 @@ def _inline(text: str) -> str:
     return t
 
 
-_CTX: dict = {"path": "", "routes": {}}
+_CTX: dict = {"path": "", "routes": {}, "id_prefix": "", "used_ids": {}}
+
+
+def begin_document() -> None:
+    """开始渲染一个 HTML 文档：清空全局唯一 id 计数器。"""
+    _CTX["used_ids"] = {}
+    _CTX["id_prefix"] = ""
+
+
+def set_id_prefix(prefix: str) -> None:
+    """设置当前渲染块的 id 前缀（条目正文用条目 id，文档正文用空串）。"""
+    _CTX["id_prefix"] = prefix or ""
+
+
+def _unique_id(title: str) -> str:
+    """生成文档内唯一的 heading id：`{entry_id}--{slug}`，重复时追加 -2、-3。"""
+    base = slugify(title)
+    prefix = _CTX.get("id_prefix") or ""
+    full = f"{prefix}--{base}" if prefix else base
+    used = _CTX["used_ids"]
+    if full not in used:
+        used[full] = 1
+        return full
+    used[full] += 1
+    return f"{full}-{used[full]}"
 
 
 def set_context(path: str, routes: dict[str, str]) -> None:
@@ -127,7 +151,7 @@ def render(text: str) -> tuple[str, list[dict]]:
         if hm:
             level = len(hm.group(1))
             title = hm.group(2)
-            hid = slugify(title)
+            hid = _unique_id(title)
             if level <= 3:
                 toc.append({"level": level, "text": title, "id": hid})
             anchor = f' id="{hid}"' if level >= 2 else ""

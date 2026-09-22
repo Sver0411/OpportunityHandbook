@@ -357,7 +357,7 @@
           "本页最后核实于 " + item.last_verified + "，已经超过 12 个月，其中的制度性信息可能需要重新核实。" }),
           header.nextSibling);
       }
-      buildToc();
+      buildToc(entryId);
       buildDocNav(location);
       focusTarget(entryId);
     }).catch(function (err) {
@@ -367,9 +367,16 @@
     });
   }
 
-  function buildToc() {
+  // 右侧目录只服务于「当前正在阅读的条目」：
+  //   · 定位到某个条目（deep link 或点击左栏叶子）→ 只显示该条目内部的 H2
+  //   · 打开章节根页（没有指定条目）→ 显示章节结构（分组 H2 + 各条目 H3）
+  function buildToc(entryId) {
     clear(tocEl);
-    var heads = main.querySelectorAll(".doc h2, .entry > h3");
+    var entry = entryId ? main.querySelector('section.entry[id="' + CSS.escape(entryId) + '"]') : null;
+    if (entryId && !entry) return;
+    var heads = entry
+      ? entry.querySelectorAll("h2")
+      : main.querySelectorAll(".doc > h2, .entry > h3");
     if (!heads.length) return;
     var list = el("ul", { class: "toc-list" });
     var links = [];

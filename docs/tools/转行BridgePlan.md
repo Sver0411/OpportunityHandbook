@@ -8,8 +8,8 @@ section_order: 100
 subsection: 工具与模板
 sub_order: 9
 status: complete
-stages: [undergraduate, master]
-topics: [explore]
+stages: [work_1_3, work_3_5, senior, career_change]
+topics: [job, explore]
 summary: 把转行拆成可执行的桥梁计划：现状、目标、缺口、桥接动作。
 last_verified: 2026-09-21
 ---

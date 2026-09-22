@@ -79,6 +79,37 @@ def check() -> dict:
             "no_summary": no_summary, "validate_errors": errors}
 
 
+LEAK_WORDS = ("计划中", "TODO", "待补", "待写", "施工", "roadmap", "ROADMAP", "尚未撰写")
+
+
+def check_docs(root: Path) -> dict:
+    """文档级检查：用户可见页面不得出现施工语言；H1 必须与 front matter 一致。"""
+    docs = M.load_docs(root)
+    leaks, title_mismatch, thin = [], [], []
+    for d in docs:
+        if d.front.get("nav") is False or d.status == "planned":
+            # nav: false 的内部页面与 planned 页面都不进导航与搜索，读者看不到
+            continue
+        raw = (root / d.rel).read_text(encoding="utf-8")
+        fm = raw.split("---", 2)[1] if raw.startswith("---") else ""
+        body = raw[len(fm) + 8:] if fm else raw
+        for w in LEAK_WORDS:
+            if w in body:
+                leaks.append({"file": d.rel, "word": w})
+                break
+        h1 = next((l[2:].strip() for l in body.splitlines() if l.startswith("# ")), "")
+        if h1 and h1 != str(d.front.get("title") or ""):
+            title_mismatch.append({"file": d.rel, "h1": h1, "title": str(d.front.get("title") or "")})
+        if d.status == "complete" and str(d.front.get("type") or "") == "doc":
+            # 索引型手册页（manuals）本来就是链接页，不按长度判断
+            is_index = "/manuals/" in d.rel
+            text = re.sub(r"\[[^\]]*\]\([^)]*\)", "", body)
+            text = re.sub(r"[#>*`|\-\s]", "", text)
+            if not is_index and len(text) < 300:
+                thin.append({"file": d.rel, "chars": len(text), "title": d.front.get("title")})
+    return {"leaks": leaks, "title_mismatch": title_mismatch, "thin": thin}
+
+
 def write_report(r: dict) -> None:
     def table(items, label):
         lines = [f"## {label}（{len(items)}）", "",
@@ -141,6 +172,9 @@ def main() -> int:
         print(f"P1 120–250 字：{len(r['p1'])}")
         print(f"P2 旧模板残留：{len(r['p2'])}")
         print(f"缺 summary：{len(r['no_summary'])}")
+        doc_preview = check_docs(ROOT)
+        print(f"施工语言泄漏：{len(doc_preview['leaks'])}")
+        print(f"H1 与 title 不一致：{len(doc_preview['title_mismatch'])}")
         for key, label in (("p0", "P0"), ("p2", "P2")):
             for it in r[key][:12]:
                 print(f"  {label}: {it['id']} 《{it['title']}》 {it['chars']}字 {it['legacy']}")
@@ -149,7 +183,20 @@ def main() -> int:
         if mode == "hard":
             print("（hard 模式：校验旧模板 / summary / P0 过薄）")
     # 硬门：旧模板残留、缺 summary、P0 过薄都必须为 0（P1 仍只报告）
-    ok = not r["p2"] and not r["no_summary"] and not r["p0"]
+    doc = check_docs(ROOT)
+    if doc["leaks"]:
+        for x in doc["leaks"][:10]:
+            print(f"  x 用户可见页面出现施工语言：{x['file']} → 「{x['word']}」")
+    if doc["title_mismatch"]:
+        for x in doc["title_mismatch"][:10]:
+            print(f"  x H1 与 front matter title 不一致：{x['file']}（H1「{x['h1']}」vs title「{x['title']}」）")
+    if doc["thin"] and mode != "hard":
+        print(f"  · 偏薄的文档页 {len(doc['thin'])} 个（报告级）：" +
+              "、".join(x["title"] or x["file"] for x in doc["thin"][:6]))
+
+    # 硬门：旧模板残留、缺 summary、P0 过薄、施工语言泄漏、H1 不一致
+    ok = (not r["p2"] and not r["no_summary"] and not r["p0"]
+          and not doc["leaks"] and not doc["title_mismatch"])
     return 0 if ok else 1
 
 

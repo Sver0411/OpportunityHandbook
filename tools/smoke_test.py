@@ -49,7 +49,9 @@ try { delete window.IntersectionObserver; } catch (e) {}
 
 HASHES = {"home": "/", "deep": "/", "browse": "/browse?q=%E4%BF%9D%E7%A0%94",
           "mobile": "/", "legacy": "/doc/book/03-%E5%8D%87%E5%AD%A6/grad-school-worth-it",
-          "nav": "/"}
+          "nav": "/",
+          # toc 模式：初始路由在 main() 里用 toc_cases() 的第一条填充
+          "toc": "/"}
 
 # Canonical IA 里必须能「展开 → 点击 → 进入 → 高亮」的节点（用户点名要求的路径）
 NAV_PATHS = [
@@ -63,6 +65,32 @@ NAV_PATHS = [
     ["10 时间线与工具", "工具与模板", "Offer 对比表"],
     ["11 避坑", "科研"],
 ]
+
+
+# 右侧 TOC 用例：打开某个条目的深链，右栏必须只显示这一条目的内部结构
+TOC_CASES = [
+    ("03 项目 → 第一个个人项目", "project-personal"),
+    ("04 国内升学 → 保研", "study-baoyan"),
+    ("05 Offer → Offer 怎么比较", "offer-comparison"),
+    ("06 Mentor", "work-mentor-role"),
+    ("07 技术还是管理", "mgmt-ic-or-manager"),
+    ("08 自由职业", "startup-freelance"),
+]
+
+
+def toc_cases() -> list[dict]:
+    """把 TOC 用例换成（名称, 路由, entry_id），路由由 navigation.json 反查。"""
+    import json as _json
+    idx = _json.loads((ROOT / "site" / "data" / "index.json").read_text(encoding="utf-8"))
+    routes = {e["id"]: e["route"] for e in idx["entries"] if e.get("route")}
+    out = []
+    for label, eid in TOC_CASES:
+        route = routes.get(eid)
+        if route:
+            out.append({"label": label, "route": route, "entry_id": eid})
+        else:
+            print(f"  （navigation.json 里找不到 entry：{eid}）")
+    return out
 
 
 def nav_cases() -> list[dict]:
@@ -192,6 +220,46 @@ PROBE = r"""
          document.documentElement.scrollWidth + " vs " + document.documentElement.clientWidth);
     }
 
+    if (mode === "toc") {
+      // 右栏目录：只显示当前条目的内部 H2，且每项都指向唯一的正确位置
+      var TCASES = window.__TOC_CASES__ || [];
+      for (var t1 = 0; t1 < TCASES.length; t1++) {
+        var c = TCASES[t1];
+        location.hash = c.route;
+        await wait(800);
+        var entry = document.getElementById(c.entry_id);
+        ok("条目已加载：" + c.label, !!entry, entry ? "" : "缺 #" + c.entry_id);
+        if (!entry) continue;
+        var links = Array.prototype.slice.call(document.querySelectorAll("#toc a[data-target]"));
+        ok("右栏有目录项：" + c.label, links.length > 0, links.length + " 项");
+        var ownH2 = entry.querySelectorAll("h2").length;
+        ok("目录项数 == 该条目 H2 数：" + c.label, links.length === ownH2,
+           links.length + " vs " + ownH2);
+        var allOwn = links.every(function (a) {
+          var dt = a.getAttribute("data-target") || "";
+          return dt.indexOf(c.entry_id + "--") === 0;
+        });
+        ok("目录只含本条目的标题：" + c.label, allOwn,
+           allOwn ? "" : "出现非本条目锚点");
+        var unique = true, jumpOk = true;
+        links.forEach(function (a) {
+          var dt = a.getAttribute("data-target");
+          if (document.querySelectorAll('[id="' + dt.replace(/"/g, '\\"') + '"]').length !== 1) unique = false;
+        });
+        ok("每个目录锚点全文档唯一：" + c.label, unique);
+        // 点击最后一项，检查是否滚到它自己（而不是同名标题的其他条目）
+        var last = links[links.length - 1];
+        var target = document.getElementById(last.getAttribute("data-target"));
+        if (target) {
+          last.click();
+          await wait(400);
+          var want = target.getBoundingClientRect().top;
+          jumpOk = Math.abs(want) < 320;
+        }
+        ok("点击目录项跳到正确位置：" + c.label, jumpOk);
+      }
+    }
+
     if (mode === "nav") {
       // Canonical IA 逐节点验证：能展开 / 能点击 / 进入正确目标 / 高亮正确节点
       var CASES = window.__NAV_CASES__ || [];
@@ -295,6 +363,10 @@ def main() -> int:
     src = src.replace("<script src=\"app.js\"></script>", STUBS + "<script src=\"app.js\"></script>")
     cases = nav_cases()
     probe = PROBE.replace("window.__NAV_CASES__", json.dumps(cases, ensure_ascii=False))
+    tcases = toc_cases()
+    if tcases:
+        HASHES["toc"] = tcases[0]["route"].lstrip("#")
+    probe = probe.replace("window.__TOC_CASES__", json.dumps(tcases, ensure_ascii=False))
     probe_path.write_text(src.replace("</body>", probe + "</body>"), encoding="utf-8")
 
     httpd, port = serve(SITE)
@@ -306,8 +378,9 @@ def main() -> int:
                                   ("桌面 · 搜索与筛选", "1440,1400", "browse"),
                                   ("旧深链重定向", "1440,1400", "legacy"),
                                   ("Canonical IA 目录导航", "1440,1400", "nav"),
+                                  ("右侧目录作用域", "1440,1400", "toc"),
                                   ("移动端", "500,1000", "mobile")):
-            budget = 45000 if mode == "nav" else 8000
+            budget = 45000 if mode in ("nav", "toc") else 8000
             results = run_case(chrome, base, size, mode, budget)
             if results and all("超时" in r["name"] for r in results):
                 print(f"  （{label}：首次超时，重试一次）", flush=True)

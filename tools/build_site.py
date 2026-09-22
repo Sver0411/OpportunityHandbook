@@ -82,7 +82,9 @@ def render_entry_section(seg: dict, threshold: str, today_iso: str) -> tuple[str
     """渲染一个条目为 <section>，同时返回它的 id（供索引与 SEO 页复用）。"""
     meta_block = seg["meta"] or {}
     eid = str(meta_block.get("id") or M.slugify(seg["title"]))
+    mdrender.set_id_prefix(eid)          # 条目内 heading id = {entry_id}--{slug}
     inner, _ = mdrender.render("\n".join(seg["lines"]).strip("\n"))
+    mdrender.set_id_prefix("")
     html_str = (
         f'<section class="entry" id="{html.escape(eid)}">'
         f"<h3>{mdrender._inline(seg['title'])}</h3>"
@@ -94,6 +96,7 @@ def render_entry_section(seg: dict, threshold: str, today_iso: str) -> tuple[str
 
 def render_doc(doc: M.Doc, threshold: str) -> str:
     today_iso = M.datetime.date.today().isoformat()
+    mdrender.begin_document()            # 每个 HTML 文档的 heading id 从零计数
     body_parts: list[str] = []
     dropped_h1 = False
     for seg in doc.segments:

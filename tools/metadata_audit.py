@@ -49,6 +49,8 @@ def main() -> int:
     suspicious = []
     overbroad = []
     invalid = []
+    doc_invalid = []
+    doc_topic_missing = []
     for e in entries:
         stages = set(e.get("stages") or [])
         title = str(e.get("title") or "")
@@ -72,9 +74,25 @@ def main() -> int:
             overbroad.append({"id": e.get("id"), "title": title, "file": loc,
                               "stages": sorted(stages)})
 
+    # docs front matter：facet 合法性与 topics 缺失检查
+    for d in docs:
+        if d.front.get("nav") is False:
+            continue
+        dtype = str(d.front.get("type") or "")
+        if dtype not in ("doc", "chapter", "intro"):
+            continue
+        for key in ("stages", "topics"):
+            for v in M._as_list(d.front.get(key)):
+                if v not in M.VALID[key]:
+                    doc_invalid.append({"file": d.rel, "key": key, "value": v})
+        if dtype == "doc" and not M._as_list(d.front.get("topics")):
+            doc_topic_missing.append({"file": d.rel, "title": d.front.get("title")})
+
     report = {
         "generated_at": datetime.datetime.now().astimezone().isoformat(timespec="seconds"),
         "total_complete_entries": len(entries),
+        "doc_invalid_facet": doc_invalid,
+        "doc_topic_missing": doc_topic_missing,
         "stage_suspicious": suspicious,
         "stage_overbroad": overbroad,
         "stage_invalid": invalid,
@@ -89,6 +107,8 @@ def main() -> int:
         f"- stages 可疑（职场主题但无职场阶段标注）：{len(suspicious)}",
         f"- stages 过宽（职场中后期仍挂学生阶段）：{len(overbroad)}",
         f"- stages 非法或为空：{len(invalid)}",
+        f"- docs front matter 非法 facet：{len(doc_invalid)}",
+        f"- docs 缺 topics 的页面：{len(doc_topic_missing)}",
         "",
         "说明：可疑项只做提示，不自动修改；需要按内容逐条重判 stages。",
         "",
@@ -101,6 +121,10 @@ def main() -> int:
         lines += ["## stage_overbroad 清单", "", "| entry_id | 标题 | 文件 | 当前 stages |", "| --- | --- | --- | --- |"]
         lines += [f"| {x['id']} | {x['title']} | {x['file']} | {', '.join(x['stages'])} |" for x in overbroad]
         lines.append("")
+    if doc_invalid:
+        lines += ["## docs front matter 非法 facet", "", "| 文件 | 字段 | 取值 |", "| --- | --- | --- |"]
+        lines += [f"| {x['file']} | {x['key']} | {x['value']} |" for x in doc_invalid]
+        lines.append("")
     if invalid:
         lines += ["## stages 非法清单", ""]
         lines += [f"- {x['id']}：{x['stages']}" for x in invalid]
@@ -111,6 +135,7 @@ def main() -> int:
         print(json.dumps(report, ensure_ascii=False, indent=2))
     else:
         print(f"stages 可疑：{len(suspicious)}，过宽：{len(overbroad)}，非法：{len(invalid)}")
+        print(f"docs 非法 facet：{len(doc_invalid)}，docs 缺 topics：{len(doc_topic_missing)}")
         for x in suspicious[:15]:
             print(f"  {x['id']} 《{x['title']}》 {x['stages']}")
         print(f"报告已写出：{out.relative_to(ROOT)}")

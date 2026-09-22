@@ -7,7 +7,7 @@ section: index
 order: 2
 status: complete
 stages: [highschool, secondary_vocational, college, undergraduate, master, phd, new_grad, work_1_3, work_3_5, senior, career_change]
-topics: [explore, study, job, research, competition, qualification, qualification, community, startup]
+topics: [explore, study, job, research, competition, skill, community, startup]
 summary: 专题手册与工具索引：它们不承担人生主线，只作为查询入口。
 last_verified: 2026-09-21
 ---

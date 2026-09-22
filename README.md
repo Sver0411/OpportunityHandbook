@@ -104,7 +104,7 @@
 
 欢迎补充条目、更正过期信息、指出没有来源的判断。开始之前请读 [CONTRIBUTING.md](CONTRIBUTING.md)——本书对来源与用词有明确要求，新增条目需要写明依据与核实日期。
 
-还没有写的部分集中列在 [内容路线图](docs/ROADMAP.md)（这些页面不会出现在导航与搜索结果里）。
+尚未撰写的部分列在仓库内的 [内容路线图](docs/ROADMAP.md)，仅面向贡献者——这些页面不会出现在导航与搜索结果里，读者看不到施工痕迹。
 
 本地预览：
 
@@ -122,7 +122,12 @@ python3 -m http.server 8000 --directory site
 | `python3 tools/check_markdown_quality.py` | Markdown 格式检查 |
 | `python3 tools/check_content_quality.py --hard` | 内容质量硬门（旧模板 / 缺 summary / 过薄） |
 | `python3 tools/check_content_quality.py --depth` | 正文深度审计，输出 `reports/content-depth.md` |
-| `python3 tools/metadata_audit.py` | 人生阶段（stages）标注审计 |
+| `python3 tools/metadata_audit.py` | 人生阶段（stages）与 docs front matter 审计 |
+| `python3 tools/check_html_ids.py` | HTML id 唯一性与条目锚点前缀 |
+| `python3 tools/audit_article_structure.py` | 文章结构审计（发现批量模板感） |
+| `python3 tools/audit_timeline.py` | 时间线专项审计（经验节奏 vs 统一规则） |
+| `python3 tools/audit_claims.py --only-expensive` | 声明审计（经验性判断里的统计式断言） |
+| `python3 tools/validate_release.py` | 统一发布校验（CI 与 Pages 同源） |
 | `python3 tools/run_tests.py` | 内容规则测试 |
 | `python3 tools/smoke_test.py` | 浏览器冒烟测试 |
 

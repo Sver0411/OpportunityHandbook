@@ -35,6 +35,12 @@ jobs:
       - name: Metadata 审计（报告级，不阻塞）
         run: python3 tools/metadata_audit.py || true
 
+      - name: 文章结构审计（报告级，不阻塞）
+        run: python3 tools/audit_article_structure.py || true
+
+      - name: 时间线审计（报告级，不阻塞）
+        run: python3 tools/audit_timeline.py || true
+
       - name: 断言构建产物齐全
         run: |
           test -f site/data/index.json
