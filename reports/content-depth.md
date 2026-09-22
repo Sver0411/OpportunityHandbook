@@ -1,36 +1,14 @@
 # Content Depth Report
 
-生成时间：2026-09-22T12:32:27+08:00
+生成时间：2026-09-22T22:20:47+08:00
 
 complete 条目总数：303
-- P0（<250 字，必须补写）：17
-- P1（250–400 字，人工审查）：80
+- P0（<250 字，必须补写）：0
+- P1（250–400 字，人工审查）：81
 - P2（仍含旧模板字段）：0
 - 缺 summary：0
 
-## P0 正文过薄（17）
-
-| entry_id | 标题 | 文件 | 有效正文 | 旧模板字段 | summary |
-| --- | --- | --- | --- | --- | --- |
-| paths-freelance | 自由职业 | book/01-先决定下一步往哪里走 | 194 | — | 有 |
-| paths-startup | 创业 | book/01-先决定下一步往哪里走 | 191 | — | 有 |
-| choose-city | 城市要不要纳入选择 | book/01-先决定下一步往哪里走 | 244 | — | 有 |
-| choose-interest-weight | 兴趣应该占多大比重 | book/01-先决定下一步往哪里走 | 189 | — | 有 |
-| choose-job-outlook | 就业前景应该怎么看 | book/01-先决定下一步往哪里走 | 207 | — | 有 |
-| choose-change-major | 转专业 | book/01-先决定下一步往哪里走 | 193 | — | 有 |
-| vocational-undergraduate | 职业本科 | book/01-先决定下一步往哪里走 | 166 | — | 有 |
-| fork-study-or-work | 升学还是工作 | book/04-当你开始面对第一次重要分流 | 146 | — | 有 |
-| fork-home-or-abroad | 国内还是海外 | book/04-当你开始面对第一次重要分流 | 186 | — | 有 |
-| study-choose-school | 选学校 | book/04-当你开始面对第一次重要分流 | 139 | — | 有 |
-| research-ra | RA | book/04-当你开始面对第一次重要分流 | 138 | — | 有 |
-| research-recommendation-letter | 推荐信 | book/04-当你开始面对第一次重要分流 | 198 | — | 有 |
-| recruit-early-batch | 提前批 | book/05-从学校走向第一份工作 | 128 | — | 有 |
-| work-probation | 怎么度过试用期 | book/06-进入职场以后继续积累 | 151 | — | 有 |
-| work-record-achievements | 怎么记录职业成果 | book/06-进入职场以后继续积累 | 158 | — | 有 |
-| work-certificates | 工作后考证 | book/06-进入职场以后继续积累 | 121 | — | 有 |
-| promotion-criteria | 晋升标准 | book/07-当职业开始出现分岔 | 138 | — | 有 |
-
-## P1 偏薄（80）
+## P1 偏薄（81）
 
 | entry_id | 标题 | 文件 | 有效正文 | 旧模板字段 | summary |
 | --- | --- | --- | --- | --- | --- |
@@ -81,6 +59,7 @@ complete 条目总数：303
 | funding-grant | Grant | book/04-当你开始面对第一次重要分流 | 394 | — | 有 |
 | funding-stipend | Stipend | book/04-当你开始面对第一次重要分流 | 333 | — | 有 |
 | funding-fee-waiver | Fee Waiver | book/04-当你开始面对第一次重要分流 | 373 | — | 有 |
+| recruit-early-batch | 提前批 | book/05-从学校走向第一份工作 | 394 | — | 有 |
 | recruit-spring | 春招 | book/05-从学校走向第一份工作 | 399 | — | 有 |
 | recruit-supplement | 补录 | book/05-从学校走向第一份工作 | 343 | — | 有 |
 | job-channel-company-site | 公司官网 | book/05-从学校走向第一份工作 | 345 | — | 有 |
