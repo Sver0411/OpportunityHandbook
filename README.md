@@ -10,10 +10,15 @@
 
 [在线阅读](https://sver0411.github.io/OpportunityHandbook/) · [按条件筛选](https://sver0411.github.io/OpportunityHandbook/#/browse) · [从问题开始](#你可以直接从这些问题开始) · [搭配 OpportunityRadar](#opportunityhandbook--opportunityradar)
 
-[![内容校验](https://github.com/Sver0411/OpportunityHandbook/actions/workflows/ci.yml/badge.svg)](https://github.com/Sver0411/OpportunityHandbook/actions/workflows/ci.yml)
-[![在线阅读页](https://github.com/Sver0411/OpportunityHandbook/actions/workflows/pages.yml/badge.svg)](https://github.com/Sver0411/OpportunityHandbook/actions/workflows/pages.yml)
-[![正文许可](https://img.shields.io/badge/正文-CC_BY_4.0-5B7F67)](LICENSE-CONTENT)
-[![代码许可](https://img.shields.io/badge/代码-MIT-202620)](LICENSE)
+<p>
+  <a href="https://github.com/Sver0411/OpportunityHandbook/actions/workflows/ci.yml"><img alt="内容校验" src="https://img.shields.io/github/actions/workflow/status/Sver0411/OpportunityHandbook/ci.yml?branch=main&amp;style=flat-square&amp;label=%E5%86%85%E5%AE%B9%E6%A0%A1%E9%AA%8C"></a>
+  <a href="https://github.com/Sver0411/OpportunityHandbook/actions/workflows/pages.yml"><img alt="在线阅读" src="https://img.shields.io/github/actions/workflow/status/Sver0411/OpportunityHandbook/pages.yml?branch=main&amp;style=flat-square&amp;label=%E5%9C%A8%E7%BA%BF%E9%98%85%E8%AF%BB"></a>
+</p>
+
+<p>
+  <a href="LICENSE-CONTENT"><img alt="正文许可：CC BY 4.0" src="https://img.shields.io/badge/%E6%AD%A3%E6%96%87-CC_BY_4.0-5B7F67?style=flat-square"></a>
+  <a href="LICENSE"><img alt="代码许可：MIT" src="https://img.shields.io/badge/%E4%BB%A3%E7%A0%81-MIT-202620?style=flat-square"></a>
+</p>
 
 </div>
 
