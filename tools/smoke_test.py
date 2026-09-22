@@ -54,6 +54,8 @@ HASHES = {"home": "/", "deep": "/", "browse": "/browse?q=%E4%BF%9D%E7%A0%94",
           "toc": "/",
           # sources 模式：随便挑一个条目，检查来源折叠
           "sources": "/",
+          # navstate 模式：初始路由在 main() 里填充
+          "navstate": "/",
           # scroll 模式：起始条目由 SCROLL_CASE 决定
           "scroll": "/"}
 
@@ -113,6 +115,20 @@ def scroll_case() -> dict | None:
         return None
     return {"first_id": first["id"], "first_route": first["route"],
             "second_id": second["id"], "second_route": second["route"]}
+
+
+# 左栏导航状态用例：accordion / manual / localStorage 隔离
+def navstate_case() -> dict | None:
+    import json as _json
+    idx = _json.loads((ROOT / "site" / "data" / "index.json").read_text(encoding="utf-8"))
+    by_id = {e["id"]: e for e in idx["entries"]}
+    first = by_id.get("project-personal")
+    second = by_id.get("competition-what-worth-joining")
+    if not first or not second:
+        print("  （navstate 用例缺少条目）")
+        return None
+    return {"leaf_route": first["route"], "leaf_id": first["id"],
+            "sibling_route": second["route"], "sibling_id": second["id"]}
 
 
 def nav_cases() -> list[dict]:
@@ -363,6 +379,92 @@ PROBE = r"""
       }
     }
 
+    if (mode === "navstate") {
+      // 左栏导航状态：accordion / manual / localStorage 隔离
+      var NC = window.__NAVSTATE_CASE__ || null;
+      if (!NC) { ok("navstate 用例已配置", false, "缺少 NAVSTATE_CASE"); }
+      else {
+        function groupLi(title) {
+          var rows = Array.prototype.slice.call(document.querySelectorAll("#navTree li.nav-item"));
+          var hit = null;
+          rows.forEach(function (li) {
+            if (hit) return;
+            var row = li.querySelector(":scope > .nav-row");
+            var lbl = row ? row.querySelector(".nav-label") : null;
+            if (lbl && lbl.textContent.trim() === title && li.querySelector(":scope > .nav-row > .nav-toggle")) hit = li;
+          });
+          return hit;
+        }
+        function isOpen(title) {
+          var li = groupLi(title);
+          return li ? li.classList.contains("open") : null;
+        }
+        function manualKeys() {
+          try { return Object.keys(JSON.parse(localStorage.getItem("oh.nav.manual-expanded.v2") || "{}")).sort().join("|"); }
+          catch (e) { return ""; }
+        }
+
+        // Case 1：点击叶子（deep link）只展开必要路径，兄弟分组全部收起
+        location.hash = NC.leaf_route;
+        await wait(1000);
+        // 注意：一级栏目显示的是 nav_label，不是 canonical title
+        ok("C1 一级 03 展开", isOpen("03 项目、竞赛、科研与实习") === true);
+        ok("C1 二级 项目与作品 展开", isOpen("项目与作品") === true);
+        ["竞赛", "科研初体验", "开源与公共贡献", "社群与活动", "实习准备"].forEach(function (t2) {
+          ok("C1 兄弟分组收起：" + t2, isOpen(t2) === false);
+        });
+        ok("C1 当前 entry active", !!document.querySelector('#navTree .nav-row.active a[href$="' + NC.leaf_id + '"]') ||
+           (function () {
+             var a = document.querySelector("#navTree .nav-row.active a.nav-label");
+             return a && (a.getAttribute("href") || "").indexOf(NC.leaf_id) >= 0;
+           })());
+
+        // Case 2：切换到同级兄弟分组（竞赛）
+        location.hash = NC.sibling_route;
+        await wait(1000);
+        ok("C2 竞赛 展开", isOpen("竞赛") === true);
+        ok("C2 项目与作品 收起（accordion）", isOpen("项目与作品") === false);
+        ok("C2 科研初体验 收起", isOpen("科研初体验") === false);
+
+        // Case 3+4：滚动只改 active，不写 localStorage
+        // （测试用 hash 跳转模拟「滚过多个 entry」，hash 跳转本身会产生 history，
+        //   「滚动不产生 history」已由 scroll 模式单独验证）
+        var manualBefore = manualKeys();
+        var ids = ["internship-worth-it", "internship-types", "internship-how-to-find",
+                   "project-what-is-real", "project-tutorial"];
+        for (var ii = 0; ii < ids.length; ii++) {
+          var e = window.__ENTRIES_BY_ID__ ? window.__ENTRIES_BY_ID__[ids[ii]] : null;
+          if (!e) continue;
+          location.hash = e.route;
+          await wait(500);
+        }
+        ok("C3/C4 滚动不写 localStorage", manualKeys() === manualBefore, manualBefore + " → " + manualKeys());
+
+        // Case 5：手动展开（点箭头）后，active 移开也不会被收起
+        var compLi = groupLi("竞赛");
+        var toggle = compLi ? compLi.querySelector(":scope > .nav-row > .nav-toggle") : null;
+        if (toggle) {
+          if (!compLi.classList.contains("open")) toggle.click();
+          await wait(300);
+          ok("C5 箭头展开竞赛", compLi.classList.contains("open"));
+          location.hash = NC.leaf_route;
+          await wait(1000);
+          ok("C5 手动展开被保留", compLi.classList.contains("open"));
+          var stored = manualKeys();
+          ok("C5 手动状态已持久化", stored.indexOf("竞赛") >= 0 || stored.length > 0, stored);
+          // Case 6：再次点击标题可以收起 auto sibling，但手动分组保留
+          ok("C6 项目与作品 重新展开（active path）", isOpen("项目与作品") === true);
+          ok("C6 竞赛（manual）保留", isOpen("竞赛") === true);
+        } else {
+          ok("C5 找到竞赛的箭头", false, "未找到 .nav-toggle");
+        }
+
+        // Case 9：旧 localStorage key 不再写入
+        ok("C9 旧 key 未被写入", localStorage.getItem("oh.nav.expanded") === null,
+           String(localStorage.getItem("oh.nav.expanded")).slice(0, 40));
+      }
+    }
+
     if (mode === "nav") {
       // Canonical IA 逐节点验证：能展开 / 能点击 / 进入正确目标 / 高亮正确节点
       var CASES = window.__NAV_CASES__ || [];
@@ -465,18 +567,24 @@ def main() -> int:
     probe_path = SITE / "_smoke.html"
     src = (SITE / "index.html").read_text(encoding="utf-8")
     src = src.replace("<script src=\"app.js\"></script>", STUBS + "<script src=\"app.js\"></script>")
+    INDEX_JSON = json.loads((SITE / "data" / "index.json").read_text(encoding="utf-8"))
     cases = nav_cases()
     probe = PROBE.replace("window.__NAV_CASES__", json.dumps(cases, ensure_ascii=False))
-    import json as _j
-    _nav = _j.loads((ROOT / "meta" / "navigation.json").read_text(encoding="utf-8"))
+    _nav = json.loads((ROOT / "meta" / "navigation.json").read_text(encoding="utf-8"))
     probe = probe.replace("window.__NAV_LABELS__",
-                          _j.dumps([(n.get("nav_label") or n["title"]) for n in _nav["items"]],
+                          json.dumps([(n.get("nav_label") or n["title"]) for n in _nav["items"]],
                                    ensure_ascii=False))
     scase = scroll_case()
     probe = probe.replace("window.__SCROLL_CASE__", json.dumps(scase, ensure_ascii=False))
     if scase:
         HASHES["sources"] = scase["first_route"].lstrip("#")
         HASHES["scroll"] = scase["first_route"].lstrip("#")
+    ncase = navstate_case()
+    if ncase:
+        HASHES["navstate"] = ncase["leaf_route"].lstrip("#")
+    probe = probe.replace("window.__NAVSTATE_CASE__", json.dumps(ncase, ensure_ascii=False))
+    var_entries_by_id = json.dumps({e["id"]: e for e in INDEX_JSON["entries"]}, ensure_ascii=False)
+    probe = probe.replace("window.__ENTRIES_BY_ID__", var_entries_by_id)
     tcases = toc_cases()
     if tcases:
         HASHES["toc"] = tcases[0]["route"].lstrip("#")
@@ -495,10 +603,11 @@ def main() -> int:
                                   ("右侧目录作用域", "1440,1400", "toc"),
                                   ("来源与更新折叠", "1440,1400", "sources"),
                                   ("滚动跟随当前条目", "1440,1400", "scroll"),
+                                  ("左栏导航状态", "1440,1400", "navstate"),
                                   ("移动端", "500,1000", "mobile")):
             budget = 45000 if mode in ("nav", "toc", "sources", "scroll") else 8000
             # toc 模式逐条目切换页面，真实耗时远高于其他模式
-            real_timeout = 420 if mode == "toc" else (240 if mode in ("nav", "scroll", "sources") else 90)
+            real_timeout = 420 if mode == "toc" else (300 if mode in ("nav", "scroll", "sources", "navstate") else 90)
             results = run_case(chrome, base, size, mode, budget, real_timeout)
             if results and all("超时" in r["name"] for r in results):
                 print(f"  （{label}：首次超时，重试一次）", flush=True)

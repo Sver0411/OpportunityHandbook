@@ -9,7 +9,12 @@
 
   var MOBILE = "(max-width: 900px)";
   var NAV_KEY = "oh.nav";
-  var EXPAND_KEY = "oh.nav.expanded";
+  // 用户「手动」展开的分组（点击小箭头）。语义上与系统为 active 路径临时展开
+  // 的状态严格分开：后者不持久化，只体现在 DOM 的 open class 上。
+  // 旧 key oh.nav.expanded 曾混入大量系统自动展开数据，不再读取，见下方一次性清理。
+  var MANUAL_KEY = "oh.nav.manual-expanded.v2";
+  var LEGACY_EXPAND_KEY = "oh.nav.expanded";
+  var legacyKeyCleaned = false;
 
   var state = {
     index: null,
@@ -21,7 +26,8 @@
     entries: [],
     aliases: {},        // 搜索同义词表（search_aliases.json）
     showAdvanced: false, // 筛选页是否展开高级条件
-    expanded: {},       // 展开过的节点 key
+    manualExpanded: {}, // 用户点击小箭头手动展开的节点 key（持久化）
+    autoOpen: {},       // 系统为 active 路径临时展开的节点 key（不持久化）
     params: new URLSearchParams()
   };
 
@@ -171,9 +177,14 @@
       return Object.assign({}, e, { _hay: hay, _title: e.title.toLowerCase(), _tags: tags });
     });
 
-    var saved = read(EXPAND_KEY);
+    var saved = read(MANUAL_KEY);
     if (saved) {
-      try { state.expanded = JSON.parse(saved) || {}; } catch (e) { state.expanded = {}; }
+      try { state.manualExpanded = JSON.parse(saved) || {}; } catch (e) { state.manualExpanded = {}; }
+    }
+    // 旧 key 里混有系统自动展开的历史数据：只清理一次，之后不再读取
+    if (!legacyKeyCleaned && read(LEGACY_EXPAND_KEY)) {
+      try { localStorage.removeItem(LEGACY_EXPAND_KEY); } catch (e) {}
+      legacyKeyCleaned = true;
     }
   }
 
@@ -197,7 +208,7 @@
       btn.addEventListener("click", function (ev) {
         ev.preventDefault();
         ev.stopPropagation();
-        setOpen(li, !li.classList.contains("open"));
+        toggleManual(li);
       });
       row.appendChild(btn);
     } else {
@@ -208,15 +219,15 @@
     if (href) {
       var link = el("a", { class: "nav-label", href: href, text: node.label, title: node.label });
       if (kids.length) {
-        // 分组行：点标题进入该组对应章节，同时确保展开
-        link.addEventListener("click", function () { setOpen(li, true); });
+        // 分组行：点标题表示「我要去这个内容」，展开动作交给 markActive 的
+        // accordion（focus path）；这里不再直接持久化任何展开状态。
       }
       row.appendChild(link);
     } else if (kids.length) {
       // 无对应章节的分组行：点标题即展开/收起（整行可点，不必瞄准小箭头）
       var groupLabel = el("span", { class: "nav-label static clickable", text: node.label, title: node.label });
       groupLabel.addEventListener("click", function () {
-        setOpen(li, !li.classList.contains("open"));
+        toggleManual(li);
       });
       row.appendChild(groupLabel);
     } else {
@@ -236,18 +247,60 @@
       kids.forEach(function (c) { ul.appendChild(renderNode(c, depth + 1, key)); });
       li.appendChild(ul);
     }
-    if (state.expanded[key]) setOpen(li, true, true);
+    if (state.manualExpanded[key]) setOpen(li, true, { persist: false });
     return li;
   }
 
-  function setOpen(li, open, silent) {
+  // 只改视觉状态；persist=true 时才写入「用户手动展开」偏好
+  function setOpen(li, open, opts) {
+    opts = opts || {};
     li.classList.toggle("open", open);
     var btn = li.querySelector(":scope > .nav-row > .nav-toggle");
     if (btn) btn.setAttribute("aria-expanded", open ? "true" : "false");
-    if (!silent) {
-      if (open) state.expanded[li.dataset.key] = 1; else delete state.expanded[li.dataset.key];
-      store(EXPAND_KEY, JSON.stringify(state.expanded));
+    var key = li.dataset.key;
+    if (opts.persist) {
+      if (open) state.manualExpanded[key] = 1; else delete state.manualExpanded[key];
+      store(MANUAL_KEY, JSON.stringify(state.manualExpanded));
     }
+    if (!open) delete state.autoOpen[key];
+    else if (opts.auto) state.autoOpen[key] = 1;
+  }
+
+  // 小箭头点击：用户「只想展开看看」——允许多个分组同时手动展开
+  function toggleManual(li) {
+    setOpen(li, !li.classList.contains("open"), { persist: true });
+  }
+
+  function itemKey(li) { return li ? li.dataset.key : ""; }
+
+  function getAncestorPath(li) {
+    var path = [];
+    var up = li.parentElement ? li.parentElement.closest(".nav-item") : null;
+    while (up) { path.push(up); up = up.parentElement ? up.parentElement.closest(".nav-item") : null; }
+    return path;
+  }
+
+  // 把 active 节点与其祖先展开（不持久化），并收起同一父下
+  // 「非手动、也不在 active 路径上」的 auto 展开 —— 即 accordion 效果。
+  // manualExpanded 的节点永远不会被收起。
+  function syncNavOpenState(hit) {
+    var activeKeys = {};
+    if (hit) {
+      if (hit.querySelector(":scope > .nav-row > .nav-toggle")) activeKeys[itemKey(hit)] = 1;
+      getAncestorPath(hit).forEach(function (a) { activeKeys[itemKey(a)] = 1; });
+    }
+    Array.prototype.forEach.call(navTree.querySelectorAll(".nav-item"), function (item) {
+      var key = itemKey(item);
+      var hasKids = !!item.querySelector(":scope > .nav-row > .nav-toggle");
+      var isManual = !!state.manualExpanded[key];
+      var isOnPath = !!activeKeys[key];
+      var isOpen = item.classList.contains("open");
+      if (hasKids && isOnPath && !isOpen) {
+        setOpen(item, true, { persist: false, auto: true });
+      } else if (hasKids && isOpen && !isManual && !isOnPath) {
+        setOpen(item, false, { persist: false });
+      }
+    });
   }
 
   function buildNav() {
@@ -318,12 +371,9 @@
     if (!hit) return;
     hit.classList.add("active");
 
-    var li = hit.closest(".nav-item");
-    while (li) {
-      setOpen(li, true);
-      var up = li.parentElement ? li.parentElement.closest(".nav-item") : null;
-      li = up;
-    }
+    // active ≠ 手动展开：这里只做「让 active 可见」的临时展开与 accordion 收合，
+    // 不写 localStorage，不碰用户手动展开的分组。
+    syncNavOpenState(hit.closest(".nav-item"));
     var box = sidebar;
     var top = hit.getBoundingClientRect().top - box.getBoundingClientRect().top + box.scrollTop;
     if (top < box.scrollTop || top > box.scrollTop + box.clientHeight - 70) {
