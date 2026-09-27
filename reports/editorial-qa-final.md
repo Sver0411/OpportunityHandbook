@@ -166,5 +166,14 @@ python3 tools/metadata_audit.py            # 可疑 0 / 过宽 0 / 非法 0
 python3 tools/audit_duplication.py         # 0 条 / 0 信号
 python3 tools/check_semantic_links.py      # 1013 条链接，0 处语义不一致
 python3 tools/run_tests.py                 # 47 项通过
-python3 tools/validate_release.py          # 见提交说明（含外链与浏览器冒烟）
+python3 tools/validate_release.py          # 见下
 ```
+
+`validate_release.py` 首次运行结果：内容质量硬门通过、内容规则测试通过、
+HTML id 唯一性通过、外链可达性通过（PASS 83 / WARN 20 / FAIL 0）、
+浏览器冒烟通过（10 组用例全部通过）；唯一失败项是「内容路线图与 metadata 一致」——
+原因仅是 `docs/ROADMAP.md` 的核实日期停在 2026-09-27，运行
+`python3 tools/build_roadmap.py` 重新生成后该项通过（提交 `9e735a4`）。
+
+外部链接里 20 条 WARN 属于对方限制自动访问或临时故障（HTTP 412 / 429、
+个别机构站点证书与 TLS 兼容问题），不是永久失效（FAIL 0）。
