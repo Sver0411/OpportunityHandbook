@@ -52,8 +52,16 @@ class PlannedContent(unittest.TestCase):
         self.planned_locs = {d.location for d in self.planned}
         self.planned_titles = {d.title for d in self.planned}
 
-    def test_planned_docs_exist(self):
-        self.assertGreater(len(self.planned), 0, "应当仍有 planned 文档作为路线图")
+    def test_roadmap_matches_metadata(self):
+        """路线图必须由 metadata 生成并保持一致（不再手工维护 planned 清单）。"""
+        roadmap = (ROOT / "docs" / "ROADMAP.md").read_text(encoding="utf-8")
+        self.assertIn("自动生成", roadmap)
+        if self.planned:
+            for d in self.planned:
+                self.assertIn(d.title, roadmap, f"{d.title} 是 planned，但没出现在路线图里")
+        else:
+            self.assertIn("目前没有待撰写的专题文档", roadmap,
+                          "没有 planned 文档时，路线图应明确写出这一点")
 
     def test_not_in_nav(self):
         """planned 文档的 location 不应出现在任何导航链接里。"""

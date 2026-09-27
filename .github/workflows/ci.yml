@@ -41,6 +41,9 @@ jobs:
       - name: 时间线审计（报告级，不阻塞）
         run: python3 tools/audit_timeline.py || true
 
+      - name: 内容深度审计 v2（报告级，不阻塞）
+        run: python3 tools/audit_content_depth_v2.py || true
+
       - name: 断言构建产物齐全
         run: |
           test -f site/data/index.json

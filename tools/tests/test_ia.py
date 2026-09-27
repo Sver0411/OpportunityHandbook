@@ -198,14 +198,19 @@ class WritingModel(unittest.TestCase):
 class TopicManual(unittest.TestCase):
     """专题页引用主指南，不复制正文。"""
 
-    def test_manuals_point_to_main_text(self):
+    def test_docs_are_self_contained_with_sources(self):
+        """专题页与 Deep Dive 应自洽：至少有一个内部链接，并有「来源与更新」小节。
+
+        手册不再只是链接目录，因此不再要求出现「本页是……」这类索引声明，
+        但必须保留来源小节（事实有出处）与交叉引用（便于继续深入）。
+        """
         files = [p for p in (ROOT / "docs").rglob("*.md")
                  if p.name not in ("README.md", "ROADMAP.md")]
         self.assertTrue(files)
         for p in files:
             text = p.read_text(encoding="utf-8")
-            self.assertTrue("本页是" in text or "main" in text or "book/" in text,
-                            f"{p} 没有指向主线的引用")
+            self.assertIn("## 来源与更新", text, f"{p} 缺少来源与更新小节")
+            self.assertIn("](", text, f"{p} 没有任何链接（页面应可继续深入）")
 
     def test_timelines_are_navigation(self):
         files = sorted((ROOT / "docs" / "timelines").glob("*.md"))
