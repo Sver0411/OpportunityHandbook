@@ -11,6 +11,7 @@ from __future__ import annotations
 
 import argparse
 import datetime
+import re
 import pathlib
 import sys
 
@@ -105,6 +106,11 @@ def build() -> str:
     return "\n".join(lines)
 
 
+def _normalize(text: str) -> str:
+    """比较用：忽略 front matter 里的生成日期。"""
+    return re.sub(r"^last_verified:.*$", "last_verified: <ignored>", text, flags=re.M).strip()
+
+
 def main() -> int:
     ap = argparse.ArgumentParser()
     ap.add_argument("--check", action="store_true", help="只校验，不写入")
@@ -112,10 +118,12 @@ def main() -> int:
     text = build()
     if args.check:
         current = OUT.read_text(encoding="utf-8") if OUT.is_file() else ""
-        if current.strip() != text.strip():
+        # 只比较内容：last_verified 是生成日期，跨时区/跨天必然不同，
+        # 把它纳入比较会让这个检查退化成"今天是否生成过"的日历判断。
+        if _normalize(current) != _normalize(text):
             print("内容路线图与 metadata 不一致：运行 python3 tools/build_roadmap.py 重新生成")
             return 1
-        print("内容路线图与 metadata 一致")
+        print("内容路线图与 metadata 一致（忽略生成日期）")
         return 0
     OUT.write_text(text, encoding="utf-8")
     print("已重新生成 docs/ROADMAP.md")
