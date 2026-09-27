@@ -32,7 +32,9 @@ import meta as M  # noqa: E402
 
 NAV = json.loads((ROOT / "meta" / "navigation.json").read_text(encoding="utf-8"))
 
-LAST_VERIFIED = "2026-09-21"
+import os
+
+LAST_VERIFIED = os.environ.get("OH_LAST_VERIFIED", "2026-09-21")
 
 
 def _walk(nodes, chapter=None, path=None):
@@ -101,11 +103,9 @@ def _block_spans(text: str):
         return [], lines
     spans = []
     for k, s in enumerate(starts):
+        # 条目块延伸到下一个 ### 为止：文章内部的 ## 小节属于该条目，
+        # 早先在 ## 处截断会把旧正文残留在新正文之后（已在编辑审校中修复）。
         e = starts[k + 1] if k + 1 < len(starts) else len(lines)
-        for j in range(s + 1, e):
-            if lines[j].startswith("## "):
-                e = j
-                break
         # 去掉尾部空行
         while e - 1 > s and not lines[e - 1].strip():
             e -= 1
