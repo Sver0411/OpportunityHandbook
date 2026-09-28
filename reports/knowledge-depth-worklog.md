@@ -82,7 +82,29 @@ JD 拆解 · 简历改造 · 技术面试 · 行为面试 · 项目面试 · 求
 
 ---
 
-## 四、每批次的施工纪律
+## 四、本地门禁清单（推 CI 前必须全部运行）
+
+`validate_release.py` 里除了外链与浏览器冒烟（较慢），其余都能在本地秒级跑完。
+本轮曾因为只跑了 `build --strict` + 测试就直接推送，CI 才暴露出
+`docs/projects/选题与问题定义.md` 里出现了被禁用的旧模板表述（“第一句话：”）——
+这类问题本地就能拦住：
+
+```bash
+python3 tools/build.py --strict            # 构建 + 元数据 + 内部链接
+python3 tools/check_ia.py                  # Canonical IA 一致性
+python3 tools/check_docs_consistency.py    # 公开文档不得退回旧正文模型（易漏！）
+python3 tools/check_markdown_quality.py    # Markdown 格式
+python3 tools/check_html_ids.py            # HTML id 唯一性与锚点前缀
+python3 tools/check_content_quality.py --hard
+python3 tools/metadata_audit.py
+python3 tools/audit_duplication.py
+python3 tools/check_semantic_links.py
+python3 tools/audit_knowledge_depth.py
+python3 tools/build_roadmap.py --check     # 路线图与 planned 文档同步
+python3 tools/run_tests.py
+```
+
+## 五、每批次的施工纪律
 
 1. 写完后立刻 `tools/build.py --strict --no-links`，确认没有链接与元数据问题；
 2. 新文档完成后再注册导航（`tools/ia_canonical.py` + `build_navigation.py`），
