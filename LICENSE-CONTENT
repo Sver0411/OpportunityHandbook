@@ -7,7 +7,7 @@
 - `book/`（16 章正文与条目）
 - `docs/`（时间线、国家、行业、科研、竞赛、来源等专题）
 - `meta/`（条目格式、元数据、证据与来源、写作规范）
-- `README.md`、`CONTRIBUTING.md`
+- `README.md`、`README.en.md`、`CONTRIBUTING.md`
 
 代码部分（`tools/`、`site/`、`.github/`）采用 MIT，见 LICENSE。
 
@@ -21,13 +21,13 @@
 
 **署名（Attribution）**：
 
-- 保留出处：项目名「机会与成长指南（OpportunityHandbook）」与仓库地址。
+- 保留出处：项目名「机会手册（OpportunityHandbook）」与仓库地址。
 - 标注是否做过修改（例如「节选自……，有删改」）。
 - 不要暗示原作者为你或你的衍生作品背书。
 
 合适的署名示例：
 
-> 内容来自「机会与成长指南」（OpportunityHandbook），
+> 内容来自「机会手册」（OpportunityHandbook），
 > https://github.com/Sver0411/OpportunityHandbook ，采用 CC BY 4.0 许可，本文有删改。
 
 ## 注意事项

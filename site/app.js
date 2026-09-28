@@ -396,7 +396,7 @@
   function renderDoc(location, entryId) {
     var item = state.byLocation[location];
     markActive("#/doc/" + location + (entryId ? "/" + entryId : ""));
-    document.title = (item ? item.title : "机会与成长指南") + " · 机会与成长指南";
+    document.title = (item ? item.title + " · " : "") + "机会手册";
 
     return fetchContent(location).then(function (html) {
       main.innerHTML = html;
@@ -720,7 +720,7 @@
       input.value = q;
     }
     markActive("");
-    document.title = "按条件筛选 · 机会与成长指南";
+    document.title = "按条件筛选 · 机会手册";
 
     var results = runSearch(params);
     clear(main);

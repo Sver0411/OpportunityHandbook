@@ -1,6 +1,6 @@
 <div align="center">
 
-**简体中文**
+**简体中文** · [English](./README.en.md)
 
 # 机会手册 · OpportunityHandbook
 
@@ -30,7 +30,7 @@
 - 哪些经历能留下作品、论文、推荐信、收入或公开贡献，哪些只是看起来很忙；
 - 一条路失败以后还能不能回来，它会打开什么，又会关掉什么。
 
-OpportunityHandbook 想补上的，就是这张地图。
+机会手册（OpportunityHandbook）想补上的，就是这张地图。
 
 它不替你决定人生，也不承诺一条“成功路线”。它把散落在不同学校、行业、国家、招聘体系和过来人经验里的路径放到一起，把收益、成本、门槛和证据写清楚，让你知道自己究竟在选择什么。
 
@@ -103,9 +103,9 @@ OpportunityHandbook 想补上的，就是这张地图。
 
 ## OpportunityHandbook × OpportunityRadar
 
-现实里有两类问题，看起来相似，实际上需要完全不同的工具。
+机会手册与机会雷达对应现实里的两类问题：一类关乎长期方向，一类关乎此刻能采取的行动。
 
-| | [OpportunityHandbook](https://github.com/Sver0411/OpportunityHandbook) | [OpportunityRadar](https://github.com/Sver0411/OpportunityRadar) |
+| | [机会手册](https://github.com/Sver0411/OpportunityHandbook) | [机会雷达](https://github.com/Sver0411/OpportunityRadar) |
 | --- | --- | --- |
 | **它回答什么** | 我有哪些路？这条路意味着什么？代价和退路是什么？ | 现在有哪些真实机会？哪些仍开放？我符合条件吗？ |
 | **信息特点** | 相对稳定，适合长期阅读和反复查阅 | 高度动态，需要搜索并核实当前状态 |
@@ -115,9 +115,9 @@ OpportunityHandbook 想补上的，就是这张地图。
 最简单的理解是：
 
 ```text
-Handbook 帮你看清应该寻找什么
+机会手册帮你看清应该寻找什么
                   ↓
-Radar 帮你找到此刻真实存在的机会
+机会雷达帮你找到此刻真实存在的机会
                   ↓
 行动留下作品、经历、关系和新认识
                   ↓
@@ -130,10 +130,10 @@ Radar 帮你找到此刻真实存在的机会
 
 假设你突然想：“我是不是应该试试科研？”
 
-1. 先在 Handbook 里弄清科研平时在做什么、它与项目和实习有什么区别、第一次尝试应该留下什么，以及怎样判断一个实验室；
+1. 先在机会手册里弄清科研平时在做什么、它与项目和实习有什么区别、第一次尝试应该留下什么，以及怎样判断一个实验室；
 2. 把模糊愿望变成一个更真实的目标，例如：“我想用每周 8 小时，低成本验证自己是否喜欢机器人方向的研究，并留下可展示的成果”；
-3. 再把这个目标交给 Radar，让它寻找目前仍开放的实验室项目、暑研、研究实习或相关开源项目，并核实资格与时间；
-4. 当手上出现多个候选，再用 Handbook 的机会价值判断表、导师筛选表或时间线做最后比较。
+3. 再把这个目标交给机会雷达，让它寻找目前仍开放的实验室项目、暑研、研究实习或相关开源项目，并核实资格与时间；
+4. 当手上出现多个候选，再用机会手册的机会价值判断表、导师筛选表或时间线做最后比较。
 
 这比一开始就搜索“有什么科研推荐”更有效，因为你已经知道自己究竟要验证什么。
 
@@ -265,6 +265,6 @@ python3 tools/validate_release.py
 
 ### 先看清路，再去找机会。
 
-**[用 OpportunityHandbook 建立地图](https://sver0411.github.io/OpportunityHandbook/) · [用 OpportunityRadar 连接现实](https://github.com/Sver0411/OpportunityRadar)**
+**[用机会手册建立地图](https://sver0411.github.io/OpportunityHandbook/) · [用机会雷达连接现实](https://github.com/Sver0411/OpportunityRadar)**
 
 </div>

@@ -174,13 +174,13 @@ PAGE_SHELL = """<!DOCTYPE html>
 <meta property="og:title" content="{title}">
 <meta property="og:description" content="{desc}">
 <meta property="og:url" content="{url}">
-<meta property="og:site_name" content="机会与成长指南">
+<meta property="og:site_name" content="机会手册">
 <meta name="twitter:card" content="summary">
 <link rel="stylesheet" href="{depth}styles.css">
 </head>
 <body>
 <main class="permalink-main">
-<p class="permalink-back"><a href="{depth}">← 回到《机会与成长指南》</a>　
+<p class="permalink-back"><a href="{depth}">← 回到《机会手册》</a>　
 <a href="{spa}">在完整手册中打开这一条</a></p>
 {body}
 <p class="permalink-foot">这一页是静态入口，内容与手册正文一致（Markdown 为唯一正文来源）。
@@ -224,7 +224,7 @@ def build_permalinks(root: Path, docs: list[M.Doc], index: dict, threshold: str)
             parts = ["doc"] + doc.location.split("/")
             body = render_doc(doc, threshold)
             write(parts, PAGE_SHELL.format(
-                title=f"{doc.title}｜机会与成长指南",
+                title=f"{doc.title}｜机会手册",
                 desc=_description(str(doc.front.get("summary") or doc.title)),
                 url=url_for(parts), og_type="article", depth="../../",
                 spa=f"../../#/doc/{doc.location}", body=body))
@@ -242,7 +242,7 @@ def build_permalinks(root: Path, docs: list[M.Doc], index: dict, threshold: str)
             eid, body = render_entry_section(seg, threshold, today_iso)
             parts = [eid]
             write(parts, PAGE_SHELL.format(
-                title=f"{seg['title']}｜机会与成长指南",
+                title=f"{seg['title']}｜机会手册",
                 desc=_description(M.first_sentence("\n".join(seg["lines"])) or seg["title"]),
                 url=url_for(parts), og_type="article", depth="../../",
                 spa=f"../../#/doc/{doc.location}/{eid}", body=body))
