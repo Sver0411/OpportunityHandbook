@@ -204,8 +204,11 @@ class TopicManual(unittest.TestCase):
         手册不再只是链接目录，因此不再要求出现「本页是……」这类索引声明，
         但必须保留来源小节（事实有出处）与交叉引用（便于继续深入）。
         """
+        # 只检查已经写好的文档：status: planned 的是仓库内的施工清单，
+        # 正文尚未撰写，自然没有来源小节，也不进导航与搜索。
         files = [p for p in (ROOT / "docs").rglob("*.md")
-                 if p.name not in ("README.md", "ROADMAP.md")]
+                 if p.name not in ("README.md", "ROADMAP.md")
+                 and "status: planned" not in p.read_text(encoding="utf-8")]
         self.assertTrue(files)
         for p in files:
             text = p.read_text(encoding="utf-8")

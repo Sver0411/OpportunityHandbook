@@ -1,0 +1,30 @@
+---
+id: depth-第一次参加-hackathon
+title: Playbook：第一次参加 Hackathon
+type: doc
+order: 80
+section: 09 专题手册
+section_order: 90
+subsection: 操作手册
+sub_order: 5
+status: planned
+stages: [college, undergraduate]
+topics: [competition]
+summary: 会前组队与选题、现场节奏、可演示标准、演示脚本、赛后沉淀。
+last_verified: 2026-09-29
+---
+
+# Playbook：第一次参加 Hackathon
+
+> 本篇属于 **操作手册**，正文待撰写。下面列出它需要覆盖的内容，供维护者认领。
+
+## 要覆盖的内容
+
+会前组队与选题、现场节奏、可演示标准、演示脚本、赛后沉淀。
+
+## 写作要求
+
+- **比 Book 深一层**：不复述主线结论，直接给机制、操作、完整输入输出、失败分支与 trade-off。
+- **有证据边界**：制度类内容指向官方来源（Official），经验判断标注 Experience-based，研究方法尽量给 Research-backed。
+- **不造假精确**：经验数值写成「一个可操作的起点」，不写成必须遵守的规则。
+- **链接上下层**：向上指回相关 Book 条目与手册，向下指向配套工具与案例。

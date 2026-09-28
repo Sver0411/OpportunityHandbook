@@ -357,14 +357,54 @@ TREE = """
 
 09 专题手册
   科研手册 @d:docs/manuals/科研手册
+  深度教程 · 科研方法
+    如何提出 Research Question @d:docs/research-deep/研究问题的提出
+    Baseline 怎么设计 @d:docs/research-deep/Baseline设计
+    Ablation 怎么设计 @d:docs/research-deep/消融实验
+    实验设计：变量、对照与统计 @d:docs/research-deep/实验设计进阶
+    数据管理与可复现性 @d:docs/research-deep/数据与可复现
+    读论文的高级方法 @d:docs/research-deep/论文精读方法
+    Peer Review 与 Rebuttal @d:docs/research-deep/同行评审与回复
+    科研失败案例：从数据泄漏到缩小主张 @d:docs/research-deep/科研失败案例
   竞赛手册 @d:docs/manuals/竞赛手册
   项目与作品手册 @d:docs/manuals/项目与作品手册
+  深度教程 · 项目与作品
+    项目选题与问题定义 @d:docs/projects/选题与问题定义
+    从教程 Demo 到真正作品 @d:docs/projects/从教程到作品
+    MVP 与范围控制 @d:docs/projects/MVP与范围控制
+    工程项目的测试、指标与证据 @d:docs/projects/测试与指标体系
+    日志、可观测性与故障分析 @d:docs/projects/日志与故障分析
+    README 的技术写作（三档对比） @d:docs/projects/README对比
+    Demo 怎么做（30 秒 / 2 分钟 / 面试 / 比赛） @d:docs/projects/Demo制作
+    项目如何写进简历与面试（5 组 Before / After） @d:docs/projects/项目写进简历
+    项目类型专项：什么证据才算做得好 @d:docs/projects/项目类型专项
   开源手册 @d:docs/manuals/开源手册
+  深度教程 · 开源协作
+    如何读一个大型代码库 @d:docs/open-source/读大型代码库
+    Code Review 怎么做（给与被给） @d:docs/open-source/评审与合并
+    Maintainer、Release 与项目治理 @d:docs/open-source/维护者与治理
   技能学习手册 @d:docs/manuals/技能学习手册
+  深度教程 · 学习方法
+    从零学一项技术（三种类型） @d:docs/learning/从零学一项技术
+    如何读官方文档 @d:docs/learning/读官方文档
+    如何 Debug：从现象到根因 @d:docs/learning/调试方法
+    如何判断自己真的掌握 @d:docs/learning/掌握程度的判断
+  深度教程 · 求职训练
+    一份 JD 到底怎么拆 @d:docs/job-search/JD拆解
+    简历从差到好（六种背景完整改写） @d:docs/job-search/简历改造
+    技术面试全流程 @d:docs/job-search/技术面试
+    行为面试：不机械用 STAR @d:docs/job-search/行为面试
+    项目面试：从第一句开始的追问链 @d:docs/job-search/项目面试
+    求职失败诊断：从 0 回复到 Offer 质量差 @d:docs/job-search/求职漏斗诊断
+    Offer、薪酬结构与劳动合同 @d:docs/job-search/Offer与合同
   语言与考试 @d:docs/manuals/语言与考试
   证书 @d:docs/manuals/证书
   奖学金与资助 @d:docs/manuals/奖学金与资助
   社群与行业组织 @d:docs/manuals/社群与行业组织
+  深度教程 · 职业成长
+    入职前 90 天：建立可信度 @d:docs/career-growth/入职前三个月
+    如何真正学会一份工作 @d:docs/career-growth/学会一份工作
+    如何获得更大的 scope @d:docs/career-growth/扩大责任范围
   创业与自由职业 @d:docs/manuals/创业与自由职业
   国家与地区
     中国大陆 @d:docs/countries/中国大陆
@@ -414,6 +454,21 @@ TREE = """
     职业资本盘点表 @d:docs/tools/职业资本盘点表
     转行 Bridge Plan @d:docs/tools/转行BridgePlan
     时间线检查表 @d:docs/tools/时间线检查表
+    JD 拆解表 @d:docs/tools/JD拆解表
+    项目设计 Canvas @d:docs/tools/项目设计Canvas
+    项目测试计划模板 @d:docs/tools/项目测试计划
+    Benchmark 记录表 @d:docs/tools/Benchmark记录表
+
+  完整案例
+    Case：第一次做真正的项目 @d:docs/cases/第一次做真正项目
+    Case：本科生第一次进实验室 @d:docs/cases/本科生第一次科研
+    Case：第一次找技术实习 @d:docs/cases/第一次找技术实习
+    Case：第一次开源贡献 @d:docs/cases/第一次开源贡献
+
+  操作手册
+    Playbook：第一次做项目 @d:docs/playbooks/第一次做项目
+    Playbook：第一次联系导师 @d:docs/playbooks/第一次联系导师
+    Playbook：第一次开源贡献 @d:docs/playbooks/第一次开源贡献
 
 11 避坑
   升学与留学 @e:trap-guaranteed-admission

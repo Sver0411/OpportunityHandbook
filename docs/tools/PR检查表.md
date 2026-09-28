@@ -1,0 +1,30 @@
+---
+id: depth-pr检查表
+title: PR 检查表
+type: doc
+order: 134
+section: 09 专题手册
+section_order: 90
+subsection: 工具与模板
+sub_order: 16
+status: planned
+stages: [college, undergraduate]
+topics: [project]
+summary: 提交前的自查：范围、测试、文档、描述、关联 issue。
+last_verified: 2026-09-29
+---
+
+# PR 检查表
+
+> 本篇属于 **工具与模板**，正文待撰写。下面列出它需要覆盖的内容，供维护者认领。
+
+## 要覆盖的内容
+
+提交前的自查：范围、测试、文档、描述、关联 issue。
+
+## 写作要求
+
+- **比 Book 深一层**：不复述主线结论，直接给机制、操作、完整输入输出、失败分支与 trade-off。
+- **有证据边界**：制度类内容指向官方来源（Official），经验判断标注 Experience-based，研究方法尽量给 Research-backed。
+- **不造假精确**：经验数值写成「一个可操作的起点」，不写成必须遵守的规则。
+- **链接上下层**：向上指回相关 Book 条目与手册，向下指向配套工具与案例。
