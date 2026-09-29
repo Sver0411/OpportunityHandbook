@@ -439,6 +439,18 @@ TREE = """
     现金流、发票与合同边界 @d:docs/entrepreneurship/现金流与合同
     从自由职业到工作室 / 副业到主业 @d:docs/entrepreneurship/从自由职业到工作室
   国家与地区
+  国家申请手册
+    中国大陆申请手册 @d:docs/country-playbooks/中国大陆
+    中国香港申请手册 @d:docs/country-playbooks/中国香港
+    日本申请手册 @d:docs/country-playbooks/日本
+    新加坡申请手册 @d:docs/country-playbooks/新加坡
+    韩国申请手册 @d:docs/country-playbooks/韩国
+    美国申请手册 @d:docs/country-playbooks/美国
+    加拿大申请手册 @d:docs/country-playbooks/加拿大
+    英国申请手册 @d:docs/country-playbooks/英国
+    澳大利亚申请手册 @d:docs/country-playbooks/澳大利亚
+    新西兰申请手册 @d:docs/country-playbooks/新西兰
+    欧洲大陆申请手册 @d:docs/country-playbooks/欧洲大陆
     中国大陆 @d:docs/countries/中国大陆
     中国香港 @d:docs/countries/中国香港
     美国 @d:docs/countries/美国
@@ -451,6 +463,29 @@ TREE = """
     澳大利亚 @d:docs/countries/澳大利亚
     新西兰 @d:docs/countries/新西兰
   行业与职业
+  职业指南
+    软件工程师 @d:docs/career-guides/软件工程师
+    前端工程师 @d:docs/career-guides/前端工程师
+    后端工程师 @d:docs/career-guides/后端工程师
+    嵌入式工程师 @d:docs/career-guides/嵌入式工程师
+    硬件工程师 @d:docs/career-guides/硬件工程师
+    算法工程师 @d:docs/career-guides/算法工程师
+    数据分析师 @d:docs/career-guides/数据分析师
+    数据工程师 @d:docs/career-guides/数据工程师
+    产品经理 @d:docs/career-guides/产品经理
+    测试与质量（QA） @d:docs/career-guides/测试与质量
+    运维与 SRE @d:docs/career-guides/运维与SRE
+    解决方案工程师 / 售前 @d:docs/career-guides/解决方案与售前
+    技术支持 / 客户成功 @d:docs/career-guides/技术支持与客户成功
+    Research Engineer @d:docs/career-guides/研究工程师
+    研究员 / 高校教职 @d:docs/career-guides/研究员与高校教职
+    制造业研发 @d:docs/career-guides/制造业研发
+    设计师（交互 / 视觉 / 工业） @d:docs/career-guides/设计师
+    财务与金融分析 @d:docs/career-guides/财务与金融分析
+    咨询 @d:docs/career-guides/咨询
+    教师（中小学 / 高校 / 培训） @d:docs/career-guides/教师
+    公共部门与事业单位 @d:docs/career-guides/公共部门
+    技能型职业（电工 / 焊工 / 护理等） @d:docs/career-guides/技能型职业
     技术与工程 @d:docs/careers/技术与工程
     AI 与数据 @d:docs/careers/AI与数据
     制造 @d:docs/careers/制造
@@ -490,18 +525,44 @@ TREE = """
     项目设计 Canvas @d:docs/tools/项目设计Canvas
     项目测试计划模板 @d:docs/tools/项目测试计划
     Benchmark 记录表 @d:docs/tools/Benchmark记录表
-
+    技能 Gap 矩阵 @d:docs/tools/技能Gap矩阵
+    Failure Log @d:docs/tools/Failure日志
+    README 检查表 @d:docs/tools/README检查表
+    项目发布检查表 @d:docs/tools/发布检查表
+    PR 检查表 @d:docs/tools/PR检查表
+    面试复盘表 @d:docs/tools/面试复盘表
+    求职漏斗诊断表 @d:docs/tools/求职漏斗诊断表
+    Research Question Canvas @d:docs/tools/ResearchQuestionCanvas
+    Baseline 与消融设计表 @d:docs/tools/Baseline与消融设计表
+    实验记录模板 @d:docs/tools/实验记录模板
+    论文精读表（Paper Reading Sheet） @d:docs/tools/论文精读表
+    文献地图（Literature Map） @d:docs/tools/文献地图
+    客户沟通与需求确认表 @d:docs/tools/客户沟通表
+    自由职业报价单模板 @d:docs/tools/自由职业报价单
   完整案例
     Case：第一次做真正的项目 @d:docs/cases/第一次做真正项目
     Case：本科生第一次进实验室 @d:docs/cases/本科生第一次科研
     Case：第一次找技术实习 @d:docs/cases/第一次找技术实习
     Case：第一次开源贡献 @d:docs/cases/第一次开源贡献
-
+    Case：从教程项目到工程作品（三种项目） @d:docs/cases/教程项目到工程作品
+    Case：两个 Offer 怎么选 @d:docs/cases/两个Offer怎么选
+    Case：第一次转行 @d:docs/cases/第一次转行
+    Case：留学选校从几十个到一份名单 @d:docs/cases/留学选校
+    Case：联系导师的完整过程 @d:docs/cases/联系导师
+    Case：把一次竞赛变成作品集与简历素材 @d:docs/cases/从竞赛到作品集
+    Case：第一次面试失败之后 @d:docs/cases/第一次面试失败
+    Case：第一次自由职业客户 @d:docs/cases/第一次自由职业客户
   操作手册
     Playbook：第一次做项目 @d:docs/playbooks/第一次做项目
     Playbook：第一次联系导师 @d:docs/playbooks/第一次联系导师
     Playbook：第一次开源贡献 @d:docs/playbooks/第一次开源贡献
-
+    Playbook：第一次找实习 @d:docs/playbooks/第一次找实习
+    Playbook：第一次技术面试 @d:docs/playbooks/第一次技术面试
+    Playbook：第一次谈薪 @d:docs/playbooks/第一次谈薪
+    Playbook：第一次接单 @d:docs/playbooks/第一次接单
+    Playbook：第一次参加 Hackathon @d:docs/playbooks/第一次参加 Hackathon
+    Playbook：第一次写论文 @d:docs/playbooks/第一次写论文
+    Playbook：第一次做实验与记录 @d:docs/playbooks/第一次做实验
 11 避坑
   升学与留学 @e:trap-guaranteed-admission
   求职与实习 @e:trap-fake-internships-and-paid-research

@@ -3615,7 +3615,115 @@
             "location": "book/09-专题手册",
             "anchor": "国家与地区"
           },
+          "nav_id": "09-22"
+        },
+        {
+          "title": "国家申请手册",
+          "target": {
+            "type": "doc",
+            "location": "book/09-专题手册",
+            "anchor": "国家申请手册"
+          },
           "children": [
+            {
+              "title": "中国大陆申请手册",
+              "target": {
+                "type": "doc",
+                "location": "docs/country-playbooks/中国大陆",
+                "anchor": ""
+              },
+              "nav_id": "09-23-01"
+            },
+            {
+              "title": "中国香港申请手册",
+              "target": {
+                "type": "doc",
+                "location": "docs/country-playbooks/中国香港",
+                "anchor": ""
+              },
+              "nav_id": "09-23-02"
+            },
+            {
+              "title": "日本申请手册",
+              "target": {
+                "type": "doc",
+                "location": "docs/country-playbooks/日本",
+                "anchor": ""
+              },
+              "nav_id": "09-23-03"
+            },
+            {
+              "title": "新加坡申请手册",
+              "target": {
+                "type": "doc",
+                "location": "docs/country-playbooks/新加坡",
+                "anchor": ""
+              },
+              "nav_id": "09-23-04"
+            },
+            {
+              "title": "韩国申请手册",
+              "target": {
+                "type": "doc",
+                "location": "docs/country-playbooks/韩国",
+                "anchor": ""
+              },
+              "nav_id": "09-23-05"
+            },
+            {
+              "title": "美国申请手册",
+              "target": {
+                "type": "doc",
+                "location": "docs/country-playbooks/美国",
+                "anchor": ""
+              },
+              "nav_id": "09-23-06"
+            },
+            {
+              "title": "加拿大申请手册",
+              "target": {
+                "type": "doc",
+                "location": "docs/country-playbooks/加拿大",
+                "anchor": ""
+              },
+              "nav_id": "09-23-07"
+            },
+            {
+              "title": "英国申请手册",
+              "target": {
+                "type": "doc",
+                "location": "docs/country-playbooks/英国",
+                "anchor": ""
+              },
+              "nav_id": "09-23-08"
+            },
+            {
+              "title": "澳大利亚申请手册",
+              "target": {
+                "type": "doc",
+                "location": "docs/country-playbooks/澳大利亚",
+                "anchor": ""
+              },
+              "nav_id": "09-23-09"
+            },
+            {
+              "title": "新西兰申请手册",
+              "target": {
+                "type": "doc",
+                "location": "docs/country-playbooks/新西兰",
+                "anchor": ""
+              },
+              "nav_id": "09-23-10"
+            },
+            {
+              "title": "欧洲大陆申请手册",
+              "target": {
+                "type": "doc",
+                "location": "docs/country-playbooks/欧洲大陆",
+                "anchor": ""
+              },
+              "nav_id": "09-23-11"
+            },
             {
               "title": "中国大陆",
               "target": {
@@ -3623,7 +3731,7 @@
                 "location": "docs/countries/中国大陆",
                 "anchor": ""
               },
-              "nav_id": "09-22-01"
+              "nav_id": "09-23-12"
             },
             {
               "title": "中国香港",
@@ -3632,7 +3740,7 @@
                 "location": "docs/countries/中国香港",
                 "anchor": ""
               },
-              "nav_id": "09-22-02"
+              "nav_id": "09-23-13"
             },
             {
               "title": "美国",
@@ -3641,7 +3749,7 @@
                 "location": "docs/countries/美国",
                 "anchor": ""
               },
-              "nav_id": "09-22-03"
+              "nav_id": "09-23-14"
             },
             {
               "title": "加拿大",
@@ -3650,7 +3758,7 @@
                 "location": "docs/countries/加拿大",
                 "anchor": ""
               },
-              "nav_id": "09-22-04"
+              "nav_id": "09-23-15"
             },
             {
               "title": "英国",
@@ -3659,7 +3767,7 @@
                 "location": "docs/countries/英国",
                 "anchor": ""
               },
-              "nav_id": "09-22-05"
+              "nav_id": "09-23-16"
             },
             {
               "title": "欧洲大陆",
@@ -3668,7 +3776,7 @@
                 "location": "docs/countries/欧洲大陆",
                 "anchor": ""
               },
-              "nav_id": "09-22-06"
+              "nav_id": "09-23-17"
             },
             {
               "title": "日本",
@@ -3677,7 +3785,7 @@
                 "location": "docs/countries/日本",
                 "anchor": ""
               },
-              "nav_id": "09-22-07"
+              "nav_id": "09-23-18"
             },
             {
               "title": "韩国",
@@ -3686,7 +3794,7 @@
                 "location": "docs/countries/韩国",
                 "anchor": ""
               },
-              "nav_id": "09-22-08"
+              "nav_id": "09-23-19"
             },
             {
               "title": "新加坡",
@@ -3695,7 +3803,7 @@
                 "location": "docs/countries/新加坡",
                 "anchor": ""
               },
-              "nav_id": "09-22-09"
+              "nav_id": "09-23-20"
             },
             {
               "title": "澳大利亚",
@@ -3704,7 +3812,7 @@
                 "location": "docs/countries/澳大利亚",
                 "anchor": ""
               },
-              "nav_id": "09-22-10"
+              "nav_id": "09-23-21"
             },
             {
               "title": "新西兰",
@@ -3713,10 +3821,10 @@
                 "location": "docs/countries/新西兰",
                 "anchor": ""
               },
-              "nav_id": "09-22-11"
+              "nav_id": "09-23-22"
             }
           ],
-          "nav_id": "09-22"
+          "nav_id": "09-23"
         },
         {
           "title": "行业与职业",
@@ -3725,7 +3833,214 @@
             "location": "book/09-专题手册",
             "anchor": "行业与职业"
           },
+          "nav_id": "09-24"
+        },
+        {
+          "title": "职业指南",
+          "target": {
+            "type": "doc",
+            "location": "book/09-专题手册",
+            "anchor": "职业指南"
+          },
           "children": [
+            {
+              "title": "软件工程师",
+              "target": {
+                "type": "doc",
+                "location": "docs/career-guides/软件工程师",
+                "anchor": ""
+              },
+              "nav_id": "09-25-01"
+            },
+            {
+              "title": "前端工程师",
+              "target": {
+                "type": "doc",
+                "location": "docs/career-guides/前端工程师",
+                "anchor": ""
+              },
+              "nav_id": "09-25-02"
+            },
+            {
+              "title": "后端工程师",
+              "target": {
+                "type": "doc",
+                "location": "docs/career-guides/后端工程师",
+                "anchor": ""
+              },
+              "nav_id": "09-25-03"
+            },
+            {
+              "title": "嵌入式工程师",
+              "target": {
+                "type": "doc",
+                "location": "docs/career-guides/嵌入式工程师",
+                "anchor": ""
+              },
+              "nav_id": "09-25-04"
+            },
+            {
+              "title": "硬件工程师",
+              "target": {
+                "type": "doc",
+                "location": "docs/career-guides/硬件工程师",
+                "anchor": ""
+              },
+              "nav_id": "09-25-05"
+            },
+            {
+              "title": "算法工程师",
+              "target": {
+                "type": "doc",
+                "location": "docs/career-guides/算法工程师",
+                "anchor": ""
+              },
+              "nav_id": "09-25-06"
+            },
+            {
+              "title": "数据分析师",
+              "target": {
+                "type": "doc",
+                "location": "docs/career-guides/数据分析师",
+                "anchor": ""
+              },
+              "nav_id": "09-25-07"
+            },
+            {
+              "title": "数据工程师",
+              "target": {
+                "type": "doc",
+                "location": "docs/career-guides/数据工程师",
+                "anchor": ""
+              },
+              "nav_id": "09-25-08"
+            },
+            {
+              "title": "产品经理",
+              "target": {
+                "type": "doc",
+                "location": "docs/career-guides/产品经理",
+                "anchor": ""
+              },
+              "nav_id": "09-25-09"
+            },
+            {
+              "title": "测试与质量（QA）",
+              "target": {
+                "type": "doc",
+                "location": "docs/career-guides/测试与质量",
+                "anchor": ""
+              },
+              "nav_id": "09-25-10"
+            },
+            {
+              "title": "运维与 SRE",
+              "target": {
+                "type": "doc",
+                "location": "docs/career-guides/运维与SRE",
+                "anchor": ""
+              },
+              "nav_id": "09-25-11"
+            },
+            {
+              "title": "解决方案工程师 / 售前",
+              "target": {
+                "type": "doc",
+                "location": "docs/career-guides/解决方案与售前",
+                "anchor": ""
+              },
+              "nav_id": "09-25-12"
+            },
+            {
+              "title": "技术支持 / 客户成功",
+              "target": {
+                "type": "doc",
+                "location": "docs/career-guides/技术支持与客户成功",
+                "anchor": ""
+              },
+              "nav_id": "09-25-13"
+            },
+            {
+              "title": "Research Engineer",
+              "target": {
+                "type": "doc",
+                "location": "docs/career-guides/研究工程师",
+                "anchor": ""
+              },
+              "nav_id": "09-25-14"
+            },
+            {
+              "title": "研究员 / 高校教职",
+              "target": {
+                "type": "doc",
+                "location": "docs/career-guides/研究员与高校教职",
+                "anchor": ""
+              },
+              "nav_id": "09-25-15"
+            },
+            {
+              "title": "制造业研发",
+              "target": {
+                "type": "doc",
+                "location": "docs/career-guides/制造业研发",
+                "anchor": ""
+              },
+              "nav_id": "09-25-16"
+            },
+            {
+              "title": "设计师（交互 / 视觉 / 工业）",
+              "target": {
+                "type": "doc",
+                "location": "docs/career-guides/设计师",
+                "anchor": ""
+              },
+              "nav_id": "09-25-17"
+            },
+            {
+              "title": "财务与金融分析",
+              "target": {
+                "type": "doc",
+                "location": "docs/career-guides/财务与金融分析",
+                "anchor": ""
+              },
+              "nav_id": "09-25-18"
+            },
+            {
+              "title": "咨询",
+              "target": {
+                "type": "doc",
+                "location": "docs/career-guides/咨询",
+                "anchor": ""
+              },
+              "nav_id": "09-25-19"
+            },
+            {
+              "title": "教师（中小学 / 高校 / 培训）",
+              "target": {
+                "type": "doc",
+                "location": "docs/career-guides/教师",
+                "anchor": ""
+              },
+              "nav_id": "09-25-20"
+            },
+            {
+              "title": "公共部门与事业单位",
+              "target": {
+                "type": "doc",
+                "location": "docs/career-guides/公共部门",
+                "anchor": ""
+              },
+              "nav_id": "09-25-21"
+            },
+            {
+              "title": "技能型职业（电工 / 焊工 / 护理等）",
+              "target": {
+                "type": "doc",
+                "location": "docs/career-guides/技能型职业",
+                "anchor": ""
+              },
+              "nav_id": "09-25-22"
+            },
             {
               "title": "技术与工程",
               "target": {
@@ -3733,7 +4048,7 @@
                 "location": "docs/careers/技术与工程",
                 "anchor": ""
               },
-              "nav_id": "09-23-01"
+              "nav_id": "09-25-23"
             },
             {
               "title": "AI 与数据",
@@ -3742,7 +4057,7 @@
                 "location": "docs/careers/AI与数据",
                 "anchor": ""
               },
-              "nav_id": "09-23-02"
+              "nav_id": "09-25-24"
             },
             {
               "title": "制造",
@@ -3751,7 +4066,7 @@
                 "location": "docs/careers/制造",
                 "anchor": ""
               },
-              "nav_id": "09-23-03"
+              "nav_id": "09-25-25"
             },
             {
               "title": "商业与金融",
@@ -3760,7 +4075,7 @@
                 "location": "docs/careers/商业与金融",
                 "anchor": ""
               },
-              "nav_id": "09-23-04"
+              "nav_id": "09-25-26"
             },
             {
               "title": "设计与创意",
@@ -3769,7 +4084,7 @@
                 "location": "docs/careers/设计与创意",
                 "anchor": ""
               },
-              "nav_id": "09-23-05"
+              "nav_id": "09-25-27"
             },
             {
               "title": "医疗健康",
@@ -3778,7 +4093,7 @@
                 "location": "docs/careers/医疗健康",
                 "anchor": ""
               },
-              "nav_id": "09-23-06"
+              "nav_id": "09-25-28"
             },
             {
               "title": "生命科学",
@@ -3787,7 +4102,7 @@
                 "location": "docs/careers/生命科学",
                 "anchor": ""
               },
-              "nav_id": "09-23-07"
+              "nav_id": "09-25-29"
             },
             {
               "title": "教育",
@@ -3796,7 +4111,7 @@
                 "location": "docs/careers/教育",
                 "anchor": ""
               },
-              "nav_id": "09-23-08"
+              "nav_id": "09-25-30"
             },
             {
               "title": "法律与公共事务",
@@ -3805,7 +4120,7 @@
                 "location": "docs/careers/法律与公共事务",
                 "anchor": ""
               },
-              "nav_id": "09-23-09"
+              "nav_id": "09-25-31"
             },
             {
               "title": "科研与高校",
@@ -3814,7 +4129,7 @@
                 "location": "docs/careers/科研与高校",
                 "anchor": ""
               },
-              "nav_id": "09-23-10"
+              "nav_id": "09-25-32"
             },
             {
               "title": "公共服务",
@@ -3823,7 +4138,7 @@
                 "location": "docs/careers/公共服务",
                 "anchor": ""
               },
-              "nav_id": "09-23-11"
+              "nav_id": "09-25-33"
             },
             {
               "title": "技能型职业",
@@ -3832,10 +4147,10 @@
                 "location": "docs/careers/技能型职业",
                 "anchor": ""
               },
-              "nav_id": "09-23-12"
+              "nav_id": "09-25-34"
             }
           ],
-          "nav_id": "09-23"
+          "nav_id": "09-25"
         }
       ],
       "nav_id": "09"
@@ -4073,6 +4388,132 @@
                 "anchor": ""
               },
               "nav_id": "10-02-14"
+            },
+            {
+              "title": "技能 Gap 矩阵",
+              "target": {
+                "type": "doc",
+                "location": "docs/tools/技能Gap矩阵",
+                "anchor": ""
+              },
+              "nav_id": "10-02-15"
+            },
+            {
+              "title": "Failure Log",
+              "target": {
+                "type": "doc",
+                "location": "docs/tools/Failure日志",
+                "anchor": ""
+              },
+              "nav_id": "10-02-16"
+            },
+            {
+              "title": "README 检查表",
+              "target": {
+                "type": "doc",
+                "location": "docs/tools/README检查表",
+                "anchor": ""
+              },
+              "nav_id": "10-02-17"
+            },
+            {
+              "title": "项目发布检查表",
+              "target": {
+                "type": "doc",
+                "location": "docs/tools/发布检查表",
+                "anchor": ""
+              },
+              "nav_id": "10-02-18"
+            },
+            {
+              "title": "PR 检查表",
+              "target": {
+                "type": "doc",
+                "location": "docs/tools/PR检查表",
+                "anchor": ""
+              },
+              "nav_id": "10-02-19"
+            },
+            {
+              "title": "面试复盘表",
+              "target": {
+                "type": "doc",
+                "location": "docs/tools/面试复盘表",
+                "anchor": ""
+              },
+              "nav_id": "10-02-20"
+            },
+            {
+              "title": "求职漏斗诊断表",
+              "target": {
+                "type": "doc",
+                "location": "docs/tools/求职漏斗诊断表",
+                "anchor": ""
+              },
+              "nav_id": "10-02-21"
+            },
+            {
+              "title": "Research Question Canvas",
+              "target": {
+                "type": "doc",
+                "location": "docs/tools/ResearchQuestionCanvas",
+                "anchor": ""
+              },
+              "nav_id": "10-02-22"
+            },
+            {
+              "title": "Baseline 与消融设计表",
+              "target": {
+                "type": "doc",
+                "location": "docs/tools/Baseline与消融设计表",
+                "anchor": ""
+              },
+              "nav_id": "10-02-23"
+            },
+            {
+              "title": "实验记录模板",
+              "target": {
+                "type": "doc",
+                "location": "docs/tools/实验记录模板",
+                "anchor": ""
+              },
+              "nav_id": "10-02-24"
+            },
+            {
+              "title": "论文精读表（Paper Reading Sheet）",
+              "target": {
+                "type": "doc",
+                "location": "docs/tools/论文精读表",
+                "anchor": ""
+              },
+              "nav_id": "10-02-25"
+            },
+            {
+              "title": "文献地图（Literature Map）",
+              "target": {
+                "type": "doc",
+                "location": "docs/tools/文献地图",
+                "anchor": ""
+              },
+              "nav_id": "10-02-26"
+            },
+            {
+              "title": "客户沟通与需求确认表",
+              "target": {
+                "type": "doc",
+                "location": "docs/tools/客户沟通表",
+                "anchor": ""
+              },
+              "nav_id": "10-02-27"
+            },
+            {
+              "title": "自由职业报价单模板",
+              "target": {
+                "type": "doc",
+                "location": "docs/tools/自由职业报价单",
+                "anchor": ""
+              },
+              "nav_id": "10-02-28"
             }
           ],
           "nav_id": "10-02"
@@ -4120,6 +4561,78 @@
                 "anchor": ""
               },
               "nav_id": "10-03-04"
+            },
+            {
+              "title": "Case：从教程项目到工程作品（三种项目）",
+              "target": {
+                "type": "doc",
+                "location": "docs/cases/教程项目到工程作品",
+                "anchor": ""
+              },
+              "nav_id": "10-03-05"
+            },
+            {
+              "title": "Case：两个 Offer 怎么选",
+              "target": {
+                "type": "doc",
+                "location": "docs/cases/两个Offer怎么选",
+                "anchor": ""
+              },
+              "nav_id": "10-03-06"
+            },
+            {
+              "title": "Case：第一次转行",
+              "target": {
+                "type": "doc",
+                "location": "docs/cases/第一次转行",
+                "anchor": ""
+              },
+              "nav_id": "10-03-07"
+            },
+            {
+              "title": "Case：留学选校从几十个到一份名单",
+              "target": {
+                "type": "doc",
+                "location": "docs/cases/留学选校",
+                "anchor": ""
+              },
+              "nav_id": "10-03-08"
+            },
+            {
+              "title": "Case：联系导师的完整过程",
+              "target": {
+                "type": "doc",
+                "location": "docs/cases/联系导师",
+                "anchor": ""
+              },
+              "nav_id": "10-03-09"
+            },
+            {
+              "title": "Case：把一次竞赛变成作品集与简历素材",
+              "target": {
+                "type": "doc",
+                "location": "docs/cases/从竞赛到作品集",
+                "anchor": ""
+              },
+              "nav_id": "10-03-10"
+            },
+            {
+              "title": "Case：第一次面试失败之后",
+              "target": {
+                "type": "doc",
+                "location": "docs/cases/第一次面试失败",
+                "anchor": ""
+              },
+              "nav_id": "10-03-11"
+            },
+            {
+              "title": "Case：第一次自由职业客户",
+              "target": {
+                "type": "doc",
+                "location": "docs/cases/第一次自由职业客户",
+                "anchor": ""
+              },
+              "nav_id": "10-03-12"
             }
           ],
           "nav_id": "10-03"
@@ -4158,6 +4671,69 @@
                 "anchor": ""
               },
               "nav_id": "10-04-03"
+            },
+            {
+              "title": "Playbook：第一次找实习",
+              "target": {
+                "type": "doc",
+                "location": "docs/playbooks/第一次找实习",
+                "anchor": ""
+              },
+              "nav_id": "10-04-04"
+            },
+            {
+              "title": "Playbook：第一次技术面试",
+              "target": {
+                "type": "doc",
+                "location": "docs/playbooks/第一次技术面试",
+                "anchor": ""
+              },
+              "nav_id": "10-04-05"
+            },
+            {
+              "title": "Playbook：第一次谈薪",
+              "target": {
+                "type": "doc",
+                "location": "docs/playbooks/第一次谈薪",
+                "anchor": ""
+              },
+              "nav_id": "10-04-06"
+            },
+            {
+              "title": "Playbook：第一次接单",
+              "target": {
+                "type": "doc",
+                "location": "docs/playbooks/第一次接单",
+                "anchor": ""
+              },
+              "nav_id": "10-04-07"
+            },
+            {
+              "title": "Playbook：第一次参加 Hackathon",
+              "target": {
+                "type": "doc",
+                "location": "docs/playbooks/第一次参加 Hackathon",
+                "anchor": ""
+              },
+              "nav_id": "10-04-08"
+            },
+            {
+              "title": "Playbook：第一次写论文",
+              "target": {
+                "type": "doc",
+                "location": "docs/playbooks/第一次写论文",
+                "anchor": ""
+              },
+              "nav_id": "10-04-09"
+            },
+            {
+              "title": "Playbook：第一次做实验与记录",
+              "target": {
+                "type": "doc",
+                "location": "docs/playbooks/第一次做实验",
+                "anchor": ""
+              },
+              "nav_id": "10-04-10"
             }
           ],
           "nav_id": "10-04"
