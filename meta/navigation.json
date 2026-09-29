@@ -2858,6 +2858,62 @@
           "nav_id": "09-01"
         },
         {
+          "title": "深度教程 · 升学申请",
+          "target": {
+            "type": "doc",
+            "location": "book/09-专题手册",
+            "anchor": "深度教程-升学申请"
+          },
+          "children": [
+            {
+              "title": "选校：从几十个项目到申请列表",
+              "target": {
+                "type": "doc",
+                "location": "docs/admissions/选校与短名单",
+                "anchor": ""
+              },
+              "nav_id": "09-02-01"
+            },
+            {
+              "title": "推荐信：怎么拿到一封有力的信",
+              "target": {
+                "type": "doc",
+                "location": "docs/admissions/推荐信",
+                "anchor": ""
+              },
+              "nav_id": "09-02-02"
+            },
+            {
+              "title": "SOP / PS：从空洞到具体",
+              "target": {
+                "type": "doc",
+                "location": "docs/admissions/个人陈述改写",
+                "anchor": ""
+              },
+              "nav_id": "09-02-03"
+            },
+            {
+              "title": "Research Proposal 逐段拆解",
+              "target": {
+                "type": "doc",
+                "location": "docs/admissions/研究计划拆解",
+                "anchor": ""
+              },
+              "nav_id": "09-02-04"
+            },
+            {
+              "title": "复试与申请面试",
+              "target": {
+                "type": "doc",
+                "location": "docs/admissions/复试与申请面试",
+                "anchor": ""
+              },
+              "nav_id": "09-02-05"
+            }
+          ],
+          "nav_id": "09-02"
+        },
+        {
           "title": "深度教程 · 科研方法",
           "target": {
             "type": "doc",
@@ -2872,7 +2928,7 @@
                 "location": "docs/research-deep/研究问题的提出",
                 "anchor": ""
               },
-              "nav_id": "09-02-01"
+              "nav_id": "09-03-01"
             },
             {
               "title": "Baseline 怎么设计",
@@ -2881,7 +2937,7 @@
                 "location": "docs/research-deep/Baseline设计",
                 "anchor": ""
               },
-              "nav_id": "09-02-02"
+              "nav_id": "09-03-02"
             },
             {
               "title": "Ablation 怎么设计",
@@ -2890,7 +2946,7 @@
                 "location": "docs/research-deep/消融实验",
                 "anchor": ""
               },
-              "nav_id": "09-02-03"
+              "nav_id": "09-03-03"
             },
             {
               "title": "实验设计：变量、对照与统计",
@@ -2899,7 +2955,7 @@
                 "location": "docs/research-deep/实验设计进阶",
                 "anchor": ""
               },
-              "nav_id": "09-02-04"
+              "nav_id": "09-03-04"
             },
             {
               "title": "数据管理与可复现性",
@@ -2908,7 +2964,7 @@
                 "location": "docs/research-deep/数据与可复现",
                 "anchor": ""
               },
-              "nav_id": "09-02-05"
+              "nav_id": "09-03-05"
             },
             {
               "title": "读论文的高级方法",
@@ -2917,7 +2973,7 @@
                 "location": "docs/research-deep/论文精读方法",
                 "anchor": ""
               },
-              "nav_id": "09-02-06"
+              "nav_id": "09-03-06"
             },
             {
               "title": "Peer Review 与 Rebuttal",
@@ -2926,7 +2982,7 @@
                 "location": "docs/research-deep/同行评审与回复",
                 "anchor": ""
               },
-              "nav_id": "09-02-07"
+              "nav_id": "09-03-07"
             },
             {
               "title": "科研失败案例：从数据泄漏到缩小主张",
@@ -2935,10 +2991,10 @@
                 "location": "docs/research-deep/科研失败案例",
                 "anchor": ""
               },
-              "nav_id": "09-02-08"
+              "nav_id": "09-03-08"
             }
           ],
-          "nav_id": "09-02"
+          "nav_id": "09-03"
         },
         {
           "title": "竞赛手册",
@@ -2947,7 +3003,63 @@
             "location": "docs/manuals/竞赛手册",
             "anchor": ""
           },
-          "nav_id": "09-03"
+          "nav_id": "09-04"
+        },
+        {
+          "title": "深度教程 · 竞赛实战",
+          "target": {
+            "type": "doc",
+            "location": "book/09-专题手册",
+            "anchor": "深度教程-竞赛实战"
+          },
+          "children": [
+            {
+              "title": "竞赛组队与分工",
+              "target": {
+                "type": "doc",
+                "location": "docs/competition-playbooks/组队与分工",
+                "anchor": ""
+              },
+              "nav_id": "09-05-01"
+            },
+            {
+              "title": "读规则与评分函数",
+              "target": {
+                "type": "doc",
+                "location": "docs/competition-playbooks/读规则与评分函数",
+                "anchor": ""
+              },
+              "nav_id": "09-05-02"
+            },
+            {
+              "title": "赛期时间分配与版本管理",
+              "target": {
+                "type": "doc",
+                "location": "docs/competition-playbooks/时间分配与版本管理",
+                "anchor": ""
+              },
+              "nav_id": "09-05-03"
+            },
+            {
+              "title": "Demo、路演与答辩",
+              "target": {
+                "type": "doc",
+                "location": "docs/competition-playbooks/Demo与路演答辩",
+                "anchor": ""
+              },
+              "nav_id": "09-05-04"
+            },
+            {
+              "title": "赛后整理与复用",
+              "target": {
+                "type": "doc",
+                "location": "docs/competition-playbooks/赛后整理",
+                "anchor": ""
+              },
+              "nav_id": "09-05-05"
+            }
+          ],
+          "nav_id": "09-05"
         },
         {
           "title": "项目与作品手册",
@@ -2956,7 +3068,7 @@
             "location": "docs/manuals/项目与作品手册",
             "anchor": ""
           },
-          "nav_id": "09-04"
+          "nav_id": "09-06"
         },
         {
           "title": "深度教程 · 项目与作品",
@@ -2973,7 +3085,7 @@
                 "location": "docs/projects/选题与问题定义",
                 "anchor": ""
               },
-              "nav_id": "09-05-01"
+              "nav_id": "09-07-01"
             },
             {
               "title": "从教程 Demo 到真正作品",
@@ -2982,7 +3094,7 @@
                 "location": "docs/projects/从教程到作品",
                 "anchor": ""
               },
-              "nav_id": "09-05-02"
+              "nav_id": "09-07-02"
             },
             {
               "title": "MVP 与范围控制",
@@ -2991,7 +3103,7 @@
                 "location": "docs/projects/MVP与范围控制",
                 "anchor": ""
               },
-              "nav_id": "09-05-03"
+              "nav_id": "09-07-03"
             },
             {
               "title": "工程项目的测试、指标与证据",
@@ -3000,7 +3112,7 @@
                 "location": "docs/projects/测试与指标体系",
                 "anchor": ""
               },
-              "nav_id": "09-05-04"
+              "nav_id": "09-07-04"
             },
             {
               "title": "日志、可观测性与故障分析",
@@ -3009,7 +3121,7 @@
                 "location": "docs/projects/日志与故障分析",
                 "anchor": ""
               },
-              "nav_id": "09-05-05"
+              "nav_id": "09-07-05"
             },
             {
               "title": "README 的技术写作（三档对比）",
@@ -3018,7 +3130,7 @@
                 "location": "docs/projects/README对比",
                 "anchor": ""
               },
-              "nav_id": "09-05-06"
+              "nav_id": "09-07-06"
             },
             {
               "title": "Demo 怎么做（30 秒 / 2 分钟 / 面试 / 比赛）",
@@ -3027,7 +3139,7 @@
                 "location": "docs/projects/Demo制作",
                 "anchor": ""
               },
-              "nav_id": "09-05-07"
+              "nav_id": "09-07-07"
             },
             {
               "title": "项目如何写进简历与面试（5 组 Before / After）",
@@ -3036,7 +3148,7 @@
                 "location": "docs/projects/项目写进简历",
                 "anchor": ""
               },
-              "nav_id": "09-05-08"
+              "nav_id": "09-07-08"
             },
             {
               "title": "项目类型专项：什么证据才算做得好",
@@ -3045,10 +3157,10 @@
                 "location": "docs/projects/项目类型专项",
                 "anchor": ""
               },
-              "nav_id": "09-05-09"
+              "nav_id": "09-07-09"
             }
           ],
-          "nav_id": "09-05"
+          "nav_id": "09-07"
         },
         {
           "title": "开源手册",
@@ -3057,7 +3169,7 @@
             "location": "docs/manuals/开源手册",
             "anchor": ""
           },
-          "nav_id": "09-06"
+          "nav_id": "09-08"
         },
         {
           "title": "深度教程 · 开源协作",
@@ -3074,7 +3186,7 @@
                 "location": "docs/open-source/读大型代码库",
                 "anchor": ""
               },
-              "nav_id": "09-07-01"
+              "nav_id": "09-09-01"
             },
             {
               "title": "Code Review 怎么做（给与被给）",
@@ -3083,19 +3195,37 @@
                 "location": "docs/open-source/评审与合并",
                 "anchor": ""
               },
-              "nav_id": "09-07-02"
+              "nav_id": "09-09-02"
             },
             {
-              "title": "Maintainer、Release 与项目治理",
+              "title": "Maintainer、Release 与项目治理 @d:docs/open-source/维护者与治理    第一个 Issue 怎么写",
               "target": {
                 "type": "doc",
-                "location": "docs/open-source/维护者与治理",
+                "location": "docs/open-source/第一个Issue",
                 "anchor": ""
               },
-              "nav_id": "09-07-03"
+              "nav_id": "09-09-03"
+            },
+            {
+              "title": "第一次 PR：从发现到合并",
+              "target": {
+                "type": "doc",
+                "location": "docs/open-source/第一个PR",
+                "anchor": ""
+              },
+              "nav_id": "09-09-04"
+            },
+            {
+              "title": "怎么找 Good First Issue（以及为什么常常找不到）",
+              "target": {
+                "type": "doc",
+                "location": "docs/open-source/GoodFirstIssue",
+                "anchor": ""
+              },
+              "nav_id": "09-09-05"
             }
           ],
-          "nav_id": "09-07"
+          "nav_id": "09-09"
         },
         {
           "title": "技能学习手册",
@@ -3104,7 +3234,7 @@
             "location": "docs/manuals/技能学习手册",
             "anchor": ""
           },
-          "nav_id": "09-08"
+          "nav_id": "09-10"
         },
         {
           "title": "深度教程 · 学习方法",
@@ -3121,7 +3251,7 @@
                 "location": "docs/learning/从零学一项技术",
                 "anchor": ""
               },
-              "nav_id": "09-09-01"
+              "nav_id": "09-11-01"
             },
             {
               "title": "如何读官方文档",
@@ -3130,7 +3260,7 @@
                 "location": "docs/learning/读官方文档",
                 "anchor": ""
               },
-              "nav_id": "09-09-02"
+              "nav_id": "09-11-02"
             },
             {
               "title": "如何 Debug：从现象到根因",
@@ -3139,7 +3269,7 @@
                 "location": "docs/learning/调试方法",
                 "anchor": ""
               },
-              "nav_id": "09-09-03"
+              "nav_id": "09-11-03"
             },
             {
               "title": "如何判断自己真的掌握",
@@ -3148,10 +3278,10 @@
                 "location": "docs/learning/掌握程度的判断",
                 "anchor": ""
               },
-              "nav_id": "09-09-04"
+              "nav_id": "09-11-04"
             }
           ],
-          "nav_id": "09-09"
+          "nav_id": "09-11"
         },
         {
           "title": "深度教程 · 求职训练",
@@ -3168,7 +3298,7 @@
                 "location": "docs/job-search/JD拆解",
                 "anchor": ""
               },
-              "nav_id": "09-10-01"
+              "nav_id": "09-12-01"
             },
             {
               "title": "简历从差到好（六种背景完整改写）",
@@ -3177,7 +3307,7 @@
                 "location": "docs/job-search/简历改造",
                 "anchor": ""
               },
-              "nav_id": "09-10-02"
+              "nav_id": "09-12-02"
             },
             {
               "title": "技术面试全流程",
@@ -3186,7 +3316,7 @@
                 "location": "docs/job-search/技术面试",
                 "anchor": ""
               },
-              "nav_id": "09-10-03"
+              "nav_id": "09-12-03"
             },
             {
               "title": "行为面试：不机械用 STAR",
@@ -3195,7 +3325,7 @@
                 "location": "docs/job-search/行为面试",
                 "anchor": ""
               },
-              "nav_id": "09-10-04"
+              "nav_id": "09-12-04"
             },
             {
               "title": "项目面试：从第一句开始的追问链",
@@ -3204,7 +3334,7 @@
                 "location": "docs/job-search/项目面试",
                 "anchor": ""
               },
-              "nav_id": "09-10-05"
+              "nav_id": "09-12-05"
             },
             {
               "title": "求职失败诊断：从 0 回复到 Offer 质量差",
@@ -3213,7 +3343,7 @@
                 "location": "docs/job-search/求职漏斗诊断",
                 "anchor": ""
               },
-              "nav_id": "09-10-06"
+              "nav_id": "09-12-06"
             },
             {
               "title": "Offer、薪酬结构与劳动合同",
@@ -3222,10 +3352,10 @@
                 "location": "docs/job-search/Offer与合同",
                 "anchor": ""
               },
-              "nav_id": "09-10-07"
+              "nav_id": "09-12-07"
             }
           ],
-          "nav_id": "09-10"
+          "nav_id": "09-12"
         },
         {
           "title": "语言与考试",
@@ -3234,7 +3364,7 @@
             "location": "docs/manuals/语言与考试",
             "anchor": ""
           },
-          "nav_id": "09-11"
+          "nav_id": "09-13"
         },
         {
           "title": "证书",
@@ -3243,7 +3373,45 @@
             "location": "docs/manuals/证书",
             "anchor": ""
           },
-          "nav_id": "09-12"
+          "nav_id": "09-14"
+        },
+        {
+          "title": "深度教程 · 证书与资格",
+          "target": {
+            "type": "doc",
+            "location": "book/09-专题手册",
+            "anchor": "深度教程-证书与资格"
+          },
+          "children": [
+            {
+              "title": "证书值不值得考：六步判断",
+              "target": {
+                "type": "doc",
+                "location": "docs/certifications/判断体系",
+                "anchor": ""
+              },
+              "nav_id": "09-15-01"
+            },
+            {
+              "title": "证书类型对照：准入 / 等级 / 行业 / 厂商 / 微证书",
+              "target": {
+                "type": "doc",
+                "location": "docs/certifications/类型对照",
+                "anchor": ""
+              },
+              "nav_id": "09-15-02"
+            },
+            {
+              "title": "证书考试的准备方式",
+              "target": {
+                "type": "doc",
+                "location": "docs/certifications/考试准备",
+                "anchor": ""
+              },
+              "nav_id": "09-15-03"
+            }
+          ],
+          "nav_id": "09-15"
         },
         {
           "title": "奖学金与资助",
@@ -3252,7 +3420,7 @@
             "location": "docs/manuals/奖学金与资助",
             "anchor": ""
           },
-          "nav_id": "09-13"
+          "nav_id": "09-16"
         },
         {
           "title": "社群与行业组织",
@@ -3261,7 +3429,54 @@
             "location": "docs/manuals/社群与行业组织",
             "anchor": ""
           },
-          "nav_id": "09-14"
+          "nav_id": "09-17"
+        },
+        {
+          "title": "深度教程 · 人脉与社群",
+          "target": {
+            "type": "doc",
+            "location": "book/09-专题手册",
+            "anchor": "深度教程-人脉与社群"
+          },
+          "children": [
+            {
+              "title": "怎么联系陌生从业者（含完整对话）",
+              "target": {
+                "type": "doc",
+                "location": "docs/networking/联系陌生人",
+                "anchor": ""
+              },
+              "nav_id": "09-18-01"
+            },
+            {
+              "title": "会议与线下活动：第一次去做什么",
+              "target": {
+                "type": "doc",
+                "location": "docs/networking/会议与线下活动",
+                "anchor": ""
+              },
+              "nav_id": "09-18-02"
+            },
+            {
+              "title": "关系维护与内推请求",
+              "target": {
+                "type": "doc",
+                "location": "docs/networking/关系维护与内推",
+                "anchor": ""
+              },
+              "nav_id": "09-18-03"
+            },
+            {
+              "title": "如何给社群做贡献",
+              "target": {
+                "type": "doc",
+                "location": "docs/networking/贡献社群",
+                "anchor": ""
+              },
+              "nav_id": "09-18-04"
+            }
+          ],
+          "nav_id": "09-18"
         },
         {
           "title": "深度教程 · 职业成长",
@@ -3278,7 +3493,7 @@
                 "location": "docs/career-growth/入职前三个月",
                 "anchor": ""
               },
-              "nav_id": "09-15-01"
+              "nav_id": "09-19-01"
             },
             {
               "title": "如何真正学会一份工作",
@@ -3287,19 +3502,37 @@
                 "location": "docs/career-growth/学会一份工作",
                 "anchor": ""
               },
-              "nav_id": "09-15-02"
+              "nav_id": "09-19-02"
             },
             {
-              "title": "如何获得更大的 scope",
+              "title": "如何获得更大的 scope @d:docs/career-growth/扩大责任范围    晋升：证据、影响与流程",
               "target": {
                 "type": "doc",
-                "location": "docs/career-growth/扩大责任范围",
+                "location": "docs/career-growth/晋升材料",
                 "anchor": ""
               },
-              "nav_id": "09-15-03"
+              "nav_id": "09-19-03"
+            },
+            {
+              "title": "IC 还是 Manager：一个完整人物案例",
+              "target": {
+                "type": "doc",
+                "location": "docs/career-growth/IC与管理路线",
+                "anchor": ""
+              },
+              "nav_id": "09-19-04"
+            },
+            {
+              "title": "在职跳槽全流程",
+              "target": {
+                "type": "doc",
+                "location": "docs/career-growth/在职跳槽",
+                "anchor": ""
+              },
+              "nav_id": "09-19-05"
             }
           ],
-          "nav_id": "09-15"
+          "nav_id": "09-19"
         },
         {
           "title": "创业与自由职业",
@@ -3308,7 +3541,72 @@
             "location": "docs/manuals/创业与自由职业",
             "anchor": ""
           },
-          "nav_id": "09-16"
+          "nav_id": "09-20"
+        },
+        {
+          "title": "深度教程 · 创业与自由职业",
+          "target": {
+            "type": "doc",
+            "location": "book/09-专题手册",
+            "anchor": "深度教程-创业与自由职业"
+          },
+          "children": [
+            {
+              "title": "找问题与用户访谈",
+              "target": {
+                "type": "doc",
+                "location": "docs/entrepreneurship/找问题与用户访谈",
+                "anchor": ""
+              },
+              "nav_id": "09-21-01"
+            },
+            {
+              "title": "定价与报价",
+              "target": {
+                "type": "doc",
+                "location": "docs/entrepreneurship/定价与报价",
+                "anchor": ""
+              },
+              "nav_id": "09-21-02"
+            },
+            {
+              "title": "分销与获客",
+              "target": {
+                "type": "doc",
+                "location": "docs/entrepreneurship/分销与获客",
+                "anchor": ""
+              },
+              "nav_id": "09-21-03"
+            },
+            {
+              "title": "第一个客户：从发现到复购",
+              "target": {
+                "type": "doc",
+                "location": "docs/entrepreneurship/第一单客户",
+                "anchor": ""
+              },
+              "nav_id": "09-21-04"
+            },
+            {
+              "title": "现金流、发票与合同边界",
+              "target": {
+                "type": "doc",
+                "location": "docs/entrepreneurship/现金流与合同",
+                "anchor": ""
+              },
+              "nav_id": "09-21-05"
+            },
+            {
+              "title": "从自由职业到工作室 / 副业到主业",
+              "target": {
+                "type": "doc",
+                "location": "docs/entrepreneurship/从自由职业到工作室",
+                "anchor": ""
+              },
+              "nav_id": "09-21-06"
+            }
+          ],
+          "nav_id": "09-21"
         },
         {
           "title": "国家与地区",
@@ -3325,7 +3623,7 @@
                 "location": "docs/countries/中国大陆",
                 "anchor": ""
               },
-              "nav_id": "09-17-01"
+              "nav_id": "09-22-01"
             },
             {
               "title": "中国香港",
@@ -3334,7 +3632,7 @@
                 "location": "docs/countries/中国香港",
                 "anchor": ""
               },
-              "nav_id": "09-17-02"
+              "nav_id": "09-22-02"
             },
             {
               "title": "美国",
@@ -3343,7 +3641,7 @@
                 "location": "docs/countries/美国",
                 "anchor": ""
               },
-              "nav_id": "09-17-03"
+              "nav_id": "09-22-03"
             },
             {
               "title": "加拿大",
@@ -3352,7 +3650,7 @@
                 "location": "docs/countries/加拿大",
                 "anchor": ""
               },
-              "nav_id": "09-17-04"
+              "nav_id": "09-22-04"
             },
             {
               "title": "英国",
@@ -3361,7 +3659,7 @@
                 "location": "docs/countries/英国",
                 "anchor": ""
               },
-              "nav_id": "09-17-05"
+              "nav_id": "09-22-05"
             },
             {
               "title": "欧洲大陆",
@@ -3370,7 +3668,7 @@
                 "location": "docs/countries/欧洲大陆",
                 "anchor": ""
               },
-              "nav_id": "09-17-06"
+              "nav_id": "09-22-06"
             },
             {
               "title": "日本",
@@ -3379,7 +3677,7 @@
                 "location": "docs/countries/日本",
                 "anchor": ""
               },
-              "nav_id": "09-17-07"
+              "nav_id": "09-22-07"
             },
             {
               "title": "韩国",
@@ -3388,7 +3686,7 @@
                 "location": "docs/countries/韩国",
                 "anchor": ""
               },
-              "nav_id": "09-17-08"
+              "nav_id": "09-22-08"
             },
             {
               "title": "新加坡",
@@ -3397,7 +3695,7 @@
                 "location": "docs/countries/新加坡",
                 "anchor": ""
               },
-              "nav_id": "09-17-09"
+              "nav_id": "09-22-09"
             },
             {
               "title": "澳大利亚",
@@ -3406,7 +3704,7 @@
                 "location": "docs/countries/澳大利亚",
                 "anchor": ""
               },
-              "nav_id": "09-17-10"
+              "nav_id": "09-22-10"
             },
             {
               "title": "新西兰",
@@ -3415,10 +3713,10 @@
                 "location": "docs/countries/新西兰",
                 "anchor": ""
               },
-              "nav_id": "09-17-11"
+              "nav_id": "09-22-11"
             }
           ],
-          "nav_id": "09-17"
+          "nav_id": "09-22"
         },
         {
           "title": "行业与职业",
@@ -3435,7 +3733,7 @@
                 "location": "docs/careers/技术与工程",
                 "anchor": ""
               },
-              "nav_id": "09-18-01"
+              "nav_id": "09-23-01"
             },
             {
               "title": "AI 与数据",
@@ -3444,7 +3742,7 @@
                 "location": "docs/careers/AI与数据",
                 "anchor": ""
               },
-              "nav_id": "09-18-02"
+              "nav_id": "09-23-02"
             },
             {
               "title": "制造",
@@ -3453,7 +3751,7 @@
                 "location": "docs/careers/制造",
                 "anchor": ""
               },
-              "nav_id": "09-18-03"
+              "nav_id": "09-23-03"
             },
             {
               "title": "商业与金融",
@@ -3462,7 +3760,7 @@
                 "location": "docs/careers/商业与金融",
                 "anchor": ""
               },
-              "nav_id": "09-18-04"
+              "nav_id": "09-23-04"
             },
             {
               "title": "设计与创意",
@@ -3471,7 +3769,7 @@
                 "location": "docs/careers/设计与创意",
                 "anchor": ""
               },
-              "nav_id": "09-18-05"
+              "nav_id": "09-23-05"
             },
             {
               "title": "医疗健康",
@@ -3480,7 +3778,7 @@
                 "location": "docs/careers/医疗健康",
                 "anchor": ""
               },
-              "nav_id": "09-18-06"
+              "nav_id": "09-23-06"
             },
             {
               "title": "生命科学",
@@ -3489,7 +3787,7 @@
                 "location": "docs/careers/生命科学",
                 "anchor": ""
               },
-              "nav_id": "09-18-07"
+              "nav_id": "09-23-07"
             },
             {
               "title": "教育",
@@ -3498,7 +3796,7 @@
                 "location": "docs/careers/教育",
                 "anchor": ""
               },
-              "nav_id": "09-18-08"
+              "nav_id": "09-23-08"
             },
             {
               "title": "法律与公共事务",
@@ -3507,7 +3805,7 @@
                 "location": "docs/careers/法律与公共事务",
                 "anchor": ""
               },
-              "nav_id": "09-18-09"
+              "nav_id": "09-23-09"
             },
             {
               "title": "科研与高校",
@@ -3516,7 +3814,7 @@
                 "location": "docs/careers/科研与高校",
                 "anchor": ""
               },
-              "nav_id": "09-18-10"
+              "nav_id": "09-23-10"
             },
             {
               "title": "公共服务",
@@ -3525,7 +3823,7 @@
                 "location": "docs/careers/公共服务",
                 "anchor": ""
               },
-              "nav_id": "09-18-11"
+              "nav_id": "09-23-11"
             },
             {
               "title": "技能型职业",
@@ -3534,10 +3832,10 @@
                 "location": "docs/careers/技能型职业",
                 "anchor": ""
               },
-              "nav_id": "09-18-12"
+              "nav_id": "09-23-12"
             }
           ],
-          "nav_id": "09-18"
+          "nav_id": "09-23"
         }
       ],
       "nav_id": "09"

@@ -357,6 +357,12 @@ TREE = """
 
 09 专题手册
   科研手册 @d:docs/manuals/科研手册
+  深度教程 · 升学申请
+    选校：从几十个项目到申请列表 @d:docs/admissions/选校与短名单
+    推荐信：怎么拿到一封有力的信 @d:docs/admissions/推荐信
+    SOP / PS：从空洞到具体 @d:docs/admissions/个人陈述改写
+    Research Proposal 逐段拆解 @d:docs/admissions/研究计划拆解
+    复试与申请面试 @d:docs/admissions/复试与申请面试
   深度教程 · 科研方法
     如何提出 Research Question @d:docs/research-deep/研究问题的提出
     Baseline 怎么设计 @d:docs/research-deep/Baseline设计
@@ -367,6 +373,12 @@ TREE = """
     Peer Review 与 Rebuttal @d:docs/research-deep/同行评审与回复
     科研失败案例：从数据泄漏到缩小主张 @d:docs/research-deep/科研失败案例
   竞赛手册 @d:docs/manuals/竞赛手册
+  深度教程 · 竞赛实战
+    竞赛组队与分工 @d:docs/competition-playbooks/组队与分工
+    读规则与评分函数 @d:docs/competition-playbooks/读规则与评分函数
+    赛期时间分配与版本管理 @d:docs/competition-playbooks/时间分配与版本管理
+    Demo、路演与答辩 @d:docs/competition-playbooks/Demo与路演答辩
+    赛后整理与复用 @d:docs/competition-playbooks/赛后整理
   项目与作品手册 @d:docs/manuals/项目与作品手册
   深度教程 · 项目与作品
     项目选题与问题定义 @d:docs/projects/选题与问题定义
@@ -382,7 +394,9 @@ TREE = """
   深度教程 · 开源协作
     如何读一个大型代码库 @d:docs/open-source/读大型代码库
     Code Review 怎么做（给与被给） @d:docs/open-source/评审与合并
-    Maintainer、Release 与项目治理 @d:docs/open-source/维护者与治理
+    Maintainer、Release 与项目治理 @d:docs/open-source/维护者与治理    第一个 Issue 怎么写 @d:docs/open-source/第一个Issue
+    第一次 PR：从发现到合并 @d:docs/open-source/第一个PR
+    怎么找 Good First Issue（以及为什么常常找不到） @d:docs/open-source/GoodFirstIssue
   技能学习手册 @d:docs/manuals/技能学习手册
   深度教程 · 学习方法
     从零学一项技术（三种类型） @d:docs/learning/从零学一项技术
@@ -399,13 +413,31 @@ TREE = """
     Offer、薪酬结构与劳动合同 @d:docs/job-search/Offer与合同
   语言与考试 @d:docs/manuals/语言与考试
   证书 @d:docs/manuals/证书
+  深度教程 · 证书与资格
+    证书值不值得考：六步判断 @d:docs/certifications/判断体系
+    证书类型对照：准入 / 等级 / 行业 / 厂商 / 微证书 @d:docs/certifications/类型对照
+    证书考试的准备方式 @d:docs/certifications/考试准备
   奖学金与资助 @d:docs/manuals/奖学金与资助
   社群与行业组织 @d:docs/manuals/社群与行业组织
+  深度教程 · 人脉与社群
+    怎么联系陌生从业者（含完整对话） @d:docs/networking/联系陌生人
+    会议与线下活动：第一次去做什么 @d:docs/networking/会议与线下活动
+    关系维护与内推请求 @d:docs/networking/关系维护与内推
+    如何给社群做贡献 @d:docs/networking/贡献社群
   深度教程 · 职业成长
     入职前 90 天：建立可信度 @d:docs/career-growth/入职前三个月
     如何真正学会一份工作 @d:docs/career-growth/学会一份工作
-    如何获得更大的 scope @d:docs/career-growth/扩大责任范围
+    如何获得更大的 scope @d:docs/career-growth/扩大责任范围    晋升：证据、影响与流程 @d:docs/career-growth/晋升材料
+    IC 还是 Manager：一个完整人物案例 @d:docs/career-growth/IC与管理路线
+    在职跳槽全流程 @d:docs/career-growth/在职跳槽
   创业与自由职业 @d:docs/manuals/创业与自由职业
+  深度教程 · 创业与自由职业
+    找问题与用户访谈 @d:docs/entrepreneurship/找问题与用户访谈
+    定价与报价 @d:docs/entrepreneurship/定价与报价
+    分销与获客 @d:docs/entrepreneurship/分销与获客
+    第一个客户：从发现到复购 @d:docs/entrepreneurship/第一单客户
+    现金流、发票与合同边界 @d:docs/entrepreneurship/现金流与合同
+    从自由职业到工作室 / 副业到主业 @d:docs/entrepreneurship/从自由职业到工作室
   国家与地区
     中国大陆 @d:docs/countries/中国大陆
     中国香港 @d:docs/countries/中国香港

@@ -16,7 +16,7 @@ last_verified: 2026-09-29
 
 下面是尚未撰写正文的部分——它们不会出现在在线导航、搜索与筛选里，读者不会点进一个只有标题的空页面。
 
-当前进度：**108** 份专题文档已完成（其中部分为 `partial`），**290** 个条目已完成；仍有 **91** 份专题文档、**0** 个条目在计划中。
+当前进度：**137** 份专题文档已完成（其中部分为 `partial`），**290** 个条目已完成；仍有 **62** 份专题文档、**0** 个条目在计划中。
 
 想认领其中一条：把对应文件里的 `status` 改成 `complete`，补上正文、`summary` 与 `last_verified`，构建会检查格式、链接与来源。路线图会在下次构建时自动更新。
 
@@ -73,56 +73,6 @@ last_verified: 2026-09-29
 - Playbook：第一次技术面试（`docs/playbooks/第一次技术面试.md`）
 - Playbook：第一次接单（`docs/playbooks/第一次接单.md`）
 - Playbook：第一次谈薪（`docs/playbooks/第一次谈薪.md`）
-
-### 深度教程 · 人脉与社群
-
-- 会议与线下活动：第一次去做什么（`docs/networking/会议与线下活动.md`）
-- 关系维护与内推请求（`docs/networking/关系维护与内推.md`）
-- 如何给社群做贡献（`docs/networking/贡献社群.md`）
-- 怎么联系陌生从业者（含完整对话）（`docs/networking/联系陌生人.md`）
-
-### 深度教程 · 创业与自由职业
-
-- 从自由职业到工作室 / 副业到主业（`docs/entrepreneurship/从自由职业到工作室.md`）
-- 分销与获客（`docs/entrepreneurship/分销与获客.md`）
-- 定价与报价（`docs/entrepreneurship/定价与报价.md`）
-- 找问题与用户访谈（`docs/entrepreneurship/找问题与用户访谈.md`）
-- 现金流、发票与合同边界（`docs/entrepreneurship/现金流与合同.md`）
-- 第一个客户：从发现到复购（`docs/entrepreneurship/第一单客户.md`）
-
-### 深度教程 · 升学申请
-
-- Research Proposal 逐段拆解（`docs/admissions/研究计划拆解.md`）
-- SOP / PS：从空洞到具体（`docs/admissions/个人陈述改写.md`）
-- 复试与申请面试（`docs/admissions/复试与申请面试.md`）
-- 推荐信：怎么拿到一封有力的信（`docs/admissions/推荐信.md`）
-- 选校：从几十个项目到申请列表（`docs/admissions/选校与短名单.md`）
-
-### 深度教程 · 开源协作
-
-- 怎么找 Good First Issue（以及为什么常常找不到）（`docs/open-source/GoodFirstIssue.md`）
-- 第一个 Issue 怎么写（`docs/open-source/第一个Issue.md`）
-- 第一个 PR：从发现到合并（`docs/open-source/第一个PR.md`）
-
-### 深度教程 · 竞赛实战
-
-- Demo、路演与答辩（`docs/competition-playbooks/Demo与路演答辩.md`）
-- 竞赛组队与分工（`docs/competition-playbooks/组队与分工.md`）
-- 读规则与评分函数（`docs/competition-playbooks/读规则与评分函数.md`）
-- 赛后整理与复用（`docs/competition-playbooks/赛后整理.md`）
-- 赛期时间分配与版本管理（`docs/competition-playbooks/时间分配与版本管理.md`）
-
-### 深度教程 · 职业成长
-
-- IC 还是 Manager：一个完整人物案例（`docs/career-growth/IC与管理路线.md`）
-- 在职跳槽全流程（`docs/career-growth/在职跳槽.md`）
-- 晋升：证据、影响与流程（`docs/career-growth/晋升材料.md`）
-
-### 深度教程 · 证书与资格
-
-- 证书值不值得考：六步判断（`docs/certifications/判断体系.md`）
-- 证书类型对照：准入 / 等级 / 行业 / 厂商 / 微证书（`docs/certifications/类型对照.md`）
-- 证书考试的准备方式（`docs/certifications/考试准备.md`）
 
 ### 职业指南
 
