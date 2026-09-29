@@ -569,6 +569,7 @@ TREE = """
     Playbook：把一项新技术学到“能用” @d:docs/playbooks/第一次学新技术
     Playbook：第一次做信息访谈 @d:docs/playbooks/第一次信息访谈
     Playbook：第一次申请奖学金或研究资助 @d:docs/playbooks/第一次申请资助
+    Playbook：第一次判断一个证书值不值得考 @d:docs/playbooks/第一次评估证书
 11 避坑
   升学与留学 @e:trap-guaranteed-admission
   求职与实习 @e:trap-fake-internships-and-paid-research
