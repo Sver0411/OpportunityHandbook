@@ -418,6 +418,8 @@ TREE = """
     证书类型对照：准入 / 等级 / 行业 / 厂商 / 微证书 @d:docs/certifications/类型对照
     证书考试的准备方式 @d:docs/certifications/考试准备
   奖学金与资助 @d:docs/manuals/奖学金与资助
+  深度教程 · 奖学金与资助
+    全额资助到底怎么找、怎么看、怎么比较 @d:docs/funding/全额资助与资金包
   社群与行业组织 @d:docs/manuals/社群与行业组织
   深度教程 · 人脉与社群
     怎么联系陌生从业者（含完整对话） @d:docs/networking/联系陌生人
@@ -478,6 +480,7 @@ TREE = """
     解决方案工程师 / 售前 @d:docs/career-guides/解决方案与售前
     技术支持 / 客户成功 @d:docs/career-guides/技术支持与客户成功
     Research Engineer @d:docs/career-guides/研究工程师
+    Forward Deployed Engineer（FDE） @d:docs/career-guides/FDE
     研究员 / 高校教职 @d:docs/career-guides/研究员与高校教职
     制造业研发 @d:docs/career-guides/制造业研发
     设计师（交互 / 视觉 / 工业） @d:docs/career-guides/设计师
