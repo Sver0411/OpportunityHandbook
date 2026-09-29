@@ -1,65 +1,60 @@
 # Knowledge Depth Worklog
 
-本文件记录 Knowledge Depth 层的施工进度，按域逐条对照。
-机器可读的覆盖矩阵由 `tools/audit_knowledge_depth.py` 生成，见
-[`knowledge-depth.md`](knowledge-depth.md)。
-
 最后更新：2026-09-29
 
----
+## 当前层级
 
-## 一、层级与目录
+| 层级 | 已写 | 待写 |
+| --- | ---: | ---: |
+| Book | 290 条目 | — |
+| Manual | 10 | — |
+| Deep Dive | 64 | 0 |
+| Case | 12 | 0 |
+| Playbook | 14 | 0 |
+| Tool / Template | 28 | 0 |
+| Career Guide | 23 | 0 |
+| Country Playbook | 11 | 0 |
 
-| 层级 | 目录（或来源） | 已写 | 待写 |
-| --- | --- | --- | --- |
-| Book（判断与路线） | `book/`（00–11） | 290 条目 | — |
-| Manual（领域地图） | `docs/manuals/` | 10 | — |
-| Deep Dive（讲透一个问题） | `docs/projects`、`docs/research-deep`、`docs/job-search`、`docs/career-growth`、`docs/admissions`、`docs/learning`、`docs/open-source`、`docs/competition-playbooks`、`docs/entrepreneurship`、`docs/networking`、`docs/certifications` | 34 | 29 |
-| Case（完整走一遍） | `docs/cases/` | 4 | 8 |
-| Playbook（照着执行） | `docs/playbooks/` | 3 | 7 |
-| Tool / Template | `docs/tools/` | 14 | 14 |
-| Career Guide（岗位） | `docs/career-guides/` | 0 | 22 |
-| Country Playbook | `docs/country-playbooks/` | 0 | 11 |
+## 本次第二次深度校正
 
-待写部分全部以 `status: planned` 存在于仓库中，正文写明覆盖范围；
-它们不会出现在导航与搜索里，只汇总在 [`docs/ROADMAP.md`](../docs/ROADMAP.md)。
+第一版 Knowledge Depth 扩展完成后再次人工抽查，发现“文件存在”和“内容足够深”不是一回事，因此直接继续修改，而没有再开新的 Pilot。
 
----
+已完成：
 
-## 二、按域进度（全部完成）
+- 22 个原有 Career Guide 全量二次深化；
+- 22 个 Career Guide 的批量统一 H2 骨架改为岗位特有结构；
+- 新增 FDE Career Guide；
+- 11 个 Country Playbook 全量二次深化；
+- 原有 10 个 Playbook 全量检查，清理无依据固定周数/人数/百分比；
+- 新增技能学习、信息访谈、资助申请、证书评估 4 个 Playbook；
+- 重写 JD 拆解中的过度推断；
+- 新增 Funding Package Deep Dive；
+- 深化“教程项目到工程作品”“两个 Offer 怎么选”Case；
+- 新增 `audit_depth_quality.py`，把“深度层质量”与“深度层是否存在”分开检查。
 
-| 域 | Deep Dive | 状态 |
-| --- | --- | --- |
-| 项目与作品 | 9 | ✅ 选题与问题定义 · 从教程到作品 · MVP 与范围控制 · 测试与指标体系 · 日志与故障分析 · README 三档 · Demo 制作 · 项目写进简历 · 项目类型专项 |
-| 科研方法 | 8 | ✅ 研究问题的提出 · Baseline · 消融 · 实验设计进阶 · 数据与可复现 · 论文精读 · 同行评审与回复 · 科研失败案例 |
-| 求职训练 | 7 | ✅ JD 拆解 · 简历改造 · 技术面试 · 行为面试 · 项目面试 · 漏斗诊断 · Offer 与合同 |
-| 职业成长 | 6 | ✅ 入职前三个月 · 学会一份工作 · 扩大 scope · 晋升材料 · IC 与管理路线 · 在职跳槽 |
-| 升学申请 | 5 | ✅ 选校与短名单 · 推荐信 · SOP 改写 · 研究计划拆解 · 复试与申请面试 |
-| 学习方法 | 4 | ✅ 从零学技术 · 读官方文档 · 调试方法 · 掌握程度的判断 |
-| 开源协作 | 6 | ✅ 第一个 Issue · 第一个 PR · Good First Issue · 读大型代码库 · 评审与合并 · 维护者与治理 |
-| 竞赛实战 | 5 | ✅ 组队与分工 · 读规则与评分函数 · 赛期时间与版本 · Demo 与答辩 · 赛后整理 |
-| 创业与自由职业 | 6 | ✅ 找问题与访谈 · 定价与报价 · 分销与获客 · 第一单客户 · 现金流与合同 · 从自由职业到工作室 |
-| 人脉与社群 | 4 | ✅ 联系陌生人 · 会议与线下活动 · 关系维护与内推 · 贡献社群 |
-| 证书与资格 | 3 | ✅ 六步判断 · 类型对照 · 考试准备 |
-| 职业指南 | 22 | ✅ 软件/前端/后端/嵌入式/硬件/算法/数据分析/数据工程/产品/测试/SRE/售前/技术支持/研究工程师/研究员/制造研发/设计师/财务/咨询/教师/公共部门/技能型职业 |
-| 国家申请手册 | 11 | ✅ 中国大陆 · 中国香港 · 日本 · 新加坡 · 韩国 · 美国 · 加拿大 · 英国 · 澳大利亚 · 新西兰 · 欧洲大陆 |
-| 完整案例 | 12 | ✅ 第一次做真正项目 · 本科生第一次科研 · 第一次找技术实习 · 第一次开源贡献 · 教程项目到工程作品 · 两个 Offer 怎么选 · 第一次转行 · 留学选校 · 联系导师 · 从竞赛到作品集 · 第一次面试失败 · 第一次自由职业客户 |
-| 操作手册 | 10 | ✅ 第一次做项目 · 联系导师 · 开源贡献 · 找实习 · 技术面试 · 谈薪 · 接单 · Hackathon · 写论文 · 做实验 |
-| 工具与模板 | 28 | ✅ 全部 28 份（含本轮新增 18 份） |
+## 写作纪律
 
-**待写：0。**
+1. **真实机制优先**：职业页要讲工作链、判断、故障和证据，不堆技能名词；
+2. **本地制度优先**：国家页围绕当地真实招生、资助、就业机制组织，不套统一国家模板；
+3. **检查点替代假精确**：Playbook 不用固定周数/投递量伪装确定性；
+4. **事实和假设分开**：尤其 JD、Offer、导师、行业信息，无法从公开文字确认的内容改成核实问题；
+5. **案例允许失败**：Case 不只展示“正确路径 → 成功”，要展示信息不足、失败和修正；
+6. **矩阵只看覆盖**：不能拿 `planned=0` 证明正文足够深；
+7. **人工审读仍是最终质量判断**：自动审计只负责把风险信号找出来。
 
----
+## 发布前门禁
 
-## 三、施工纪律（本轮踩过的坑）
+继续运行仓库既有：
 
-1. **写完即验**：`build --strict`（内部链接与元数据）、`check_docs_consistency`（禁用表述）、
-   `check_markdown_quality`、`check_html_ids`、`check_content_quality --hard`、`run_tests`；
-2. **新文档进导航的正确顺序**：先写正文 → 再在 `tools/ia_canonical.py` 建分组 →
-   `build_navigation.py` → 在 `book/09`/`book/10` 索引页补同名 `## 小节`
-   （分组节点必须有同名 H2，否则 `check_ia` 报 BROKEN TARGET）；
-3. **分组已存在后再加文档**要用 `tools/` 侧的 topup 脚本补项（只建组不补项会漏）；
-4. 三个反复出现的门禁坑：
-   - `status: planned` 文档会被 `check_docs_consistency` 与测试当作公开内容检查 → 施工清单要写明范围且不进导航；
-   - 「一句话：」这类旧模板字段标签是**禁用表述**，职业指南开头的「一句话：」直接触雷；
-   - H1 必须与 front matter `title` 完全一致（长标题容易漏）。
+- `tools/validate_release.py --quick`
+- IA 一致性
+- Markdown / 文档一致性
+- 内容质量硬门
+- 内容规则测试
+- HTML id
+- ROADMAP metadata 一致性
+- 外部链接检查
+
+新增：
+
+- `tools/audit_depth_quality.py`（报告级，用于发现浅页、模板化和经验阈值）
