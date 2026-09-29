@@ -32,7 +32,7 @@ DOMAINS = [
     ("技能学习", "skill", "docs/manuals/技能学习手册", ["docs/learning"]),
     ("开源", "project", "docs/manuals/开源手册", ["docs/open-source"]),
     ("竞赛", "competition", "docs/manuals/竞赛手册", ["docs/competitions", "docs/competition-playbooks"]),
-    ("奖学金与资助", "funding", "docs/manuals/奖学金与资助", []),
+    ("奖学金与资助", "funding", "docs/manuals/奖学金与资助", ["docs/funding"]),
     ("创业与自由职业", "startup", "docs/manuals/创业与自由职业", ["docs/entrepreneurship"]),
     ("社群与人脉", "community", "docs/manuals/社群与行业组织", ["docs/networking"]),
     ("证书与资格", "skill", "docs/manuals/证书", ["docs/certifications"]),
@@ -42,7 +42,7 @@ DOMAINS = [
 LAYER_DIRS = {
     "深度教程": ["docs/projects", "docs/research-deep", "docs/job-search", "docs/career-growth",
              "docs/admissions", "docs/learning", "docs/open-source", "docs/competition-playbooks",
-             "docs/entrepreneurship", "docs/networking", "docs/certifications"],
+             "docs/entrepreneurship", "docs/networking", "docs/certifications", "docs/funding"],
     "完整案例": ["docs/cases"],
     "操作手册": ["docs/playbooks"],
     "工具模板": ["docs/tools"],
