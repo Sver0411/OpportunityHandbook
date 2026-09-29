@@ -476,6 +476,7 @@ TREE = """
     测试与质量（QA） @d:docs/career-guides/测试与质量
     运维与 SRE @d:docs/career-guides/运维与SRE
     解决方案工程师 / 售前 @d:docs/career-guides/解决方案与售前
+    Forward Deployed Engineer（FDE） @d:docs/career-guides/FDE
     技术支持 / 客户成功 @d:docs/career-guides/技术支持与客户成功
     Research Engineer @d:docs/career-guides/研究工程师
     研究员 / 高校教职 @d:docs/career-guides/研究员与高校教职
