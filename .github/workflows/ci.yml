@@ -51,7 +51,11 @@ jobs:
           test -f site/robots.txt
           test -f "site/content/book/02-在学校里先把基础打好.html"
           test -f "site/content/book/09-专题手册.html"
-          test -f "site/content/book/10-时间线与工具.html"
+          test -f "site/content/book/10-路径时间线.html"
+          test -f "site/content/book/11-工具与模板.html"
+          test -f "site/content/book/12-完整案例.html"
+          test -f "site/content/book/13-操作手册.html"
+          test -f "site/content/book/14-避坑.html"
           test -f "site/content/docs/manuals/科研手册.html"
           test -f "site/content/docs/countries/日本.html"
           test -f "site/content/docs/tools/Offer对比表.html"
