@@ -3,8 +3,8 @@ id: depth-tool-Failure日志
 title: Failure Log
 type: doc
 order: 812
-section: 10 时间线与工具
-section_order: 100
+section: 11 工具与模板
+section_order: 110
 subsection: 工具与模板
 sub_order: 12
 status: complete

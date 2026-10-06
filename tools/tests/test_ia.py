@@ -81,8 +81,10 @@ class Architecture(unittest.TestCase):
             if p.name in ("README.md", "ROADMAP.md"):
                 continue
             front, _ = M.split_front_matter(p.read_text(encoding="utf-8"))
-            self.assertIn(str(front.get("section")), ("09 专题手册", "10 时间线与工具"),
-                          f"{p} 未归入 09/10")
+            self.assertIn(str(front.get("section")),
+                          ("09 专题手册", "10 路径时间线", "11 工具与模板",
+                           "12 完整案例", "13 操作手册"),
+                          f"{p} 未归入 09–13")
             self.assertTrue(front.get("subsection"), f"{p} 缺少 subsection")
 
 

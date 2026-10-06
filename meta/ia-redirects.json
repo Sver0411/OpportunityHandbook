@@ -16,7 +16,9 @@
     "book/13-社群导师与行业影响力": "book/06-进入职场以后继续积累",
     "book/14-创业自由职业与副业": "book/08-其他同样成立的人生路径",
     "book/15-不知道自己想做什么": "book/02-在学校里先把基础打好",
-    "book/16-避坑": "book/11-避坑"
+    "book/16-避坑": "book/14-避坑",
+    "book/11-避坑": "book/14-避坑",
+    "book/10-时间线与工具": "book/10-路径时间线"
   },
   "entries": {
     "#/doc/book/01-十八岁以后有哪些路/paths-continue-study-default": "#/doc/book/01-先决定下一步往哪里走/paths-continue-study-default",
@@ -184,15 +186,15 @@
     "#/doc/book/15-不知道自己想做什么/explore-what-to-try": "#/doc/book/02-在学校里先把基础打好/explore-low-cost-experiments",
     "#/doc/book/15-不知道自己想做什么/explore-six-questions-after-each-try": "#/doc/book/02-在学校里先把基础打好/explore-low-cost-experiments",
     "#/doc/book/15-不知道自己想做什么/explore-when-to-continue": "#/doc/book/02-在学校里先把基础打好/explore-low-cost-experiments",
-    "#/doc/book/16-避坑/trap-collecting-courses-and-half-projects": "#/doc/book/11-避坑/trap-collecting-courses-and-half-projects",
-    "#/doc/book/16-避坑/trap-certificate-hoarding": "#/doc/book/11-避坑/trap-certificate-hoarding",
-    "#/doc/book/16-避坑/trap-chasing-hype": "#/doc/book/11-避坑/trap-information-asymmetry",
-    "#/doc/book/16-避坑/trap-fake-internships-and-paid-research": "#/doc/book/11-避坑/trap-fake-internships-and-paid-research",
-    "#/doc/book/16-避坑/trap-paid-competitions": "#/doc/book/11-避坑/trap-paid-competitions",
-    "#/doc/book/16-避坑/trap-predatory-journals": "#/doc/book/11-避坑/trap-predatory-journals",
-    "#/doc/book/16-避坑/trap-guaranteed-admission": "#/doc/book/11-避坑/trap-guaranteed-admission",
-    "#/doc/book/16-避坑/trap-expensive-job-coaching": "#/doc/book/11-避坑/trap-information-asymmetry",
-    "#/doc/book/16-避坑/trap-information-asymmetry": "#/doc/book/11-避坑/trap-information-asymmetry",
-    "#/doc/book/16-避坑/trap-opportunity-anxiety": "#/doc/book/11-避坑/trap-information-asymmetry"
+    "#/doc/book/16-避坑/trap-collecting-courses-and-half-projects": "#/doc/book/14-避坑/trap-collecting-courses-and-half-projects",
+    "#/doc/book/16-避坑/trap-certificate-hoarding": "#/doc/book/14-避坑/trap-certificate-hoarding",
+    "#/doc/book/16-避坑/trap-chasing-hype": "#/doc/book/14-避坑/trap-information-asymmetry",
+    "#/doc/book/16-避坑/trap-fake-internships-and-paid-research": "#/doc/book/14-避坑/trap-fake-internships-and-paid-research",
+    "#/doc/book/16-避坑/trap-paid-competitions": "#/doc/book/14-避坑/trap-paid-competitions",
+    "#/doc/book/16-避坑/trap-predatory-journals": "#/doc/book/14-避坑/trap-predatory-journals",
+    "#/doc/book/16-避坑/trap-guaranteed-admission": "#/doc/book/14-避坑/trap-guaranteed-admission",
+    "#/doc/book/16-避坑/trap-expensive-job-coaching": "#/doc/book/14-避坑/trap-information-asymmetry",
+    "#/doc/book/16-避坑/trap-information-asymmetry": "#/doc/book/14-避坑/trap-information-asymmetry",
+    "#/doc/book/16-避坑/trap-opportunity-anxiety": "#/doc/book/14-避坑/trap-information-asymmetry"
   }
 }

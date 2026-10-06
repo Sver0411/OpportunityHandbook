@@ -3,8 +3,8 @@ id: doc-tools-bridgeplan
 title: 转行 Bridge Plan
 type: doc
 order: 9
-section: 10 时间线与工具
-section_order: 100
+section: 11 工具与模板
+section_order: 110
 subsection: 工具与模板
 sub_order: 9
 status: complete

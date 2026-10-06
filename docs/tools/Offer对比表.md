@@ -3,8 +3,8 @@ id: tool-offer-comparison-table
 title: Offer 对比表
 type: doc
 order: 1
-section: 10 时间线与工具
-section_order: 100
+section: 11 工具与模板
+section_order: 110
 subsection: 工具与模板
 sub_order: 2
 status: complete

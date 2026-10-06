@@ -31,8 +31,11 @@ CHAPTER_TARGET = {
     "07 当职业开始出现分岔": "book/07-当职业开始出现分岔",
     "08 其他同样成立的人生路径": "book/08-其他同样成立的人生路径",
     "09 专题手册": "book/09-专题手册",
-    "10 时间线与工具": "book/10-时间线与工具",
-    "11 避坑": "book/11-避坑",
+    "10 路径时间线": "book/10-路径时间线",
+    "11 工具与模板": "book/11-工具与模板",
+    "12 完整案例": "book/12-完整案例",
+    "13 操作手册": "book/13-操作手册",
+    "14 避坑": "book/14-避坑",
 }
 
 
@@ -108,7 +111,8 @@ def main() -> int:
 
     data = build()
     out = ROOT / "meta" / "navigation.json"
-    out.write_text(json.dumps(data, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
+    out.write_text(json.dumps(data, ensure_ascii=False, indent=2) + "\n",
+                   encoding="utf-8", newline="\n")
 
     if args.report:
         docs = {d.location: d for d in M.load_docs(ROOT)}

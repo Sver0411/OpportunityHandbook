@@ -3952,13 +3952,22 @@
               "nav_id": "09-25-12"
             },
             {
+              "title": "Forward Deployed Engineer（FDE）",
+              "target": {
+                "type": "doc",
+                "location": "docs/career-guides/FDE",
+                "anchor": ""
+              },
+              "nav_id": "09-25-13"
+            },
+            {
               "title": "技术支持 / 客户成功",
               "target": {
                 "type": "doc",
                 "location": "docs/career-guides/技术支持与客户成功",
                 "anchor": ""
               },
-              "nav_id": "09-25-13"
+              "nav_id": "09-25-14"
             },
             {
               "title": "Research Engineer",
@@ -3967,7 +3976,7 @@
                 "location": "docs/career-guides/研究工程师",
                 "anchor": ""
               },
-              "nav_id": "09-25-14"
+              "nav_id": "09-25-15"
             },
             {
               "title": "研究员 / 高校教职",
@@ -3976,7 +3985,7 @@
                 "location": "docs/career-guides/研究员与高校教职",
                 "anchor": ""
               },
-              "nav_id": "09-25-15"
+              "nav_id": "09-25-16"
             },
             {
               "title": "制造业研发",
@@ -3985,7 +3994,7 @@
                 "location": "docs/career-guides/制造业研发",
                 "anchor": ""
               },
-              "nav_id": "09-25-16"
+              "nav_id": "09-25-17"
             },
             {
               "title": "设计师（交互 / 视觉 / 工业）",
@@ -3994,7 +4003,7 @@
                 "location": "docs/career-guides/设计师",
                 "anchor": ""
               },
-              "nav_id": "09-25-17"
+              "nav_id": "09-25-18"
             },
             {
               "title": "财务与金融分析",
@@ -4003,7 +4012,7 @@
                 "location": "docs/career-guides/财务与金融分析",
                 "anchor": ""
               },
-              "nav_id": "09-25-18"
+              "nav_id": "09-25-19"
             },
             {
               "title": "咨询",
@@ -4012,7 +4021,7 @@
                 "location": "docs/career-guides/咨询",
                 "anchor": ""
               },
-              "nav_id": "09-25-19"
+              "nav_id": "09-25-20"
             },
             {
               "title": "教师（中小学 / 高校 / 培训）",
@@ -4021,7 +4030,7 @@
                 "location": "docs/career-guides/教师",
                 "anchor": ""
               },
-              "nav_id": "09-25-20"
+              "nav_id": "09-25-21"
             },
             {
               "title": "公共部门与事业单位",
@@ -4030,7 +4039,7 @@
                 "location": "docs/career-guides/公共部门",
                 "anchor": ""
               },
-              "nav_id": "09-25-21"
+              "nav_id": "09-25-22"
             },
             {
               "title": "技能型职业（电工 / 焊工 / 护理等）",
@@ -4039,7 +4048,7 @@
                 "location": "docs/career-guides/技能型职业",
                 "anchor": ""
               },
-              "nav_id": "09-25-22"
+              "nav_id": "09-25-23"
             },
             {
               "title": "技术与工程",
@@ -4048,7 +4057,7 @@
                 "location": "docs/careers/技术与工程",
                 "anchor": ""
               },
-              "nav_id": "09-25-23"
+              "nav_id": "09-25-24"
             },
             {
               "title": "AI 与数据",
@@ -4057,7 +4066,7 @@
                 "location": "docs/careers/AI与数据",
                 "anchor": ""
               },
-              "nav_id": "09-25-24"
+              "nav_id": "09-25-25"
             },
             {
               "title": "制造",
@@ -4066,7 +4075,7 @@
                 "location": "docs/careers/制造",
                 "anchor": ""
               },
-              "nav_id": "09-25-25"
+              "nav_id": "09-25-26"
             },
             {
               "title": "商业与金融",
@@ -4075,7 +4084,7 @@
                 "location": "docs/careers/商业与金融",
                 "anchor": ""
               },
-              "nav_id": "09-25-26"
+              "nav_id": "09-25-27"
             },
             {
               "title": "设计与创意",
@@ -4084,7 +4093,7 @@
                 "location": "docs/careers/设计与创意",
                 "anchor": ""
               },
-              "nav_id": "09-25-27"
+              "nav_id": "09-25-28"
             },
             {
               "title": "医疗健康",
@@ -4093,7 +4102,7 @@
                 "location": "docs/careers/医疗健康",
                 "anchor": ""
               },
-              "nav_id": "09-25-28"
+              "nav_id": "09-25-29"
             },
             {
               "title": "生命科学",
@@ -4102,7 +4111,7 @@
                 "location": "docs/careers/生命科学",
                 "anchor": ""
               },
-              "nav_id": "09-25-29"
+              "nav_id": "09-25-30"
             },
             {
               "title": "教育",
@@ -4111,7 +4120,7 @@
                 "location": "docs/careers/教育",
                 "anchor": ""
               },
-              "nav_id": "09-25-30"
+              "nav_id": "09-25-31"
             },
             {
               "title": "法律与公共事务",
@@ -4120,7 +4129,7 @@
                 "location": "docs/careers/法律与公共事务",
                 "anchor": ""
               },
-              "nav_id": "09-25-31"
+              "nav_id": "09-25-32"
             },
             {
               "title": "科研与高校",
@@ -4129,7 +4138,7 @@
                 "location": "docs/careers/科研与高校",
                 "anchor": ""
               },
-              "nav_id": "09-25-32"
+              "nav_id": "09-25-33"
             },
             {
               "title": "公共服务",
@@ -4138,7 +4147,7 @@
                 "location": "docs/careers/公共服务",
                 "anchor": ""
               },
-              "nav_id": "09-25-33"
+              "nav_id": "09-25-34"
             },
             {
               "title": "技能型职业",
@@ -4147,7 +4156,7 @@
                 "location": "docs/careers/技能型职业",
                 "anchor": ""
               },
-              "nav_id": "09-25-34"
+              "nav_id": "09-25-35"
             }
           ],
           "nav_id": "09-25"
@@ -4156,596 +4165,585 @@
       "nav_id": "09"
     },
     {
-      "title": "10 时间线与工具",
+      "title": "10 路径时间线",
       "target": {
         "type": "doc",
-        "location": "book/10-时间线与工具",
+        "location": "book/10-路径时间线",
         "anchor": ""
       },
       "children": [
         {
-          "title": "路径时间线",
+          "title": "高中毕业后的选择",
           "target": {
             "type": "doc",
-            "location": "book/10-时间线与工具",
-            "anchor": "路径时间线"
+            "location": "docs/timelines/高中到大学",
+            "anchor": ""
           },
-          "children": [
-            {
-              "title": "高中毕业后的选择",
-              "target": {
-                "type": "doc",
-                "location": "docs/timelines/高中到大学",
-                "anchor": ""
-              },
-              "nav_id": "10-01-01"
-            },
-            {
-              "title": "本科四年",
-              "target": {
-                "type": "doc",
-                "location": "docs/timelines/本科四年",
-                "anchor": ""
-              },
-              "nav_id": "10-01-02"
-            },
-            {
-              "title": "保研",
-              "target": {
-                "type": "doc",
-                "location": "docs/timelines/保研时间线",
-                "anchor": ""
-              },
-              "nav_id": "10-01-03"
-            },
-            {
-              "title": "考研",
-              "target": {
-                "type": "doc",
-                "location": "docs/timelines/考研时间线",
-                "anchor": ""
-              },
-              "nav_id": "10-01-04"
-            },
-            {
-              "title": "留学申请",
-              "target": {
-                "type": "doc",
-                "location": "docs/timelines/留学申请时间线",
-                "anchor": ""
-              },
-              "nav_id": "10-01-05"
-            },
-            {
-              "title": "博士申请",
-              "target": {
-                "type": "doc",
-                "location": "docs/timelines/博士申请时间线",
-                "anchor": ""
-              },
-              "nav_id": "10-01-06"
-            },
-            {
-              "title": "校招",
-              "target": {
-                "type": "doc",
-                "location": "docs/timelines/校招时间线",
-                "anchor": ""
-              },
-              "nav_id": "10-01-07"
-            },
-            {
-              "title": "科研入门",
-              "target": {
-                "type": "doc",
-                "location": "docs/timelines/科研入门时间线",
-                "anchor": ""
-              },
-              "nav_id": "10-01-08"
-            },
-            {
-              "title": "转行",
-              "target": {
-                "type": "doc",
-                "location": "docs/timelines/转行时间线",
-                "anchor": ""
-              },
-              "nav_id": "10-01-09"
-            }
-          ],
           "nav_id": "10-01"
         },
         {
-          "title": "工具与模板",
+          "title": "本科四年",
           "target": {
             "type": "doc",
-            "location": "book/10-时间线与工具",
-            "anchor": "工具与模板"
+            "location": "docs/timelines/本科四年",
+            "anchor": ""
           },
-          "children": [
-            {
-              "title": "机会价值判断表",
-              "target": {
-                "type": "doc",
-                "location": "docs/tools/机会价值判断表",
-                "anchor": ""
-              },
-              "nav_id": "10-02-01"
-            },
-            {
-              "title": "Offer 对比表",
-              "target": {
-                "type": "doc",
-                "location": "docs/tools/Offer对比表",
-                "anchor": ""
-              },
-              "nav_id": "10-02-02"
-            },
-            {
-              "title": "导师筛选表",
-              "target": {
-                "type": "doc",
-                "location": "docs/tools/导师筛选表",
-                "anchor": ""
-              },
-              "nav_id": "10-02-03"
-            },
-            {
-              "title": "联系导师邮件模板",
-              "target": {
-                "type": "doc",
-                "location": "docs/tools/联系导师邮件模板",
-                "anchor": ""
-              },
-              "nav_id": "10-02-04"
-            },
-            {
-              "title": "留学选校表",
-              "target": {
-                "type": "doc",
-                "location": "docs/tools/留学选校表",
-                "anchor": ""
-              },
-              "nav_id": "10-02-05"
-            },
-            {
-              "title": "求职追踪表",
-              "target": {
-                "type": "doc",
-                "location": "docs/tools/求职追踪表",
-                "anchor": ""
-              },
-              "nav_id": "10-02-06"
-            },
-            {
-              "title": "探索复盘模板",
-              "target": {
-                "type": "doc",
-                "location": "docs/tools/探索复盘模板",
-                "anchor": ""
-              },
-              "nav_id": "10-02-07"
-            },
-            {
-              "title": "职业资本盘点表",
-              "target": {
-                "type": "doc",
-                "location": "docs/tools/职业资本盘点表",
-                "anchor": ""
-              },
-              "nav_id": "10-02-08"
-            },
-            {
-              "title": "转行 Bridge Plan",
-              "target": {
-                "type": "doc",
-                "location": "docs/tools/转行BridgePlan",
-                "anchor": ""
-              },
-              "nav_id": "10-02-09"
-            },
-            {
-              "title": "时间线检查表",
-              "target": {
-                "type": "doc",
-                "location": "docs/tools/时间线检查表",
-                "anchor": ""
-              },
-              "nav_id": "10-02-10"
-            },
-            {
-              "title": "JD 拆解表",
-              "target": {
-                "type": "doc",
-                "location": "docs/tools/JD拆解表",
-                "anchor": ""
-              },
-              "nav_id": "10-02-11"
-            },
-            {
-              "title": "项目设计 Canvas",
-              "target": {
-                "type": "doc",
-                "location": "docs/tools/项目设计Canvas",
-                "anchor": ""
-              },
-              "nav_id": "10-02-12"
-            },
-            {
-              "title": "项目测试计划模板",
-              "target": {
-                "type": "doc",
-                "location": "docs/tools/项目测试计划",
-                "anchor": ""
-              },
-              "nav_id": "10-02-13"
-            },
-            {
-              "title": "Benchmark 记录表",
-              "target": {
-                "type": "doc",
-                "location": "docs/tools/Benchmark记录表",
-                "anchor": ""
-              },
-              "nav_id": "10-02-14"
-            },
-            {
-              "title": "技能 Gap 矩阵",
-              "target": {
-                "type": "doc",
-                "location": "docs/tools/技能Gap矩阵",
-                "anchor": ""
-              },
-              "nav_id": "10-02-15"
-            },
-            {
-              "title": "Failure Log",
-              "target": {
-                "type": "doc",
-                "location": "docs/tools/Failure日志",
-                "anchor": ""
-              },
-              "nav_id": "10-02-16"
-            },
-            {
-              "title": "README 检查表",
-              "target": {
-                "type": "doc",
-                "location": "docs/tools/README检查表",
-                "anchor": ""
-              },
-              "nav_id": "10-02-17"
-            },
-            {
-              "title": "项目发布检查表",
-              "target": {
-                "type": "doc",
-                "location": "docs/tools/发布检查表",
-                "anchor": ""
-              },
-              "nav_id": "10-02-18"
-            },
-            {
-              "title": "PR 检查表",
-              "target": {
-                "type": "doc",
-                "location": "docs/tools/PR检查表",
-                "anchor": ""
-              },
-              "nav_id": "10-02-19"
-            },
-            {
-              "title": "面试复盘表",
-              "target": {
-                "type": "doc",
-                "location": "docs/tools/面试复盘表",
-                "anchor": ""
-              },
-              "nav_id": "10-02-20"
-            },
-            {
-              "title": "求职漏斗诊断表",
-              "target": {
-                "type": "doc",
-                "location": "docs/tools/求职漏斗诊断表",
-                "anchor": ""
-              },
-              "nav_id": "10-02-21"
-            },
-            {
-              "title": "Research Question Canvas",
-              "target": {
-                "type": "doc",
-                "location": "docs/tools/ResearchQuestionCanvas",
-                "anchor": ""
-              },
-              "nav_id": "10-02-22"
-            },
-            {
-              "title": "Baseline 与消融设计表",
-              "target": {
-                "type": "doc",
-                "location": "docs/tools/Baseline与消融设计表",
-                "anchor": ""
-              },
-              "nav_id": "10-02-23"
-            },
-            {
-              "title": "实验记录模板",
-              "target": {
-                "type": "doc",
-                "location": "docs/tools/实验记录模板",
-                "anchor": ""
-              },
-              "nav_id": "10-02-24"
-            },
-            {
-              "title": "论文精读表（Paper Reading Sheet）",
-              "target": {
-                "type": "doc",
-                "location": "docs/tools/论文精读表",
-                "anchor": ""
-              },
-              "nav_id": "10-02-25"
-            },
-            {
-              "title": "文献地图（Literature Map）",
-              "target": {
-                "type": "doc",
-                "location": "docs/tools/文献地图",
-                "anchor": ""
-              },
-              "nav_id": "10-02-26"
-            },
-            {
-              "title": "客户沟通与需求确认表",
-              "target": {
-                "type": "doc",
-                "location": "docs/tools/客户沟通表",
-                "anchor": ""
-              },
-              "nav_id": "10-02-27"
-            },
-            {
-              "title": "自由职业报价单模板",
-              "target": {
-                "type": "doc",
-                "location": "docs/tools/自由职业报价单",
-                "anchor": ""
-              },
-              "nav_id": "10-02-28"
-            }
-          ],
           "nav_id": "10-02"
         },
         {
-          "title": "完整案例",
+          "title": "保研",
           "target": {
             "type": "doc",
-            "location": "book/10-时间线与工具",
-            "anchor": "完整案例"
+            "location": "docs/timelines/保研时间线",
+            "anchor": ""
           },
-          "children": [
-            {
-              "title": "Case：第一次做真正的项目",
-              "target": {
-                "type": "doc",
-                "location": "docs/cases/第一次做真正项目",
-                "anchor": ""
-              },
-              "nav_id": "10-03-01"
-            },
-            {
-              "title": "Case：本科生第一次进实验室",
-              "target": {
-                "type": "doc",
-                "location": "docs/cases/本科生第一次科研",
-                "anchor": ""
-              },
-              "nav_id": "10-03-02"
-            },
-            {
-              "title": "Case：第一次找技术实习",
-              "target": {
-                "type": "doc",
-                "location": "docs/cases/第一次找技术实习",
-                "anchor": ""
-              },
-              "nav_id": "10-03-03"
-            },
-            {
-              "title": "Case：第一次开源贡献",
-              "target": {
-                "type": "doc",
-                "location": "docs/cases/第一次开源贡献",
-                "anchor": ""
-              },
-              "nav_id": "10-03-04"
-            },
-            {
-              "title": "Case：从教程项目到工程作品（三种项目）",
-              "target": {
-                "type": "doc",
-                "location": "docs/cases/教程项目到工程作品",
-                "anchor": ""
-              },
-              "nav_id": "10-03-05"
-            },
-            {
-              "title": "Case：两个 Offer 怎么选",
-              "target": {
-                "type": "doc",
-                "location": "docs/cases/两个Offer怎么选",
-                "anchor": ""
-              },
-              "nav_id": "10-03-06"
-            },
-            {
-              "title": "Case：第一次转行",
-              "target": {
-                "type": "doc",
-                "location": "docs/cases/第一次转行",
-                "anchor": ""
-              },
-              "nav_id": "10-03-07"
-            },
-            {
-              "title": "Case：留学选校从几十个到一份名单",
-              "target": {
-                "type": "doc",
-                "location": "docs/cases/留学选校",
-                "anchor": ""
-              },
-              "nav_id": "10-03-08"
-            },
-            {
-              "title": "Case：联系导师的完整过程",
-              "target": {
-                "type": "doc",
-                "location": "docs/cases/联系导师",
-                "anchor": ""
-              },
-              "nav_id": "10-03-09"
-            },
-            {
-              "title": "Case：把一次竞赛变成作品集与简历素材",
-              "target": {
-                "type": "doc",
-                "location": "docs/cases/从竞赛到作品集",
-                "anchor": ""
-              },
-              "nav_id": "10-03-10"
-            },
-            {
-              "title": "Case：第一次面试失败之后",
-              "target": {
-                "type": "doc",
-                "location": "docs/cases/第一次面试失败",
-                "anchor": ""
-              },
-              "nav_id": "10-03-11"
-            },
-            {
-              "title": "Case：第一次自由职业客户",
-              "target": {
-                "type": "doc",
-                "location": "docs/cases/第一次自由职业客户",
-                "anchor": ""
-              },
-              "nav_id": "10-03-12"
-            }
-          ],
           "nav_id": "10-03"
         },
         {
-          "title": "操作手册",
+          "title": "考研",
           "target": {
             "type": "doc",
-            "location": "book/10-时间线与工具",
-            "anchor": "操作手册"
+            "location": "docs/timelines/考研时间线",
+            "anchor": ""
           },
-          "children": [
-            {
-              "title": "Playbook：第一次做项目",
-              "target": {
-                "type": "doc",
-                "location": "docs/playbooks/第一次做项目",
-                "anchor": ""
-              },
-              "nav_id": "10-04-01"
-            },
-            {
-              "title": "Playbook：第一次联系导师",
-              "target": {
-                "type": "doc",
-                "location": "docs/playbooks/第一次联系导师",
-                "anchor": ""
-              },
-              "nav_id": "10-04-02"
-            },
-            {
-              "title": "Playbook：第一次开源贡献",
-              "target": {
-                "type": "doc",
-                "location": "docs/playbooks/第一次开源贡献",
-                "anchor": ""
-              },
-              "nav_id": "10-04-03"
-            },
-            {
-              "title": "Playbook：第一次找实习",
-              "target": {
-                "type": "doc",
-                "location": "docs/playbooks/第一次找实习",
-                "anchor": ""
-              },
-              "nav_id": "10-04-04"
-            },
-            {
-              "title": "Playbook：第一次技术面试",
-              "target": {
-                "type": "doc",
-                "location": "docs/playbooks/第一次技术面试",
-                "anchor": ""
-              },
-              "nav_id": "10-04-05"
-            },
-            {
-              "title": "Playbook：第一次谈薪",
-              "target": {
-                "type": "doc",
-                "location": "docs/playbooks/第一次谈薪",
-                "anchor": ""
-              },
-              "nav_id": "10-04-06"
-            },
-            {
-              "title": "Playbook：第一次接单",
-              "target": {
-                "type": "doc",
-                "location": "docs/playbooks/第一次接单",
-                "anchor": ""
-              },
-              "nav_id": "10-04-07"
-            },
-            {
-              "title": "Playbook：第一次参加 Hackathon",
-              "target": {
-                "type": "doc",
-                "location": "docs/playbooks/第一次参加 Hackathon",
-                "anchor": ""
-              },
-              "nav_id": "10-04-08"
-            },
-            {
-              "title": "Playbook：第一次写论文",
-              "target": {
-                "type": "doc",
-                "location": "docs/playbooks/第一次写论文",
-                "anchor": ""
-              },
-              "nav_id": "10-04-09"
-            },
-            {
-              "title": "Playbook：第一次做实验与记录",
-              "target": {
-                "type": "doc",
-                "location": "docs/playbooks/第一次做实验",
-                "anchor": ""
-              },
-              "nav_id": "10-04-10"
-            }
-          ],
           "nav_id": "10-04"
+        },
+        {
+          "title": "留学申请",
+          "target": {
+            "type": "doc",
+            "location": "docs/timelines/留学申请时间线",
+            "anchor": ""
+          },
+          "nav_id": "10-05"
+        },
+        {
+          "title": "博士申请",
+          "target": {
+            "type": "doc",
+            "location": "docs/timelines/博士申请时间线",
+            "anchor": ""
+          },
+          "nav_id": "10-06"
+        },
+        {
+          "title": "校招",
+          "target": {
+            "type": "doc",
+            "location": "docs/timelines/校招时间线",
+            "anchor": ""
+          },
+          "nav_id": "10-07"
+        },
+        {
+          "title": "科研入门",
+          "target": {
+            "type": "doc",
+            "location": "docs/timelines/科研入门时间线",
+            "anchor": ""
+          },
+          "nav_id": "10-08"
+        },
+        {
+          "title": "转行",
+          "target": {
+            "type": "doc",
+            "location": "docs/timelines/转行时间线",
+            "anchor": ""
+          },
+          "nav_id": "10-09"
         }
       ],
       "nav_id": "10"
     },
     {
-      "title": "11 避坑",
+      "title": "11 工具与模板",
       "target": {
         "type": "doc",
-        "location": "book/11-避坑",
+        "location": "book/11-工具与模板",
+        "anchor": ""
+      },
+      "children": [
+        {
+          "title": "机会价值判断表",
+          "target": {
+            "type": "doc",
+            "location": "docs/tools/机会价值判断表",
+            "anchor": ""
+          },
+          "nav_id": "11-01"
+        },
+        {
+          "title": "Offer 对比表",
+          "target": {
+            "type": "doc",
+            "location": "docs/tools/Offer对比表",
+            "anchor": ""
+          },
+          "nav_id": "11-02"
+        },
+        {
+          "title": "探索复盘模板",
+          "target": {
+            "type": "doc",
+            "location": "docs/tools/探索复盘模板",
+            "anchor": ""
+          },
+          "nav_id": "11-03"
+        },
+        {
+          "title": "职业资本盘点表",
+          "target": {
+            "type": "doc",
+            "location": "docs/tools/职业资本盘点表",
+            "anchor": ""
+          },
+          "nav_id": "11-04"
+        },
+        {
+          "title": "转行 Bridge Plan",
+          "target": {
+            "type": "doc",
+            "location": "docs/tools/转行BridgePlan",
+            "anchor": ""
+          },
+          "nav_id": "11-05"
+        },
+        {
+          "title": "导师筛选表",
+          "target": {
+            "type": "doc",
+            "location": "docs/tools/导师筛选表",
+            "anchor": ""
+          },
+          "nav_id": "11-06"
+        },
+        {
+          "title": "联系导师邮件模板",
+          "target": {
+            "type": "doc",
+            "location": "docs/tools/联系导师邮件模板",
+            "anchor": ""
+          },
+          "nav_id": "11-07"
+        },
+        {
+          "title": "留学选校表",
+          "target": {
+            "type": "doc",
+            "location": "docs/tools/留学选校表",
+            "anchor": ""
+          },
+          "nav_id": "11-08"
+        },
+        {
+          "title": "Research Question Canvas",
+          "target": {
+            "type": "doc",
+            "location": "docs/tools/ResearchQuestionCanvas",
+            "anchor": ""
+          },
+          "nav_id": "11-09"
+        },
+        {
+          "title": "Baseline 与消融设计表",
+          "target": {
+            "type": "doc",
+            "location": "docs/tools/Baseline与消融设计表",
+            "anchor": ""
+          },
+          "nav_id": "11-10"
+        },
+        {
+          "title": "实验记录模板",
+          "target": {
+            "type": "doc",
+            "location": "docs/tools/实验记录模板",
+            "anchor": ""
+          },
+          "nav_id": "11-11"
+        },
+        {
+          "title": "论文精读表（Paper Reading Sheet）",
+          "target": {
+            "type": "doc",
+            "location": "docs/tools/论文精读表",
+            "anchor": ""
+          },
+          "nav_id": "11-12"
+        },
+        {
+          "title": "文献地图（Literature Map）",
+          "target": {
+            "type": "doc",
+            "location": "docs/tools/文献地图",
+            "anchor": ""
+          },
+          "nav_id": "11-13"
+        },
+        {
+          "title": "求职追踪表",
+          "target": {
+            "type": "doc",
+            "location": "docs/tools/求职追踪表",
+            "anchor": ""
+          },
+          "nav_id": "11-14"
+        },
+        {
+          "title": "JD 拆解表",
+          "target": {
+            "type": "doc",
+            "location": "docs/tools/JD拆解表",
+            "anchor": ""
+          },
+          "nav_id": "11-15"
+        },
+        {
+          "title": "面试复盘表",
+          "target": {
+            "type": "doc",
+            "location": "docs/tools/面试复盘表",
+            "anchor": ""
+          },
+          "nav_id": "11-16"
+        },
+        {
+          "title": "求职漏斗诊断表",
+          "target": {
+            "type": "doc",
+            "location": "docs/tools/求职漏斗诊断表",
+            "anchor": ""
+          },
+          "nav_id": "11-17"
+        },
+        {
+          "title": "项目设计 Canvas",
+          "target": {
+            "type": "doc",
+            "location": "docs/tools/项目设计Canvas",
+            "anchor": ""
+          },
+          "nav_id": "11-18"
+        },
+        {
+          "title": "项目测试计划模板",
+          "target": {
+            "type": "doc",
+            "location": "docs/tools/项目测试计划",
+            "anchor": ""
+          },
+          "nav_id": "11-19"
+        },
+        {
+          "title": "Benchmark 记录表",
+          "target": {
+            "type": "doc",
+            "location": "docs/tools/Benchmark记录表",
+            "anchor": ""
+          },
+          "nav_id": "11-20"
+        },
+        {
+          "title": "技能 Gap 矩阵",
+          "target": {
+            "type": "doc",
+            "location": "docs/tools/技能Gap矩阵",
+            "anchor": ""
+          },
+          "nav_id": "11-21"
+        },
+        {
+          "title": "Failure Log",
+          "target": {
+            "type": "doc",
+            "location": "docs/tools/Failure日志",
+            "anchor": ""
+          },
+          "nav_id": "11-22"
+        },
+        {
+          "title": "README 检查表",
+          "target": {
+            "type": "doc",
+            "location": "docs/tools/README检查表",
+            "anchor": ""
+          },
+          "nav_id": "11-23"
+        },
+        {
+          "title": "项目发布检查表",
+          "target": {
+            "type": "doc",
+            "location": "docs/tools/发布检查表",
+            "anchor": ""
+          },
+          "nav_id": "11-24"
+        },
+        {
+          "title": "PR 检查表",
+          "target": {
+            "type": "doc",
+            "location": "docs/tools/PR检查表",
+            "anchor": ""
+          },
+          "nav_id": "11-25"
+        },
+        {
+          "title": "客户沟通与需求确认表",
+          "target": {
+            "type": "doc",
+            "location": "docs/tools/客户沟通表",
+            "anchor": ""
+          },
+          "nav_id": "11-26"
+        },
+        {
+          "title": "自由职业报价单模板",
+          "target": {
+            "type": "doc",
+            "location": "docs/tools/自由职业报价单",
+            "anchor": ""
+          },
+          "nav_id": "11-27"
+        },
+        {
+          "title": "时间线检查表",
+          "target": {
+            "type": "doc",
+            "location": "docs/tools/时间线检查表",
+            "anchor": ""
+          },
+          "nav_id": "11-28"
+        }
+      ],
+      "nav_id": "11"
+    },
+    {
+      "title": "12 完整案例",
+      "target": {
+        "type": "doc",
+        "location": "book/12-完整案例",
+        "anchor": ""
+      },
+      "children": [
+        {
+          "title": "Case：第一次做真正的项目",
+          "target": {
+            "type": "doc",
+            "location": "docs/cases/第一次做真正项目",
+            "anchor": ""
+          },
+          "nav_id": "12-01"
+        },
+        {
+          "title": "Case：本科生第一次进实验室",
+          "target": {
+            "type": "doc",
+            "location": "docs/cases/本科生第一次科研",
+            "anchor": ""
+          },
+          "nav_id": "12-02"
+        },
+        {
+          "title": "Case：第一次找技术实习",
+          "target": {
+            "type": "doc",
+            "location": "docs/cases/第一次找技术实习",
+            "anchor": ""
+          },
+          "nav_id": "12-03"
+        },
+        {
+          "title": "Case：第一次开源贡献",
+          "target": {
+            "type": "doc",
+            "location": "docs/cases/第一次开源贡献",
+            "anchor": ""
+          },
+          "nav_id": "12-04"
+        },
+        {
+          "title": "Case：从教程项目到工程作品（三种项目）",
+          "target": {
+            "type": "doc",
+            "location": "docs/cases/教程项目到工程作品",
+            "anchor": ""
+          },
+          "nav_id": "12-05"
+        },
+        {
+          "title": "Case：两个 Offer 怎么选",
+          "target": {
+            "type": "doc",
+            "location": "docs/cases/两个Offer怎么选",
+            "anchor": ""
+          },
+          "nav_id": "12-06"
+        },
+        {
+          "title": "Case：第一次转行",
+          "target": {
+            "type": "doc",
+            "location": "docs/cases/第一次转行",
+            "anchor": ""
+          },
+          "nav_id": "12-07"
+        },
+        {
+          "title": "Case：留学选校从几十个到一份名单",
+          "target": {
+            "type": "doc",
+            "location": "docs/cases/留学选校",
+            "anchor": ""
+          },
+          "nav_id": "12-08"
+        },
+        {
+          "title": "Case：联系导师的完整过程",
+          "target": {
+            "type": "doc",
+            "location": "docs/cases/联系导师",
+            "anchor": ""
+          },
+          "nav_id": "12-09"
+        },
+        {
+          "title": "Case：把一次竞赛变成作品集与简历素材",
+          "target": {
+            "type": "doc",
+            "location": "docs/cases/从竞赛到作品集",
+            "anchor": ""
+          },
+          "nav_id": "12-10"
+        },
+        {
+          "title": "Case：第一次面试失败之后",
+          "target": {
+            "type": "doc",
+            "location": "docs/cases/第一次面试失败",
+            "anchor": ""
+          },
+          "nav_id": "12-11"
+        },
+        {
+          "title": "Case：第一次自由职业客户",
+          "target": {
+            "type": "doc",
+            "location": "docs/cases/第一次自由职业客户",
+            "anchor": ""
+          },
+          "nav_id": "12-12"
+        }
+      ],
+      "nav_id": "12"
+    },
+    {
+      "title": "13 操作手册",
+      "target": {
+        "type": "doc",
+        "location": "book/13-操作手册",
+        "anchor": ""
+      },
+      "children": [
+        {
+          "title": "Playbook：第一次做项目",
+          "target": {
+            "type": "doc",
+            "location": "docs/playbooks/第一次做项目",
+            "anchor": ""
+          },
+          "nav_id": "13-01"
+        },
+        {
+          "title": "Playbook：第一次联系导师",
+          "target": {
+            "type": "doc",
+            "location": "docs/playbooks/第一次联系导师",
+            "anchor": ""
+          },
+          "nav_id": "13-02"
+        },
+        {
+          "title": "Playbook：第一次开源贡献",
+          "target": {
+            "type": "doc",
+            "location": "docs/playbooks/第一次开源贡献",
+            "anchor": ""
+          },
+          "nav_id": "13-03"
+        },
+        {
+          "title": "Playbook：第一次找实习",
+          "target": {
+            "type": "doc",
+            "location": "docs/playbooks/第一次找实习",
+            "anchor": ""
+          },
+          "nav_id": "13-04"
+        },
+        {
+          "title": "Playbook：第一次技术面试",
+          "target": {
+            "type": "doc",
+            "location": "docs/playbooks/第一次技术面试",
+            "anchor": ""
+          },
+          "nav_id": "13-05"
+        },
+        {
+          "title": "Playbook：第一次谈薪",
+          "target": {
+            "type": "doc",
+            "location": "docs/playbooks/第一次谈薪",
+            "anchor": ""
+          },
+          "nav_id": "13-06"
+        },
+        {
+          "title": "Playbook：第一次接单",
+          "target": {
+            "type": "doc",
+            "location": "docs/playbooks/第一次接单",
+            "anchor": ""
+          },
+          "nav_id": "13-07"
+        },
+        {
+          "title": "Playbook：第一次参加 Hackathon",
+          "target": {
+            "type": "doc",
+            "location": "docs/playbooks/第一次参加 Hackathon",
+            "anchor": ""
+          },
+          "nav_id": "13-08"
+        },
+        {
+          "title": "Playbook：第一次写论文",
+          "target": {
+            "type": "doc",
+            "location": "docs/playbooks/第一次写论文",
+            "anchor": ""
+          },
+          "nav_id": "13-09"
+        },
+        {
+          "title": "Playbook：第一次做实验与记录",
+          "target": {
+            "type": "doc",
+            "location": "docs/playbooks/第一次做实验",
+            "anchor": ""
+          },
+          "nav_id": "13-10"
+        }
+      ],
+      "nav_id": "13"
+    },
+    {
+      "title": "14 避坑",
+      "target": {
+        "type": "doc",
+        "location": "book/14-避坑",
         "anchor": ""
       },
       "children": [
@@ -4755,7 +4753,7 @@
             "type": "entry",
             "entry_id": "trap-guaranteed-admission"
           },
-          "nav_id": "11-01"
+          "nav_id": "14-01"
         },
         {
           "title": "求职与实习",
@@ -4763,7 +4761,7 @@
             "type": "entry",
             "entry_id": "trap-fake-internships-and-paid-research"
           },
-          "nav_id": "11-02"
+          "nav_id": "14-02"
         },
         {
           "title": "科研",
@@ -4771,7 +4769,7 @@
             "type": "entry",
             "entry_id": "trap-predatory-journals"
           },
-          "nav_id": "11-03"
+          "nav_id": "14-03"
         },
         {
           "title": "竞赛",
@@ -4779,7 +4777,7 @@
             "type": "entry",
             "entry_id": "trap-paid-competitions"
           },
-          "nav_id": "11-04"
+          "nav_id": "14-04"
         },
         {
           "title": "证书与培训",
@@ -4787,7 +4785,7 @@
             "type": "entry",
             "entry_id": "trap-certificate-hoarding"
           },
-          "nav_id": "11-05"
+          "nav_id": "14-05"
         },
         {
           "title": "项目与履历",
@@ -4795,7 +4793,7 @@
             "type": "entry",
             "entry_id": "trap-collecting-courses-and-half-projects"
           },
-          "nav_id": "11-06"
+          "nav_id": "14-06"
         },
         {
           "title": "创业与副业",
@@ -4803,7 +4801,7 @@
             "type": "entry",
             "entry_id": "trap-startup-side-gig"
           },
-          "nav_id": "11-07"
+          "nav_id": "14-07"
         },
         {
           "title": "信息差、机会焦虑与从众",
@@ -4811,10 +4809,10 @@
             "type": "entry",
             "entry_id": "trap-information-asymmetry"
           },
-          "nav_id": "11-08"
+          "nav_id": "14-08"
         }
       ],
-      "nav_id": "11"
+      "nav_id": "14"
     }
   ]
 }

@@ -125,7 +125,7 @@ def main() -> int:
             return 1
         print("内容路线图与 metadata 一致（忽略生成日期）")
         return 0
-    OUT.write_text(text, encoding="utf-8")
+    OUT.write_text(text, encoding="utf-8", newline="\n")
     print("已重新生成 docs/ROADMAP.md")
     return 0
 

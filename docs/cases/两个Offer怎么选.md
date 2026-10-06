@@ -3,8 +3,8 @@ id: depth-case-两个Offer怎么选
 title: Case：两个 Offer 怎么选
 type: doc
 order: 902
-section: 10 时间线与工具
-section_order: 100
+section: 12 完整案例
+section_order: 120
 subsection: 完整案例
 sub_order: 6
 status: complete
