@@ -692,10 +692,10 @@
       "nav_id": "02"
     },
     {
-      "title": "03 开始积累真正能留下来的经历",
+      "title": "03 做项目、打比赛、进实验室",
       "target": {
         "type": "doc",
-        "location": "book/03-开始积累真正能留下来的经历",
+        "location": "book/03-做项目、打比赛、进实验室",
         "anchor": ""
       },
       "children": [
@@ -703,7 +703,7 @@
           "title": "项目与作品",
           "target": {
             "type": "doc",
-            "location": "book/03-开始积累真正能留下来的经历",
+            "location": "book/03-做项目、打比赛、进实验室",
             "anchor": "项目与作品"
           },
           "children": [
@@ -778,7 +778,7 @@
           "title": "竞赛",
           "target": {
             "type": "doc",
-            "location": "book/03-开始积累真正能留下来的经历",
+            "location": "book/03-做项目、打比赛、进实验室",
             "anchor": "竞赛"
           },
           "children": [
@@ -861,7 +861,7 @@
           "title": "科研初体验",
           "target": {
             "type": "doc",
-            "location": "book/03-开始积累真正能留下来的经历",
+            "location": "book/03-做项目、打比赛、进实验室",
             "anchor": "科研初体验"
           },
           "children": [
@@ -920,7 +920,7 @@
           "title": "开源与公共贡献",
           "target": {
             "type": "doc",
-            "location": "book/03-开始积累真正能留下来的经历",
+            "location": "book/03-做项目、打比赛、进实验室",
             "anchor": "开源与公共贡献"
           },
           "children": [
@@ -987,7 +987,7 @@
           "title": "社群与活动",
           "target": {
             "type": "doc",
-            "location": "book/03-开始积累真正能留下来的经历",
+            "location": "book/03-做项目、打比赛、进实验室",
             "anchor": "社群与活动"
           },
           "children": [
@@ -1046,7 +1046,7 @@
           "title": "实习准备",
           "target": {
             "type": "doc",
-            "location": "book/03-开始积累真正能留下来的经历",
+            "location": "book/03-做项目、打比赛、进实验室",
             "anchor": "实习准备"
           },
           "children": [
@@ -1105,10 +1105,10 @@
       "nav_id": "03"
     },
     {
-      "title": "04 当你开始面对第一次重要分流",
+      "title": "04 升学、就业还是出国",
       "target": {
         "type": "doc",
-        "location": "book/04-当你开始面对第一次重要分流",
+        "location": "book/04-升学、就业还是出国",
         "anchor": ""
       },
       "children": [
@@ -1116,7 +1116,7 @@
           "title": "先决定主线",
           "target": {
             "type": "doc",
-            "location": "book/04-当你开始面对第一次重要分流",
+            "location": "book/04-升学、就业还是出国",
             "anchor": "先决定主线"
           },
           "children": [
@@ -1167,7 +1167,7 @@
           "title": "国内升学",
           "target": {
             "type": "doc",
-            "location": "book/04-当你开始面对第一次重要分流",
+            "location": "book/04-升学、就业还是出国",
             "anchor": "国内升学"
           },
           "children": [
@@ -1266,7 +1266,7 @@
           "title": "海外升学",
           "target": {
             "type": "doc",
-            "location": "book/04-当你开始面对第一次重要分流",
+            "location": "book/04-升学、就业还是出国",
             "anchor": "海外升学"
           },
           "children": [
@@ -1365,7 +1365,7 @@
           "title": "深入科研",
           "target": {
             "type": "doc",
-            "location": "book/04-当你开始面对第一次重要分流",
+            "location": "book/04-升学、就业还是出国",
             "anchor": "深入科研"
           },
           "children": [
@@ -1448,7 +1448,7 @@
           "title": "实习进一步升级",
           "target": {
             "type": "doc",
-            "location": "book/04-当你开始面对第一次重要分流",
+            "location": "book/04-升学、就业还是出国",
             "anchor": "实习进一步升级"
           },
           "children": [
@@ -1507,7 +1507,7 @@
           "title": "资助",
           "target": {
             "type": "doc",
-            "location": "book/04-当你开始面对第一次重要分流",
+            "location": "book/04-升学、就业还是出国",
             "anchor": "资助"
           },
           "children": [
@@ -1990,10 +1990,10 @@
       "nav_id": "05"
     },
     {
-      "title": "06 进入职场以后继续积累",
+      "title": "06 从新人到能独立负责",
       "target": {
         "type": "doc",
-        "location": "book/06-进入职场以后继续积累",
+        "location": "book/06-从新人到能独立负责",
         "anchor": ""
       },
       "children": [
@@ -2001,7 +2001,7 @@
           "title": "刚进入职场",
           "target": {
             "type": "doc",
-            "location": "book/06-进入职场以后继续积累",
+            "location": "book/06-从新人到能独立负责",
             "anchor": "刚进入职场"
           },
           "children": [
@@ -2052,7 +2052,7 @@
           "title": "从执行到独立负责",
           "target": {
             "type": "doc",
-            "location": "book/06-进入职场以后继续积累",
+            "location": "book/06-从新人到能独立负责",
             "anchor": "从执行到独立负责"
           },
           "children": [
@@ -2103,7 +2103,7 @@
           "title": "工作后继续学习",
           "target": {
             "type": "doc",
-            "location": "book/06-进入职场以后继续积累",
+            "location": "book/06-从新人到能独立负责",
             "anchor": "工作后继续学习"
           },
           "children": [
@@ -2162,7 +2162,7 @@
           "title": "建立行业关系",
           "target": {
             "type": "doc",
-            "location": "book/06-进入职场以后继续积累",
+            "location": "book/06-从新人到能独立负责",
             "anchor": "建立行业关系"
           },
           "children": [
@@ -2229,7 +2229,7 @@
           "title": "第一次重新选择",
           "target": {
             "type": "doc",
-            "location": "book/06-进入职场以后继续积累",
+            "location": "book/06-从新人到能独立负责",
             "anchor": "第一次重新选择"
           },
           "children": [
@@ -2280,10 +2280,10 @@
       "nav_id": "06"
     },
     {
-      "title": "07 当职业开始出现分岔",
+      "title": "07 晋升、跳槽还是转行",
       "target": {
         "type": "doc",
-        "location": "book/07-当职业开始出现分岔",
+        "location": "book/07-晋升、跳槽还是转行",
         "anchor": ""
       },
       "children": [
@@ -2291,7 +2291,7 @@
           "title": "晋升",
           "target": {
             "type": "doc",
-            "location": "book/07-当职业开始出现分岔",
+            "location": "book/07-晋升、跳槽还是转行",
             "anchor": "晋升"
           },
           "children": [
@@ -2342,7 +2342,7 @@
           "title": "专家路线",
           "target": {
             "type": "doc",
-            "location": "book/07-当职业开始出现分岔",
+            "location": "book/07-晋升、跳槽还是转行",
             "anchor": "专家路线"
           },
           "children": [
@@ -2385,7 +2385,7 @@
           "title": "管理路线",
           "target": {
             "type": "doc",
-            "location": "book/07-当职业开始出现分岔",
+            "location": "book/07-晋升、跳槽还是转行",
             "anchor": "管理路线"
           },
           "children": [
@@ -2444,7 +2444,7 @@
           "title": "跳槽",
           "target": {
             "type": "doc",
-            "location": "book/07-当职业开始出现分岔",
+            "location": "book/07-晋升、跳槽还是转行",
             "anchor": "跳槽"
           },
           "children": [
@@ -2503,7 +2503,7 @@
           "title": "转行",
           "target": {
             "type": "doc",
-            "location": "book/07-当职业开始出现分岔",
+            "location": "book/07-晋升、跳槽还是转行",
             "anchor": "转行"
           },
           "children": [
@@ -2570,7 +2570,7 @@
           "title": "再次进入教育体系",
           "target": {
             "type": "doc",
-            "location": "book/07-当职业开始出现分岔",
+            "location": "book/07-晋升、跳槽还是转行",
             "anchor": "再次进入教育体系"
           },
           "children": [
@@ -2621,10 +2621,10 @@
       "nav_id": "07"
     },
     {
-      "title": "08 其他同样成立的人生路径",
+      "title": "08 自由职业、副业与创业",
       "target": {
         "type": "doc",
-        "location": "book/08-其他同样成立的人生路径",
+        "location": "book/08-自由职业、副业与创业",
         "anchor": ""
       },
       "children": [
@@ -2632,7 +2632,7 @@
           "title": "自由职业",
           "target": {
             "type": "doc",
-            "location": "book/08-其他同样成立的人生路径",
+            "location": "book/08-自由职业、副业与创业",
             "anchor": "自由职业"
           },
           "children": [
@@ -2683,7 +2683,7 @@
           "title": "副业",
           "target": {
             "type": "doc",
-            "location": "book/08-其他同样成立的人生路径",
+            "location": "book/08-自由职业、副业与创业",
             "anchor": "副业"
           },
           "children": [
@@ -2742,7 +2742,7 @@
           "title": "创业",
           "target": {
             "type": "doc",
-            "location": "book/08-其他同样成立的人生路径",
+            "location": "book/08-自由职业、副业与创业",
             "anchor": "创业"
           },
           "children": [

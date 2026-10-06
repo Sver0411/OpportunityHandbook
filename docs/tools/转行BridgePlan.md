@@ -16,7 +16,7 @@ last_verified: 2026-09-22
 
 # 转行 Bridge Plan
 
-转行前先判断什么，见主线 [转行前先判断什么](../../book/07-当职业开始出现分岔.md#switch-before-decide)；过渡机会的概念见 [Bridge Opportunity](../../book/07-当职业开始出现分岔.md#career-bridge-opportunity)。
+转行前先判断什么，见主线 [转行前先判断什么](../../book/07-晋升、跳槽还是转行.md#switch-before-decide)；过渡机会的概念见 [Bridge Opportunity](../../book/07-晋升、跳槽还是转行.md#career-bridge-opportunity)。
 
 ## 计划模板（可直接复制填写）
 
@@ -55,7 +55,7 @@ Bridge Opportunity（同时沾着两边的位置）：
 
 ## 相关条目
 
-[降薪转行](../../book/07-当职业开始出现分岔.md#career-pay-cut-transition)、[换行业](../../book/07-当职业开始出现分岔.md#hop-change-industry)、[职业资本盘点表](职业资本盘点表.md)。
+[降薪转行](../../book/07-晋升、跳槽还是转行.md#career-pay-cut-transition)、[换行业](../../book/07-晋升、跳槽还是转行.md#hop-change-industry)、[职业资本盘点表](职业资本盘点表.md)。
 
 ## 来源与更新
 

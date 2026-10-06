@@ -78,7 +78,7 @@ last_verified: 2026-09-29
 
 ## 相关
 
-[晋升：证据、影响与流程](晋升材料.md)、[要不要转管理](../../book/07-当职业开始出现分岔.md#mgmt-ic-or-manager)、[技术还是管理（对照表）](../../book/07-当职业开始出现分岔.md#career-management-track)。
+[晋升：证据、影响与流程](晋升材料.md)、[要不要转管理](../../book/07-晋升、跳槽还是转行.md#mgmt-ic-or-manager)、[技术还是管理（对照表）](../../book/07-晋升、跳槽还是转行.md#career-management-track)。
 
 ## 来源与更新
 

@@ -122,8 +122,8 @@ PLAN: list[tuple[str, dict, list]] = [
         ]),
     ]),
 
-    ("03-开始积累真正能留下来的经历.md", dict(
-        id="chapter-03-experience", title="开始积累真正能留下来的经历", section="03 开始积累真正能留下来的经历",
+    ("03-做项目、打比赛、进实验室.md", dict(
+        id="chapter-03-experience", title="做项目、打比赛、进实验室", section="03 做项目、打比赛、进实验室",
         section_order=30, order=3,
         summary="把时间换成以后仍然存在的成果：项目、竞赛、科研初体验、开源、社群与实习准备。",
     ), [
@@ -157,8 +157,8 @@ PLAN: list[tuple[str, dict, list]] = [
         ("实习准备", ["internship-worth-it", "internship-types", "internship-how-to-find", "internship-remote"]),
     ]),
 
-    ("04-当你开始面对第一次重要分流.md", dict(
-        id="chapter-04-first-fork", title="当你开始面对第一次重要分流", section="04 当你开始面对第一次重要分流",
+    ("04-升学、就业还是出国.md", dict(
+        id="chapter-04-first-fork", title="升学、就业还是出国", section="04 升学、就业还是出国",
         section_order=40, order=4,
         summary="升学、留学、科研与实习之间怎么选：先定主线，再准备材料，最后谈成本与资助。",
     ), [
@@ -227,8 +227,8 @@ PLAN: list[tuple[str, dict, list]] = [
         ]),
     ]),
 
-    ("06-进入职场以后继续积累.md", dict(
-        id="chapter-06-early-career", title="进入职场以后继续积累", section="06 进入职场以后继续积累",
+    ("06-从新人到能独立负责.md", dict(
+        id="chapter-06-early-career", title="从新人到能独立负责", section="06 从新人到能独立负责",
         section_order=60, order=6,
         summary="从学会一份工作到独立负责：职场前几年的积累方式、行业关系与第一次重新选择。",
     ), [
@@ -262,8 +262,8 @@ PLAN: list[tuple[str, dict, list]] = [
         ]),
     ]),
 
-    ("07-当职业开始出现分岔.md", dict(
-        id="chapter-07-career-fork", title="当职业开始出现分岔", section="07 当职业开始出现分岔",
+    ("07-晋升、跳槽还是转行.md", dict(
+        id="chapter-07-career-fork", title="晋升、跳槽还是转行", section="07 晋升、跳槽还是转行",
         section_order=70, order=7,
         summary="已有职业资本之后怎么重新配置：晋升、专家与管理路线、跳槽、转行，以及再次进入教育体系。",
     ), [
@@ -291,8 +291,8 @@ PLAN: list[tuple[str, dict, list]] = [
         ]),
     ]),
 
-    ("08-其他同样成立的人生路径.md", dict(
-        id="chapter-08-other-paths", title="其他同样成立的人生路径", section="08 其他同样成立的人生路径",
+    ("08-自由职业、副业与创业.md", dict(
+        id="chapter-08-other-paths", title="自由职业、副业与创业", section="08 自由职业、副业与创业",
         section_order=80, order=8,
         summary="自由职业、副业与创业：从验证需求到拿到第一批用户，以及路径之间的转换。",
     ), [

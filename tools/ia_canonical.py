@@ -95,7 +95,7 @@ TREE = """
     厂商认证 @n:certificate-vendor
     不要为了证书而考证 @n:certificate-not-for-certificates
 
-03 开始积累真正能留下来的经历
+03 做项目、打比赛、进实验室
   项目与作品
     什么才算真正的项目 @e:project-what-is-real
     教程项目有没有价值 @e:project-tutorial
@@ -145,7 +145,7 @@ TREE = """
     实习和科研怎么选 @n:internship-vs-research
     怎么判断一段实习值不值得 @e:internship-remote
 
-04 当你开始面对第一次重要分流
+04 升学、就业还是出国
   先决定主线
     升学还是工作 @n:fork-study-or-work
     国内还是海外 @n:fork-home-or-abroad
@@ -252,7 +252,7 @@ TREE = """
     空窗期怎么处理 @n:job-gap-period
     第一次选择错了怎么办 @n:job-first-choice-wrong
 
-06 进入职场以后继续积累
+06 从新人到能独立负责
   刚进入职场
     怎么度过试用期 @n:work-probation
     怎么真正学会一份工作 @n:work-learn-the-job
@@ -287,7 +287,7 @@ TREE = """
     工作后读研 @n:work-grad-school-after-work
     海外工作 @n:work-overseas-job
 
-07 当职业开始出现分岔
+07 晋升、跳槽还是转行
   晋升
     Senior 意味着什么 @e:career-senior-ic-track
     晋升标准 @n:promotion-criteria
@@ -328,7 +328,7 @@ TREE = """
     博士 @e:research-phd-worth-it
     海外教育 @n:edu-abroad-again
 
-08 其他同样成立的人生路径
+08 自由职业、副业与创业
   自由职业
     怎么开始 @e:startup-freelance
     找客户 @n:freelance-clients

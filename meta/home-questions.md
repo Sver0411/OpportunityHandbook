@@ -26,7 +26,7 @@ stages: [undergraduate, new_grad, work_1_3]
 ```
 
 看目标岗位的学历门槛是不是硬门槛：是，则回报明确；只是“想提升一下”，则回报最不确定。
-见 [怎么判断“读研值不值得”](../book/04-当你开始面对第一次重要分流.md#grad-school-worth-it)。
+见 [怎么判断“读研值不值得”](../book/04-升学、就业还是出国.md#grad-school-worth-it)。
 
 ### 保研和考研应该怎么选？
 
@@ -41,7 +41,7 @@ stages: [undergraduate]
 ```
 
 先查本校推免办法，看自己有没有资格；先确认自己是否具备推免资格；如果具备，再比较保研能够进入的学校和方向是否符合目标；没有推免资格时，再把考研、就业或其他升学路径作为主要选择。
-见 [保研和考研应该怎么选](../book/04-当你开始面对第一次重要分流.md#baoyan-vs-kaoyan)。
+见 [保研和考研应该怎么选](../book/04-升学、就业还是出国.md#baoyan-vs-kaoyan)。
 
 ### 什么比赛值得参加？
 
@@ -56,7 +56,7 @@ stages: [highschool, secondary_vocational, college, undergraduate, master]
 ```
 
 一个非常重要的判断维度是：结束以后你能留下什么别人可以验证的成果。
-见 [什么比赛值得参加](../book/03-开始积累真正能留下来的经历.md#competition-what-worth-joining)。
+见 [什么比赛值得参加](../book/03-做项目、打比赛、进实验室.md#competition-what-worth-joining)。
 
 ### 本科生怎么开始科研？
 
@@ -71,7 +71,7 @@ stages: [undergraduate]
 ```
 
 本科生开始科研前，不需要先达到“能独立完成研究”的程度。更需要的是具备所在领域最基本的课程基础，并能在导师或高年级成员指导下完成一个可验证的小任务——不同学科的小任务差别很大：复现代码、整理文献、协助实验、数据清理、访谈编码、档案整理、田野记录、设计调研都可以。
-见 [本科生什么时候值得开始科研](../book/03-开始积累真正能留下来的经历.md#research-undergrad-start)。
+见 [本科生什么时候值得开始科研](../book/03-做项目、打比赛、进实验室.md#research-undergrad-start)。
 
 ### 第一份工作应该怎么看？
 
@@ -101,7 +101,7 @@ stages: [work_1_3, work_3_5]
 ```
 
 决定晋升的不是工作量，而是别人能不能说出你独立解决了什么问题。
-见 [工作头几年应该积累什么](../book/06-进入职场以后继续积累.md#work-record-achievements)。
+见 [工作头几年应该积累什么](../book/06-从新人到能独立负责.md#work-record-achievements)。
 
 ### 转行要不要从零开始？
 
@@ -116,7 +116,7 @@ stages: [work_1_3, work_3_5, career_change]
 ```
 
 不要清零。先把过去的工作翻译成新方向的通用语言，再补最短的缺口。
-见 [工作后转行为什么不应该清零过去经历](../book/07-当职业开始出现分岔.md#career-change-keep-capital)。
+见 [工作后转行为什么不应该清零过去经历](../book/07-晋升、跳槽还是转行.md#career-change-keep-capital)。
 
 ### 什么证书值得考？
 
@@ -161,7 +161,7 @@ stages: [highschool, college, undergraduate, new_grad]
 ```
 
 看主办方、看获奖比例、看有没有第三方认它——三条里有一条不合格就要警惕。
-见 [怎么识别付费拿奖的竞赛](../book/03-开始积累真正能留下来的经历.md#competition-what-worth-joining)。
+见 [怎么识别付费拿奖的竞赛](../book/03-做项目、打比赛、进实验室.md#competition-what-worth-joining)。
 
 ### 我的 GitHub 项目算项目经历吗？
 
@@ -176,7 +176,7 @@ stages: [undergraduate, master, new_grad, work_1_3]
 ```
 
 看有没有人用过、能不能被验证、README 能不能让人 5 分钟跑起来。
-见 [GitHub 项目做到什么程度才算项目经历](../book/03-开始积累真正能留下来的经历.md#project-what-is-real)。
+见 [GitHub 项目做到什么程度才算项目经历](../book/03-做项目、打比赛、进实验室.md#project-what-is-real)。
 
 ### 两个 Offer 应该怎么比较？
 

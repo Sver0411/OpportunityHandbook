@@ -143,13 +143,13 @@
 
 ### 我还在学校
 
-- [我到底要不要读研？](book/04-当你开始面对第一次重要分流.md#grad-school-worth-it)
-- [保研和考研应该怎么选？](book/04-当你开始面对第一次重要分流.md#baoyan-vs-kaoyan)
+- [我到底要不要读研？](book/04-升学、就业还是出国.md#grad-school-worth-it)
+- [保研和考研应该怎么选？](book/04-升学、就业还是出国.md#baoyan-vs-kaoyan)
 - [学校和专业哪个更重要？](book/01-先决定下一步往哪里走.md#choose-school-vs-major)
-- [什么比赛值得参加？](book/03-开始积累真正能留下来的经历.md#competition-what-worth-joining)
-- [这个比赛是不是交了钱就能拿奖？](book/03-开始积累真正能留下来的经历.md#competition-what-worth-joining)
-- [本科生怎么开始科研？](book/03-开始积累真正能留下来的经历.md#research-undergrad-start)
-- [我的 GitHub 项目算项目经历吗？](book/03-开始积累真正能留下来的经历.md#project-what-is-real)
+- [什么比赛值得参加？](book/03-做项目、打比赛、进实验室.md#competition-what-worth-joining)
+- [这个比赛是不是交了钱就能拿奖？](book/03-做项目、打比赛、进实验室.md#competition-what-worth-joining)
+- [本科生怎么开始科研？](book/03-做项目、打比赛、进实验室.md#research-undergrad-start)
+- [我的 GitHub 项目算项目经历吗？](book/03-做项目、打比赛、进实验室.md#project-what-is-real)
 - [什么证书值得考？](book/02-在学校里先把基础打好.md#certificate-what-is-worth-it)
 
 ### 我快毕业了
@@ -162,12 +162,12 @@
 
 ### 我已经工作了
 
-- [工作几年以后应该怎么升职？](book/06-进入职场以后继续积累.md#work-record-achievements)
-- [什么时候适合第一次跳槽？](book/06-进入职场以后继续积累.md#career-job-hopping)
-- [技术路线还是管理路线？](book/07-当职业开始出现分岔.md#mgmt-ic-or-manager)
-- [转行前应该先判断什么？](book/07-当职业开始出现分岔.md#switch-before-decide)
-- [转行要不要从零开始？](book/07-当职业开始出现分岔.md#career-change-keep-capital)
-- [工作以后还值得读硕士吗？](book/07-当职业开始出现分岔.md#edu-master-after-work)
+- [工作几年以后应该怎么升职？](book/06-从新人到能独立负责.md#work-record-achievements)
+- [什么时候适合第一次跳槽？](book/06-从新人到能独立负责.md#career-job-hopping)
+- [技术路线还是管理路线？](book/07-晋升、跳槽还是转行.md#mgmt-ic-or-manager)
+- [转行前应该先判断什么？](book/07-晋升、跳槽还是转行.md#switch-before-decide)
+- [转行要不要从零开始？](book/07-晋升、跳槽还是转行.md#career-change-keep-capital)
+- [工作以后还值得读硕士吗？](book/07-晋升、跳槽还是转行.md#edu-master-after-work)
 
 ### 我不知道自己想做什么
 
