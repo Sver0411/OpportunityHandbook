@@ -398,6 +398,7 @@ TREE = """
     第一次 PR：从发现到合并 @d:docs/open-source/第一个PR
     怎么找 Good First Issue（以及为什么常常找不到） @d:docs/open-source/GoodFirstIssue
   技能学习手册 @d:docs/manuals/技能学习手册
+  术语表 @d:docs/manuals/术语表
   深度教程 · 学习方法
     从零学一项技术（三种类型） @d:docs/learning/从零学一项技术
     如何读官方文档 @d:docs/learning/读官方文档
