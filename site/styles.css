@@ -90,6 +90,8 @@ a:hover { text-decoration: underline; text-underline-offset: 3px; }
 
 :root {
   --ease: cubic-bezier(.32, .72, 0, 1);
+  /* 切换视图的「跳转」动效：要短到像一跳，不能像滑动（旧的 .22s + 错开延时已被读者否掉） */
+  --dur-jump: .12s;
   --dur-fast: .14s;
   --dur: .22s;
   --dur-slow: .3s;
@@ -109,8 +111,14 @@ html { interpolate-size: allow-keywords; }   /* 让 height: 0 → auto 可动画
   to { opacity: 1; transform: none; }
 }
 
-/* 切换视图：直接替换内容（跳转式）。此前是「淡入上移 + 错开延时」，
-   点左侧目录时观感像在滑动，读者要求改成瞬移，故整段动画去掉。 */
+/* 切换视图：短促的「跳转」动效——一次极快的轻微上浮（120ms、无错开延时），
+   作用是提示「内容换了」，但不像旧版那样有 220ms 的滑动过程与逐块延时。
+   滚动仍然是瞬移（见 html 上的 scroll-behavior: auto）。 */
+@keyframes oh-jump {
+  from { opacity: 0; transform: translateY(3px); }
+  to { opacity: 1; transform: none; }
+}
+.main > * { animation: oh-jump var(--dur-jump) var(--ease) both; }
 
 /* 首屏挂载时先关掉过渡，避免展开的目录"抽"一下 */
 .no-anim, .no-anim * { transition: none !important; animation: none !important; }

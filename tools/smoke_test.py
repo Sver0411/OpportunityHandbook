@@ -513,8 +513,12 @@ PROBE = r"""
       var hb = getComputedStyle(document.documentElement).scrollBehavior;
       ok("导航为跳转式：无平滑滚动", hb === "auto", "scroll-behavior = " + hb);
       var mainKid = document.querySelector(".main > *");
-      var anim = mainKid ? getComputedStyle(mainKid).animationName : "none";
-      ok("导航为跳转式：正文无切换动画", !anim || anim === "none", "animation-name = " + anim);
+      var mainCS = mainKid ? getComputedStyle(mainKid) : null;
+      var anim = mainCS ? mainCS.animationName : "none";
+      var dur = mainCS ? parseFloat(mainCS.animationDuration) || 0 : 0;
+      // 切换动效必须短促（跳转感），不能回到旧版的 .22s 长动画 + 错开延时
+      ok("导航为跳转式：切换动效短促", anim === "oh-jump" && dur > 0 && dur <= 0.16,
+         "animation-name=" + anim + ", duration=" + dur + "s");
       // 点目录到另一个条目后，滚动位置应当在一帧内到位（而不是滑过去）
       var linkRoute = CASES.length ? CASES[Math.min(1, CASES.length - 1)].route : "";
       if (linkRoute && linkRoute !== location.hash) {
