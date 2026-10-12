@@ -164,6 +164,7 @@
 - [工资还是成长？](book/05-从学校走向第一份工作.md#first-job-pay-vs-growth)
 - [一直找不到工作怎么办？](book/05-从学校走向第一份工作.md#job-hunting-long-search)
 - [投了很多简历都没回音，问题在哪？](docs/job-search/求职漏斗诊断.md)
+- [要不要考公 / 进体制？](book/01-先决定下一步往哪里走.md#paths-public-sector)
 
 ### 我已经工作了
 

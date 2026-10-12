@@ -29,6 +29,7 @@ TREE = """
     职业教育与技能路线 @e:paths-vocational-and-trades
     海外发展 @e:paths-overseas
     参军与公共服务 @e:paths-military
+    考公、选调与事业单位 @e:paths-public-sector
     Gap Year @e:paths-gap-year
     自由职业 @n:paths-freelance
     创业 @n:paths-startup

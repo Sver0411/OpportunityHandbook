@@ -141,12 +141,20 @@
               "nav_id": "01-01-05"
             },
             {
+              "title": "考公、选调与事业单位",
+              "target": {
+                "type": "entry",
+                "entry_id": "paths-public-sector"
+              },
+              "nav_id": "01-01-06"
+            },
+            {
               "title": "Gap Year",
               "target": {
                 "type": "entry",
                 "entry_id": "paths-gap-year"
               },
-              "nav_id": "01-01-06"
+              "nav_id": "01-01-07"
             },
             {
               "title": "自由职业",
@@ -154,7 +162,7 @@
                 "type": "entry",
                 "entry_id": "paths-freelance"
               },
-              "nav_id": "01-01-07"
+              "nav_id": "01-01-08"
             },
             {
               "title": "创业",
@@ -162,7 +170,7 @@
                 "type": "entry",
                 "entry_id": "paths-startup"
               },
-              "nav_id": "01-01-08"
+              "nav_id": "01-01-09"
             }
           ],
           "nav_id": "01-01"

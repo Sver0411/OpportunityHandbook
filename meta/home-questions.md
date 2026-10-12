@@ -282,3 +282,18 @@ stages: [undergraduate, master]
 
 把「学费 + 生活 + 一次性支出 + 最坏情况的回退成本」四项算全，再按顺序找钱：院校奖学金 → 助研/助教 → 政府或机构资助（如 CSC 类公派）→ 贷款；**能覆盖多少决定你去哪个国家。**
 见 [怎么找全额资助机会](../docs/admissions/选校与短名单.md) 与 [奖学金与资助手册](../docs/manuals/奖学金与资助.md)。
+
+### 要不要考公 / 进体制？
+
+```meta
+id: q-public-sector
+kind: question
+status: complete
+link: paths-public-sector
+summary: 先分清国考省考、选调与事业单位三条通道，再看岗位表的硬条件、服务期与日常工作内容。
+topics: [job]
+stages: [college, undergraduate, new_grad, work_1_3]
+```
+
+「考公」其实是三条通道，条件与日常差别很大：先读当年公告与职位表（专业代码、学历、政治面貌、基层年限是最硬的筛子），再确认服务期与地域，最后判断自己能否接受材料与协调为主的日常。
+见 [考公、选调与事业单位](../book/01-先决定下一步往哪里走.md#paths-public-sector) 与 [公共部门与事业单位](../docs/career-guides/公共部门.md)。
