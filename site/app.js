@@ -166,7 +166,12 @@
     state.labels = L;
     var evidenceEn = {};
     (((idx.facets || {}).evidence || {}).values || []).forEach(function (v) { evidenceEn[v.key] = v.en || ""; });
-    state.entries = idx.entries.map(function (e) {
+    // 搜索范围 = Book 条目 + 首页问题 + 用户侧文档（深度教程/职业指南/国家手册/案例/操作手册/工具）
+    // 文档此前不在搜索范围内，读者搜不到这些页面——这里把它们并入同一套字段。
+    var searchableDocs = (idx.docs || []).filter(function (d) {
+      return d.kind === "doc" && d.status !== "planned" && d.text;
+    });
+    state.entries = idx.entries.concat(searchableDocs).map(function (e) {
       var tags = []
         .concat(e.stages.map(function (v) { return L.stages[v] || v; }))
         .concat(e.topics.map(function (v) { return L.topics[v] || v; }))
@@ -609,7 +614,7 @@
     var filtered = state.entries.filter(function (e) { return matchFilters(e, params); });
     if (!groups.length) {
       return filtered.slice().sort(function (a, b) {
-        return (a.order - b.order) || a.doc.localeCompare(b.doc) || a.title.localeCompare(b.title);
+        return ((a.order || 0) - (b.order || 0)) || String(a.doc || a.doc_title || a.location || "").localeCompare(String(b.doc || b.doc_title || b.location || "")) || a.title.localeCompare(b.title);
       });
     }
     return filtered.map(function (e) { return { e: e, s: scoreEntry(e, groups) }; })

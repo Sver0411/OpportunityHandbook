@@ -200,7 +200,13 @@ PROBE = r"""
       });
       ok("一级栏目使用 nav_label", L1.length > 0 && JSON.stringify(l1Texts) === JSON.stringify(L1),
          l1Texts.length + " 项 · 首项：" + (l1Texts[0] || ""));
-      ok("一级栏目不是旧的章节标题", l1Texts.indexOf("01 先决定下一步往哪里走") < 0);
+      // 设计意图：一级栏目用直白说法，不再出现「分流 / 分岔」这类行话。
+      // 同时要求导航已渲染（l1Texts 非空），避免因渲染时机造成的假通过/假失败。
+      var JARGON = ["分流", "分岔"];
+      var hasJargon = l1Texts.some(function (t) {
+        return JARGON.some(function (w) { return t.indexOf(w) >= 0; });
+      });
+      ok("一级栏目使用直白说法（无行话）", l1Texts.length > 0 && !hasJargon);
       location.hash = "#/doc/book/03-升学";
       await wait(900);
       ok("文档能加载", count(".doc .entry") > 0, count(".doc .entry") + " 个条目");
@@ -409,7 +415,10 @@ PROBE = r"""
         location.hash = NC.leaf_route;
         await wait(1000);
         // 注意：一级栏目显示的是 nav_label，不是 canonical title
-        ok("C1 一级 03 展开", isOpen("03 项目、竞赛、科研与实习") === true);
+        // 一级栏目标题会随 IA 调整变化：从页面注入的 __NAV_LABELS__ 读取，避免断言写死。
+        var l1Labels = window.__NAV_LABELS__ || [];
+        var l1_03 = l1Labels.filter(function (x) { return x.indexOf("03 ") === 0; })[0] || "03";
+        ok("C1 一级 03 展开", isOpen(l1_03) === true);
         ok("C1 二级 项目与作品 展开", isOpen("项目与作品") === true);
         ["竞赛", "科研初体验", "开源与公共贡献", "社群与活动", "实习准备"].forEach(function (t2) {
           ok("C1 兄弟分组收起：" + t2, isOpen(t2) === false);

@@ -1082,11 +1082,20 @@ def build_index(root: Path) -> tuple[dict, list[str], list[str]]:
         "nav": nav,
         # IA 重构留下的旧地址 → 新地址（保证旧 hash 深链不失效）
         "redirects": _load_redirects(root),
-        # docs：用户侧文档（无 planned），供阅读序列使用
+        # docs：用户侧文档（无 planned），供阅读序列与搜索使用。
+        # 搜索字段与 entries 对齐（kind/doc_title/stages/topics/outputs/evidence/text），
+        # 这样深度教程、职业指南、国家手册、案例、操作手册与工具都能被搜到。
         "docs": [
-            {"location": d.location, "title": d.title, "route": d.route,
+            {"id": str(d.front.get("id") or d.location), "kind": "doc",
+             "location": d.location, "title": d.title, "route": d.route,
+             "doc_title": d.title, "section": _doc_section(d), "group": _doc_subsection(d)[0],
+             "order": int(d.front.get("order") or 0),
              "status": d.status, "summary": str(d.front.get("summary") or ""),
-             "last_verified": str(d.front.get("last_verified") or "")}
+             "stages": _as_list(d.front.get("stages")), "topics": _as_list(d.front.get("topics")),
+             "outputs": _as_list(d.front.get("outputs")), "evidence": _as_list(d.front.get("evidence")),
+             "effort": str(d.front.get("effort") or ""),
+             "last_verified": str(d.front.get("last_verified") or ""),
+             "text": str(d.body or "")[:20000]}
             for d in docs if not doc_nav_hidden(d) and doc_user_visible(d)
         ],
         # all_docs：含 planned，仅供路由解析与元数据查询（保证旧深链不失效）
