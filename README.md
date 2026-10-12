@@ -151,6 +151,10 @@
 - [本科生怎么开始科研？](book/03-做项目、打比赛、进实验室.md#research-undergrad-start)
 - [我的 GitHub 项目算项目经历吗？](book/03-做项目、打比赛、进实验室.md#project-what-is-real)
 - [什么证书值得考？](book/02-在学校里先把基础打好.md#certificate-what-is-worth-it)
+- [专业不喜欢，要不要转？](book/01-先决定下一步往哪里走.md#choose-major-mismatch)
+- [实习应该什么时候开始找？](docs/playbooks/第一次找实习.md)
+- [怎么联系导师 / 要不要套磁？](docs/playbooks/第一次联系导师.md)
+- [家里预算有限，还能留学吗？](book/04-升学、就业还是出国.md#overseas-funding)
 
 ### 我快毕业了
 
@@ -159,6 +163,7 @@
 - [大公司还是小公司？](book/05-从学校走向第一份工作.md#first-job-big-vs-small)
 - [工资还是成长？](book/05-从学校走向第一份工作.md#first-job-pay-vs-growth)
 - [一直找不到工作怎么办？](book/05-从学校走向第一份工作.md#job-hunting-long-search)
+- [投了很多简历都没回音，问题在哪？](docs/job-search/求职漏斗诊断.md)
 
 ### 我已经工作了
 

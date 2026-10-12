@@ -101,6 +101,8 @@ def main() -> int:
                 slugs = set()
                 for h in re.findall(r"^#{2,4} (.+?)\s*$", body, re.M):
                     slugs.add(re.sub(r"[^\w\u4e00-\u9fa5]+", "-", h).strip("-"))
+                # 条目锚点用的是 meta 块里的 id（站点按 id 生成锚点）
+                slugs |= set(re.findall(r"^id:\s*(\S+)\s*$", body, re.M))
                 if anchor not in slugs:
                     broken_q.append(target)
 

@@ -207,3 +207,78 @@ stages: [undergraduate, new_grad, work_1_3, career_change]
 
 先把字段对齐，再补缺的数据；不要在没有数据的格子上凭感觉决定。
 见 [怎么比较两个完全不同的机会](../book/00-从这里开始.md#judge-compare-two-opportunities)。
+
+### 实习应该什么时候开始找？
+
+```meta
+id: q-internship-timing
+kind: question
+status: complete
+link: internship-daily
+summary: 提前一个学期开始，先补齐简历上的缺口再投；实习的价值在于真实交付，不在公司名气。
+topics: [job]
+stages: [undergraduate, master]
+```
+
+提前一个学期动手，先按目标岗位的 JD 补齐最缺的一项（项目、工具或英语），再集中投递；实习最值钱的是**完整跟过一件事**，不是公司名。
+见 [Playbook：第一次找实习](../docs/playbooks/第一次找实习.md) 与 [实习每天在做什么](../book/04-升学、就业还是出国.md#internship-daily)。
+
+### 投了很多简历都没回音，问题在哪？
+
+```meta
+id: q-no-reply
+kind: question
+status: complete
+link: job-hunting-long-search
+summary: 把求职拆成投递、回复、测评、面试、Offer 五环，先算出转化率，再只改最弱的一环。
+topics: [job]
+stages: [undergraduate, new_grad, career_change]
+```
+
+按环节统计转化率（投递 → 回复 → 测评 → 面试 → Offer），**瓶颈通常只有一个**；0 回复多半是材料与渠道问题，不是能力问题。
+见 [求职失败诊断](../docs/job-search/求职漏斗诊断.md) 与 [求职漏斗诊断表](../docs/tools/求职漏斗诊断表.md)。
+
+### 专业不喜欢，要不要转？
+
+```meta
+id: q-change-major
+kind: question
+status: complete
+link: choose-major-mismatch
+summary: 先诊断错的是课程内容、学校平台还是对行业的预期，再按成本从低到高选择纠偏路径。
+topics: [study]
+stages: [college, undergraduate]
+```
+
+先分清错的是**专业内容**、**学校平台**还是**行业预期**——三者对应的纠偏路径与成本差很多；校内调整（转专业、辅修、跨院选课）成本最低，先试它。
+见 [如果第一次选择不理想怎么办](../book/01-先决定下一步往哪里走.md#choose-major-mismatch)。
+
+### 怎么联系导师 / 要不要套磁？
+
+```meta
+id: q-contact-supervisor
+kind: question
+status: complete
+link: research-find-supervisor
+summary: 先读对方的工作再写一封 200 字以内的邮件，附一个具体问题；两周无回复跟进一次，不追问第三次。
+topics: [research]
+stages: [undergraduate, master, phd]
+```
+
+先读一到两篇对方的工作，邮件控制在 200 字内并**提出一个具体问题**；两周无回复在原邮件下跟进一次，仍无回复就换下一位。
+见 [Playbook：第一次联系导师](../docs/playbooks/第一次联系导师.md) 与 [怎么找导师](../book/03-做项目、打比赛、进实验室.md#research-find-supervisor)。
+
+### 家里预算有限，还能留学吗？
+
+```meta
+id: q-funding-limited
+kind: question
+status: complete
+link: overseas-funding
+summary: 先算总成本（学费 + 生活 + 一次性支出 + 回退成本），再逐项对照奖学金、助研与公派渠道。
+topics: [funding, study]
+stages: [undergraduate, master]
+```
+
+把「学费 + 生活 + 一次性支出 + 最坏情况的回退成本」四项算全，再按顺序找钱：院校奖学金 → 助研/助教 → 政府或机构资助（如 CSC 类公派）→ 贷款；**能覆盖多少决定你去哪个国家。**
+见 [怎么找全额资助机会](../docs/admissions/选校与短名单.md) 与 [奖学金与资助手册](../docs/manuals/奖学金与资助.md)。
