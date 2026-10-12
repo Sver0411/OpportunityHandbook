@@ -79,7 +79,9 @@ def check() -> dict:
             "no_summary": no_summary, "validate_errors": errors}
 
 
-LEAK_WORDS = ("计划中", "TODO", "待补", "待写", "施工", "roadmap", "ROADMAP", "尚未撰写")
+LEAK_WORDS = ("计划中", "TODO", "待补", "待写", "施工", "roadmap", "ROADMAP", "尚未撰写",
+              # 未完成口吻：公开页面上不该出现「以后再补」这类施工痕迹
+              "后续补充", "以后再补", "待补充", "暂未覆盖", "尚未覆盖")
 
 
 def check_docs(root: Path) -> dict:

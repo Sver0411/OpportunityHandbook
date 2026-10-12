@@ -65,6 +65,15 @@ def main() -> int:
     thin_structure = [r for r in rows if r["chars"] > 6000 and r["h2"] < 5]
     missing_summary = [r for r in rows if not r["summary"] or len(r["summary"]) < 12]
 
+    # 远距离指代：「前者/后者」的先行词在 120 字以前（读者需要回找）
+    distant_ref = []
+    for p in files:
+        body = re.sub(r"^---\n.*?\n---\n", "", p.read_text(encoding="utf-8"), flags=re.S)
+        for m in re.finditer(r"前者|后者", body):
+            pre = body[max(0, m.start() - 120):m.start()]
+            if not re.search(r"(区分|还是|与|和|、)", pre):
+                distant_ref.append((str(p.relative_to(ROOT)), re.sub(r"\s+", " ", body[max(0, m.start() - 40):m.end() + 30])))
+
     titles = defaultdict(list)
     for r in rows:
         titles[r["title"]].append(r["rel"])
@@ -104,6 +113,7 @@ def main() -> int:
         "missing_summary": missing_summary,
         "dup_titles": dup_titles,
         "broken_questions": broken_q,
+        "distant_ref": distant_ref,
     }
 
     if args.json:
@@ -130,6 +140,9 @@ def main() -> int:
     for t, v in list(dup_titles.items())[:12]:
         print(f"   《{t}》 → {v}")
     print(f"\n⑦ 首页问题无法落地：{len(broken_q)}")
+    print(f"\n⑧ 远距离指代（前者/后者，需要回找）：{len(distant_ref)}")
+    for rel, frag in distant_ref[:8]:
+        print(f"   {rel}: …{frag}…")
     for b in broken_q[:10]:
         print(f"   {b}")
     return 0
