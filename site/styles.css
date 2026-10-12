@@ -39,6 +39,12 @@
           "Hiragino Sans GB", "Microsoft YaHei", "Noto Sans CJK SC", Roboto, sans-serif;
   --mono: ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, "Liberation Mono", monospace;
   --read-size: 17px;
+  /* 标题阶梯：正文 17 → 条目内 17.5 → 条目内小节 20 → 条目标题 23 → 分组 27 → 文档标题 36 */
+  --fs-h1: 36px;
+  --fs-h2: 27px;
+  --fs-entry: 23px;
+  --fs-h3: 20px;
+  --fs-h4: 17.5px;
   --shadow-panel: 0 1px 2px rgba(0, 0, 0, 0.03), 0 10px 30px rgba(0, 0, 0, 0.05);
   --shadow-sheet: 0 2px 6px rgba(0, 0, 0, 0.04), 0 18px 48px rgba(0, 0, 0, 0.09);
 }
@@ -332,7 +338,7 @@ body.nav-collapsed .shell { margin-left: 0; }
 .doc { max-width: none; }
 .doc-header { margin-bottom: 32px; padding-bottom: 26px; border-bottom: 1px solid var(--line); }
 .doc-header h1 {
-  font-size: 34px; line-height: 1.14; letter-spacing: -0.022em;
+  font-size: var(--fs-h1); line-height: 1.14; letter-spacing: -0.022em;
   font-weight: 700; margin: 0 0 14px;
 }
 .doc-summary {
@@ -349,13 +355,19 @@ body.nav-collapsed .shell { margin-left: 0; }
 }
 
 .doc p, .doc li { font-size: var(--read-size); }
+/* 层级：h1 文档标题 > 章节分组 h2 > 条目标题 h3 > 条目内 h2 > 条目内 h3/h4 > 正文 */
 .doc h2 {
-  font-size: 24px; line-height: 1.35; letter-spacing: -0.018em; font-weight: 680;
-  margin: 56px 0 16px; padding-top: 22px; border-top: 1px solid var(--line);
+  font-size: var(--fs-h2); line-height: 1.3; letter-spacing: -0.02em; font-weight: 700;
+  margin: 60px 0 18px; padding-top: 24px; border-top: 1px solid var(--line);
+}
+/* 条目内部的 ## 是「条目标题下的一小节」，比条目标题小一档，也不带分组分隔线 */
+.doc .entry h2 {
+  font-size: var(--fs-h3); line-height: 1.4; letter-spacing: -0.016em; font-weight: 680;
+  margin: 34px 0 12px; padding-top: 0; border-top: 0;
 }
 .doc-header + * > h2:first-child, .doc > h2:first-child { border-top: 0; padding-top: 0; margin-top: 36px; }
-.doc h3 { font-size: 19px; letter-spacing: -0.014em; margin: 32px 0 10px; font-weight: 650; }
-.doc h4 { font-size: 16px; margin: 24px 0 8px; color: var(--ink); font-weight: 620; }
+.doc h3 { font-size: var(--fs-h3); letter-spacing: -0.014em; margin: 32px 0 10px; font-weight: 650; }
+.doc h4 { font-size: var(--fs-h4); margin: 26px 0 8px; color: var(--ink); font-weight: 650; }
 .doc p { margin: 0 0 18px; line-height: 1.78; }
 .doc ul, .doc ol { margin: 0 0 18px; padding-left: 1.35em; }
 .doc li { margin: 7px 0; line-height: 1.75; }
@@ -403,8 +415,8 @@ body.nav-collapsed .shell { margin-left: 0; }
 
 .entry { margin: 0 0 44px; scroll-margin-top: 84px; }
 .entry > h3 {
-  font-size: 20px; line-height: 1.45; letter-spacing: -0.014em; font-weight: 680;
-  margin: 36px 0 12px; padding-left: 14px; border-left: 3px solid var(--ink);
+  font-size: var(--fs-entry); line-height: 1.4; letter-spacing: -0.018em; font-weight: 700;
+  margin: 48px 0 14px; padding-left: 16px; border-left: 3px solid var(--ink);
 }
 .entry.highlight > h3 { background: var(--surface); border-radius: 0 var(--radius-sm) var(--radius-sm) 0; }
 
@@ -539,7 +551,10 @@ body.nav-collapsed .shell { margin-left: 0; }
 }
 
 @media (max-width: 900px) {
-  :root { --read-size: 16.5px; --gutter: 20px; }
+  :root {
+    --read-size: 16.5px; --gutter: 20px;
+    --fs-h1: 28px; --fs-h2: 22px; --fs-entry: 20px; --fs-h3: 18.5px; --fs-h4: 17px;
+  }
 
   /* 移动端：侧栏变成从左侧滑入的磨砂薄片，圆角只在右侧 */
   .sidebar {
@@ -574,9 +589,9 @@ body.nav-collapsed .shell { margin-left: 0; }
   .menu-btn, .nav-collapse { display: inline-block; }
   .sidebar-close { display: inline-block; margin-left: auto; }
 
-  .doc-header h1 { font-size: 27px; }
-  .doc h2 { font-size: 21px; margin-top: 44px; }
-  .doc h3 { font-size: 18px; }
+  
+  .doc h2 { margin-top: 46px; }
+  
   .browse-head h1 { font-size: 25px; }
   .facet { grid-template-columns: 1fr; gap: 8px; padding: 14px 16px; }
   .facet-label { padding-top: 0; }

@@ -47,6 +47,9 @@ STEPS: list[tuple[str, list[str]]] = [
     ("读者动线检查", [PY, "tools/audit_reading_path.py"]),
     ("搜索可发现性", [PY, "tools/audit_search.py"]),
     ("来源一致性", [PY, "tools/audit_sources.py"]),
+    # 排版实测：用无头 Chrome 量各级标题的计算字号，防止标题层级倒挂或小于正文
+    # （没有 Chrome 时该脚本自行跳过并返回 0）
+    ("标题层级实测", [PY, "tools/probe_typography.py"]),
 ]
 
 SMOKE = ("浏览器冒烟", [PY, "tools/smoke_test.py"])
