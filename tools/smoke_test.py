@@ -507,6 +507,28 @@ PROBE = r"""
              text(".doc h1"));
         }
       }
+      // 导航观感：点目录必须是「跳转式」——不做平滑滚动、正文区不做切换动画
+      location.hash = CASES.length ? CASES[0].route : "#/doc/book/01-%E5%85%88%E5%86%B3%E5%AE%9A%E4%B8%8B%E4%B8%80%E6%AD%A5%E5%BE%80%E5%93%AA%E9%87%8C%E8%B5%B0";
+      await wait(600);
+      var hb = getComputedStyle(document.documentElement).scrollBehavior;
+      ok("导航为跳转式：无平滑滚动", hb === "auto", "scroll-behavior = " + hb);
+      var mainKid = document.querySelector(".main > *");
+      var anim = mainKid ? getComputedStyle(mainKid).animationName : "none";
+      ok("导航为跳转式：正文无切换动画", !anim || anim === "none", "animation-name = " + anim);
+      // 点目录到另一个条目后，滚动位置应当在一帧内到位（而不是滑过去）
+      var linkRoute = CASES.length ? CASES[Math.min(1, CASES.length - 1)].route : "";
+      if (linkRoute && linkRoute !== location.hash) {
+        var link = document.querySelector('#navTree a.nav-label[href="' + linkRoute + '"]');
+        if (link) {
+          link.click();
+          await wait(60);
+          var firstFrame = window.scrollY;
+          await wait(600);
+          ok("导航为跳转式：首帧即到位", Math.abs(window.scrollY - firstFrame) < 4,
+             "60ms=" + firstFrame + " px, 660ms=" + window.scrollY + " px");
+        }
+      }
+
       // 点击分组标题也能展开
       var first = document.querySelector("#navTree .nav-row .nav-toggle");
       if (first) {

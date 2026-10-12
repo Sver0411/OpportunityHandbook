@@ -51,7 +51,8 @@
 
 * { box-sizing: border-box; }
 
-html { -webkit-text-size-adjust: 100%; scroll-behavior: smooth; }
+/* 导航与锚点一律瞬移（跳转式）。不要改回 smooth：正文很长，平滑滚动会让人以为页面在「滑」 */
+html { -webkit-text-size-adjust: 100%; scroll-behavior: auto; }
 
 body {
   margin: 0;
@@ -108,10 +109,8 @@ html { interpolate-size: allow-keywords; }   /* 让 height: 0 → auto 可动画
   to { opacity: 1; transform: none; }
 }
 
-/* 切换视图：正文区淡入上移，前几个模块轻微错开 */
-.main > * { animation: oh-fade-up var(--dur) var(--ease); }
-.main > *:nth-child(2) { animation-delay: .04s; }
-.main > *:nth-child(3) { animation-delay: .08s; }
+/* 切换视图：直接替换内容（跳转式）。此前是「淡入上移 + 错开延时」，
+   点左侧目录时观感像在滑动，读者要求改成瞬移，故整段动画去掉。 */
 
 /* 首屏挂载时先关掉过渡，避免展开的目录"抽"一下 */
 .no-anim, .no-anim * { transition: none !important; animation: none !important; }
