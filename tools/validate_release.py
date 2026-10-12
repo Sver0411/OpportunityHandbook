@@ -42,6 +42,11 @@ STEPS: list[tuple[str, list[str]]] = [
     # 外链可达性：只有真正的永久失效（HTTP 404/410）才失败；
     # SSL / 超时 / 代理出口问题一律记为「无法判定」
     ("外部链接可达性", [PY, "tools/check_links.py", "--strict"]),
+    # 读者视角的三项审查：动线（断头路/下一步/回程）、搜索可发现性、来源可核对性。
+    # 它们都是启发式检查，但已把历史问题清空——留在门禁里防止回退。
+    ("读者动线检查", [PY, "tools/audit_reading_path.py"]),
+    ("搜索可发现性", [PY, "tools/audit_search.py"]),
+    ("来源一致性", [PY, "tools/audit_sources.py"]),
 ]
 
 SMOKE = ("浏览器冒烟", [PY, "tools/smoke_test.py"])
