@@ -42,7 +42,7 @@ NATURALIZED = [
 # 条目 + 首页问题 + 待写的总数基线（防止内容丢失）。
 # 2026-10-12：首页问题新增 5 条（实习时机 / 无回音诊断 / 转专业 / 联系导师 / 预算有限留学）。
 BASELINE_ENTRIES = 310
-BASELINE_COMPLETE = 290
+BASELINE_COMPLETE = 291
 
 
 def setUpModule() -> None:
