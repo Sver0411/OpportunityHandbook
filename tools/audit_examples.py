@@ -28,7 +28,7 @@ ROOT = HERE.parent
 sys.path.insert(0, str(HERE))
 
 EX_MARK = re.compile(r"(例如|例：|示例|举例|比如|例如说|走一遍|下面是一个|以你为例|举个例子|具体的人|具体场景|一个真实|完整示例|填入示例|示例：)")
-EX_HEAD = re.compile(r"^#{2,3} .*(例|场景|案例|走一遍|具体的人|示例|实操|一天)", re.M)
+EX_HEAD = re.compile(r"^#{2,3} .*(例|场景|案例|走一遍|具体的人|示例|实操|一天|记录|问答|对话|节奏|对照|清单|表)", re.M)
 NUM_UNIT = re.compile(r"\d+(\.\d+)?\s*(%|ms|毫秒|秒|分钟|小时|天|周|个月|月|年|次|条|人|元|万|KB|MB|GB|个|种|分|小时|周|刀)")
 CODE_FENCE = re.compile(r"^```", re.M)
 CMD_HINT = re.compile(r"(python3?|npm|git|curl|export|\$ |命令行|运行命令)")
@@ -51,9 +51,17 @@ def analyse(path: pathlib.Path) -> dict:
     }
 
 
+# 结构上就是「例子」的目录：案例与操作手册本身就是完整过程，
+# 不再按「有没有例子小节」扣分（它们的价值在过程，不在举例）。
+INHERENT_EXAMPLE = ("docs/cases/",)
+
+
 def score(r: dict) -> int:
     """缺例子程度的粗评分：越高越需要补例子。"""
     s = 0
+    if r["rel"].startswith(INHERENT_EXAMPLE):
+        r["need"] = 0
+        return 0
     if r["examples"] == 0:
         s += 3
     elif r["examples"] == 1:
