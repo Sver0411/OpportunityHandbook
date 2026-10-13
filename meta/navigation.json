@@ -4784,6 +4784,33 @@
             "anchor": ""
           },
           "nav_id": "11-28"
+        },
+        {
+          "title": "读博规划表",
+          "target": {
+            "type": "doc",
+            "location": "docs/tools/读博规划表",
+            "anchor": ""
+          },
+          "nav_id": "11-29"
+        },
+        {
+          "title": "转行现金流表",
+          "target": {
+            "type": "doc",
+            "location": "docs/tools/转行现金流表",
+            "anchor": ""
+          },
+          "nav_id": "11-30"
+        },
+        {
+          "title": "职校作品清单",
+          "target": {
+            "type": "doc",
+            "location": "docs/tools/职校作品清单",
+            "anchor": ""
+          },
+          "nav_id": "11-31"
         }
       ],
       "nav_id": "11"

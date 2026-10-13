@@ -573,6 +573,9 @@ TREE = """
   客户沟通与需求确认表 @d:docs/tools/客户沟通表
   自由职业报价单模板 @d:docs/tools/自由职业报价单
   时间线检查表 @d:docs/tools/时间线检查表
+  读博规划表 @d:docs/tools/读博规划表
+  转行现金流表 @d:docs/tools/转行现金流表
+  职校作品清单 @d:docs/tools/职校作品清单
 
 12 完整案例
   Case：第一次做真正的项目 @d:docs/cases/第一次做真正项目
