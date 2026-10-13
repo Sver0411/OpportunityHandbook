@@ -1389,12 +1389,36 @@
           "title": "深入科研",
           "children": [
             {
+              "title": "读博期间该积累什么",
+              "target": {
+                "type": "entry",
+                "entry_id": "phd-during-plan"
+              },
+              "nav_id": "04-04-01"
+            },
+            {
+              "title": "博士毕业后的出口怎么比较",
+              "target": {
+                "type": "entry",
+                "entry_id": "phd-career-paths"
+              },
+              "nav_id": "04-04-02"
+            },
+            {
+              "title": "延期、换方向还是退出",
+              "target": {
+                "type": "entry",
+                "entry_id": "phd-delay-or-quit"
+              },
+              "nav_id": "04-04-03"
+            },
+            {
               "title": "RA",
               "target": {
                 "type": "entry",
                 "entry_id": "research-ra"
               },
-              "nav_id": "04-04-01"
+              "nav_id": "04-04-04"
             },
             {
               "title": "暑研",
@@ -1402,7 +1426,7 @@
                 "type": "entry",
                 "entry_id": "research-summer-program"
               },
-              "nav_id": "04-04-02"
+              "nav_id": "04-04-05"
             },
             {
               "title": "Research Internship",
@@ -1410,7 +1434,7 @@
                 "type": "entry",
                 "entry_id": "overseas-research-internship"
               },
-              "nav_id": "04-04-03"
+              "nav_id": "04-04-06"
             },
             {
               "title": "文献阅读",
@@ -1418,7 +1442,7 @@
                 "type": "entry",
                 "entry_id": "research-literature-reading"
               },
-              "nav_id": "04-04-04"
+              "nav_id": "04-04-07"
             },
             {
               "title": "研究问题",
@@ -1426,7 +1450,7 @@
                 "type": "entry",
                 "entry_id": "research-question"
               },
-              "nav_id": "04-04-05"
+              "nav_id": "04-04-08"
             },
             {
               "title": "实验与数据",
@@ -1434,7 +1458,7 @@
                 "type": "entry",
                 "entry_id": "research-experiment-data"
               },
-              "nav_id": "04-04-06"
+              "nav_id": "04-04-09"
             },
             {
               "title": "论文写作",
@@ -1442,7 +1466,7 @@
                 "type": "entry",
                 "entry_id": "research-writing-and-submission"
               },
-              "nav_id": "04-04-07"
+              "nav_id": "04-04-10"
             },
             {
               "title": "学术会议",
@@ -1450,7 +1474,7 @@
                 "type": "entry",
                 "entry_id": "research-conference"
               },
-              "nav_id": "04-04-08"
+              "nav_id": "04-04-11"
             },
             {
               "title": "推荐信",
@@ -1458,7 +1482,7 @@
                 "type": "entry",
                 "entry_id": "research-recommendation-letter"
               },
-              "nav_id": "04-04-09"
+              "nav_id": "04-04-12"
             }
           ],
           "target": {

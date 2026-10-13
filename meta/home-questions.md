@@ -327,3 +327,18 @@ stages: [senior, career_change]
 
 40 岁以后继续用投递式求职，通过率会明显下降。先把问题从「还能找到什么岗位」换成「谁会为什么事来找我」，再在三条主线里选一条（原领域做深 / 能力产品化 / 转向看经验的岗位）。
 见 [40 岁以后怎么规划工作](../book/07-晋升、跳槽还是转行/05-转行.md#career-after-40) 与 [中年重新开始前先算什么](../book/07-晋升、跳槽还是转行/05-转行.md#career-midlife-reset)。
+
+### 博士毕业以后有哪些出口？
+
+```meta
+id: q-phd-paths
+kind: question
+status: complete
+link: phd-career-paths
+summary: 出口不止高校：高校教职、科研院所、企业研发、产业技术岗、公共部门与独立研究，差别在评价标准与聘期风险。
+topics: [job]
+stages: [phd]
+```
+
+判断顺序：先看准入门槛，再算聘期风险，最后看技能变现路径。
+见 [博士毕业后的出口怎么比较](../book/04-升学、就业还是出国/04-深入科研.md#phd-career-paths) 与 [读博期间该积累什么](../book/04-升学、就业还是出国/04-深入科研.md#phd-during-plan)。
