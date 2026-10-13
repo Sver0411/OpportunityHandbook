@@ -286,6 +286,8 @@ TREE = """
     工作后做个人项目 @n:work-side-project
     工作后做开源 @n:work-open-source
     工作后重新读书 @e:work-study-again
+    下班后的时间该投到哪里 @e:work-after-hours-investment
+    工作后参加比赛和评比值不值 @e:work-competition-value
   建立行业关系
     Networking @e:community-networking
     专业社群 @n:community-professional-group

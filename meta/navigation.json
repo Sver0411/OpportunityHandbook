@@ -2261,6 +2261,22 @@
                 "entry_id": "work-study-again"
               },
               "nav_id": "06-03-06"
+            },
+            {
+              "title": "下班后的时间该投到哪里",
+              "target": {
+                "type": "entry",
+                "entry_id": "work-after-hours-investment"
+              },
+              "nav_id": "06-03-07"
+            },
+            {
+              "title": "工作后参加比赛和评比值不值",
+              "target": {
+                "type": "entry",
+                "entry_id": "work-competition-value"
+              },
+              "nav_id": "06-03-08"
             }
           ],
           "target": {
