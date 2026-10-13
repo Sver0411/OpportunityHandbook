@@ -301,6 +301,8 @@ TREE = """
     怎么证明影响力 @e:career-influence
     长期不晋升怎么办 @n:promotion-stalled
   专家路线
+    技能过时了怎么补 @e:career-skill-decay
+    资深阶段的收入结构怎么安排 @e:career-income-mix
     专业深度 @n:track-ic-depth
     跨团队影响 @n:track-ic-cross-team
     行业影响 @n:track-ic-industry

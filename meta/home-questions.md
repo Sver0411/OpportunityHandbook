@@ -342,3 +342,18 @@ stages: [phd]
 
 判断顺序：先看准入门槛，再算聘期风险，最后看技能变现路径。
 见 [博士毕业后的出口怎么比较](../book/04-升学、就业还是出国/04-深入科研.md#phd-career-paths) 与 [读博期间该积累什么](../book/04-升学、就业还是出国/04-深入科研.md#phd-during-plan)。
+
+### 技能过时了怎么办？
+
+```meta
+id: q-skill-decay
+kind: question
+status: complete
+link: career-skill-decay
+summary: 先分清是工具过时、方法过时还是领域收缩；判断标准是「半年后能不能拿出别人看得见的东西」。
+topics: [skill, job]
+stages: [work_3_5, senior]
+```
+
+工具更新快，学方法比背 API 重要；如果是领域整体收缩，更该考虑迁移到相邻领域，而不是在收缩的行业里继续补技能。
+见 [技能过时了怎么补](../book/07-晋升、跳槽还是转行/02-专家路线.md#career-skill-decay) 与 [资深阶段的收入结构怎么安排](../book/07-晋升、跳槽还是转行/02-专家路线.md#career-income-mix)。

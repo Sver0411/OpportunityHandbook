@@ -178,6 +178,7 @@
 - [转行要不要从零开始？](book/07-晋升、跳槽还是转行/05-转行.md#career-change-keep-capital)
 - [工作以后还值得读硕士吗？](book/07-晋升、跳槽还是转行/06-再次进入教育体系.md#edu-master-after-work)
 - [40 岁以后还能换方向吗？](book/07-晋升、跳槽还是转行/05-转行.md#career-after-40)
+- [技能过时了怎么办？](book/07-晋升、跳槽还是转行/02-专家路线.md#career-skill-decay)
 
 ### 我不知道自己想做什么
 

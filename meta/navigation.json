@@ -2390,12 +2390,28 @@
           "title": "专家路线",
           "children": [
             {
+              "title": "技能过时了怎么补",
+              "target": {
+                "type": "entry",
+                "entry_id": "career-skill-decay"
+              },
+              "nav_id": "07-02-01"
+            },
+            {
+              "title": "资深阶段的收入结构怎么安排",
+              "target": {
+                "type": "entry",
+                "entry_id": "career-income-mix"
+              },
+              "nav_id": "07-02-02"
+            },
+            {
               "title": "专业深度",
               "target": {
                 "type": "entry",
                 "entry_id": "track-ic-depth"
               },
-              "nav_id": "07-02-01"
+              "nav_id": "07-02-03"
             },
             {
               "title": "跨团队影响",
@@ -2403,7 +2419,7 @@
                 "type": "entry",
                 "entry_id": "track-ic-cross-team"
               },
-              "nav_id": "07-02-02"
+              "nav_id": "07-02-04"
             },
             {
               "title": "行业影响",
@@ -2411,7 +2427,7 @@
                 "type": "entry",
                 "entry_id": "track-ic-industry"
               },
-              "nav_id": "07-02-03"
+              "nav_id": "07-02-05"
             },
             {
               "title": "Staff / Principal 等角色",
@@ -2419,7 +2435,7 @@
                 "type": "entry",
                 "entry_id": "track-staff-principal"
               },
-              "nav_id": "07-02-04"
+              "nav_id": "07-02-06"
             }
           ],
           "target": {
