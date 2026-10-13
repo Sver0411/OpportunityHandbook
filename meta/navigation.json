@@ -2226,6 +2226,14 @@
                 "entry_id": "work-record-achievements"
               },
               "nav_id": "06-02-05"
+            },
+            {
+              "title": "和同事或上级起了冲突怎么办",
+              "target": {
+                "type": "entry",
+                "entry_id": "workplace-conflict"
+              },
+              "nav_id": "06-02-06"
             }
           ],
           "target": {

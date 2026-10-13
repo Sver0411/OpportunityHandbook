@@ -282,6 +282,7 @@ TREE = """
     怎么证明自己的成果 @n:work-prove-results
     怎么积累业务影响 @n:work-business-impact
     怎么记录职业成果 @n:work-record-achievements
+    和同事或上级起了冲突怎么办 @e:workplace-conflict
   工作后继续学习
     技能还要不要继续学 @e:work-learn-skills
     工作后考证 @n:work-certificates
