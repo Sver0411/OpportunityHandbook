@@ -364,6 +364,8 @@ TREE = """
     定价 @n:freelance-pricing
     合同 @n:freelance-contract
     收入稳定性 @n:freelance-stability
+    自由职业的成本结构与定价底线 @e:freelance-cost-structure
+    客户太集中怎么办 @e:freelance-client-concentration
   副业
     什么副业值得做 @e:startup-side-project
     接单 @n:side-gig-orders
