@@ -535,6 +535,9 @@ TREE = """
 10 路径时间线
   高中毕业后的选择 @d:docs/timelines/高中到大学
   中职升学 @d:docs/timelines/中职升学时间线
+  专升本 @d:docs/timelines/专升本时间线
+  实习准备 @d:docs/timelines/实习准备时间线
+  海外工作与签证 @d:docs/timelines/海外工作与签证时间线
   本科四年 @d:docs/timelines/本科四年
   保研 @d:docs/timelines/保研时间线
   考研 @d:docs/timelines/考研时间线

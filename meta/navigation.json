@@ -4451,13 +4451,40 @@
           "nav_id": "10-02"
         },
         {
+          "title": "专升本",
+          "target": {
+            "type": "doc",
+            "location": "docs/timelines/专升本时间线",
+            "anchor": ""
+          },
+          "nav_id": "10-03"
+        },
+        {
+          "title": "实习准备",
+          "target": {
+            "type": "doc",
+            "location": "docs/timelines/实习准备时间线",
+            "anchor": ""
+          },
+          "nav_id": "10-04"
+        },
+        {
+          "title": "海外工作与签证",
+          "target": {
+            "type": "doc",
+            "location": "docs/timelines/海外工作与签证时间线",
+            "anchor": ""
+          },
+          "nav_id": "10-05"
+        },
+        {
           "title": "本科四年",
           "target": {
             "type": "doc",
             "location": "docs/timelines/本科四年",
             "anchor": ""
           },
-          "nav_id": "10-03"
+          "nav_id": "10-06"
         },
         {
           "title": "保研",
@@ -4466,7 +4493,7 @@
             "location": "docs/timelines/保研时间线",
             "anchor": ""
           },
-          "nav_id": "10-04"
+          "nav_id": "10-07"
         },
         {
           "title": "考研",
@@ -4475,7 +4502,7 @@
             "location": "docs/timelines/考研时间线",
             "anchor": ""
           },
-          "nav_id": "10-05"
+          "nav_id": "10-08"
         },
         {
           "title": "留学申请",
@@ -4484,7 +4511,7 @@
             "location": "docs/timelines/留学申请时间线",
             "anchor": ""
           },
-          "nav_id": "10-06"
+          "nav_id": "10-09"
         },
         {
           "title": "博士申请",
@@ -4493,7 +4520,7 @@
             "location": "docs/timelines/博士申请时间线",
             "anchor": ""
           },
-          "nav_id": "10-07"
+          "nav_id": "10-10"
         },
         {
           "title": "校招",
@@ -4502,7 +4529,7 @@
             "location": "docs/timelines/校招时间线",
             "anchor": ""
           },
-          "nav_id": "10-08"
+          "nav_id": "10-11"
         },
         {
           "title": "科研入门",
@@ -4511,7 +4538,7 @@
             "location": "docs/timelines/科研入门时间线",
             "anchor": ""
           },
-          "nav_id": "10-09"
+          "nav_id": "10-12"
         },
         {
           "title": "转行",
@@ -4520,7 +4547,7 @@
             "location": "docs/timelines/转行时间线",
             "anchor": ""
           },
-          "nav_id": "10-10"
+          "nav_id": "10-13"
         }
       ],
       "nav_id": "10"
