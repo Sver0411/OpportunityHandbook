@@ -219,6 +219,18 @@ class TopicManual(unittest.TestCase):
             self.assertIn("## 来源与更新", text, f"{p} 缺少来源与更新小节")
             self.assertIn("](", text, f"{p} 没有任何链接（页面应可继续深入）")
 
+    def test_docs_link_back_to_main_text(self):
+        """专题页必须能回到主线：读者从模板/指南页要能走到对应的判断文章。
+
+        docs/ 只写「怎么做」，判断在 book/；没有回链的页面等于断头路。
+        README/ROADMAP 是索引页，不在此列。
+        """
+        files = [p for p in (ROOT / "docs").rglob("*.md")
+                 if p.name not in ("README.md", "ROADMAP.md")]
+        self.assertTrue(files)
+        missing = [str(p.relative_to(ROOT)) for p in files if "book/" not in p.read_text(encoding="utf-8")]
+        self.assertEqual(missing, [], f"这些专题页没有回链到 book/：{missing[:8]}")
+
     def test_timelines_are_navigation(self):
         files = sorted((ROOT / "docs" / "timelines").glob("*.md"))
         self.assertTrue(files)

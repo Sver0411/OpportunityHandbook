@@ -86,3 +86,9 @@ last_verified: 2026-09-29
 
 - 各赛事的规则与提交要求以主办方公告为准。 （Official）
 - 节奏与脚本为本项目整理的参赛经验。 （Experience-based）
+
+## 相关判断
+
+这份资料解决「怎么做」，判断「值不值得、要不要做」请看主线：
+
+- [编程与数据竞赛](../../book/03-做项目、打比赛、进实验室/02-竞赛.md#competition-programming-contest)

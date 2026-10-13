@@ -62,3 +62,9 @@ last_verified: 2026-09-29
 最后核实：2026-09-29
 
 - 本表为本项目整理的写作工具；GitHub 对 README 的建议见官方文档。https://docs.github.com/ （Official / Experience-based）
+
+## 相关判断
+
+这份资料解决「怎么做」，判断「值不值得、要不要做」请看主线：
+
+- [什么才算真正的项目](../../book/03-做项目、打比赛、进实验室/01-项目与作品.md#project-what-is-real)
