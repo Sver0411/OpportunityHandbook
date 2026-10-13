@@ -300,6 +300,22 @@
                 "entry_id": "vocational-exam-path"
               },
               "nav_id": "01-03-07"
+            },
+            {
+              "title": "中职阶段怎么试出自己想做什么",
+              "target": {
+                "type": "entry",
+                "entry_id": "vocational-explore"
+              },
+              "nav_id": "01-03-08"
+            },
+            {
+              "title": "中职与专科阶段能拿出什么作品",
+              "target": {
+                "type": "entry",
+                "entry_id": "vocational-portfolio"
+              },
+              "nav_id": "01-03-09"
             }
           ],
           "target": {

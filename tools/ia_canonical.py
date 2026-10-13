@@ -49,6 +49,8 @@ TREE = """
     技能型职业的发展空间 @n:trades-career-room
     中职与专科阶段有哪些资助 @e:vocational-subsidy
     中职毕业后的升学路怎么走 @e:vocational-exam-path
+    中职阶段怎么试出自己想做什么 @e:vocational-explore
+    中职与专科阶段能拿出什么作品 @e:vocational-portfolio
   家庭经济与教育成本
     学费与生活费 @n:education-tuition-living
     奖助学金 @e:funding-scholarship-system
