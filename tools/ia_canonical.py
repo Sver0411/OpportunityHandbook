@@ -306,6 +306,8 @@ TREE = """
     内部转岗 @n:work-internal-transfer
     工作后读研 @n:work-grad-school-after-work
     海外工作 @n:work-overseas-job
+    海外工作第一年要处理什么 @e:overseas-work-first-year
+    海外工作的合同、签证与税务 @e:overseas-work-contract
 
 07 晋升、跳槽还是转行
   晋升

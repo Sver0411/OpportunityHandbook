@@ -2427,6 +2427,22 @@
                 "entry_id": "work-overseas-job"
               },
               "nav_id": "06-05-05"
+            },
+            {
+              "title": "海外工作第一年要处理什么",
+              "target": {
+                "type": "entry",
+                "entry_id": "overseas-work-first-year"
+              },
+              "nav_id": "06-05-06"
+            },
+            {
+              "title": "海外工作的合同、签证与税务",
+              "target": {
+                "type": "entry",
+                "entry_id": "overseas-work-contract"
+              },
+              "nav_id": "06-05-07"
             }
           ],
           "target": {
