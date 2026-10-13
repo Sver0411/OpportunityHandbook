@@ -184,6 +184,8 @@ TREE = """
     奖学金与 Funding @e:overseas-funding
     留学总成本 @e:overseas-total-cost
   深入科研
+    读研这两年怎么用 @e:master-use-two-years
+    读研期间实习和论文怎么安排 @e:master-internship-vs-paper
     读博期间该积累什么 @e:phd-during-plan
     博士毕业后的出口怎么比较 @e:phd-career-paths
     延期、换方向还是退出 @e:phd-delay-or-quit
