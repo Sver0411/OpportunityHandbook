@@ -4873,6 +4873,15 @@
         }
       ],
       "nav_id": "14"
+    },
+    {
+      "title": "15 内容地图",
+      "target": {
+        "type": "doc",
+        "location": "book/15-内容地图",
+        "anchor": ""
+      },
+      "nav_id": "15"
     }
   ]
 }

@@ -737,13 +737,46 @@
     main.appendChild(facetsPanel(params));
 
     if (!results.length) {
-      main.appendChild(el("p", { class: "empty", text: "没有符合条件的条目。可以去掉一两个条件，或换一个关键词试试。" }));
+      main.appendChild(emptyState(q, params));
     } else {
       var list = el("ul", { class: "results" });
       results.forEach(function (e) { list.appendChild(resultItem(e)); });
       main.appendChild(list);
     }
     clear(tocEl);
+  }
+
+  // 无结果时不要只说「没找到」：给出可点的常见词与两个兜底入口，
+  // 读者至少还有路可走（搜不到是检索体验里最伤的一步）
+  var EMPTY_TIPS = ["保研", "实习", "科研", "转行", "留学", "考公", "简历", "中职", "40 岁"];
+
+  function emptyState(q, params) {
+    var box = el("div", { class: "empty-block" });
+    box.appendChild(el("p", { class: "empty-title", text: "没有匹配的条目" }));
+    box.appendChild(el("p", {
+      class: "empty-desc",
+      text: q ? "搜索按字面与同义词匹配，不认近义改写。换一个说法、去掉一个条件，或从下面进入。"
+              : "当前条件下没有内容。去掉一两个条件试试。"
+    }));
+    var tips = el("ul", { class: "empty-tips" });
+    EMPTY_TIPS.forEach(function (t) {
+      tips.appendChild(el("li", {}, [el("a", { href: "#/browse?q=" + encodeURIComponent(t), text: t })]));
+    });
+    box.appendChild(el("p", { class: "empty-hint", text: "常见入口：" }));
+    box.appendChild(tips);
+    var links = el("p", { class: "empty-links" });
+    links.appendChild(el("span", { text: "也可以直接进 " }));
+    links.appendChild(el("a", { href: "#/doc/book/15-内容地图", text: "内容地图" }));
+    links.appendChild(el("span", { text: "（按阶段与方向索引全书）或 " }));
+    links.appendChild(el("a", { href: "#/doc/book/00-从这里开始", text: "从这里开始" }));
+    links.appendChild(el("span", { text: "。" }));
+    box.appendChild(links);
+    if (params && params.toString()) {
+      box.appendChild(el("p", { class: "empty-clear" }, [
+        el("a", { href: "#/browse", text: "清除全部条件" })
+      ]));
+    }
+    return box;
   }
 
   function resultItem(e) {

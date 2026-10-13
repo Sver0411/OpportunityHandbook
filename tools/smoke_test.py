@@ -308,8 +308,14 @@ PROBE = r"""
         if (target) {
           last.click();
           await wait(400);
-          var want = target.getBoundingClientRect().top;
-          jumpOk = Math.abs(want) < 320;
+          var rect = target.getBoundingClientRect();
+          // 常规情况：目标标题被顶到视口顶部附近（允许 320px 内）
+          // 特例：目标已在文档末尾，页面无法再往下滚 —— 此时只要求它确实进入了视口，
+          //       否则这个断言在「章节被拆成小分册、条目正好是文件最后一条」时会假失败
+          var doc = document.documentElement;
+          var atBottom = (window.scrollY + window.innerHeight) >= (doc.scrollHeight - 8);
+          jumpOk = Math.abs(rect.top) < 320 ||
+                   (atBottom && rect.top > -8 && rect.bottom <= window.innerHeight + 8);
         }
         ok("点击目录项跳到正确位置：" + c.label, jumpOk);
       }

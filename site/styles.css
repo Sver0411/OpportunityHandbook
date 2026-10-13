@@ -516,6 +516,20 @@ body.nav-collapsed .shell { margin-left: 0; }
 .result-meta { margin: 0; display: flex; flex-wrap: wrap; gap: 6px; align-items: center; font-size: 12px; color: var(--muted); }
 .empty { color: var(--muted); padding: 34px 0; }
 
+/* 搜索无结果：给出可点的常见词与兜底入口，而不是只说「没找到」 */
+.empty-block { padding: 28px 0 34px; border-top: 1px solid var(--line); margin-top: 18px; }
+.empty-block .empty-title { font-size: 17px; font-weight: 650; color: var(--ink); margin: 0 0 8px; }
+.empty-block .empty-desc { color: var(--muted); margin: 0 0 14px; }
+.empty-block .empty-hint { color: var(--muted); margin: 0 0 8px; font-size: 15px; }
+.empty-block .empty-tips { list-style: none; display: flex; flex-wrap: wrap; gap: 8px; padding: 0; margin: 0 0 16px; }
+.empty-block .empty-tips a {
+  display: inline-block; padding: 4px 11px; border: 1px solid var(--line);
+  border-radius: 999px; font-size: 14px; text-decoration: none; color: var(--ink);
+}
+.empty-block .empty-tips a:hover { border-color: var(--accent); color: var(--accent); }
+.empty-block .empty-links { color: var(--muted); margin: 0 0 10px; }
+.empty-block .empty-clear a { font-size: 15px; }
+
 /* 首页统计：一块磨砂面板 */
 .stats {
   display: flex; flex-wrap: wrap; gap: 44px; margin: 4px 0 34px; padding: 22px 24px;
