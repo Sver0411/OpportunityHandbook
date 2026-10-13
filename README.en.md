@@ -60,6 +60,9 @@ You do not need to read the book from beginning to end. These entry points lead 
 | “Which job offer should I accept?” | [Compare offers beyond the headline salary](https://sver0411.github.io/OpportunityHandbook/pages/offer-comparison/) |
 | “Should I move into another field?” | [Questions to settle before a career change](https://sver0411.github.io/OpportunityHandbook/pages/switch-before-decide/) |
 | “What is worth building over several years?” | [The things you can take with you](https://sver0411.github.io/OpportunityHandbook/pages/judge-long-term-accumulation/) |
+| “Where do I start at all?” | [Content map: entries by life stage and direction](https://sver0411.github.io/OpportunityHandbook/#/doc/book/15-%E5%86%85%E5%AE%B9%E5%9C%B0%E5%9B%BE) |
+| “Can I continue studying after vocational school?” | [Routes from vocational school into higher education](https://sver0411.github.io/OpportunityHandbook/pages/vocational-exam-path/) |
+| “Can I change direction after 40?” | [Planning work after 40](https://sver0411.github.io/OpportunityHandbook/pages/career-after-40/) |
 
 The [online reader](https://sver0411.github.io/OpportunityHandbook/) also lets you browse by life stage, direction, effort, expected outcome, and evidence type. Alongside the main chapters, the repository includes [timelines](docs/timelines), [decision tools](docs/tools), and [focused guides](docs/manuals) on research, competitions, open source, funding, and more.
 
