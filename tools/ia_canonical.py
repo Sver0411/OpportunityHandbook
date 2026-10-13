@@ -288,6 +288,8 @@ TREE = """
     工作后重新读书 @e:work-study-again
     下班后的时间该投到哪里 @e:work-after-hours-investment
     工作后参加比赛和评比值不值 @e:work-competition-value
+    在职提升学历的钱和时间怎么算 @e:work-parttime-study-cost
+    怎么把行业信息变成判断力 @e:work-industry-judgment
   建立行业关系
     Networking @e:community-networking
     专业社群 @n:community-professional-group

@@ -2277,6 +2277,22 @@
                 "entry_id": "work-competition-value"
               },
               "nav_id": "06-03-08"
+            },
+            {
+              "title": "在职提升学历的钱和时间怎么算",
+              "target": {
+                "type": "entry",
+                "entry_id": "work-parttime-study-cost"
+              },
+              "nav_id": "06-03-09"
+            },
+            {
+              "title": "怎么把行业信息变成判断力",
+              "target": {
+                "type": "entry",
+                "entry_id": "work-industry-judgment"
+              },
+              "nav_id": "06-03-10"
             }
           ],
           "target": {
