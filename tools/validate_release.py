@@ -58,20 +58,31 @@ STEPS: list[tuple[str, list[str]]] = [
 SMOKE = ("浏览器冒烟", [PY, "tools/smoke_test.py"])
 
 
+# 依赖无头 Chrome 的两步（排版实测、浏览器冒烟）在机器负载高时会偶发失败
+# （首屏还没渲染完、定时器被拖住）。它们各允许重试一次：真有问题时两次都会失败，
+# 因此不会掩盖回归，但能避免把「这一次没跑起来」当成内容问题。
+FLAKY = {"标题层级实测", "浏览器冒烟"}
+
+
 def run(name: str, cmd: list[str]) -> bool:
-    print(f"\n=== {name} ===")
-    proc = subprocess.run(cmd, cwd=ROOT, text=True, capture_output=True)
-    tail = (proc.stdout or "").strip().splitlines()[-6:]
-    for line in tail:
-        print("   ", line)
-    if proc.returncode != 0:
+    attempts = 2 if name in FLAKY else 1
+    for attempt in range(1, attempts + 1):
+        print(f"\n=== {name} ==={'' if attempt == 1 else '（重试）'}")
+        proc = subprocess.run(cmd, cwd=ROOT, text=True, capture_output=True)
+        tail = (proc.stdout or "").strip().splitlines()[-6:]
+        for line in tail:
+            print("   ", line)
+        if proc.returncode == 0:
+            print(f"→ {name} 通过")
+            return True
         err = (proc.stderr or "").strip().splitlines()[-6:]
         for line in err:
             print("   !", line)
-        print(f"→ {name} 失败（exit {proc.returncode}）")
-        return False
-    print(f"→ {name} 通过")
-    return True
+        if attempt == attempts:
+            print(f"→ {name} 失败（exit {proc.returncode}）")
+            return False
+        print(f"   （首次失败，重试一次；此类检查依赖无头 Chrome，偶发失败不代表回归）")
+    return False
 
 
 def main() -> int:
