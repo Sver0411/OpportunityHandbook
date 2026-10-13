@@ -56,7 +56,7 @@ stages: [highschool, secondary_vocational, college, undergraduate, master]
 ```
 
 一个非常重要的判断维度是：结束以后你能留下什么别人可以验证的成果。
-见 [什么比赛值得参加](../book/03-做项目、打比赛、进实验室.md#competition-what-worth-joining)。
+见 [什么比赛值得参加](../book/03-做项目、打比赛、进实验室/02-竞赛.md#competition-what-worth-joining)。
 
 ### 本科生怎么开始科研？
 
@@ -71,7 +71,7 @@ stages: [undergraduate]
 ```
 
 本科生开始科研前，不需要先达到“能独立完成研究”的程度。更需要的是具备所在领域最基本的课程基础，并能在导师或高年级成员指导下完成一个可验证的小任务——不同学科的小任务差别很大：复现代码、整理文献、协助实验、数据清理、访谈编码、档案整理、田野记录、设计调研都可以。
-见 [本科生什么时候值得开始科研](../book/03-做项目、打比赛、进实验室.md#research-undergrad-start)。
+见 [本科生什么时候值得开始科研](../book/03-做项目、打比赛、进实验室/03-科研初体验.md#research-undergrad-start)。
 
 ### 第一份工作应该怎么看？
 
@@ -86,7 +86,7 @@ stages: [new_grad, undergraduate]
 ```
 
 看它换回的是“可迁移的技能与作品”，还是“只有这家公司认的熟练度”。
-见 [第一份工作最应该换回什么](../book/05-从学校走向第一份工作.md#first-job-what-to-trade-for)。
+见 [第一份工作最应该换回什么](../book/05-从学校走向第一份工作/06-第一份工作.md#first-job-what-to-trade-for)。
 
 ### 工作几年以后应该怎么升职？
 
@@ -161,7 +161,7 @@ stages: [highschool, college, undergraduate, new_grad]
 ```
 
 看主办方、看获奖比例、看有没有第三方认它——三条里有一条不合格就要警惕。
-见 [怎么识别付费拿奖的竞赛](../book/03-做项目、打比赛、进实验室.md#competition-what-worth-joining)。
+见 [怎么识别付费拿奖的竞赛](../book/03-做项目、打比赛、进实验室/02-竞赛.md#competition-what-worth-joining)。
 
 ### 我的 GitHub 项目算项目经历吗？
 
@@ -176,7 +176,7 @@ stages: [undergraduate, master, new_grad, work_1_3]
 ```
 
 看有没有人用过、能不能被验证、README 能不能让人 5 分钟跑起来。
-见 [GitHub 项目做到什么程度才算项目经历](../book/03-做项目、打比赛、进实验室.md#project-what-is-real)。
+见 [GitHub 项目做到什么程度才算项目经历](../book/03-做项目、打比赛、进实验室/01-项目与作品.md#project-what-is-real)。
 
 ### 两个 Offer 应该怎么比较？
 
@@ -191,7 +191,7 @@ stages: [new_grad, work_1_3]
 ```
 
 把两边的现金、成长、城市与退出选项拉到同一张表上，用区间而不是单点去估。
-见 [Offer 应该怎么比较](../book/05-从学校走向第一份工作.md#offer-comparison)。
+见 [Offer 应该怎么比较](../book/05-从学校走向第一份工作/05-Offer.md#offer-comparison)。
 
 ### 怎么比较两个完全不同的机会？
 
@@ -266,7 +266,7 @@ stages: [undergraduate, master, phd]
 ```
 
 先读一到两篇对方的工作，邮件控制在 200 字内并**提出一个具体问题**；两周无回复在原邮件下跟进一次，仍无回复就换下一位。
-见 [Playbook：第一次联系导师](../docs/playbooks/第一次联系导师.md) 与 [怎么找导师](../book/03-做项目、打比赛、进实验室.md#research-find-supervisor)。
+见 [Playbook：第一次联系导师](../docs/playbooks/第一次联系导师.md) 与 [怎么找导师](../book/03-做项目、打比赛、进实验室/03-科研初体验.md#research-find-supervisor)。
 
 ### 家里预算有限，还能留学吗？
 

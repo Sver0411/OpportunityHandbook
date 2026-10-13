@@ -82,7 +82,7 @@ last_verified: 2026-09-29
 
 ## 相关
 
-[Offer 怎么比较](../../book/05-从学校走向第一份工作.md#offer-comparison)、[薪资和总包怎么看](../../book/05-从学校走向第一份工作.md#offer-total-comp)、[Offer 对比表](../tools/Offer对比表.md)。
+[Offer 怎么比较](../../book/05-从学校走向第一份工作/05-Offer.md#offer-comparison)、[薪资和总包怎么看](../../book/05-从学校走向第一份工作/05-Offer.md#offer-total-comp)、[Offer 对比表](../tools/Offer对比表.md)。
 
 ## 来源与更新
 

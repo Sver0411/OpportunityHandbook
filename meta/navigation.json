@@ -777,8 +777,8 @@
           ],
           "target": {
             "type": "doc",
-            "location": "book/03-做项目、打比赛、进实验室",
-            "anchor": "项目与作品"
+            "location": "book/03-做项目、打比赛、进实验室/01-项目与作品",
+            "anchor": ""
           },
           "nav_id": "03-01"
         },
@@ -860,8 +860,8 @@
           ],
           "target": {
             "type": "doc",
-            "location": "book/03-做项目、打比赛、进实验室",
-            "anchor": "竞赛"
+            "location": "book/03-做项目、打比赛、进实验室/02-竞赛",
+            "anchor": ""
           },
           "nav_id": "03-02"
         },
@@ -919,8 +919,8 @@
           ],
           "target": {
             "type": "doc",
-            "location": "book/03-做项目、打比赛、进实验室",
-            "anchor": "科研初体验"
+            "location": "book/03-做项目、打比赛、进实验室/03-科研初体验",
+            "anchor": ""
           },
           "nav_id": "03-03"
         },
@@ -986,8 +986,8 @@
           ],
           "target": {
             "type": "doc",
-            "location": "book/03-做项目、打比赛、进实验室",
-            "anchor": "开源与公共贡献"
+            "location": "book/03-做项目、打比赛、进实验室/04-开源与公共贡献",
+            "anchor": ""
           },
           "nav_id": "03-04"
         },
@@ -1045,8 +1045,8 @@
           ],
           "target": {
             "type": "doc",
-            "location": "book/03-做项目、打比赛、进实验室",
-            "anchor": "社群与活动"
+            "location": "book/03-做项目、打比赛、进实验室/05-社群与活动",
+            "anchor": ""
           },
           "nav_id": "03-05"
         },
@@ -1104,8 +1104,8 @@
           ],
           "target": {
             "type": "doc",
-            "location": "book/03-做项目、打比赛、进实验室",
-            "anchor": "实习准备"
+            "location": "book/03-做项目、打比赛、进实验室/06-实习准备",
+            "anchor": ""
           },
           "nav_id": "03-06"
         }
@@ -1635,8 +1635,8 @@
           ],
           "target": {
             "type": "doc",
-            "location": "book/05-从学校走向第一份工作",
-            "anchor": "校招是怎么运作的"
+            "location": "book/05-从学校走向第一份工作/01-校招是怎么运作的",
+            "anchor": ""
           },
           "nav_id": "05-01"
         },
@@ -1686,8 +1686,8 @@
           ],
           "target": {
             "type": "doc",
-            "location": "book/05-从学校走向第一份工作",
-            "anchor": "找岗位"
+            "location": "book/05-从学校走向第一份工作/02-找岗位",
+            "anchor": ""
           },
           "nav_id": "05-02"
         },
@@ -1745,8 +1745,8 @@
           ],
           "target": {
             "type": "doc",
-            "location": "book/05-从学校走向第一份工作",
-            "anchor": "简历与作品"
+            "location": "book/05-从学校走向第一份工作/03-简历与作品",
+            "anchor": ""
           },
           "nav_id": "05-03"
         },
@@ -1804,8 +1804,8 @@
           ],
           "target": {
             "type": "doc",
-            "location": "book/05-从学校走向第一份工作",
-            "anchor": "笔试与面试"
+            "location": "book/05-从学校走向第一份工作/04-笔试与面试",
+            "anchor": ""
           },
           "nav_id": "05-04"
         },
@@ -1871,8 +1871,8 @@
           ],
           "target": {
             "type": "doc",
-            "location": "book/05-从学校走向第一份工作",
-            "anchor": "offer"
+            "location": "book/05-从学校走向第一份工作/05-Offer",
+            "anchor": ""
           },
           "nav_id": "05-05"
         },
@@ -1930,8 +1930,8 @@
           ],
           "target": {
             "type": "doc",
-            "location": "book/05-从学校走向第一份工作",
-            "anchor": "第一份工作"
+            "location": "book/05-从学校走向第一份工作/06-第一份工作",
+            "anchor": ""
           },
           "nav_id": "05-06"
         },
@@ -1989,8 +1989,8 @@
           ],
           "target": {
             "type": "doc",
-            "location": "book/05-从学校走向第一份工作",
-            "anchor": "如果没有顺利进入下一站"
+            "location": "book/05-从学校走向第一份工作/07-如果没有顺利进入下一站",
+            "anchor": ""
           },
           "nav_id": "05-07"
         }

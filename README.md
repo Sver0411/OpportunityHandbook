@@ -146,10 +146,10 @@
 - [我到底要不要读研？](book/04-升学、就业还是出国/02-国内升学.md#grad-school-worth-it)
 - [保研和考研应该怎么选？](book/04-升学、就业还是出国/02-国内升学.md#baoyan-vs-kaoyan)
 - [学校和专业哪个更重要？](book/01-先决定下一步往哪里走.md#choose-school-vs-major)
-- [什么比赛值得参加？](book/03-做项目、打比赛、进实验室.md#competition-what-worth-joining)
-- [这个比赛是不是交了钱就能拿奖？](book/03-做项目、打比赛、进实验室.md#competition-what-worth-joining)
-- [本科生怎么开始科研？](book/03-做项目、打比赛、进实验室.md#research-undergrad-start)
-- [我的 GitHub 项目算项目经历吗？](book/03-做项目、打比赛、进实验室.md#project-what-is-real)
+- [什么比赛值得参加？](book/03-做项目、打比赛、进实验室/02-竞赛.md#competition-what-worth-joining)
+- [这个比赛是不是交了钱就能拿奖？](book/03-做项目、打比赛、进实验室/02-竞赛.md#competition-what-worth-joining)
+- [本科生怎么开始科研？](book/03-做项目、打比赛、进实验室/03-科研初体验.md#research-undergrad-start)
+- [我的 GitHub 项目算项目经历吗？](book/03-做项目、打比赛、进实验室/01-项目与作品.md#project-what-is-real)
 - [什么证书值得考？](book/02-在学校里先把基础打好.md#certificate-what-is-worth-it)
 - [专业不喜欢，要不要转？](book/01-先决定下一步往哪里走.md#choose-major-mismatch)
 - [实习应该什么时候开始找？](docs/playbooks/第一次找实习.md)
@@ -158,11 +158,11 @@
 
 ### 我快毕业了
 
-- [第一份工作应该怎么看？](book/05-从学校走向第一份工作.md#first-job-what-to-trade-for)
-- [两个 Offer 应该怎么比较？](book/05-从学校走向第一份工作.md#offer-comparison)
-- [大公司还是小公司？](book/05-从学校走向第一份工作.md#first-job-big-vs-small)
-- [工资还是成长？](book/05-从学校走向第一份工作.md#first-job-pay-vs-growth)
-- [一直找不到工作怎么办？](book/05-从学校走向第一份工作.md#job-hunting-long-search)
+- [第一份工作应该怎么看？](book/05-从学校走向第一份工作/06-第一份工作.md#first-job-what-to-trade-for)
+- [两个 Offer 应该怎么比较？](book/05-从学校走向第一份工作/05-Offer.md#offer-comparison)
+- [大公司还是小公司？](book/05-从学校走向第一份工作/06-第一份工作.md#first-job-big-vs-small)
+- [工资还是成长？](book/05-从学校走向第一份工作/06-第一份工作.md#first-job-pay-vs-growth)
+- [一直找不到工作怎么办？](book/05-从学校走向第一份工作/07-如果没有顺利进入下一站.md#job-hunting-long-search)
 - [投了很多简历都没回音，问题在哪？](docs/job-search/求职漏斗诊断.md)
 - [要不要考公 / 进体制？](book/01-先决定下一步往哪里走.md#paths-public-sector)
 
