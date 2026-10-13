@@ -2113,6 +2113,14 @@
                 "entry_id": "job-first-choice-wrong"
               },
               "nav_id": "05-07-06"
+            },
+            {
+              "title": "被裁或失业后怎么走",
+              "target": {
+                "type": "entry",
+                "entry_id": "after-layoff"
+              },
+              "nav_id": "05-07-07"
             }
           ],
           "target": {

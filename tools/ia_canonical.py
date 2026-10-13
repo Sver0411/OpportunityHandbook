@@ -268,6 +268,7 @@ TREE = """
     要不要继续升学 @n:job-or-further-study
     空窗期怎么处理 @n:job-gap-period
     第一次选择错了怎么办 @n:job-first-choice-wrong
+    被裁或失业后怎么走 @e:after-layoff
 
 06 从新人到能独立负责
   刚进入职场
