@@ -42,6 +42,7 @@ last_verified: 2026-09-21
 把某一件事的截止日期与准备节奏排成一条线。时间线最容易过期，因此每条都必须标注 `last_verified`，并在政策变化时优先复核。
 
 - [高中到大学](timelines/高中到大学.md)
+- [中职升学时间线](timelines/中职升学时间线.md)
 - [本科四年](timelines/本科四年.md)
 - [保研时间线](timelines/保研时间线.md)
 - [考研时间线](timelines/考研时间线.md)

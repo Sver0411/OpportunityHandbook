@@ -518,6 +518,7 @@ TREE = """
 
 10 路径时间线
   高中毕业后的选择 @d:docs/timelines/高中到大学
+  中职升学 @d:docs/timelines/中职升学时间线
   本科四年 @d:docs/timelines/本科四年
   保研 @d:docs/timelines/保研时间线
   考研 @d:docs/timelines/考研时间线

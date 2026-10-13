@@ -487,22 +487,29 @@ PROBE = r"""
       for (var i = 0; i < CASES.length; i++) {
         var c = CASES[i];
         location.hash = c.route;
-        await wait(700);
-        var rows = Array.prototype.slice.call(document.querySelectorAll("#navTree .nav-row"));
-        var hit = null;
-        rows.forEach(function (r) {
-          var a = r.querySelector("a.nav-label");
-          if (a && a.getAttribute("href") === c.route) hit = r;
-        });
+        // 等待导航树完成「展开 active 路径 + 高亮」。机器负载高（例如紧接在排版探针
+        // 之后）时这可能晚一两帧，因此轮询最多约 2.5 秒，而不是固定 sleep 后一次性断言。
+        var rows, hit = null, allOpen = false, tries = 0;
+        while (tries++ < 25) {
+          await wait(100);
+          rows = Array.prototype.slice.call(document.querySelectorAll("#navTree .nav-row"));
+          hit = null;
+          rows.forEach(function (r) {
+            var a = r.querySelector("a.nav-label");
+            if (a && a.getAttribute("href") === c.route) hit = r;
+          });
+          if (!hit) continue;
+          allOpen = true;
+          var chain = hit.closest(".nav-item");
+          while (chain && !chain.classList.contains("nav-group-block")) {
+            var up = chain.parentElement ? chain.parentElement.closest(".nav-item") : null;
+            if (up && !up.classList.contains("open")) allOpen = false;
+            chain = up;
+          }
+          if (allOpen && hit.classList.contains("active")) break;
+        }
         ok("目录里有节点：" + c.path, !!hit, hit ? hit.textContent.trim() : "未找到 " + c.route);
         if (!hit) continue;
-        // 所有父级必须展开
-        var li = hit.closest(".nav-item"), allOpen = true, depth = 0;
-        while (li && !li.classList.contains("nav-group-block")) {
-          var parentLi = li.parentElement ? li.parentElement.closest(".nav-item") : null;
-          if (parentLi && !parentLi.classList.contains("open")) allOpen = false;
-          li = parentLi; depth++;
-        }
         ok("父级自动展开：" + c.path, allOpen);
         ok("当前节点高亮：" + c.path, hit.classList.contains("active"));
         if (c.entry_id) {
