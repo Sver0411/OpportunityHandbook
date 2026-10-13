@@ -157,7 +157,7 @@
 - [中职和专科阶段有哪些资助？](book/01-先决定下一步往哪里走/03-专科与职业教育.md#vocational-subsidy)
 - [怎么联系导师 / 要不要套磁？](docs/playbooks/第一次联系导师.md)
 - [家里预算有限，还能留学吗？](book/04-升学、就业还是出国/03-海外升学.md#overseas-funding)
-- [怎么和父母沟通升学与职业选择？](book/01-先决定下一步往哪里走/04-家庭经济与教育成本.md#family-talk)
+- [怎么和父母沟通升学与职业选择？](book/01-先决定下一步往哪里走/07-家庭沟通与支持.md#family-talk)
 
 ### 我快毕业了
 
@@ -167,7 +167,7 @@
 - [工资还是成长？](book/05-从学校走向第一份工作/06-第一份工作.md#first-job-pay-vs-growth)
 - [一直找不到工作怎么办？](book/05-从学校走向第一份工作/07-如果没有顺利进入下一站.md#job-hunting-long-search)
 - [投了很多简历都没回音，问题在哪？](docs/job-search/求职漏斗诊断.md)
-- [博士毕业以后有哪些出口？](book/04-升学、就业还是出国/04-深入科研.md#phd-career-paths)
+- [博士毕业以后有哪些出口？](book/04-升学、就业还是出国/07-读博与博士毕业.md#phd-career-paths)
 - [要不要考公 / 进体制？](book/01-先决定下一步往哪里走/01-认识你面前的几条主要路线.md#paths-public-sector)
 
 ### 我已经工作了
@@ -178,8 +178,8 @@
 - [转行前应该先判断什么？](book/07-晋升、跳槽还是转行/05-转行.md#switch-before-decide)
 - [转行要不要从零开始？](book/07-晋升、跳槽还是转行/05-转行.md#career-change-keep-capital)
 - [工作以后还值得读硕士吗？](book/07-晋升、跳槽还是转行/06-再次进入教育体系.md#edu-master-after-work)
-- [40 岁以后还能换方向吗？](book/07-晋升、跳槽还是转行/05-转行.md#career-after-40)
-- [技能过时了怎么办？](book/07-晋升、跳槽还是转行/02-专家路线.md#career-skill-decay)
+- [40 岁以后还能换方向吗？](book/07-晋升、跳槽还是转行/08-职业中段与年龄.md#career-after-40)
+- [技能过时了怎么办？](book/07-晋升、跳槽还是转行/07-资深阶段：技能与收入.md#career-skill-decay)
 
 ### 我不知道自己想做什么
 

@@ -52,6 +52,7 @@ TREE = """
     技能型职业的发展空间 @n:trades-career-room
     中职与专科阶段有哪些资助 @e:vocational-subsidy
     中职毕业后的升学路怎么走 @e:vocational-exam-path
+  中职与专科阶段的探索与作品 @d:book/01-先决定下一步往哪里走/06-中职与专科阶段的探索与作品
     中职阶段怎么试出自己想做什么 @e:vocational-explore
     中职与专科阶段能拿出什么作品 @e:vocational-portfolio
   家庭经济与教育成本
@@ -59,6 +60,7 @@ TREE = """
     奖助学金 @e:funding-scholarship-system
     助学贷款 @e:funding-student-loan
     为教育投入多少钱才合理 @n:education-cost-budget
+  家庭沟通与支持 @d:book/01-先决定下一步往哪里走/07-家庭沟通与支持
     怎么和父母沟通升学与职业选择 @e:family-talk
   给自己保留退路
     为什么不要过早把路线锁死 @n:optionality-why-not-lock
@@ -186,11 +188,6 @@ TREE = """
     奖学金与 Funding @e:overseas-funding
     留学总成本 @e:overseas-total-cost
   深入科研
-    读研这两年怎么用 @e:master-use-two-years
-    读研期间实习和论文怎么安排 @e:master-internship-vs-paper
-    读博期间该积累什么 @e:phd-during-plan
-    博士毕业后的出口怎么比较 @e:phd-career-paths
-    延期、换方向还是退出 @e:phd-delay-or-quit
     RA @n:research-ra
     暑研 @e:research-summer-program
     Research Internship @e:overseas-research-internship
@@ -200,6 +197,13 @@ TREE = """
     论文写作 @e:research-writing-and-submission
     学术会议 @n:research-conference
     推荐信 @n:research-recommendation-letter
+  读研期间怎么用这两年 @d:book/04-升学、就业还是出国/08-读研期间怎么用这两年
+    读研这两年怎么用 @e:master-use-two-years
+    读研期间实习和论文怎么安排 @e:master-internship-vs-paper
+  读博与博士毕业 @d:book/04-升学、就业还是出国/07-读博与博士毕业
+    读博期间该积累什么 @e:phd-during-plan
+    博士毕业后的出口怎么比较 @e:phd-career-paths
+    延期、换方向还是退出 @e:phd-delay-or-quit
   实习进一步升级
     日常实习 @n:internship-daily
     暑期实习 @n:internship-summer
@@ -251,6 +255,7 @@ TREE = """
     三方 @e:job-hunting-tripartite-agreement
     背调 @e:job-hunting-background-check
     毁约 @n:offer-renege
+  入职前的核实 @d:book/05-从学校走向第一份工作/08-入职前的核实
     怎么判断一家公司值不值得去 @e:employer-due-diligence
   第一份工作
     第一份工作最应该换回什么 @e:first-job-what-to-trade-for
@@ -259,6 +264,7 @@ TREE = """
     行业还是岗位 @e:first-job-role-vs-industry
     城市还是机会 @e:first-job-city
     工资还是成长 @e:first-job-pay-vs-growth
+  毕业前后的衔接 @d:book/05-从学校走向第一份工作/09-毕业前后的衔接
     应届生身份到底值什么 @e:fresh-grad-status
     毕业到入职之间的几个月怎么用 @e:graduation-to-job-gap
   如果没有顺利进入下一站
@@ -291,6 +297,7 @@ TREE = """
     工作后做个人项目 @n:work-side-project
     工作后做开源 @n:work-open-source
     工作后重新读书 @e:work-study-again
+  工作后的外部投入 @d:book/06-从新人到能独立负责/06-工作后的外部投入
     下班后的时间该投到哪里 @e:work-after-hours-investment
     工作后参加比赛和评比值不值 @e:work-competition-value
     在职提升学历的钱和时间怎么算 @e:work-parttime-study-cost
@@ -303,14 +310,15 @@ TREE = """
     Speaker @n:community-speaker
     Reviewer @n:community-reviewer
     行业影响力 @e:community-industry-influence
+  海外工作 @d:book/06-从新人到能独立负责/07-海外工作
+    海外工作第一年要处理什么 @e:overseas-work-first-year
+    海外工作的合同、签证与税务 @e:overseas-work-contract
   第一次重新选择
     什么时候适合第一次跳槽 @e:career-job-hopping
     什么情况下应该留下 @n:work-when-to-stay
     内部转岗 @n:work-internal-transfer
     工作后读研 @n:work-grad-school-after-work
     海外工作 @n:work-overseas-job
-    海外工作第一年要处理什么 @e:overseas-work-first-year
-    海外工作的合同、签证与税务 @e:overseas-work-contract
 
 07 晋升、跳槽还是转行
   晋升
@@ -320,12 +328,13 @@ TREE = """
     怎么证明影响力 @e:career-influence
     长期不晋升怎么办 @n:promotion-stalled
   专家路线
-    技能过时了怎么补 @e:career-skill-decay
-    资深阶段的收入结构怎么安排 @e:career-income-mix
     专业深度 @n:track-ic-depth
     跨团队影响 @n:track-ic-cross-team
     行业影响 @n:track-ic-industry
     Staff / Principal 等角色 @n:track-staff-principal
+  资深阶段：技能与收入 @d:book/07-晋升、跳槽还是转行/07-资深阶段：技能与收入
+    技能过时了怎么补 @e:career-skill-decay
+    资深阶段的收入结构怎么安排 @e:career-income-mix
   管理路线
     第一次带人 @n:mgmt-first-team
     Team Lead @n:mgmt-team-lead
@@ -342,21 +351,22 @@ TREE = """
     换城市 @n:hop-change-city
   转行
     转行前先判断什么 @n:switch-before-decide
-    转行期的钱怎么安排 @e:career-change-cashflow
-    转行时怎么重建行业关系 @e:career-change-network
     为什么不要清零过去经历 @e:career-change-keep-capital
     可迁移技能 @e:career-transferable-capital
     可迁移行业经验 @n:switch-transferable-domain
     Bridge Opportunity @e:career-bridge-opportunity
     Side Project @n:switch-side-project
     降薪转行 @e:career-pay-cut-transition
+  转行期的钱与关系 @d:book/07-晋升、跳槽还是转行/09-转行期的钱与关系
+    转行期的钱怎么安排 @e:career-change-cashflow
+    转行时怎么重建行业关系 @e:career-change-network
   再次进入教育体系
     工作后读硕士 @n:edu-master-after-work
     MBA / MPA 等职业学位 @n:edu-mba-mpa
     第二硕士 @n:edu-second-master
     博士 @e:research-phd-worth-it
     海外教育 @n:edu-abroad-again
-  职业中段与年龄
+  职业中段与年龄 @d:book/07-晋升、跳槽还是转行/08-职业中段与年龄
     40 岁以后怎么规划工作 @e:career-after-40
     中年重新开始前先算什么 @e:career-midlife-reset
 
@@ -384,10 +394,10 @@ TREE = """
     Incubator @n:startup-incubator
     Accelerator @n:startup-accelerator
     融资 @e:startup-funding
-  副业转主业 @e:side-project-to-main-business
-  职业中断后重新进入职场 @n:career-break-return
-  第二职业 @n:second-career
-  再次不知道方向时怎么办 @n:direction-again
+    副业转主业 @e:side-project-to-main-business
+    职业中断后重新进入职场 @n:career-break-return
+    第二职业 @n:second-career
+    再次不知道方向时怎么办 @n:direction-again
 
 09 专题手册
   科研手册 @d:docs/manuals/科研手册

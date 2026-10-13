@@ -244,6 +244,34 @@ class TopicManual(unittest.TestCase):
                         missing.append(f"{idx} ← docs/{d}/{f.name}")
         self.assertEqual(missing, [], f"索引章未列出这些专题文件：{missing[:6]}")
 
+    def test_nav_group_target_matches_entry_files(self):
+        """导航分组必须与文件结构一一对应。
+
+        约定：一个 `## 分组` = 一个分册文件 = 一个导航分组。
+        否则会出现「点某个分组却打开另一册」或「同一页被两个分组指向」，
+        读者看到的就是分组名与页面标题对不上（历史上出现过一次：职业中段与年龄
+        的两个条目当时放在 05-转行.md 里）。
+        """
+        nav = json.loads(pathlib.Path("meta/navigation.json").read_text(encoding="utf-8"))
+        by_id = {e["id"]: e["location"] for e in INDEX["entries"]}
+        problems = []
+
+        def walk(nodes, parent_group=None, group_doc=None):
+            for n in nodes:
+                tg = n.get("target") or {}
+                doc = group_doc
+                if tg.get("type") == "doc":
+                    doc = tg.get("location") or ""
+                kids = n.get("children") or []
+                if tg.get("type") == "entry":
+                    loc = by_id.get(tg.get("entry_id") or "", "")
+                    if group_doc and loc and loc != group_doc:
+                        problems.append(f"{parent_group} > {n['title']}：条目在 {loc}，分组指向 {group_doc}")
+                walk(kids, n["title"], doc)
+
+        walk(nav["items"])
+        self.assertEqual(problems, [], f"分组与所在文件不一致：{problems[:6]}")
+
     def test_entries_have_related_links(self):
         """每个条目都要有「相关」小节且至少一条链接：读完一篇要能继续走。
 
