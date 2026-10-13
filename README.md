@@ -145,13 +145,13 @@
 
 - [我到底要不要读研？](book/04-升学、就业还是出国/02-国内升学.md#grad-school-worth-it)
 - [保研和考研应该怎么选？](book/04-升学、就业还是出国/02-国内升学.md#baoyan-vs-kaoyan)
-- [学校和专业哪个更重要？](book/01-先决定下一步往哪里走.md#choose-school-vs-major)
+- [学校和专业哪个更重要？](book/01-先决定下一步往哪里走/02-选学校与选专业.md#choose-school-vs-major)
 - [什么比赛值得参加？](book/03-做项目、打比赛、进实验室/02-竞赛.md#competition-what-worth-joining)
 - [这个比赛是不是交了钱就能拿奖？](book/03-做项目、打比赛、进实验室/02-竞赛.md#competition-what-worth-joining)
 - [本科生怎么开始科研？](book/03-做项目、打比赛、进实验室/03-科研初体验.md#research-undergrad-start)
 - [我的 GitHub 项目算项目经历吗？](book/03-做项目、打比赛、进实验室/01-项目与作品.md#project-what-is-real)
 - [什么证书值得考？](book/02-在学校里先把基础打好/06-证书.md#certificate-what-is-worth-it)
-- [专业不喜欢，要不要转？](book/01-先决定下一步往哪里走.md#choose-major-mismatch)
+- [专业不喜欢，要不要转？](book/01-先决定下一步往哪里走/02-选学校与选专业.md#choose-major-mismatch)
 - [实习应该什么时候开始找？](docs/playbooks/第一次找实习.md)
 - [怎么联系导师 / 要不要套磁？](docs/playbooks/第一次联系导师.md)
 - [家里预算有限，还能留学吗？](book/04-升学、就业还是出国/03-海外升学.md#overseas-funding)
@@ -164,12 +164,12 @@
 - [工资还是成长？](book/05-从学校走向第一份工作/06-第一份工作.md#first-job-pay-vs-growth)
 - [一直找不到工作怎么办？](book/05-从学校走向第一份工作/07-如果没有顺利进入下一站.md#job-hunting-long-search)
 - [投了很多简历都没回音，问题在哪？](docs/job-search/求职漏斗诊断.md)
-- [要不要考公 / 进体制？](book/01-先决定下一步往哪里走.md#paths-public-sector)
+- [要不要考公 / 进体制？](book/01-先决定下一步往哪里走/01-认识你面前的几条主要路线.md#paths-public-sector)
 
 ### 我已经工作了
 
-- [工作几年以后应该怎么升职？](book/06-从新人到能独立负责.md#work-record-achievements)
-- [什么时候适合第一次跳槽？](book/06-从新人到能独立负责.md#career-job-hopping)
+- [工作几年以后应该怎么升职？](book/06-从新人到能独立负责/02-从执行到独立负责.md#work-record-achievements)
+- [什么时候适合第一次跳槽？](book/06-从新人到能独立负责/05-第一次重新选择.md#career-job-hopping)
 - [技术路线还是管理路线？](book/07-晋升、跳槽还是转行/03-管理路线.md#mgmt-ic-or-manager)
 - [转行前应该先判断什么？](book/07-晋升、跳槽还是转行/05-转行.md#switch-before-decide)
 - [转行要不要从零开始？](book/07-晋升、跳槽还是转行/05-转行.md#career-change-keep-capital)

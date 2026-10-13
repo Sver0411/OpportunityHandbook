@@ -15,6 +15,7 @@
   6c. build_roadmap.py --check      路线图是否与 metadata 一致
   7. check_links.py --strict        外部链接（仅永久失效 404/410 阻塞）
   8. smoke_test.py                  浏览器冒烟（--quick 时跳过）
+  9. check_chapter_size.py          正文文件长度（防止长回大章节）
 
 这样「内容不合格就不能上线」在 CI 与 Pages 两端同时成立。
 """
@@ -50,6 +51,8 @@ STEPS: list[tuple[str, list[str]]] = [
     # 排版实测：用无头 Chrome 量各级标题的计算字号，防止标题层级倒挂或小于正文
     # （没有 Chrome 时该脚本自行跳过并返回 0）
     ("标题层级实测", [PY, "tools/probe_typography.py"]),
+    # 正文文件不能重新长回几千行的大章节（拆分成小分册是维护成本的前提）
+    ("正文文件长度", [PY, "tools/check_chapter_size.py"]),
 ]
 
 SMOKE = ("浏览器冒烟", [PY, "tools/smoke_test.py"])
