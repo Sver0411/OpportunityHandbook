@@ -297,3 +297,33 @@ stages: [college, undergraduate, new_grad, work_1_3]
 
 「考公」其实是三条通道，条件与日常差别很大：先读当年公告与职位表（专业代码、学历、政治面貌、基层年限是最硬的筛子），再确认服务期与地域，最后判断自己能否接受材料与协调为主的日常。
 见 [考公、选调与事业单位](../book/01-先决定下一步往哪里走/01-认识你面前的几条主要路线.md#paths-public-sector) 与 [公共部门与事业单位](../docs/career-guides/公共部门.md)。
+
+### 中职毕业，能不能继续升学？
+
+```meta
+id: q-vocational-path
+kind: question
+status: complete
+link: vocational-exam-path
+summary: 能，通道有四条（高职单招、职教高考/对口升学、五年一贯制、技能拔尖免试），名字各省不同，先查本省教育考试院文件。
+topics: [study]
+stages: [secondary_vocational, college]
+```
+
+先弄清本省叫法，再定通道：去省教育考试院官网搜当年的「高职分类考试」「对口升学」文件，把报名时间、科目与录取规则抄下来；同时问班主任本校上一届有多少人升学、走哪条路。
+见 [中职毕业后的升学路怎么走](../book/01-先决定下一步往哪里走/03-专科与职业教育.md#vocational-exam-path) 与 [中职与专科阶段有哪些资助](../book/01-先决定下一步往哪里走/03-专科与职业教育.md#vocational-subsidy)。
+
+### 40 岁以后还能换方向吗？
+
+```meta
+id: q-after-40
+kind: question
+status: complete
+link: career-after-40
+summary: 能，但筛选逻辑变了：先算现金流与可迁移资本，再用半年做一次低成本验证，靠交付与推荐而不是海投。
+topics: [job, explore]
+stages: [senior, career_change]
+```
+
+40 岁以后继续用投递式求职，通过率会明显下降。先把问题从「还能找到什么岗位」换成「谁会为什么事来找我」，再在三条主线里选一条（原领域做深 / 能力产品化 / 转向看经验的岗位）。
+见 [40 岁以后怎么规划工作](../book/07-晋升、跳槽还是转行/05-转行.md#career-after-40) 与 [中年重新开始前先算什么](../book/07-晋升、跳槽还是转行/05-转行.md#career-midlife-reset)。

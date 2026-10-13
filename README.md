@@ -153,6 +153,8 @@
 - [什么证书值得考？](book/02-在学校里先把基础打好/06-证书.md#certificate-what-is-worth-it)
 - [专业不喜欢，要不要转？](book/01-先决定下一步往哪里走/02-选学校与选专业.md#choose-major-mismatch)
 - [实习应该什么时候开始找？](docs/playbooks/第一次找实习.md)
+- [中职毕业，能不能继续升学？](book/01-先决定下一步往哪里走/03-专科与职业教育.md#vocational-exam-path)
+- [中职和专科阶段有哪些资助？](book/01-先决定下一步往哪里走/03-专科与职业教育.md#vocational-subsidy)
 - [怎么联系导师 / 要不要套磁？](docs/playbooks/第一次联系导师.md)
 - [家里预算有限，还能留学吗？](book/04-升学、就业还是出国/03-海外升学.md#overseas-funding)
 
@@ -174,6 +176,7 @@
 - [转行前应该先判断什么？](book/07-晋升、跳槽还是转行/05-转行.md#switch-before-decide)
 - [转行要不要从零开始？](book/07-晋升、跳槽还是转行/05-转行.md#career-change-keep-capital)
 - [工作以后还值得读硕士吗？](book/07-晋升、跳槽还是转行/06-再次进入教育体系.md#edu-master-after-work)
+- [40 岁以后还能换方向吗？](book/07-晋升、跳槽还是转行/05-转行.md#career-after-40)
 
 ### 我不知道自己想做什么
 

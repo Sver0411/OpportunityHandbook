@@ -47,6 +47,8 @@ TREE = """
     职业本科 @n:vocational-undergraduate
     学徒制与技能路线 @n:apprenticeship
     技能型职业的发展空间 @n:trades-career-room
+    中职与专科阶段有哪些资助 @e:vocational-subsidy
+    中职毕业后的升学路怎么走 @e:vocational-exam-path
   家庭经济与教育成本
     学费与生活费 @n:education-tuition-living
     奖助学金 @e:funding-scholarship-system
@@ -328,6 +330,9 @@ TREE = """
     第二硕士 @n:edu-second-master
     博士 @e:research-phd-worth-it
     海外教育 @n:edu-abroad-again
+  职业中段与年龄
+    40 岁以后怎么规划工作 @e:career-after-40
+    中年重新开始前先算什么 @e:career-midlife-reset
 
 08 自由职业、副业与创业
   自由职业

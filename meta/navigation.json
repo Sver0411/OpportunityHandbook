@@ -284,6 +284,22 @@
                 "entry_id": "trades-career-room"
               },
               "nav_id": "01-03-05"
+            },
+            {
+              "title": "中职与专科阶段有哪些资助",
+              "target": {
+                "type": "entry",
+                "entry_id": "vocational-subsidy"
+              },
+              "nav_id": "01-03-06"
+            },
+            {
+              "title": "中职毕业后的升学路怎么走",
+              "target": {
+                "type": "entry",
+                "entry_id": "vocational-exam-path"
+              },
+              "nav_id": "01-03-07"
             }
           ],
           "target": {
@@ -2624,6 +2640,33 @@
             "anchor": ""
           },
           "nav_id": "07-06"
+        },
+        {
+          "title": "职业中段与年龄",
+          "children": [
+            {
+              "title": "40 岁以后怎么规划工作",
+              "target": {
+                "type": "entry",
+                "entry_id": "career-after-40"
+              },
+              "nav_id": "07-07-01"
+            },
+            {
+              "title": "中年重新开始前先算什么",
+              "target": {
+                "type": "entry",
+                "entry_id": "career-midlife-reset"
+              },
+              "nav_id": "07-07-02"
+            }
+          ],
+          "target": {
+            "type": "doc",
+            "location": "book/07-晋升、跳槽还是转行/05-转行",
+            "anchor": ""
+          },
+          "nav_id": "07-07"
         }
       ],
       "nav_id": "07"
