@@ -150,7 +150,7 @@
 - [这个比赛是不是交了钱就能拿奖？](book/03-做项目、打比赛、进实验室/02-竞赛.md#competition-what-worth-joining)
 - [本科生怎么开始科研？](book/03-做项目、打比赛、进实验室/03-科研初体验.md#research-undergrad-start)
 - [我的 GitHub 项目算项目经历吗？](book/03-做项目、打比赛、进实验室/01-项目与作品.md#project-what-is-real)
-- [什么证书值得考？](book/02-在学校里先把基础打好.md#certificate-what-is-worth-it)
+- [什么证书值得考？](book/02-在学校里先把基础打好/06-证书.md#certificate-what-is-worth-it)
 - [专业不喜欢，要不要转？](book/01-先决定下一步往哪里走.md#choose-major-mismatch)
 - [实习应该什么时候开始找？](docs/playbooks/第一次找实习.md)
 - [怎么联系导师 / 要不要套磁？](docs/playbooks/第一次联系导师.md)
@@ -170,14 +170,14 @@
 
 - [工作几年以后应该怎么升职？](book/06-从新人到能独立负责.md#work-record-achievements)
 - [什么时候适合第一次跳槽？](book/06-从新人到能独立负责.md#career-job-hopping)
-- [技术路线还是管理路线？](book/07-晋升、跳槽还是转行.md#mgmt-ic-or-manager)
-- [转行前应该先判断什么？](book/07-晋升、跳槽还是转行.md#switch-before-decide)
-- [转行要不要从零开始？](book/07-晋升、跳槽还是转行.md#career-change-keep-capital)
-- [工作以后还值得读硕士吗？](book/07-晋升、跳槽还是转行.md#edu-master-after-work)
+- [技术路线还是管理路线？](book/07-晋升、跳槽还是转行/03-管理路线.md#mgmt-ic-or-manager)
+- [转行前应该先判断什么？](book/07-晋升、跳槽还是转行/05-转行.md#switch-before-decide)
+- [转行要不要从零开始？](book/07-晋升、跳槽还是转行/05-转行.md#career-change-keep-capital)
+- [工作以后还值得读硕士吗？](book/07-晋升、跳槽还是转行/06-再次进入教育体系.md#edu-master-after-work)
 
 ### 我不知道自己想做什么
 
-- [不知道自己想做什么怎么办？](book/02-在学校里先把基础打好.md#explore-low-cost-experiments)
+- [不知道自己想做什么怎么办？](book/02-在学校里先把基础打好/02-开始认识真实世界.md#explore-low-cost-experiments)
 - [怎么比较两个完全不同的机会？](book/00-从这里开始.md#judge-compare-two-opportunities)
 - [什么东西值得长期积累？](book/00-从这里开始.md#judge-long-term-accumulation)
 - [什么叫未来选择权？](book/00-从这里开始.md#judge-optionality)

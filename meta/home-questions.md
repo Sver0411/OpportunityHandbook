@@ -116,7 +116,7 @@ stages: [work_1_3, work_3_5, career_change]
 ```
 
 不要清零。先把过去的工作翻译成新方向的通用语言，再补最短的缺口。
-见 [工作后转行为什么不应该清零过去经历](../book/07-晋升、跳槽还是转行.md#career-change-keep-capital)。
+见 [工作后转行为什么不应该清零过去经历](../book/07-晋升、跳槽还是转行/05-转行.md#career-change-keep-capital)。
 
 ### 什么证书值得考？
 
@@ -131,7 +131,7 @@ stages: [college, undergraduate, new_grad, work_1_3, career_change]
 ```
 
 先判断它属于哪一类：法定准入、招聘门槛、行业认可、能力证明，还是低价值。
-见 [什么证书值得考](../book/02-在学校里先把基础打好.md#certificate-what-is-worth-it)。
+见 [什么证书值得考](../book/02-在学校里先把基础打好/06-证书.md#certificate-what-is-worth-it)。
 
 ### 不知道自己想做什么怎么办？
 
@@ -146,7 +146,7 @@ stages: [highschool, college, undergraduate, new_grad, work_1_3, career_change]
 ```
 
 用几个成本很低的真实体验去试，而不是继续做测评或继续想。
-见 [不知道方向时如何做低成本实验](../book/02-在学校里先把基础打好.md#explore-low-cost-experiments)。
+见 [不知道方向时如何做低成本实验](../book/02-在学校里先把基础打好/02-开始认识真实世界.md#explore-low-cost-experiments)。
 
 ### 这个比赛是不是交了钱就能拿奖？
 

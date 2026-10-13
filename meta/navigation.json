@@ -428,8 +428,8 @@
           ],
           "target": {
             "type": "doc",
-            "location": "book/02-在学校里先把基础打好",
-            "anchor": "学业"
+            "location": "book/02-在学校里先把基础打好/01-学业",
+            "anchor": ""
           },
           "nav_id": "02-01"
         },
@@ -479,8 +479,8 @@
           ],
           "target": {
             "type": "doc",
-            "location": "book/02-在学校里先把基础打好",
-            "anchor": "开始认识真实世界"
+            "location": "book/02-在学校里先把基础打好/02-开始认识真实世界",
+            "anchor": ""
           },
           "nav_id": "02-02"
         },
@@ -546,8 +546,8 @@
           ],
           "target": {
             "type": "doc",
-            "location": "book/02-在学校里先把基础打好",
-            "anchor": "通用能力"
+            "location": "book/02-在学校里先把基础打好/03-通用能力",
+            "anchor": ""
           },
           "nav_id": "02-03"
         },
@@ -589,8 +589,8 @@
           ],
           "target": {
             "type": "doc",
-            "location": "book/02-在学校里先把基础打好",
-            "anchor": "专业技能"
+            "location": "book/02-在学校里先把基础打好/04-专业技能",
+            "anchor": ""
           },
           "nav_id": "02-04"
         },
@@ -640,8 +640,8 @@
           ],
           "target": {
             "type": "doc",
-            "location": "book/02-在学校里先把基础打好",
-            "anchor": "语言"
+            "location": "book/02-在学校里先把基础打好/05-语言",
+            "anchor": ""
           },
           "nav_id": "02-05"
         },
@@ -691,8 +691,8 @@
           ],
           "target": {
             "type": "doc",
-            "location": "book/02-在学校里先把基础打好",
-            "anchor": "证书"
+            "location": "book/02-在学校里先把基础打好/06-证书",
+            "anchor": ""
           },
           "nav_id": "02-06"
         }
@@ -2341,8 +2341,8 @@
           ],
           "target": {
             "type": "doc",
-            "location": "book/07-晋升、跳槽还是转行",
-            "anchor": "晋升"
+            "location": "book/07-晋升、跳槽还是转行/01-晋升",
+            "anchor": ""
           },
           "nav_id": "07-01"
         },
@@ -2384,8 +2384,8 @@
           ],
           "target": {
             "type": "doc",
-            "location": "book/07-晋升、跳槽还是转行",
-            "anchor": "专家路线"
+            "location": "book/07-晋升、跳槽还是转行/02-专家路线",
+            "anchor": ""
           },
           "nav_id": "07-02"
         },
@@ -2443,8 +2443,8 @@
           ],
           "target": {
             "type": "doc",
-            "location": "book/07-晋升、跳槽还是转行",
-            "anchor": "管理路线"
+            "location": "book/07-晋升、跳槽还是转行/03-管理路线",
+            "anchor": ""
           },
           "nav_id": "07-03"
         },
@@ -2502,8 +2502,8 @@
           ],
           "target": {
             "type": "doc",
-            "location": "book/07-晋升、跳槽还是转行",
-            "anchor": "跳槽"
+            "location": "book/07-晋升、跳槽还是转行/04-跳槽",
+            "anchor": ""
           },
           "nav_id": "07-04"
         },
@@ -2569,8 +2569,8 @@
           ],
           "target": {
             "type": "doc",
-            "location": "book/07-晋升、跳槽还是转行",
-            "anchor": "转行"
+            "location": "book/07-晋升、跳槽还是转行/05-转行",
+            "anchor": ""
           },
           "nav_id": "07-05"
         },
@@ -2620,8 +2620,8 @@
           ],
           "target": {
             "type": "doc",
-            "location": "book/07-晋升、跳槽还是转行",
-            "anchor": "再次进入教育体系"
+            "location": "book/07-晋升、跳槽还是转行/06-再次进入教育体系",
+            "anchor": ""
           },
           "nav_id": "07-06"
         }
