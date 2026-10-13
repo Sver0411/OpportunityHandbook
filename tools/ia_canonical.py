@@ -323,6 +323,8 @@ TREE = """
     换城市 @n:hop-change-city
   转行
     转行前先判断什么 @n:switch-before-decide
+    转行期的钱怎么安排 @e:career-change-cashflow
+    转行时怎么重建行业关系 @e:career-change-network
     为什么不要清零过去经历 @e:career-change-keep-capital
     可迁移技能 @e:career-transferable-capital
     可迁移行业经验 @n:switch-transferable-domain

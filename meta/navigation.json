@@ -2575,12 +2575,28 @@
               "nav_id": "07-05-01"
             },
             {
+              "title": "转行期的钱怎么安排",
+              "target": {
+                "type": "entry",
+                "entry_id": "career-change-cashflow"
+              },
+              "nav_id": "07-05-02"
+            },
+            {
+              "title": "转行时怎么重建行业关系",
+              "target": {
+                "type": "entry",
+                "entry_id": "career-change-network"
+              },
+              "nav_id": "07-05-03"
+            },
+            {
               "title": "为什么不要清零过去经历",
               "target": {
                 "type": "entry",
                 "entry_id": "career-change-keep-capital"
               },
-              "nav_id": "07-05-02"
+              "nav_id": "07-05-04"
             },
             {
               "title": "可迁移技能",
@@ -2588,7 +2604,7 @@
                 "type": "entry",
                 "entry_id": "career-transferable-capital"
               },
-              "nav_id": "07-05-03"
+              "nav_id": "07-05-05"
             },
             {
               "title": "可迁移行业经验",
@@ -2596,7 +2612,7 @@
                 "type": "entry",
                 "entry_id": "switch-transferable-domain"
               },
-              "nav_id": "07-05-04"
+              "nav_id": "07-05-06"
             },
             {
               "title": "Bridge Opportunity",
@@ -2604,7 +2620,7 @@
                 "type": "entry",
                 "entry_id": "career-bridge-opportunity"
               },
-              "nav_id": "07-05-05"
+              "nav_id": "07-05-07"
             },
             {
               "title": "Side Project",
@@ -2612,7 +2628,7 @@
                 "type": "entry",
                 "entry_id": "switch-side-project"
               },
-              "nav_id": "07-05-06"
+              "nav_id": "07-05-08"
             },
             {
               "title": "降薪转行",
@@ -2620,7 +2636,7 @@
                 "type": "entry",
                 "entry_id": "career-pay-cut-transition"
               },
-              "nav_id": "07-05-07"
+              "nav_id": "07-05-09"
             }
           ],
           "target": {
