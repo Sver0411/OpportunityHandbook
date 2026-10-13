@@ -1971,6 +1971,14 @@
                 "entry_id": "offer-renege"
               },
               "nav_id": "05-05-07"
+            },
+            {
+              "title": "怎么判断一家公司值不值得去",
+              "target": {
+                "type": "entry",
+                "entry_id": "employer-due-diligence"
+              },
+              "nav_id": "05-05-08"
             }
           ],
           "target": {

@@ -120,6 +120,12 @@ def main() -> int:
             for page_label, route in ROUTES:
                 for label, size in CASES:
                     rows = run(chrome, base, size, route)
+                    # 机器负载高时首屏可能还没渲染完（无头 Chrome 偶发），重试两次再判定，
+                    # 避免把「这次没测到」当成排版问题
+                    for _ in range(2):
+                        if rows:
+                            break
+                        rows = run(chrome, base, size, route)
                     print(f"\n== {page_label} · {label} ==")
                     if not rows:
                         print("  未取到测量结果"); failures += 1; continue

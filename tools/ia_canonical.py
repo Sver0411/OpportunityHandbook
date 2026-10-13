@@ -251,6 +251,7 @@ TREE = """
     三方 @e:job-hunting-tripartite-agreement
     背调 @e:job-hunting-background-check
     毁约 @n:offer-renege
+    怎么判断一家公司值不值得去 @e:employer-due-diligence
   第一份工作
     第一份工作最应该换回什么 @e:first-job-what-to-trade-for
     大公司还是小公司 @e:first-job-big-vs-small
