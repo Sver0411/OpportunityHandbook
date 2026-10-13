@@ -256,6 +256,8 @@ TREE = """
     行业还是岗位 @e:first-job-role-vs-industry
     城市还是机会 @e:first-job-city
     工资还是成长 @e:first-job-pay-vs-growth
+    应届生身份到底值什么 @e:fresh-grad-status
+    毕业到入职之间的几个月怎么用 @e:graduation-to-job-gap
   如果没有顺利进入下一站
     长期找不到工作怎么办 @e:job-hunting-long-search
     要不要降低岗位要求 @n:job-lower-requirements

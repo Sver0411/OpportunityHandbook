@@ -2014,6 +2014,22 @@
                 "entry_id": "first-job-pay-vs-growth"
               },
               "nav_id": "05-06-06"
+            },
+            {
+              "title": "应届生身份到底值什么",
+              "target": {
+                "type": "entry",
+                "entry_id": "fresh-grad-status"
+              },
+              "nav_id": "05-06-07"
+            },
+            {
+              "title": "毕业到入职之间的几个月怎么用",
+              "target": {
+                "type": "entry",
+                "entry_id": "graduation-to-job-gap"
+              },
+              "nav_id": "05-06-08"
             }
           ],
           "target": {
