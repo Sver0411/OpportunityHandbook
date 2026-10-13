@@ -211,12 +211,20 @@
               "nav_id": "01-02-04"
             },
             {
+              "title": "高中选科怎么选",
+              "target": {
+                "type": "entry",
+                "entry_id": "choose-highschool-subjects"
+              },
+              "nav_id": "01-02-05"
+            },
+            {
               "title": "转专业",
               "target": {
                 "type": "entry",
                 "entry_id": "choose-change-major"
               },
-              "nav_id": "01-02-05"
+              "nav_id": "01-02-06"
             },
             {
               "title": "辅修与双学位",
@@ -224,7 +232,7 @@
                 "type": "entry",
                 "entry_id": "choose-minor-double-degree"
               },
-              "nav_id": "01-02-06"
+              "nav_id": "01-02-07"
             },
             {
               "title": "如果第一次选择不理想怎么办",
@@ -232,7 +240,7 @@
                 "type": "entry",
                 "entry_id": "choose-major-mismatch"
               },
-              "nav_id": "01-02-07"
+              "nav_id": "01-02-08"
             }
           ],
           "target": {
@@ -359,6 +367,14 @@
                 "entry_id": "education-cost-budget"
               },
               "nav_id": "01-04-04"
+            },
+            {
+              "title": "怎么和父母沟通升学与职业选择",
+              "target": {
+                "type": "entry",
+                "entry_id": "family-talk"
+              },
+              "nav_id": "01-04-05"
             }
           ],
           "target": {

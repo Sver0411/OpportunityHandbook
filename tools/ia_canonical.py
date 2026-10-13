@@ -38,6 +38,7 @@ TREE = """
     城市要不要纳入选择 @n:choose-city
     兴趣应该占多大比重 @n:choose-interest-weight
     就业前景应该怎么看 @n:choose-job-outlook
+    高中选科怎么选 @e:choose-highschool-subjects
     转专业 @n:choose-change-major
     辅修与双学位 @n:choose-minor-double-degree
     如果第一次选择不理想怎么办 @n:choose-major-mismatch
@@ -56,6 +57,7 @@ TREE = """
     奖助学金 @e:funding-scholarship-system
     助学贷款 @e:funding-student-loan
     为教育投入多少钱才合理 @n:education-cost-budget
+    怎么和父母沟通升学与职业选择 @e:family-talk
   给自己保留退路
     为什么不要过早把路线锁死 @n:optionality-why-not-lock
     哪些能力可以跨路线使用 @n:optionality-transferable

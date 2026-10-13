@@ -357,3 +357,18 @@ stages: [work_3_5, senior]
 
 工具更新快，学方法比背 API 重要；如果是领域整体收缩，更该考虑迁移到相邻领域，而不是在收缩的行业里继续补技能。
 见 [技能过时了怎么补](../book/07-晋升、跳槽还是转行/02-专家路线.md#career-skill-decay) 与 [资深阶段的收入结构怎么安排](../book/07-晋升、跳槽还是转行/02-专家路线.md#career-income-mix)。
+
+### 怎么和父母沟通升学与职业选择？
+
+```meta
+id: q-family-talk
+kind: question
+status: complete
+link: family-talk
+summary: 先分清分歧属于信息差、风险承受度、价值观、钱还是面子，再用具体数字与可回退的方案代替争论。
+topics: [explore]
+stages: [highschool, undergraduate, new_grad, career_change]
+```
+
+带上两三个方案与各自的成本和回退方式，让对方在选项里参与决策；并约定一个复盘时间，把争论变成可检验的约定。
+见 [怎么和父母沟通升学与职业选择](../book/01-先决定下一步往哪里走/04-家庭经济与教育成本.md#family-talk)。
