@@ -219,6 +219,22 @@ class TopicManual(unittest.TestCase):
             self.assertIn("## 来源与更新", text, f"{p} 缺少来源与更新小节")
             self.assertIn("](", text, f"{p} 没有任何链接（页面应可继续深入）")
 
+    def test_entries_have_related_links(self):
+        """每个条目都要有「相关」小节且至少一条链接：读完一篇要能继续走。
+
+        读者最常见的抱怨是「读完不知道下一步看什么」；这条门禁把它挡住。
+        """
+        import re as _re
+        pat = _re.compile(r"### [^\n]+\n\n```meta\n[\s\S]*?\n```\n([\s\S]*?)(?=\n### |\Z)")
+        missing = []
+        for p in sorted((ROOT / "book").rglob("*.md")):
+            for m in pat.finditer(p.read_text(encoding="utf-8")):
+                body = m.group(1)
+                rel = _re.search(r"## 相关\s*\n([\s\S]*?)(?=\n## |\Z)", body)
+                if not rel or not _re.search(r"\]\([^)]+\)", rel.group(1)):
+                    missing.append(str(p.relative_to(ROOT)))
+        self.assertEqual(sorted(set(missing)), [], f"这些文件里有条目缺少「相关」链接：{sorted(set(missing))[:6]}")
+
     def test_docs_link_back_to_main_text(self):
         """专题页必须能回到主线：读者从模板/指南页要能走到对应的判断文章。
 
