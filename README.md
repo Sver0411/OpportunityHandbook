@@ -1,6 +1,6 @@
 <div align="center">
 
-**简体中文** · [English](./README.en.md)
+**简体中文** · [English](README.en.md)
 
 # 机会手册 · OpportunityHandbook
 
@@ -143,8 +143,8 @@
 
 ### 我还在学校
 
-- [我到底要不要读研？](book/04-升学、就业还是出国.md#grad-school-worth-it)
-- [保研和考研应该怎么选？](book/04-升学、就业还是出国.md#baoyan-vs-kaoyan)
+- [我到底要不要读研？](book/04-升学、就业还是出国/02-国内升学.md#grad-school-worth-it)
+- [保研和考研应该怎么选？](book/04-升学、就业还是出国/02-国内升学.md#baoyan-vs-kaoyan)
 - [学校和专业哪个更重要？](book/01-先决定下一步往哪里走.md#choose-school-vs-major)
 - [什么比赛值得参加？](book/03-做项目、打比赛、进实验室.md#competition-what-worth-joining)
 - [这个比赛是不是交了钱就能拿奖？](book/03-做项目、打比赛、进实验室.md#competition-what-worth-joining)
@@ -154,7 +154,7 @@
 - [专业不喜欢，要不要转？](book/01-先决定下一步往哪里走.md#choose-major-mismatch)
 - [实习应该什么时候开始找？](docs/playbooks/第一次找实习.md)
 - [怎么联系导师 / 要不要套磁？](docs/playbooks/第一次联系导师.md)
-- [家里预算有限，还能留学吗？](book/04-升学、就业还是出国.md#overseas-funding)
+- [家里预算有限，还能留学吗？](book/04-升学、就业还是出国/03-海外升学.md#overseas-funding)
 
 ### 我快毕业了
 
@@ -186,10 +186,10 @@
 
 | 入口 | 适合什么时候用 | 从哪里开始 |
 | --- | --- | --- |
-| **主线正文** | 想理解一条路径从哪里开始、后来会遇到什么 | [`book/`](book/) |
-| **时间线** | 已经知道目标，但不知道什么时候准备什么 | [`docs/timelines/`](docs/timelines/) |
-| **实用工具** | 手上已经有具体选择，需要比较、记录或复盘 | [`docs/tools/`](docs/tools/) |
-| **专题手册** | 想集中了解国家、行业、科研、竞赛、开源、证书或资助 | [`docs/`](docs/) |
+| **主线正文** | 想理解一条路径从哪里开始、后来会遇到什么 | [`book/`](book) |
+| **时间线** | 已经知道目标，但不知道什么时候准备什么 | [`docs/timelines/`](docs/timelines) |
+| **实用工具** | 手上已经有具体选择，需要比较、记录或复盘 | [`docs/tools/`](docs/tools) |
+| **专题手册** | 想集中了解国家、行业、科研、竞赛、开源、证书或资助 | [`docs/`](docs) |
 
 在线阅读页还可以按人生阶段、方向、预期成果、投入大小和证据类型筛选。你可以查“本科阶段 + 想留下作品 + 低投入”，也可以查“工作三到五年 + 准备转行 + 能接受短期降薪”。
 
@@ -250,12 +250,12 @@ python3 tools/validate_release.py
 
 | 位置 | 用途 |
 | --- | --- |
-| [`book/`](book/) | 按人生问题推进的主线正文 |
-| [`docs/`](docs/) | 时间线、工具、专题、国家地区与职业资料 |
-| [`meta/`](meta/) | 导航、元数据、写作与证据规范 |
-| [`site/`](site/) | 在线阅读页的静态前端 |
-| [`tools/`](tools/) | 构建、校验、审计与测试工具 |
-| [`reports/`](reports/) | 内容质量、结构和阅读体验审计报告 |
+| [`book/`](book) | 按人生问题推进的主线正文 |
+| [`docs/`](docs) | 时间线、工具、专题、国家地区与职业资料 |
+| [`meta/`](meta) | 导航、元数据、写作与证据规范 |
+| [`site/`](site) | 在线阅读页的静态前端 |
+| [`tools/`](tools) | 构建、校验、审计与测试工具 |
+| [`reports/`](reports) | 内容质量、结构和阅读体验审计报告 |
 
 </details>
 

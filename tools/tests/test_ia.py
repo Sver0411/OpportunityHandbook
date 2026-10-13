@@ -176,7 +176,7 @@ class WritingModel(unittest.TestCase):
             self.assertTrue(e.get("summary", "").strip(), f"{e['id']} 没有摘要")
 
     def test_naturalized_articles(self):
-        text = "\n".join(p.read_text(encoding="utf-8") for p in (ROOT / "book").glob("*.md"))
+        text = "\n".join(p.read_text(encoding="utf-8") for p in (ROOT / "book").rglob("*.md"))
         for eid in NATURALIZED:
             block = re.search(r"### .*?\n\n```meta\n(?:(?!```).)*?id: " + re.escape(eid) +
                               r"[\s\S]*?(?=\n### |\Z)", text)

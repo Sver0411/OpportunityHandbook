@@ -57,7 +57,49 @@ def parse_target(token: str) -> dict | None:
     raise SystemExit(f"无法识别的目标标记：{token}")
 
 
+def _entry_locations() -> dict[str, str]:
+    """条目 id → 它所在的文档 location（章节拆分后条目会换文档）。"""
+    import meta as M  # noqa: PLC0415
+
+    out: dict[str, str] = {}
+    for doc in M.load_docs(ROOT):
+        for e in doc.entries:
+            meta = e.get("meta") or {}
+            eid = str(meta.get("id") or "")
+            if eid:
+                out[eid] = doc.location
+    return out
+
+
+def _first_entry_location(node: dict, locs: dict[str, str]) -> str:
+    """节点下第一个条目所在文档。"""
+    for child in node.get("children") or []:
+        tg = child.get("target") or {}
+        if tg.get("type") == "entry" and tg.get("entry_id") in locs:
+            return locs[tg["entry_id"]]
+        deep = _first_entry_location(child, locs)
+        if deep:
+            return deep
+    return ""
+
+
+def group_target(node: dict, parent: dict, locs: dict[str, str]) -> dict:
+    """分组节点的落点。
+
+    如果这一组的内容仍在父章节页里（未拆分），沿用「章节页 + 分组锚点」；
+    如果已经拆到独立分册，就直接指向那个分册（分组标题在那里是页面标题）。
+    """
+    parent_loc = (parent.get("target") or {}).get("location") or ""
+    own_loc = _first_entry_location(node, locs)
+    if own_loc and own_loc != parent_loc:
+        return {"type": "doc", "location": own_loc, "anchor": ""}
+    if parent_loc:
+        return {"type": "doc", "location": parent_loc, "anchor": M.slugify(node["title"])}
+    return {}
+
+
 def build() -> dict:
+    locs = _entry_locations()
     root_nodes: list[dict] = []
     stack: list[dict] = []
 
@@ -86,12 +128,20 @@ def build() -> dict:
             children = parent.setdefault("children", [])
             index = len(children) + 1
             if not target:
-                # 二级分组：绑定章节页里的分组锚点
-                loc = (parent.get("target") or {}).get("location")
-                if loc:
-                    node["target"] = {"type": "doc", "location": loc, "anchor": M.slugify(title)}
+                # 二级分组：落点要等整棵树建完才知道（要看它的后代条目住在哪），
+                # 先做标记，最后统一解析。
+                node["_group"] = True
             children.append(node)
             stack.append(node)
+
+    # 二级分组的落点：等后代条目都挂上以后再解析
+    def resolve_groups(nodes: list[dict], parent: dict | None) -> None:
+        for n in nodes:
+            if n.pop("_group", False):
+                n["target"] = group_target(n, parent or {}, locs)
+            resolve_groups(n.get("children") or [], n)
+
+    resolve_groups(root_nodes, None)
 
     # 为每个节点补上稳定的 nav_id（位置型，便于引用与测试）
     def assign(nodes: list[dict], prefix: str) -> None:

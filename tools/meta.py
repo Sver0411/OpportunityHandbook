@@ -769,6 +769,22 @@ def _load_redirects(root: Path) -> dict:
     return {"docs": data.get("docs") or {}, "entries": data.get("entries") or {}}
 
 
+def _normalize_entry_redirects(red: dict, entries: list[dict]) -> dict:
+    """把「旧地址 → 当时的目标地址」校正成「旧地址 → 条目现在的真实地址」。
+
+    重定向表是历史记录：章节一旦按分组拆分成多个分册，条目所在文档就会变。
+    与其每次搬家都手改这张表，不如在生成索引时按条目 id 解析它当前的位置，
+    这样表本身只需要记录「曾经住在哪里」。
+    """
+    by_id = {e["id"]: e["route"] for e in entries if e.get("route")}
+    fixed = {}
+    for old, new in (red.get("entries") or {}).items():
+        # 目标地址的末段才是条目当前的 id（旧地址那一段可能已被改名）
+        eid = new.rsplit("/", 1)[-1]
+        fixed[old] = by_id.get(eid, new)
+    return {"docs": red.get("docs") or {}, "entries": fixed}
+
+
 def stale_threshold() -> str:
     return (datetime.date.today() - datetime.timedelta(days=STALE_DAYS)).isoformat()
 
@@ -1081,7 +1097,7 @@ def build_index(root: Path) -> tuple[dict, list[str], list[str]]:
         "status_note": STATUS_NOTE,
         "nav": nav,
         # IA 重构留下的旧地址 → 新地址（保证旧 hash 深链不失效）
-        "redirects": _load_redirects(root),
+        "redirects": _normalize_entry_redirects(_load_redirects(root), entries),
         # docs：用户侧文档（无 planned），供阅读序列与搜索使用。
         # 搜索字段与 entries 对齐（kind/doc_title/stages/topics/outputs/evidence/text），
         # 这样深度教程、职业指南、国家手册、案例、操作手册与工具都能被搜到。

@@ -1,6 +1,6 @@
 <div align="center">
 
-[简体中文](./README.md) · **English**
+[简体中文](README.md) · **English**
 
 # OpportunityHandbook · 机会手册
 
@@ -61,7 +61,7 @@ You do not need to read the book from beginning to end. These entry points lead 
 | “Should I move into another field?” | [Questions to settle before a career change](https://sver0411.github.io/OpportunityHandbook/pages/switch-before-decide/) |
 | “What is worth building over several years?” | [The things you can take with you](https://sver0411.github.io/OpportunityHandbook/pages/judge-long-term-accumulation/) |
 
-The [online reader](https://sver0411.github.io/OpportunityHandbook/) also lets you browse by life stage, direction, effort, expected outcome, and evidence type. Alongside the main chapters, the repository includes [timelines](docs/timelines/), [decision tools](docs/tools/), and [focused guides](docs/manuals/) on research, competitions, open source, funding, and more.
+The [online reader](https://sver0411.github.io/OpportunityHandbook/) also lets you browse by life stage, direction, effort, expected outcome, and evidence type. Alongside the main chapters, the repository includes [timelines](docs/timelines), [decision tools](docs/tools), and [focused guides](docs/manuals) on research, competitions, open source, funding, and more.
 
 ## Two projects, two moments in the same decision
 
@@ -90,11 +90,11 @@ The content is written in Markdown and published as a static site. If you find a
 
 | Path | What is there |
 | --- | --- |
-| [`book/`](book/) | The main chapters, organised around life and career decisions |
-| [`docs/`](docs/) | Timelines, worksheets, countries, industries, and focused guides |
-| [`meta/`](meta/) | Navigation, metadata, writing standards, and source rules |
-| [`site/`](site/) | The static online reader |
-| [`tools/`](tools/) | Build, validation, and content-audit scripts |
+| [`book/`](book) | The main chapters, organised around life and career decisions |
+| [`docs/`](docs) | Timelines, worksheets, countries, industries, and focused guides |
+| [`meta/`](meta) | Navigation, metadata, writing standards, and source rules |
+| [`site/`](site) | The static online reader |
+| [`tools/`](tools) | Build, validation, and content-audit scripts |
 
 ```bash
 python3 tools/build.py
