@@ -129,7 +129,9 @@ html { interpolate-size: allow-keywords; }   /* 让 height: 0 → auto 可动画
 .sidebar {
   position: fixed; top: var(--sheet-gap); left: var(--sheet-gap); bottom: var(--sheet-gap);
   width: var(--sidebar-w); z-index: 40;
-  display: flex; flex-direction: column; overflow: hidden;
+  /* overflow: clip（而不是 hidden）：hidden 仍可被 JS 通过 scrollTop 滚动，
+     会把整块侧栏（含标题）顶走 —— 用 clip 从根上杜绝「菜单一会在上面一会在下面」 */
+  display: flex; flex-direction: column; overflow: clip;
   background: var(--glass);
   -webkit-backdrop-filter: var(--blur);
   backdrop-filter: var(--blur);
@@ -164,7 +166,10 @@ html { interpolate-size: allow-keywords; }   /* 让 height: 0 → auto 可动画
 .sidebar-close { display: none; font-size: 17px; }
 
 /* 目录树：行高 28–30px，缩进四级阶梯，计数右对齐成列 */
-.nav-tree { flex: 1 1 auto; overflow-y: auto; padding: 10px 10px 22px; }
+.nav-tree {
+  flex: 1 1 auto; overflow-y: auto; overscroll-behavior: contain;
+  padding: 10px 10px 22px;
+}
 .nav-tree::-webkit-scrollbar { width: 8px; }
 .nav-tree::-webkit-scrollbar-thumb { background: rgba(0, 0, 0, 0.14); border-radius: var(--pill); }
 .nav-tree::-webkit-scrollbar-track { background: transparent; }

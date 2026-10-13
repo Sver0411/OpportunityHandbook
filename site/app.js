@@ -326,7 +326,8 @@
   // 节点类型优先级：越精确越优先，保证同一时刻只高亮一行
   var KIND_PRIORITY = { entry: 5, doc: 4, section: 3, group: 2, subsection: 2 };
 
-  function markActive(hash) {
+  function markActive(hash, opts) {
+    opts = opts || {};
     var rows = Array.prototype.slice.call(navTree.querySelectorAll(".nav-row"));
     rows.forEach(function (r) { r.classList.remove("active"); });
 
@@ -379,10 +380,21 @@
     // active ≠ 手动展开：这里只做「让 active 可见」的临时展开与 accordion 收合，
     // 不写 localStorage，不碰用户手动展开的分组。
     syncNavOpenState(hit.closest(".nav-item"));
-    var box = sidebar;
-    var top = hit.getBoundingClientRect().top - box.getBoundingClientRect().top + box.scrollTop;
-    if (top < box.scrollTop || top > box.scrollTop + box.clientHeight - 70) {
-      box.scrollTop = Math.max(0, top - box.clientHeight / 2);
+    // 目录只在**用户明确跳转**时滚动（opts.scroll !== false）：
+    // 阅读时跟随高亮去滚动目录，会让上面的章节被顶走、下面的冒出来，
+    // 看起来就是「菜单一会在上面一会在下面」。
+    // 而且必须滚真正可滚的 .nav-tree（侧栏是 fixed + overflow:clip，滚它会把整块顶走），
+    // 并且只做「刚好露出」的最小滚动，不做居中。
+    if (opts.scroll === false) return;
+    var box = navTree;
+    var rect = hit.getBoundingClientRect();
+    var boxRect = box.getBoundingClientRect();
+    var top = rect.top - boxRect.top + box.scrollTop;
+    var pad = 24;
+    if (top < box.scrollTop + pad) {
+      box.scrollTop = Math.max(0, top - pad);
+    } else if (top + rect.height > box.scrollTop + box.clientHeight - pad) {
+      box.scrollTop = top + rect.height - box.clientHeight + pad;
     }
   }
 
@@ -499,8 +511,9 @@
       if (id === entryWatch.current) return;
       entryWatch.current = id;
       buildToc(id);
-      // 只同步视觉状态：高亮左栏 + 展开当前条目祖先路径，不改 URL
-      markActive("#/doc/" + location + (id ? "/" + id : ""));
+      // 只同步视觉状态：高亮左栏 + 展开当前条目祖先路径，不改 URL。
+      // scroll:false = 阅读过程中不要滚动目录本身（只换高亮）。
+      markActive("#/doc/" + location + (id ? "/" + id : ""), { scroll: false });
     };
     window.addEventListener("scroll", entryWatch.handler, { passive: true });
     entryWatch.handler();

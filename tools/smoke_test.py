@@ -359,6 +359,10 @@ PROBE = r"""
         ok("第二个条目已加载", !!second, SC2.second_id);
         var titleBefore = text("#toc .toc-title");
         var y0 = window.scrollY;
+        var orderBefore = Array.prototype.slice.call(document.querySelectorAll(".nav-group-block > .nav-item"))
+          .map(function (li) { var a = li.querySelector(":scope > .nav-row > a.nav-label"); return a ? a.textContent.trim() : "?"; });
+        var orderBefore = Array.prototype.slice.call(document.querySelectorAll(".nav-group-block > .nav-item"))
+          .map(function (li) { var a = li.querySelector(":scope > .nav-row > a.nav-label"); return a ? a.textContent.trim() : "?"; });
         ok("页面可滚动（高度）", document.documentElement.scrollHeight > 1500,
            document.documentElement.scrollHeight + "px");
         // 滚到第二个条目
@@ -373,6 +377,27 @@ PROBE = r"""
         var e2top = Math.round(second.getBoundingClientRect().top);
         var line = Math.min(Math.max(120, (window.innerHeight || 800) * 0.33), 240);
         ok("第二个条目进入阅读线", e2top <= line, "top=" + e2top + " line=" + Math.round(line));
+        // 侧栏必须是 fixed 且自身不被滚动：滚动跟随只允许动 .nav-tree，
+        // 否则整块侧栏（含标题）会被顶走，菜单看起来一会在上面一会在下面。
+        var sb = document.getElementById("sidebar");
+        var nt = document.getElementById("navTree");
+        ok("侧栏自身未被滚动", sb.scrollTop === 0, "sidebar.scrollTop=" + sb.scrollTop);
+        ok("可滚动容器是目录树", !!nt && getComputedStyle(nt).overflowY === "auto",
+           nt ? getComputedStyle(nt).overflowY : "缺少 #navTree");
+        // 阅读时（滚动跟随）不得移动目录本身：否则上面的章节被顶走、下面的冒出来
+        ok("阅读时目录不滚动", nt.scrollTop === 0, "navTree.scrollTop=" + nt.scrollTop);
+        // 顶层章节顺序必须稳定（不因高亮变化而重排）
+        var orderAfter = Array.prototype.slice.call(document.querySelectorAll(".nav-group-block > .nav-item"))
+          .map(function (li) { var a = li.querySelector(":scope > .nav-row > a.nav-label"); return a ? a.textContent.trim() : "?"; });
+        ok("顶层章节顺序稳定", orderBefore.join("|") === orderAfter.join("|"),
+           orderBefore.slice(0, 3).join("/") + " vs " + orderAfter.slice(0, 3).join("/"));
+        // 阅读时（滚动跟随）不得移动目录本身：否则上面的章节被顶走、下面的冒出来
+        ok("阅读时目录不滚动", nt.scrollTop === 0, "navTree.scrollTop=" + nt.scrollTop);
+        // 顶层章节顺序必须稳定（不因高亮变化而重排）
+        var orderAfter = Array.prototype.slice.call(document.querySelectorAll(".nav-group-block > .nav-item"))
+          .map(function (li) { var a = li.querySelector(":scope > .nav-row > a.nav-label"); return a ? a.textContent.trim() : "?"; });
+        ok("顶层章节顺序稳定", orderBefore.join("|") === orderAfter.join("|"),
+           orderBefore.slice(0, 3).join("/") + " vs " + orderAfter.slice(0, 3).join("/"));
         var secondTitle = second.querySelector("h3") ? second.querySelector("h3").textContent.trim() : "";
         ok("右栏主题随滚动切换", titleAfter === secondTitle && titleAfter !== titleBefore,
            titleBefore + " → " + titleAfter);
