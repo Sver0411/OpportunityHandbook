@@ -212,6 +212,7 @@ Offer 里的股权与奖金是最容易被「看起来很多」误导的部分�
 ## 相关
 [薪资和总包怎么看](05-Offer.md#offer-total-comp)、[谈薪](05-Offer.md#job-hunting-salary-negotiation)、[两个 Offer 怎么比较](05-Offer.md#offer-comparison)。
 
+- [薪资和总包怎么看](05-Offer.md#offer-total-comp)
 ## 来源与更新
 最后核实：2026-09-27
 
@@ -282,6 +283,7 @@ last_verified: 2026-09-27
 ## 相关
 [薪资和总包怎么看](05-Offer.md#offer-total-comp)、[两个 Offer 怎么比较](05-Offer.md#offer-comparison)、[毁约](05-Offer.md#offer-renege)。
 
+- [工资还是成长](06-第一份工作.md#first-job-pay-vs-growth)
 ## 来源与更新
 最后核实：2026-09-27
 
