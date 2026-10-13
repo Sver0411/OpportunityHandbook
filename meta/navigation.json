@@ -144,12 +144,28 @@
               "nav_id": "01-01-06"
             },
             {
+              "title": "进入体制之后的发展怎么看",
+              "target": {
+                "type": "entry",
+                "entry_id": "public-sector-growth"
+              },
+              "nav_id": "01-01-07"
+            },
+            {
+              "title": "体制内怎么积累可迁移能力",
+              "target": {
+                "type": "entry",
+                "entry_id": "public-sector-transferable"
+              },
+              "nav_id": "01-01-08"
+            },
+            {
               "title": "Gap Year",
               "target": {
                 "type": "entry",
                 "entry_id": "paths-gap-year"
               },
-              "nav_id": "01-01-07"
+              "nav_id": "01-01-09"
             },
             {
               "title": "自由职业",
@@ -157,7 +173,7 @@
                 "type": "entry",
                 "entry_id": "paths-freelance"
               },
-              "nav_id": "01-01-08"
+              "nav_id": "01-01-10"
             },
             {
               "title": "创业",
@@ -165,7 +181,7 @@
                 "type": "entry",
                 "entry_id": "paths-startup"
               },
-              "nav_id": "01-01-09"
+              "nav_id": "01-01-11"
             }
           ],
           "target": {
