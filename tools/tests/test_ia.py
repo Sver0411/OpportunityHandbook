@@ -219,6 +219,31 @@ class TopicManual(unittest.TestCase):
             self.assertIn("## 来源与更新", text, f"{p} 缺少来源与更新小节")
             self.assertIn("](", text, f"{p} 没有任何链接（页面应可继续深入）")
 
+    def test_chapter_indexes_cover_their_docs(self):
+        """索引章必须列全它负责的专题目录。
+
+        09–13 章是 docs/ 的入口；漏掉一个文件，读者就少一条可发现的路。
+        """
+        INDEX = {
+            "book/09-专题手册.md": ["countries", "country-playbooks", "careers", "career-guides",
+                                    "research", "research-deep", "competitions", "competition-playbooks",
+                                    "open-source", "projects", "learning", "certifications", "networking",
+                                    "job-search", "career-growth", "entrepreneurship", "admissions",
+                                    "manuals", "sources"],
+            "book/10-路径时间线.md": ["timelines"],
+            "book/11-工具与模板.md": ["tools"],
+            "book/12-完整案例.md": ["cases"],
+            "book/13-操作手册.md": ["playbooks"],
+        }
+        missing = []
+        for idx, dirs in INDEX.items():
+            text = (ROOT / idx).read_text(encoding="utf-8")
+            for d in dirs:
+                for f in sorted((ROOT / "docs" / d).glob("*.md")):
+                    if f.stem not in text:
+                        missing.append(f"{idx} ← docs/{d}/{f.name}")
+        self.assertEqual(missing, [], f"索引章未列出这些专题文件：{missing[:6]}")
+
     def test_entries_have_related_links(self):
         """每个条目都要有「相关」小节且至少一条链接：读完一篇要能继续走。
 

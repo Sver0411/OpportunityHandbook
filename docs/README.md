@@ -43,6 +43,7 @@ last_verified: 2026-09-21
 
 - [高中到大学](timelines/高中到大学.md)
 - [中职升学时间线](timelines/中职升学时间线.md)
+- [转行时间线](timelines/转行时间线.md)
 - [专升本时间线](timelines/专升本时间线.md)
 - [实习准备时间线](timelines/实习准备时间线.md)
 - [海外工作与签证时间线](timelines/海外工作与签证时间线.md)
@@ -53,6 +54,15 @@ last_verified: 2026-09-21
 - [校招时间线](timelines/校招时间线.md)
 - [科研入门时间线](timelines/科研入门时间线.md)
 - [博士申请时间线](timelines/博士申请时间线.md)
+
+## 工具、案例与操作手册
+
+`docs/tools/`（31 份表格模板）、`docs/cases/`（12 个完整案例）与 `docs/playbooks/`（10 份操作手册）
+按用途分别汇总在主线的三章里，避免两处维护：
+
+- [11 工具与模板](../book/11-工具与模板.md)
+- [12 完整案例](../book/12-完整案例.md)
+- [13 操作手册](../book/13-操作手册.md)
 
 ## 国家与地区 `docs/countries/`
 
