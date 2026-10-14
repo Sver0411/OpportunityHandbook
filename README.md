@@ -181,6 +181,13 @@
 - [40 岁以后还能换方向吗？](book/07-晋升、跳槽还是转行/08-职业中段与年龄.md#career-after-40)
 - [技能过时了怎么办？](book/07-晋升、跳槽还是转行/07-资深阶段：技能与收入.md#career-skill-decay)
 
+
+- [第一个月的工资怎么分配？](book/15-钱与生活基本盘/01-拿到钱的第一年.md#money-first-salary-split)
+- [社保和公积金到底有什么用？](book/15-钱与生活基本盘/02-社保公积金与税.md#money-social-insurance)
+- [状态持续不好，什么时候该找专业帮助？](book/16-身体与心理的可持续性/02-心理与求助.md#health-mental-support)
+- [被欠薪或被违法辞退怎么办？](docs/rights/被欠薪与劳动仲裁.md)
+- [家里需要我出钱，应该怎么安排？](book/01-先决定下一步往哪里走/07-家庭沟通与支持.md#care-family-budget)
+
 ### 我不知道自己想做什么
 
 - [不知道自己想做什么怎么办？](book/02-在学校里先把基础打好/02-开始认识真实世界.md#explore-low-cost-experiments)

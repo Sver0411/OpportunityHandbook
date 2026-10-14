@@ -372,3 +372,73 @@ stages: [highschool, undergraduate, new_grad, career_change]
 
 带上两三个方案与各自的成本和回退方式，让对方在选项里参与决策；并约定一个复盘时间，把争论变成可检验的约定。
 见 [怎么和父母沟通升学与职业选择](../book/01-先决定下一步往哪里走/07-家庭沟通与支持.md#family-talk)。
+
+### 第一个月的工资怎么分配？
+
+```meta
+id: q-first-salary
+kind: question
+status: complete
+link: money-first-salary-split
+summary: 先算到手而不是月薪，按「应急金 → 固定支出 → 可变支出 → 结余」排序，并遵守「先扣后花」。
+topics: [money]
+stages: [new_grad, work_1_3]
+```
+
+见 [第一个月的工资怎么分配](../book/15-钱与生活基本盘/01-拿到钱的第一年.md#money-first-salary-split) 与 [应急金该留多少](../book/15-钱与生活基本盘/01-拿到钱的第一年.md#money-emergency-fund)。
+
+### 社保和公积金到底有什么用？
+
+```meta
+id: q-social-insurance
+kind: question
+status: complete
+link: money-social-insurance
+summary: 社保分五件事、公积金是自己的强制储蓄与贷款资格；最容易被卡的是「连续缴纳」而不是总额。
+topics: [money, rights]
+stages: [new_grad, work_1_3, work_3_5]
+```
+
+见 [社保到底保什么](../book/15-钱与生活基本盘/02-社保公积金与税.md#money-social-insurance) 与 [公积金怎么用](../book/15-钱与生活基本盘/02-社保公积金与税.md#money-housing-fund)。
+
+### 状态持续不好，什么时候该找专业帮助？
+
+```meta
+id: q-mental-support
+kind: question
+status: complete
+link: health-mental-support
+summary: 看两条：持续两周以上、且已经影响睡眠/吃饭/工作。渠道有校内心理中心、单位 EAP、医院精神科与社会咨询。
+topics: [health]
+stages: [undergraduate, new_grad, work_1_3, work_3_5]
+```
+
+见 [情绪持续不好时找谁](../book/16-身体与心理的可持续性/02-心理与求助.md#health-mental-support) 与 [什么时候该去看医生](../book/16-身体与心理的可持续性/03-生病与照护自己.md#health-when-to-see-doctor)。
+
+### 被欠薪或被违法辞退怎么办？
+
+```meta
+id: q-wage-dispute
+kind: question
+status: complete
+link: after-layoff
+summary: 当天固定证据 → 书面催告 → 12333 或监察投诉 → 调解 → 一年内申请仲裁；仲裁不收费。
+topics: [rights, money]
+stages: [work_1_3, work_3_5, senior]
+```
+
+见 [被欠薪与劳动仲裁](../docs/rights/被欠薪与劳动仲裁.md) 与 [离职与纠纷维权：时间线](../docs/timelines/离职与纠纷维权.md)。
+
+### 家里需要我出钱，应该怎么安排？
+
+```meta
+id: q-family-budget
+kind: question
+status: complete
+link: care-family-budget
+summary: 把支持额度定成固定比例而不是随时开口，先保自己的应急金与社保，再谈长期承诺。
+topics: [care, money]
+stages: [new_grad, work_1_3, work_3_5, senior]
+```
+
+见 [家里需要你出钱时怎么安排](../book/01-先决定下一步往哪里走/07-家庭沟通与支持.md#care-family-budget) 与 [成为被依赖的人之后](../book/07-晋升、跳槽还是转行/10-照护与职业节奏.md#care-family-role)。
