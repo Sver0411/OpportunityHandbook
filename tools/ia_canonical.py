@@ -21,6 +21,7 @@ TREE = """
   什么叫可验证成果 @e:judge-verifiable-outcomes
   什么叫未来选择权 @n:judge-optionality
   什么样的失败值得承担 @e:judge-failure-worth-it
+  起点不平等怎么算清楚 @e:judge-starting-line
   不知道自己想做什么时怎么办 @e:start-when-no-direction
 
 01 先决定下一步往哪里走
@@ -68,6 +69,9 @@ TREE = """
     手艺人自己接活：从雇员到接活 @e:paths-trades-own-business
     返乡与县域生活 @e:paths-return-home
     公益与公共服务方向 @e:paths-public-interest
+  没有资源时怎么起步 @d:book/01-先决定下一步往哪里走/09-没有资源时怎么起步
+    家里第一个上大学或进大厂的人怎么找规则 @e:first-gen-navigate
+    没有资源时怎么积累关系 @e:build-social-capital
   给自己保留退路
     为什么不要过早把路线锁死 @n:optionality-why-not-lock
     哪些能力可以跨路线使用 @n:optionality-transferable
@@ -649,6 +653,7 @@ TREE = """
   创业与副业 @n:trap-startup-side-gig
   信息差、机会焦虑与从众 @e:trap-information-asymmetry
   把 AI 当替身 @e:trap-ai-shortcut
+  只听得建议、拿不到资源 @e:trap-survivor-advice
 15 钱与生活基本盘
   拿到钱的第一年
     第一个月的工资怎么分配 @e:money-first-salary-split
