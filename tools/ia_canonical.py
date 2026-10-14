@@ -629,6 +629,10 @@ TREE = """
   创业与副业 @n:trap-startup-side-gig
   信息差、机会焦虑与从众 @e:trap-information-asymmetry
 15 钱与生活基本盘
+  拿到钱的第一年
+    第一个月的工资怎么分配 @e:money-first-salary-split
+    应急金该留多少 @e:money-emergency-fund
+    钱不知道去哪了怎么办 @e:money-spending-audit
 16 身体与心理的可持续性
 17 内容地图
 """

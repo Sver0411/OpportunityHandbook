@@ -5278,6 +5278,43 @@
         "location": "book/15-钱与生活基本盘",
         "anchor": ""
       },
+      "children": [
+        {
+          "title": "拿到钱的第一年",
+          "children": [
+            {
+              "title": "第一个月的工资怎么分配",
+              "target": {
+                "type": "entry",
+                "entry_id": "money-first-salary-split"
+              },
+              "nav_id": "15-01-01"
+            },
+            {
+              "title": "应急金该留多少",
+              "target": {
+                "type": "entry",
+                "entry_id": "money-emergency-fund"
+              },
+              "nav_id": "15-01-02"
+            },
+            {
+              "title": "钱不知道去哪了怎么办",
+              "target": {
+                "type": "entry",
+                "entry_id": "money-spending-audit"
+              },
+              "nav_id": "15-01-03"
+            }
+          ],
+          "target": {
+            "type": "doc",
+            "location": "book/15-钱与生活基本盘/01-拿到钱的第一年",
+            "anchor": ""
+          },
+          "nav_id": "15-01"
+        }
+      ],
       "nav_id": "15"
     },
     {
