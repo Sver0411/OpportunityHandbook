@@ -628,5 +628,7 @@ TREE = """
   项目与履历 @e:trap-collecting-courses-and-half-projects
   创业与副业 @n:trap-startup-side-gig
   信息差、机会焦虑与从众 @e:trap-information-asymmetry
-15 内容地图
+15 钱与生活基本盘
+16 身体与心理的可持续性
+17 内容地图
 """

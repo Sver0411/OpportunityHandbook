@@ -65,6 +65,11 @@ FACETS: dict[str, dict] = {
             ("community", "社群"),
             ("startup", "创业"),
             ("explore", "探索"),
+            ("money", "钱与生活"),
+            ("health", "身体与心理"),
+            ("rights", "权益与制度"),
+            ("care", "照护"),
+            ("digital", "数字与 AI"),
         ],
     },
     "outputs": {

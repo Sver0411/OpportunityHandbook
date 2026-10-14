@@ -5272,13 +5272,31 @@
       "nav_id": "14"
     },
     {
-      "title": "15 内容地图",
+      "title": "15 钱与生活基本盘",
       "target": {
         "type": "doc",
-        "location": "book/15-内容地图",
+        "location": "book/15-钱与生活基本盘",
         "anchor": ""
       },
       "nav_id": "15"
+    },
+    {
+      "title": "16 身体与心理的可持续性",
+      "target": {
+        "type": "doc",
+        "location": "book/16-身体与心理的可持续性",
+        "anchor": ""
+      },
+      "nav_id": "16"
+    },
+    {
+      "title": "17 内容地图",
+      "target": {
+        "type": "doc",
+        "location": "book/17-内容地图",
+        "anchor": ""
+      },
+      "nav_id": "17"
     }
   ]
 }

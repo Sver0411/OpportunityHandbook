@@ -779,7 +779,7 @@
     box.appendChild(tips);
     var links = el("p", { class: "empty-links" });
     links.appendChild(el("span", { text: "也可以直接进 " }));
-    links.appendChild(el("a", { href: "#/doc/book/15-内容地图", text: "内容地图" }));
+    links.appendChild(el("a", { href: "#/doc/book/17-内容地图", text: "内容地图" }));
     links.appendChild(el("span", { text: "（按阶段与方向索引全书）或 " }));
     links.appendChild(el("a", { href: "#/doc/book/00-从这里开始", text: "从这里开始" }));
     links.appendChild(el("span", { text: "。" }));

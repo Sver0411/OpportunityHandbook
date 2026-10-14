@@ -8,7 +8,7 @@
 
 一份从升学、科研、求职，到晋升、转行、出国与重新开始的现实选择手册。
 
-<p><a href="https://sver0411.github.io/OpportunityHandbook/">在线阅读</a>&nbsp;·&nbsp;<a href="book/15-内容地图.md">内容地图</a>&nbsp;·&nbsp;<a href="https://sver0411.github.io/OpportunityHandbook/#/browse">按条件筛选</a>&nbsp;·&nbsp;<a href="#你可以直接从这些问题开始">从问题开始</a>&nbsp;·&nbsp;<a href="#opportunityhandbook--opportunityradar">搭配 OpportunityRadar</a></p>
+<p><a href="https://sver0411.github.io/OpportunityHandbook/">在线阅读</a>&nbsp;·&nbsp;<a href="book/17-内容地图.md">内容地图</a>&nbsp;·&nbsp;<a href="https://sver0411.github.io/OpportunityHandbook/#/browse">按条件筛选</a>&nbsp;·&nbsp;<a href="#你可以直接从这些问题开始">从问题开始</a>&nbsp;·&nbsp;<a href="#opportunityhandbook--opportunityradar">搭配 OpportunityRadar</a></p>
 
 <p>
   <a href="https://github.com/Sver0411/OpportunityHandbook/actions/workflows/ci.yml"><img alt="内容校验" src="https://img.shields.io/github/actions/workflow/status/Sver0411/OpportunityHandbook/ci.yml?branch=main&amp;style=flat-square&amp;label=%E5%86%85%E5%AE%B9%E6%A0%A1%E9%AA%8C"></a>&nbsp;&nbsp;
@@ -192,7 +192,7 @@
 
 | 入口 | 适合什么时候用 | 从哪里开始 |
 | --- | --- | --- |
-| **内容地图** | 还不知道该从哪一篇开始 | [`book/15-内容地图.md`](book/15-内容地图.md) |
+| **内容地图** | 还不知道该从哪一篇开始 | [`book/17-内容地图.md`](book/17-内容地图.md) |
 | **主线正文** | 想理解一条路径从哪里开始、后来会遇到什么 | [`book/`](book) |
 | **时间线** | 已经知道目标，但不知道什么时候准备什么 | [`docs/timelines/`](docs/timelines) |
 | **实用工具** | 手上已经有具体选择，需要比较、记录或复盘 | [`docs/tools/`](docs/tools) |
