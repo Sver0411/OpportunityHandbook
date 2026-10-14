@@ -20,6 +20,7 @@ TREE = """
   什么叫机会成本 @e:judge-opportunity-cost
   什么叫可验证成果 @e:judge-verifiable-outcomes
   什么叫未来选择权 @n:judge-optionality
+  什么样的失败值得承担 @e:judge-failure-worth-it
   不知道自己想做什么时怎么办 @e:start-when-no-direction
 
 01 先决定下一步往哪里走
@@ -276,6 +277,9 @@ TREE = """
     空窗期怎么处理 @n:job-gap-period
     第一次选择错了怎么办 @n:job-first-choice-wrong
     被裁或失业后怎么走 @e:after-layoff
+  失败之后 @d:book/05-从学校走向第一份工作/10-失败之后
+    失败之后怎么复盘 @e:recover-failure-review
+    怎么讲一次失败 @e:recover-tell-your-story
 
 06 从新人到能独立负责
   刚进入职场

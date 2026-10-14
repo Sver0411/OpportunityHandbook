@@ -74,12 +74,20 @@
           "nav_id": "00-08"
         },
         {
+          "title": "什么样的失败值得承担",
+          "target": {
+            "type": "entry",
+            "entry_id": "judge-failure-worth-it"
+          },
+          "nav_id": "00-09"
+        },
+        {
           "title": "不知道自己想做什么时怎么办",
           "target": {
             "type": "entry",
             "entry_id": "start-when-no-direction"
           },
-          "nav_id": "00-09"
+          "nav_id": "00-10"
         }
       ],
       "nav_id": "00"
@@ -2203,6 +2211,33 @@
             "anchor": ""
           },
           "nav_id": "05-09"
+        },
+        {
+          "title": "失败之后",
+          "target": {
+            "type": "doc",
+            "location": "book/05-从学校走向第一份工作/10-失败之后",
+            "anchor": ""
+          },
+          "children": [
+            {
+              "title": "失败之后怎么复盘",
+              "target": {
+                "type": "entry",
+                "entry_id": "recover-failure-review"
+              },
+              "nav_id": "05-10-01"
+            },
+            {
+              "title": "怎么讲一次失败",
+              "target": {
+                "type": "entry",
+                "entry_id": "recover-tell-your-story"
+              },
+              "nav_id": "05-10-02"
+            }
+          ],
+          "nav_id": "05-10"
         }
       ],
       "nav_id": "05"
