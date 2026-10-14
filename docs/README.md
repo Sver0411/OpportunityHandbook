@@ -71,7 +71,7 @@ last_verified: 2026-09-21
 
 ## 工具、案例与操作手册
 
-`docs/tools/`（31 份表格模板）、`docs/cases/`（12 个完整案例）与 `docs/playbooks/`（10 份操作手册）
+`docs/tools/`（35 份表格模板）、`docs/cases/`（12 个完整案例）与 `docs/playbooks/`（10 份操作手册）
 按用途分别汇总在主线的三章里，避免两处维护：
 
 - [11 工具与模板](../book/11-工具与模板.md)

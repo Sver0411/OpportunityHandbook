@@ -618,6 +618,10 @@ TREE = """
   读博规划表 @d:docs/tools/读博规划表
   转行现金流表 @d:docs/tools/转行现金流表
   职校作品清单 @d:docs/tools/职校作品清单
+  日常账本与月度预算 @d:docs/tools/日常账本与月度预算
+  体检项目对照表 @d:docs/tools/体检项目对照表
+  精力预算表 @d:docs/tools/精力预算表
+  纠纷证据清单 @d:docs/tools/纠纷证据清单
 
 12 完整案例
   Case：第一次做真正的项目 @d:docs/cases/第一次做真正项目

@@ -5202,6 +5202,42 @@
             "anchor": ""
           },
           "nav_id": "11-31"
+        },
+        {
+          "title": "日常账本与月度预算",
+          "target": {
+            "type": "doc",
+            "location": "docs/tools/日常账本与月度预算",
+            "anchor": ""
+          },
+          "nav_id": "11-32"
+        },
+        {
+          "title": "体检项目对照表",
+          "target": {
+            "type": "doc",
+            "location": "docs/tools/体检项目对照表",
+            "anchor": ""
+          },
+          "nav_id": "11-33"
+        },
+        {
+          "title": "精力预算表",
+          "target": {
+            "type": "doc",
+            "location": "docs/tools/精力预算表",
+            "anchor": ""
+          },
+          "nav_id": "11-34"
+        },
+        {
+          "title": "纠纷证据清单",
+          "target": {
+            "type": "doc",
+            "location": "docs/tools/纠纷证据清单",
+            "anchor": ""
+          },
+          "nav_id": "11-35"
         }
       ],
       "nav_id": "11"
