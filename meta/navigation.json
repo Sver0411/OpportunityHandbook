@@ -5485,6 +5485,24 @@
             "anchor": ""
           },
           "nav_id": "13-10"
+        },
+        {
+          "title": "Playbook：第一次核对合同与社保",
+          "target": {
+            "type": "doc",
+            "location": "docs/playbooks/第一次核对合同与社保",
+            "anchor": ""
+          },
+          "nav_id": "13-11"
+        },
+        {
+          "title": "Playbook：第一次处理劳动争议",
+          "target": {
+            "type": "doc",
+            "location": "docs/playbooks/第一次处理劳动争议",
+            "anchor": ""
+          },
+          "nav_id": "13-12"
         }
       ],
       "nav_id": "13"

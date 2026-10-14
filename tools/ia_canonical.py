@@ -651,6 +651,8 @@ TREE = """
   Playbook：第一次参加 Hackathon @d:docs/playbooks/第一次参加 Hackathon
   Playbook：第一次写论文 @d:docs/playbooks/第一次写论文
   Playbook：第一次做实验与记录 @d:docs/playbooks/第一次做实验
+  Playbook：第一次核对合同与社保 @d:docs/playbooks/第一次核对合同与社保
+  Playbook：第一次处理劳动争议 @d:docs/playbooks/第一次处理劳动争议
 
 14 避坑
   升学与留学 @e:trap-guaranteed-admission
