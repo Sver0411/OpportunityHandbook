@@ -12,6 +12,7 @@
 
 from __future__ import annotations
 
+import collections
 import json
 import pathlib
 import re
@@ -22,6 +23,8 @@ ROOT = pathlib.Path(__file__).resolve().parents[2]
 sys.path.insert(0, str(ROOT / "tools"))
 
 import meta as M  # noqa: E402
+
+FACET_TOPICS = M.FACETS["topics"]["values"]
 
 INDEX: dict = {}
 
@@ -41,8 +44,8 @@ NATURALIZED = [
 # 基线：IA 重构前的条目总数（重构只搬运，不应丢内容）
 # 条目 + 首页问题 + 待写的总数基线（防止内容丢失）。
 # 2026-10-12：首页问题新增 5 条（实习时机 / 无回音诊断 / 转专业 / 联系导师 / 预算有限留学）。
-BASELINE_ENTRIES = 385
-BASELINE_COMPLETE = 356
+BASELINE_ENTRIES = 387
+BASELINE_COMPLETE = 358
 
 
 def setUpModule() -> None:
@@ -229,7 +232,7 @@ class TopicManual(unittest.TestCase):
                                     "research", "research-deep", "competitions", "competition-playbooks",
                                     "open-source", "projects", "learning", "certifications", "networking",
                                     "job-search", "career-growth", "entrepreneurship", "admissions",
-                                    "manuals", "sources"],
+                                    "manuals", "sources", "rights", "learning"],
             "book/10-路径时间线.md": ["timelines"],
             "book/11-工具与模板.md": ["tools"],
             "book/12-完整案例.md": ["cases"],
@@ -271,6 +274,50 @@ class TopicManual(unittest.TestCase):
 
         walk(nav["items"])
         self.assertEqual(problems, [], f"分组与所在文件不一致：{problems[:6]}")
+
+    def test_no_entry_swallowed_by_code_fence(self):
+        """不能有代码围栏把条目吞进去。
+
+        历史事故：追加条目时多写了一行 ```，导致后面的条目被当成代码块内容，
+        在索引里直接消失（表现为「条目数少了一条」）。这里逐行扫描代码块，
+        一旦块内出现 `### ` 就判定失败。
+        """
+        problems = []
+        for p in sorted((ROOT / "book").rglob("*.md")):
+            lines = p.read_text(encoding="utf-8").splitlines()
+            i = 0
+            while i < len(lines):
+                s = lines[i].strip()
+                if s.startswith("```meta"):
+                    i += 1
+                    while i < len(lines) and lines[i].strip() != "```":
+                        i += 1
+                    i += 1
+                    continue
+                if s.startswith("```"):
+                    i += 1
+                    body = []
+                    while i < len(lines) and not lines[i].strip().startswith("```"):
+                        body.append(lines[i])
+                        i += 1
+                    i += 1
+                    if any(b.startswith("### ") for b in body):
+                        problems.append(str(p.relative_to(ROOT)))
+                    continue
+                i += 1
+        self.assertEqual(sorted(set(problems)), [], f"这些文件里有条目被代码块吞掉：{sorted(set(problems))[:5]}")
+
+    def test_every_direction_has_entries(self):
+        """每个方向都要有足够条目：新增 topics 维度后，不能留下空壳方向。
+
+        运营侧约定：任一方向至少 3 条，否则筛选器点进去是空的体验很差。
+        """
+        counts = collections.Counter()
+        for e in INDEX["entries"]:
+            for t in e.get("topics") or []:
+                counts[t] += 1
+        thin = {k: counts.get(k, 0) for k, _ in FACET_TOPICS if counts.get(k, 0) < 3}
+        self.assertEqual(thin, {}, f"这些方向的条目少于 3 条：{thin}")
 
     def test_entries_have_related_links(self):
         """每个条目都要有「相关」小节且至少一条链接：读完一篇要能继续走。

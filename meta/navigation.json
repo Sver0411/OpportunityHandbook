@@ -668,12 +668,28 @@
               "nav_id": "02-03-01"
             },
             {
+              "title": "设备与文件的整理与备份",
+              "target": {
+                "type": "entry",
+                "entry_id": "digital-device-and-files"
+              },
+              "nav_id": "02-03-02"
+            },
+            {
+              "title": "个人公开痕迹怎么管理",
+              "target": {
+                "type": "entry",
+                "entry_id": "digital-online-identity"
+              },
+              "nav_id": "02-03-03"
+            },
+            {
               "title": "写作",
               "target": {
                 "type": "entry",
                 "entry_id": "skill-writing"
               },
-              "nav_id": "02-03-02"
+              "nav_id": "02-03-04"
             },
             {
               "title": "表达与演讲",
@@ -681,7 +697,7 @@
                 "type": "entry",
                 "entry_id": "skill-presentation"
               },
-              "nav_id": "02-03-03"
+              "nav_id": "02-03-05"
             },
             {
               "title": "沟通协作",
@@ -689,7 +705,7 @@
                 "type": "entry",
                 "entry_id": "skill-collaboration"
               },
-              "nav_id": "02-03-04"
+              "nav_id": "02-03-06"
             },
             {
               "title": "数据能力",
@@ -697,7 +713,7 @@
                 "type": "entry",
                 "entry_id": "skill-data"
               },
-              "nav_id": "02-03-05"
+              "nav_id": "02-03-07"
             },
             {
               "title": "项目管理",
@@ -705,7 +721,7 @@
                 "type": "entry",
                 "entry_id": "skill-project-management"
               },
-              "nav_id": "02-03-06"
+              "nav_id": "02-03-08"
             },
             {
               "title": "AI 与数字工具",
@@ -713,7 +729,7 @@
                 "type": "entry",
                 "entry_id": "skill-ai-tools"
               },
-              "nav_id": "02-03-07"
+              "nav_id": "02-03-09"
             }
           ],
           "target": {

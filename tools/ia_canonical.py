@@ -92,6 +92,8 @@ TREE = """
     不知道方向时怎么低成本试错 @e:explore-low-cost-experiments
   通用能力
     信息检索 @n:skill-information-retrieval
+    设备与文件的整理与备份 @e:digital-device-and-files
+    个人公开痕迹怎么管理 @e:digital-online-identity
     写作 @n:skill-writing
     表达与演讲 @n:skill-presentation
     沟通协作 @n:skill-collaboration
