@@ -5357,6 +5357,33 @@
             "anchor": ""
           },
           "nav_id": "12-12"
+        },
+        {
+          "title": "Case：第一次被欠薪",
+          "target": {
+            "type": "doc",
+            "location": "docs/cases/第一次被欠薪",
+            "anchor": ""
+          },
+          "nav_id": "12-13"
+        },
+        {
+          "title": "Case：第一次去看心理科",
+          "target": {
+            "type": "doc",
+            "location": "docs/cases/第一次看心理科",
+            "anchor": ""
+          },
+          "nav_id": "12-14"
+        },
+        {
+          "title": "Case：第一次自己买保险",
+          "target": {
+            "type": "doc",
+            "location": "docs/cases/第一次买保险",
+            "anchor": ""
+          },
+          "nav_id": "12-15"
         }
       ],
       "nav_id": "12"

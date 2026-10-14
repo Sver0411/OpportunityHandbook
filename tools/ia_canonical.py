@@ -636,6 +636,9 @@ TREE = """
   Case：把一次竞赛变成作品集与简历素材 @d:docs/cases/从竞赛到作品集
   Case：第一次面试失败之后 @d:docs/cases/第一次面试失败
   Case：第一次自由职业客户 @d:docs/cases/第一次自由职业客户
+  Case：第一次被欠薪 @d:docs/cases/第一次被欠薪
+  Case：第一次去看心理科 @d:docs/cases/第一次看心理科
+  Case：第一次自己买保险 @d:docs/cases/第一次买保险
 
 13 操作手册
   Playbook：第一次做项目 @d:docs/playbooks/第一次做项目
