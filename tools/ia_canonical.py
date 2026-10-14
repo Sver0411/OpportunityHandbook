@@ -62,6 +62,7 @@ TREE = """
     为教育投入多少钱才合理 @n:education-cost-budget
   家庭沟通与支持 @d:book/01-先决定下一步往哪里走/07-家庭沟通与支持
     怎么和父母沟通升学与职业选择 @e:family-talk
+    家里需要你出钱时怎么安排 @e:care-family-budget
   给自己保留退路
     为什么不要过早把路线锁死 @n:optionality-why-not-lock
     哪些能力可以跨路线使用 @n:optionality-transferable
@@ -360,6 +361,9 @@ TREE = """
   转行期的钱与关系 @d:book/07-晋升、跳槽还是转行/09-转行期的钱与关系
     转行期的钱怎么安排 @e:career-change-cashflow
     转行时怎么重建行业关系 @e:career-change-network
+  照护与职业节奏 @d:book/07-晋升、跳槽还是转行/10-照护与职业节奏
+    成为被依赖的人之后 @e:care-family-role
+    父母生病时的决策与分工 @e:care-elder-medical
   再次进入教育体系
     工作后读硕士 @n:edu-master-after-work
     MBA / MPA 等职业学位 @n:edu-mba-mpa
@@ -438,7 +442,8 @@ TREE = """
   深度教程 · 开源协作
     如何读一个大型代码库 @d:docs/open-source/读大型代码库
     Code Review 怎么做（给与被给） @d:docs/open-source/评审与合并
-    Maintainer、Release 与项目治理 @d:docs/open-source/维护者与治理    第一个 Issue 怎么写 @d:docs/open-source/第一个Issue
+    Maintainer、Release 与项目治理 @d:docs/open-source/维护者与治理
+    第一个 Issue 怎么写 @d:docs/open-source/第一个Issue
     第一次 PR：从发现到合并 @d:docs/open-source/第一个PR
     怎么找 Good First Issue（以及为什么常常找不到） @d:docs/open-source/GoodFirstIssue
   技能学习手册 @d:docs/manuals/技能学习手册
@@ -478,7 +483,8 @@ TREE = """
   深度教程 · 职业成长
     入职前 90 天：建立可信度 @d:docs/career-growth/入职前三个月
     如何真正学会一份工作 @d:docs/career-growth/学会一份工作
-    如何获得更大的 scope @d:docs/career-growth/扩大责任范围    晋升：证据、影响与流程 @d:docs/career-growth/晋升材料
+    如何获得更大的 scope @d:docs/career-growth/扩大责任范围
+    晋升：证据、影响与流程 @d:docs/career-growth/晋升材料
     IC 还是 Manager：一个完整人物案例 @d:docs/career-growth/IC与管理路线
     在职跳槽全流程 @d:docs/career-growth/在职跳槽
   创业与自由职业 @d:docs/manuals/创业与自由职业
