@@ -3622,13 +3622,31 @@
           "nav_id": "09-10"
         },
         {
+          "title": "用 AI 学习与工作",
+          "target": {
+            "type": "doc",
+            "location": "docs/learning/用AI学习与工作",
+            "anchor": ""
+          },
+          "nav_id": "09-11"
+        },
+        {
+          "title": "账号、数据与隐私",
+          "target": {
+            "type": "doc",
+            "location": "docs/learning/账号数据与隐私",
+            "anchor": ""
+          },
+          "nav_id": "09-12"
+        },
+        {
           "title": "离职、换工作与社保衔接",
           "target": {
             "type": "doc",
             "location": "docs/rights/离职与社保衔接",
             "anchor": ""
           },
-          "nav_id": "09-11"
+          "nav_id": "09-13"
         },
         {
           "title": "劳动合同要看哪些条款",
@@ -3637,7 +3655,7 @@
             "location": "docs/rights/劳动合同要看哪些条款",
             "anchor": ""
           },
-          "nav_id": "09-12"
+          "nav_id": "09-14"
         },
         {
           "title": "被欠薪与劳动仲裁",
@@ -3646,7 +3664,7 @@
             "location": "docs/rights/被欠薪与劳动仲裁",
             "anchor": ""
           },
-          "nav_id": "09-13"
+          "nav_id": "09-15"
         },
         {
           "title": "遇到纠纷找谁：求助顺序",
@@ -3655,7 +3673,7 @@
             "location": "docs/rights/遇到纠纷找谁",
             "anchor": ""
           },
-          "nav_id": "09-14"
+          "nav_id": "09-16"
         },
         {
           "title": "术语表",
@@ -3664,7 +3682,7 @@
             "location": "docs/manuals/术语表",
             "anchor": ""
           },
-          "nav_id": "09-15"
+          "nav_id": "09-17"
         },
         {
           "title": "深度教程 · 学习方法",
@@ -3676,7 +3694,7 @@
                 "location": "docs/learning/从零学一项技术",
                 "anchor": ""
               },
-              "nav_id": "09-16-01"
+              "nav_id": "09-18-01"
             },
             {
               "title": "如何读官方文档",
@@ -3685,7 +3703,7 @@
                 "location": "docs/learning/读官方文档",
                 "anchor": ""
               },
-              "nav_id": "09-16-02"
+              "nav_id": "09-18-02"
             },
             {
               "title": "如何 Debug：从现象到根因",
@@ -3694,7 +3712,7 @@
                 "location": "docs/learning/调试方法",
                 "anchor": ""
               },
-              "nav_id": "09-16-03"
+              "nav_id": "09-18-03"
             },
             {
               "title": "如何判断自己真的掌握",
@@ -3703,7 +3721,7 @@
                 "location": "docs/learning/掌握程度的判断",
                 "anchor": ""
               },
-              "nav_id": "09-16-04"
+              "nav_id": "09-18-04"
             }
           ],
           "target": {
@@ -3711,7 +3729,7 @@
             "location": "book/09-专题手册",
             "anchor": "深度教程-学习方法"
           },
-          "nav_id": "09-16"
+          "nav_id": "09-18"
         },
         {
           "title": "深度教程 · 求职训练",
@@ -3723,7 +3741,7 @@
                 "location": "docs/job-search/JD拆解",
                 "anchor": ""
               },
-              "nav_id": "09-17-01"
+              "nav_id": "09-19-01"
             },
             {
               "title": "简历从差到好（六种背景完整改写）",
@@ -3732,7 +3750,7 @@
                 "location": "docs/job-search/简历改造",
                 "anchor": ""
               },
-              "nav_id": "09-17-02"
+              "nav_id": "09-19-02"
             },
             {
               "title": "技术面试全流程",
@@ -3741,7 +3759,7 @@
                 "location": "docs/job-search/技术面试",
                 "anchor": ""
               },
-              "nav_id": "09-17-03"
+              "nav_id": "09-19-03"
             },
             {
               "title": "行为面试：不机械用 STAR",
@@ -3750,7 +3768,7 @@
                 "location": "docs/job-search/行为面试",
                 "anchor": ""
               },
-              "nav_id": "09-17-04"
+              "nav_id": "09-19-04"
             },
             {
               "title": "项目面试：从第一句开始的追问链",
@@ -3759,7 +3777,7 @@
                 "location": "docs/job-search/项目面试",
                 "anchor": ""
               },
-              "nav_id": "09-17-05"
+              "nav_id": "09-19-05"
             },
             {
               "title": "求职失败诊断：从 0 回复到 Offer 质量差",
@@ -3768,7 +3786,7 @@
                 "location": "docs/job-search/求职漏斗诊断",
                 "anchor": ""
               },
-              "nav_id": "09-17-06"
+              "nav_id": "09-19-06"
             },
             {
               "title": "Offer、薪酬结构与劳动合同",
@@ -3777,7 +3795,7 @@
                 "location": "docs/job-search/Offer与合同",
                 "anchor": ""
               },
-              "nav_id": "09-17-07"
+              "nav_id": "09-19-07"
             }
           ],
           "target": {
@@ -3785,7 +3803,7 @@
             "location": "book/09-专题手册",
             "anchor": "深度教程-求职训练"
           },
-          "nav_id": "09-17"
+          "nav_id": "09-19"
         },
         {
           "title": "语言与考试",
@@ -3794,7 +3812,7 @@
             "location": "docs/manuals/语言与考试",
             "anchor": ""
           },
-          "nav_id": "09-18"
+          "nav_id": "09-20"
         },
         {
           "title": "证书",
@@ -3803,7 +3821,7 @@
             "location": "docs/manuals/证书",
             "anchor": ""
           },
-          "nav_id": "09-19"
+          "nav_id": "09-21"
         },
         {
           "title": "深度教程 · 证书与资格",
@@ -3815,7 +3833,7 @@
                 "location": "docs/certifications/判断体系",
                 "anchor": ""
               },
-              "nav_id": "09-20-01"
+              "nav_id": "09-22-01"
             },
             {
               "title": "证书类型对照：准入 / 等级 / 行业 / 厂商 / 微证书",
@@ -3824,7 +3842,7 @@
                 "location": "docs/certifications/类型对照",
                 "anchor": ""
               },
-              "nav_id": "09-20-02"
+              "nav_id": "09-22-02"
             },
             {
               "title": "证书考试的准备方式",
@@ -3833,7 +3851,7 @@
                 "location": "docs/certifications/考试准备",
                 "anchor": ""
               },
-              "nav_id": "09-20-03"
+              "nav_id": "09-22-03"
             }
           ],
           "target": {
@@ -3841,7 +3859,7 @@
             "location": "book/09-专题手册",
             "anchor": "深度教程-证书与资格"
           },
-          "nav_id": "09-20"
+          "nav_id": "09-22"
         },
         {
           "title": "奖学金与资助",
@@ -3850,7 +3868,7 @@
             "location": "docs/manuals/奖学金与资助",
             "anchor": ""
           },
-          "nav_id": "09-21"
+          "nav_id": "09-23"
         },
         {
           "title": "社群与行业组织",
@@ -3859,7 +3877,7 @@
             "location": "docs/manuals/社群与行业组织",
             "anchor": ""
           },
-          "nav_id": "09-22"
+          "nav_id": "09-24"
         },
         {
           "title": "深度教程 · 人脉与社群",
@@ -3871,7 +3889,7 @@
                 "location": "docs/networking/联系陌生人",
                 "anchor": ""
               },
-              "nav_id": "09-23-01"
+              "nav_id": "09-25-01"
             },
             {
               "title": "会议与线下活动：第一次去做什么",
@@ -3880,7 +3898,7 @@
                 "location": "docs/networking/会议与线下活动",
                 "anchor": ""
               },
-              "nav_id": "09-23-02"
+              "nav_id": "09-25-02"
             },
             {
               "title": "关系维护与内推请求",
@@ -3889,7 +3907,7 @@
                 "location": "docs/networking/关系维护与内推",
                 "anchor": ""
               },
-              "nav_id": "09-23-03"
+              "nav_id": "09-25-03"
             },
             {
               "title": "如何给社群做贡献",
@@ -3898,7 +3916,7 @@
                 "location": "docs/networking/贡献社群",
                 "anchor": ""
               },
-              "nav_id": "09-23-04"
+              "nav_id": "09-25-04"
             }
           ],
           "target": {
@@ -3906,7 +3924,7 @@
             "location": "book/09-专题手册",
             "anchor": "深度教程-人脉与社群"
           },
-          "nav_id": "09-23"
+          "nav_id": "09-25"
         },
         {
           "title": "深度教程 · 职业成长",
@@ -3918,7 +3936,7 @@
                 "location": "docs/career-growth/入职前三个月",
                 "anchor": ""
               },
-              "nav_id": "09-24-01"
+              "nav_id": "09-26-01"
             },
             {
               "title": "如何真正学会一份工作",
@@ -3927,7 +3945,7 @@
                 "location": "docs/career-growth/学会一份工作",
                 "anchor": ""
               },
-              "nav_id": "09-24-02"
+              "nav_id": "09-26-02"
             },
             {
               "title": "如何获得更大的 scope @d:docs/career-growth/扩大责任范围    晋升：证据、影响与流程",
@@ -3936,7 +3954,7 @@
                 "location": "docs/career-growth/晋升材料",
                 "anchor": ""
               },
-              "nav_id": "09-24-03"
+              "nav_id": "09-26-03"
             },
             {
               "title": "IC 还是 Manager：一个完整人物案例",
@@ -3945,7 +3963,7 @@
                 "location": "docs/career-growth/IC与管理路线",
                 "anchor": ""
               },
-              "nav_id": "09-24-04"
+              "nav_id": "09-26-04"
             },
             {
               "title": "在职跳槽全流程",
@@ -3954,7 +3972,7 @@
                 "location": "docs/career-growth/在职跳槽",
                 "anchor": ""
               },
-              "nav_id": "09-24-05"
+              "nav_id": "09-26-05"
             }
           ],
           "target": {
@@ -3962,7 +3980,7 @@
             "location": "book/09-专题手册",
             "anchor": "深度教程-职业成长"
           },
-          "nav_id": "09-24"
+          "nav_id": "09-26"
         },
         {
           "title": "创业与自由职业",
@@ -3971,7 +3989,7 @@
             "location": "docs/manuals/创业与自由职业",
             "anchor": ""
           },
-          "nav_id": "09-25"
+          "nav_id": "09-27"
         },
         {
           "title": "深度教程 · 创业与自由职业",
@@ -3983,7 +4001,7 @@
                 "location": "docs/entrepreneurship/找问题与用户访谈",
                 "anchor": ""
               },
-              "nav_id": "09-26-01"
+              "nav_id": "09-28-01"
             },
             {
               "title": "定价与报价",
@@ -3992,7 +4010,7 @@
                 "location": "docs/entrepreneurship/定价与报价",
                 "anchor": ""
               },
-              "nav_id": "09-26-02"
+              "nav_id": "09-28-02"
             },
             {
               "title": "分销与获客",
@@ -4001,7 +4019,7 @@
                 "location": "docs/entrepreneurship/分销与获客",
                 "anchor": ""
               },
-              "nav_id": "09-26-03"
+              "nav_id": "09-28-03"
             },
             {
               "title": "第一个客户：从发现到复购",
@@ -4010,7 +4028,7 @@
                 "location": "docs/entrepreneurship/第一单客户",
                 "anchor": ""
               },
-              "nav_id": "09-26-04"
+              "nav_id": "09-28-04"
             },
             {
               "title": "现金流、发票与合同边界",
@@ -4019,7 +4037,7 @@
                 "location": "docs/entrepreneurship/现金流与合同",
                 "anchor": ""
               },
-              "nav_id": "09-26-05"
+              "nav_id": "09-28-05"
             },
             {
               "title": "从自由职业到工作室 / 副业到主业",
@@ -4028,7 +4046,7 @@
                 "location": "docs/entrepreneurship/从自由职业到工作室",
                 "anchor": ""
               },
-              "nav_id": "09-26-06"
+              "nav_id": "09-28-06"
             }
           ],
           "target": {
@@ -4036,7 +4054,7 @@
             "location": "book/09-专题手册",
             "anchor": "深度教程-创业与自由职业"
           },
-          "nav_id": "09-26"
+          "nav_id": "09-28"
         },
         {
           "title": "国家与地区",
@@ -4045,7 +4063,7 @@
             "location": "book/09-专题手册",
             "anchor": "国家与地区"
           },
-          "nav_id": "09-27"
+          "nav_id": "09-29"
         },
         {
           "title": "国家申请手册",
@@ -4057,7 +4075,7 @@
                 "location": "docs/country-playbooks/中国大陆",
                 "anchor": ""
               },
-              "nav_id": "09-28-01"
+              "nav_id": "09-30-01"
             },
             {
               "title": "中国香港申请手册",
@@ -4066,7 +4084,7 @@
                 "location": "docs/country-playbooks/中国香港",
                 "anchor": ""
               },
-              "nav_id": "09-28-02"
+              "nav_id": "09-30-02"
             },
             {
               "title": "日本申请手册",
@@ -4075,7 +4093,7 @@
                 "location": "docs/country-playbooks/日本",
                 "anchor": ""
               },
-              "nav_id": "09-28-03"
+              "nav_id": "09-30-03"
             },
             {
               "title": "新加坡申请手册",
@@ -4084,7 +4102,7 @@
                 "location": "docs/country-playbooks/新加坡",
                 "anchor": ""
               },
-              "nav_id": "09-28-04"
+              "nav_id": "09-30-04"
             },
             {
               "title": "韩国申请手册",
@@ -4093,7 +4111,7 @@
                 "location": "docs/country-playbooks/韩国",
                 "anchor": ""
               },
-              "nav_id": "09-28-05"
+              "nav_id": "09-30-05"
             },
             {
               "title": "美国申请手册",
@@ -4102,7 +4120,7 @@
                 "location": "docs/country-playbooks/美国",
                 "anchor": ""
               },
-              "nav_id": "09-28-06"
+              "nav_id": "09-30-06"
             },
             {
               "title": "加拿大申请手册",
@@ -4111,7 +4129,7 @@
                 "location": "docs/country-playbooks/加拿大",
                 "anchor": ""
               },
-              "nav_id": "09-28-07"
+              "nav_id": "09-30-07"
             },
             {
               "title": "英国申请手册",
@@ -4120,7 +4138,7 @@
                 "location": "docs/country-playbooks/英国",
                 "anchor": ""
               },
-              "nav_id": "09-28-08"
+              "nav_id": "09-30-08"
             },
             {
               "title": "澳大利亚申请手册",
@@ -4129,7 +4147,7 @@
                 "location": "docs/country-playbooks/澳大利亚",
                 "anchor": ""
               },
-              "nav_id": "09-28-09"
+              "nav_id": "09-30-09"
             },
             {
               "title": "新西兰申请手册",
@@ -4138,7 +4156,7 @@
                 "location": "docs/country-playbooks/新西兰",
                 "anchor": ""
               },
-              "nav_id": "09-28-10"
+              "nav_id": "09-30-10"
             },
             {
               "title": "欧洲大陆申请手册",
@@ -4147,7 +4165,7 @@
                 "location": "docs/country-playbooks/欧洲大陆",
                 "anchor": ""
               },
-              "nav_id": "09-28-11"
+              "nav_id": "09-30-11"
             },
             {
               "title": "中国大陆",
@@ -4156,7 +4174,7 @@
                 "location": "docs/countries/中国大陆",
                 "anchor": ""
               },
-              "nav_id": "09-28-12"
+              "nav_id": "09-30-12"
             },
             {
               "title": "中国香港",
@@ -4165,7 +4183,7 @@
                 "location": "docs/countries/中国香港",
                 "anchor": ""
               },
-              "nav_id": "09-28-13"
+              "nav_id": "09-30-13"
             },
             {
               "title": "美国",
@@ -4174,7 +4192,7 @@
                 "location": "docs/countries/美国",
                 "anchor": ""
               },
-              "nav_id": "09-28-14"
+              "nav_id": "09-30-14"
             },
             {
               "title": "加拿大",
@@ -4183,7 +4201,7 @@
                 "location": "docs/countries/加拿大",
                 "anchor": ""
               },
-              "nav_id": "09-28-15"
+              "nav_id": "09-30-15"
             },
             {
               "title": "英国",
@@ -4192,7 +4210,7 @@
                 "location": "docs/countries/英国",
                 "anchor": ""
               },
-              "nav_id": "09-28-16"
+              "nav_id": "09-30-16"
             },
             {
               "title": "欧洲大陆",
@@ -4201,7 +4219,7 @@
                 "location": "docs/countries/欧洲大陆",
                 "anchor": ""
               },
-              "nav_id": "09-28-17"
+              "nav_id": "09-30-17"
             },
             {
               "title": "日本",
@@ -4210,7 +4228,7 @@
                 "location": "docs/countries/日本",
                 "anchor": ""
               },
-              "nav_id": "09-28-18"
+              "nav_id": "09-30-18"
             },
             {
               "title": "韩国",
@@ -4219,7 +4237,7 @@
                 "location": "docs/countries/韩国",
                 "anchor": ""
               },
-              "nav_id": "09-28-19"
+              "nav_id": "09-30-19"
             },
             {
               "title": "新加坡",
@@ -4228,7 +4246,7 @@
                 "location": "docs/countries/新加坡",
                 "anchor": ""
               },
-              "nav_id": "09-28-20"
+              "nav_id": "09-30-20"
             },
             {
               "title": "澳大利亚",
@@ -4237,7 +4255,7 @@
                 "location": "docs/countries/澳大利亚",
                 "anchor": ""
               },
-              "nav_id": "09-28-21"
+              "nav_id": "09-30-21"
             },
             {
               "title": "新西兰",
@@ -4246,7 +4264,7 @@
                 "location": "docs/countries/新西兰",
                 "anchor": ""
               },
-              "nav_id": "09-28-22"
+              "nav_id": "09-30-22"
             }
           ],
           "target": {
@@ -4254,7 +4272,7 @@
             "location": "book/09-专题手册",
             "anchor": "国家申请手册"
           },
-          "nav_id": "09-28"
+          "nav_id": "09-30"
         },
         {
           "title": "行业与职业",
@@ -4263,7 +4281,7 @@
             "location": "book/09-专题手册",
             "anchor": "行业与职业"
           },
-          "nav_id": "09-29"
+          "nav_id": "09-31"
         },
         {
           "title": "职业指南",
@@ -4275,7 +4293,7 @@
                 "location": "docs/career-guides/软件工程师",
                 "anchor": ""
               },
-              "nav_id": "09-30-01"
+              "nav_id": "09-32-01"
             },
             {
               "title": "前端工程师",
@@ -4284,7 +4302,7 @@
                 "location": "docs/career-guides/前端工程师",
                 "anchor": ""
               },
-              "nav_id": "09-30-02"
+              "nav_id": "09-32-02"
             },
             {
               "title": "后端工程师",
@@ -4293,7 +4311,7 @@
                 "location": "docs/career-guides/后端工程师",
                 "anchor": ""
               },
-              "nav_id": "09-30-03"
+              "nav_id": "09-32-03"
             },
             {
               "title": "嵌入式工程师",
@@ -4302,7 +4320,7 @@
                 "location": "docs/career-guides/嵌入式工程师",
                 "anchor": ""
               },
-              "nav_id": "09-30-04"
+              "nav_id": "09-32-04"
             },
             {
               "title": "硬件工程师",
@@ -4311,7 +4329,7 @@
                 "location": "docs/career-guides/硬件工程师",
                 "anchor": ""
               },
-              "nav_id": "09-30-05"
+              "nav_id": "09-32-05"
             },
             {
               "title": "算法工程师",
@@ -4320,7 +4338,7 @@
                 "location": "docs/career-guides/算法工程师",
                 "anchor": ""
               },
-              "nav_id": "09-30-06"
+              "nav_id": "09-32-06"
             },
             {
               "title": "数据分析师",
@@ -4329,7 +4347,7 @@
                 "location": "docs/career-guides/数据分析师",
                 "anchor": ""
               },
-              "nav_id": "09-30-07"
+              "nav_id": "09-32-07"
             },
             {
               "title": "数据工程师",
@@ -4338,7 +4356,7 @@
                 "location": "docs/career-guides/数据工程师",
                 "anchor": ""
               },
-              "nav_id": "09-30-08"
+              "nav_id": "09-32-08"
             },
             {
               "title": "产品经理",
@@ -4347,7 +4365,7 @@
                 "location": "docs/career-guides/产品经理",
                 "anchor": ""
               },
-              "nav_id": "09-30-09"
+              "nav_id": "09-32-09"
             },
             {
               "title": "测试与质量（QA）",
@@ -4356,7 +4374,7 @@
                 "location": "docs/career-guides/测试与质量",
                 "anchor": ""
               },
-              "nav_id": "09-30-10"
+              "nav_id": "09-32-10"
             },
             {
               "title": "运维与 SRE",
@@ -4365,7 +4383,7 @@
                 "location": "docs/career-guides/运维与SRE",
                 "anchor": ""
               },
-              "nav_id": "09-30-11"
+              "nav_id": "09-32-11"
             },
             {
               "title": "解决方案工程师 / 售前",
@@ -4374,7 +4392,7 @@
                 "location": "docs/career-guides/解决方案与售前",
                 "anchor": ""
               },
-              "nav_id": "09-30-12"
+              "nav_id": "09-32-12"
             },
             {
               "title": "Forward Deployed Engineer（FDE）",
@@ -4383,7 +4401,7 @@
                 "location": "docs/career-guides/FDE",
                 "anchor": ""
               },
-              "nav_id": "09-30-13"
+              "nav_id": "09-32-13"
             },
             {
               "title": "技术支持 / 客户成功",
@@ -4392,7 +4410,7 @@
                 "location": "docs/career-guides/技术支持与客户成功",
                 "anchor": ""
               },
-              "nav_id": "09-30-14"
+              "nav_id": "09-32-14"
             },
             {
               "title": "Research Engineer",
@@ -4401,7 +4419,7 @@
                 "location": "docs/career-guides/研究工程师",
                 "anchor": ""
               },
-              "nav_id": "09-30-15"
+              "nav_id": "09-32-15"
             },
             {
               "title": "研究员 / 高校教职",
@@ -4410,7 +4428,7 @@
                 "location": "docs/career-guides/研究员与高校教职",
                 "anchor": ""
               },
-              "nav_id": "09-30-16"
+              "nav_id": "09-32-16"
             },
             {
               "title": "制造业研发",
@@ -4419,7 +4437,7 @@
                 "location": "docs/career-guides/制造业研发",
                 "anchor": ""
               },
-              "nav_id": "09-30-17"
+              "nav_id": "09-32-17"
             },
             {
               "title": "设计师（交互 / 视觉 / 工业）",
@@ -4428,7 +4446,7 @@
                 "location": "docs/career-guides/设计师",
                 "anchor": ""
               },
-              "nav_id": "09-30-18"
+              "nav_id": "09-32-18"
             },
             {
               "title": "财务与金融分析",
@@ -4437,7 +4455,7 @@
                 "location": "docs/career-guides/财务与金融分析",
                 "anchor": ""
               },
-              "nav_id": "09-30-19"
+              "nav_id": "09-32-19"
             },
             {
               "title": "咨询",
@@ -4446,7 +4464,7 @@
                 "location": "docs/career-guides/咨询",
                 "anchor": ""
               },
-              "nav_id": "09-30-20"
+              "nav_id": "09-32-20"
             },
             {
               "title": "教师（中小学 / 高校 / 培训）",
@@ -4455,7 +4473,7 @@
                 "location": "docs/career-guides/教师",
                 "anchor": ""
               },
-              "nav_id": "09-30-21"
+              "nav_id": "09-32-21"
             },
             {
               "title": "公共部门与事业单位",
@@ -4464,7 +4482,7 @@
                 "location": "docs/career-guides/公共部门",
                 "anchor": ""
               },
-              "nav_id": "09-30-22"
+              "nav_id": "09-32-22"
             },
             {
               "title": "技能型职业（电工 / 焊工 / 护理等）",
@@ -4473,7 +4491,7 @@
                 "location": "docs/career-guides/技能型职业",
                 "anchor": ""
               },
-              "nav_id": "09-30-23"
+              "nav_id": "09-32-23"
             },
             {
               "title": "技术与工程",
@@ -4482,7 +4500,7 @@
                 "location": "docs/careers/技术与工程",
                 "anchor": ""
               },
-              "nav_id": "09-30-24"
+              "nav_id": "09-32-24"
             },
             {
               "title": "AI 与数据",
@@ -4491,7 +4509,7 @@
                 "location": "docs/careers/AI与数据",
                 "anchor": ""
               },
-              "nav_id": "09-30-25"
+              "nav_id": "09-32-25"
             },
             {
               "title": "制造",
@@ -4500,7 +4518,7 @@
                 "location": "docs/careers/制造",
                 "anchor": ""
               },
-              "nav_id": "09-30-26"
+              "nav_id": "09-32-26"
             },
             {
               "title": "商业与金融",
@@ -4509,7 +4527,7 @@
                 "location": "docs/careers/商业与金融",
                 "anchor": ""
               },
-              "nav_id": "09-30-27"
+              "nav_id": "09-32-27"
             },
             {
               "title": "设计与创意",
@@ -4518,7 +4536,7 @@
                 "location": "docs/careers/设计与创意",
                 "anchor": ""
               },
-              "nav_id": "09-30-28"
+              "nav_id": "09-32-28"
             },
             {
               "title": "医疗健康",
@@ -4527,7 +4545,7 @@
                 "location": "docs/careers/医疗健康",
                 "anchor": ""
               },
-              "nav_id": "09-30-29"
+              "nav_id": "09-32-29"
             },
             {
               "title": "生命科学",
@@ -4536,7 +4554,7 @@
                 "location": "docs/careers/生命科学",
                 "anchor": ""
               },
-              "nav_id": "09-30-30"
+              "nav_id": "09-32-30"
             },
             {
               "title": "教育",
@@ -4545,7 +4563,7 @@
                 "location": "docs/careers/教育",
                 "anchor": ""
               },
-              "nav_id": "09-30-31"
+              "nav_id": "09-32-31"
             },
             {
               "title": "法律与公共事务",
@@ -4554,7 +4572,7 @@
                 "location": "docs/careers/法律与公共事务",
                 "anchor": ""
               },
-              "nav_id": "09-30-32"
+              "nav_id": "09-32-32"
             },
             {
               "title": "科研与高校",
@@ -4563,7 +4581,7 @@
                 "location": "docs/careers/科研与高校",
                 "anchor": ""
               },
-              "nav_id": "09-30-33"
+              "nav_id": "09-32-33"
             },
             {
               "title": "公共服务",
@@ -4572,7 +4590,7 @@
                 "location": "docs/careers/公共服务",
                 "anchor": ""
               },
-              "nav_id": "09-30-34"
+              "nav_id": "09-32-34"
             },
             {
               "title": "技能型职业",
@@ -4581,7 +4599,7 @@
                 "location": "docs/careers/技能型职业",
                 "anchor": ""
               },
-              "nav_id": "09-30-35"
+              "nav_id": "09-32-35"
             }
           ],
           "target": {
@@ -4589,7 +4607,7 @@
             "location": "book/09-专题手册",
             "anchor": "职业指南"
           },
-          "nav_id": "09-30"
+          "nav_id": "09-32"
         }
       ],
       "nav_id": "09"
@@ -5303,6 +5321,14 @@
             "entry_id": "trap-information-asymmetry"
           },
           "nav_id": "14-08"
+        },
+        {
+          "title": "把 AI 当替身",
+          "target": {
+            "type": "entry",
+            "entry_id": "trap-ai-shortcut"
+          },
+          "nav_id": "14-09"
         }
       ],
       "nav_id": "14"

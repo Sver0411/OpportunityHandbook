@@ -55,6 +55,11 @@ last_verified: 2026-09-21
 - [科研入门时间线](timelines/科研入门时间线.md)
 - [博士申请时间线](timelines/博士申请时间线.md)
 
+## 学习方法 `docs/learning/`
+
+- [用 AI 学习与工作](learning/用AI学习与工作.md)
+- [账号、数据与隐私](learning/账号数据与隐私.md)
+
 ## 权益与制度 `docs/rights/`
 
 - [离职、换工作与社保衔接](rights/离职与社保衔接.md)

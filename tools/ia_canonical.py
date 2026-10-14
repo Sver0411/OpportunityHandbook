@@ -442,6 +442,8 @@ TREE = """
     第一次 PR：从发现到合并 @d:docs/open-source/第一个PR
     怎么找 Good First Issue（以及为什么常常找不到） @d:docs/open-source/GoodFirstIssue
   技能学习手册 @d:docs/manuals/技能学习手册
+  用 AI 学习与工作 @d:docs/learning/用AI学习与工作
+  账号、数据与隐私 @d:docs/learning/账号数据与隐私
   离职、换工作与社保衔接 @d:docs/rights/离职与社保衔接
   劳动合同要看哪些条款 @d:docs/rights/劳动合同要看哪些条款
   被欠薪与劳动仲裁 @d:docs/rights/被欠薪与劳动仲裁
@@ -632,6 +634,7 @@ TREE = """
   项目与履历 @e:trap-collecting-courses-and-half-projects
   创业与副业 @n:trap-startup-side-gig
   信息差、机会焦虑与从众 @e:trap-information-asymmetry
+  把 AI 当替身 @e:trap-ai-shortcut
 15 钱与生活基本盘
   拿到钱的第一年
     第一个月的工资怎么分配 @e:money-first-salary-split
