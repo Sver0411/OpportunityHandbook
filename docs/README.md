@@ -44,6 +44,8 @@ last_verified: 2026-09-21
 - [高中到大学](timelines/高中到大学.md)
 - [中职升学时间线](timelines/中职升学时间线.md)
 - [转行时间线](timelines/转行时间线.md)
+- [入职第一年](timelines/入职第一年.md)
+- [离职与纠纷维权](timelines/离职与纠纷维权.md)
 - [专升本时间线](timelines/专升本时间线.md)
 - [实习准备时间线](timelines/实习准备时间线.md)
 - [海外工作与签证时间线](timelines/海外工作与签证时间线.md)

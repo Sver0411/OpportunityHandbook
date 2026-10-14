@@ -583,6 +583,8 @@ TREE = """
   校招 @d:docs/timelines/校招时间线
   科研入门 @d:docs/timelines/科研入门时间线
   转行 @d:docs/timelines/转行时间线
+  入职第一年 @d:docs/timelines/入职第一年
+  离职与纠纷维权 @d:docs/timelines/离职与纠纷维权
 
 11 工具与模板
   机会价值判断表 @d:docs/tools/机会价值判断表

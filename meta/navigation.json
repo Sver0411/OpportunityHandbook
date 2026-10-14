@@ -4894,6 +4894,24 @@
             "anchor": ""
           },
           "nav_id": "10-13"
+        },
+        {
+          "title": "入职第一年",
+          "target": {
+            "type": "doc",
+            "location": "docs/timelines/入职第一年",
+            "anchor": ""
+          },
+          "nav_id": "10-14"
+        },
+        {
+          "title": "离职与纠纷维权",
+          "target": {
+            "type": "doc",
+            "location": "docs/timelines/离职与纠纷维权",
+            "anchor": ""
+          },
+          "nav_id": "10-15"
         }
       ],
       "nav_id": "10"
