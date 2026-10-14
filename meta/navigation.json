@@ -5430,6 +5430,97 @@
         "location": "book/16-身体与心理的可持续性",
         "anchor": ""
       },
+      "children": [
+        {
+          "title": "节奏与身体",
+          "children": [
+            {
+              "title": "长期高强度怎么不垮",
+              "target": {
+                "type": "entry",
+                "entry_id": "health-sustainable-pace"
+              },
+              "nav_id": "16-01-01"
+            },
+            {
+              "title": "睡眠与久坐：能改的三件事",
+              "target": {
+                "type": "entry",
+                "entry_id": "health-sleep-and-sitting"
+              },
+              "nav_id": "16-01-02"
+            },
+            {
+              "title": "精力怎么分配：一周精力预算",
+              "target": {
+                "type": "entry",
+                "entry_id": "health-energy-budget"
+              },
+              "nav_id": "16-01-03"
+            }
+          ],
+          "target": {
+            "type": "doc",
+            "location": "book/16-身体与心理的可持续性/01-节奏与身体",
+            "anchor": ""
+          },
+          "nav_id": "16-01"
+        },
+        {
+          "title": "心理与求助",
+          "target": {
+            "type": "doc",
+            "location": "book/16-身体与心理的可持续性/02-心理与求助",
+            "anchor": ""
+          },
+          "children": [
+            {
+              "title": "情绪持续不好时找谁",
+              "target": {
+                "type": "entry",
+                "entry_id": "health-mental-support"
+              },
+              "nav_id": "16-02-01"
+            },
+            {
+              "title": "日常怎么维护心理状态",
+              "target": {
+                "type": "entry",
+                "entry_id": "health-mental-habits"
+              },
+              "nav_id": "16-02-02"
+            }
+          ],
+          "nav_id": "16-02"
+        },
+        {
+          "title": "生病与照护自己",
+          "target": {
+            "type": "doc",
+            "location": "book/16-身体与心理的可持续性/03-生病与照护自己",
+            "anchor": ""
+          },
+          "children": [
+            {
+              "title": "什么时候该去看医生，而不是再扛一周",
+              "target": {
+                "type": "entry",
+                "entry_id": "health-when-to-see-doctor"
+              },
+              "nav_id": "16-03-01"
+            },
+            {
+              "title": "体检怎么选、医保怎么用",
+              "target": {
+                "type": "entry",
+                "entry_id": "health-checkup-and-insurance"
+              },
+              "nav_id": "16-03-02"
+            }
+          ],
+          "nav_id": "16-03"
+        }
+      ],
       "nav_id": "16"
     },
     {

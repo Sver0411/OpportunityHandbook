@@ -646,5 +646,15 @@ TREE = """
     负债与征信：先还哪一笔 @e:money-debt-and-credit
     大额支出怎么决策 @e:money-big-purchase
 16 身体与心理的可持续性
+  节奏与身体
+    长期高强度怎么不垮 @e:health-sustainable-pace
+    睡眠与久坐：能改的三件事 @e:health-sleep-and-sitting
+    精力怎么分配：一周精力预算 @e:health-energy-budget
+  心理与求助 @d:book/16-身体与心理的可持续性/02-心理与求助
+    情绪持续不好时找谁 @e:health-mental-support
+    日常怎么维护心理状态 @e:health-mental-habits
+  生病与照护自己 @d:book/16-身体与心理的可持续性/03-生病与照护自己
+    什么时候该去看医生，而不是再扛一周 @e:health-when-to-see-doctor
+    体检怎么选、医保怎么用 @e:health-checkup-and-insurance
 17 内容地图
 """
