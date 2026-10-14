@@ -442,6 +442,10 @@ TREE = """
     第一次 PR：从发现到合并 @d:docs/open-source/第一个PR
     怎么找 Good First Issue（以及为什么常常找不到） @d:docs/open-source/GoodFirstIssue
   技能学习手册 @d:docs/manuals/技能学习手册
+  离职、换工作与社保衔接 @d:docs/rights/离职与社保衔接
+  劳动合同要看哪些条款 @d:docs/rights/劳动合同要看哪些条款
+  被欠薪与劳动仲裁 @d:docs/rights/被欠薪与劳动仲裁
+  遇到纠纷找谁：求助顺序 @d:docs/rights/遇到纠纷找谁
   术语表 @d:docs/manuals/术语表
   深度教程 · 学习方法
     从零学一项技术（三种类型） @d:docs/learning/从零学一项技术

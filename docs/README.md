@@ -55,6 +55,13 @@ last_verified: 2026-09-21
 - [科研入门时间线](timelines/科研入门时间线.md)
 - [博士申请时间线](timelines/博士申请时间线.md)
 
+## 权益与制度 `docs/rights/`
+
+- [离职、换工作与社保衔接](rights/离职与社保衔接.md)
+- [劳动合同要看哪些条款](rights/劳动合同要看哪些条款.md)
+- [被欠薪与劳动仲裁](rights/被欠薪与劳动仲裁.md)
+- [遇到纠纷找谁：求助顺序](rights/遇到纠纷找谁.md)
+
 ## 工具、案例与操作手册
 
 `docs/tools/`（31 份表格模板）、`docs/cases/`（12 个完整案例）与 `docs/playbooks/`（10 份操作手册）

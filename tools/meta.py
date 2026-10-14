@@ -139,6 +139,7 @@ SUBSECTIONS = [
     ("competitions", "竞赛专题"),
     ("tools", "工具与模板"),
     ("sources", "来源与核实"),
+    ("rights", "权益与制度"),
 ]
 SUBSECTION_LABELS = dict(SUBSECTIONS)
 SUBSECTION_ORDER = {k: i for i, (k, _) in enumerate(SUBSECTIONS)}
