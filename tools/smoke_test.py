@@ -132,6 +132,22 @@ def navstate_case() -> dict | None:
             "sibling_route": second["route"], "sibling_id": second["id"]}
 
 
+def print_case() -> dict:
+    """打印/导出用例：挑一个条目较多的分册页，验证三种范围与打印区。"""
+    idx = json.loads((SITE / "data" / "index.json").read_text(encoding="utf-8"))
+    best = None
+    for d in idx.get("docs", []):
+        loc = d.get("location") or ""
+        if not loc.startswith("book/15-") and not loc.startswith("book/07-"):
+            continue
+        n = len([e for e in idx.get("entries", []) if e.get("location") == loc])
+        if n >= 2 and (best is None or n > best[1]):
+            best = (loc, n)
+    if not best:
+        return {}
+    return {"route": "#/doc/" + best[0]}
+
+
 def nav_cases() -> list[dict]:
     """把 Canonical IA 路径换成（路径, 路由, entry_id），供浏览器用例使用。"""
     import json as _json
@@ -582,6 +598,53 @@ PROBE = r"""
       }
     }
 
+    if (mode === "printdoc") {
+      // 导出 PDF：菜单、三种范围、打印区与打印类名
+      var PB = window.__PRINT_CASE__ || null;
+      if (!PB) { ok("打印用例已配置", false, "缺少 PRINT_CASE"); }
+      else {
+        location.hash = PB.route;
+        await wait(900);
+        var btn = document.getElementById("printBtn");
+        ok("顶栏有导出按钮", !!btn, "printBtn");
+        var menu = document.getElementById("printMenu");
+        var realPrint = window.print;
+        var printed = 0;
+        window.print = function () { printed++; };
+        btn.click();
+        await wait(150);
+        ok("菜单展开", !!menu && !menu.hidden && menu.children.length >= 4,
+           menu ? ("children=" + menu.children.length) : "缺少菜单");
+        ok("菜单里有三种范围", !!menu && menu.textContent.indexOf("这一篇") >= 0 &&
+           menu.textContent.indexOf("这一页") >= 0 && menu.textContent.indexOf("整个章节") >= 0,
+           menu ? menu.textContent.slice(0, 40) : "");
+        // 导出「这一页」
+        menu.children[1].click();
+        await wait(400);
+        var root = document.getElementById("printRoot");
+        ok("生成了打印区", !!root, "printRoot");
+        ok("打印区含封面", !!root && !!root.querySelector(".print-cover"),
+           root ? root.className : "缺少 printRoot");
+        ok("打印区含条目", !!root && root.querySelectorAll("section.entry").length >= 1,
+           root ? ("entries=" + root.querySelectorAll("section.entry").length) : "");
+        ok("调用了打印", printed >= 1, "printed=" + printed);
+        ok("标记了 printing 状态", document.body.classList.contains("printing"), "classList");
+        ok("屏幕上打印区不可见", getComputedStyle(root).display === "none",
+           root ? getComputedStyle(root).display : "");
+        // 导出「整个章节」
+        document.body.classList.remove("printing");
+        root.innerHTML = "";
+        window.__ohExportPdf("chapter", { noPrint: true, onReady: function (info) {
+          var n = document.getElementById("printRoot").querySelectorAll(".print-doc").length;
+          ok("整章导出含多页", n >= 2, "print-doc=" + n + " 期望=" + info.count);
+          ok("整章导出有分页样式类", !!document.querySelector("#printRoot .print-doc[data-location]"), "data-location");
+        }});
+        await wait(1200);
+        ok("打印区已可清理", typeof window.__ohExportPdf === "function", "hook");
+        window.print = realPrint;
+      }
+    }
+
     document.getElementById("smoke").textContent = "@@SMOKE@@" + JSON.stringify(results) + "@@END@@";
   }
 
@@ -659,6 +722,10 @@ def main() -> int:
     probe = probe.replace("window.__NAVSTATE_CASE__", json.dumps(ncase, ensure_ascii=False))
     var_entries_by_id = json.dumps({e["id"]: e for e in INDEX_JSON["entries"]}, ensure_ascii=False)
     probe = probe.replace("window.__ENTRIES_BY_ID__", var_entries_by_id)
+    pcase = print_case()
+    if pcase:
+        HASHES["printdoc"] = pcase["route"].lstrip("#")
+    probe = probe.replace("window.__PRINT_CASE__", json.dumps(pcase, ensure_ascii=False))
     tcases = toc_cases()
     if tcases:
         HASHES["toc"] = tcases[0]["route"].lstrip("#")
@@ -678,10 +745,11 @@ def main() -> int:
                                   ("来源与更新折叠", "1440,1400", "sources"),
                                   ("滚动跟随当前条目", "1440,1400", "scroll"),
                                   ("左栏导航状态", "1440,1400", "navstate"),
+                                  ("导出 PDF", "1440,1400", "printdoc"),
                                   ("移动端", "500,1000", "mobile")):
-            budget = 45000 if mode in ("nav", "toc", "sources", "scroll") else 8000
+            budget = 45000 if mode in ("nav", "toc", "sources", "scroll", "printdoc") else 8000
             # toc 模式逐条目切换页面，真实耗时远高于其他模式
-            real_timeout = 420 if mode == "toc" else (300 if mode in ("nav", "scroll", "sources", "navstate") else 90)
+            real_timeout = 420 if mode == "toc" else (300 if mode in ("nav", "scroll", "sources", "navstate", "printdoc") else 90)
             results = run_case(chrome, base, size, mode, budget, real_timeout)
             if results and all("超时" in r["name"] for r in results):
                 print(f"  （{label}：首次超时，重试一次）", flush=True)

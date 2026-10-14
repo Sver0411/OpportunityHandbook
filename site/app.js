@@ -398,6 +398,363 @@
     }
   }
 
+
+  // ------------------------------------------------------------ 导出 PDF
+  //
+  // 用浏览器自带的打印管线导出：排版就是页面本身的排版（可选中、可检索、字体正确），
+  // 不引入任何第三方库。按钮只做三件事：准备打印区 → 调 window.print() → 清理。
+  //
+  // 三种范围：
+  //   entry   当前这一篇（右侧目录指向的那个条目）
+  //   doc     当前这一页（一个分册页里的全部条目）
+  //   chapter 整个章节（左栏同一章下的所有分册，按导航顺序拼接）
+
+  var PRINT_KINDS = {
+    entry: "这一篇",
+    doc: "这一页",
+    chapter: "整个章节",
+    book: "整本手册"
+  };
+
+  var printBtn = document.getElementById("printBtn");
+  var printMenu = document.getElementById("printMenu");
+  var printRoot = null;
+
+  function ensurePrintRoot() {
+    if (!printRoot) {
+      printRoot = document.createElement("div");
+      printRoot.id = "printRoot";
+      document.body.appendChild(printRoot);
+    }
+    return printRoot;
+  }
+
+  function clearPrintRoot() {
+    if (printRoot) { printRoot.innerHTML = ""; }
+    document.body.classList.remove("printing");
+  }
+
+  function siteUrl(hash) {
+    try {
+      var u = new URL(window.location.href);
+      u.hash = hash || "";
+      return u.href;
+    } catch (e) { return window.location.href; }
+  }
+
+  function today() {
+    var d = new Date();
+    function p(n) { return (n < 10 ? "0" : "") + n; }
+    return d.getFullYear() + "-" + p(d.getMonth() + 1) + "-" + p(d.getDate());
+  }
+
+  // 打印内容：去掉交互物（上一页/下一页、按钮、跳转图标的空链接）
+  function printableDoc(docEl) {
+    var clone = docEl.cloneNode(true);
+    Array.prototype.forEach.call(clone.querySelectorAll(".doc-nav, button, .notice-actions"), function (n) {
+      n.parentNode.removeChild(n);
+    });
+    Array.prototype.forEach.call(clone.querySelectorAll("a[href^='#/'], a[href^='#']"), function (a) {
+      // 站内链接在 PDF 里没用，去掉下划线样式但保留文字
+      a.removeAttribute("href");
+    });
+    return clone;
+  }
+
+  // 站内 href → 正文 location（与 prepare() 里的 longest-prefix 匹配同规则）
+  function locFromHref(href) {
+    var raw = String(href || "").replace(/^#\/doc\//, "");
+    if (!raw) return "";
+    for (var i = 0; i < state.locations.length; i++) {
+      var loc = state.locations[i];
+      if (raw === loc || raw.indexOf(loc + "/") === 0) return loc;
+    }
+    return "";
+  }
+
+  // 文档所在章节：在左栏树里找到包含它的那一章
+  function chapterNodeFor(location) {
+    var nav = (state.index && state.index.nav) || [];
+    function contains(node) {
+      if (locFromHref(node.href) === location) return true;
+      var kids = node.children || [];
+      for (var i = 0; i < kids.length; i++) { if (contains(kids[i])) return true; }
+      return false;
+    }
+    for (var i = 0; i < nav.length; i++) { if (contains(nav[i])) return nav[i]; }
+    return null;
+  }
+
+  // 收集某章节下所有正文页（按导航顺序，去重）
+  function chapterDocs(node) {
+    var seen = {}, out = [];
+    function walk(n) {
+      var loc = locFromHref(n.href);
+      if (loc && !seen[loc]) { seen[loc] = 1; out.push(loc); }
+      (n.children || []).forEach(walk);
+    }
+    walk(node);
+    return out;
+  }
+
+  // 整本导出：按左栏顺序收集所有正文页，并生成二级结构（章节 → 页面）用于目录
+  function wholeBookOutline() {
+    var nav = (state.index && state.index.nav) || [];
+    var seen = {}, chapters = [];
+    nav.forEach(function (top) {
+      var pages = [];
+      (function walk(n) {
+        var loc = locFromHref(n.href);
+        if (loc && !seen[loc]) { seen[loc] = 1; pages.push(loc); }
+        (n.children || []).forEach(walk);
+      })(top);
+      if (pages.length) chapters.push({ title: top.title, pages: pages });
+    });
+    return chapters;
+  }
+
+  function bookOutlineEntries() {
+    var out = [];
+    wholeBookOutline().forEach(function (ch) {
+      ch.pages.forEach(function (loc) { out.push(loc); });
+    });
+    return out;
+  }
+
+  function contentsFor(chapters) {
+    var wrap = el("section", { class: "print-doc print-toc" });
+    wrap.appendChild(el("h1", { text: "目录" }));
+    chapters.forEach(function (ch) {
+      var block = el("div", { class: "print-toc-chapter" });
+      block.appendChild(el("h2", { text: ch.title }));
+      var ul = el("ul");
+      ch.pages.forEach(function (loc) {
+        var meta = state.byLocation[loc] || {};
+        ul.appendChild(el("li", { text: meta.title || loc }));
+      });
+      block.appendChild(ul);
+      wrap.appendChild(block);
+    });
+    return wrap;
+  }
+
+  function coverFor(kind, title, sub, location) {
+    var cover = el("section", { class: "print-cover" });
+    cover.appendChild(el("p", { class: "print-kicker", text: "机会手册 · OpportunityHandbook" }));
+    cover.appendChild(el("h1", { text: title }));
+    if (sub) cover.appendChild(el("p", { class: "print-sub", text: sub }));
+    var dl = el("dl");
+    dl.appendChild(el("dt", { text: "范围" }));
+    dl.appendChild(el("dd", { text: PRINT_KINDS[kind] || kind }));
+    dl.appendChild(el("dt", { text: "来源" }));
+    dl.appendChild(el("dd", { text: siteUrl("#/doc/" + location) }));
+    dl.appendChild(el("dt", { text: "导出日期" }));
+    dl.appendChild(el("dd", { text: today() }));
+    dl.appendChild(el("dt", { text: "授权" }));
+    dl.appendChild(el("dd", { text: "正文 CC BY 4.0；工具与站点代码 MIT" }));
+    cover.appendChild(dl);
+    return cover;
+  }
+
+  function bookCover(chapters, pageCount) {
+    var cover = el("section", { class: "print-cover print-cover-book" });
+    cover.appendChild(el("p", { class: "print-kicker", text: "OpportunityHandbook" }));
+    cover.appendChild(el("h1", { text: "机会手册" }));
+    cover.appendChild(el("p", { class: "print-sub", text: "升学、求职、科研、转行：每条路能换回什么、要付出什么、依据是什么" }));
+    var dl = el("dl");
+    function row(k, v) { dl.appendChild(el("dt", { text: k })); dl.appendChild(el("dd", { text: v })); }
+    row("内容", chapters.length + " 个章节 · " + pageCount + " 个页面");
+    row("版本", "导出日期 " + today());
+    row("在线阅读", siteUrl("#/"));
+    row("授权", "正文 CC BY 4.0；工具与站点代码 MIT");
+    row("说明", "判断与来源分开标注；制度性内容附官方入口，可在原站点核对最新口径。");
+    cover.appendChild(dl);
+    return cover;
+  }
+
+  function entryTitleOf(section) {
+    var h = section.querySelector("h3");
+    return h ? h.textContent.trim() : (section.id || "");
+  }
+
+  function makedocBlock(docEl, location) {
+    var wrap = el("section", { class: "print-doc", "data-location": location });
+    wrap.appendChild(printableDoc(docEl));
+    return wrap;
+  }
+
+  function buildPrintArea(kind, routeInfo) {
+    var docEl = main.querySelector(".doc");
+    if (!docEl) return null;
+    var root = ensurePrintRoot();
+    root.innerHTML = "";
+
+    var docLocation = routeInfo.location;
+    var docMeta = state.byLocation[docLocation] || {};
+    var entryId = routeInfo.entryId || "";
+
+    if (kind === "entry") {
+      var section = entryId
+        ? docEl.querySelector('section.entry[id="' + CSS.escape(entryId) + '"]')
+        : docEl.querySelector("section.entry");
+      if (!section) return null;
+      var title = entryTitleOf(section);
+      root.appendChild(coverFor(kind, title, docMeta.title || "", docLocation));
+      var block = el("section", { class: "print-doc", "data-entry": section.id || "" });
+      block.appendChild(printableDoc(section));
+      root.appendChild(block);
+      return { title: title, count: 1 };
+    }
+
+    if (kind === "doc") {
+      var count = docEl.querySelectorAll("section.entry").length;
+      root.appendChild(coverFor(kind, docMeta.title || document.title, "", docLocation));
+      root.appendChild(makedocBlock(docEl, docLocation));
+      return { title: docMeta.title || "", count: count };
+    }
+
+    if (kind === "book") {
+      var outline = wholeBookOutline();
+      var all = bookOutlineEntries();
+      var total = all.length;
+      root.appendChild(bookCover(outline, total));
+      root.appendChild(contentsFor(outline));
+      var status = el("p", { class: "print-progress", text: "正在准备 " + total + " 个页面……" });
+      root.appendChild(status);
+      var jobs = [];
+      var done = 0;
+      all.forEach(function (loc) {
+        if (loc === docLocation) {
+          var localBlock = makedocBlock(docEl, loc);
+          localBlock.setAttribute("data-order", String(all.indexOf(loc)));
+          root.appendChild(localBlock);
+          done += 1;
+          return;
+        }
+        jobs.push(fetchContent(loc).then(function (html) {
+          var holder = document.createElement("div");
+          holder.innerHTML = html;
+          var remoteDoc = holder.querySelector(".doc");
+          if (remoteDoc) {
+            var b = makedocBlock(remoteDoc, loc);
+            b.setAttribute("data-order", String(all.indexOf(loc)));
+            root.appendChild(b);
+          }
+          done += 1;
+          status.textContent = "正在准备 " + done + "/" + total + " 个页面……";
+        }).catch(function () { done += 1; }));
+      });
+      // 顺序：上面是并发取回，这里按 data-order 重排，保证与左栏一致
+      var ordered = Promise.all(jobs).then(function () {
+        var blocks = Array.prototype.slice.call(root.querySelectorAll(".print-doc[data-order]"));
+        blocks.sort(function (a, b) { return Number(a.getAttribute("data-order")) - Number(b.getAttribute("data-order")); });
+        blocks.forEach(function (b) { root.appendChild(b); });
+        if (status.parentNode) status.parentNode.removeChild(status);
+      });
+      return { title: "机会手册（全书）", count: total, pending: ordered };
+    }
+
+    // 整个章节：逐页取回内容并拼接
+    var chapter = chapterNodeFor(docLocation);
+    if (!chapter) return null;
+    var locations = chapterDocs(chapter);
+    root.appendChild(coverFor(kind, chapter.title, docMeta.title || "", docLocation));
+    var pending = [];
+    locations.forEach(function (loc) {
+      if (loc === docLocation) {
+        root.appendChild(makedocBlock(docEl, loc));
+        return;
+      }
+      pending.push(fetchContent(loc).then(function (html) {
+        var holder = document.createElement("div");
+        holder.innerHTML = html;
+        var remoteDoc = holder.querySelector(".doc");
+        if (remoteDoc) root.appendChild(makedocBlock(remoteDoc, loc));
+      }).catch(function () { /* 取不到就跳过这一页，不阻塞导出 */ }));
+    });
+    return { title: chapter.title, count: locations.length, pending: Promise.all(pending) };
+  }
+
+  // 自动导出（?export=…）：等正文渲染完再准备打印区，只做一次
+  function maybeAutoExport() {
+    if (!state.autoExport || state.autoExported) return;
+    state.autoExported = true;
+    exportPdf(state.autoExport, { noPrint: true });
+  }
+
+  function exportPdf(kind, opts) {
+    opts = opts || {};
+    var routeInfo = state.docRoute || {};
+    if (!routeInfo.location) return;
+    var built = buildPrintArea(kind, routeInfo);
+    if (!built) { closePrintMenu(); return; }
+    var finish = function () {
+      document.body.classList.add("printing");
+      closePrintMenu();
+      if (!opts.noPrint) { window.print(); }
+      if (opts.onReady) { opts.onReady(built); }
+    };
+    if (built.pending) { built.pending.then(finish); } else { finish(); }
+  }
+
+  function menuItem(kind, label, hint) {
+    var b = el("button", { type: "button", role: "menuitemradio" });
+    b.appendChild(el("span", { text: label }));
+    if (hint) b.appendChild(el("small", { text: hint }));
+    b.addEventListener("click", function () { exportPdf(kind); });
+    return b;
+  }
+
+  function openPrintMenu() {
+    var docEl = main.querySelector(".doc");
+    var hasEntry = !!(docEl && docEl.querySelector("section.entry"));
+    var chapter = hasEntry ? chapterNodeFor((state.docRoute || {}).location) : null;
+    clear(printMenu);
+    printMenu.appendChild(menuItem("entry", "导出这一篇", "只导出右侧目录指向的条目"));
+    printMenu.appendChild(menuItem("doc", "导出这一页", "当前分册页里的全部条目"));
+    var chapterBtn = menuItem("chapter", "导出整个章节", chapter ? "左栏同一章下的所有分册" : "当前页面没有上级章节");
+    if (!chapter) chapterBtn.setAttribute("disabled", "disabled");
+    printMenu.appendChild(chapterBtn);
+    var bookBtn = menuItem("book", "导出整本手册", "一章不落，自动加封面与目录（页面较多，需等一会儿）");
+    printMenu.appendChild(bookBtn);
+    printMenu.appendChild(el("hr"));
+    var tip = el("button", { type: "button", role: "menuitem", disabled: "disabled" });
+    tip.appendChild(el("small", { text: "在打印对话框里选择「另存为 PDF」保存。" }));
+    tip.appendChild(el("small", { text: "要页码：勾选打印对话框里的「页眉和页脚」。" }));
+    printMenu.appendChild(tip);
+    printMenu.hidden = false;
+    printBtn.setAttribute("aria-expanded", "true");
+  }
+
+  function closePrintMenu() {
+    printMenu.hidden = true;
+    printBtn.setAttribute("aria-expanded", "false");
+  }
+
+  // 供自动化测试与「打印特定范围」的深链使用：window.__ohExportPdf("doc", { noPrint: true })
+  window.__ohExportPdf = function (kind, opts) {
+    return new Promise(function (resolve) {
+      exportPdf(kind, Object.assign({}, opts || {}, { onReady: function (info) { resolve(info); } }));
+    });
+  };
+
+  function bindPrint() {
+    if (!printBtn) return;
+    printBtn.addEventListener("click", function (ev) {
+      ev.stopPropagation();
+      if (printMenu.hidden) openPrintMenu(); else closePrintMenu();
+    });
+    document.addEventListener("click", function (ev) {
+      if (printMenu.hidden) return;
+      if (!printMenu.contains(ev.target) && ev.target !== printBtn) closePrintMenu();
+    });
+    document.addEventListener("keydown", function (ev) {
+      if (ev.key === "Escape" && !printMenu.hidden) closePrintMenu();
+    });
+    window.addEventListener("afterprint", clearPrintRoot);
+  }
+
+
   // ------------------------------------------------------------ 文档视图
 
   function fetchContent(location) {
@@ -411,6 +768,8 @@
   }
 
   function renderDoc(location, entryId) {
+    // 供「导出 PDF」使用：这里是已经解析好的最终 location 与 entryId
+    state.docRoute = { location: location, entryId: entryId || "" };
     var item = state.byLocation[location];
     markActive("#/doc/" + location + (entryId ? "/" + entryId : ""));
     document.title = (item ? item.title + " · " : "") + "机会手册";
@@ -428,6 +787,7 @@
       buildDocNav(location);
       focusTarget(entryId);
       watchEntries(location);
+      maybeAutoExport();
     }).catch(function (err) {
       clear(main);
       main.appendChild(el("p", { class: "empty", text: "内容加载失败（" + err.message + "）。如果是在本地打开，请用 http 方式访问，例如：python3 -m http.server 8000 --directory site" }));
@@ -958,6 +1318,12 @@
         prepare();
         buildNav();
         bind();
+        bindPrint();
+        // ?export=doc|entry|chapter：打开即准备好打印区（供命令行导出与打印预览链接）
+        try {
+          var auto = (new URLSearchParams(location.search).get("export") || "").toLowerCase();
+          if (PRINT_KINDS[auto]) state.autoExport = auto;
+        } catch (e) {}
         if (read(NAV_KEY) === "collapsed" && !isMobile()) applyCollapsed(true);
         route();
       });
