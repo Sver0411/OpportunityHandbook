@@ -5576,6 +5576,30 @@
             "entry_id": "trap-survivor-advice"
           },
           "nav_id": "14-10"
+        },
+        {
+          "title": "付费理财课与「带你投资」",
+          "target": {
+            "type": "entry",
+            "entry_id": "trap-money-course"
+          },
+          "nav_id": "14-11"
+        },
+        {
+          "title": "体检套餐升级与「免费加项」",
+          "target": {
+            "type": "entry",
+            "entry_id": "trap-checkup-upsell"
+          },
+          "nav_id": "14-12"
+        },
+        {
+          "title": "付费法律咨询与「包追回」",
+          "target": {
+            "type": "entry",
+            "entry_id": "trap-paid-legal-service"
+          },
+          "nav_id": "14-13"
         }
       ],
       "nav_id": "14"

@@ -663,6 +663,9 @@ TREE = """
   信息差、机会焦虑与从众 @e:trap-information-asymmetry
   把 AI 当替身 @e:trap-ai-shortcut
   只听得建议、拿不到资源 @e:trap-survivor-advice
+  付费理财课与「带你投资」 @e:trap-money-course
+  体检套餐升级与「免费加项」 @e:trap-checkup-upsell
+  付费法律咨询与「包追回」 @e:trap-paid-legal-service
 15 钱与生活基本盘
   拿到钱的第一年
     第一个月的工资怎么分配 @e:money-first-salary-split
