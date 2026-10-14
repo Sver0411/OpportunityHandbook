@@ -633,6 +633,10 @@ TREE = """
     第一个月的工资怎么分配 @e:money-first-salary-split
     应急金该留多少 @e:money-emergency-fund
     钱不知道去哪了怎么办 @e:money-spending-audit
+  社保、公积金与税
+    社保到底保什么 @e:money-social-insurance
+    公积金怎么用 @e:money-housing-fund
+    个税与专项附加扣除怎么填 @e:money-tax-basics
 16 身体与心理的可持续性
 17 内容地图
 """

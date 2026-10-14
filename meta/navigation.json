@@ -5313,6 +5313,41 @@
             "anchor": ""
           },
           "nav_id": "15-01"
+        },
+        {
+          "title": "社保、公积金与税",
+          "children": [
+            {
+              "title": "社保到底保什么",
+              "target": {
+                "type": "entry",
+                "entry_id": "money-social-insurance"
+              },
+              "nav_id": "15-02-01"
+            },
+            {
+              "title": "公积金怎么用",
+              "target": {
+                "type": "entry",
+                "entry_id": "money-housing-fund"
+              },
+              "nav_id": "15-02-02"
+            },
+            {
+              "title": "个税与专项附加扣除怎么填",
+              "target": {
+                "type": "entry",
+                "entry_id": "money-tax-basics"
+              },
+              "nav_id": "15-02-03"
+            }
+          ],
+          "target": {
+            "type": "doc",
+            "location": "book/15-钱与生活基本盘/02-社保公积金与税",
+            "anchor": ""
+          },
+          "nav_id": "15-02"
         }
       ],
       "nav_id": "15"
