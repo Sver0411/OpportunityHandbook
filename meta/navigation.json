@@ -5384,6 +5384,41 @@
             "anchor": ""
           },
           "nav_id": "15-02"
+        },
+        {
+          "title": "保险与风险",
+          "children": [
+            {
+              "title": "该买与不该买的保险",
+              "target": {
+                "type": "entry",
+                "entry_id": "money-insurance-basics"
+              },
+              "nav_id": "15-03-01"
+            },
+            {
+              "title": "负债与征信：先还哪一笔",
+              "target": {
+                "type": "entry",
+                "entry_id": "money-debt-and-credit"
+              },
+              "nav_id": "15-03-02"
+            },
+            {
+              "title": "大额支出怎么决策",
+              "target": {
+                "type": "entry",
+                "entry_id": "money-big-purchase"
+              },
+              "nav_id": "15-03-03"
+            }
+          ],
+          "target": {
+            "type": "doc",
+            "location": "book/15-钱与生活基本盘/03-保险与风险",
+            "anchor": ""
+          },
+          "nav_id": "15-03"
         }
       ],
       "nav_id": "15"

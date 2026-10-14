@@ -641,6 +641,10 @@ TREE = """
     社保到底保什么 @e:money-social-insurance
     公积金怎么用 @e:money-housing-fund
     个税与专项附加扣除怎么填 @e:money-tax-basics
+  保险与风险
+    该买与不该买的保险 @e:money-insurance-basics
+    负债与征信：先还哪一笔 @e:money-debt-and-credit
+    大额支出怎么决策 @e:money-big-purchase
 16 身体与心理的可持续性
 17 内容地图
 """
