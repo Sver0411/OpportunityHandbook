@@ -21,6 +21,3 @@ Thumbs.db
 
 # 工作区数据（本地会话/记忆，不随仓库发布）
 .workbuddy/
-
-# 命令行导出的 PDF（可用 tools/export_pdf.py 重新生成）
-dist/
