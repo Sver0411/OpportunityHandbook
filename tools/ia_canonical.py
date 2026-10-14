@@ -64,6 +64,10 @@ TREE = """
   家庭沟通与支持 @d:book/01-先决定下一步往哪里走/07-家庭沟通与支持
     怎么和父母沟通升学与职业选择 @e:family-talk
     家里需要你出钱时怎么安排 @e:care-family-budget
+  不走常规的几条路 @d:book/01-先决定下一步往哪里走/08-不走常规的几条路
+    手艺人自己接活：从雇员到接活 @e:paths-trades-own-business
+    返乡与县域生活 @e:paths-return-home
+    公益与公共服务方向 @e:paths-public-interest
   给自己保留退路
     为什么不要过早把路线锁死 @n:optionality-why-not-lock
     哪些能力可以跨路线使用 @n:optionality-transferable

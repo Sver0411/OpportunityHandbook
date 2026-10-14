@@ -439,6 +439,41 @@
           "nav_id": "01-06"
         },
         {
+          "title": "不走常规的几条路",
+          "target": {
+            "type": "doc",
+            "location": "book/01-先决定下一步往哪里走/08-不走常规的几条路",
+            "anchor": ""
+          },
+          "children": [
+            {
+              "title": "手艺人自己接活：从雇员到接活",
+              "target": {
+                "type": "entry",
+                "entry_id": "paths-trades-own-business"
+              },
+              "nav_id": "01-07-01"
+            },
+            {
+              "title": "返乡与县域生活",
+              "target": {
+                "type": "entry",
+                "entry_id": "paths-return-home"
+              },
+              "nav_id": "01-07-02"
+            },
+            {
+              "title": "公益与公共服务方向",
+              "target": {
+                "type": "entry",
+                "entry_id": "paths-public-interest"
+              },
+              "nav_id": "01-07-03"
+            }
+          ],
+          "nav_id": "01-07"
+        },
+        {
           "title": "给自己保留退路",
           "children": [
             {
@@ -447,7 +482,7 @@
                 "type": "entry",
                 "entry_id": "optionality-why-not-lock"
               },
-              "nav_id": "01-07-01"
+              "nav_id": "01-08-01"
             },
             {
               "title": "哪些能力可以跨路线使用",
@@ -455,7 +490,7 @@
                 "type": "entry",
                 "entry_id": "optionality-transferable"
               },
-              "nav_id": "01-07-02"
+              "nav_id": "01-08-02"
             },
             {
               "title": "走错以后怎么切换",
@@ -463,7 +498,7 @@
                 "type": "entry",
                 "entry_id": "paths-switching-between-paths"
               },
-              "nav_id": "01-07-03"
+              "nav_id": "01-08-03"
             }
           ],
           "target": {
@@ -471,7 +506,7 @@
             "location": "book/01-先决定下一步往哪里走/05-给自己保留退路",
             "anchor": ""
           },
-          "nav_id": "01-07"
+          "nav_id": "01-08"
         }
       ],
       "nav_id": "01"
