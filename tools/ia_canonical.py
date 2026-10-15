@@ -640,6 +640,7 @@ TREE = """
   体检项目对照表 @d:docs/tools/体检项目对照表
   精力预算表 @d:docs/tools/精力预算表
   纠纷证据清单 @d:docs/tools/纠纷证据清单
+  岗位筛选表 @d:docs/tools/岗位筛选表
 
 12 完整案例
   Case：第一次做真正的项目 @d:docs/cases/第一次做真正项目
@@ -671,6 +672,7 @@ TREE = """
   Playbook：第一次做实验与记录 @d:docs/playbooks/第一次做实验
   Playbook：第一次核对合同与社保 @d:docs/playbooks/第一次核对合同与社保
   Playbook：第一次处理劳动争议 @d:docs/playbooks/第一次处理劳动争议
+  Playbook：第一次准备考公笔试 @d:docs/playbooks/第一次准备考公笔试
 
 14 避坑
   升学与留学 @e:trap-guaranteed-admission

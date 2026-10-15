@@ -5396,6 +5396,15 @@
             "anchor": ""
           },
           "nav_id": "11-35"
+        },
+        {
+          "title": "岗位筛选表",
+          "target": {
+            "type": "doc",
+            "location": "docs/tools/岗位筛选表",
+            "anchor": ""
+          },
+          "nav_id": "11-36"
         }
       ],
       "nav_id": "11"
@@ -5661,6 +5670,15 @@
             "anchor": ""
           },
           "nav_id": "13-12"
+        },
+        {
+          "title": "Playbook：第一次准备考公笔试",
+          "target": {
+            "type": "doc",
+            "location": "docs/playbooks/第一次准备考公笔试",
+            "anchor": ""
+          },
+          "nav_id": "13-13"
         }
       ],
       "nav_id": "13"
