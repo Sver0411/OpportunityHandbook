@@ -208,6 +208,41 @@
           "nav_id": "01-01"
         },
         {
+          "title": "给自己保留退路",
+          "children": [
+            {
+              "title": "为什么不要过早把路线锁死",
+              "target": {
+                "type": "entry",
+                "entry_id": "optionality-why-not-lock"
+              },
+              "nav_id": "01-02-01"
+            },
+            {
+              "title": "哪些能力可以跨路线使用",
+              "target": {
+                "type": "entry",
+                "entry_id": "optionality-transferable"
+              },
+              "nav_id": "01-02-02"
+            },
+            {
+              "title": "走错以后怎么切换",
+              "target": {
+                "type": "entry",
+                "entry_id": "paths-switching-between-paths"
+              },
+              "nav_id": "01-02-03"
+            }
+          ],
+          "target": {
+            "type": "doc",
+            "location": "book/01-先决定下一步往哪里走/05-给自己保留退路",
+            "anchor": ""
+          },
+          "nav_id": "01-02"
+        },
+        {
           "title": "选学校与选专业",
           "children": [
             {
@@ -216,7 +251,7 @@
                 "type": "entry",
                 "entry_id": "choose-school-vs-major"
               },
-              "nav_id": "01-02-01"
+              "nav_id": "01-03-01"
             },
             {
               "title": "城市要不要纳入选择",
@@ -224,7 +259,7 @@
                 "type": "entry",
                 "entry_id": "choose-city"
               },
-              "nav_id": "01-02-02"
+              "nav_id": "01-03-02"
             },
             {
               "title": "兴趣应该占多大比重",
@@ -232,7 +267,7 @@
                 "type": "entry",
                 "entry_id": "choose-interest-weight"
               },
-              "nav_id": "01-02-03"
+              "nav_id": "01-03-03"
             },
             {
               "title": "就业前景应该怎么看",
@@ -240,7 +275,7 @@
                 "type": "entry",
                 "entry_id": "choose-job-outlook"
               },
-              "nav_id": "01-02-04"
+              "nav_id": "01-03-04"
             },
             {
               "title": "高中选科怎么选",
@@ -248,7 +283,7 @@
                 "type": "entry",
                 "entry_id": "choose-highschool-subjects"
               },
-              "nav_id": "01-02-05"
+              "nav_id": "01-03-05"
             },
             {
               "title": "转专业",
@@ -256,7 +291,7 @@
                 "type": "entry",
                 "entry_id": "choose-change-major"
               },
-              "nav_id": "01-02-06"
+              "nav_id": "01-03-06"
             },
             {
               "title": "辅修与双学位",
@@ -264,7 +299,7 @@
                 "type": "entry",
                 "entry_id": "choose-minor-double-degree"
               },
-              "nav_id": "01-02-07"
+              "nav_id": "01-03-07"
             },
             {
               "title": "如果第一次选择不理想怎么办",
@@ -272,7 +307,7 @@
                 "type": "entry",
                 "entry_id": "choose-major-mismatch"
               },
-              "nav_id": "01-02-08"
+              "nav_id": "01-03-08"
             }
           ],
           "target": {
@@ -280,7 +315,7 @@
             "location": "book/01-先决定下一步往哪里走/02-选学校与选专业",
             "anchor": ""
           },
-          "nav_id": "01-02"
+          "nav_id": "01-03"
         },
         {
           "title": "专科与职业教育",
@@ -291,7 +326,7 @@
                 "type": "entry",
                 "entry_id": "vocational-outcomes"
               },
-              "nav_id": "01-03-01"
+              "nav_id": "01-04-01"
             },
             {
               "title": "专升本",
@@ -299,7 +334,7 @@
                 "type": "entry",
                 "entry_id": "study-zhuanshengben"
               },
-              "nav_id": "01-03-02"
+              "nav_id": "01-04-02"
             },
             {
               "title": "职业本科",
@@ -307,7 +342,7 @@
                 "type": "entry",
                 "entry_id": "vocational-undergraduate"
               },
-              "nav_id": "01-03-03"
+              "nav_id": "01-04-03"
             },
             {
               "title": "学徒制与技能路线",
@@ -315,7 +350,7 @@
                 "type": "entry",
                 "entry_id": "apprenticeship"
               },
-              "nav_id": "01-03-04"
+              "nav_id": "01-04-04"
             },
             {
               "title": "技能型职业的发展空间",
@@ -323,7 +358,7 @@
                 "type": "entry",
                 "entry_id": "trades-career-room"
               },
-              "nav_id": "01-03-05"
+              "nav_id": "01-04-05"
             },
             {
               "title": "中职与专科阶段有哪些资助",
@@ -331,7 +366,7 @@
                 "type": "entry",
                 "entry_id": "vocational-subsidy"
               },
-              "nav_id": "01-03-06"
+              "nav_id": "01-04-06"
             },
             {
               "title": "中职毕业后的升学路怎么走",
@@ -339,7 +374,7 @@
                 "type": "entry",
                 "entry_id": "vocational-exam-path"
               },
-              "nav_id": "01-03-07"
+              "nav_id": "01-04-07"
             }
           ],
           "target": {
@@ -347,7 +382,7 @@
             "location": "book/01-先决定下一步往哪里走/03-专科与职业教育",
             "anchor": ""
           },
-          "nav_id": "01-03"
+          "nav_id": "01-04"
         },
         {
           "title": "中职与专科阶段的探索与作品",
@@ -363,7 +398,7 @@
                 "type": "entry",
                 "entry_id": "vocational-explore"
               },
-              "nav_id": "01-04-01"
+              "nav_id": "01-05-01"
             },
             {
               "title": "中职与专科阶段能拿出什么作品",
@@ -371,10 +406,10 @@
                 "type": "entry",
                 "entry_id": "vocational-portfolio"
               },
-              "nav_id": "01-04-02"
+              "nav_id": "01-05-02"
             }
           ],
-          "nav_id": "01-04"
+          "nav_id": "01-05"
         },
         {
           "title": "家庭经济与教育成本",
@@ -385,7 +420,7 @@
                 "type": "entry",
                 "entry_id": "education-tuition-living"
               },
-              "nav_id": "01-05-01"
+              "nav_id": "01-06-01"
             },
             {
               "title": "奖助学金",
@@ -393,7 +428,7 @@
                 "type": "entry",
                 "entry_id": "funding-scholarship-system"
               },
-              "nav_id": "01-05-02"
+              "nav_id": "01-06-02"
             },
             {
               "title": "助学贷款",
@@ -401,7 +436,7 @@
                 "type": "entry",
                 "entry_id": "funding-student-loan"
               },
-              "nav_id": "01-05-03"
+              "nav_id": "01-06-03"
             },
             {
               "title": "为教育投入多少钱才合理",
@@ -409,7 +444,7 @@
                 "type": "entry",
                 "entry_id": "education-cost-budget"
               },
-              "nav_id": "01-05-04"
+              "nav_id": "01-06-04"
             }
           ],
           "target": {
@@ -417,7 +452,7 @@
             "location": "book/01-先决定下一步往哪里走/04-家庭经济与教育成本",
             "anchor": ""
           },
-          "nav_id": "01-05"
+          "nav_id": "01-06"
         },
         {
           "title": "家庭沟通与支持",
@@ -433,7 +468,7 @@
                 "type": "entry",
                 "entry_id": "family-talk"
               },
-              "nav_id": "01-06-01"
+              "nav_id": "01-07-01"
             },
             {
               "title": "家里需要你出钱时怎么安排",
@@ -441,10 +476,10 @@
                 "type": "entry",
                 "entry_id": "care-family-budget"
               },
-              "nav_id": "01-06-02"
+              "nav_id": "01-07-02"
             }
           ],
-          "nav_id": "01-06"
+          "nav_id": "01-07"
         },
         {
           "title": "不走常规的几条路",
@@ -460,7 +495,7 @@
                 "type": "entry",
                 "entry_id": "paths-trades-own-business"
               },
-              "nav_id": "01-07-01"
+              "nav_id": "01-08-01"
             },
             {
               "title": "返乡与县域生活",
@@ -468,7 +503,7 @@
                 "type": "entry",
                 "entry_id": "paths-return-home"
               },
-              "nav_id": "01-07-02"
+              "nav_id": "01-08-02"
             },
             {
               "title": "公益与公共服务方向",
@@ -476,10 +511,10 @@
                 "type": "entry",
                 "entry_id": "paths-public-interest"
               },
-              "nav_id": "01-07-03"
+              "nav_id": "01-08-03"
             }
           ],
-          "nav_id": "01-07"
+          "nav_id": "01-08"
         },
         {
           "title": "没有资源时怎么起步",
@@ -495,7 +530,7 @@
                 "type": "entry",
                 "entry_id": "first-gen-navigate"
               },
-              "nav_id": "01-08-01"
+              "nav_id": "01-09-01"
             },
             {
               "title": "没有资源时怎么积累关系",
@@ -503,10 +538,10 @@
                 "type": "entry",
                 "entry_id": "build-social-capital"
               },
-              "nav_id": "01-08-02"
+              "nav_id": "01-09-02"
             }
           ],
-          "nav_id": "01-08"
+          "nav_id": "01-09"
         },
         {
           "title": "考公与考编怎么准备",
@@ -522,7 +557,7 @@
                 "type": "entry",
                 "entry_id": "exam-job-table"
               },
-              "nav_id": "01-09-01"
+              "nav_id": "01-10-01"
             },
             {
               "title": "从报名到上岸的完整流程",
@@ -530,7 +565,7 @@
                 "type": "entry",
                 "entry_id": "exam-apply-to-onboard"
               },
-              "nav_id": "01-09-02"
+              "nav_id": "01-10-02"
             },
             {
               "title": "应届身份与基层年限怎么算",
@@ -538,10 +573,10 @@
                 "type": "entry",
                 "entry_id": "exam-fresh-grad-and-years"
               },
-              "nav_id": "01-09-03"
+              "nav_id": "01-10-03"
             }
           ],
-          "nav_id": "01-09"
+          "nav_id": "01-10"
         },
         {
           "title": "笔试：行测与申论",
@@ -557,7 +592,7 @@
                 "type": "entry",
                 "entry_id": "exam-xingce"
               },
-              "nav_id": "01-10-01"
+              "nav_id": "01-11-01"
             },
             {
               "title": "申论怎么准备",
@@ -565,10 +600,10 @@
                 "type": "entry",
                 "entry_id": "exam-shenlun"
               },
-              "nav_id": "01-10-02"
+              "nav_id": "01-11-02"
             }
           ],
-          "nav_id": "01-10"
+          "nav_id": "01-11"
         },
         {
           "title": "面试与后续环节",
@@ -584,7 +619,7 @@
                 "type": "entry",
                 "entry_id": "exam-structured-interview"
               },
-              "nav_id": "01-11-01"
+              "nav_id": "01-12-01"
             },
             {
               "title": "无领导小组讨论怎么应对",
@@ -592,7 +627,7 @@
                 "type": "entry",
                 "entry_id": "exam-leaderless-discussion"
               },
-              "nav_id": "01-11-02"
+              "nav_id": "01-12-02"
             },
             {
               "title": "体检与考察（政审）要注意什么",
@@ -600,10 +635,10 @@
                 "type": "entry",
                 "entry_id": "exam-medical-and-review"
               },
-              "nav_id": "01-11-03"
+              "nav_id": "01-12-03"
             }
           ],
-          "nav_id": "01-11"
+          "nav_id": "01-12"
         },
         {
           "title": "事业单位与基层项目",
@@ -619,7 +654,7 @@
                 "type": "entry",
                 "entry_id": "exam-public-institution"
               },
-              "nav_id": "01-12-01"
+              "nav_id": "01-13-01"
             },
             {
               "title": "三支一扶、西部计划、特岗教师：政策怎么核",
@@ -627,10 +662,10 @@
                 "type": "entry",
                 "entry_id": "exam-grassroots-programs"
               },
-              "nav_id": "01-12-02"
+              "nav_id": "01-13-02"
             }
           ],
-          "nav_id": "01-12"
+          "nav_id": "01-13"
         },
         {
           "title": "专升本怎么准备",
@@ -646,7 +681,7 @@
                 "type": "entry",
                 "entry_id": "zsb-path-choice"
               },
-              "nav_id": "01-13-01"
+              "nav_id": "01-14-01"
             },
             {
               "title": "专升本报名到录取的完整流程",
@@ -654,10 +689,10 @@
                 "type": "entry",
                 "entry_id": "zsb-apply-process"
               },
-              "nav_id": "01-13-02"
+              "nav_id": "01-14-02"
             }
           ],
-          "nav_id": "01-13"
+          "nav_id": "01-14"
         },
         {
           "title": "专科生的上升通道",
@@ -673,7 +708,7 @@
                 "type": "entry",
                 "entry_id": "vocational-pathways"
               },
-              "nav_id": "01-14-01"
+              "nav_id": "01-15-01"
             },
             {
               "title": "怎么按现在的分数和状态排序",
@@ -681,44 +716,9 @@
                 "type": "entry",
                 "entry_id": "zsb-channel-sorting"
               },
-              "nav_id": "01-14-02"
-            }
-          ],
-          "nav_id": "01-14"
-        },
-        {
-          "title": "给自己保留退路",
-          "children": [
-            {
-              "title": "为什么不要过早把路线锁死",
-              "target": {
-                "type": "entry",
-                "entry_id": "optionality-why-not-lock"
-              },
-              "nav_id": "01-15-01"
-            },
-            {
-              "title": "哪些能力可以跨路线使用",
-              "target": {
-                "type": "entry",
-                "entry_id": "optionality-transferable"
-              },
               "nav_id": "01-15-02"
-            },
-            {
-              "title": "走错以后怎么切换",
-              "target": {
-                "type": "entry",
-                "entry_id": "paths-switching-between-paths"
-              },
-              "nav_id": "01-15-03"
             }
           ],
-          "target": {
-            "type": "doc",
-            "location": "book/01-先决定下一步往哪里走/05-给自己保留退路",
-            "anchor": ""
-          },
           "nav_id": "01-15"
         }
       ],
@@ -961,7 +961,7 @@
           "nav_id": "02-04"
         },
         {
-          "title": "语言",
+          "title": "英语与其他语言 · 判断层",
           "children": [
             {
               "title": "英语为什么仍然重要",
@@ -1686,7 +1686,7 @@
               "nav_id": "04-02-08"
             },
             {
-              "title": "复试",
+              "title": "复试要不要准备",
               "target": {
                 "type": "entry",
                 "entry_id": "study-second-round-interview"
@@ -1694,7 +1694,7 @@
               "nav_id": "04-02-09"
             },
             {
-              "title": "调剂",
+              "title": "调剂值不值得",
               "target": {
                 "type": "entry",
                 "entry_id": "study-transfer-adjustment"
@@ -1702,7 +1702,7 @@
               "nav_id": "04-02-10"
             },
             {
-              "title": "二战",
+              "title": "二战值不值得",
               "target": {
                 "type": "entry",
                 "entry_id": "study-retake-exam"
@@ -1885,7 +1885,7 @@
               "nav_id": "04-07-05"
             },
             {
-              "title": "推荐信",
+              "title": "留学申请推荐信",
               "target": {
                 "type": "entry",
                 "entry_id": "overseas-recommendation-letters"
@@ -2008,7 +2008,7 @@
               "nav_id": "04-08-08"
             },
             {
-              "title": "推荐信",
+              "title": "科研推荐信怎么写",
               "target": {
                 "type": "entry",
                 "entry_id": "research-recommendation-letter"
@@ -2830,69 +2830,10 @@
           "nav_id": "06-02"
         },
         {
-          "title": "工作后继续学习",
-          "children": [
-            {
-              "title": "技能还要不要继续学",
-              "target": {
-                "type": "entry",
-                "entry_id": "work-learn-skills"
-              },
-              "nav_id": "06-03-01"
-            },
-            {
-              "title": "工作后考证",
-              "target": {
-                "type": "entry",
-                "entry_id": "work-certificates"
-              },
-              "nav_id": "06-03-02"
-            },
-            {
-              "title": "工作后学语言",
-              "target": {
-                "type": "entry",
-                "entry_id": "work-learn-language"
-              },
-              "nav_id": "06-03-03"
-            },
-            {
-              "title": "工作后做个人项目",
-              "target": {
-                "type": "entry",
-                "entry_id": "work-side-project"
-              },
-              "nav_id": "06-03-04"
-            },
-            {
-              "title": "工作后做开源",
-              "target": {
-                "type": "entry",
-                "entry_id": "work-open-source"
-              },
-              "nav_id": "06-03-05"
-            },
-            {
-              "title": "工作后重新读书",
-              "target": {
-                "type": "entry",
-                "entry_id": "work-study-again"
-              },
-              "nav_id": "06-03-06"
-            }
-          ],
+          "title": "工作后的学习与外部投入",
           "target": {
             "type": "doc",
-            "location": "book/06-从新人到能独立负责/03-工作后继续学习",
-            "anchor": ""
-          },
-          "nav_id": "06-03"
-        },
-        {
-          "title": "工作后的外部投入",
-          "target": {
-            "type": "doc",
-            "location": "book/06-从新人到能独立负责/06-工作后的外部投入",
+            "location": "book/06-从新人到能独立负责/03-工作后的学习与外部投入",
             "anchor": ""
           },
           "children": [
@@ -2902,15 +2843,31 @@
                 "type": "entry",
                 "entry_id": "work-after-hours-investment"
               },
-              "nav_id": "06-04-01"
+              "nav_id": "06-03-01"
             },
             {
-              "title": "工作后参加比赛和评比值不值",
+              "title": "技能还要不要继续学",
               "target": {
                 "type": "entry",
-                "entry_id": "work-competition-value"
+                "entry_id": "work-learn-skills"
               },
-              "nav_id": "06-04-02"
+              "nav_id": "06-03-02"
+            },
+            {
+              "title": "工作后考证",
+              "target": {
+                "type": "entry",
+                "entry_id": "work-certificates"
+              },
+              "nav_id": "06-03-03"
+            },
+            {
+              "title": "工作后学语言",
+              "target": {
+                "type": "entry",
+                "entry_id": "work-learn-language"
+              },
+              "nav_id": "06-03-04"
             },
             {
               "title": "在职提升学历的钱和时间怎么算",
@@ -2918,7 +2875,39 @@
                 "type": "entry",
                 "entry_id": "work-parttime-study-cost"
               },
-              "nav_id": "06-04-03"
+              "nav_id": "06-03-05"
+            },
+            {
+              "title": "工作后做个人项目",
+              "target": {
+                "type": "entry",
+                "entry_id": "work-side-project"
+              },
+              "nav_id": "06-03-06"
+            },
+            {
+              "title": "工作后做开源",
+              "target": {
+                "type": "entry",
+                "entry_id": "work-open-source"
+              },
+              "nav_id": "06-03-07"
+            },
+            {
+              "title": "工作后重新读书",
+              "target": {
+                "type": "entry",
+                "entry_id": "work-study-again"
+              },
+              "nav_id": "06-03-08"
+            },
+            {
+              "title": "工作后参加比赛和评比值不值",
+              "target": {
+                "type": "entry",
+                "entry_id": "work-competition-value"
+              },
+              "nav_id": "06-03-09"
             },
             {
               "title": "怎么把行业信息变成判断力",
@@ -2926,10 +2915,10 @@
                 "type": "entry",
                 "entry_id": "work-industry-judgment"
               },
-              "nav_id": "06-04-04"
+              "nav_id": "06-03-10"
             }
           ],
-          "nav_id": "06-04"
+          "nav_id": "06-03"
         },
         {
           "title": "建立行业关系",
@@ -2940,7 +2929,7 @@
                 "type": "entry",
                 "entry_id": "community-networking"
               },
-              "nav_id": "06-05-01"
+              "nav_id": "06-04-01"
             },
             {
               "title": "专业社群",
@@ -2948,7 +2937,7 @@
                 "type": "entry",
                 "entry_id": "community-professional-group"
               },
-              "nav_id": "06-05-02"
+              "nav_id": "06-04-02"
             },
             {
               "title": "Mentor",
@@ -2956,7 +2945,7 @@
                 "type": "entry",
                 "entry_id": "work-mentor-role"
               },
-              "nav_id": "06-05-03"
+              "nav_id": "06-04-03"
             },
             {
               "title": "Organizer",
@@ -2964,7 +2953,7 @@
                 "type": "entry",
                 "entry_id": "community-organizer"
               },
-              "nav_id": "06-05-04"
+              "nav_id": "06-04-04"
             },
             {
               "title": "Speaker",
@@ -2972,7 +2961,7 @@
                 "type": "entry",
                 "entry_id": "community-speaker"
               },
-              "nav_id": "06-05-05"
+              "nav_id": "06-04-05"
             },
             {
               "title": "Reviewer",
@@ -2980,7 +2969,7 @@
                 "type": "entry",
                 "entry_id": "community-reviewer"
               },
-              "nav_id": "06-05-06"
+              "nav_id": "06-04-06"
             },
             {
               "title": "行业影响力",
@@ -2988,7 +2977,7 @@
                 "type": "entry",
                 "entry_id": "community-industry-influence"
               },
-              "nav_id": "06-05-07"
+              "nav_id": "06-04-07"
             }
           ],
           "target": {
@@ -2996,7 +2985,7 @@
             "location": "book/06-从新人到能独立负责/04-建立行业关系",
             "anchor": ""
           },
-          "nav_id": "06-05"
+          "nav_id": "06-04"
         },
         {
           "title": "海外工作",
@@ -3012,7 +3001,7 @@
                 "type": "entry",
                 "entry_id": "overseas-work-first-year"
               },
-              "nav_id": "06-06-01"
+              "nav_id": "06-05-01"
             },
             {
               "title": "海外工作的合同、签证与税务",
@@ -3020,10 +3009,10 @@
                 "type": "entry",
                 "entry_id": "overseas-work-contract"
               },
-              "nav_id": "06-06-02"
+              "nav_id": "06-05-02"
             }
           ],
-          "nav_id": "06-06"
+          "nav_id": "06-05"
         },
         {
           "title": "第一次重新选择",
@@ -3034,7 +3023,7 @@
                 "type": "entry",
                 "entry_id": "career-job-hopping"
               },
-              "nav_id": "06-07-01"
+              "nav_id": "06-06-01"
             },
             {
               "title": "什么情况下应该留下",
@@ -3042,7 +3031,7 @@
                 "type": "entry",
                 "entry_id": "work-when-to-stay"
               },
-              "nav_id": "06-07-02"
+              "nav_id": "06-06-02"
             },
             {
               "title": "内部转岗",
@@ -3050,7 +3039,7 @@
                 "type": "entry",
                 "entry_id": "work-internal-transfer"
               },
-              "nav_id": "06-07-03"
+              "nav_id": "06-06-03"
             },
             {
               "title": "工作后读研",
@@ -3058,7 +3047,7 @@
                 "type": "entry",
                 "entry_id": "work-grad-school-after-work"
               },
-              "nav_id": "06-07-04"
+              "nav_id": "06-06-04"
             },
             {
               "title": "海外工作",
@@ -3066,7 +3055,7 @@
                 "type": "entry",
                 "entry_id": "work-overseas-job"
               },
-              "nav_id": "06-07-05"
+              "nav_id": "06-06-05"
             }
           ],
           "target": {
@@ -3074,7 +3063,7 @@
             "location": "book/06-从新人到能独立负责/05-第一次重新选择",
             "anchor": ""
           },
-          "nav_id": "06-07"
+          "nav_id": "06-06"
         }
       ],
       "nav_id": "06"
@@ -4686,116 +4675,13 @@
           "nav_id": "09-28"
         },
         {
-          "title": "国家与地区",
+          "title": "国家与地区 · 制度与概念",
           "target": {
             "type": "doc",
             "location": "book/09-专题手册",
-            "anchor": "国家与地区"
+            "anchor": "国家与地区-制度与概念"
           },
-          "nav_id": "09-29"
-        },
-        {
-          "title": "国家申请手册",
           "children": [
-            {
-              "title": "中国大陆申请手册",
-              "target": {
-                "type": "doc",
-                "location": "docs/country-playbooks/中国大陆",
-                "anchor": ""
-              },
-              "nav_id": "09-30-01"
-            },
-            {
-              "title": "中国香港申请手册",
-              "target": {
-                "type": "doc",
-                "location": "docs/country-playbooks/中国香港",
-                "anchor": ""
-              },
-              "nav_id": "09-30-02"
-            },
-            {
-              "title": "日本申请手册",
-              "target": {
-                "type": "doc",
-                "location": "docs/country-playbooks/日本",
-                "anchor": ""
-              },
-              "nav_id": "09-30-03"
-            },
-            {
-              "title": "新加坡申请手册",
-              "target": {
-                "type": "doc",
-                "location": "docs/country-playbooks/新加坡",
-                "anchor": ""
-              },
-              "nav_id": "09-30-04"
-            },
-            {
-              "title": "韩国申请手册",
-              "target": {
-                "type": "doc",
-                "location": "docs/country-playbooks/韩国",
-                "anchor": ""
-              },
-              "nav_id": "09-30-05"
-            },
-            {
-              "title": "美国申请手册",
-              "target": {
-                "type": "doc",
-                "location": "docs/country-playbooks/美国",
-                "anchor": ""
-              },
-              "nav_id": "09-30-06"
-            },
-            {
-              "title": "加拿大申请手册",
-              "target": {
-                "type": "doc",
-                "location": "docs/country-playbooks/加拿大",
-                "anchor": ""
-              },
-              "nav_id": "09-30-07"
-            },
-            {
-              "title": "英国申请手册",
-              "target": {
-                "type": "doc",
-                "location": "docs/country-playbooks/英国",
-                "anchor": ""
-              },
-              "nav_id": "09-30-08"
-            },
-            {
-              "title": "澳大利亚申请手册",
-              "target": {
-                "type": "doc",
-                "location": "docs/country-playbooks/澳大利亚",
-                "anchor": ""
-              },
-              "nav_id": "09-30-09"
-            },
-            {
-              "title": "新西兰申请手册",
-              "target": {
-                "type": "doc",
-                "location": "docs/country-playbooks/新西兰",
-                "anchor": ""
-              },
-              "nav_id": "09-30-10"
-            },
-            {
-              "title": "欧洲大陆申请手册",
-              "target": {
-                "type": "doc",
-                "location": "docs/country-playbooks/欧洲大陆",
-                "anchor": ""
-              },
-              "nav_id": "09-30-11"
-            },
             {
               "title": "中国大陆",
               "target": {
@@ -4803,7 +4689,7 @@
                 "location": "docs/countries/中国大陆",
                 "anchor": ""
               },
-              "nav_id": "09-30-12"
+              "nav_id": "09-29-01"
             },
             {
               "title": "中国香港",
@@ -4812,43 +4698,7 @@
                 "location": "docs/countries/中国香港",
                 "anchor": ""
               },
-              "nav_id": "09-30-13"
-            },
-            {
-              "title": "美国",
-              "target": {
-                "type": "doc",
-                "location": "docs/countries/美国",
-                "anchor": ""
-              },
-              "nav_id": "09-30-14"
-            },
-            {
-              "title": "加拿大",
-              "target": {
-                "type": "doc",
-                "location": "docs/countries/加拿大",
-                "anchor": ""
-              },
-              "nav_id": "09-30-15"
-            },
-            {
-              "title": "英国",
-              "target": {
-                "type": "doc",
-                "location": "docs/countries/英国",
-                "anchor": ""
-              },
-              "nav_id": "09-30-16"
-            },
-            {
-              "title": "欧洲大陆",
-              "target": {
-                "type": "doc",
-                "location": "docs/countries/欧洲大陆",
-                "anchor": ""
-              },
-              "nav_id": "09-30-17"
+              "nav_id": "09-29-02"
             },
             {
               "title": "日本",
@@ -4857,7 +4707,7 @@
                 "location": "docs/countries/日本",
                 "anchor": ""
               },
-              "nav_id": "09-30-18"
+              "nav_id": "09-29-03"
             },
             {
               "title": "韩国",
@@ -4866,7 +4716,7 @@
                 "location": "docs/countries/韩国",
                 "anchor": ""
               },
-              "nav_id": "09-30-19"
+              "nav_id": "09-29-04"
             },
             {
               "title": "新加坡",
@@ -4875,7 +4725,43 @@
                 "location": "docs/countries/新加坡",
                 "anchor": ""
               },
-              "nav_id": "09-30-20"
+              "nav_id": "09-29-05"
+            },
+            {
+              "title": "美国",
+              "target": {
+                "type": "doc",
+                "location": "docs/countries/美国",
+                "anchor": ""
+              },
+              "nav_id": "09-29-06"
+            },
+            {
+              "title": "加拿大",
+              "target": {
+                "type": "doc",
+                "location": "docs/countries/加拿大",
+                "anchor": ""
+              },
+              "nav_id": "09-29-07"
+            },
+            {
+              "title": "英国",
+              "target": {
+                "type": "doc",
+                "location": "docs/countries/英国",
+                "anchor": ""
+              },
+              "nav_id": "09-29-08"
+            },
+            {
+              "title": "欧洲大陆",
+              "target": {
+                "type": "doc",
+                "location": "docs/countries/欧洲大陆",
+                "anchor": ""
+              },
+              "nav_id": "09-29-09"
             },
             {
               "title": "澳大利亚",
@@ -4884,7 +4770,7 @@
                 "location": "docs/countries/澳大利亚",
                 "anchor": ""
               },
-              "nav_id": "09-30-21"
+              "nav_id": "09-29-10"
             },
             {
               "title": "新西兰",
@@ -4893,27 +4779,247 @@
                 "location": "docs/countries/新西兰",
                 "anchor": ""
               },
-              "nav_id": "09-30-22"
+              "nav_id": "09-29-11"
             }
           ],
+          "nav_id": "09-29"
+        },
+        {
+          "title": "国家与地区 · 申请与操作",
           "target": {
             "type": "doc",
             "location": "book/09-专题手册",
-            "anchor": "国家申请手册"
+            "anchor": "国家与地区-申请与操作"
           },
+          "children": [
+            {
+              "title": "中国大陆",
+              "target": {
+                "type": "doc",
+                "location": "docs/country-playbooks/中国大陆",
+                "anchor": ""
+              },
+              "nav_id": "09-30-01"
+            },
+            {
+              "title": "中国香港",
+              "target": {
+                "type": "doc",
+                "location": "docs/country-playbooks/中国香港",
+                "anchor": ""
+              },
+              "nav_id": "09-30-02"
+            },
+            {
+              "title": "日本",
+              "target": {
+                "type": "doc",
+                "location": "docs/country-playbooks/日本",
+                "anchor": ""
+              },
+              "nav_id": "09-30-03"
+            },
+            {
+              "title": "韩国",
+              "target": {
+                "type": "doc",
+                "location": "docs/country-playbooks/韩国",
+                "anchor": ""
+              },
+              "nav_id": "09-30-04"
+            },
+            {
+              "title": "新加坡",
+              "target": {
+                "type": "doc",
+                "location": "docs/country-playbooks/新加坡",
+                "anchor": ""
+              },
+              "nav_id": "09-30-05"
+            },
+            {
+              "title": "美国",
+              "target": {
+                "type": "doc",
+                "location": "docs/country-playbooks/美国",
+                "anchor": ""
+              },
+              "nav_id": "09-30-06"
+            },
+            {
+              "title": "加拿大",
+              "target": {
+                "type": "doc",
+                "location": "docs/country-playbooks/加拿大",
+                "anchor": ""
+              },
+              "nav_id": "09-30-07"
+            },
+            {
+              "title": "英国",
+              "target": {
+                "type": "doc",
+                "location": "docs/country-playbooks/英国",
+                "anchor": ""
+              },
+              "nav_id": "09-30-08"
+            },
+            {
+              "title": "欧洲大陆",
+              "target": {
+                "type": "doc",
+                "location": "docs/country-playbooks/欧洲大陆",
+                "anchor": ""
+              },
+              "nav_id": "09-30-09"
+            },
+            {
+              "title": "澳大利亚",
+              "target": {
+                "type": "doc",
+                "location": "docs/country-playbooks/澳大利亚",
+                "anchor": ""
+              },
+              "nav_id": "09-30-10"
+            },
+            {
+              "title": "新西兰",
+              "target": {
+                "type": "doc",
+                "location": "docs/country-playbooks/新西兰",
+                "anchor": ""
+              },
+              "nav_id": "09-30-11"
+            }
+          ],
           "nav_id": "09-30"
         },
         {
-          "title": "行业与职业",
+          "title": "行业与职业 · 行业概览",
           "target": {
             "type": "doc",
             "location": "book/09-专题手册",
-            "anchor": "行业与职业"
+            "anchor": "行业与职业-行业概览"
           },
+          "children": [
+            {
+              "title": "技术与工程",
+              "target": {
+                "type": "doc",
+                "location": "docs/careers/技术与工程",
+                "anchor": ""
+              },
+              "nav_id": "09-31-01"
+            },
+            {
+              "title": "AI 与数据",
+              "target": {
+                "type": "doc",
+                "location": "docs/careers/AI与数据",
+                "anchor": ""
+              },
+              "nav_id": "09-31-02"
+            },
+            {
+              "title": "制造",
+              "target": {
+                "type": "doc",
+                "location": "docs/careers/制造",
+                "anchor": ""
+              },
+              "nav_id": "09-31-03"
+            },
+            {
+              "title": "商业与金融",
+              "target": {
+                "type": "doc",
+                "location": "docs/careers/商业与金融",
+                "anchor": ""
+              },
+              "nav_id": "09-31-04"
+            },
+            {
+              "title": "设计与创意",
+              "target": {
+                "type": "doc",
+                "location": "docs/careers/设计与创意",
+                "anchor": ""
+              },
+              "nav_id": "09-31-05"
+            },
+            {
+              "title": "医疗健康",
+              "target": {
+                "type": "doc",
+                "location": "docs/careers/医疗健康",
+                "anchor": ""
+              },
+              "nav_id": "09-31-06"
+            },
+            {
+              "title": "生命科学",
+              "target": {
+                "type": "doc",
+                "location": "docs/careers/生命科学",
+                "anchor": ""
+              },
+              "nav_id": "09-31-07"
+            },
+            {
+              "title": "教育",
+              "target": {
+                "type": "doc",
+                "location": "docs/careers/教育",
+                "anchor": ""
+              },
+              "nav_id": "09-31-08"
+            },
+            {
+              "title": "法律与公共事务",
+              "target": {
+                "type": "doc",
+                "location": "docs/careers/法律与公共事务",
+                "anchor": ""
+              },
+              "nav_id": "09-31-09"
+            },
+            {
+              "title": "科研与高校",
+              "target": {
+                "type": "doc",
+                "location": "docs/careers/科研与高校",
+                "anchor": ""
+              },
+              "nav_id": "09-31-10"
+            },
+            {
+              "title": "公共服务",
+              "target": {
+                "type": "doc",
+                "location": "docs/careers/公共服务",
+                "anchor": ""
+              },
+              "nav_id": "09-31-11"
+            },
+            {
+              "title": "技能型职业",
+              "target": {
+                "type": "doc",
+                "location": "docs/careers/技能型职业",
+                "anchor": ""
+              },
+              "nav_id": "09-31-12"
+            }
+          ],
           "nav_id": "09-31"
         },
         {
-          "title": "职业指南",
+          "title": "行业与职业 · 具体岗位怎么干",
+          "target": {
+            "type": "doc",
+            "location": "book/09-专题手册",
+            "anchor": "行业与职业-具体岗位怎么干"
+          },
           "children": [
             {
               "title": "软件工程师",
@@ -5121,121 +5227,8 @@
                 "anchor": ""
               },
               "nav_id": "09-32-23"
-            },
-            {
-              "title": "技术与工程",
-              "target": {
-                "type": "doc",
-                "location": "docs/careers/技术与工程",
-                "anchor": ""
-              },
-              "nav_id": "09-32-24"
-            },
-            {
-              "title": "AI 与数据",
-              "target": {
-                "type": "doc",
-                "location": "docs/careers/AI与数据",
-                "anchor": ""
-              },
-              "nav_id": "09-32-25"
-            },
-            {
-              "title": "制造",
-              "target": {
-                "type": "doc",
-                "location": "docs/careers/制造",
-                "anchor": ""
-              },
-              "nav_id": "09-32-26"
-            },
-            {
-              "title": "商业与金融",
-              "target": {
-                "type": "doc",
-                "location": "docs/careers/商业与金融",
-                "anchor": ""
-              },
-              "nav_id": "09-32-27"
-            },
-            {
-              "title": "设计与创意",
-              "target": {
-                "type": "doc",
-                "location": "docs/careers/设计与创意",
-                "anchor": ""
-              },
-              "nav_id": "09-32-28"
-            },
-            {
-              "title": "医疗健康",
-              "target": {
-                "type": "doc",
-                "location": "docs/careers/医疗健康",
-                "anchor": ""
-              },
-              "nav_id": "09-32-29"
-            },
-            {
-              "title": "生命科学",
-              "target": {
-                "type": "doc",
-                "location": "docs/careers/生命科学",
-                "anchor": ""
-              },
-              "nav_id": "09-32-30"
-            },
-            {
-              "title": "教育",
-              "target": {
-                "type": "doc",
-                "location": "docs/careers/教育",
-                "anchor": ""
-              },
-              "nav_id": "09-32-31"
-            },
-            {
-              "title": "法律与公共事务",
-              "target": {
-                "type": "doc",
-                "location": "docs/careers/法律与公共事务",
-                "anchor": ""
-              },
-              "nav_id": "09-32-32"
-            },
-            {
-              "title": "科研与高校",
-              "target": {
-                "type": "doc",
-                "location": "docs/careers/科研与高校",
-                "anchor": ""
-              },
-              "nav_id": "09-32-33"
-            },
-            {
-              "title": "公共服务",
-              "target": {
-                "type": "doc",
-                "location": "docs/careers/公共服务",
-                "anchor": ""
-              },
-              "nav_id": "09-32-34"
-            },
-            {
-              "title": "技能型职业",
-              "target": {
-                "type": "doc",
-                "location": "docs/careers/技能型职业",
-                "anchor": ""
-              },
-              "nav_id": "09-32-35"
             }
           ],
-          "target": {
-            "type": "doc",
-            "location": "book/09-专题手册",
-            "anchor": "职业指南"
-          },
           "nav_id": "09-32"
         },
         {

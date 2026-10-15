@@ -37,6 +37,11 @@ TREE = """
     Gap Year @e:paths-gap-year
     自由职业 @n:paths-freelance
     创业 @n:paths-startup
+
+  给自己保留退路
+    为什么不要过早把路线锁死 @n:optionality-why-not-lock
+    哪些能力可以跨路线使用 @n:optionality-transferable
+    走错以后怎么切换 @e:paths-switching-between-paths
   选学校与选专业
     学校和专业哪个更重要 @n:choose-school-vs-major
     城市要不要纳入选择 @n:choose-city
@@ -92,10 +97,6 @@ TREE = """
   专科生的上升通道 @d:book/01-先决定下一步往哪里走/15-专科生的上升通道
     专科生有哪几条上升通道 @e:vocational-pathways
     怎么按现在的分数和状态排序 @e:zsb-channel-sorting
-  给自己保留退路
-    为什么不要过早把路线锁死 @n:optionality-why-not-lock
-    哪些能力可以跨路线使用 @n:optionality-transferable
-    走错以后怎么切换 @e:paths-switching-between-paths
 
 02 在学校里先把基础打好
   学业
@@ -125,7 +126,7 @@ TREE = """
     怎么从岗位要求反推技能 @n:skill-reverse-engineer
     学课程还是直接实践 @n:skill-course-or-practice
     怎么判断自己真的掌握了 @n:skill-mastery-check
-  语言
+  英语与其他语言 · 判断层
     英语为什么仍然重要 @e:skill-english
     四六级与校内英语 @n:english-cet
     IELTS / TOEFL / TOEIC @n:english-standardized-tests
@@ -213,9 +214,9 @@ TREE = """
     跨专业 @e:study-cross-major
     选学校 @n:study-choose-school
     选导师 @n:study-choose-supervisor
-    复试 @e:study-second-round-interview
-    调剂 @e:study-transfer-adjustment
-    二战 @e:study-retake-exam
+    复试要不要准备 @e:study-second-round-interview
+    调剂值不值得 @e:study-transfer-adjustment
+    二战值不值得 @e:study-retake-exam
   考研择校与信息透明度 @d:book/04-升学、就业还是出国/09-考研择校与信息透明度
     怎么判断压分与信息透明度 @e:kaoyan-school-picking
     考研怎么定目标校：择校的操作步骤 @e:kaoyan-choose-school-steps
@@ -236,7 +237,7 @@ TREE = """
     授课型与研究型 @e:overseas-taught-vs-research-master
     GPA @n:overseas-gpa
     语言与标化考试 @e:overseas-admission-tests
-    推荐信 @e:overseas-recommendation-letters
+    留学申请推荐信 @e:overseas-recommendation-letters
     SOP / PS @e:overseas-sop-ps
     Research Proposal @e:overseas-research-proposal
     联系教授 @e:overseas-contacting-professors
@@ -251,7 +252,7 @@ TREE = """
     实验与数据 @n:research-experiment-data
     论文写作 @e:research-writing-and-submission
     学术会议 @n:research-conference
-    推荐信 @n:research-recommendation-letter
+    科研推荐信怎么写 @n:research-recommendation-letter
   读研期间怎么用这两年 @d:book/04-升学、就业还是出国/08-读研期间怎么用这两年
     读研这两年怎么用 @e:master-use-two-years
     读研期间实习和论文怎么安排 @e:master-internship-vs-paper
@@ -348,17 +349,16 @@ TREE = """
     怎么积累业务影响 @n:work-business-impact
     怎么记录职业成果 @n:work-record-achievements
     和同事或上级起了冲突怎么办 @e:workplace-conflict
-  工作后继续学习
+  工作后的学习与外部投入 @d:book/06-从新人到能独立负责/03-工作后的学习与外部投入
+    下班后的时间该投到哪里 @e:work-after-hours-investment
     技能还要不要继续学 @e:work-learn-skills
     工作后考证 @n:work-certificates
     工作后学语言 @n:work-learn-language
+    在职提升学历的钱和时间怎么算 @e:work-parttime-study-cost
     工作后做个人项目 @n:work-side-project
     工作后做开源 @n:work-open-source
     工作后重新读书 @e:work-study-again
-  工作后的外部投入 @d:book/06-从新人到能独立负责/06-工作后的外部投入
-    下班后的时间该投到哪里 @e:work-after-hours-investment
     工作后参加比赛和评比值不值 @e:work-competition-value
-    在职提升学历的钱和时间怎么算 @e:work-parttime-study-cost
     怎么把行业信息变成判断力 @e:work-industry-judgment
   建立行业关系
     Networking @e:community-networking
@@ -560,32 +560,44 @@ TREE = """
     第一个客户：从发现到复购 @d:docs/entrepreneurship/第一单客户
     现金流、发票与合同边界 @d:docs/entrepreneurship/现金流与合同
     从自由职业到工作室 / 副业到主业 @d:docs/entrepreneurship/从自由职业到工作室
-  国家与地区
-  国家申请手册
-    中国大陆申请手册 @d:docs/country-playbooks/中国大陆
-    中国香港申请手册 @d:docs/country-playbooks/中国香港
-    日本申请手册 @d:docs/country-playbooks/日本
-    新加坡申请手册 @d:docs/country-playbooks/新加坡
-    韩国申请手册 @d:docs/country-playbooks/韩国
-    美国申请手册 @d:docs/country-playbooks/美国
-    加拿大申请手册 @d:docs/country-playbooks/加拿大
-    英国申请手册 @d:docs/country-playbooks/英国
-    澳大利亚申请手册 @d:docs/country-playbooks/澳大利亚
-    新西兰申请手册 @d:docs/country-playbooks/新西兰
-    欧洲大陆申请手册 @d:docs/country-playbooks/欧洲大陆
+  国家与地区 · 制度与概念 @d:book/09-专题手册#国家与地区-制度与概念
     中国大陆 @d:docs/countries/中国大陆
     中国香港 @d:docs/countries/中国香港
+    日本 @d:docs/countries/日本
+    韩国 @d:docs/countries/韩国
+    新加坡 @d:docs/countries/新加坡
     美国 @d:docs/countries/美国
     加拿大 @d:docs/countries/加拿大
     英国 @d:docs/countries/英国
     欧洲大陆 @d:docs/countries/欧洲大陆
-    日本 @d:docs/countries/日本
-    韩国 @d:docs/countries/韩国
-    新加坡 @d:docs/countries/新加坡
     澳大利亚 @d:docs/countries/澳大利亚
     新西兰 @d:docs/countries/新西兰
-  行业与职业
-  职业指南
+  国家与地区 · 申请与操作 @d:book/09-专题手册#国家与地区-申请与操作
+    中国大陆 @d:docs/country-playbooks/中国大陆
+    中国香港 @d:docs/country-playbooks/中国香港
+    日本 @d:docs/country-playbooks/日本
+    韩国 @d:docs/country-playbooks/韩国
+    新加坡 @d:docs/country-playbooks/新加坡
+    美国 @d:docs/country-playbooks/美国
+    加拿大 @d:docs/country-playbooks/加拿大
+    英国 @d:docs/country-playbooks/英国
+    欧洲大陆 @d:docs/country-playbooks/欧洲大陆
+    澳大利亚 @d:docs/country-playbooks/澳大利亚
+    新西兰 @d:docs/country-playbooks/新西兰
+  行业与职业 · 行业概览 @d:book/09-专题手册#行业与职业-行业概览
+    技术与工程 @d:docs/careers/技术与工程
+    AI 与数据 @d:docs/careers/AI与数据
+    制造 @d:docs/careers/制造
+    商业与金融 @d:docs/careers/商业与金融
+    设计与创意 @d:docs/careers/设计与创意
+    医疗健康 @d:docs/careers/医疗健康
+    生命科学 @d:docs/careers/生命科学
+    教育 @d:docs/careers/教育
+    法律与公共事务 @d:docs/careers/法律与公共事务
+    科研与高校 @d:docs/careers/科研与高校
+    公共服务 @d:docs/careers/公共服务
+    技能型职业 @d:docs/careers/技能型职业
+  行业与职业 · 具体岗位怎么干 @d:book/09-专题手册#行业与职业-具体岗位怎么干
     软件工程师 @d:docs/career-guides/软件工程师
     前端工程师 @d:docs/career-guides/前端工程师
     后端工程师 @d:docs/career-guides/后端工程师
@@ -609,18 +621,6 @@ TREE = """
     教师（中小学 / 高校 / 培训） @d:docs/career-guides/教师
     公共部门与事业单位 @d:docs/career-guides/公共部门
     技能型职业（电工 / 焊工 / 护理等） @d:docs/career-guides/技能型职业
-    技术与工程 @d:docs/careers/技术与工程
-    AI 与数据 @d:docs/careers/AI与数据
-    制造 @d:docs/careers/制造
-    商业与金融 @d:docs/careers/商业与金融
-    设计与创意 @d:docs/careers/设计与创意
-    医疗健康 @d:docs/careers/医疗健康
-    生命科学 @d:docs/careers/生命科学
-    教育 @d:docs/careers/教育
-    法律与公共事务 @d:docs/careers/法律与公共事务
-    科研与高校 @d:docs/careers/科研与高校
-    公共服务 @d:docs/careers/公共服务
-    技能型职业 @d:docs/careers/技能型职业
   常用官方来源清单 @d:docs/sources/常用官方来源清单
   官方入口速查：你要办的事去哪办 @d:docs/sources/官方入口速查
   二手来源与识别方法 @d:docs/sources/二手来源与识别方法
