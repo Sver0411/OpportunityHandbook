@@ -54,9 +54,12 @@ def main() -> int:
 
     node = shutil.which("node")
     if node:
-        if run([node, "--check", "site/app.js"]) != 0:
-            print("前端脚本语法检查未通过。", file=sys.stderr)
-            return 1
+        for script in ("site/app.js", "site/reader.js"):
+            if run([node, "--check", script]) != 0:
+                print("前端脚本语法检查未通过。", file=sys.stderr)
+                return 1
+    if run([py, "tools/stamp_assets.py"]) != 0:
+        return 1
 
     if not args.no_links and (args.strict or args.links):
         links = [py, "tools/check_links.py", "--jobs", "16"]

@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""从 Canonical IA 生成 meta/navigation.json（导航唯一事实源）。
+"""从 Canonical IA 生成 meta/navigation.json（正文来源与覆盖校验目录）。
 
     python3 tools/build_navigation.py
     python3 tools/build_navigation.py --report    # 打印节点统计与待补目标

@@ -39,6 +39,9 @@
   var searchForm = document.getElementById("searchForm");
   var collapseBtn = document.getElementById("navCollapse");
   var closeBtn = document.getElementById("navClose");
+  var readerUI = null;
+  var searchPromise = null;
+  var searchReady = false;
 
   // ------------------------------------------------------------ 工具
 
@@ -159,6 +162,20 @@
     var home = state.flat.filter(function (i) { return i.location.indexOf("00-") >= 0; })[0];
     state.homeLocation = home ? home.location : (state.flat[0] || {}).location;
 
+    prepareSearch(idx);
+
+    var saved = read(MANUAL_KEY);
+    if (saved) {
+      try { state.manualExpanded = JSON.parse(saved) || {}; } catch (e) { state.manualExpanded = {}; }
+    }
+    // 旧 key 里混有系统自动展开的历史数据：只清理一次，之后不再读取
+    if (!legacyKeyCleaned && read(LEGACY_EXPAND_KEY)) {
+      try { localStorage.removeItem(LEGACY_EXPAND_KEY); } catch (e) {}
+      legacyKeyCleaned = true;
+    }
+  }
+
+  function prepareSearch(idx) {
     var L = {
       stages: labelMap("stages"), topics: labelMap("topics"),
       outputs: labelMap("outputs"), effort: labelMap("effort"), evidence: labelMap("evidence")
@@ -182,15 +199,6 @@
       return Object.assign({}, e, { _hay: hay, _title: e.title.toLowerCase(), _tags: tags });
     });
 
-    var saved = read(MANUAL_KEY);
-    if (saved) {
-      try { state.manualExpanded = JSON.parse(saved) || {}; } catch (e) { state.manualExpanded = {}; }
-    }
-    // 旧 key 里混有系统自动展开的历史数据：只清理一次，之后不再读取
-    if (!legacyKeyCleaned && read(LEGACY_EXPAND_KEY)) {
-      try { localStorage.removeItem(LEGACY_EXPAND_KEY); } catch (e) {}
-      legacyKeyCleaned = true;
-    }
   }
 
   // ------------------------------------------------------------ 左侧目录树
@@ -202,6 +210,7 @@
     var kids = node.children || [];
     var li = el("li", { class: "nav-item " + (DEPTH_CLASS[depth] || "nav-l5") });
     li.dataset.key = key;
+    li.dataset.navId = node.nav_id || "";
 
     var row = el("div", { class: "nav-row" });
     row.dataset.kind = node.kind || "";
@@ -221,7 +230,10 @@
     }
 
     var href = node.href || (node.kind === "entry" ? "" : firstHref(node));
-    if (href) {
+    if (kids.length && !href) {
+      row.appendChild(el("button", { type: "button", class: "nav-label nav-group-label", text: node.label,
+        onclick: function () { toggleManual(li); } }));
+    } else if (href) {
       var link = el("a", { class: "nav-label", href: href, text: node.label, title: node.label });
       if (kids.length) {
         // 分组行：点标题表示「我要去这个内容」，展开动作交给 markActive 的
@@ -249,6 +261,7 @@
 
     if (kids.length) {
       var ul = el("ul", { class: "nav-children" });
+      if (href && depth === 0) ul.appendChild(el("li", { class: "nav-overview" }, [el("a", { href: href, text: "本组概览 →" })]));
       kids.forEach(function (c) { ul.appendChild(renderNode(c, depth + 1, key)); });
       li.appendChild(ul);
     }
@@ -335,7 +348,7 @@
       var best = null, bestScore = -1;
       rows.forEach(function (r) {
         var a = r.querySelector("a.nav-label");
-        if (!a || a.getAttribute("href") !== want) return;
+        if (!a || (a.getAttribute("href") || "").split("?")[0] !== want) return;
         var score = KIND_PRIORITY[r.dataset.kind] || 1;
         if (score > bestScore) { bestScore = score; best = r; }
       });
@@ -348,7 +361,7 @@
       rows.forEach(function (r) {
         var a = r.querySelector("a.nav-label");
         if (!a) return;
-        var href = a.getAttribute("href") || "";
+        var href = (a.getAttribute("href") || "").split("?")[0];
         if (href !== want && href.indexOf(want + "/") !== 0) return;
         var score = KIND_PRIORITY[r.dataset.kind] || 1;
         if (score > bestScore) { bestScore = score; best = r; }
@@ -379,7 +392,7 @@
 
     // active ≠ 手动展开：这里只做「让 active 可见」的临时展开与 accordion 收合，
     // 不写 localStorage，不碰用户手动展开的分组。
-    syncNavOpenState(hit.closest(".nav-item"));
+    if (opts.scroll !== false) syncNavOpenState(hit.closest(".nav-item"));
     // 目录只在**用户明确跳转**时滚动（opts.scroll !== false）：
     // 阅读时跟随高亮去滚动目录，会让上面的章节被顶走、下面的冒出来，
     // 看起来就是「菜单一会在上面一会在下面」。
@@ -412,12 +425,16 @@
 
   function renderDoc(location, entryId) {
     var item = state.byLocation[location];
+    var requestedHash = window.location.hash;
+    var params = parseHash().params;
     markActive("#/doc/" + location + (entryId ? "/" + entryId : ""));
     document.title = (item ? item.title + " · " : "") + "机会手册";
 
     return fetchContent(location).then(function (html) {
+      if (window.location.hash !== requestedHash) return;
       main.innerHTML = html;
       var article = main.querySelector(".doc");
+      if (readerUI) readerUI.decorateArticle(article, entryId, "#/doc/" + location + (entryId ? "/" + entryId : ""), params);
       var header = article.querySelector(".doc-header");
       if (item && item.last_verified && item.last_verified < state.index.stale_threshold) {
         article.insertBefore(el("p", { class: "notice", text:
@@ -425,12 +442,14 @@
           header.nextSibling);
       }
       buildToc(entryId);
-      buildDocNav(location);
-      focusTarget(entryId);
+      if (!readerUI || !readerUI.isSingle()) buildDocNav(location);
+      if (!readerUI || !readerUI.isSingle()) focusTarget(entryId);
       watchEntries(location);
     }).catch(function (err) {
+      if (window.location.hash !== requestedHash) return;
       clear(main);
-      main.appendChild(el("p", { class: "empty", text: "内容加载失败（" + err.message + "）。如果是在本地打开，请用 http 方式访问，例如：python3 -m http.server 8000 --directory site" }));
+      main.appendChild(el("p", { class: "empty", text: "内容暂时加载失败，请重试，或返回首页继续查找。" }));
+      main.appendChild(el("a", { href: "#/", text: "返回首页 →" }));
       clear(tocEl);
     });
   }
@@ -491,6 +510,7 @@
     var line = readingLine();
     var best = "";
     Array.prototype.forEach.call(entries, function (s) {
+      if (s.hidden) return;
       var rect = s.getBoundingClientRect();
       // 以实时几何位置判断：选择最后一个「顶部已在阅读线上方」的条目
       if (rect.top - line <= 0.5) best = s.id;
@@ -729,6 +749,7 @@
   }
 
   function renderBrowse(params) {
+    if (readerUI) readerUI.prepareSearch();
     state.params = params;
     var q = params.get("q");
     if (q === null) {
@@ -823,9 +844,29 @@
   function route() {
     var h = parseHash();
     var parts = h.parts;
+    if (entryWatch.handler) window.removeEventListener("scroll", entryWatch.handler);
+    if (tocObserver) tocObserver.disconnect();
     if (isMobile()) closeDrawer();
 
-    if (parts.length && parts[0] === "browse") { renderBrowse(h.params); return; }
+    if (readerUI && readerUI.handle(parts)) { input.value = ""; state.params = new URLSearchParams(); return; }
+    if (parts.length && parts[0] === "browse") {
+      if (searchReady) { renderBrowse(h.params); return; }
+      var requestedHash = location.hash;
+      clear(main); clear(tocEl);
+      main.appendChild(el("p", { role: "status", text: "正在准备全文搜索……" }));
+      if (!searchPromise) searchPromise = Promise.all([
+        fetch("data/index.json", { cache: "no-cache" }).then(function (r) { if (!r.ok) throw new Error("HTTP " + r.status); return r.json(); }),
+        loadAliases()
+      ]).then(function (values) { prepareSearch(values[0]); searchReady = true; });
+      searchPromise.then(function () { if (location.hash === requestedHash) renderBrowse(h.params); })
+        .catch(function () {
+          searchPromise = null;
+          if (location.hash !== requestedHash) return;
+          main.replaceChildren(el("p", { role: "alert", text: "搜索暂时不可用，请重试，或从主题目录继续查找。" }),
+            el("button", { type: "button", class: "reader-retry", text: "重试搜索", onclick: route }));
+        });
+      return;
+    }
 
     if (parts.length && parts[0] === "doc") {
       var rest = parts.slice(1).join("/");
@@ -857,7 +898,8 @@
         return;
       }
     }
-    renderDoc(state.homeLocation, "");
+    if (!parts.length) { renderDoc(state.homeLocation, ""); return; }
+    if (readerUI) readerUI.handle(["guide", "missing"]); else renderDoc(state.homeLocation, "");
   }
 
   // ------------------------------------------------------------ 交互绑定
@@ -870,7 +912,7 @@
       var v = input.value.trim();
       if (v) next.set("q", v); else next.delete("q");
       var hash = buildHash(["browse"], next);
-      if (location.hash === hash) { renderBrowse(next); } else { location.hash = hash; }
+      if (location.hash === hash) { route(); } else { location.hash = hash; }
     }, 220);
   }
 
@@ -882,6 +924,9 @@
   }
 
   function bind() {
+    document.querySelector(".skip-link").addEventListener("click", function (event) {
+      event.preventDefault(); main.focus();
+    });
     input.addEventListener("input", onInput);
     searchForm.addEventListener("submit", function (ev) { ev.preventDefault(); onInput(); });
 
@@ -911,7 +956,9 @@
       var a = ev.target.closest("a");
       if (!a) return;
       var href = a.getAttribute("href") || "";
-      if (href && location.hash === href) { ev.preventDefault(); route(); }
+      var same = location.hash === href;
+      try { same = same || decodeURI(location.hash) === decodeURI(href); } catch (_) {}
+      if (href && same) { ev.preventDefault(); route(); }
     });
 
     document.addEventListener("keydown", function (ev) {
@@ -950,21 +997,26 @@
       .catch(function () { state.aliases = {}; });
   }
 
-  loadAliases().then(function () {
-    return fetch("data/index.json", { cache: "no-cache" })
+  fetch("data/reader.json", { cache: "no-cache" })
       .then(function (r) { if (!r.ok) throw new Error("HTTP " + r.status); return r.json(); })
       .then(function (data) {
         state.index = data;
         prepare();
-        buildNav();
+        if (data.reader && window.HandbookReader) {
+          state.index.nav = data.reader.navigation;
+          buildNav();
+          readerUI = window.HandbookReader({ index: data, main: main, nav: navTree, toc: tocEl,
+            el: el, read: read, store: store, bookNav: buildNav, buildToc: buildToc,
+            openOverview: function (destination) { history.replaceState(null, "", destination); route(); },
+            highlight: function (href) { markActive(href); } });
+        } else buildNav();
         bind();
         if (read(NAV_KEY) === "collapsed" && !isMobile()) applyCollapsed(true);
         route();
-      });
-  })
+      })
     .catch(function (err) {
       clear(main);
       main.appendChild(el("p", { class: "empty", text:
-        "索引加载失败（" + err.message + "）。请先生成站点：python3 tools/build.py，然后用 http 方式访问（python3 -m http.server 8000 --directory site）。" }));
+        "内容暂时无法加载，请刷新页面重试。" }));
     });
 })();

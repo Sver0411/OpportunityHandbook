@@ -1,0 +1,145 @@
+"""Desktop browser regression checks for topic hubs and existing deep links."""
+from __future__ import annotations
+
+import html
+import json
+import pathlib
+import re
+import subprocess
+import tempfile
+
+import smoke_test as S
+
+ROOT = pathlib.Path(__file__).resolve().parent.parent
+SITE = ROOT / "site"
+
+PROBE = r"""
+<script>
+(function () {
+  var results = [], errors = [];
+  window.addEventListener('error', function (event) { errors.push(event.message); });
+  function ok(name, condition, detail) { results.push({name:name, pass:!!condition, detail:detail || ''}); }
+  function wait(ms) { return new Promise(function (resolve) { setTimeout(resolve, ms); }); }
+  async function until(test) {
+    for (var i=0;i<50;i++) { if (test()) return true; await wait(100); }
+    return false;
+  }
+  function text(selector) { var e=document.querySelector(selector); return e ? e.textContent.trim() : ''; }
+  async function go(hash, heading) {
+    location.hash=hash;
+    await until(function () { return text('#main h1')===heading; });
+  }
+  async function run() {
+    await until(function () { return document.querySelector('.doc'); });
+    ok('原有正文首页可以打开', text('.doc-header h1')==='从这里开始');
+    ok('单一重组目录，共十三个栏目', document.querySelectorAll('.nav-l1').length===13);
+    ok('已移除按主题查模块', !document.querySelector('[data-nav-mode]') && !document.querySelector('.reader-topic-grid'));
+    ok('首次阅读不请求全文索引', !performance.getEntriesByType('resource').some(function (r) { return r.name.indexOf('/data/index.json')>=0; }));
+    ok('桌面首页无横向溢出', document.documentElement.scrollWidth<=innerWidth+1);
+    await go('#/guide/research','科研与学术');
+    ok('一级分组有内容概览', text('#main h1')==='科研与学术');
+    ok('一级概览是有独立正文的导读文章', document.querySelectorAll('.reader-chapter-overview > h2').length>=4 && Array.from(document.querySelectorAll('.reader-chapter-overview > p')).reduce(function (sum,p) { return sum+p.textContent.length; },0)>400);
+    ok('概览文章保留原有正文排版和页内目录', !!document.querySelector('.reader-chapter-overview.doc .doc-header') && document.querySelectorAll('#toc [data-target]').length>=4);
+    document.querySelector('#main a[href="#/guide/supervisor"]').click();
+    await until(function () { return text('.doc-header h1')==='联系导师与套磁'; });
+    ok('二级标题直接进入已有概览和正文', text('.doc-header h1')==='联系导师与套磁' && !document.querySelector('.reader-page-header'));
+    ok('二级没有重复概览链接', document.querySelectorAll('.nav-l2 > .nav-children > .nav-overview').length===0);
+    ok('正文汇合模板和案例', !!document.querySelector('.reader-task-materials a[href*="tools/"]') && !!document.querySelector('.reader-task-materials a[href*="cases/"]'));
+    document.querySelector('#navTree a[href*="research-find-supervisor"]').click();
+    await until(function () { return text('.doc-header h1')==='怎么找导师'; });
+    ok('具体条目使用自己的标题', text('.doc-header h1')==='怎么找导师');
+    ok('只显示当前条目', Array.from(document.querySelectorAll('.entry')).filter(function (e) { return !e.hidden; }).length===1);
+    // Wait for the existing sidebar expand/collapse transition to finish before
+    // measuring whether reading scroll moves it.
+    await wait(500);
+    var sidebar=document.getElementById('navTree');
+    var before=sidebar.innerHTML, top=sidebar.scrollTop, hash=location.hash, length=history.length;
+    window.scrollTo(0,900); window.dispatchEvent(new Event('scroll')); await wait(200);
+    ok('阅读滚动不重排或折叠目录', sidebar.innerHTML===before);
+    ok('阅读滚动不移动侧栏', sidebar.scrollTop===top, top+' → '+sidebar.scrollTop);
+    ok('阅读滚动不改地址和历史', location.hash===hash && history.length===length);
+    ok('本页目录只指向当前条目', Array.from(document.querySelectorAll('#toc [data-target]')).every(function (a) { return a.dataset.target.indexOf('research-find-supervisor--')===0; }));
+    await go('#/guide/education','升学与继续教育');
+    var second=document.querySelector('[data-nav-id="graduate"]');
+    var oldHash=location.hash;
+    second.querySelector(':scope > .nav-row .nav-toggle').click(); await wait(100);
+    ok('小箭头只展开，不跳转', location.hash===oldHash);
+    second.querySelector(':scope > .nav-row .nav-label').click();
+    await until(function () { return text('.doc-header h1')==='国内升学'; });
+    ok('二级直接打开原有分册概览', text('.doc-header h1')==='国内升学');
+    var overview=document.querySelector('[data-nav-id="education"] > .nav-children > .nav-overview a');
+    ok('一级概览入口保留且有强调', overview && overview.getBoundingClientRect().height>0 && getComputedStyle(overview).fontWeight>=600);
+    await go('#/guide/places','国家与地区');
+    var japan=Array.from(document.querySelectorAll('.reader-task-row')).find(function(a) { return a.textContent.indexOf('日本')>=0; });
+    japan.click(); await until(function () { return text('.doc-header h1')==='日本'; });
+    ok('地区入口直接打开已有正文', text('.doc-header h1')==='日本');
+    ok('同一地区的另一类资料可达', !!document.querySelector('.reader-task-materials a[href*="country-playbooks"]'));
+    await go('#/guide/careers','行业与岗位');
+    ok('行业与岗位分别提供入口', !!document.querySelector('#main a[href="#/guide/industries"]') && !!document.querySelector('#main a[href="#/guide/occupations"]'));
+    var q=document.getElementById('q'); q.value='套磁'; q.dispatchEvent(new Event('input',{bubbles:true}));
+    await until(function () { return document.querySelectorAll('.result').length>0; });
+    ok('全文与同义词搜索可用', document.querySelectorAll('.result').length>0);
+    location.hash='#/browse?stages=undergraduate';
+    await until(function () { return text('.browse-count').indexOf('套磁')<0 && document.querySelectorAll('.result').length>0; });
+    var all=document.querySelectorAll('.result').length;
+    location.hash='#/browse?stages=undergraduate&effort=low';
+    await until(function () { return document.querySelectorAll('.result').length<all; });
+    ok('组合筛选能收窄结果', document.querySelectorAll('.result').length>0 && document.querySelectorAll('.result').length<all);
+    location.hash='#/doc/book/03-升学/grad-school-worth-it';
+    await until(function () { return !!document.querySelector('.is-single-entry #grad-school-worth-it'); });
+    ok('已发布旧深链仍然可达', !!document.getElementById('grad-school-worth-it') && location.hash.indexOf('/book/04-')>=0);
+    ok('桌面文章无横向溢出', document.documentElement.scrollWidth<=innerWidth+1);
+    ok('未发生脚本异常', errors.length===0, errors.join('; '));
+  }
+  run().catch(function (error) { ok('浏览器流程未抛异常',false,error.message); }).finally(function () {
+    var output=document.createElement('pre');output.id='reader-smoke-result';
+    output.textContent='@@'+'SMOKE@@'+JSON.stringify(results)+'@@'+'END@@';document.body.appendChild(output);
+  });
+})();
+</script>
+"""
+
+
+def main():
+    chrome = S.find_chrome()
+    if not chrome:
+        print("未找到 Chrome，跳过桌面浏览器检查。")
+        return 0
+    source = (SITE / "index.html").read_text()
+    index = json.loads((SITE / "data/index.json").read_text())
+    stub = "<script>localStorage.clear();</script>"
+    probe = PROBE.replace("window.__BOOK_SECTIONS__", str(len(index["nav"])))
+    page = SITE / "_reader-smoke.html"
+    page.write_text(source.replace("<head>", "<head>" + stub).replace("</body>", probe + "</body>"))
+    server, port = S.serve(SITE)
+    failures = 0
+    try:
+        for size in ["1440,1000", "1024,900"]:
+            with tempfile.TemporaryDirectory() as profile:
+                result = subprocess.run([chrome, "--headless=new", "--no-sandbox", "--disable-gpu",
+                    "--disable-extensions", "--disable-background-networking", "--no-first-run",
+                    "--no-default-browser-check", "--disable-smooth-scrolling", "--hide-scrollbars",
+                    "--user-data-dir=" + profile, "--window-size=" + size,
+                    "--virtual-time-budget=30000", "--dump-dom", f"http://127.0.0.1:{port}/{page.name}"],
+                    capture_output=True, text=True, timeout=60)
+            matches = re.findall(r"@@SMOKE@@(.*?)@@END@@", result.stdout, re.S)
+            if not matches:
+                print(size, "FAIL：浏览器未完成检查")
+                failures += 1
+                continue
+            rows = json.loads(html.unescape(matches[-1]))
+            for row in rows:
+                if not row["pass"]:
+                    failures += 1
+                print(size, "PASS" if row["pass"] else "FAIL", row["name"], row["detail"])
+    except subprocess.TimeoutExpired:
+        print("桌面浏览器检查超时")
+        failures += 1
+    finally:
+        server.shutdown()
+        page.unlink(missing_ok=True)
+    return 1 if failures else 0
+
+
+if __name__ == "__main__":
+    raise SystemExit(main())

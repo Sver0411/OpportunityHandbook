@@ -633,6 +633,10 @@ def run_case(chrome: str, base: str, size: str, mode: str, budget: int = 8000,
 
 
 def main() -> int:
+    # Topic/task navigation supersedes the legacy tree-only interaction model.
+    if (SITE / "reader.js").exists():
+        import reader_smoke_test
+        return reader_smoke_test.main()
     chrome = find_chrome()
     if not chrome:
         print("未找到 Chrome / Chromium，跳过前端冒烟测试。")

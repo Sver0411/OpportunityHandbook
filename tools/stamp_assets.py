@@ -22,7 +22,7 @@ import sys
 HERE = pathlib.Path(__file__).resolve().parent
 ROOT = HERE.parent
 SITE = ROOT / "site"
-ASSETS = ("styles.css", "app.js")
+ASSETS = ("styles.css", "reader.css", "reader.js", "app.js")
 
 
 def content_hash(path: pathlib.Path) -> str:

@@ -18,6 +18,7 @@ from pathlib import Path
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 
 import meta as M  # noqa: E402
+import reader_navigation as R  # noqa: E402
 
 
 def main() -> int:
@@ -77,6 +78,17 @@ def main() -> int:
 
     out.parent.mkdir(parents=True, exist_ok=True)
     out.write_text(json.dumps(index, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
+    # Reading does not need the full text search corpus. Keep the original index
+    # for search, existing consumers and validation; bootstrap with a small file.
+    reader = dict(index)
+    try:
+        reader["reader"] = R.build(index, root)
+    except ValueError as error:
+        say(str(error))
+        return 1
+    reader["entries"] = [{k: v for k, v in e.items() if k != "text"} for e in index["entries"]]
+    reader["docs"] = [{k: v for k, v in d.items() if k != "text"} for d in index["docs"]]
+    (out.parent / "reader.json").write_text(json.dumps(reader, ensure_ascii=False, separators=(",", ":")), encoding="utf-8")
     say(f"索引已写出：{out.relative_to(root)}")
     return 0
 
