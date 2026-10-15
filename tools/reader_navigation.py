@@ -21,6 +21,7 @@ def node(key, label, summary="", children=()):
 def catalog():
     return [
         node("choices", "选择与方向", "看见不同路线，算清投入与代价，用小行动验证方向。", [
+            node("start-here", "先花 30 秒：从哪一种情况进入", "按你现在最头疼的事分流，一行就是一条最短路径。"),
             node("explore", "不知道方向时怎么开始", "了解行业、访问从业者，设计一次低成本体验。"),
             node("routes", "认识不同路线", "读书、工作、公共服务与其他生活安排。"),
             node("decide", "比较机会与代价", "先核实门槛，再比较成本、产出与未来选择权。"),
@@ -216,6 +217,10 @@ def walk(nodes):
 
 def build(index, root=None):
     topics = catalog()
+    # 「先花 30 秒」不是分组，而是全站的分流入口：点一次直接落到 00 章首屏的分流表。
+    # 它必须是「选择与方向」里的第一项——读者不必再展开子分组找标题。
+    start_here = topics[0]["children"][0]
+    start_here["document"] = "#/doc/book/00-从这里开始"
     content_map = node("content-map", "内容地图", "从当前问题出发，找到合适的章节与下一步。")
     content_map["document"] = "#/doc/book/18-内容地图"
     atlases = [node("places", "国家与地区", "同一地区的制度说明与申请操作，在一个入口查找。"),
