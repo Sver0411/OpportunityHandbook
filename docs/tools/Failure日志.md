@@ -65,4 +65,4 @@ last_verified: 2026-09-29
 
 这份资料解决「怎么做」，判断「值不值得、要不要做」请看主线：
 
-- [数据、测试和指标](../../book/03-做项目、打比赛、进实验室/01-项目与作品.md#project-data-test-metrics)
+- [数据、测试和指标](../../book/03-做项目、打比赛、进实验室.md#project-data-test-metrics)

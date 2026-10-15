@@ -202,8 +202,8 @@
           ],
           "target": {
             "type": "doc",
-            "location": "book/01-先决定下一步往哪里走/01-认识你面前的几条主要路线",
-            "anchor": ""
+            "location": "book/01-先决定下一步往哪里走",
+            "anchor": "认识你面前的几条主要路线"
           },
           "nav_id": "01-01"
         },
@@ -237,8 +237,8 @@
           ],
           "target": {
             "type": "doc",
-            "location": "book/01-先决定下一步往哪里走/05-给自己保留退路",
-            "anchor": ""
+            "location": "book/01-先决定下一步往哪里走",
+            "anchor": "给自己保留退路"
           },
           "nav_id": "01-02"
         },
@@ -312,8 +312,8 @@
           ],
           "target": {
             "type": "doc",
-            "location": "book/01-先决定下一步往哪里走/02-选学校与选专业",
-            "anchor": ""
+            "location": "book/01-先决定下一步往哪里走",
+            "anchor": "选学校与选专业"
           },
           "nav_id": "01-03"
         },
@@ -379,8 +379,8 @@
           ],
           "target": {
             "type": "doc",
-            "location": "book/01-先决定下一步往哪里走/03-专科与职业教育",
-            "anchor": ""
+            "location": "book/01-先决定下一步往哪里走",
+            "anchor": "专科与职业教育"
           },
           "nav_id": "01-04"
         },
@@ -388,7 +388,7 @@
           "title": "中职与专科阶段的探索与作品",
           "target": {
             "type": "doc",
-            "location": "book/01-先决定下一步往哪里走/06-中职与专科阶段的探索与作品",
+            "location": "book/01-先决定下一步往哪里走",
             "anchor": ""
           },
           "children": [
@@ -449,8 +449,8 @@
           ],
           "target": {
             "type": "doc",
-            "location": "book/01-先决定下一步往哪里走/04-家庭经济与教育成本",
-            "anchor": ""
+            "location": "book/01-先决定下一步往哪里走",
+            "anchor": "家庭经济与教育成本"
           },
           "nav_id": "01-06"
         },
@@ -458,7 +458,7 @@
           "title": "家庭沟通与支持",
           "target": {
             "type": "doc",
-            "location": "book/01-先决定下一步往哪里走/07-家庭沟通与支持",
+            "location": "book/01-先决定下一步往哪里走",
             "anchor": ""
           },
           "children": [
@@ -485,7 +485,7 @@
           "title": "不走常规的几条路",
           "target": {
             "type": "doc",
-            "location": "book/01-先决定下一步往哪里走/08-不走常规的几条路",
+            "location": "book/01-先决定下一步往哪里走",
             "anchor": ""
           },
           "children": [
@@ -520,7 +520,7 @@
           "title": "没有资源时怎么起步",
           "target": {
             "type": "doc",
-            "location": "book/01-先决定下一步往哪里走/09-没有资源时怎么起步",
+            "location": "book/01-先决定下一步往哪里走",
             "anchor": ""
           },
           "children": [
@@ -547,7 +547,7 @@
           "title": "专科生的上升通道",
           "target": {
             "type": "doc",
-            "location": "book/01-先决定下一步往哪里走/15-专科生的上升通道",
+            "location": "book/01-先决定下一步往哪里走",
             "anchor": ""
           },
           "children": [
@@ -627,8 +627,8 @@
           ],
           "target": {
             "type": "doc",
-            "location": "book/02-在学校里先把基础打好/01-学业",
-            "anchor": ""
+            "location": "book/02-在学校里先把基础打好",
+            "anchor": "学业"
           },
           "nav_id": "02-01"
         },
@@ -678,8 +678,8 @@
           ],
           "target": {
             "type": "doc",
-            "location": "book/02-在学校里先把基础打好/02-开始认识真实世界",
-            "anchor": ""
+            "location": "book/02-在学校里先把基础打好",
+            "anchor": "开始认识真实世界"
           },
           "nav_id": "02-02"
         },
@@ -761,8 +761,8 @@
           ],
           "target": {
             "type": "doc",
-            "location": "book/02-在学校里先把基础打好/03-通用能力",
-            "anchor": ""
+            "location": "book/02-在学校里先把基础打好",
+            "anchor": "通用能力"
           },
           "nav_id": "02-03"
         },
@@ -804,8 +804,8 @@
           ],
           "target": {
             "type": "doc",
-            "location": "book/02-在学校里先把基础打好/04-专业技能",
-            "anchor": ""
+            "location": "book/02-在学校里先把基础打好",
+            "anchor": "专业技能"
           },
           "nav_id": "02-04"
         },
@@ -855,8 +855,8 @@
           ],
           "target": {
             "type": "doc",
-            "location": "book/02-在学校里先把基础打好/05-语言",
-            "anchor": ""
+            "location": "book/02-在学校里先把基础打好",
+            "anchor": "英语与其他语言-判断层"
           },
           "nav_id": "02-05"
         },
@@ -906,8 +906,8 @@
           ],
           "target": {
             "type": "doc",
-            "location": "book/02-在学校里先把基础打好/06-证书",
-            "anchor": ""
+            "location": "book/02-在学校里先把基础打好",
+            "anchor": "证书"
           },
           "nav_id": "02-06"
         }
@@ -992,8 +992,8 @@
           ],
           "target": {
             "type": "doc",
-            "location": "book/03-做项目、打比赛、进实验室/01-项目与作品",
-            "anchor": ""
+            "location": "book/03-做项目、打比赛、进实验室",
+            "anchor": "项目与作品"
           },
           "nav_id": "03-01"
         },
@@ -1075,8 +1075,8 @@
           ],
           "target": {
             "type": "doc",
-            "location": "book/03-做项目、打比赛、进实验室/02-竞赛",
-            "anchor": ""
+            "location": "book/03-做项目、打比赛、进实验室",
+            "anchor": "竞赛"
           },
           "nav_id": "03-02"
         },
@@ -1134,8 +1134,8 @@
           ],
           "target": {
             "type": "doc",
-            "location": "book/03-做项目、打比赛、进实验室/03-科研初体验",
-            "anchor": ""
+            "location": "book/03-做项目、打比赛、进实验室",
+            "anchor": "科研初体验"
           },
           "nav_id": "03-03"
         },
@@ -1201,8 +1201,8 @@
           ],
           "target": {
             "type": "doc",
-            "location": "book/03-做项目、打比赛、进实验室/04-开源与公共贡献",
-            "anchor": ""
+            "location": "book/03-做项目、打比赛、进实验室",
+            "anchor": "开源与公共贡献"
           },
           "nav_id": "03-04"
         },
@@ -1260,8 +1260,8 @@
           ],
           "target": {
             "type": "doc",
-            "location": "book/03-做项目、打比赛、进实验室/05-社群与活动",
-            "anchor": ""
+            "location": "book/03-做项目、打比赛、进实验室",
+            "anchor": "社群与活动"
           },
           "nav_id": "03-05"
         },
@@ -1319,8 +1319,8 @@
           ],
           "target": {
             "type": "doc",
-            "location": "book/03-做项目、打比赛、进实验室/06-实习准备",
-            "anchor": ""
+            "location": "book/03-做项目、打比赛、进实验室",
+            "anchor": "实习准备"
           },
           "nav_id": "03-06"
         }
@@ -1381,8 +1381,8 @@
           ],
           "target": {
             "type": "doc",
-            "location": "book/04-升学、就业还是出国/01-先决定主线",
-            "anchor": ""
+            "location": "book/04-升学、就业还是出国",
+            "anchor": "先决定主线"
           },
           "nav_id": "04-01"
         },
@@ -1480,8 +1480,8 @@
           ],
           "target": {
             "type": "doc",
-            "location": "book/04-升学、就业还是出国/02-国内升学",
-            "anchor": ""
+            "location": "book/04-升学、就业还是出国",
+            "anchor": "国内升学"
           },
           "nav_id": "04-02"
         },
@@ -1579,8 +1579,8 @@
           ],
           "target": {
             "type": "doc",
-            "location": "book/04-升学、就业还是出国/03-海外升学",
-            "anchor": ""
+            "location": "book/04-升学、就业还是出国",
+            "anchor": "海外升学"
           },
           "nav_id": "04-03"
         },
@@ -1662,8 +1662,8 @@
           ],
           "target": {
             "type": "doc",
-            "location": "book/04-升学、就业还是出国/04-深入科研",
-            "anchor": ""
+            "location": "book/04-升学、就业还是出国",
+            "anchor": "深入科研"
           },
           "nav_id": "04-04"
         },
@@ -1671,7 +1671,7 @@
           "title": "读研期间怎么用这两年",
           "target": {
             "type": "doc",
-            "location": "book/04-升学、就业还是出国/08-读研期间怎么用这两年",
+            "location": "book/04-升学、就业还是出国",
             "anchor": ""
           },
           "children": [
@@ -1698,7 +1698,7 @@
           "title": "读博与博士毕业",
           "target": {
             "type": "doc",
-            "location": "book/04-升学、就业还是出国/07-读博与博士毕业",
+            "location": "book/04-升学、就业还是出国",
             "anchor": ""
           },
           "children": [
@@ -1783,8 +1783,8 @@
           ],
           "target": {
             "type": "doc",
-            "location": "book/04-升学、就业还是出国/05-实习进一步升级",
-            "anchor": ""
+            "location": "book/04-升学、就业还是出国",
+            "anchor": "实习进一步升级"
           },
           "nav_id": "04-07"
         },
@@ -1850,8 +1850,8 @@
           ],
           "target": {
             "type": "doc",
-            "location": "book/04-升学、就业还是出国/06-资助",
-            "anchor": ""
+            "location": "book/04-升学、就业还是出国",
+            "anchor": "资助"
           },
           "nav_id": "04-08"
         }
@@ -1870,7 +1870,7 @@
           "title": "四六级怎么准备",
           "target": {
             "type": "doc",
-            "location": "book/05-备考与应试/01-四六级怎么准备",
+            "location": "book/05-备考与应试",
             "anchor": ""
           },
           "children": [
@@ -1897,7 +1897,7 @@
           "title": "四六级分数的用途与校内规定",
           "target": {
             "type": "doc",
-            "location": "book/05-备考与应试/02-四六级分数的用途与校内规定",
+            "location": "book/05-备考与应试",
             "anchor": ""
           },
           "children": [
@@ -1924,7 +1924,7 @@
           "title": "留学语言考试怎么准备",
           "target": {
             "type": "doc",
-            "location": "book/05-备考与应试/03-留学语言考试怎么准备",
+            "location": "book/05-备考与应试",
             "anchor": ""
           },
           "children": [
@@ -1951,7 +1951,7 @@
           "title": "专升本怎么准备",
           "target": {
             "type": "doc",
-            "location": "book/05-备考与应试/04-专升本怎么准备",
+            "location": "book/05-备考与应试",
             "anchor": ""
           },
           "children": [
@@ -1978,7 +1978,7 @@
           "title": "考研择校与信息透明度",
           "target": {
             "type": "doc",
-            "location": "book/05-备考与应试/05-考研择校与信息透明度",
+            "location": "book/05-备考与应试",
             "anchor": ""
           },
           "children": [
@@ -2005,7 +2005,7 @@
           "title": "考研科目复习与专业课",
           "target": {
             "type": "doc",
-            "location": "book/05-备考与应试/06-考研科目复习与专业课",
+            "location": "book/05-备考与应试",
             "anchor": ""
           },
           "children": [
@@ -2048,7 +2048,7 @@
           "title": "考研报名、初试与复试",
           "target": {
             "type": "doc",
-            "location": "book/05-备考与应试/07-考研报名、初试与复试",
+            "location": "book/05-备考与应试",
             "anchor": ""
           },
           "children": [
@@ -2075,7 +2075,7 @@
           "title": "考研调剂与二战",
           "target": {
             "type": "doc",
-            "location": "book/05-备考与应试/08-考研调剂与二战",
+            "location": "book/05-备考与应试",
             "anchor": ""
           },
           "children": [
@@ -2102,7 +2102,7 @@
           "title": "考公与考编怎么准备",
           "target": {
             "type": "doc",
-            "location": "book/05-备考与应试/09-考公与考编怎么准备",
+            "location": "book/05-备考与应试",
             "anchor": ""
           },
           "children": [
@@ -2137,7 +2137,7 @@
           "title": "笔试：行测与申论",
           "target": {
             "type": "doc",
-            "location": "book/05-备考与应试/10-笔试：行测与申论",
+            "location": "book/05-备考与应试",
             "anchor": ""
           },
           "children": [
@@ -2164,7 +2164,7 @@
           "title": "面试与后续环节",
           "target": {
             "type": "doc",
-            "location": "book/05-备考与应试/11-面试与后续环节",
+            "location": "book/05-备考与应试",
             "anchor": ""
           },
           "children": [
@@ -2199,7 +2199,7 @@
           "title": "事业单位与基层项目",
           "target": {
             "type": "doc",
-            "location": "book/05-备考与应试/12-事业单位与基层项目",
+            "location": "book/05-备考与应试",
             "anchor": ""
           },
           "children": [
@@ -2279,8 +2279,8 @@
           ],
           "target": {
             "type": "doc",
-            "location": "book/06-从学校走向第一份工作/01-校招是怎么运作的",
-            "anchor": ""
+            "location": "book/06-从学校走向第一份工作",
+            "anchor": "校招是怎么运作的"
           },
           "nav_id": "06-01"
         },
@@ -2330,8 +2330,8 @@
           ],
           "target": {
             "type": "doc",
-            "location": "book/06-从学校走向第一份工作/02-找岗位",
-            "anchor": ""
+            "location": "book/06-从学校走向第一份工作",
+            "anchor": "找岗位"
           },
           "nav_id": "06-02"
         },
@@ -2389,8 +2389,8 @@
           ],
           "target": {
             "type": "doc",
-            "location": "book/06-从学校走向第一份工作/03-简历与作品",
-            "anchor": ""
+            "location": "book/06-从学校走向第一份工作",
+            "anchor": "简历与作品"
           },
           "nav_id": "06-03"
         },
@@ -2448,8 +2448,8 @@
           ],
           "target": {
             "type": "doc",
-            "location": "book/06-从学校走向第一份工作/04-笔试与面试",
-            "anchor": ""
+            "location": "book/06-从学校走向第一份工作",
+            "anchor": "笔试与面试"
           },
           "nav_id": "06-04"
         },
@@ -2515,8 +2515,8 @@
           ],
           "target": {
             "type": "doc",
-            "location": "book/06-从学校走向第一份工作/05-Offer",
-            "anchor": ""
+            "location": "book/06-从学校走向第一份工作",
+            "anchor": "offer"
           },
           "nav_id": "06-05"
         },
@@ -2524,7 +2524,7 @@
           "title": "入职前的核实",
           "target": {
             "type": "doc",
-            "location": "book/06-从学校走向第一份工作/08-入职前的核实",
+            "location": "book/06-从学校走向第一份工作",
             "anchor": ""
           },
           "children": [
@@ -2593,8 +2593,8 @@
           ],
           "target": {
             "type": "doc",
-            "location": "book/06-从学校走向第一份工作/06-第一份工作",
-            "anchor": ""
+            "location": "book/06-从学校走向第一份工作",
+            "anchor": "第一份工作"
           },
           "nav_id": "06-07"
         },
@@ -2602,7 +2602,7 @@
           "title": "毕业前后的衔接",
           "target": {
             "type": "doc",
-            "location": "book/06-从学校走向第一份工作/09-毕业前后的衔接",
+            "location": "book/06-从学校走向第一份工作",
             "anchor": ""
           },
           "children": [
@@ -2687,8 +2687,8 @@
           ],
           "target": {
             "type": "doc",
-            "location": "book/06-从学校走向第一份工作/07-如果没有顺利进入下一站",
-            "anchor": ""
+            "location": "book/06-从学校走向第一份工作",
+            "anchor": "如果没有顺利进入下一站"
           },
           "nav_id": "06-09"
         },
@@ -2696,7 +2696,7 @@
           "title": "失败之后",
           "target": {
             "type": "doc",
-            "location": "book/06-从学校走向第一份工作/10-失败之后",
+            "location": "book/06-从学校走向第一份工作",
             "anchor": ""
           },
           "children": [
@@ -2776,8 +2776,8 @@
           ],
           "target": {
             "type": "doc",
-            "location": "book/07-从新人到能独立负责/01-刚进入职场",
-            "anchor": ""
+            "location": "book/07-从新人到能独立负责",
+            "anchor": "刚进入职场"
           },
           "nav_id": "07-01"
         },
@@ -2835,8 +2835,8 @@
           ],
           "target": {
             "type": "doc",
-            "location": "book/07-从新人到能独立负责/02-从执行到独立负责",
-            "anchor": ""
+            "location": "book/07-从新人到能独立负责",
+            "anchor": "从执行到独立负责"
           },
           "nav_id": "07-02"
         },
@@ -2844,7 +2844,7 @@
           "title": "工作后的学习与外部投入",
           "target": {
             "type": "doc",
-            "location": "book/07-从新人到能独立负责/03-工作后的学习与外部投入",
+            "location": "book/07-从新人到能独立负责",
             "anchor": ""
           },
           "children": [
@@ -2993,8 +2993,8 @@
           ],
           "target": {
             "type": "doc",
-            "location": "book/07-从新人到能独立负责/04-建立行业关系",
-            "anchor": ""
+            "location": "book/07-从新人到能独立负责",
+            "anchor": "建立行业关系"
           },
           "nav_id": "07-04"
         },
@@ -3002,7 +3002,7 @@
           "title": "海外工作",
           "target": {
             "type": "doc",
-            "location": "book/07-从新人到能独立负责/07-海外工作",
+            "location": "book/07-从新人到能独立负责",
             "anchor": ""
           },
           "children": [
@@ -3071,8 +3071,8 @@
           ],
           "target": {
             "type": "doc",
-            "location": "book/07-从新人到能独立负责/05-第一次重新选择",
-            "anchor": ""
+            "location": "book/07-从新人到能独立负责",
+            "anchor": "第一次重新选择"
           },
           "nav_id": "07-06"
         }
@@ -3133,8 +3133,8 @@
           ],
           "target": {
             "type": "doc",
-            "location": "book/08-晋升、跳槽还是转行/01-晋升",
-            "anchor": ""
+            "location": "book/08-晋升、跳槽还是转行",
+            "anchor": "晋升"
           },
           "nav_id": "08-01"
         },
@@ -3176,8 +3176,8 @@
           ],
           "target": {
             "type": "doc",
-            "location": "book/08-晋升、跳槽还是转行/02-专家路线",
-            "anchor": ""
+            "location": "book/08-晋升、跳槽还是转行",
+            "anchor": "专家路线"
           },
           "nav_id": "08-02"
         },
@@ -3185,7 +3185,7 @@
           "title": "资深阶段：技能与收入",
           "target": {
             "type": "doc",
-            "location": "book/08-晋升、跳槽还是转行/07-资深阶段：技能与收入",
+            "location": "book/08-晋升、跳槽还是转行",
             "anchor": ""
           },
           "children": [
@@ -3262,8 +3262,8 @@
           ],
           "target": {
             "type": "doc",
-            "location": "book/08-晋升、跳槽还是转行/03-管理路线",
-            "anchor": ""
+            "location": "book/08-晋升、跳槽还是转行",
+            "anchor": "管理路线"
           },
           "nav_id": "08-04"
         },
@@ -3321,8 +3321,8 @@
           ],
           "target": {
             "type": "doc",
-            "location": "book/08-晋升、跳槽还是转行/04-跳槽",
-            "anchor": ""
+            "location": "book/08-晋升、跳槽还是转行",
+            "anchor": "跳槽"
           },
           "nav_id": "08-05"
         },
@@ -3388,8 +3388,8 @@
           ],
           "target": {
             "type": "doc",
-            "location": "book/08-晋升、跳槽还是转行/05-转行",
-            "anchor": ""
+            "location": "book/08-晋升、跳槽还是转行",
+            "anchor": "转行"
           },
           "nav_id": "08-06"
         },
@@ -3397,7 +3397,7 @@
           "title": "转行期的钱与关系",
           "target": {
             "type": "doc",
-            "location": "book/08-晋升、跳槽还是转行/09-转行期的钱与关系",
+            "location": "book/08-晋升、跳槽还是转行",
             "anchor": ""
           },
           "children": [
@@ -3424,7 +3424,7 @@
           "title": "照护与职业节奏",
           "target": {
             "type": "doc",
-            "location": "book/08-晋升、跳槽还是转行/10-照护与职业节奏",
+            "location": "book/08-晋升、跳槽还是转行",
             "anchor": ""
           },
           "children": [
@@ -3493,8 +3493,8 @@
           ],
           "target": {
             "type": "doc",
-            "location": "book/08-晋升、跳槽还是转行/06-再次进入教育体系",
-            "anchor": ""
+            "location": "book/08-晋升、跳槽还是转行",
+            "anchor": "再次进入教育体系"
           },
           "nav_id": "08-09"
         },
@@ -3502,7 +3502,7 @@
           "title": "职业中段与年龄",
           "target": {
             "type": "doc",
-            "location": "book/08-晋升、跳槽还是转行/08-职业中段与年龄",
+            "location": "book/08-晋升、跳槽还是转行",
             "anchor": ""
           },
           "children": [
@@ -3598,8 +3598,8 @@
           ],
           "target": {
             "type": "doc",
-            "location": "book/09-自由职业、副业与创业/01-自由职业",
-            "anchor": ""
+            "location": "book/09-自由职业、副业与创业",
+            "anchor": "自由职业"
           },
           "nav_id": "09-01"
         },
@@ -3657,8 +3657,8 @@
           ],
           "target": {
             "type": "doc",
-            "location": "book/09-自由职业、副业与创业/02-副业",
-            "anchor": ""
+            "location": "book/09-自由职业、副业与创业",
+            "anchor": "副业"
           },
           "nav_id": "09-02"
         },
@@ -3756,8 +3756,8 @@
           ],
           "target": {
             "type": "doc",
-            "location": "book/09-自由职业、副业与创业/03-创业",
-            "anchor": ""
+            "location": "book/09-自由职业、副业与创业",
+            "anchor": "创业"
           },
           "nav_id": "09-03"
         }
@@ -6621,8 +6621,8 @@
           ],
           "target": {
             "type": "doc",
-            "location": "book/16-钱与生活基本盘/01-拿到钱的第一年",
-            "anchor": ""
+            "location": "book/16-钱与生活基本盘",
+            "anchor": "拿到钱的第一年"
           },
           "nav_id": "16-01"
         },
@@ -6656,8 +6656,8 @@
           ],
           "target": {
             "type": "doc",
-            "location": "book/16-钱与生活基本盘/02-社保公积金与税",
-            "anchor": ""
+            "location": "book/16-钱与生活基本盘",
+            "anchor": "社保公积金与税"
           },
           "nav_id": "16-02"
         },
@@ -6691,8 +6691,8 @@
           ],
           "target": {
             "type": "doc",
-            "location": "book/16-钱与生活基本盘/03-保险与风险",
-            "anchor": ""
+            "location": "book/16-钱与生活基本盘",
+            "anchor": "保险与风险"
           },
           "nav_id": "16-03"
         }
@@ -6737,8 +6737,8 @@
           ],
           "target": {
             "type": "doc",
-            "location": "book/17-身体与心理的可持续性/01-节奏与身体",
-            "anchor": ""
+            "location": "book/17-身体与心理的可持续性",
+            "anchor": "节奏与身体"
           },
           "nav_id": "17-01"
         },
@@ -6746,7 +6746,7 @@
           "title": "心理与求助",
           "target": {
             "type": "doc",
-            "location": "book/17-身体与心理的可持续性/02-心理与求助",
+            "location": "book/17-身体与心理的可持续性",
             "anchor": ""
           },
           "children": [
@@ -6773,7 +6773,7 @@
           "title": "生病与照护自己",
           "target": {
             "type": "doc",
-            "location": "book/17-身体与心理的可持续性/03-生病与照护自己",
+            "location": "book/17-身体与心理的可持续性",
             "anchor": ""
           },
           "children": [

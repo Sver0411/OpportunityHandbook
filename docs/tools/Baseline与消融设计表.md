@@ -82,4 +82,4 @@ last_verified: 2026-09-29
 
 这份资料解决「怎么做」，判断「值不值得、要不要做」请看主线：
 
-- [实验与数据](../../book/04-升学、就业还是出国/04-深入科研.md#research-experiment-data)
+- [实验与数据](../../book/04-升学、就业还是出国.md#research-experiment-data)

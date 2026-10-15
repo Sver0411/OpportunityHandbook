@@ -83,5 +83,5 @@ Hackathon（黑客松）与 Game Jam 属于**限时创作活动**：24–72 小�
 
 这份资料解决「怎么做」，判断「值不值得、要不要做」请看主线：
 
-- [什么比赛值得参加](../../book/03-做项目、打比赛、进实验室/02-竞赛.md#competition-what-worth-joining)
-- [奖项和过程哪个更重要](../../book/03-做项目、打比赛、进实验室/02-竞赛.md#competition-award-vs-process)
+- [什么比赛值得参加](../../book/03-做项目、打比赛、进实验室.md#competition-what-worth-joining)
+- [奖项和过程哪个更重要](../../book/03-做项目、打比赛、进实验室.md#competition-award-vs-process)

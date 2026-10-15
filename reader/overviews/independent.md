@@ -6,25 +6,25 @@
 
 ## 选择独立工作方式
 
-先分清几种形态的差别：[怎么开始](#/doc/book/09-自由职业、副业与创业/01-自由职业/startup-freelance) 讲自由职业的起步路径，[什么副业值得做](#/doc/book/09-自由职业、副业与创业/02-副业/startup-side-project) 给副业的筛选标准（**能复用主业能力、且不依赖平台流量的更稳**）。具体的副业类型：[接单](#/doc/book/09-自由职业、副业与创业/02-副业/side-gig-orders)、[咨询](#/doc/book/09-自由职业、副业与创业/02-副业/side-consulting)、[内容创作](#/doc/book/09-自由职业、副业与创业/02-副业/side-content)、[独立开发](#/doc/book/09-自由职业、副业与创业/02-副业/startup-indie-hacker)、[小生意](#/doc/book/09-自由职业、副业与创业/02-副业/side-small-business)。总览见[创业与自由职业](#/doc/docs/manuals/创业与自由职业)。
+先分清几种形态的差别：[怎么开始](#/doc/book/09-自由职业、副业与创业/startup-freelance) 讲自由职业的起步路径，[什么副业值得做](#/doc/book/09-自由职业、副业与创业/startup-side-project) 给副业的筛选标准（**能复用主业能力、且不依赖平台流量的更稳**）。具体的副业类型：[接单](#/doc/book/09-自由职业、副业与创业/side-gig-orders)、[咨询](#/doc/book/09-自由职业、副业与创业/side-consulting)、[内容创作](#/doc/book/09-自由职业、副业与创业/side-content)、[独立开发](#/doc/book/09-自由职业、副业与创业/startup-indie-hacker)、[小生意](#/doc/book/09-自由职业、副业与创业/side-small-business)。总览见[创业与自由职业](#/doc/docs/manuals/创业与自由职业)。
 
 ## 需求、用户与第一位客户
 
-**先验证需求，再投入生产。** [创业前应该验证什么](#/doc/book/09-自由职业、副业与创业/03-创业/startup-validate-before-quit) 讲的是在辞职之前该拿到什么证据，[找问题与用户访谈](#/doc/docs/entrepreneurship/找问题与用户访谈) 给的是访谈方法——**问「你上次遇到这个问题是什么时候、怎么解决的」，不要问「你觉得这个想法好不好」**。
+**先验证需求，再投入生产。** [创业前应该验证什么](#/doc/book/09-自由职业、副业与创业/startup-validate-before-quit) 讲的是在辞职之前该拿到什么证据，[找问题与用户访谈](#/doc/docs/entrepreneurship/找问题与用户访谈) 给的是访谈方法——**问「你上次遇到这个问题是什么时候、怎么解决的」，不要问「你觉得这个想法好不好」**。
 
-做产品的人看[MVP](#/doc/book/09-自由职业、副业与创业/03-创业/startup-mvp)（范围控制比功能数量重要），然后想办法拿到[第一批用户](#/doc/book/09-自由职业、副业与创业/03-创业/startup-first-users)。接单型的工作则从[找客户](#/doc/book/09-自由职业、副业与创业/01-自由职业/freelance-clients) 开始，链条见[第一个客户：从发现到复购](#/doc/docs/entrepreneurship/第一单客户)，获客方式见[分销与获客](#/doc/docs/entrepreneurship/分销与获客)，完整样本见 [Case：第一次自由职业客户](#/doc/docs/cases/第一次自由职业客户)。
+做产品的人看[MVP](#/doc/book/09-自由职业、副业与创业/startup-mvp)（范围控制比功能数量重要），然后想办法拿到[第一批用户](#/doc/book/09-自由职业、副业与创业/startup-first-users)。接单型的工作则从[找客户](#/doc/book/09-自由职业、副业与创业/freelance-clients) 开始，链条见[第一个客户：从发现到复购](#/doc/docs/entrepreneurship/第一单客户)，获客方式见[分销与获客](#/doc/docs/entrepreneurship/分销与获客)，完整样本见 [Case：第一次自由职业客户](#/doc/docs/cases/第一次自由职业客户)。
 
 ## 报价、交付与合作
 
-**定价要从成本倒推，不是从市场均价倒推。** [自由职业的成本结构与定价底线](#/doc/book/09-自由职业、副业与创业/01-自由职业/freelance-cost-structure) 讲怎么算真实时薪（**要算上获客、沟通、返工这些不收费的时间**），[定价](#/doc/book/09-自由职业、副业与创业/01-自由职业/freelance-pricing) 讲报价结构，系统方法见[定价与报价](#/doc/docs/entrepreneurship/定价与报价)。
+**定价要从成本倒推，不是从市场均价倒推。** [自由职业的成本结构与定价底线](#/doc/book/09-自由职业、副业与创业/freelance-cost-structure) 讲怎么算真实时薪（**要算上获客、沟通、返工这些不收费的时间**），[定价](#/doc/book/09-自由职业、副业与创业/freelance-pricing) 讲报价结构，系统方法见[定价与报价](#/doc/docs/entrepreneurship/定价与报价)。
 
-交付环节最容易吃亏的是范围：[合同](#/doc/book/09-自由职业、副业与创业/01-自由职业/freelance-contract) 与[客户沟通与需求确认表](#/doc/docs/tools/客户沟通表) 处理「当初说好的」这类争议，[自由职业报价单模板](#/doc/docs/tools/自由职业报价单) 把范围、交付物、修改次数与付款节点写清楚。完整流程见 [Playbook：第一次接单](#/doc/docs/playbooks/第一次接单)。
+交付环节最容易吃亏的是范围：[合同](#/doc/book/09-自由职业、副业与创业/freelance-contract) 与[客户沟通与需求确认表](#/doc/docs/tools/客户沟通表) 处理「当初说好的」这类争议，[自由职业报价单模板](#/doc/docs/tools/自由职业报价单) 把范围、交付物、修改次数与付款节点写清楚。完整流程见 [Playbook：第一次接单](#/doc/docs/playbooks/第一次接单)。
 
 ## 现金流、规模与转主业
 
-三个必须先算清的问题：[收入稳定性](#/doc/book/09-自由职业、副业与创业/01-自由职业/freelance-stability)（**收入波动比收入高低更影响生活**）、[客户太集中怎么办](#/doc/book/09-自由职业、副业与创业/01-自由职业/freelance-client-concentration)（单一客户占七成以上时，你实际上是被雇的）、[商业模式](#/doc/book/09-自由职业、副业与创业/03-创业/startup-business-model)（钱从谁那里、按什么方式进来）。
+三个必须先算清的问题：[收入稳定性](#/doc/book/09-自由职业、副业与创业/freelance-stability)（**收入波动比收入高低更影响生活**）、[客户太集中怎么办](#/doc/book/09-自由职业、副业与创业/freelance-client-concentration)（单一客户占七成以上时，你实际上是被雇的）、[商业模式](#/doc/book/09-自由职业、副业与创业/startup-business-model)（钱从谁那里、按什么方式进来）。
 
-要放大规模时看[Incubator](#/doc/book/09-自由职业、副业与创业/03-创业/startup-incubator)、[Accelerator](#/doc/book/09-自由职业、副业与创业/03-创业/startup-accelerator) 与[融资](#/doc/book/09-自由职业、副业与创业/03-创业/startup-funding)——**融资是加速手段，不是成功标志**，多数小生意不需要它。从副业转成主业前，先看[副业转主业](#/doc/book/09-自由职业、副业与创业/03-创业/side-project-to-main-business) 与[从自由职业到工作室](#/doc/docs/entrepreneurship/从自由职业到工作室)，现金流与合同边界见[现金流、发票与合同边界](#/doc/docs/entrepreneurship/现金流与合同)。
+要放大规模时看[Incubator](#/doc/book/09-自由职业、副业与创业/startup-incubator)、[Accelerator](#/doc/book/09-自由职业、副业与创业/startup-accelerator) 与[融资](#/doc/book/09-自由职业、副业与创业/startup-funding)——**融资是加速手段，不是成功标志**，多数小生意不需要它。从副业转成主业前，先看[副业转主业](#/doc/book/09-自由职业、副业与创业/side-project-to-main-business) 与[从自由职业到工作室](#/doc/docs/entrepreneurship/从自由职业到工作室)，现金流与合同边界见[现金流、发票与合同边界](#/doc/docs/entrepreneurship/现金流与合同)。
 
 ## 什么时候要谨慎
 

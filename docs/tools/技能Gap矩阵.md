@@ -58,7 +58,7 @@ last_verified: 2026-09-29
 
 ## 相关
 
-[JD 拆解表](JD拆解表.md)、[什么技能值得学](../../book/02-在学校里先把基础打好/04-专业技能.md#skill-what-to-learn)。
+[JD 拆解表](JD拆解表.md)、[什么技能值得学](../../book/02-在学校里先把基础打好.md#skill-what-to-learn)。
 
 ## 来源与更新
 

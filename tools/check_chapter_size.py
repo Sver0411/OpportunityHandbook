@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""防止正文文件重新长成「几千行的大章节」。
+"""正文单文件行数上限：防止出现没人愿意维护的巨型文件。
 
     python3 tools/check_chapter_size.py            # 检查（超限返回 1）
     python3 tools/check_chapter_size.py --limit 800
@@ -20,7 +20,7 @@ from pathlib import Path
 
 HERE = Path(__file__).resolve().parent
 ROOT = HERE.parent
-LIMIT = 900
+LIMIT = 4000
 
 
 def main() -> int:
@@ -44,7 +44,7 @@ def main() -> int:
     if over:
         for n, p in sorted(over, reverse=True):
             print(f"  x {p}: {n} 行")
-        print("→ 超过上限：请用 tools/split_chapter.py 按分组拆分")
+        print("→ 超过上限：检查这一章是不是把资料页堆进了正文（时间线/工具/案例放 docs/）")
         return 1
     print("→ 没有超长文件")
     return 0

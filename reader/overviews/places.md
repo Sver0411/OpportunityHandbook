@@ -29,7 +29,7 @@
 
 ## 怎么比较目的地
 
-先确定方向再抠细节。判断「要不要去」在[海外升学](#/guide/overseas-study)（含[留学值不值得](#/doc/book/04-升学、就业还是出国/03-海外升学/overseas-is-it-for-me) 与[留学总成本](#/doc/book/04-升学、就业还是出国/03-海外升学/overseas-total-cost)）；具体到选哪个地方，[国家和地区怎么选](#/doc/book/04-升学、就业还是出国/03-海外升学/overseas-choose-country) 给的是比较维度。
+先确定方向再抠细节。判断「要不要去」在[海外升学](#/guide/overseas-study)（含[留学值不值得](#/doc/book/04-升学、就业还是出国/overseas-is-it-for-me) 与[留学总成本](#/doc/book/04-升学、就业还是出国/overseas-total-cost)）；具体到选哪个地方，[国家和地区怎么选](#/doc/book/04-升学、就业还是出国/overseas-choose-country) 给的是比较维度。
 
 落到某一个地区时，按这个顺序读：
 

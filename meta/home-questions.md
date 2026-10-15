@@ -26,7 +26,7 @@ stages: [undergraduate, new_grad, work_1_3]
 ```
 
 看目标岗位的学历门槛是不是硬门槛：是，则回报明确；只是“想提升一下”，则回报最不确定。
-见 [怎么判断“读研值不值得”](../book/04-升学、就业还是出国/02-国内升学.md#grad-school-worth-it)。
+见 [怎么判断“读研值不值得”](../book/04-升学、就业还是出国.md#grad-school-worth-it)。
 
 ### 保研和考研应该怎么选？
 
@@ -41,7 +41,7 @@ stages: [undergraduate]
 ```
 
 先查本校推免办法，看自己有没有资格；先确认自己是否具备推免资格；如果具备，再比较保研能够进入的学校和方向是否符合目标；没有推免资格时，再把考研、就业或其他升学路径作为主要选择。
-见 [保研和考研应该怎么选](../book/04-升学、就业还是出国/02-国内升学.md#baoyan-vs-kaoyan)。
+见 [保研和考研应该怎么选](../book/04-升学、就业还是出国.md#baoyan-vs-kaoyan)。
 
 ### 什么比赛值得参加？
 
@@ -56,7 +56,7 @@ stages: [highschool, secondary_vocational, college, undergraduate, master]
 ```
 
 一个非常重要的判断维度是：结束以后你能留下什么别人可以验证的成果。
-见 [什么比赛值得参加](../book/03-做项目、打比赛、进实验室/02-竞赛.md#competition-what-worth-joining)。
+见 [什么比赛值得参加](../book/03-做项目、打比赛、进实验室.md#competition-what-worth-joining)。
 
 ### 本科生怎么开始科研？
 
@@ -71,7 +71,7 @@ stages: [undergraduate]
 ```
 
 本科生开始科研前，不需要先达到“能独立完成研究”的程度。更需要的是具备所在领域最基本的课程基础，并能在导师或高年级成员指导下完成一个可验证的小任务——不同学科的小任务差别很大：复现代码、整理文献、协助实验、数据清理、访谈编码、档案整理、田野记录、设计调研都可以。
-见 [本科生什么时候值得开始科研](../book/03-做项目、打比赛、进实验室/03-科研初体验.md#research-undergrad-start)。
+见 [本科生什么时候值得开始科研](../book/03-做项目、打比赛、进实验室.md#research-undergrad-start)。
 
 ### 第一份工作应该怎么看？
 
@@ -86,7 +86,7 @@ stages: [new_grad, undergraduate]
 ```
 
 看它换回的是“可迁移的技能与作品”，还是“只有这家公司认的熟练度”。
-见 [第一份工作最应该换回什么](../book/06-从学校走向第一份工作/06-第一份工作.md#first-job-what-to-trade-for)。
+见 [第一份工作最应该换回什么](../book/06-从学校走向第一份工作.md#first-job-what-to-trade-for)。
 
 ### 工作几年以后应该怎么升职？
 
@@ -101,7 +101,7 @@ stages: [work_1_3, work_3_5]
 ```
 
 决定晋升的不是工作量，而是别人能不能说出你独立解决了什么问题。
-见 [工作头几年应该积累什么](../book/07-从新人到能独立负责/02-从执行到独立负责.md#work-record-achievements)。
+见 [工作头几年应该积累什么](../book/07-从新人到能独立负责.md#work-record-achievements)。
 
 ### 转行要不要从零开始？
 
@@ -116,7 +116,7 @@ stages: [work_1_3, work_3_5, career_change]
 ```
 
 不要清零。先把过去的工作翻译成新方向的通用语言，再补最短的缺口。
-见 [工作后转行为什么不应该清零过去经历](../book/08-晋升、跳槽还是转行/05-转行.md#career-change-keep-capital)。
+见 [工作后转行为什么不应该清零过去经历](../book/08-晋升、跳槽还是转行.md#career-change-keep-capital)。
 
 ### 什么证书值得考？
 
@@ -131,7 +131,7 @@ stages: [college, undergraduate, new_grad, work_1_3, career_change]
 ```
 
 先判断它属于哪一类：法定准入、招聘门槛、行业认可、能力证明，还是低价值。
-见 [什么证书值得考](../book/02-在学校里先把基础打好/06-证书.md#certificate-what-is-worth-it)。
+见 [什么证书值得考](../book/02-在学校里先把基础打好.md#certificate-what-is-worth-it)。
 
 ### 不知道自己想做什么怎么办？
 
@@ -146,7 +146,7 @@ stages: [highschool, college, undergraduate, new_grad, work_1_3, career_change]
 ```
 
 用几个成本很低的真实体验去试，而不是继续做测评或继续想。
-见 [不知道方向时如何做低成本实验](../book/02-在学校里先把基础打好/02-开始认识真实世界.md#explore-low-cost-experiments)。
+见 [不知道方向时如何做低成本实验](../book/02-在学校里先把基础打好.md#explore-low-cost-experiments)。
 
 ### 这个比赛是不是交了钱就能拿奖？
 
@@ -161,7 +161,7 @@ stages: [highschool, college, undergraduate, new_grad]
 ```
 
 看主办方、看获奖比例、看有没有第三方认它——三条里有一条不合格就要警惕。
-见 [怎么识别付费拿奖的竞赛](../book/03-做项目、打比赛、进实验室/02-竞赛.md#competition-what-worth-joining)。
+见 [怎么识别付费拿奖的竞赛](../book/03-做项目、打比赛、进实验室.md#competition-what-worth-joining)。
 
 ### 我的 GitHub 项目算项目经历吗？
 
@@ -176,7 +176,7 @@ stages: [undergraduate, master, new_grad, work_1_3]
 ```
 
 看有没有人用过、能不能被验证、README 能不能让人 5 分钟跑起来。
-见 [GitHub 项目做到什么程度才算项目经历](../book/03-做项目、打比赛、进实验室/01-项目与作品.md#project-what-is-real)。
+见 [GitHub 项目做到什么程度才算项目经历](../book/03-做项目、打比赛、进实验室.md#project-what-is-real)。
 
 ### 两个 Offer 应该怎么比较？
 
@@ -191,7 +191,7 @@ stages: [new_grad, work_1_3]
 ```
 
 把两边的现金、成长、城市与退出选项拉到同一张表上，用区间而不是单点去估。
-见 [Offer 应该怎么比较](../book/06-从学校走向第一份工作/05-Offer.md#offer-comparison)。
+见 [Offer 应该怎么比较](../book/06-从学校走向第一份工作.md#offer-comparison)。
 
 ### 怎么比较两个完全不同的机会？
 
@@ -221,7 +221,7 @@ stages: [undergraduate, master]
 ```
 
 提前一个学期动手，先按目标岗位的 JD 补齐最缺的一项（项目、工具或英语），再集中投递；实习最值钱的是**完整跟过一件事**，不是公司名。
-见 [Playbook：第一次找实习](../docs/playbooks/第一次找实习.md) 与 [实习每天在做什么](../book/04-升学、就业还是出国/05-实习进一步升级.md#internship-daily)。
+见 [Playbook：第一次找实习](../docs/playbooks/第一次找实习.md) 与 [实习每天在做什么](../book/04-升学、就业还是出国.md#internship-daily)。
 
 ### 投了很多简历都没回音，问题在哪？
 
@@ -251,7 +251,7 @@ stages: [college, undergraduate]
 ```
 
 先分清错的是**专业内容**、**学校平台**还是**行业预期**——三者对应的纠偏路径与成本差很多；校内调整（转专业、辅修、跨院选课）成本最低，先试它。
-见 [如果第一次选择不理想怎么办](../book/01-先决定下一步往哪里走/02-选学校与选专业.md#choose-major-mismatch)。
+见 [如果第一次选择不理想怎么办](../book/01-先决定下一步往哪里走.md#choose-major-mismatch)。
 
 ### 怎么联系导师 / 要不要套磁？
 
@@ -266,7 +266,7 @@ stages: [undergraduate, master, phd]
 ```
 
 先读一到两篇对方的工作，邮件控制在 200 字内并**提出一个具体问题**；两周无回复在原邮件下跟进一次，仍无回复就换下一位。
-见 [Playbook：第一次联系导师](../docs/playbooks/第一次联系导师.md) 与 [怎么找导师](../book/03-做项目、打比赛、进实验室/03-科研初体验.md#research-find-supervisor)。
+见 [Playbook：第一次联系导师](../docs/playbooks/第一次联系导师.md) 与 [怎么找导师](../book/03-做项目、打比赛、进实验室.md#research-find-supervisor)。
 
 ### 家里预算有限，还能留学吗？
 
@@ -296,7 +296,7 @@ stages: [college, undergraduate, new_grad, work_1_3]
 ```
 
 「考公」其实是三条通道，条件与日常差别很大：先读当年公告与职位表（专业代码、学历、政治面貌、基层年限是最硬的筛子），再确认服务期与地域，最后判断自己能否接受材料与协调为主的日常。
-见 [考公、选调与事业单位](../book/01-先决定下一步往哪里走/01-认识你面前的几条主要路线.md#paths-public-sector) 与 [公共部门与事业单位](../docs/career-guides/公共部门.md)。
+见 [考公、选调与事业单位](../book/01-先决定下一步往哪里走.md#paths-public-sector) 与 [公共部门与事业单位](../docs/career-guides/公共部门.md)。
 
 ### 中职毕业，能不能继续升学？
 
@@ -311,7 +311,7 @@ stages: [secondary_vocational, college]
 ```
 
 先弄清本省叫法，再定通道：去省教育考试院官网搜当年的「高职分类考试」「对口升学」文件，把报名时间、科目与录取规则抄下来；同时问班主任本校上一届有多少人升学、走哪条路。
-见 [中职毕业后的升学路怎么走](../book/01-先决定下一步往哪里走/03-专科与职业教育.md#vocational-exam-path) 与 [中职与专科阶段有哪些资助](../book/01-先决定下一步往哪里走/03-专科与职业教育.md#vocational-subsidy)。
+见 [中职毕业后的升学路怎么走](../book/01-先决定下一步往哪里走.md#vocational-exam-path) 与 [中职与专科阶段有哪些资助](../book/01-先决定下一步往哪里走.md#vocational-subsidy)。
 
 ### 40 岁以后还能换方向吗？
 
@@ -326,7 +326,7 @@ stages: [senior, career_change]
 ```
 
 40 岁以后继续用投递式求职，通过率会明显下降。先把问题从「还能找到什么岗位」换成「谁会为什么事来找我」，再在三条主线里选一条（原领域做深 / 能力产品化 / 转向看经验的岗位）。
-见 [40 岁以后怎么规划工作](../book/08-晋升、跳槽还是转行/08-职业中段与年龄.md#career-after-40) 与 [中年重新开始前先算什么](../book/08-晋升、跳槽还是转行/08-职业中段与年龄.md#career-midlife-reset)。
+见 [40 岁以后怎么规划工作](../book/08-晋升、跳槽还是转行.md#career-after-40) 与 [中年重新开始前先算什么](../book/08-晋升、跳槽还是转行.md#career-midlife-reset)。
 
 ### 博士毕业以后有哪些出口？
 
@@ -341,7 +341,7 @@ stages: [phd]
 ```
 
 判断顺序：先看准入门槛，再算聘期风险，最后看技能变现路径。
-见 [博士毕业后的出口怎么比较](../book/04-升学、就业还是出国/07-读博与博士毕业.md#phd-career-paths) 与 [读博期间该积累什么](../book/04-升学、就业还是出国/07-读博与博士毕业.md#phd-during-plan)。
+见 [博士毕业后的出口怎么比较](../book/04-升学、就业还是出国.md#phd-career-paths) 与 [读博期间该积累什么](../book/04-升学、就业还是出国.md#phd-during-plan)。
 
 ### 技能过时了怎么办？
 
@@ -356,7 +356,7 @@ stages: [work_3_5, senior]
 ```
 
 工具更新快，学方法比背 API 重要；如果是领域整体收缩，更该考虑迁移到相邻领域，而不是在收缩的行业里继续补技能。
-见 [技能过时了怎么补](../book/08-晋升、跳槽还是转行/07-资深阶段：技能与收入.md#career-skill-decay) 与 [资深阶段的收入结构怎么安排](../book/08-晋升、跳槽还是转行/07-资深阶段：技能与收入.md#career-income-mix)。
+见 [技能过时了怎么补](../book/08-晋升、跳槽还是转行.md#career-skill-decay) 与 [资深阶段的收入结构怎么安排](../book/08-晋升、跳槽还是转行.md#career-income-mix)。
 
 ### 怎么和父母沟通升学与职业选择？
 
@@ -371,7 +371,7 @@ stages: [highschool, undergraduate, new_grad, career_change]
 ```
 
 带上两三个方案与各自的成本和回退方式，让对方在选项里参与决策；并约定一个复盘时间，把争论变成可检验的约定。
-见 [怎么和父母沟通升学与职业选择](../book/01-先决定下一步往哪里走/07-家庭沟通与支持.md#family-talk)。
+见 [怎么和父母沟通升学与职业选择](../book/01-先决定下一步往哪里走.md#family-talk)。
 
 ### 第一个月的工资怎么分配？
 
@@ -385,7 +385,7 @@ topics: [money]
 stages: [new_grad, work_1_3]
 ```
 
-见 [第一个月的工资怎么分配](../book/16-钱与生活基本盘/01-拿到钱的第一年.md#money-first-salary-split) 与 [应急金该留多少](../book/16-钱与生活基本盘/01-拿到钱的第一年.md#money-emergency-fund)。
+见 [第一个月的工资怎么分配](../book/16-钱与生活基本盘.md#money-first-salary-split) 与 [应急金该留多少](../book/16-钱与生活基本盘.md#money-emergency-fund)。
 
 ### 社保和公积金到底有什么用？
 
@@ -399,7 +399,7 @@ topics: [money, rights]
 stages: [new_grad, work_1_3, work_3_5]
 ```
 
-见 [社保到底保什么](../book/16-钱与生活基本盘/02-社保公积金与税.md#money-social-insurance) 与 [公积金怎么用](../book/16-钱与生活基本盘/02-社保公积金与税.md#money-housing-fund)。
+见 [社保到底保什么](../book/16-钱与生活基本盘.md#money-social-insurance) 与 [公积金怎么用](../book/16-钱与生活基本盘.md#money-housing-fund)。
 
 ### 状态持续不好，什么时候该找专业帮助？
 
@@ -413,7 +413,7 @@ topics: [health]
 stages: [undergraduate, new_grad, work_1_3, work_3_5]
 ```
 
-见 [情绪持续不好时找谁](../book/17-身体与心理的可持续性/02-心理与求助.md#health-mental-support) 与 [什么时候该去看医生](../book/17-身体与心理的可持续性/03-生病与照护自己.md#health-when-to-see-doctor)。
+见 [情绪持续不好时找谁](../book/17-身体与心理的可持续性.md#health-mental-support) 与 [什么时候该去看医生](../book/17-身体与心理的可持续性.md#health-when-to-see-doctor)。
 
 ### 被欠薪或被违法辞退怎么办？
 
@@ -441,7 +441,7 @@ topics: [care, money]
 stages: [new_grad, work_1_3, work_3_5, senior]
 ```
 
-见 [家里需要你出钱时怎么安排](../book/01-先决定下一步往哪里走/07-家庭沟通与支持.md#care-family-budget) 与 [成为被依赖的人之后](../book/08-晋升、跳槽还是转行/10-照护与职业节奏.md#care-family-role)。
+见 [家里需要你出钱时怎么安排](../book/01-先决定下一步往哪里走.md#care-family-budget) 与 [成为被依赖的人之后](../book/08-晋升、跳槽还是转行.md#care-family-role)。
 
 ### 考研该考哪所学校？怎么看才靠谱？
 
@@ -456,7 +456,7 @@ stages: [undergraduate, new_grad, work_1_3]
 ```
 
 先定专业代码与专业课是否自命题，再在研招网专业目录里建池子；每所学校横向比招生人数、推免占比、统考名额、近三年复试线与复录比。用 [择校对比表](../docs/tools/择校对比表.md) 记录。
-见 [考研怎么定目标校](../book/05-备考与应试/05-考研择校与信息透明度.md#kaoyan-choose-school-steps) 与 [怎么判断压分与信息透明度](../book/05-备考与应试/05-考研择校与信息透明度.md#kaoyan-school-picking)。
+见 [考研怎么定目标校](../book/05-备考与应试.md#kaoyan-choose-school-steps) 与 [怎么判断压分与信息透明度](../book/05-备考与应试.md#kaoyan-school-picking)。
 
 ### 四六级到底要不要考？不过会影响毕业吗？
 
@@ -471,7 +471,7 @@ stages: [college, undergraduate]
 ```
 
 「不过不给毕业」这个说法本身需要核实——不同学校、不同学院规定不同。最有效的一步是发邮件问教务处：适用范围、替代认定途径、有没有补考机制。
-见 [校内规定说不过就不给毕业](../book/05-备考与应试/02-四六级分数的用途与校内规定.md#cet-school-requirement) 与 [四六级分数在各场景的用途对照](../book/05-备考与应试/02-四六级分数的用途与校内规定.md#cet-score-usage)。
+见 [校内规定说不过就不给毕业](../book/05-备考与应试.md#cet-school-requirement) 与 [四六级分数在各场景的用途对照](../book/05-备考与应试.md#cet-score-usage)。
 
 ### 四六级怎么练才有效？
 
@@ -486,7 +486,7 @@ stages: [college, undergraduate]
 ```
 
 先做一套真题把分数拆到题型上，再按「听力 > 阅读 > 写作 > 翻译」分配时间。精听要对照原文看卡在连读、语速还是词不认识；阅读每天拆几篇长句就够。
-见 [四六级分项怎么练](../book/05-备考与应试/01-四六级怎么准备.md#cet-section-training) 与 [四六级备考排期表](../docs/tools/四六级备考排期表.md)。
+见 [四六级分项怎么练](../book/05-备考与应试.md#cet-section-training) 与 [四六级备考排期表](../docs/tools/四六级备考排期表.md)。
 
 ### 考研没考上，该二战还是直接工作？
 
@@ -501,7 +501,7 @@ stages: [undergraduate, new_grad, work_1_3]
 ```
 
 先问「上次为什么没考上」，再问「这次有什么不同」。三个变量都没有，就是把上一年重复一遍。已有可接受的工作时，二战的机会成本已经从「无」变成「很高」。
-见 [二战该不该打](../book/05-备考与应试/08-考研调剂与二战.md#kaoyan-retake-decision) 与 [调剂系统怎么操作](../book/05-备考与应试/08-考研调剂与二战.md#kaoyan-adjustment-system)。
+见 [二战该不该打](../book/05-备考与应试.md#kaoyan-retake-decision) 与 [调剂系统怎么操作](../book/05-备考与应试.md#kaoyan-adjustment-system)。
 
 ### 专升本值不值得？统招和成人教育怎么选？
 
@@ -516,7 +516,7 @@ stages: [secondary_vocational, college]
 ```
 
 只有统招专升本通常能改变第一学历，成人教育改变的是学历层次而非第一学历标注。选之前先确认目标单位承不承认非全日制——很多岗位写的是「全日制本科」。
-见 [统招专升本与成人教育怎么选](../book/05-备考与应试/04-专升本怎么准备.md#zsb-path-choice) 与 [专科生有哪几条上升通道](../book/01-先决定下一步往哪里走/15-专科生的上升通道.md#vocational-pathways)。
+见 [统招专升本与成人教育怎么选](../book/05-备考与应试.md#zsb-path-choice) 与 [专科生有哪几条上升通道](../book/01-先决定下一步往哪里走.md#vocational-pathways)。
 
 ### 专升本怎么报名？志愿怎么排？
 
@@ -531,7 +531,7 @@ stages: [secondary_vocational, college]
 ```
 
 先看本省的可报考专业目录再定目标（很多省份不允许跨专业）；资格被退回的最常见原因是专科专业名称与目录不一致，用学信网的正式名称逐字填。
-见 [专升本报名到录取的完整流程](../book/05-备考与应试/04-专升本怎么准备.md#zsb-apply-process) 与 [Playbook：第一次准备专升本](../docs/playbooks/第一次准备专升本.md)。
+见 [专升本报名到录取的完整流程](../book/05-备考与应试.md#zsb-apply-process) 与 [Playbook：第一次准备专升本](../docs/playbooks/第一次准备专升本.md)。
 
 ### 专科生还有哪些路可以往上走？
 
@@ -546,7 +546,7 @@ stages: [secondary_vocational, college]
 ```
 
 先翻 15–20 条目标岗位 JD 看学历门槛，再按「我现在有资格吗」筛通道。资格是硬条件不是偏好——已毕业就没有应届统招的机会了。
-见 [专科生有哪几条上升通道](../book/01-先决定下一步往哪里走/15-专科生的上升通道.md#vocational-pathways)、[上升通道对比表](../docs/tools/上升通道对比表.md)。
+见 [专科生有哪几条上升通道](../book/01-先决定下一步往哪里走.md#vocational-pathways)、[上升通道对比表](../docs/tools/上升通道对比表.md)。
 
 ### 雅思还是托福？小分不够还能补救吗？
 
@@ -561,4 +561,4 @@ stages: [undergraduate, new_grad]
 ```
 
 总分够不等于达标，小分差 0.5 被拒很常见。补救顺序：先看项目能不能接受 → 再考虑二刷（至少留 2 个月）→ 换其他证明。成绩复议不能提高真实水平，有时限，别把申请压在复核上。
-见 [雅思还是托福：按目标项目倒推](../book/05-备考与应试/03-留学语言考试怎么准备.md#lang-test-choice) 与 [小分不达标、成绩复议与二刷](../book/05-备考与应试/03-留学语言考试怎么准备.md#lang-test-score-issues)。
+见 [雅思还是托福：按目标项目倒推](../book/05-备考与应试.md#lang-test-choice) 与 [小分不达标、成绩复议与二刷](../book/05-备考与应试.md#lang-test-score-issues)。

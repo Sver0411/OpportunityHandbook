@@ -91,4 +91,4 @@ last_verified: 2026-09-29
 
 这份资料解决「怎么做」，判断「值不值得、要不要做」请看主线：
 
-- [编程与数据竞赛](../../book/03-做项目、打比赛、进实验室/02-竞赛.md#competition-programming-contest)
+- [编程与数据竞赛](../../book/03-做项目、打比赛、进实验室.md#competition-programming-contest)

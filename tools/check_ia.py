@@ -30,15 +30,19 @@ NAV_PATH = ROOT / "meta" / "navigation.json"
 
 
 def collect_anchors(doc: M.Doc) -> set[str]:
-    """文档里所有真实的 HTML 锚点 id（## / ### 标题 + 条目 id + 文档自身 id）。"""
+    """文档里所有真实的 HTML 锚点 id（各级标题 + 条目 id + 条目标题）。
+
+    注意：分段是按 `### 条目` 切的，所以章内的分组标题（`## 分组名`）常常落在
+    上一个条目段里。这里对每个段都扫一遍标题行，否则分组锚点会被漏判成
+    「文档里没有这个锚点」——渲染时它其实是有 id 的。
+    """
     ids: set[str] = set()
     for seg in doc.segments:
-        if seg["kind"] == "text":
-            for line in seg["lines"]:
-                m = mdrender._HEADING_RE.match(line)
-                if m:
-                    ids.add(M.slugify(m.group(2)))
-        else:
+        for line in seg.get("lines") or []:
+            m = mdrender._HEADING_RE.match(line)
+            if m:
+                ids.add(M.slugify(m.group(2)))
+        if seg["kind"] != "text":
             eid = (seg.get("meta") or {}).get("id")
             if eid:
                 ids.add(str(eid))

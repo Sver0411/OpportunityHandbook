@@ -60,7 +60,7 @@ TREE = """
     技能型职业的发展空间 @n:trades-career-room
     中职与专科阶段有哪些资助 @e:vocational-subsidy
     中职毕业后的升学路怎么走 @e:vocational-exam-path
-  中职与专科阶段的探索与作品 @d:book/01-先决定下一步往哪里走/06-中职与专科阶段的探索与作品
+  中职与专科阶段的探索与作品 @d:book/01-先决定下一步往哪里走
     中职阶段怎么试出自己想做什么 @e:vocational-explore
     中职与专科阶段能拿出什么作品 @e:vocational-portfolio
   家庭经济与教育成本
@@ -68,17 +68,17 @@ TREE = """
     奖助学金 @e:funding-scholarship-system
     助学贷款 @e:funding-student-loan
     为教育投入多少钱才合理 @n:education-cost-budget
-  家庭沟通与支持 @d:book/01-先决定下一步往哪里走/07-家庭沟通与支持
+  家庭沟通与支持 @d:book/01-先决定下一步往哪里走
     怎么和父母沟通升学与职业选择 @e:family-talk
     家里需要你出钱时怎么安排 @e:care-family-budget
-  不走常规的几条路 @d:book/01-先决定下一步往哪里走/08-不走常规的几条路
+  不走常规的几条路 @d:book/01-先决定下一步往哪里走
     手艺人自己接活：从雇员到接活 @e:paths-trades-own-business
     返乡与县域生活 @e:paths-return-home
     公益与公共服务方向 @e:paths-public-interest
-  没有资源时怎么起步 @d:book/01-先决定下一步往哪里走/09-没有资源时怎么起步
+  没有资源时怎么起步 @d:book/01-先决定下一步往哪里走
     家里第一个上大学或进大厂的人怎么找规则 @e:first-gen-navigate
     没有资源时怎么积累关系 @e:build-social-capital
-  专科生的上升通道 @d:book/01-先决定下一步往哪里走/15-专科生的上升通道
+  专科生的上升通道 @d:book/01-先决定下一步往哪里走
     专科生有哪几条上升通道 @e:vocational-pathways
     怎么按现在的分数和状态排序 @e:zsb-channel-sorting
 
@@ -214,10 +214,10 @@ TREE = """
     论文写作 @e:research-writing-and-submission
     学术会议 @n:research-conference
     科研推荐信怎么写 @n:research-recommendation-letter
-  读研期间怎么用这两年 @d:book/04-升学、就业还是出国/08-读研期间怎么用这两年
+  读研期间怎么用这两年 @d:book/04-升学、就业还是出国
     读研这两年怎么用 @e:master-use-two-years
     读研期间实习和论文怎么安排 @e:master-internship-vs-paper
-  读博与博士毕业 @d:book/04-升学、就业还是出国/07-读博与博士毕业
+  读博与博士毕业 @d:book/04-升学、就业还是出国
     读博期间该积累什么 @e:phd-during-plan
     博士毕业后的出口怎么比较 @e:phd-career-paths
     延期、换方向还是退出 @e:phd-delay-or-quit
@@ -238,44 +238,44 @@ TREE = """
     怎么找全额资助机会 @e:funding-full-funding
 
 05 备考与应试
-  四六级怎么准备 @d:book/05-备考与应试/01-四六级怎么准备
+  四六级怎么准备 @d:book/05-备考与应试
     四六级分项怎么练：哪部分提分性价比最高 @e:cet-section-training
     四六级报名与考试流程 @e:cet-apply-process
-  四六级分数的用途与校内规定 @d:book/05-备考与应试/02-四六级分数的用途与校内规定
+  四六级分数的用途与校内规定 @d:book/05-备考与应试
     四六级分数在各场景的用途对照 @e:cet-score-usage
     校内规定说不过就不给毕业，怎么办 @e:cet-school-requirement
-  留学语言考试怎么准备 @d:book/05-备考与应试/03-留学语言考试怎么准备
+  留学语言考试怎么准备 @d:book/05-备考与应试
     雅思还是托福：按目标项目倒推，不按难度选 @e:lang-test-choice
     小分不达标、成绩复议与二刷 @e:lang-test-score-issues
-  专升本怎么准备 @d:book/05-备考与应试/04-专升本怎么准备
+  专升本怎么准备 @d:book/05-备考与应试
     统招专升本与成人教育怎么选 @e:zsb-path-choice
     专升本报名到录取的完整流程 @e:zsb-apply-process
-  考研择校与信息透明度 @d:book/05-备考与应试/05-考研择校与信息透明度
+  考研择校与信息透明度 @d:book/05-备考与应试
     怎么判断压分与信息透明度 @e:kaoyan-school-picking
     考研怎么定目标校：择校的操作步骤 @e:kaoyan-choose-school-steps
-  考研科目复习与专业课 @d:book/05-备考与应试/06-考研科目复习与专业课
+  考研科目复习与专业课 @d:book/05-备考与应试
     数学一还是数学二、数学三怎么选 @e:kaoyan-math-track
     英语怎么准备：长线科目与阅读为核心 @e:kaoyan-english
     政治怎么复习：什么时候开始、怎么分配 @e:kaoyan-politics
     专业课怎么准备：什么时候开始、怎么找真题 @e:kaoyan-major-studies
-  考研报名、初试与复试 @d:book/05-备考与应试/07-考研报名、初试与复试
+  考研报名、初试与复试 @d:book/05-备考与应试
     考研报名与初试：九个环节和它们的卡点 @e:kaoyan-apply-process
     复试前两周的准备安排 @e:kaoyan-retest-schedule
-  考研调剂与二战 @d:book/05-备考与应试/08-考研调剂与二战
+  考研调剂与二战 @d:book/05-备考与应试
     调剂系统怎么操作：从开放到确认 @e:kaoyan-adjustment-system
     二战该不该打：复盘、止损与三条替代方案 @e:kaoyan-retake-decision
-  考公与考编怎么准备 @d:book/05-备考与应试/09-考公与考编怎么准备
+  考公与考编怎么准备 @d:book/05-备考与应试
     岗位表怎么读 @e:exam-job-table
     从报名到上岸的完整流程 @e:exam-apply-to-onboard
     应届身份与基层年限怎么算 @e:exam-fresh-grad-and-years
-  笔试：行测与申论 @d:book/05-备考与应试/10-笔试：行测与申论
+  笔试：行测与申论 @d:book/05-备考与应试
     行测怎么准备 @e:exam-xingce
     申论怎么准备 @e:exam-shenlun
-  面试与后续环节 @d:book/05-备考与应试/11-面试与后续环节
+  面试与后续环节 @d:book/05-备考与应试
     结构化面试怎么准备 @e:exam-structured-interview
     无领导小组讨论怎么应对 @e:exam-leaderless-discussion
     体检与考察（政审）要注意什么 @e:exam-medical-and-review
-  事业单位与基层项目 @d:book/05-备考与应试/12-事业单位与基层项目
+  事业单位与基层项目 @d:book/05-备考与应试
     事业单位考试怎么选 @e:exam-public-institution
     三支一扶、西部计划、特岗教师：政策怎么核 @e:exam-grassroots-programs
 
@@ -314,7 +314,7 @@ TREE = """
     三方 @e:job-hunting-tripartite-agreement
     背调 @e:job-hunting-background-check
     毁约 @n:offer-renege
-  入职前的核实 @d:book/06-从学校走向第一份工作/08-入职前的核实
+  入职前的核实 @d:book/06-从学校走向第一份工作
     怎么判断一家公司值不值得去 @e:employer-due-diligence
   第一份工作
     第一份工作最应该换回什么 @e:first-job-what-to-trade-for
@@ -323,7 +323,7 @@ TREE = """
     行业还是岗位 @e:first-job-role-vs-industry
     城市还是机会 @e:first-job-city
     工资还是成长 @e:first-job-pay-vs-growth
-  毕业前后的衔接 @d:book/06-从学校走向第一份工作/09-毕业前后的衔接
+  毕业前后的衔接 @d:book/06-从学校走向第一份工作
     应届生身份到底值什么 @e:fresh-grad-status
     毕业到入职之间的几个月怎么用 @e:graduation-to-job-gap
   如果没有顺利进入下一站
@@ -334,7 +334,7 @@ TREE = """
     空窗期怎么处理 @n:job-gap-period
     第一次选择错了怎么办 @n:job-first-choice-wrong
     被裁或失业后怎么走 @e:after-layoff
-  失败之后 @d:book/06-从学校走向第一份工作/10-失败之后
+  失败之后 @d:book/06-从学校走向第一份工作
     失败之后怎么复盘 @e:recover-failure-review
     怎么讲一次失败 @e:recover-tell-your-story
 
@@ -352,7 +352,7 @@ TREE = """
     怎么积累业务影响 @n:work-business-impact
     怎么记录职业成果 @n:work-record-achievements
     和同事或上级起了冲突怎么办 @e:workplace-conflict
-  工作后的学习与外部投入 @d:book/07-从新人到能独立负责/03-工作后的学习与外部投入
+  工作后的学习与外部投入 @d:book/07-从新人到能独立负责
     下班后的时间该投到哪里 @e:work-after-hours-investment
     技能还要不要继续学 @e:work-learn-skills
     工作后考证 @n:work-certificates
@@ -371,7 +371,7 @@ TREE = """
     Speaker @n:community-speaker
     Reviewer @n:community-reviewer
     行业影响力 @e:community-industry-influence
-  海外工作 @d:book/07-从新人到能独立负责/07-海外工作
+  海外工作 @d:book/07-从新人到能独立负责
     海外工作第一年要处理什么 @e:overseas-work-first-year
     海外工作的合同、签证与税务 @e:overseas-work-contract
   第一次重新选择
@@ -393,7 +393,7 @@ TREE = """
     跨团队影响 @n:track-ic-cross-team
     行业影响 @n:track-ic-industry
     Staff / Principal 等角色 @n:track-staff-principal
-  资深阶段：技能与收入 @d:book/08-晋升、跳槽还是转行/07-资深阶段：技能与收入
+  资深阶段：技能与收入 @d:book/08-晋升、跳槽还是转行
     技能过时了怎么补 @e:career-skill-decay
     资深阶段的收入结构怎么安排 @e:career-income-mix
   管理路线
@@ -418,10 +418,10 @@ TREE = """
     Bridge Opportunity @e:career-bridge-opportunity
     Side Project @n:switch-side-project
     降薪转行 @e:career-pay-cut-transition
-  转行期的钱与关系 @d:book/08-晋升、跳槽还是转行/09-转行期的钱与关系
+  转行期的钱与关系 @d:book/08-晋升、跳槽还是转行
     转行期的钱怎么安排 @e:career-change-cashflow
     转行时怎么重建行业关系 @e:career-change-network
-  照护与职业节奏 @d:book/08-晋升、跳槽还是转行/10-照护与职业节奏
+  照护与职业节奏 @d:book/08-晋升、跳槽还是转行
     成为被依赖的人之后 @e:care-family-role
     父母生病时的决策与分工 @e:care-elder-medical
   再次进入教育体系
@@ -430,7 +430,7 @@ TREE = """
     第二硕士 @n:edu-second-master
     博士 @e:research-phd-worth-it
     海外教育 @n:edu-abroad-again
-  职业中段与年龄 @d:book/08-晋升、跳槽还是转行/08-职业中段与年龄
+  职业中段与年龄 @d:book/08-晋升、跳槽还是转行
     40 岁以后怎么规划工作 @e:career-after-40
     中年重新开始前先算什么 @e:career-midlife-reset
 
@@ -790,10 +790,10 @@ TREE = """
     长期高强度怎么不垮 @e:health-sustainable-pace
     睡眠与久坐：能改的三件事 @e:health-sleep-and-sitting
     精力怎么分配：一周精力预算 @e:health-energy-budget
-  心理与求助 @d:book/17-身体与心理的可持续性/02-心理与求助
+  心理与求助 @d:book/17-身体与心理的可持续性
     情绪持续不好时找谁 @e:health-mental-support
     日常怎么维护心理状态 @e:health-mental-habits
-  生病与照护自己 @d:book/17-身体与心理的可持续性/03-生病与照护自己
+  生病与照护自己 @d:book/17-身体与心理的可持续性
     什么时候该去看医生，而不是再扛一周 @e:health-when-to-see-doctor
     体检怎么选、医保怎么用 @e:health-checkup-and-insurance
 18 内容地图
