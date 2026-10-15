@@ -51,3 +51,31 @@
   .reader-overview .main { max-width:100%; }
   .reader-overview [data-view="guide"], .reader-overview [data-view="library"] { max-width:920px; }
 }
+
+/* Desktop interaction feedback uses the existing timing and colours. */
+@media (min-width:901px) and (prefers-reduced-motion:no-preference) {
+  .reader-breadcrumb a, .reader-resource > a, .reader-book-list a,
+  .reader-link-title, .topnav a {
+    transition:color var(--dur-fast) ease;
+  }
+  .doc p a, .doc li a, .doc td a, .doc blockquote a {
+    transition:text-decoration-color var(--dur-fast) ease;
+  }
+  .nav-overview a, .reader-link-arrow, .doc-nav a {
+    display:inline-block;
+    transition:transform var(--dur-fast) var(--ease), color var(--dur-fast) ease;
+  }
+  .reader-task-row:is(:hover, :focus-visible) .reader-link-title { color:var(--accent); }
+  .reader-task-row:is(:hover, :focus-visible) .reader-link-arrow { transform:translateX(3px); color:var(--ink); }
+  .doc-nav a[rel="prev"]:is(:hover, :focus-visible) { transform:translateX(-2px); }
+  .doc-nav a[rel="next"]:is(:hover, :focus-visible) { transform:translateX(2px); }
+  .nav-overview a:is(:hover, :focus-visible) { transform:translateY(-1px); }
+  .nav-overview a:active, .doc-nav a:active { transform:none; }
+  .sources-details > summary, .reader-article-meta > summary {
+    transition:color var(--dur-fast) ease;
+  }
+  .reader-article-meta > summary:is(:hover, :focus-visible) { color:var(--ink-2); }
+  .sources-details[open] > .sources-body, .reader-article-meta[open] > .entry-badges {
+    animation:oh-fade-in var(--dur-fast) ease both;
+  }
+}

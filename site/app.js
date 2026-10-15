@@ -443,8 +443,10 @@
   // page. One geometry-based watcher also handles large jumps and reverse scroll.
   var readingWatch = { links: [], context: {}, handler: null, frame: 0, timer: 0,
     observer: null, activeHeading: null, activeLeft: "" };
+  var headingCue = null;
 
   function stopReading() {
+    if (headingCue) { headingCue.cancel(); headingCue = null; }
     if (readingWatch.handler) {
       window.removeEventListener("scroll", readingWatch.handler);
       window.removeEventListener("resize", readingWatch.handler);
@@ -465,6 +467,17 @@
     var top = window.scrollY + node.getBoundingClientRect().top - readingLine() + 1;
     window.scrollTo({ top: Math.max(0, top), behavior: "instant" });
     updateReading();
+    // Briefly mark the destination without animating the long scroll itself.
+    if (headingCue) { headingCue.cancel(); headingCue = null; }
+    if (window.matchMedia("(min-width: 901px) and (prefers-reduced-motion: no-preference)").matches) {
+      var heading = node.matches("h1, h2, h3, h4") ? node : node.querySelector("h1, h2, h3, h4");
+      if (heading && typeof heading.animate === "function") {
+        headingCue = heading.animate([
+          { backgroundColor: getComputedStyle(document.documentElement).getPropertyValue("--accent-soft").trim() },
+          { backgroundColor: getComputedStyle(heading).backgroundColor }
+        ], { duration: 420, easing: "ease-out" });
+      }
+    }
   }
 
   function buildToc(entryId) {
