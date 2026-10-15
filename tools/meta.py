@@ -390,6 +390,15 @@ def split_entries(body: str) -> list[dict]:
     围栏代码块内部的 ### 不会被当作标题。
     """
     lines = body.splitlines()
+    # The chapter's own group table is an explicit declaration. Group headings
+    # may now have introductory paragraphs before their first entry; adjacency
+    # alone cannot distinguish them from article subsections.
+    declared_groups: set[str] = set()
+    table = re.search(r"(?m)^## 本章分组\s*$", body)
+    if table:
+        remaining = body[table.end():]
+        block = re.split(r"(?m)^##\s", remaining, maxsplit=1)[0]
+        declared_groups = set(re.findall(r"\]\(#([^\s)]+)\)", block))
     segments: list[dict] = []
     buf: list[str] = []
     entry: dict | None = None
@@ -450,7 +459,8 @@ def split_entries(body: str) -> list[dict]:
             i = body_start
             continue
         if hm and len(hm.group(1)) <= 2:
-            if hm.group(1) == "##" and not _is_group_heading(lines, i):
+            declared = slugify(hm.group(2)) in declared_groups
+            if hm.group(1) == "##" and not declared and not _is_group_heading(lines, i):
                 # 条目内部的小节标题：留在条目正文里，让文章自己组织结构
                 (entry["lines"] if entry is not None else buf).append(line)
                 i += 1

@@ -112,9 +112,10 @@ def render_entry_section(seg: dict, threshold: str, today_iso: str) -> tuple[str
     return eid, html_str
 
 
-def render_doc(doc: M.Doc, threshold: str) -> str:
+def render_doc(doc: M.Doc, threshold: str, id_prefix: str = "") -> str:
     today_iso = M.datetime.date.today().isoformat()
     mdrender.begin_document()            # 每个 HTML 文档的 heading id 从零计数
+    mdrender.set_id_prefix(id_prefix)
     body_parts: list[str] = []
     dropped_h1 = False
     for seg in doc.segments:

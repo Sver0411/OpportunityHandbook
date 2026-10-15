@@ -82,15 +82,17 @@ class ReaderNavigation(unittest.TestCase):
         self.assertEqual(self.model["owners"]["#/doc/book/18-内容地图"], "content-map")
         self.assertNotIn("map-all-content", {r["id"] for r in self.model["references"]["refs"]})
 
-    def test_reading_sequence_tracks_visible_catalogue_including_entry_pages(self):
+    def test_reading_sequence_tracks_continuous_chapters_and_independent_library(self):
         pages = self.model["reading_order"]
         self.assertEqual(pages[0]["id"], "content-map")
         self.assertEqual(pages[1]["id"], "choices")
         self.assertEqual(len({p["route"] for p in pages}), len(pages))
         self.assertFalse(any(p["id"].startswith("map-section-") for p in pages))
         mentor = next(i for i, p in enumerate(pages) if p["id"] == "supervisor")
-        self.assertEqual(pages[mentor + 1]["id"], "research-find-supervisor")
-        self.assertTrue(any(p["route"].endswith("?from=graduate") for p in pages))
+        self.assertEqual(pages[mentor + 1]["id"], "literature")
+        self.assertTrue(any(p["route"] == "#/chapter/graduate" for p in pages))
+        self.assertFalse(any(p["id"] == "research-find-supervisor" for p in pages))
+        self.assertTrue(any(p["id"].startswith("library-tool--") for p in pages))
 
     def test_guides_embed_directions_in_authored_paragraphs(self):
         for n in self.model["topics"] + self.model["atlases"] + [self.model["resources"]]:

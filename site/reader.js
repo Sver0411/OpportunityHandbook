@@ -13,6 +13,9 @@
       });
     }
     visit([model.map].concat(model.topics, model.atlases, [model.resources]), "");
+    var standalone = new Set();
+    (function collect(n) { standalone.add(n.id); n.children.forEach(collect); })(model.resources);
+    var chapterCache = {};
     function path(id) {
       var out = [];
       while (id && nodes[id]) { out.unshift(nodes[id]); id = parents[id]; }
@@ -74,6 +77,10 @@
         options.openOverview(n.document + sep + encodeURIComponent(id));
         return;
       }
+      if (n.chapter_root) {
+        options.openOverview("#/chapter/" + n.chapter_root + (n.chapter_anchor ? "?section=" + encodeURIComponent(n.chapter_anchor) : ""));
+        return;
+      }
       // Task headings keep their existing overview and body. Resource guides
       // use authored prose, just like the first-level chapter introductions.
       if (parents[id] && n.refs.length && !n.role) {
@@ -108,6 +115,51 @@
       container.appendChild(el("nav", { class: "doc-nav", "aria-label": "按目录顺序阅读" }, [
         prev ? el("a", { href: prev.route, rel: "prev", text: "← " + prev.title }) : el("span"),
         next ? el("a", { href: next.route, rel: "next", text: next.title + " →" }) : el("span") ]));
+    }
+    function resolveDocument(route, params) {
+      var from = params && params.get("from"), n = from && nodes[from];
+      if (standalone.has(from)) return "";
+      if (model.chapter_aliases[route]) return model.chapter_aliases[route];
+      if (n && n.chapter_root && (n.overview === route || n.document === route)) return "#/chapter/" + n.chapter_root;
+      var target = model.chapter_for[route];
+      return target ? "#/chapter/" + target.chapter + "?section=" + encodeURIComponent(target.section) : "";
+    }
+    function chapter(id, params) {
+      var n = nodes[id];
+      if (n && n.chapter_root && n.chapter_root !== id) {
+        options.openOverview("#/chapter/" + n.chapter_root + "?section=" + encodeURIComponent(n.chapter_anchor)); return;
+      }
+      if (!model.chapters[id]) { guide("missing"); return; }
+      var expected = location.hash, route = "#/chapter/" + id;
+      function show(html) {
+        if (location.hash !== expected) return;
+        pageKind("article");
+        var article = main.querySelector('.reader-assembled-chapter[data-chapter="' + CSS.escape(id) + '"]');
+        if (!article) {
+          main.innerHTML = html;
+          article = main.querySelector(".doc");
+          article.insertBefore(breadcrumb(path(id)), article.firstChild);
+          appendPager(article, route);
+        }
+        document.title = n.label + " · 机会手册";
+        var section = params.get("section"), target = section && document.getElementById(section);
+        if (!target || !article.contains(target)) window.scrollTo(0, 0);
+        options.highlight(route, { nodeId: id });
+        options.mountReading({ route: route, nodeId: id, chapter: true });
+        if (target && article.contains(target)) {
+          options.jumpToHeading(target);
+          if (target.dataset.navId) options.highlight(route + "?section=" + encodeURIComponent(section), { nodeId: target.dataset.navId });
+        }
+        else { window.scrollTo(0, 0); options.highlight(route, { nodeId: id, follow: true }); }
+      }
+      if (main.querySelector('.reader-assembled-chapter[data-chapter="' + CSS.escape(id) + '"]')) { show(""); return; }
+      if (!chapterCache[id]) chapterCache[id] = fetch("chapters/" + encodeURIComponent(id) + ".html?v=" + encodeURIComponent(index.generated_at), { cache: "no-cache" })
+        .then(function (r) { if (!r.ok) throw new Error("HTTP " + r.status); return r.text(); })
+        .catch(function (error) { delete chapterCache[id]; throw error; });
+      chapterCache[id].then(show).catch(function () {
+        if (location.hash !== expected) return;
+        main.replaceChildren(el("p", { role: "alert", text: "章节暂时无法加载，请重试。" }));
+      });
     }
     function decorateArticle(article, entryId, route, params) {
       pageKind("article");
@@ -160,12 +212,25 @@
       var overview = requested && ownerNode && ownerNode.overview === route;
       appendPager(article, route + (overview && !entryId ? "?from=" + owner : ""));
       var ref = ownerNode && allOf(ownerNode).find(function (item) { return item.route === route; });
-      return { route: route, nodeId: owner === "content-map" ? owner : (overview ? owner : (ref ? ref.id : owner)),
-        entryId: entryId, isMap: owner === "content-map" };
+      var independent = standalone.has(requested);
+      if (independent) {
+        article.querySelectorAll('a[href^="#/doc/"]').forEach(function (a) {
+          var destination = routeKey(a.getAttribute("href")).split("?")[0];
+          var library = model.libraries.find(function (item) { return item.refs.some(function (r) { return r.route === destination; }); });
+          if (library) a.href = destination + "?from=" + library.id;
+        });
+      }
+      return { route: route, nodeId: independent && ref ? requested + "--" + ref.id : (owner === "content-map" ? owner : (overview ? owner : (ref ? ref.id : owner))),
+        entryId: entryId, fixedNode: independent, isMap: owner === "content-map" };
     }
     document.body.classList.add("reader-enabled");
     return {
-      handle: function (parts) { if (parts[0] === "guide") { guide(parts[1]); return true; } return false; },
+      handle: function (parts, params) {
+        if (parts[0] === "guide") { guide(parts[1]); return true; }
+        if (parts[0] === "chapter") { chapter(parts[1], params || new URLSearchParams()); return true; }
+        return false;
+      },
+      resolveDocument: resolveDocument,
       decorateArticle: decorateArticle,
       appendPager: appendPager,
       prepareSearch: function () { pageKind("search"); },

@@ -11,6 +11,7 @@ from pathlib import Path
 from urllib.parse import quote
 
 import mdrender
+from meta import slugify
 
 
 def node(key, label, summary="", children=()):
@@ -332,14 +333,56 @@ def build(index, root=None):
     resource_hub["route"] = "#/guide/reference-library"
     count(resource_hub)
 
-    def to_nav(n):
-        children = [to_nav(child) for child in n["children"]]
+    # Reading mode is explicit. Main task chapters and individual countries
+    # assemble their existing bodies; resource and career catalogues keep
+    # independent articles. A source article can therefore have both views.
+    chapters = {}
+    chapter_for = {}
+    group_targets = {}
+    def register_chapter(n, chapter_root):
+        n["chapter_root"] = chapter_root
+        n["chapter_anchor"] = "chapter-" + n["id"] if n["id"] != chapter_root else ""
+        for child in n["children"]:
+            register_chapter(child, chapter_root)
+        for ref in n["refs"]:
+            chapter_for[ref["route"]] = {"chapter": chapter_root, "section": ref["id"]}
+            if ref["role"] == "understand" and ref["source_group"]:
+                key = "#/doc/" + ref["location"] + "/" + slugify(ref["source_group"])
+                group_targets.setdefault(key, set()).add(chapter_root)
+    for root_node in topics + [atlases[0]]:
+        for n in root_node["children"]:
+            if n.get("document"):
+                continue  # The 30-second routing page remains a portal.
+            register_chapter(n, n["id"])
+            def ordered_refs(item):
+                return [ref for child in item["children"] for ref in ordered_refs(child)] + item["refs"]
+            ordered = ordered_refs(n)
+            chapters[n["id"]] = {"id": n["id"], "title": n["label"],
+                "sections": [r["id"] for r in ordered],
+                "sources": sorted({r["location"] for r in ordered})}
+
+    def to_nav(n, standalone=False):
+        standalone = standalone or n["id"] == "reference-library"
+        children = [to_nav(child, standalone) for child in n["children"]]
         children += [{"kind": "entry" if ref["role"] == "understand" else "doc", "label": ref["title"],
-                      "title": ref["title"], "href": ref["route"], "nav_id": ref["id"], "children": []}
+                      "title": ref["title"],
+                      "href": ("#/chapter/" + n["chapter_root"] + "?section=" + quote(ref["id"]) if n.get("chapter_root")
+                               else ref["route"] + ("?from=" + n["id"] if standalone else "")),
+                      "nav_id": n["id"] + "--" + ref["id"] if standalone else ref["id"],
+                      "reading_anchor": bool(n.get("chapter_root")), "children": []}
                      for ref in n["refs"]]
+        href = n.get("overview", n.get("route", "#/guide/" + n["id"]))
+        if n.get("chapter_root"):
+            href = "#/chapter/" + n["chapter_root"]
+            if n["chapter_anchor"]:
+                href += "?section=" + quote(n["chapter_anchor"])
+        elif n.get("role"):
+            href = "#/guide/" + n["id"]
+        elif n.get("overview"):
+            href += "?from=" + n["id"]
         return {"kind": "group" if children else "doc", "label": n["label"], "title": n["label"],
-                "nav_id": n["id"], "href": n.get("overview", n.get("route", "#/guide/" + n["id"]))
-                + ("?from=" + n["id"] if n.get("overview") else ""), "children": children,
+                "nav_id": n["id"], "href": href, "children": children,
+                "reading_anchor": bool(n.get("chapter_anchor")),
                 "count": n.get("count", 0)}
 
     navigation = [to_nav(n) for n in topics + atlases + [resource_hub]]
@@ -377,13 +420,15 @@ def build(index, root=None):
         for n in items:
             key = n["href"]
             repeats_parent = not n["children"] and key.split("?", 1)[0] == parent_href.split("?", 1)[0]
-            if n["kind"] != "anchor" and not repeats_parent and key not in seen:
+            if n["kind"] != "anchor" and not n.get("reading_anchor") and not repeats_parent and key not in seen:
                 seen.add(key)
                 reading_order.append({"id": n["nav_id"], "title": n["label"], "route": key})
             order_pages(n["children"], key)
     order_pages(navigation)
-    return {"version": 2, "map": content_map, "topics": topics, "atlases": atlases, "references": references, "resources": resource_hub,
+    return {"version": 3, "map": content_map, "topics": topics, "atlases": atlases, "references": references, "resources": resource_hub,
             "navigation": navigation,
+            "chapters": chapters, "chapter_for": chapter_for,
+            "chapter_aliases": {key: "#/chapter/" + next(iter(targets)) for key, targets in group_targets.items() if len(targets) == 1},
             "reading_order": reading_order,
             "libraries": resources, "roles": ROLE_LABELS, "featured": featured,
             "owners": owners, "coverage": {"source_routes": len(source_routes), "assigned_routes": len(owners)}}

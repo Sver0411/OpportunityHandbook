@@ -51,6 +51,8 @@ def main() -> int:
         return 1
     if run([py, "tools/build_site.py"]) != 0:
         return 1
+    if run([py, "tools/build_reader_chapters.py"]) != 0:
+        return 1
 
     node = shutil.which("node")
     if node:

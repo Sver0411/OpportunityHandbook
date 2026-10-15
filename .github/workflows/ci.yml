@@ -50,6 +50,8 @@ jobs:
           test -f site/data/reader.json
           test -f site/reader.js
           test -f site/reader.css
+          test -f site/chapters/academic.html
+          test -f site/chapters/supervisor.html
           test -f site/sitemap.xml
           test -f site/robots.txt
           test -f "site/content/book/02-在学校里先把基础打好.html"

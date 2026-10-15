@@ -510,7 +510,7 @@
       if (current) keepVisible(tocEl, current.link);
     }
     var context = readingWatch.context, entryId = context.entryId || "";
-    if (!entryId) {
+    if (!entryId && !context.fixedNode && !context.chapter) {
       Array.from(main.querySelectorAll(".entry")).forEach(function (entry) {
         if (entry.hidden) return;
         var rect = entry.getBoundingClientRect();
@@ -520,8 +520,12 @@
       if (materials && materials.getBoundingClientRect().top <= line) entryId = "";
     }
     var nodeId = context.nodeId || "", href = context.route || "";
-    if (context.isMap && current) nodeId = "map-section-" + current.node.id;
-    else if (entryId && context.location) { nodeId = entryId; href = "#/doc/" + context.location + "/" + entryId; }
+    if (context.chapter) {
+      Array.from(main.querySelectorAll(".reader-chapter-group, .reader-chapter-section")).forEach(function (section) {
+        if (section.getBoundingClientRect().top <= line) { nodeId = section.dataset.navId; href = context.route + "?section=" + encodeURIComponent(section.id); }
+      });
+    } else if (context.isMap && current) nodeId = "map-section-" + current.node.id;
+    else if (entryId && context.location && !context.fixedNode) { nodeId = entryId; href = "#/doc/" + context.location + "/" + entryId; }
     var left = nodeId || href;
     if (left && left !== readingWatch.activeLeft) {
       readingWatch.activeLeft = left;
@@ -837,7 +841,7 @@
     stopReading();
     if (isMobile()) closeDrawer();
 
-    if (readerUI && readerUI.handle(parts)) { input.value = ""; state.params = new URLSearchParams(); return; }
+    if (readerUI && readerUI.handle(parts, h.params)) { input.value = ""; state.params = new URLSearchParams(); return; }
     if (parts.length && parts[0] === "browse") {
       if (searchReady) { renderBrowse(h.params); return; }
       var requestedHash = location.hash;
@@ -869,6 +873,8 @@
         var tparts = target.replace(/^#\//, "").split("/");
         rest = tparts.slice(1).join("/");
       }
+      var chapterRoute = readerUI && readerUI.resolveDocument("#/doc/" + rest, h.params);
+      if (chapterRoute) { history.replaceState(null, "", chapterRoute); route(); return; }
 
       for (var i = 0; i < state.locations.length; i++) {
         var loc = state.locations[i];
@@ -883,7 +889,7 @@
       var newLoc = (redirects.docs || {})[oldLoc];
       if (newLoc && state.byLocation[newLoc]) {
         history.replaceState(null, "", "#/doc/" + newLoc + (entryId ? "/" + entryId : ""));
-        renderDoc(newLoc, entryId);
+        route();
         return;
       }
     }
@@ -913,6 +919,16 @@
   }
 
   function bind() {
+    main.addEventListener("click", function (event) {
+      var a = event.target.closest('a[href^="#"]');
+      if (!a) return;
+      var href = a.getAttribute("href");
+      if (href.indexOf("#/") === 0 || href === "#") return;
+      var name = href.slice(1);
+      try { name = decodeURIComponent(name); } catch (_) {}
+      var target = document.getElementById(name);
+      if (target && main.contains(target)) { event.preventDefault(); jumpToHeading(target); }
+    });
     document.querySelector(".skip-link").addEventListener("click", function (event) {
       event.preventDefault(); main.focus();
     });
@@ -995,7 +1011,7 @@
           state.index.nav = data.reader.navigation;
           buildNav();
           readerUI = window.HandbookReader({ index: data, main: main, nav: navTree, toc: tocEl,
-            el: el, read: read, store: store, bookNav: buildNav, mountReading: mountReading,
+            el: el, read: read, store: store, bookNav: buildNav, mountReading: mountReading, jumpToHeading: jumpToHeading,
             openOverview: function (destination) { history.replaceState(null, "", destination); route(); },
             highlight: function (href, options) { markActive(href, options); } });
         } else buildNav();
