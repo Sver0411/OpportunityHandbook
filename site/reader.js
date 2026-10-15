@@ -203,10 +203,6 @@
           current.children.forEach(function (child) { materials.appendChild(childLink(child)); });
         }
         if (materials.children.length) article.appendChild(materials);
-        var continuation = el("nav", { class: "reader-continue", "aria-label": "继续阅读" }, [
-          label("继续阅读"), el("a", { href: routeFor(parents[owner] || owner), text: "← 返回「" + nodes[parents[owner] || owner].label + "」" })]);
-        if (record && selected) continuation.appendChild(el("a", { class: "reader-full-chapter", href: "#/doc/" + record.location + "?from=" + owner, text: "阅读本组概览与全文 →" }));
-        article.appendChild(continuation);
       }
       var ownerNode = nodes[owner];
       var overview = requested && ownerNode && ownerNode.overview === route;

@@ -27,9 +27,7 @@
 .reader-resource > a { color:var(--ink); font-size:15px; font-weight:500; line-height:1.7; }
 .reader-resource > a:hover { color:var(--accent); }
 .reader-resource p { color:var(--ink-2); font-size:13px; line-height:1.8; margin:6px 0 0; max-width:66em; }
-.reader-related, .reader-continue { margin-top:40px; padding-top:24px; border-top:1px solid var(--line); }
-.reader-continue > a { font-size:14px; }
-.reader-continue .reader-full-chapter { display:block; margin-top:12px; color:var(--muted); font-size:12px; }
+.reader-related { margin-top:40px; padding-top:24px; border-top:1px solid var(--line); }
 .reader-task-materials { margin-top:42px; border-top:1px solid var(--line); padding-top:24px; }
 .doc .reader-task-materials .reader-resource p { font-size:13px; line-height:1.8; margin:6px 0 0; }
 .doc .reader-task-materials .reader-section-label { font-size:12px; }
