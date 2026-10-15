@@ -83,6 +83,9 @@ TREE = """
     结构化面试怎么准备 @e:exam-structured-interview
     无领导小组讨论怎么应对 @e:exam-leaderless-discussion
     体检与考察（政审）要注意什么 @e:exam-medical-and-review
+  事业单位与基层项目 @d:book/01-先决定下一步往哪里走/13-事业单位与基层项目
+    事业单位考试怎么选 @e:exam-public-institution
+    三支一扶、西部计划、特岗教师：政策怎么核 @e:exam-grassroots-programs
   给自己保留退路
     为什么不要过早把路线锁死 @n:optionality-why-not-lock
     哪些能力可以跨路线使用 @n:optionality-transferable
