@@ -70,7 +70,7 @@ PROBE = r"""
     ok('二级标题直接进入已有概览和正文', text('.doc-header h1')==='联系导师与套磁' && !document.querySelector('.reader-page-header'));
     ok('二级概览高亮所在分组而非同名叶子', document.querySelector('#navTree .nav-row.active').parentElement.dataset.navId==='supervisor');
     ok('二级没有重复概览链接', document.querySelectorAll('.nav-l2 > .nav-children > .nav-overview').length===0);
-    ok('正文汇合模板和案例', !!document.querySelector('.reader-task-materials a[href*="tools/"]') && !!document.querySelector('.reader-task-materials a[href*="cases/"]'));
+    ok('正文能汇合到模板与案例', !!document.querySelector('#main a[href*="/tools/"]') && !!document.querySelector('#main a[href*="/cases/"]'));
     document.querySelector('#navTree a[href*="research-find-supervisor"]').click();
     await until(function () { return text('.doc-header h1')==='怎么找导师'; });
     ok('具体条目使用自己的标题', text('.doc-header h1')==='怎么找导师');
@@ -105,7 +105,7 @@ PROBE = r"""
     var japan=document.querySelector('#main a[href="#/guide/place-44da6bbcf2"]');
     japan.click(); await until(function () { return text('.doc-header h1')==='日本'; });
     ok('地区入口直接打开已有正文', text('.doc-header h1')==='日本');
-    ok('同一地区的另一类资料可达', !!document.querySelector('.reader-task-materials a[href*="country-playbooks"]'));
+    ok('同一地区的另一类资料可达', !!document.querySelector('#main a[href*="country-playbooks"]'));
     await go('#/guide/careers','行业与岗位');
     ok('行业与岗位分别提供入口', !!document.querySelector('#main a[href="#/guide/industries"]') && !!document.querySelector('#main a[href="#/guide/occupations"]'));
     var q=document.getElementById('q'); q.value='套磁'; q.dispatchEvent(new Event('input',{bubbles:true}));

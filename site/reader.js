@@ -141,14 +141,15 @@
       }
       article.insertBefore(breadcrumb(path(owner)), article.firstChild);
       if (owner && nodes[owner] && owner !== "content-map") {
-        var current = nodes[owner], currentLocation = record ? record.location : route.replace(/^#\/doc\//, "");
-        var refs = current.refs.filter(function (ref) { return ref.route !== route && (ref.role !== "understand" || ref.location !== currentLocation); });
-        var materials = el("section", { class: "reader-task-materials", "aria-label": "本组配套资料" });
+        var current = nodes[owner];
+        // 这里只保留「继续深入」（子栏目入口）。原先这里还会把本组的其他条目
+        // 按角色列成「本组配套资料」，但左栏已经列了同一批，重复且很长；
+        // 需要哪篇资料时，从左栏或文章自身的「相关」里进更直接。
+        var materials = el("section", { class: "reader-task-materials", "aria-label": "继续深入" });
         if (current.children.length) {
           materials.appendChild(label("继续深入"));
           current.children.forEach(function (child) { materials.appendChild(childLink(child)); });
         }
-        if (refs.length) { materials.appendChild(label("本组配套资料")); sections(refs, materials, owner); }
         if (materials.children.length) article.appendChild(materials);
         var continuation = el("nav", { class: "reader-continue", "aria-label": "继续阅读" }, [
           label("继续阅读"), el("a", { href: routeFor(parents[owner] || owner), text: "← 返回「" + nodes[parents[owner] || owner].label + "」" })]);
