@@ -72,6 +72,10 @@ TREE = """
   没有资源时怎么起步 @d:book/01-先决定下一步往哪里走/09-没有资源时怎么起步
     家里第一个上大学或进大厂的人怎么找规则 @e:first-gen-navigate
     没有资源时怎么积累关系 @e:build-social-capital
+  考公与考编怎么准备 @d:book/01-先决定下一步往哪里走/10-考公与考编怎么准备
+    岗位表怎么读 @e:exam-job-table
+    从报名到上岸的完整流程 @e:exam-apply-to-onboard
+    应届身份与基层年限怎么算 @e:exam-fresh-grad-and-years
   给自己保留退路
     为什么不要过早把路线锁死 @n:optionality-why-not-lock
     哪些能力可以跨路线使用 @n:optionality-transferable

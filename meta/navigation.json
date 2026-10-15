@@ -509,6 +509,41 @@
           "nav_id": "01-08"
         },
         {
+          "title": "考公与考编怎么准备",
+          "target": {
+            "type": "doc",
+            "location": "book/01-先决定下一步往哪里走/10-考公与考编怎么准备",
+            "anchor": ""
+          },
+          "children": [
+            {
+              "title": "岗位表怎么读",
+              "target": {
+                "type": "entry",
+                "entry_id": "exam-job-table"
+              },
+              "nav_id": "01-09-01"
+            },
+            {
+              "title": "从报名到上岸的完整流程",
+              "target": {
+                "type": "entry",
+                "entry_id": "exam-apply-to-onboard"
+              },
+              "nav_id": "01-09-02"
+            },
+            {
+              "title": "应届身份与基层年限怎么算",
+              "target": {
+                "type": "entry",
+                "entry_id": "exam-fresh-grad-and-years"
+              },
+              "nav_id": "01-09-03"
+            }
+          ],
+          "nav_id": "01-09"
+        },
+        {
           "title": "给自己保留退路",
           "children": [
             {
@@ -517,7 +552,7 @@
                 "type": "entry",
                 "entry_id": "optionality-why-not-lock"
               },
-              "nav_id": "01-09-01"
+              "nav_id": "01-10-01"
             },
             {
               "title": "哪些能力可以跨路线使用",
@@ -525,7 +560,7 @@
                 "type": "entry",
                 "entry_id": "optionality-transferable"
               },
-              "nav_id": "01-09-02"
+              "nav_id": "01-10-02"
             },
             {
               "title": "走错以后怎么切换",
@@ -533,7 +568,7 @@
                 "type": "entry",
                 "entry_id": "paths-switching-between-paths"
               },
-              "nav_id": "01-09-03"
+              "nav_id": "01-10-03"
             }
           ],
           "target": {
@@ -541,7 +576,7 @@
             "location": "book/01-先决定下一步往哪里走/05-给自己保留退路",
             "anchor": ""
           },
-          "nav_id": "01-09"
+          "nav_id": "01-10"
         }
       ],
       "nav_id": "01"
