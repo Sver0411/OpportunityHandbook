@@ -79,6 +79,10 @@ TREE = """
   笔试：行测与申论 @d:book/01-先决定下一步往哪里走/11-笔试：行测与申论
     行测怎么准备 @e:exam-xingce
     申论怎么准备 @e:exam-shenlun
+  面试与后续环节 @d:book/01-先决定下一步往哪里走/12-面试与后续环节
+    结构化面试怎么准备 @e:exam-structured-interview
+    无领导小组讨论怎么应对 @e:exam-leaderless-discussion
+    体检与考察（政审）要注意什么 @e:exam-medical-and-review
   给自己保留退路
     为什么不要过早把路线锁死 @n:optionality-why-not-lock
     哪些能力可以跨路线使用 @n:optionality-transferable
