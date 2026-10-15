@@ -118,6 +118,41 @@ class Redirects(unittest.TestCase):
 
 
 class NoContentLoss(unittest.TestCase):
+    def test_docs_are_navigable(self):
+        """docs/ 下 status: complete 的文档必须挂到 Canonical IA。
+
+        历史事故（2026-10-15）：连续两批内容补了 26 个时间线 / 表格 / playbook /
+        专题页，只更新了章索引（book/10-11-13.md）与 README，**没有同步 IA**——
+        而导航由 IA 生成。结果这些文档在正文里能被交叉链接读到，读者却在左栏
+        找不到自己花时间写的文档。check_ia 的 Rule C 只管条目，不管文档，
+        所以门禁当时是空的。
+
+        例外：README / ROADMAP 与 meta/ 下的仓库内部规范文档不进用户导航。
+        """
+        import json as _json
+        nav = _json.loads((ROOT / "meta" / "navigation.json").read_text(encoding="utf-8"))
+        mounted: set[str] = set()
+
+        def walk(ns):
+            for n in ns:
+                tg = n.get("target") or {}
+                if tg.get("type") == "doc":
+                    mounted.add(tg.get("location") or "")
+                walk(n.get("children") or [])
+
+        walk(nav["items"])
+        missing = []
+        for p in sorted((ROOT / "docs").rglob("*.md")):
+            if p.name in ("README.md", "ROADMAP.md"):
+                continue
+            if "status: planned" in p.read_text(encoding="utf-8"):
+                continue
+            rel = str(p.relative_to(ROOT))[:-3]
+            if rel not in mounted:
+                missing.append(rel)
+        self.assertEqual(missing, [],
+                         f"这些文档没有挂到 Canonical IA（左栏里看不到）：{missing[:8]}")
+
     def test_counts_match_baseline(self):
         self.assertEqual(len(INDEX["entries"]) + len(INDEX["questions"]) + len(INDEX["todos"]),
                          BASELINE_ENTRIES)

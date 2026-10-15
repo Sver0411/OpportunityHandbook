@@ -477,6 +477,10 @@ TREE = """
     读论文的高级方法 @d:docs/research-deep/论文精读方法
     Peer Review 与 Rebuttal @d:docs/research-deep/同行评审与回复
     科研失败案例：从数据泄漏到缩小主张 @d:docs/research-deep/科研失败案例
+    实验设计与数据 @d:docs/research/实验设计与数据
+    文献阅读与综述 @d:docs/research/文献阅读与综述
+    论文写作与投稿 @d:docs/research/论文写作与投稿
+    联系导师与套磁 @d:docs/research/联系导师与套磁
   竞赛手册 @d:docs/manuals/竞赛手册
   深度教程 · 竞赛实战
     竞赛组队与分工 @d:docs/competition-playbooks/组队与分工
@@ -484,6 +488,10 @@ TREE = """
     赛期时间分配与版本管理 @d:docs/competition-playbooks/时间分配与版本管理
     Demo、路演与答辩 @d:docs/competition-playbooks/Demo与路演答辩
     赛后整理与复用 @d:docs/competition-playbooks/赛后整理
+    学科竞赛专题 @d:docs/competitions/学科竞赛
+    数据与 AI 竞赛专题 @d:docs/competitions/数据与AI竞赛
+    商业与创业竞赛专题 @d:docs/competitions/商业与创业竞赛
+    Hackathon 与 Game Jam @d:docs/competitions/Hackathon与GameJam
   项目与作品手册 @d:docs/manuals/项目与作品手册
   深度教程 · 项目与作品
     项目选题与问题定义 @d:docs/projects/选题与问题定义
@@ -615,6 +623,8 @@ TREE = """
     技能型职业 @d:docs/careers/技能型职业
   常用官方来源清单 @d:docs/sources/常用官方来源清单
   官方入口速查：你要办的事去哪办 @d:docs/sources/官方入口速查
+  二手来源与识别方法 @d:docs/sources/二手来源与识别方法
+  核实记录 @d:docs/sources/核实记录
 
 10 路径时间线
   高中毕业后的选择 @d:docs/timelines/高中到大学
@@ -625,6 +635,9 @@ TREE = """
   本科四年 @d:docs/timelines/本科四年
   保研 @d:docs/timelines/保研时间线
   考研 @d:docs/timelines/考研时间线
+  考公 @d:docs/timelines/考公时间线
+  四六级 @d:docs/timelines/四六级时间线
+  留学语言考试 @d:docs/timelines/留学语言考试时间线
   留学申请 @d:docs/timelines/留学申请时间线
   博士申请 @d:docs/timelines/博士申请时间线
   校招 @d:docs/timelines/校招时间线
@@ -642,6 +655,10 @@ TREE = """
   导师筛选表 @d:docs/tools/导师筛选表
   联系导师邮件模板 @d:docs/tools/联系导师邮件模板
   留学选校表 @d:docs/tools/留学选校表
+  考研择校对比表 @d:docs/tools/择校对比表
+  留学语言考试排期表 @d:docs/tools/留学语言考试排期表
+  四六级备考排期表 @d:docs/tools/四六级备考排期表
+  上升通道对比表 @d:docs/tools/上升通道对比表
   Research Question Canvas @d:docs/tools/ResearchQuestionCanvas
   Baseline 与消融设计表 @d:docs/tools/Baseline与消融设计表
   实验记录模板 @d:docs/tools/实验记录模板
@@ -702,6 +719,9 @@ TREE = """
   Playbook：第一次核对合同与社保 @d:docs/playbooks/第一次核对合同与社保
   Playbook：第一次处理劳动争议 @d:docs/playbooks/第一次处理劳动争议
   Playbook：第一次准备考公笔试 @d:docs/playbooks/第一次准备考公笔试
+  Playbook：第一次准备考研 @d:docs/playbooks/第一次准备考研
+  Playbook：第一次考四六级 @d:docs/playbooks/第一次考四六级
+  Playbook：第一次准备专升本 @d:docs/playbooks/第一次准备专升本
 
 14 避坑
   升学与留学 @e:trap-guaranteed-admission

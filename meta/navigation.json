@@ -3911,6 +3911,42 @@
                 "anchor": ""
               },
               "nav_id": "09-03-08"
+            },
+            {
+              "title": "实验设计与数据",
+              "target": {
+                "type": "doc",
+                "location": "docs/research/实验设计与数据",
+                "anchor": ""
+              },
+              "nav_id": "09-03-09"
+            },
+            {
+              "title": "文献阅读与综述",
+              "target": {
+                "type": "doc",
+                "location": "docs/research/文献阅读与综述",
+                "anchor": ""
+              },
+              "nav_id": "09-03-10"
+            },
+            {
+              "title": "论文写作与投稿",
+              "target": {
+                "type": "doc",
+                "location": "docs/research/论文写作与投稿",
+                "anchor": ""
+              },
+              "nav_id": "09-03-11"
+            },
+            {
+              "title": "联系导师与套磁",
+              "target": {
+                "type": "doc",
+                "location": "docs/research/联系导师与套磁",
+                "anchor": ""
+              },
+              "nav_id": "09-03-12"
             }
           ],
           "target": {
@@ -3976,6 +4012,42 @@
                 "anchor": ""
               },
               "nav_id": "09-05-05"
+            },
+            {
+              "title": "学科竞赛专题",
+              "target": {
+                "type": "doc",
+                "location": "docs/competitions/学科竞赛",
+                "anchor": ""
+              },
+              "nav_id": "09-05-06"
+            },
+            {
+              "title": "数据与 AI 竞赛专题",
+              "target": {
+                "type": "doc",
+                "location": "docs/competitions/数据与AI竞赛",
+                "anchor": ""
+              },
+              "nav_id": "09-05-07"
+            },
+            {
+              "title": "商业与创业竞赛专题",
+              "target": {
+                "type": "doc",
+                "location": "docs/competitions/商业与创业竞赛",
+                "anchor": ""
+              },
+              "nav_id": "09-05-08"
+            },
+            {
+              "title": "Hackathon 与 Game Jam",
+              "target": {
+                "type": "doc",
+                "location": "docs/competitions/Hackathon与GameJam",
+                "anchor": ""
+              },
+              "nav_id": "09-05-09"
             }
           ],
           "target": {
@@ -5183,6 +5255,24 @@
             "anchor": ""
           },
           "nav_id": "09-34"
+        },
+        {
+          "title": "二手来源与识别方法",
+          "target": {
+            "type": "doc",
+            "location": "docs/sources/二手来源与识别方法",
+            "anchor": ""
+          },
+          "nav_id": "09-35"
+        },
+        {
+          "title": "核实记录",
+          "target": {
+            "type": "doc",
+            "location": "docs/sources/核实记录",
+            "anchor": ""
+          },
+          "nav_id": "09-36"
         }
       ],
       "nav_id": "09"
@@ -5268,13 +5358,40 @@
           "nav_id": "10-08"
         },
         {
+          "title": "考公",
+          "target": {
+            "type": "doc",
+            "location": "docs/timelines/考公时间线",
+            "anchor": ""
+          },
+          "nav_id": "10-09"
+        },
+        {
+          "title": "四六级",
+          "target": {
+            "type": "doc",
+            "location": "docs/timelines/四六级时间线",
+            "anchor": ""
+          },
+          "nav_id": "10-10"
+        },
+        {
+          "title": "留学语言考试",
+          "target": {
+            "type": "doc",
+            "location": "docs/timelines/留学语言考试时间线",
+            "anchor": ""
+          },
+          "nav_id": "10-11"
+        },
+        {
           "title": "留学申请",
           "target": {
             "type": "doc",
             "location": "docs/timelines/留学申请时间线",
             "anchor": ""
           },
-          "nav_id": "10-09"
+          "nav_id": "10-12"
         },
         {
           "title": "博士申请",
@@ -5283,7 +5400,7 @@
             "location": "docs/timelines/博士申请时间线",
             "anchor": ""
           },
-          "nav_id": "10-10"
+          "nav_id": "10-13"
         },
         {
           "title": "校招",
@@ -5292,7 +5409,7 @@
             "location": "docs/timelines/校招时间线",
             "anchor": ""
           },
-          "nav_id": "10-11"
+          "nav_id": "10-14"
         },
         {
           "title": "科研入门",
@@ -5301,7 +5418,7 @@
             "location": "docs/timelines/科研入门时间线",
             "anchor": ""
           },
-          "nav_id": "10-12"
+          "nav_id": "10-15"
         },
         {
           "title": "转行",
@@ -5310,7 +5427,7 @@
             "location": "docs/timelines/转行时间线",
             "anchor": ""
           },
-          "nav_id": "10-13"
+          "nav_id": "10-16"
         },
         {
           "title": "入职第一年",
@@ -5319,7 +5436,7 @@
             "location": "docs/timelines/入职第一年",
             "anchor": ""
           },
-          "nav_id": "10-14"
+          "nav_id": "10-17"
         },
         {
           "title": "离职与纠纷维权",
@@ -5328,7 +5445,7 @@
             "location": "docs/timelines/离职与纠纷维权",
             "anchor": ""
           },
-          "nav_id": "10-15"
+          "nav_id": "10-18"
         }
       ],
       "nav_id": "10"
@@ -5414,13 +5531,49 @@
           "nav_id": "11-08"
         },
         {
+          "title": "考研择校对比表",
+          "target": {
+            "type": "doc",
+            "location": "docs/tools/择校对比表",
+            "anchor": ""
+          },
+          "nav_id": "11-09"
+        },
+        {
+          "title": "留学语言考试排期表",
+          "target": {
+            "type": "doc",
+            "location": "docs/tools/留学语言考试排期表",
+            "anchor": ""
+          },
+          "nav_id": "11-10"
+        },
+        {
+          "title": "四六级备考排期表",
+          "target": {
+            "type": "doc",
+            "location": "docs/tools/四六级备考排期表",
+            "anchor": ""
+          },
+          "nav_id": "11-11"
+        },
+        {
+          "title": "上升通道对比表",
+          "target": {
+            "type": "doc",
+            "location": "docs/tools/上升通道对比表",
+            "anchor": ""
+          },
+          "nav_id": "11-12"
+        },
+        {
           "title": "Research Question Canvas",
           "target": {
             "type": "doc",
             "location": "docs/tools/ResearchQuestionCanvas",
             "anchor": ""
           },
-          "nav_id": "11-09"
+          "nav_id": "11-13"
         },
         {
           "title": "Baseline 与消融设计表",
@@ -5429,7 +5582,7 @@
             "location": "docs/tools/Baseline与消融设计表",
             "anchor": ""
           },
-          "nav_id": "11-10"
+          "nav_id": "11-14"
         },
         {
           "title": "实验记录模板",
@@ -5438,7 +5591,7 @@
             "location": "docs/tools/实验记录模板",
             "anchor": ""
           },
-          "nav_id": "11-11"
+          "nav_id": "11-15"
         },
         {
           "title": "论文精读表（Paper Reading Sheet）",
@@ -5447,7 +5600,7 @@
             "location": "docs/tools/论文精读表",
             "anchor": ""
           },
-          "nav_id": "11-12"
+          "nav_id": "11-16"
         },
         {
           "title": "文献地图（Literature Map）",
@@ -5456,7 +5609,7 @@
             "location": "docs/tools/文献地图",
             "anchor": ""
           },
-          "nav_id": "11-13"
+          "nav_id": "11-17"
         },
         {
           "title": "求职追踪表",
@@ -5465,7 +5618,7 @@
             "location": "docs/tools/求职追踪表",
             "anchor": ""
           },
-          "nav_id": "11-14"
+          "nav_id": "11-18"
         },
         {
           "title": "JD 拆解表",
@@ -5474,7 +5627,7 @@
             "location": "docs/tools/JD拆解表",
             "anchor": ""
           },
-          "nav_id": "11-15"
+          "nav_id": "11-19"
         },
         {
           "title": "面试复盘表",
@@ -5483,7 +5636,7 @@
             "location": "docs/tools/面试复盘表",
             "anchor": ""
           },
-          "nav_id": "11-16"
+          "nav_id": "11-20"
         },
         {
           "title": "求职漏斗诊断表",
@@ -5492,7 +5645,7 @@
             "location": "docs/tools/求职漏斗诊断表",
             "anchor": ""
           },
-          "nav_id": "11-17"
+          "nav_id": "11-21"
         },
         {
           "title": "项目设计 Canvas",
@@ -5501,7 +5654,7 @@
             "location": "docs/tools/项目设计Canvas",
             "anchor": ""
           },
-          "nav_id": "11-18"
+          "nav_id": "11-22"
         },
         {
           "title": "项目测试计划模板",
@@ -5510,7 +5663,7 @@
             "location": "docs/tools/项目测试计划",
             "anchor": ""
           },
-          "nav_id": "11-19"
+          "nav_id": "11-23"
         },
         {
           "title": "Benchmark 记录表",
@@ -5519,7 +5672,7 @@
             "location": "docs/tools/Benchmark记录表",
             "anchor": ""
           },
-          "nav_id": "11-20"
+          "nav_id": "11-24"
         },
         {
           "title": "技能 Gap 矩阵",
@@ -5528,7 +5681,7 @@
             "location": "docs/tools/技能Gap矩阵",
             "anchor": ""
           },
-          "nav_id": "11-21"
+          "nav_id": "11-25"
         },
         {
           "title": "Failure Log",
@@ -5537,7 +5690,7 @@
             "location": "docs/tools/Failure日志",
             "anchor": ""
           },
-          "nav_id": "11-22"
+          "nav_id": "11-26"
         },
         {
           "title": "README 检查表",
@@ -5546,7 +5699,7 @@
             "location": "docs/tools/README检查表",
             "anchor": ""
           },
-          "nav_id": "11-23"
+          "nav_id": "11-27"
         },
         {
           "title": "项目发布检查表",
@@ -5555,7 +5708,7 @@
             "location": "docs/tools/发布检查表",
             "anchor": ""
           },
-          "nav_id": "11-24"
+          "nav_id": "11-28"
         },
         {
           "title": "PR 检查表",
@@ -5564,7 +5717,7 @@
             "location": "docs/tools/PR检查表",
             "anchor": ""
           },
-          "nav_id": "11-25"
+          "nav_id": "11-29"
         },
         {
           "title": "客户沟通与需求确认表",
@@ -5573,7 +5726,7 @@
             "location": "docs/tools/客户沟通表",
             "anchor": ""
           },
-          "nav_id": "11-26"
+          "nav_id": "11-30"
         },
         {
           "title": "自由职业报价单模板",
@@ -5582,7 +5735,7 @@
             "location": "docs/tools/自由职业报价单",
             "anchor": ""
           },
-          "nav_id": "11-27"
+          "nav_id": "11-31"
         },
         {
           "title": "时间线检查表",
@@ -5591,7 +5744,7 @@
             "location": "docs/tools/时间线检查表",
             "anchor": ""
           },
-          "nav_id": "11-28"
+          "nav_id": "11-32"
         },
         {
           "title": "读博规划表",
@@ -5600,7 +5753,7 @@
             "location": "docs/tools/读博规划表",
             "anchor": ""
           },
-          "nav_id": "11-29"
+          "nav_id": "11-33"
         },
         {
           "title": "转行现金流表",
@@ -5609,7 +5762,7 @@
             "location": "docs/tools/转行现金流表",
             "anchor": ""
           },
-          "nav_id": "11-30"
+          "nav_id": "11-34"
         },
         {
           "title": "职校作品清单",
@@ -5618,7 +5771,7 @@
             "location": "docs/tools/职校作品清单",
             "anchor": ""
           },
-          "nav_id": "11-31"
+          "nav_id": "11-35"
         },
         {
           "title": "日常账本与月度预算",
@@ -5627,7 +5780,7 @@
             "location": "docs/tools/日常账本与月度预算",
             "anchor": ""
           },
-          "nav_id": "11-32"
+          "nav_id": "11-36"
         },
         {
           "title": "体检项目对照表",
@@ -5636,7 +5789,7 @@
             "location": "docs/tools/体检项目对照表",
             "anchor": ""
           },
-          "nav_id": "11-33"
+          "nav_id": "11-37"
         },
         {
           "title": "精力预算表",
@@ -5645,7 +5798,7 @@
             "location": "docs/tools/精力预算表",
             "anchor": ""
           },
-          "nav_id": "11-34"
+          "nav_id": "11-38"
         },
         {
           "title": "纠纷证据清单",
@@ -5654,7 +5807,7 @@
             "location": "docs/tools/纠纷证据清单",
             "anchor": ""
           },
-          "nav_id": "11-35"
+          "nav_id": "11-39"
         },
         {
           "title": "岗位筛选表",
@@ -5663,7 +5816,7 @@
             "location": "docs/tools/岗位筛选表",
             "anchor": ""
           },
-          "nav_id": "11-36"
+          "nav_id": "11-40"
         }
       ],
       "nav_id": "11"
@@ -5938,6 +6091,33 @@
             "anchor": ""
           },
           "nav_id": "13-13"
+        },
+        {
+          "title": "Playbook：第一次准备考研",
+          "target": {
+            "type": "doc",
+            "location": "docs/playbooks/第一次准备考研",
+            "anchor": ""
+          },
+          "nav_id": "13-14"
+        },
+        {
+          "title": "Playbook：第一次考四六级",
+          "target": {
+            "type": "doc",
+            "location": "docs/playbooks/第一次考四六级",
+            "anchor": ""
+          },
+          "nav_id": "13-15"
+        },
+        {
+          "title": "Playbook：第一次准备专升本",
+          "target": {
+            "type": "doc",
+            "location": "docs/playbooks/第一次准备专升本",
+            "anchor": ""
+          },
+          "nav_id": "13-16"
         }
       ],
       "nav_id": "13"
