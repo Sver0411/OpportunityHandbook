@@ -125,6 +125,12 @@ TREE = """
     IELTS / TOEFL / TOEIC @n:english-standardized-tests
     第二外语 @n:skill-second-language
     如果以后可能留学，什么时候准备 @n:language-timing-for-abroad
+  四六级怎么准备 @d:book/02-在学校里先把基础打好/07-四六级怎么准备
+    四六级分项怎么练：哪部分提分性价比最高 @e:cet-section-training
+    四六级报名与考试流程 @e:cet-apply-process
+  四六级分数的用途与校内规定 @d:book/02-在学校里先把基础打好/08-四六级分数的用途与校内规定
+    四六级分数在各场景的用途对照 @e:cet-score-usage
+    校内规定说不过就不给毕业，怎么办 @e:cet-school-requirement
   证书
     哪些证书值得考 @e:certificate-what-is-worth-it
     法定准入型证书 @e:skill-occupational-certificates
@@ -201,6 +207,20 @@ TREE = """
     复试 @e:study-second-round-interview
     调剂 @e:study-transfer-adjustment
     二战 @e:study-retake-exam
+  考研择校与信息透明度 @d:book/04-升学、就业还是出国/09-考研择校与信息透明度
+    怎么判断压分与信息透明度 @e:kaoyan-school-picking
+    考研怎么定目标校：择校的操作步骤 @e:kaoyan-choose-school-steps
+  考研科目复习与专业课 @d:book/04-升学、就业还是出国/10-考研科目复习与专业课
+    数学一还是数学二、数学三怎么选 @e:kaoyan-math-track
+    英语怎么准备：长线科目与阅读为核心 @e:kaoyan-english
+    政治怎么复习：什么时候开始、怎么分配 @e:kaoyan-politics
+    专业课怎么准备：什么时候开始、怎么找真题 @e:kaoyan-major-studies
+  考研报名、初试与复试 @d:book/04-升学、就业还是出国/11-考研报名、初试与复试
+    考研报名与初试：九个环节和它们的卡点 @e:kaoyan-apply-process
+    复试前两周的准备安排 @e:kaoyan-retest-schedule
+  考研调剂与二战 @d:book/04-升学、就业还是出国/12-考研调剂与二战
+    调剂系统怎么操作：从开放到确认 @e:kaoyan-adjustment-system
+    二战该不该打：复盘、止损与三条替代方案 @e:kaoyan-retake-decision
   海外升学
     留学值不值得 @e:overseas-is-it-for-me
     国家和地区怎么选 @n:overseas-choose-country

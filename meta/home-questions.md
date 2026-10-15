@@ -442,3 +442,63 @@ stages: [new_grad, work_1_3, work_3_5, senior]
 ```
 
 见 [家里需要你出钱时怎么安排](../book/01-先决定下一步往哪里走/07-家庭沟通与支持.md#care-family-budget) 与 [成为被依赖的人之后](../book/07-晋升、跳槽还是转行/10-照护与职业节奏.md#care-family-role)。
+
+### 考研该考哪所学校？怎么看才靠谱？
+
+```meta
+id: q-kaoyan-choose-school
+kind: question
+status: complete
+link: kaoyan-choose-school-steps
+summary: 先按专业代码建目标池，再看专业课是否自命题、统考名额与近三年拟录取分数分布，最后排成主选与保底。
+topics: [study]
+stages: [undergraduate, new_grad, work_1_3]
+```
+
+先定专业代码与专业课是否自命题，再在研招网专业目录里建池子；每所学校横向比招生人数、推免占比、统考名额、近三年复试线与复录比。用 [择校对比表](../docs/tools/择校对比表.md) 记录。
+见 [考研怎么定目标校](../book/04-升学、就业还是出国/09-考研择校与信息透明度.md#kaoyan-choose-school-steps) 与 [怎么判断压分与信息透明度](../book/04-升学、就业还是出国/09-考研择校与信息透明度.md#kaoyan-school-picking)。
+
+### 四六级到底要不要考？不过会影响毕业吗？
+
+```meta
+id: q-cet-need
+kind: question
+status: complete
+link: cet-school-requirement
+summary: 先查本校教务处文件确认是否与毕业/学位挂钩，再看目标单位是否设线；四六级不过时通常有校内替代考试等路径。
+topics: [skill, study, rights]
+stages: [college, undergraduate]
+```
+
+「不过不给毕业」这个说法本身需要核实——不同学校、不同学院规定不同。最有效的一步是发邮件问教务处：适用范围、替代认定途径、有没有补考机制。
+见 [校内规定说不过就不给毕业](../book/02-在学校里先把基础打好/08-四六级分数的用途与校内规定.md#cet-school-requirement) 与 [四六级分数在各场景的用途对照](../book/02-在学校里先把基础打好/08-四六级分数的用途与校内规定.md#cet-score-usage)。
+
+### 四六级怎么练才有效？
+
+```meta
+id: q-cet-how
+kind: question
+status: complete
+link: cet-section-training
+summary: 听力与阅读是提分主力：听力用精听三遍法找出卡点，阅读只拆长句；每天 30–90 分钟，周期 3–8 周。
+topics: [skill, study]
+stages: [college, undergraduate]
+```
+
+先做一套真题把分数拆到题型上，再按「听力 > 阅读 > 写作 > 翻译」分配时间。精听要对照原文看卡在连读、语速还是词不认识；阅读每天拆几篇长句就够。
+见 [四六级分项怎么练](../book/02-在学校里先把基础打好/07-四六级怎么准备.md#cet-section-training) 与 [四六级备考排期表](../docs/tools/四六级备考排期表.md)。
+
+### 考研没考上，该二战还是直接工作？
+
+```meta
+id: q-kaoyan-retake
+kind: question
+status: complete
+link: kaoyan-retake-decision
+summary: 先复盘差距归因（执行 / 方法 / 投入 / 择校），再看四个止损信号；决定二战要有新方法、新目标、新节奏三个变量。
+topics: [study]
+stages: [undergraduate, new_grad, work_1_3]
+```
+
+先问「上次为什么没考上」，再问「这次有什么不同」。三个变量都没有，就是把上一年重复一遍。已有可接受的工作时，二战的机会成本已经从「无」变成「很高」。
+见 [二战该不该打](../book/04-升学、就业还是出国/12-考研调剂与二战.md#kaoyan-retake-decision) 与 [调剂系统怎么操作](../book/04-升学、就业还是出国/12-考研调剂与二战.md#kaoyan-adjustment-system)。

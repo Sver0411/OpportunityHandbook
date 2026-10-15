@@ -958,6 +958,60 @@
           "nav_id": "02-05"
         },
         {
+          "title": "四六级怎么准备",
+          "target": {
+            "type": "doc",
+            "location": "book/02-在学校里先把基础打好/07-四六级怎么准备",
+            "anchor": ""
+          },
+          "children": [
+            {
+              "title": "四六级分项怎么练：哪部分提分性价比最高",
+              "target": {
+                "type": "entry",
+                "entry_id": "cet-section-training"
+              },
+              "nav_id": "02-06-01"
+            },
+            {
+              "title": "四六级报名与考试流程",
+              "target": {
+                "type": "entry",
+                "entry_id": "cet-apply-process"
+              },
+              "nav_id": "02-06-02"
+            }
+          ],
+          "nav_id": "02-06"
+        },
+        {
+          "title": "四六级分数的用途与校内规定",
+          "target": {
+            "type": "doc",
+            "location": "book/02-在学校里先把基础打好/08-四六级分数的用途与校内规定",
+            "anchor": ""
+          },
+          "children": [
+            {
+              "title": "四六级分数在各场景的用途对照",
+              "target": {
+                "type": "entry",
+                "entry_id": "cet-score-usage"
+              },
+              "nav_id": "02-07-01"
+            },
+            {
+              "title": "校内规定说不过就不给毕业，怎么办",
+              "target": {
+                "type": "entry",
+                "entry_id": "cet-school-requirement"
+              },
+              "nav_id": "02-07-02"
+            }
+          ],
+          "nav_id": "02-07"
+        },
+        {
           "title": "证书",
           "children": [
             {
@@ -966,7 +1020,7 @@
                 "type": "entry",
                 "entry_id": "certificate-what-is-worth-it"
               },
-              "nav_id": "02-06-01"
+              "nav_id": "02-08-01"
             },
             {
               "title": "法定准入型证书",
@@ -974,7 +1028,7 @@
                 "type": "entry",
                 "entry_id": "skill-occupational-certificates"
               },
-              "nav_id": "02-06-02"
+              "nav_id": "02-08-02"
             },
             {
               "title": "行业认证",
@@ -982,7 +1036,7 @@
                 "type": "entry",
                 "entry_id": "skill-industry-certification"
               },
-              "nav_id": "02-06-03"
+              "nav_id": "02-08-03"
             },
             {
               "title": "厂商认证",
@@ -990,7 +1044,7 @@
                 "type": "entry",
                 "entry_id": "certificate-vendor"
               },
-              "nav_id": "02-06-04"
+              "nav_id": "02-08-04"
             },
             {
               "title": "不要为了证书而考证",
@@ -998,7 +1052,7 @@
                 "type": "entry",
                 "entry_id": "certificate-not-for-certificates"
               },
-              "nav_id": "02-06-05"
+              "nav_id": "02-08-05"
             }
           ],
           "target": {
@@ -1006,7 +1060,7 @@
             "location": "book/02-在学校里先把基础打好/06-证书",
             "anchor": ""
           },
-          "nav_id": "02-06"
+          "nav_id": "02-08"
         }
       ],
       "nav_id": "02"
@@ -1583,6 +1637,130 @@
           "nav_id": "04-02"
         },
         {
+          "title": "考研择校与信息透明度",
+          "target": {
+            "type": "doc",
+            "location": "book/04-升学、就业还是出国/09-考研择校与信息透明度",
+            "anchor": ""
+          },
+          "children": [
+            {
+              "title": "怎么判断压分与信息透明度",
+              "target": {
+                "type": "entry",
+                "entry_id": "kaoyan-school-picking"
+              },
+              "nav_id": "04-03-01"
+            },
+            {
+              "title": "考研怎么定目标校：择校的操作步骤",
+              "target": {
+                "type": "entry",
+                "entry_id": "kaoyan-choose-school-steps"
+              },
+              "nav_id": "04-03-02"
+            }
+          ],
+          "nav_id": "04-03"
+        },
+        {
+          "title": "考研科目复习与专业课",
+          "target": {
+            "type": "doc",
+            "location": "book/04-升学、就业还是出国/10-考研科目复习与专业课",
+            "anchor": ""
+          },
+          "children": [
+            {
+              "title": "数学一还是数学二、数学三怎么选",
+              "target": {
+                "type": "entry",
+                "entry_id": "kaoyan-math-track"
+              },
+              "nav_id": "04-04-01"
+            },
+            {
+              "title": "英语怎么准备：长线科目与阅读为核心",
+              "target": {
+                "type": "entry",
+                "entry_id": "kaoyan-english"
+              },
+              "nav_id": "04-04-02"
+            },
+            {
+              "title": "政治怎么复习：什么时候开始、怎么分配",
+              "target": {
+                "type": "entry",
+                "entry_id": "kaoyan-politics"
+              },
+              "nav_id": "04-04-03"
+            },
+            {
+              "title": "专业课怎么准备：什么时候开始、怎么找真题",
+              "target": {
+                "type": "entry",
+                "entry_id": "kaoyan-major-studies"
+              },
+              "nav_id": "04-04-04"
+            }
+          ],
+          "nav_id": "04-04"
+        },
+        {
+          "title": "考研报名、初试与复试",
+          "target": {
+            "type": "doc",
+            "location": "book/04-升学、就业还是出国/11-考研报名、初试与复试",
+            "anchor": ""
+          },
+          "children": [
+            {
+              "title": "考研报名与初试：九个环节和它们的卡点",
+              "target": {
+                "type": "entry",
+                "entry_id": "kaoyan-apply-process"
+              },
+              "nav_id": "04-05-01"
+            },
+            {
+              "title": "复试前两周的准备安排",
+              "target": {
+                "type": "entry",
+                "entry_id": "kaoyan-retest-schedule"
+              },
+              "nav_id": "04-05-02"
+            }
+          ],
+          "nav_id": "04-05"
+        },
+        {
+          "title": "考研调剂与二战",
+          "target": {
+            "type": "doc",
+            "location": "book/04-升学、就业还是出国/12-考研调剂与二战",
+            "anchor": ""
+          },
+          "children": [
+            {
+              "title": "调剂系统怎么操作：从开放到确认",
+              "target": {
+                "type": "entry",
+                "entry_id": "kaoyan-adjustment-system"
+              },
+              "nav_id": "04-06-01"
+            },
+            {
+              "title": "二战该不该打：复盘、止损与三条替代方案",
+              "target": {
+                "type": "entry",
+                "entry_id": "kaoyan-retake-decision"
+              },
+              "nav_id": "04-06-02"
+            }
+          ],
+          "nav_id": "04-06"
+        },
+        {
           "title": "海外升学",
           "children": [
             {
@@ -1591,7 +1769,7 @@
                 "type": "entry",
                 "entry_id": "overseas-is-it-for-me"
               },
-              "nav_id": "04-03-01"
+              "nav_id": "04-07-01"
             },
             {
               "title": "国家和地区怎么选",
@@ -1599,7 +1777,7 @@
                 "type": "entry",
                 "entry_id": "overseas-choose-country"
               },
-              "nav_id": "04-03-02"
+              "nav_id": "04-07-02"
             },
             {
               "title": "授课型与研究型",
@@ -1607,7 +1785,7 @@
                 "type": "entry",
                 "entry_id": "overseas-taught-vs-research-master"
               },
-              "nav_id": "04-03-03"
+              "nav_id": "04-07-03"
             },
             {
               "title": "GPA",
@@ -1615,7 +1793,7 @@
                 "type": "entry",
                 "entry_id": "overseas-gpa"
               },
-              "nav_id": "04-03-04"
+              "nav_id": "04-07-04"
             },
             {
               "title": "语言与标化考试",
@@ -1623,7 +1801,7 @@
                 "type": "entry",
                 "entry_id": "overseas-admission-tests"
               },
-              "nav_id": "04-03-05"
+              "nav_id": "04-07-05"
             },
             {
               "title": "推荐信",
@@ -1631,7 +1809,7 @@
                 "type": "entry",
                 "entry_id": "overseas-recommendation-letters"
               },
-              "nav_id": "04-03-06"
+              "nav_id": "04-07-06"
             },
             {
               "title": "SOP / PS",
@@ -1639,7 +1817,7 @@
                 "type": "entry",
                 "entry_id": "overseas-sop-ps"
               },
-              "nav_id": "04-03-07"
+              "nav_id": "04-07-07"
             },
             {
               "title": "Research Proposal",
@@ -1647,7 +1825,7 @@
                 "type": "entry",
                 "entry_id": "overseas-research-proposal"
               },
-              "nav_id": "04-03-08"
+              "nav_id": "04-07-08"
             },
             {
               "title": "联系教授",
@@ -1655,7 +1833,7 @@
                 "type": "entry",
                 "entry_id": "overseas-contacting-professors"
               },
-              "nav_id": "04-03-09"
+              "nav_id": "04-07-09"
             },
             {
               "title": "奖学金与 Funding",
@@ -1663,7 +1841,7 @@
                 "type": "entry",
                 "entry_id": "overseas-funding"
               },
-              "nav_id": "04-03-10"
+              "nav_id": "04-07-10"
             },
             {
               "title": "留学总成本",
@@ -1671,7 +1849,7 @@
                 "type": "entry",
                 "entry_id": "overseas-total-cost"
               },
-              "nav_id": "04-03-11"
+              "nav_id": "04-07-11"
             }
           ],
           "target": {
@@ -1679,7 +1857,7 @@
             "location": "book/04-升学、就业还是出国/03-海外升学",
             "anchor": ""
           },
-          "nav_id": "04-03"
+          "nav_id": "04-07"
         },
         {
           "title": "深入科研",
@@ -1690,7 +1868,7 @@
                 "type": "entry",
                 "entry_id": "research-ra"
               },
-              "nav_id": "04-04-01"
+              "nav_id": "04-08-01"
             },
             {
               "title": "暑研",
@@ -1698,7 +1876,7 @@
                 "type": "entry",
                 "entry_id": "research-summer-program"
               },
-              "nav_id": "04-04-02"
+              "nav_id": "04-08-02"
             },
             {
               "title": "Research Internship",
@@ -1706,7 +1884,7 @@
                 "type": "entry",
                 "entry_id": "overseas-research-internship"
               },
-              "nav_id": "04-04-03"
+              "nav_id": "04-08-03"
             },
             {
               "title": "文献阅读",
@@ -1714,7 +1892,7 @@
                 "type": "entry",
                 "entry_id": "research-literature-reading"
               },
-              "nav_id": "04-04-04"
+              "nav_id": "04-08-04"
             },
             {
               "title": "研究问题",
@@ -1722,7 +1900,7 @@
                 "type": "entry",
                 "entry_id": "research-question"
               },
-              "nav_id": "04-04-05"
+              "nav_id": "04-08-05"
             },
             {
               "title": "实验与数据",
@@ -1730,7 +1908,7 @@
                 "type": "entry",
                 "entry_id": "research-experiment-data"
               },
-              "nav_id": "04-04-06"
+              "nav_id": "04-08-06"
             },
             {
               "title": "论文写作",
@@ -1738,7 +1916,7 @@
                 "type": "entry",
                 "entry_id": "research-writing-and-submission"
               },
-              "nav_id": "04-04-07"
+              "nav_id": "04-08-07"
             },
             {
               "title": "学术会议",
@@ -1746,7 +1924,7 @@
                 "type": "entry",
                 "entry_id": "research-conference"
               },
-              "nav_id": "04-04-08"
+              "nav_id": "04-08-08"
             },
             {
               "title": "推荐信",
@@ -1754,7 +1932,7 @@
                 "type": "entry",
                 "entry_id": "research-recommendation-letter"
               },
-              "nav_id": "04-04-09"
+              "nav_id": "04-08-09"
             }
           ],
           "target": {
@@ -1762,7 +1940,7 @@
             "location": "book/04-升学、就业还是出国/04-深入科研",
             "anchor": ""
           },
-          "nav_id": "04-04"
+          "nav_id": "04-08"
         },
         {
           "title": "读研期间怎么用这两年",
@@ -1778,7 +1956,7 @@
                 "type": "entry",
                 "entry_id": "master-use-two-years"
               },
-              "nav_id": "04-05-01"
+              "nav_id": "04-09-01"
             },
             {
               "title": "读研期间实习和论文怎么安排",
@@ -1786,10 +1964,10 @@
                 "type": "entry",
                 "entry_id": "master-internship-vs-paper"
               },
-              "nav_id": "04-05-02"
+              "nav_id": "04-09-02"
             }
           ],
-          "nav_id": "04-05"
+          "nav_id": "04-09"
         },
         {
           "title": "读博与博士毕业",
@@ -1805,7 +1983,7 @@
                 "type": "entry",
                 "entry_id": "phd-during-plan"
               },
-              "nav_id": "04-06-01"
+              "nav_id": "04-10-01"
             },
             {
               "title": "博士毕业后的出口怎么比较",
@@ -1813,7 +1991,7 @@
                 "type": "entry",
                 "entry_id": "phd-career-paths"
               },
-              "nav_id": "04-06-02"
+              "nav_id": "04-10-02"
             },
             {
               "title": "延期、换方向还是退出",
@@ -1821,10 +1999,10 @@
                 "type": "entry",
                 "entry_id": "phd-delay-or-quit"
               },
-              "nav_id": "04-06-03"
+              "nav_id": "04-10-03"
             }
           ],
-          "nav_id": "04-06"
+          "nav_id": "04-10"
         },
         {
           "title": "实习进一步升级",
@@ -1835,7 +2013,7 @@
                 "type": "entry",
                 "entry_id": "internship-daily"
               },
-              "nav_id": "04-07-01"
+              "nav_id": "04-11-01"
             },
             {
               "title": "暑期实习",
@@ -1843,7 +2021,7 @@
                 "type": "entry",
                 "entry_id": "internship-summer"
               },
-              "nav_id": "04-07-02"
+              "nav_id": "04-11-02"
             },
             {
               "title": "Off-cycle",
@@ -1851,7 +2029,7 @@
                 "type": "entry",
                 "entry_id": "internship-off-cycle"
               },
-              "nav_id": "04-07-03"
+              "nav_id": "04-11-03"
             },
             {
               "title": "留用实习",
@@ -1859,7 +2037,7 @@
                 "type": "entry",
                 "entry_id": "internship-return-offer"
               },
-              "nav_id": "04-07-04"
+              "nav_id": "04-11-04"
             },
             {
               "title": "海外实习",
@@ -1867,7 +2045,7 @@
                 "type": "entry",
                 "entry_id": "internship-overseas"
               },
-              "nav_id": "04-07-05"
+              "nav_id": "04-11-05"
             },
             {
               "title": "Research Intern",
@@ -1875,7 +2053,7 @@
                 "type": "entry",
                 "entry_id": "internship-research-intern"
               },
-              "nav_id": "04-07-06"
+              "nav_id": "04-11-06"
             }
           ],
           "target": {
@@ -1883,7 +2061,7 @@
             "location": "book/04-升学、就业还是出国/05-实习进一步升级",
             "anchor": ""
           },
-          "nav_id": "04-07"
+          "nav_id": "04-11"
         },
         {
           "title": "资助",
@@ -1894,7 +2072,7 @@
                 "type": "entry",
                 "entry_id": "funding-scholarship"
               },
-              "nav_id": "04-08-01"
+              "nav_id": "04-12-01"
             },
             {
               "title": "Fellowship",
@@ -1902,7 +2080,7 @@
                 "type": "entry",
                 "entry_id": "funding-fellowship-grant"
               },
-              "nav_id": "04-08-02"
+              "nav_id": "04-12-02"
             },
             {
               "title": "Grant",
@@ -1910,7 +2088,7 @@
                 "type": "entry",
                 "entry_id": "funding-grant"
               },
-              "nav_id": "04-08-03"
+              "nav_id": "04-12-03"
             },
             {
               "title": "Stipend",
@@ -1918,7 +2096,7 @@
                 "type": "entry",
                 "entry_id": "funding-stipend"
               },
-              "nav_id": "04-08-04"
+              "nav_id": "04-12-04"
             },
             {
               "title": "Fee Waiver",
@@ -1926,7 +2104,7 @@
                 "type": "entry",
                 "entry_id": "funding-fee-waiver"
               },
-              "nav_id": "04-08-05"
+              "nav_id": "04-12-05"
             },
             {
               "title": "Travel Grant",
@@ -1934,7 +2112,7 @@
                 "type": "entry",
                 "entry_id": "funding-travel-and-conference-grant"
               },
-              "nav_id": "04-08-06"
+              "nav_id": "04-12-06"
             },
             {
               "title": "怎么找全额资助机会",
@@ -1942,7 +2120,7 @@
                 "type": "entry",
                 "entry_id": "funding-full-funding"
               },
-              "nav_id": "04-08-07"
+              "nav_id": "04-12-07"
             }
           ],
           "target": {
@@ -1950,7 +2128,7 @@
             "location": "book/04-升学、就业还是出国/06-资助",
             "anchor": ""
           },
-          "nav_id": "04-08"
+          "nav_id": "04-12"
         }
       ],
       "nav_id": "04"

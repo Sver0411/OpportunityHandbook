@@ -158,6 +158,10 @@
 - [怎么联系导师 / 要不要套磁？](docs/playbooks/第一次联系导师.md)
 - [家里预算有限，还能留学吗？](book/04-升学、就业还是出国/03-海外升学.md#overseas-funding)
 - [怎么和父母沟通升学与职业选择？](book/01-先决定下一步往哪里走/07-家庭沟通与支持.md#family-talk)
+- [考研该考哪所学校？怎么看才靠谱？](book/04-升学、就业还是出国/09-考研择校与信息透明度.md#kaoyan-choose-school-steps)
+- [四六级到底要不要考？不过会影响毕业吗？](book/02-在学校里先把基础打好/08-四六级分数的用途与校内规定.md#cet-school-requirement)
+- [四六级怎么练才有效？](book/02-在学校里先把基础打好/07-四六级怎么准备.md#cet-section-training)
+- [考研没考上，该二战还是直接工作？](book/04-升学、就业还是出国/12-考研调剂与二战.md#kaoyan-retake-decision)
 
 ### 我快毕业了
 
