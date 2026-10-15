@@ -3833,6 +3833,15 @@
                 "anchor": ""
               },
               "nav_id": "10-01-06"
+            },
+            {
+              "title": "全额资助到底怎么找、怎么看、怎么比较",
+              "target": {
+                "type": "doc",
+                "location": "docs/funding/全额资助与资金包",
+                "anchor": ""
+              },
+              "nav_id": "10-01-07"
             }
           ],
           "nav_id": "10-01"
@@ -6217,13 +6226,22 @@
               "nav_id": "14-01-01"
             },
             {
+              "title": "Playbook：把一项新技术学到「能用」",
+              "target": {
+                "type": "doc",
+                "location": "docs/playbooks/第一次学新技术",
+                "anchor": ""
+              },
+              "nav_id": "14-01-02"
+            },
+            {
               "title": "Playbook：第一次开源贡献",
               "target": {
                 "type": "doc",
                 "location": "docs/playbooks/第一次开源贡献",
                 "anchor": ""
               },
-              "nav_id": "14-01-02"
+              "nav_id": "14-01-03"
             },
             {
               "title": "Playbook：第一次参加 Hackathon",
@@ -6232,7 +6250,7 @@
                 "location": "docs/playbooks/第一次参加 Hackathon",
                 "anchor": ""
               },
-              "nav_id": "14-01-03"
+              "nav_id": "14-01-04"
             }
           ],
           "nav_id": "14-01"
@@ -6293,13 +6311,22 @@
               "nav_id": "14-03-01"
             },
             {
+              "title": "Playbook：第一次信息访谈",
+              "target": {
+                "type": "doc",
+                "location": "docs/playbooks/第一次信息访谈",
+                "anchor": ""
+              },
+              "nav_id": "14-03-02"
+            },
+            {
               "title": "Playbook：第一次技术面试",
               "target": {
                 "type": "doc",
                 "location": "docs/playbooks/第一次技术面试",
                 "anchor": ""
               },
-              "nav_id": "14-03-02"
+              "nav_id": "14-03-03"
             },
             {
               "title": "Playbook：第一次谈薪",
@@ -6308,17 +6335,17 @@
                 "location": "docs/playbooks/第一次谈薪",
                 "anchor": ""
               },
-              "nav_id": "14-03-03"
+              "nav_id": "14-03-04"
             }
           ],
           "nav_id": "14-03"
         },
         {
-          "title": "考试备考",
+          "title": "考试与证书",
           "target": {
             "type": "doc",
             "location": "book/14-操作手册",
-            "anchor": "考试备考"
+            "anchor": "考试与证书"
           },
           "children": [
             {
@@ -6356,9 +6383,38 @@
                 "anchor": ""
               },
               "nav_id": "14-04-04"
+            },
+            {
+              "title": "Playbook：第一次评估证书",
+              "target": {
+                "type": "doc",
+                "location": "docs/playbooks/第一次评估证书",
+                "anchor": ""
+              },
+              "nav_id": "14-04-05"
             }
           ],
           "nav_id": "14-04"
+        },
+        {
+          "title": "资助申请",
+          "target": {
+            "type": "doc",
+            "location": "book/14-操作手册",
+            "anchor": "资助申请"
+          },
+          "children": [
+            {
+              "title": "Playbook：第一次申请资助",
+              "target": {
+                "type": "doc",
+                "location": "docs/playbooks/第一次申请资助",
+                "anchor": ""
+              },
+              "nav_id": "14-05-01"
+            }
+          ],
+          "nav_id": "14-05"
         },
         {
           "title": "自由职业",
@@ -6375,10 +6431,10 @@
                 "location": "docs/playbooks/第一次接单",
                 "anchor": ""
               },
-              "nav_id": "14-05-01"
+              "nav_id": "14-06-01"
             }
           ],
-          "nav_id": "14-05"
+          "nav_id": "14-06"
         },
         {
           "title": "合同与权益",
@@ -6395,7 +6451,7 @@
                 "location": "docs/playbooks/第一次核对合同与社保",
                 "anchor": ""
               },
-              "nav_id": "14-06-01"
+              "nav_id": "14-07-01"
             },
             {
               "title": "Playbook：第一次处理劳动争议",
@@ -6404,10 +6460,10 @@
                 "location": "docs/playbooks/第一次处理劳动争议",
                 "anchor": ""
               },
-              "nav_id": "14-06-02"
+              "nav_id": "14-07-02"
             }
           ],
-          "nav_id": "14-06"
+          "nav_id": "14-07"
         }
       ],
       "nav_id": "14"

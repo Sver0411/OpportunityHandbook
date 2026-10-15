@@ -470,6 +470,7 @@ TREE = """
     Research Proposal 逐段拆解 @d:docs/admissions/研究计划拆解
     复试与申请面试 @d:docs/admissions/复试与申请面试
     奖学金与资助 @d:docs/manuals/奖学金与资助
+    全额资助到底怎么找、怎么看、怎么比较 @d:docs/funding/全额资助与资金包
   科研 @d:book/10-专题手册#科研
     科研手册 @d:docs/manuals/科研手册
     如何提出 Research Question @d:docs/research-deep/研究问题的提出
@@ -730,6 +731,7 @@ TREE = """
 14 操作手册
   项目与开源 @d:book/14-操作手册#项目与开源
     Playbook：第一次做项目 @d:docs/playbooks/第一次做项目
+    Playbook：把一项新技术学到「能用」 @d:docs/playbooks/第一次学新技术
     Playbook：第一次开源贡献 @d:docs/playbooks/第一次开源贡献
     Playbook：第一次参加 Hackathon @d:docs/playbooks/第一次参加 Hackathon
   科研 @d:book/14-操作手册#科研
@@ -738,13 +740,17 @@ TREE = """
     Playbook：第一次联系导师 @d:docs/playbooks/第一次联系导师
   求职 @d:book/14-操作手册#求职
     Playbook：第一次找实习 @d:docs/playbooks/第一次找实习
+    Playbook：第一次信息访谈 @d:docs/playbooks/第一次信息访谈
     Playbook：第一次技术面试 @d:docs/playbooks/第一次技术面试
     Playbook：第一次谈薪 @d:docs/playbooks/第一次谈薪
-  考试备考 @d:book/14-操作手册#考试备考
+  考试与证书 @d:book/14-操作手册#考试与证书
     Playbook：第一次准备考公笔试 @d:docs/playbooks/第一次准备考公笔试
     Playbook：第一次准备考研 @d:docs/playbooks/第一次准备考研
     Playbook：第一次考四六级 @d:docs/playbooks/第一次考四六级
     Playbook：第一次准备专升本 @d:docs/playbooks/第一次准备专升本
+    Playbook：第一次评估证书 @d:docs/playbooks/第一次评估证书
+  资助申请 @d:book/14-操作手册#资助申请
+    Playbook：第一次申请资助 @d:docs/playbooks/第一次申请资助
   自由职业 @d:book/14-操作手册#自由职业
     Playbook：第一次接单 @d:docs/playbooks/第一次接单
   合同与权益 @d:book/14-操作手册#合同与权益
