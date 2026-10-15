@@ -584,6 +584,8 @@ TREE = """
     科研与高校 @d:docs/careers/科研与高校
     公共服务 @d:docs/careers/公共服务
     技能型职业 @d:docs/careers/技能型职业
+  常用官方来源清单 @d:docs/sources/常用官方来源清单
+  官方入口速查：你要办的事去哪办 @d:docs/sources/官方入口速查
 
 10 路径时间线
   高中毕业后的选择 @d:docs/timelines/高中到大学

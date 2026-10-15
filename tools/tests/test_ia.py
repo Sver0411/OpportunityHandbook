@@ -275,6 +275,27 @@ class TopicManual(unittest.TestCase):
         walk(nav["items"])
         self.assertEqual(problems, [], f"分组与所在文件不一致：{problems[:6]}")
 
+    def test_h3_inside_entry_is_not_a_heading(self):
+        """条目内部不能用 `###`（解析器把它当条目边界）。
+
+        历史事故：加厚条目时用 `### 第一步 …` 写小节，导致该条目被切断——
+        正文被拆成多段，`test_entries_have_related_links` 直接报「缺相关链接」。
+        条目内部小节一律用 `##`；只有条目开头才允许 `###`，且必须紧跟 meta 块。
+        """
+        bad = []
+        for p in sorted((ROOT / "book").rglob("*.md")):
+            lines = p.read_text(encoding="utf-8").splitlines()
+            for i, l in enumerate(lines):
+                if not l.startswith("### "):
+                    continue
+                j = i + 1
+                while j < len(lines) and not lines[j].strip():
+                    j += 1
+                nxt = lines[j] if j < len(lines) else ""
+                if not nxt.startswith("```meta"):
+                    bad.append(f"{p.relative_to(ROOT)}:{i+1} {l[4:][:20]}")
+        self.assertEqual(bad, [], f"条目内部误用了 ### 作为小节（应改 ##）：{bad[:6]}")
+
     def test_no_entry_swallowed_by_code_fence(self):
         """不能有代码围栏把条目吞进去。
 

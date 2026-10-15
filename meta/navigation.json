@@ -4906,6 +4906,24 @@
             "anchor": "职业指南"
           },
           "nav_id": "09-32"
+        },
+        {
+          "title": "常用官方来源清单",
+          "target": {
+            "type": "doc",
+            "location": "docs/sources/常用官方来源清单",
+            "anchor": ""
+          },
+          "nav_id": "09-33"
+        },
+        {
+          "title": "官方入口速查：你要办的事去哪办",
+          "target": {
+            "type": "doc",
+            "location": "docs/sources/官方入口速查",
+            "anchor": ""
+          },
+          "nav_id": "09-34"
         }
       ],
       "nav_id": "09"

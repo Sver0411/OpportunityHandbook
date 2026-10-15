@@ -112,6 +112,7 @@ last_verified: 2026-09-21
 ## 来源与核实 `docs/sources/`
 
 - [常用官方来源清单](sources/常用官方来源清单.md)
+- [官方入口速查](sources/官方入口速查.md)
 - [二手来源与识别方法](sources/二手来源与识别方法.md)
 - [核实记录](sources/核实记录.md)
 
