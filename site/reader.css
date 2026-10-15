@@ -44,6 +44,20 @@
 .reader-enabled .toc, .reader-enabled .nav-tree { overflow-anchor:none; }
 .reader-retry { padding:9px 16px; border:1px solid var(--line-strong); border-radius:8px; background:var(--bg); color:var(--ink); cursor:pointer; font:inherit; }
 
+@media (max-width:900px) {
+  .reader-task-list { grid-template-columns:minmax(0,1fr); gap:0; }
+  .reader-page-header { margin:8px 0 28px; }
+  .reader-breadcrumb { gap:4px 6px; margin-bottom:20px; font-size:12px; }
+  .reader-breadcrumb a { padding:4px 0; }
+  .reader-task-row { padding:18px 0; gap:12px; }
+  .reader-resource { padding:16px 0; }
+  .reader-resource > a { display:inline-block; padding:4px 0; }
+  .nav-overview { padding-left:22px; }
+  .nav-overview a { min-height:40px; display:inline-flex; align-items:center; }
+  .reader-article-meta > summary { min-height:44px; display:flex; align-items:center; }
+  .sources-details > summary { min-height:44px; }
+}
+
 @media (min-width:901px) {
   /* Keep the existing palette, glass surfaces, fonts and reading typography. */
   /* Reading navigation explicitly replays this effect, including reused DOM. */

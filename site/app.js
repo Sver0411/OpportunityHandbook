@@ -39,6 +39,8 @@
   var searchForm = document.getElementById("searchForm");
   var collapseBtn = document.getElementById("navCollapse");
   var closeBtn = document.getElementById("navClose");
+  var navBackdrop = document.getElementById("navBackdrop");
+  var shell = document.getElementById("shell");
   var readerUI = null;
   var searchPromise = null;
   var searchReady = false;
@@ -852,9 +854,36 @@
 
   // ------------------------------------------------------------ 路由
 
+  var drawerPosition = 0, drawerFrame = 0;
+  function setDrawer(open) {
+    var mobile = isMobile(), wasOpen = document.body.classList.contains("sidebar-open");
+    open = mobile && open;
+    if (drawerFrame) { cancelAnimationFrame(drawerFrame); drawerFrame = 0; }
+    if (open && !wasOpen) drawerPosition = window.scrollY;
+    document.body.classList.toggle("sidebar-open", open);
+    document.documentElement.classList.toggle("drawer-open", open);
+    if (navBackdrop) navBackdrop.hidden = !open;
+    sidebar.inert = mobile && !open;
+    shell.inert = open;
+    if (mobile && !open) sidebar.setAttribute("aria-hidden", "true"); else sidebar.removeAttribute("aria-hidden");
+    if (open) { sidebar.setAttribute("role", "dialog"); sidebar.setAttribute("aria-modal", "true"); }
+    else { sidebar.removeAttribute("role"); sidebar.removeAttribute("aria-modal"); }
+    if (collapseBtn) collapseBtn.setAttribute("aria-expanded", mobile ? String(open) : String(!document.body.classList.contains("nav-collapsed")));
+    if (open) {
+      if (closeBtn) closeBtn.focus({ preventScroll: true });
+      var active = navTree.querySelector(".nav-row.active");
+      if (active) keepVisible(navTree, active);
+    } else if (wasOpen && collapseBtn) collapseBtn.focus({ preventScroll: true });
+    if (open || wasOpen) window.scrollTo({ top: drawerPosition, behavior: "instant" });
+    if (open) drawerFrame = requestAnimationFrame(function () {
+      // Locking a long document can trigger scroll anchoring after layout.
+      window.scrollTo({ top: drawerPosition, behavior: "instant" });
+      drawerFrame = 0;
+    });
+  }
+
   function closeDrawer() {
-    document.body.classList.remove("sidebar-open");
-    if (collapseBtn) collapseBtn.setAttribute("aria-expanded", "false");
+    setDrawer(false);
   }
 
   function route() {
@@ -960,20 +989,14 @@
     if (collapseBtn) {
       collapseBtn.addEventListener("click", function () {
         if (isMobile()) {
-          var open = document.body.classList.toggle("sidebar-open");
-          collapseBtn.setAttribute("aria-expanded", open ? "true" : "false");
+          setDrawer(!document.body.classList.contains("sidebar-open"));
         } else {
           applyCollapsed(!document.body.classList.contains("nav-collapsed"));
         }
       });
     }
     if (closeBtn) closeBtn.addEventListener("click", closeDrawer);
-
-    document.addEventListener("click", function (ev) {
-      if (!document.body.classList.contains("sidebar-open")) return;
-      if (ev.target.closest(".sidebar") || ev.target.closest(".nav-collapse")) return;
-      closeDrawer();
-    });
+    if (navBackdrop) navBackdrop.addEventListener("click", closeDrawer);
     // 点击目录里的链接后自动收起抽屉
     navTree.addEventListener("click", function (ev) {
       if (ev.target.closest("a") && isMobile()) closeDrawer();
@@ -989,6 +1012,15 @@
     });
 
     document.addEventListener("keydown", function (ev) {
+      if (ev.key === "Tab" && document.body.classList.contains("sidebar-open")) {
+        var controls = Array.from(sidebar.querySelectorAll('a[href], button:not([disabled]), [tabindex="0"]')).filter(function (node) {
+          return node.getClientRects().length && getComputedStyle(node).visibility === "visible";
+        });
+        var first = controls[0], last = controls[controls.length - 1];
+        if (first && ev.shiftKey && document.activeElement === first) { ev.preventDefault(); last.focus(); }
+        else if (last && !ev.shiftKey && document.activeElement === last) { ev.preventDefault(); first.focus(); }
+        return;
+      }
       var tag = (ev.target.tagName || "").toLowerCase();
       var typing = tag === "input" || tag === "textarea";
       if (ev.key === "/" && !typing) { ev.preventDefault(); input.focus(); input.select(); }
@@ -1004,8 +1036,9 @@
 
     window.addEventListener("hashchange", function () { route(); });
     window.addEventListener("resize", function () {
-      if (!isMobile()) closeDrawer();
+      setDrawer(isMobile() && document.body.classList.contains("sidebar-open"));
     });
+    closeDrawer();
   }
 
   // 同义词表：缺失也不影响搜索（只是没有别名扩展）

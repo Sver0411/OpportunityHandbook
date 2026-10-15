@@ -636,7 +636,10 @@ def main() -> int:
     # Topic/task navigation supersedes the legacy tree-only interaction model.
     if (SITE / "reader.js").exists():
         import reader_smoke_test
-        return reader_smoke_test.main()
+        import mobile_smoke_test
+        desktop_result = reader_smoke_test.main()
+        mobile_result = mobile_smoke_test.main()
+        return 1 if desktop_result or mobile_result else 0
     chrome = find_chrome()
     if not chrome:
         print("未找到 Chrome / Chromium，跳过前端冒烟测试。")
