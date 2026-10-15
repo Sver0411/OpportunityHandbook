@@ -8,6 +8,7 @@ from __future__ import annotations
 
 import hashlib
 from pathlib import Path
+from urllib.parse import quote
 
 import mdrender
 
@@ -120,7 +121,7 @@ GROUP_TASKS = {
            "权益与制度": "rights", "参考与来源": "references"},
     "16": {"拿到钱的第一年": "money", "社保、公积金与税": "insurance", "保险与风险": "insurance"},
     "17": "wellbeing",
-    "18": "references",
+    "18": "content-map",
 }
 
 # Exact titles for resources whose old parent groups mix unrelated tasks.
@@ -215,11 +216,13 @@ def walk(nodes):
 
 def build(index, root=None):
     topics = catalog()
+    content_map = node("content-map", "内容地图", "从当前问题出发，找到合适的章节与下一步。")
+    content_map["document"] = "#/doc/book/18-内容地图"
     atlases = [node("places", "国家与地区", "同一地区的制度说明与申请操作，在一个入口查找。"),
                node("careers", "行业与岗位", "分别按行业环境和具体工作职责查找。", [
                    node("industries", "按行业了解"), node("occupations", "按岗位了解")])]
     references = node("references", "术语与官方入口", "核对概念、查找原始来源和办理入口。")
-    by_id = {n["id"]: n for n in walk(topics + atlases + [references])}
+    by_id = {n["id"]: n for n in walk([content_map] + topics + atlases + [references])}
     records = {e["route"]: e for e in index["entries"] + index["docs"]}
     owners = {}
     source_routes = set()
@@ -296,7 +299,7 @@ def build(index, root=None):
         resources.append({"id": "library-" + role, "label": ROLE_LABELS[role],
                           "role": role, "children": [], "refs": []})
     featured = ["explore", "supervisor", "internships", "kaoyan", "offers", "change"]
-    for n in walk(topics + atlases + [references]):
+    for n in walk([content_map] + topics + atlases + [references]):
         n["route"] = "#/guide/" + n["id"]
         n["count"] = len(n["refs"]) + sum(child.get("count", 0) for child in n["children"])
         if n["refs"]:
@@ -330,7 +333,7 @@ def build(index, root=None):
     # Keep their Markdown outside book/docs so existing article identities and
     # source coverage stay stable while the new catalogue gains its own guides.
     guide_root = Path(root) if root is not None else Path(__file__).resolve().parent.parent
-    for group in topics + atlases + [resource_hub]:
+    for group in topics + atlases + [resource_hub] + resources + atlases[1]["children"]:
         source = guide_root / "reader" / "overviews" / (group["id"] + ".md")
         if not source.is_file():
             raise ValueError("Reader navigation: missing chapter introduction: " + str(source))
@@ -340,7 +343,30 @@ def build(index, root=None):
         mdrender.begin_document()
         mdrender.set_context(str(source.relative_to(guide_root)), {})
         group["intro_html"], _ = mdrender.render(text)
-    return {"version": 1, "topics": topics, "atlases": atlases, "references": references, "resources": resource_hub,
+    map_source = (guide_root / "book" / "18-内容地图.md").read_text(encoding="utf-8").split("---", 2)[-1]
+    mdrender.begin_document()
+    _, map_heads = mdrender.render(map_source)
+    map_nav = {"kind": "section", "label": content_map["label"], "title": content_map["label"],
+               "nav_id": content_map["id"], "href": content_map["document"], "children": [
+                   {"kind": "anchor", "label": h["text"], "title": h["text"],
+                    "nav_id": "map-section-" + h["id"], "anchor": h["id"],
+                    "href": content_map["document"] + "?section=" + quote(h["id"]), "children": []}
+                   for h in map_heads if h["level"] == 2 and h["text"] != "来源与更新"]}
+    navigation.insert(0, map_nav)
+    # Page turns follow the displayed catalogue, including chapter introductions
+    # and individual entries. Repeated overview/body routes appear only once.
+    reading_order, seen = [], set()
+    def order_pages(items, parent_href=""):
+        for n in items:
+            key = n["href"]
+            repeats_parent = not n["children"] and key.split("?", 1)[0] == parent_href.split("?", 1)[0]
+            if n["kind"] != "anchor" and not repeats_parent and key not in seen:
+                seen.add(key)
+                reading_order.append({"id": n["nav_id"], "title": n["label"], "route": key})
+            order_pages(n["children"], key)
+    order_pages(navigation)
+    return {"version": 2, "map": content_map, "topics": topics, "atlases": atlases, "references": references, "resources": resource_hub,
             "navigation": navigation,
+            "reading_order": reading_order,
             "libraries": resources, "roles": ROLE_LABELS, "featured": featured,
             "owners": owners, "coverage": {"source_routes": len(source_routes), "assigned_routes": len(owners)}}

@@ -32,10 +32,35 @@ PROBE = r"""
   async function run() {
     await until(function () { return document.querySelector('.doc'); });
     ok('原有正文首页可以打开', text('.doc-header h1')==='从这里开始');
-    ok('单一重组目录，共十三个栏目', document.querySelectorAll('.nav-l1').length===13);
+    ok('单一重组目录，共十四个栏目', document.querySelectorAll('.nav-l1').length===14);
     ok('已移除按主题查模块', !document.querySelector('[data-nav-mode]') && !document.querySelector('.reader-topic-grid'));
     ok('首次阅读不请求全文索引', !performance.getEntriesByType('resource').some(function (r) { return r.name.indexOf('/data/index.json')>=0; }));
     ok('桌面首页无横向溢出', document.documentElement.scrollWidth<=innerWidth+1);
+    await go('#/doc/book/18-内容地图','内容地图');
+    ok('内容地图是独立一级章节', text('#navTree .nav-l1 > .nav-row > .nav-label')==='内容地图' && !document.querySelector('[data-nav-id="references"] a[href="#/doc/book/18-内容地图"]'));
+    var mapTitles=Array.from(document.querySelectorAll('#main .doc > h2')).map(function(h){return h.textContent;});
+    var navTitles=Array.from(document.querySelectorAll('.nav-l1 > .nav-row > .nav-label')).map(function(a){return a.textContent;}).slice(1);
+    ok('内容地图与当前章节顺序一致', JSON.stringify(mapTitles)===JSON.stringify(navTitles));
+    var mapHash=location.hash, mapHistory=history.length;
+    var mapLinks=Array.from(document.querySelectorAll('#toc [data-target]'));
+    mapLinks[mapLinks.length-1].click(); await wait(400);
+    var right=document.querySelector('#toc a.active'), left=document.querySelector('#navTree .nav-row.active');
+    ok('向后跳读时两侧目录都跟随', right && left && left.parentElement.dataset.navId==='map-section-'+right.dataset.target && right.textContent==='资料与工具');
+    function inPane(pane,node) { if(!node)return false;var a=pane.getBoundingClientRect(),b=node.getBoundingClientRect();return b.top>=a.top-1 && b.bottom<=a.bottom+1; }
+    ok('两侧当前项自动滚入各自可见范围', inPane(document.getElementById('toc'),right) && inPane(document.getElementById('navTree'),left));
+    mapLinks[0].click(); await wait(300);
+    ok('向前跳读时高亮也正确回退', text('#toc a.active')==='选择与方向' && text('#navTree .nav-row.active .nav-label')==='选择与方向');
+    var middle=Array.from(document.querySelectorAll('#main .doc > h2')).find(function(h){return h.textContent==='科研与学术';});
+    var readLine=document.querySelector('.topbar').getBoundingClientRect().bottom+32;
+    window.scrollTo(0,window.scrollY+middle.getBoundingClientRect().top-readLine+2);
+    // Virtual-time headless runs may defer the native scroll event until paint.
+    window.dispatchEvent(new Event('scroll')); await wait(300);
+    ok('大幅自然滚动仍能准确同步两侧', text('#toc a.active')==='科研与学术' && text('#navTree .nav-row.active .nav-label')==='科研与学术', text('#toc a.active')+' / '+text('#navTree .nav-row.active .nav-label'));
+    ok('滚动联动不改地址和浏览历史', location.hash===mapHash && history.length===mapHistory);
+    ok('内容地图下一篇采用新目录顺序', document.querySelector('.doc-nav [rel="next"]').getAttribute('href')==='#/guide/choices');
+    await go('#/guide/library-steps','行动步骤');
+    ok('行动步骤是带自然链接的完整文章', document.querySelectorAll('.reader-chapter-overview > p a').length>=15 && document.querySelectorAll('.reader-resource-list,.reader-task-list').length===0);
+    ok('资料导读也有完整右侧目录', document.querySelectorAll('#toc [data-target]').length>=4);
     await go('#/guide/research','科研与学术');
     ok('一级分组有内容概览', text('#main h1')==='科研与学术');
     ok('一级概览是有独立正文的导读文章', document.querySelectorAll('.reader-chapter-overview > h2').length>=4 && Array.from(document.querySelectorAll('.reader-chapter-overview > p')).reduce(function (sum,p) { return sum+p.textContent.length; },0)>400);
@@ -43,6 +68,7 @@ PROBE = r"""
     document.querySelector('#main a[href="#/guide/supervisor"]').click();
     await until(function () { return text('.doc-header h1')==='联系导师与套磁'; });
     ok('二级标题直接进入已有概览和正文', text('.doc-header h1')==='联系导师与套磁' && !document.querySelector('.reader-page-header'));
+    ok('二级概览高亮所在分组而非同名叶子', document.querySelector('#navTree .nav-row.active').parentElement.dataset.navId==='supervisor');
     ok('二级没有重复概览链接', document.querySelectorAll('.nav-l2 > .nav-children > .nav-overview').length===0);
     ok('正文汇合模板和案例', !!document.querySelector('.reader-task-materials a[href*="tools/"]') && !!document.querySelector('.reader-task-materials a[href*="cases/"]'));
     document.querySelector('#navTree a[href*="research-find-supervisor"]').click();
@@ -58,7 +84,8 @@ PROBE = r"""
     ok('阅读滚动不重排或折叠目录', sidebar.innerHTML===before);
     ok('阅读滚动不移动侧栏', sidebar.scrollTop===top, top+' → '+sidebar.scrollTop);
     ok('阅读滚动不改地址和历史', location.hash===hash && history.length===length);
-    ok('本页目录只指向当前条目', Array.from(document.querySelectorAll('#toc [data-target]')).every(function (a) { return a.dataset.target.indexOf('research-find-supervisor--')===0; }));
+    ok('本页目录只指向实际可见正文', Array.from(document.querySelectorAll('#toc [data-target]')).every(function (a) { var target=document.getElementById(a.dataset.target);return target && !target.closest('[hidden]'); }));
+    ok('单篇条目也能按新目录连续翻页', !!document.querySelector('.doc-nav [rel="next"]') && !!document.querySelector('.doc-nav [rel="prev"]'));
     await go('#/guide/education','升学与继续教育');
     var second=document.querySelector('[data-nav-id="graduate"]');
     var oldHash=location.hash;
@@ -67,10 +94,15 @@ PROBE = r"""
     second.querySelector(':scope > .nav-row .nav-label').click();
     await until(function () { return text('.doc-header h1')==='国内升学'; });
     ok('二级直接打开原有分册概览', text('.doc-header h1')==='国内升学');
+    var visibleEntries=Array.from(document.querySelectorAll('.entry')).filter(function(e){return !e.hidden;});
+    var later=visibleEntries[visibleEntries.length-1];
+    if(later){window.scrollTo(0,window.scrollY+later.getBoundingClientRect().top-readLine+2);window.dispatchEvent(new Event('scroll'));await wait(300);}
+    ok('整组正文滚动时左侧跟随当前条目', !!later && document.querySelector('#navTree .nav-row.active').parentElement.dataset.navId===later.id, (later ? later.id+' @ '+later.getBoundingClientRect().top : 'missing')+' / '+document.querySelector('#navTree .nav-row.active').parentElement.dataset.navId+' / line '+readLine);
+    ok('整组正文右侧目录不随条目切换而重建', document.querySelectorAll('#toc [data-target]').length>visibleEntries.length);
     var overview=document.querySelector('[data-nav-id="education"] > .nav-children > .nav-overview a');
     ok('一级概览入口保留且有强调', overview && overview.getBoundingClientRect().height>0 && getComputedStyle(overview).fontWeight>=600);
     await go('#/guide/places','国家与地区');
-    var japan=Array.from(document.querySelectorAll('.reader-task-row')).find(function(a) { return a.textContent.indexOf('日本')>=0; });
+    var japan=document.querySelector('#main a[href="#/guide/place-44da6bbcf2"]');
     japan.click(); await until(function () { return text('.doc-header h1')==='日本'; });
     ok('地区入口直接打开已有正文', text('.doc-header h1')==='日本');
     ok('同一地区的另一类资料可达', !!document.querySelector('.reader-task-materials a[href*="country-playbooks"]'));

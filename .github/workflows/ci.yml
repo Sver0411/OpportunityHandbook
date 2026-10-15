@@ -74,10 +74,10 @@ jobs:
           want = [(n.get("nav_label") or n["title"]) for n in nav["items"]]
           assert labels == want, f"来源栏目与 Canonical IA 不一致：{labels} != {want}"
           reader = json.loads(pathlib.Path("site/data/reader.json").read_text())["reader"]
-          groups = reader["topics"] + reader["atlases"] + [reader["resources"]]
+          groups = [reader["map"]] + reader["topics"] + reader["atlases"] + [reader["resources"]]
           assert [n["nav_id"] for n in reader["navigation"]] == [n["id"] for n in groups]
           assert "public-sector" in {n["id"] for n in reader["topics"]}, "缺少考公考编一级章节"
-          assert all(n.get("intro_html") for n in groups), "一级概览缺少导读正文"
+          assert all(n.get("intro_html") or n.get("document") for n in groups), "一级概览缺少导读正文"
           coverage = reader["coverage"]
           assert coverage["source_routes"] == coverage["assigned_routes"] == len(reader["owners"])
           print("来源栏目：", len(labels), "个；读者栏目：", len(groups), "个；内容覆盖完整")

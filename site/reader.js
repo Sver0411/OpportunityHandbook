@@ -12,7 +12,7 @@
         visit(n.children || [], n.id);
       });
     }
-    visit(model.topics.concat(model.atlases, [model.resources]), "");
+    visit([model.map].concat(model.topics, model.atlases, [model.resources]), "");
     function path(id) {
       var out = [];
       while (id && nodes[id]) { out.unshift(nodes[id]); id = parents[id]; }
@@ -67,8 +67,9 @@
         main.replaceChildren(header("找不到这个入口", "从目录继续查找", "这个分组可能已经调整。"), el("a", { href: "#/", text: "返回首页 →" }));
         return;
       }
-      // Secondary headings open the overview already present in the original
-      // document. Only first-level groups receive a separate landing page.
+      if (n.document) { options.openOverview(n.document); return; }
+      // Task headings keep their existing overview and body. Resource guides
+      // use authored prose, just like the first-level chapter introductions.
       if (parents[id] && n.refs.length && !n.role) {
         options.openOverview(n.overview + "?from=" + encodeURIComponent(id));
         return;
@@ -85,26 +86,22 @@
       if (n.intro_html) pageHeader.className = "doc-header";
       container.appendChild(pageHeader);
       if (n.intro_html) container.insertAdjacentHTML("beforeend", n.intro_html);
-      if (n.role) {
-        model.topics.forEach(function (topic) {
-          var refs = allOf(topic).filter(function (ref) { return ref.role === n.role; });
-          if (!refs.length) return;
-          var section = el("section", { class: "reader-resource-section" }, [el("h2", { text: topic.label })]);
-          var list = el("ul", { class: "reader-resource-list" });
-          refs.forEach(function (ref) { list.appendChild(resourceRow(ref, model.owners[ref.route])); });
-          section.appendChild(list); container.appendChild(section);
-        });
-      } else {
-        if (n.children.length) {
-          if (n.intro_html) container.appendChild(el("h2", { id: "chapter-contents", text: "本章内容入口" }));
-          var children = el("section", { class: "reader-task-list", "aria-label": "本组内容" });
-          n.children.forEach(function (child) { children.appendChild(childLink(child)); });
-          container.appendChild(children);
-        }
-        sections(n.refs, container, id);
-      }
-      if (n.intro_html) options.buildToc("");
-      options.highlight(routeFor(id)); window.scrollTo(0, 0);
+      appendPager(container, routeFor(id));
+      options.highlight(routeFor(id), { nodeId: id }); window.scrollTo(0, 0);
+      options.mountReading({ route: routeFor(id), nodeId: id });
+    }
+    function routeKey(route) {
+      try { return decodeURI(route); } catch (_) { return route; }
+    }
+    function appendPager(container, route) {
+      var sequence = model.reading_order, key = routeKey(route);
+      var i = sequence.findIndex(function (item) { return routeKey(item.route) === key; });
+      if (i < 0) i = sequence.findIndex(function (item) { return routeKey(item.route).split("?")[0] === key.split("?")[0]; });
+      if (i < 0) return;
+      var prev = sequence[i - 1], next = sequence[i + 1];
+      container.appendChild(el("nav", { class: "doc-nav", "aria-label": "按目录顺序阅读" }, [
+        prev ? el("a", { href: prev.route, rel: "prev", text: "← " + prev.title }) : el("span"),
+        next ? el("a", { href: next.route, rel: "next", text: next.title + " →" }) : el("span") ]));
     }
     function decorateArticle(article, entryId, route, params) {
       pageKind("article");
@@ -116,6 +113,10 @@
       }
       var record = index.entries.find(function (entry) { return entry.id === entryId; });
       var selected = entryId && Array.from(article.querySelectorAll("section.entry")).find(function (section) { return section.id === entryId; });
+      if (!entryId && requested && nodes[owner]) {
+        var allowed = new Set(allOf(nodes[owner]).map(function (ref) { return ref.id; }));
+        article.querySelectorAll("section.entry").forEach(function (entry) { if (!allowed.has(entry.id)) entry.hidden = true; });
+      }
       if (selected && record) {
         article.classList.add("is-single-entry");
         Array.from(article.children).forEach(function (child) { if (child !== selected && !child.classList.contains("doc-header")) child.hidden = true; });
@@ -133,7 +134,7 @@
         window.scrollTo(0, 0);
       }
       article.insertBefore(breadcrumb(path(owner)), article.firstChild);
-      if (owner && nodes[owner]) {
+      if (owner && nodes[owner] && owner !== "content-map") {
         var current = nodes[owner], currentLocation = record ? record.location : route.replace(/^#\/doc\//, "");
         var refs = current.refs.filter(function (ref) { return ref.route !== route && (ref.role !== "understand" || ref.location !== currentLocation); });
         var materials = el("section", { class: "reader-task-materials", "aria-label": "本组配套资料" });
@@ -148,11 +149,18 @@
         if (record && selected) continuation.appendChild(el("a", { class: "reader-full-chapter", href: "#/doc/" + record.location + "?from=" + owner, text: "阅读本组概览与全文 →" }));
         article.appendChild(continuation);
       }
+      var ownerNode = nodes[owner];
+      var overview = requested && ownerNode && ownerNode.overview === route;
+      appendPager(article, route + (overview && !entryId ? "?from=" + owner : ""));
+      var ref = ownerNode && allOf(ownerNode).find(function (item) { return item.route === route; });
+      return { route: route, nodeId: owner === "content-map" ? owner : (overview ? owner : (ref ? ref.id : owner)),
+        entryId: entryId, isMap: owner === "content-map" };
     }
     document.body.classList.add("reader-enabled");
     return {
       handle: function (parts) { if (parts[0] === "guide") { guide(parts[1]); return true; } return false; },
       decorateArticle: decorateArticle,
+      appendPager: appendPager,
       prepareSearch: function () { pageKind("search"); },
       isSingle: function () { return !!main.querySelector(".is-single-entry"); }
     };

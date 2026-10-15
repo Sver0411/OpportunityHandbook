@@ -42,6 +42,8 @@
 .is-single-entry > .entry > h3 { display:none; }
 .is-single-entry > .entry { margin-top:0; }
 .reader-enabled [hidden] { display:none !important; }
+.reader-enabled .doc h2, .reader-enabled .doc h3 { scroll-margin-top:96px; }
+.reader-enabled .toc, .reader-enabled .nav-tree { overflow-anchor:none; }
 .reader-retry { padding:9px 16px; border:1px solid var(--line-strong); border-radius:8px; background:var(--bg); color:var(--ink); cursor:pointer; font:inherit; }
 
 @media (min-width:901px) {

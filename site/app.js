@@ -339,75 +339,57 @@
   // 节点类型优先级：越精确越优先，保证同一时刻只高亮一行
   var KIND_PRIORITY = { entry: 5, doc: 4, section: 3, group: 2, subsection: 2 };
 
+  function routeKey(hash) {
+    try { return decodeURI((hash || "").split("?")[0]); } catch (_) { return (hash || "").split("?")[0]; }
+  }
+
+  function keepVisible(pane, node) {
+    if (!pane || !node || pane.clientHeight < 1 || !node.getClientRects().length) return;
+    var box = pane.getBoundingClientRect(), rect = node.getBoundingClientRect(), pad = 12;
+    if (rect.top < box.top + pad) pane.scrollTop += rect.top - box.top - pad;
+    else if (rect.bottom > box.bottom - pad) pane.scrollTop += rect.bottom - box.bottom + pad;
+  }
+
   function markActive(hash, opts) {
     opts = opts || {};
     var rows = Array.prototype.slice.call(navTree.querySelectorAll(".nav-row"));
-    rows.forEach(function (r) { r.classList.remove("active"); });
-
-    function pick(want) {
-      var best = null, bestScore = -1;
-      rows.forEach(function (r) {
-        var a = r.querySelector("a.nav-label");
-        if (!a || (a.getAttribute("href") || "").split("?")[0] !== want) return;
-        var score = KIND_PRIORITY[r.dataset.kind] || 1;
-        if (score > bestScore) { bestScore = score; best = r; }
-      });
-      return best;
-    }
-
-    function pickPrefix(want) {
-      if (!want) return null;
-      var best = null, bestScore = -1;
-      rows.forEach(function (r) {
-        var a = r.querySelector("a.nav-label");
-        if (!a) return;
-        var href = (a.getAttribute("href") || "").split("?")[0];
-        if (href !== want && href.indexOf(want + "/") !== 0) return;
-        var score = KIND_PRIORITY[r.dataset.kind] || 1;
-        if (score > bestScore) { bestScore = score; best = r; }
-      });
-      return best;
-    }
-
-    // 章节页里 section 与它下面所有分组指向同一个 href，必须只留一行，
-    // 否则一次会点亮好几行（看起来像随机变灰）
-    var hit = pick(hash);
+    var hit = opts.nodeId && rows.find(function (r) { return r.parentElement.dataset.navId === opts.nodeId; });
+    function href(r) { var a = r.querySelector("a.nav-label"); return a ? a.getAttribute("href") : ""; }
+    if (!hit) hit = rows.find(function (r) { return href(r) === hash; });
     if (!hit) {
-      // 分组锚点可能指向更深的位置：先按前缀匹配（例如 #/doc/book/03-升学/本科-硕士）
-      var prefix = hash.replace(/\/[^/]*$/, "");
-      hit = pick(prefix);
+      var key = routeKey(hash), best = -1;
+      rows.forEach(function (r) {
+        if (routeKey(href(r)) !== key) return;
+        var score = KIND_PRIORITY[r.dataset.kind] || 1;
+        if (score > best) { hit = r; best = score; }
+      });
     }
     if (!hit) {
-      // 再退一步：匹配所属文档（保证章节页至少高亮它的领域）
-      var raw = hash.replace(/^#\/doc\//, "");
-      var parts = raw.split("/");
-      for (var depth = parts.length; depth > 1 && !hit; depth--) {
-        hit = pick("#/doc/" + parts.slice(0, depth - 1).join("/"));
-        if (!hit) hit = pickPrefix("#/doc/" + parts.slice(0, depth - 1).join("/"));
-      }
+      var target = routeKey(hash), length = 0;
+      rows.forEach(function (r) {
+        var key = routeKey(href(r));
+        if (key && target.indexOf(key + "/") === 0 && key.length > length) { hit = r; length = key.length; }
+      });
     }
-    if (!hit) hit = pickPrefix(hash);
-    if (!hit) return;
-    hit.classList.add("active");
-
-    // active ≠ 手动展开：这里只做「让 active 可见」的临时展开与 accordion 收合，
-    // 不写 localStorage，不碰用户手动展开的分组。
-    if (opts.scroll !== false) syncNavOpenState(hit.closest(".nav-item"));
-    // 目录只在**用户明确跳转**时滚动（opts.scroll !== false）：
-    // 阅读时跟随高亮去滚动目录，会让上面的章节被顶走、下面的冒出来，
-    // 看起来就是「菜单一会在上面一会在下面」。
-    // 而且必须滚真正可滚的 .nav-tree（侧栏是 fixed + overflow:clip，滚它会把整块顶走），
-    // 并且只做「刚好露出」的最小滚动，不做居中。
-    if (opts.scroll === false) return;
-    var box = navTree;
-    var rect = hit.getBoundingClientRect();
-    var boxRect = box.getBoundingClientRect();
-    var top = rect.top - boxRect.top + box.scrollTop;
-    var pad = 24;
-    if (top < box.scrollTop + pad) {
-      box.scrollTop = Math.max(0, top - pad);
-    } else if (top + rect.height > box.scrollTop + box.clientHeight - pad) {
-      box.scrollTop = top + rect.height - box.clientHeight + pad;
+    rows.forEach(function (r) {
+      r.classList.toggle("active", r === hit);
+      var a = r.querySelector("a.nav-label");
+      if (a) { if (r === hit) a.setAttribute("aria-current", r.dataset.kind === "anchor" ? "location" : "page"); else a.removeAttribute("aria-current"); }
+    });
+    if (!hit || opts.scroll === false) return;
+    var item = hit.closest(".nav-item");
+    if (opts.follow) {
+      // Reading reveals only the active ancestry. It never folds other branches
+      // or overwrites the reader's manual expand/collapse preferences.
+      navTree.classList.add("no-anim");
+      getAncestorPath(item).forEach(function (ancestor) {
+        if (!ancestor.classList.contains("open")) setOpen(ancestor, true, { persist: false, auto: true });
+      });
+      keepVisible(navTree, hit);
+      requestAnimationFrame(function () { navTree.classList.remove("no-anim"); });
+    } else {
+      syncNavOpenState(item);
+      keepVisible(navTree, hit);
     }
   }
 
@@ -434,17 +416,20 @@
       if (window.location.hash !== requestedHash) return;
       main.innerHTML = html;
       var article = main.querySelector(".doc");
-      if (readerUI) readerUI.decorateArticle(article, entryId, "#/doc/" + location + (entryId ? "/" + entryId : ""), params);
+      var context = readerUI ? readerUI.decorateArticle(article, entryId, "#/doc/" + location + (entryId ? "/" + entryId : ""), params) : {};
       var header = article.querySelector(".doc-header");
       if (item && item.last_verified && item.last_verified < state.index.stale_threshold) {
         article.insertBefore(el("p", { class: "notice", text:
           "本页最后核实于 " + item.last_verified + "，已经超过 12 个月，其中的制度性信息可能需要重新核实。" }),
           header.nextSibling);
       }
-      buildToc(entryId);
-      if (!readerUI || !readerUI.isSingle()) buildDocNav(location);
-      if (!readerUI || !readerUI.isSingle()) focusTarget(entryId);
-      watchEntries(location);
+      if (!readerUI) buildDocNav(location);
+      focusTarget(readerUI && readerUI.isSingle() ? "" : entryId);
+      context.location = location;
+      context.entryId = entryId;
+      mountReading(context);
+      var section = params.get("section"), sectionNode = section && document.getElementById(section);
+      if (sectionNode && main.contains(sectionNode)) jumpToHeading(sectionNode);
     }).catch(function (err) {
       if (window.location.hash !== requestedHash) return;
       clear(main);
@@ -454,111 +439,119 @@
     });
   }
 
-  // 右侧目录只服务于「当前正在阅读的条目」：
-  //   · 定位到某个条目（deep link 或点击左栏叶子）→ 只显示该条目内部的 H2
-  //   · 打开章节根页（没有指定条目）→ 显示章节结构（分组 H2 + 各条目 H3）
-  function buildToc(entryId) {
-    clear(tocEl);
-    var entry = entryId ? main.querySelector('section.entry[id="' + CSS.escape(entryId) + '"]') : null;
-    if (entryId && !entry) return;
-    var heads = entry
-      ? entry.querySelectorAll("h2")
-      : main.querySelectorAll(".doc > h2, .entry > h3");
-    if (!heads.length) return;
-    var list = el("ul", { class: "toc-list" });
-    var links = [];
-    Array.prototype.forEach.call(heads, function (h) {
-      if (h.closest(".sources-details")) return;   // 来源折叠块不进右栏目录
-      var id = h.id || "";
-      // 条目标题没有自己的 id，就退到所属条目的锚点，保证点了能跳
-      var target = id ? main.querySelector("#" + CSS.escape(id)) : h.closest(".entry");
-      var a = el("a", { href: "#", text: h.textContent, "data-target": id });
-      a.addEventListener("click", function (ev) {
-        ev.preventDefault();
-        (target || h).scrollIntoView({ block: "start" });
-      });
-      links.push({ link: a, node: target || h });
-      list.appendChild(el("li", { class: h.tagName === "H3" ? "lvl-3" : "lvl-2" }, [a]));
-    });
-    var title = "本章目录";
-    if (entry) {
-      var h3 = entry.querySelector("h3");
-      title = h3 ? h3.textContent.trim() : (entry.id || "本条");
-    }
-    tocEl.appendChild(el("p", { class: "toc-title", text: title }));
-    tocEl.appendChild(list);
-    watchHeadings(links);
-  }
+  // Both sidebars observe the headings and entries actually rendered on this
+  // page. One geometry-based watcher also handles large jumps and reverse scroll.
+  var readingWatch = { links: [], context: {}, handler: null, frame: 0, timer: 0,
+    observer: null, activeHeading: null, activeLeft: "" };
 
-  // ------------------------------------------------------ 滚动跟随当前条目
-  //
-  // 目标：右侧目录 + 左栏高亮随阅读位置自动切换，但**不修改 location.hash 与
-  // history**（自然滚动不应产生历史记录，否则浏览器「后退」会逐个条目回退）。
-  var entryWatch = { location: "", current: "", handler: null, last: 0, timer: null };
+  function stopReading() {
+    if (readingWatch.handler) {
+      window.removeEventListener("scroll", readingWatch.handler);
+      window.removeEventListener("resize", readingWatch.handler);
+    }
+    if (readingWatch.frame) cancelAnimationFrame(readingWatch.frame);
+    if (readingWatch.timer) clearTimeout(readingWatch.timer);
+    if (readingWatch.observer) readingWatch.observer.disconnect();
+    readingWatch.handler = null; readingWatch.frame = 0; readingWatch.timer = 0; readingWatch.observer = null;
+    readingWatch.links = []; readingWatch.activeHeading = null; readingWatch.activeLeft = "";
+  }
 
   function readingLine() {
-    // 顶部阅读线：随视口高度取约 1/3（并夹在 120–240px 之间）。
-    // 固定 120px 在长页面上偏严——刚滚到下一个条目时它的 top 仍在 150px 左右，
-    // 会被误判为「还没进入」。
-    var h = window.innerHeight || 800;
-    return Math.min(Math.max(120, h * 0.33), 240);
+    var bar = document.querySelector(".topbar");
+    return (bar ? Math.max(0, bar.getBoundingClientRect().bottom) : 64) + 32;
   }
 
-  function currentEntryId() {
-    var entries = main.querySelectorAll("section.entry");
-    if (!entries.length) return "";
-    var line = readingLine();
-    var best = "";
-    Array.prototype.forEach.call(entries, function (s) {
-      if (s.hidden) return;
-      var rect = s.getBoundingClientRect();
-      // 以实时几何位置判断：选择最后一个「顶部已在阅读线上方」的条目
-      if (rect.top - line <= 0.5) best = s.id;
+  function jumpToHeading(node) {
+    var top = window.scrollY + node.getBoundingClientRect().top - readingLine() + 1;
+    window.scrollTo({ top: Math.max(0, top), behavior: "instant" });
+    updateReading();
+  }
+
+  function buildToc(entryId) {
+    clear(tocEl);
+    var article = main.querySelector(".doc");
+    if (!article) return [];
+    var heads = Array.from(article.querySelectorAll("h2, h3")).filter(function (h) {
+      return !h.closest("[hidden], .sources-details") && h.getClientRects().length > 0;
     });
-    return best;
+    var links = [], list = el("ul", { class: "toc-list" });
+    heads.forEach(function (h, i) {
+      var entryTitle = h.tagName === "H3" && h.parentElement.classList.contains("entry");
+      var target = entryTitle ? h.parentElement : h;
+      if (!target.id) {
+        var id = "reader-heading-" + i;
+        while (document.getElementById(id)) id += "-section";
+        target.id = id;
+      }
+      var a = el("a", { href: "#", text: h.textContent, "data-target": target.id });
+      a.addEventListener("click", function (event) { event.preventDefault(); jumpToHeading(target); });
+      var nested = !entryTitle && (h.tagName === "H3" || (!entryId && h.closest(".entry")));
+      list.appendChild(el("li", { class: nested ? "lvl-3" : "lvl-2" }, [a]));
+      links.push({ node: target, link: a });
+    });
+    if (links.length) {
+      tocEl.appendChild(el("p", { class: "toc-title", text: "本页目录" }));
+      tocEl.appendChild(list);
+    }
+    return links;
   }
 
-  function watchEntries(location) {
-    if (entryWatch.handler) window.removeEventListener("scroll", entryWatch.handler);
-    if (entryWatch.timer) { window.clearInterval(entryWatch.timer); entryWatch.timer = null; }
-    entryWatch.location = location;
-    entryWatch.current = "";
-    entryWatch.handler = function () {
-      var now = Date.now();
-      if (entryWatch.last && now - entryWatch.last < 80) return;   // 轻量节流
-      entryWatch.last = now;
-      var id = currentEntryId();
-      if (id === entryWatch.current) return;
-      entryWatch.current = id;
-      buildToc(id);
-      // 只同步视觉状态：高亮左栏 + 展开当前条目祖先路径，不改 URL。
-      // scroll:false = 阅读过程中不要滚动目录本身（只换高亮）。
-      markActive("#/doc/" + location + (id ? "/" + id : ""), { scroll: false });
-    };
-    window.addEventListener("scroll", entryWatch.handler, { passive: true });
-    entryWatch.handler();
-  }
-
-  // 滚动时高亮当前小节（轻量：只比较各标题的文档位置）
-  var tocObserver = null;
-  function watchHeadings(links) {
-    if (tocObserver) { tocObserver.disconnect(); tocObserver = null; }
-    if (typeof IntersectionObserver !== "function" || !links.length) return;
-    var byNode = new Map();
-    links.forEach(function (x) { byNode.set(x.node, x.link); });
-    tocObserver = new IntersectionObserver(function (entries) {
-      entries.forEach(function (en) {
-        var link = byNode.get(en.target);
-        if (!link) return;
-        if (en.isIntersecting) {
-          Array.prototype.forEach.call(tocEl.querySelectorAll("a.active"), function (a) {
-            a.classList.remove("active");
-          });
-          link.classList.add("active");
-        }
+  function updateReading() {
+    var links = readingWatch.links, line = readingLine(), current = null;
+    links.forEach(function (item) { if (item.node.getBoundingClientRect().top <= line + 1) current = item; });
+    var bottom = document.documentElement.scrollHeight - innerHeight;
+    if (bottom > 0 && window.scrollY >= bottom - 2 && links.length) current = links[links.length - 1];
+    if (current !== readingWatch.activeHeading) {
+      links.forEach(function (item) {
+        item.link.classList.toggle("active", item === current);
+        if (item === current) item.link.setAttribute("aria-current", "location"); else item.link.removeAttribute("aria-current");
       });
-    }, { rootMargin: "-72px 0px -70% 0px", threshold: 0 });
-    links.forEach(function (x) { tocObserver.observe(x.node); });
+      readingWatch.activeHeading = current;
+      if (current) keepVisible(tocEl, current.link);
+    }
+    var context = readingWatch.context, entryId = context.entryId || "";
+    if (!entryId) {
+      Array.from(main.querySelectorAll(".entry")).forEach(function (entry) {
+        if (entry.hidden) return;
+        var rect = entry.getBoundingClientRect();
+        if (rect.top <= line) entryId = entry.id;
+      });
+      var materials = main.querySelector(".reader-task-materials");
+      if (materials && materials.getBoundingClientRect().top <= line) entryId = "";
+    }
+    var nodeId = context.nodeId || "", href = context.route || "";
+    if (context.isMap && current) nodeId = "map-section-" + current.node.id;
+    else if (entryId && context.location) { nodeId = entryId; href = "#/doc/" + context.location + "/" + entryId; }
+    var left = nodeId || href;
+    if (left && left !== readingWatch.activeLeft) {
+      readingWatch.activeLeft = left;
+      markActive(href, { nodeId: nodeId, follow: true });
+    }
+  }
+
+  function mountReading(context) {
+    stopReading();
+    readingWatch.context = context || {};
+    readingWatch.links = buildToc(context.entryId || "");
+    readingWatch.handler = function () {
+      if (readingWatch.frame) return;
+      function flush() {
+        if (readingWatch.frame) cancelAnimationFrame(readingWatch.frame);
+        if (readingWatch.timer) clearTimeout(readingWatch.timer);
+        readingWatch.frame = 0; readingWatch.timer = 0;
+        updateReading();
+      }
+      readingWatch.frame = requestAnimationFrame(flush);
+      // Keep the last position accurate when a background tab delays painting.
+      readingWatch.timer = setTimeout(flush, 100);
+    };
+    window.addEventListener("scroll", readingWatch.handler, { passive: true });
+    window.addEventListener("resize", readingWatch.handler, { passive: true });
+    if (typeof ResizeObserver === "function") {
+      readingWatch.observer = new ResizeObserver(readingWatch.handler);
+      readingWatch.observer.observe(main);
+    }
+    updateReading();
   }
 
   function buildDocNav(location) {
@@ -566,19 +559,16 @@
     if (i < 0) return;
     var prev = state.flat[i - 1], next = state.flat[i + 1];
     var bar = el("div", { class: "doc-nav" }, [
-      prev ? el("a", { href: "#/doc/" + encodeURIComponent(prev.location), text: "← " + prev.title }) : el("span", { text: "" }),
-      next ? el("a", { href: "#/doc/" + encodeURIComponent(next.location), text: next.title + " →" }) : el("span", { text: "" })
-    ]);
+      prev ? el("a", { href: "#/doc/" + encodeURIComponent(prev.location), text: "← " + prev.title }) : el("span"),
+      next ? el("a", { href: "#/doc/" + encodeURIComponent(next.location), text: next.title + " →" }) : el("span") ]);
     var doc = main.querySelector(".doc");
     if (doc) doc.appendChild(bar);
   }
 
   function focusTarget(entryId) {
-    if (!entryId) { window.scrollTo({ top: 0 }); return; }
-    var node = main.querySelector('[id="' + entryId.replace(/"/g, '\\"') + '"]');
-    if (!node) return;
-    node.classList.add("highlight");
-    node.scrollIntoView({ block: "start" });
+    if (!entryId) { window.scrollTo({ top: 0, behavior: "instant" }); return; }
+    var node = document.getElementById(entryId);
+    if (node && main.contains(node)) { node.classList.add("highlight"); jumpToHeading(node); }
   }
 
   // ------------------------------------------------------------ 浏览与筛选
@@ -844,8 +834,7 @@
   function route() {
     var h = parseHash();
     var parts = h.parts;
-    if (entryWatch.handler) window.removeEventListener("scroll", entryWatch.handler);
-    if (tocObserver) tocObserver.disconnect();
+    stopReading();
     if (isMobile()) closeDrawer();
 
     if (readerUI && readerUI.handle(parts)) { input.value = ""; state.params = new URLSearchParams(); return; }
@@ -1006,9 +995,9 @@
           state.index.nav = data.reader.navigation;
           buildNav();
           readerUI = window.HandbookReader({ index: data, main: main, nav: navTree, toc: tocEl,
-            el: el, read: read, store: store, bookNav: buildNav, buildToc: buildToc,
+            el: el, read: read, store: store, bookNav: buildNav, mountReading: mountReading,
             openOverview: function (destination) { history.replaceState(null, "", destination); route(); },
-            highlight: function (href) { markActive(href); } });
+            highlight: function (href, options) { markActive(href, options); } });
         } else buildNav();
         bind();
         if (read(NAV_KEY) === "collapsed" && !isMobile()) applyCollapsed(true);
