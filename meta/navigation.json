@@ -633,6 +633,33 @@
           "nav_id": "01-12"
         },
         {
+          "title": "专升本怎么准备",
+          "target": {
+            "type": "doc",
+            "location": "book/01-先决定下一步往哪里走/14-专升本怎么准备",
+            "anchor": ""
+          },
+          "children": [
+            {
+              "title": "统招专升本与成人教育怎么选",
+              "target": {
+                "type": "entry",
+                "entry_id": "zsb-path-choice"
+              },
+              "nav_id": "01-13-01"
+            },
+            {
+              "title": "专升本报名到录取的完整流程",
+              "target": {
+                "type": "entry",
+                "entry_id": "zsb-apply-process"
+              },
+              "nav_id": "01-13-02"
+            }
+          ],
+          "nav_id": "01-13"
+        },
+        {
           "title": "给自己保留退路",
           "children": [
             {
@@ -641,7 +668,7 @@
                 "type": "entry",
                 "entry_id": "optionality-why-not-lock"
               },
-              "nav_id": "01-13-01"
+              "nav_id": "01-14-01"
             },
             {
               "title": "哪些能力可以跨路线使用",
@@ -649,7 +676,7 @@
                 "type": "entry",
                 "entry_id": "optionality-transferable"
               },
-              "nav_id": "01-13-02"
+              "nav_id": "01-14-02"
             },
             {
               "title": "走错以后怎么切换",
@@ -657,7 +684,7 @@
                 "type": "entry",
                 "entry_id": "paths-switching-between-paths"
               },
-              "nav_id": "01-13-03"
+              "nav_id": "01-14-03"
             }
           ],
           "target": {
@@ -665,7 +692,7 @@
             "location": "book/01-先决定下一步往哪里走/05-给自己保留退路",
             "anchor": ""
           },
-          "nav_id": "01-13"
+          "nav_id": "01-14"
         }
       ],
       "nav_id": "01"
@@ -1012,6 +1039,33 @@
           "nav_id": "02-07"
         },
         {
+          "title": "留学语言考试怎么准备",
+          "target": {
+            "type": "doc",
+            "location": "book/02-在学校里先把基础打好/09-留学语言考试怎么准备",
+            "anchor": ""
+          },
+          "children": [
+            {
+              "title": "雅思还是托福：按目标项目倒推，不按难度选",
+              "target": {
+                "type": "entry",
+                "entry_id": "lang-test-choice"
+              },
+              "nav_id": "02-08-01"
+            },
+            {
+              "title": "小分不达标、成绩复议与二刷",
+              "target": {
+                "type": "entry",
+                "entry_id": "lang-test-score-issues"
+              },
+              "nav_id": "02-08-02"
+            }
+          ],
+          "nav_id": "02-08"
+        },
+        {
           "title": "证书",
           "children": [
             {
@@ -1020,7 +1074,7 @@
                 "type": "entry",
                 "entry_id": "certificate-what-is-worth-it"
               },
-              "nav_id": "02-08-01"
+              "nav_id": "02-09-01"
             },
             {
               "title": "法定准入型证书",
@@ -1028,7 +1082,7 @@
                 "type": "entry",
                 "entry_id": "skill-occupational-certificates"
               },
-              "nav_id": "02-08-02"
+              "nav_id": "02-09-02"
             },
             {
               "title": "行业认证",
@@ -1036,7 +1090,7 @@
                 "type": "entry",
                 "entry_id": "skill-industry-certification"
               },
-              "nav_id": "02-08-03"
+              "nav_id": "02-09-03"
             },
             {
               "title": "厂商认证",
@@ -1044,7 +1098,7 @@
                 "type": "entry",
                 "entry_id": "certificate-vendor"
               },
-              "nav_id": "02-08-04"
+              "nav_id": "02-09-04"
             },
             {
               "title": "不要为了证书而考证",
@@ -1052,7 +1106,7 @@
                 "type": "entry",
                 "entry_id": "certificate-not-for-certificates"
               },
-              "nav_id": "02-08-05"
+              "nav_id": "02-09-05"
             }
           ],
           "target": {
@@ -1060,7 +1114,7 @@
             "location": "book/02-在学校里先把基础打好/06-证书",
             "anchor": ""
           },
-          "nav_id": "02-08"
+          "nav_id": "02-09"
         }
       ],
       "nav_id": "02"

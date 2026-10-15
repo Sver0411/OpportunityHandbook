@@ -86,6 +86,9 @@ TREE = """
   事业单位与基层项目 @d:book/01-先决定下一步往哪里走/13-事业单位与基层项目
     事业单位考试怎么选 @e:exam-public-institution
     三支一扶、西部计划、特岗教师：政策怎么核 @e:exam-grassroots-programs
+  专升本怎么准备 @d:book/01-先决定下一步往哪里走/14-专升本怎么准备
+    统招专升本与成人教育怎么选 @e:zsb-path-choice
+    专升本报名到录取的完整流程 @e:zsb-apply-process
   给自己保留退路
     为什么不要过早把路线锁死 @n:optionality-why-not-lock
     哪些能力可以跨路线使用 @n:optionality-transferable
@@ -131,6 +134,9 @@ TREE = """
   四六级分数的用途与校内规定 @d:book/02-在学校里先把基础打好/08-四六级分数的用途与校内规定
     四六级分数在各场景的用途对照 @e:cet-score-usage
     校内规定说不过就不给毕业，怎么办 @e:cet-school-requirement
+  留学语言考试怎么准备 @d:book/02-在学校里先把基础打好/09-留学语言考试怎么准备
+    雅思还是托福：按目标项目倒推，不按难度选 @e:lang-test-choice
+    小分不达标、成绩复议与二刷 @e:lang-test-score-issues
   证书
     哪些证书值得考 @e:certificate-what-is-worth-it
     法定准入型证书 @e:skill-occupational-certificates
