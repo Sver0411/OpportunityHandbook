@@ -222,7 +222,14 @@ def build(index, root=None):
                node("careers", "行业与岗位", "分别按行业环境和具体工作职责查找。", [
                    node("industries", "按行业了解"), node("occupations", "按岗位了解")])]
     references = node("references", "术语与官方入口", "核对概念、查找原始来源和办理入口。")
-    by_id = {n["id"]: n for n in walk([content_map] + topics + atlases + [references])}
+    # 资料库按「角色」反查：时间线 / 工具 / 案例 / 步骤 / 风险。
+    # 先建好并注册进 by_id，assign 时同步投放——同一篇文章既可按任务读，
+    # 也可按类型查（「我想把所有表格找出来」）。缺了这一步，这一栏就是空的。
+    resources = []
+    for role in ["timeline", "tool", "case", "steps", "risk"]:
+        resources.append({"id": "library-" + role, "label": ROLE_LABELS[role],
+                          "role": role, "children": [], "refs": []})
+    by_id = {n["id"]: n for n in walk([content_map] + topics + atlases + [references] + resources)}
     records = {e["route"]: e for e in index["entries"] + index["docs"]}
     owners = {}
     source_routes = set()
@@ -278,10 +285,15 @@ def build(index, root=None):
         display_title = record.get("title") or title
         if chapter == "10" and group.startswith("国家与地区"):
             display_title += " · " + ("制度与概念" if "制度与概念" in group else "申请与操作")
-        by_id[destination]["refs"].append({"title": display_title, "route": route,
-                                         "id": record.get("id") or route, "role": role,
-                                         "summary": summary, "source_group": group,
-                                         "location": record.get("location") or ""})
+        ref = {"title": display_title, "route": route,
+               "id": record.get("id") or route, "role": role,
+               "summary": summary, "source_group": group,
+               "location": record.get("location") or ""}
+        by_id[destination]["refs"].append(ref)
+        # 同一篇按角色进资料库：读法不同，入口也就不同。
+        library = by_id.get("library-" + role)
+        if library is not None:
+            library["refs"].append(ref)
 
     for section in index["nav"]:
         chapter = section["title"][:2]
@@ -294,12 +306,8 @@ def build(index, root=None):
                     visit(child, group or child["title"])
         visit(section)
 
-    resources = []
-    for role in ["timeline", "tool", "case", "steps", "risk"]:
-        resources.append({"id": "library-" + role, "label": ROLE_LABELS[role],
-                          "role": role, "children": [], "refs": []})
     featured = ["explore", "supervisor", "internships", "kaoyan", "offers", "change"]
-    for n in walk([content_map] + topics + atlases + [references]):
+    for n in walk([content_map] + topics + atlases + [references] + resources):
         n["route"] = "#/guide/" + n["id"]
         n["count"] = len(n["refs"]) + sum(child.get("count", 0) for child in n["children"])
         if n["refs"]:
@@ -314,6 +322,7 @@ def build(index, root=None):
         count(n)
     resource_hub = node("reference-library", "资料与工具", "按用途查找时间线、工具、案例与官方来源。", resources + [references])
     resource_hub["route"] = "#/guide/reference-library"
+    count(resource_hub)
 
     def to_nav(n):
         children = [to_nav(child) for child in n["children"]]

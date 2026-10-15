@@ -1,23 +1,37 @@
-项目、竞赛和开源都能把“学过什么”变成“做成过什么”，但它们的目标、协作规则与评价方式并不相同。这一章帮助你选择一种适合当前能力和时间的实践形式，完成一次可检查的产出，并把过程整理成别人能够理解和继续使用的成果。
+项目、竞赛和开源都能把「学过什么」变成「**做成过什么**」，但它们的目标、协作规则与评价方式完全不同。这一章帮你选一种适合当前能力与时间的实践形式，完成一次可检查的产出，并把过程整理成别人能看懂、能接着用的成果。
 
-## 先说明这次实践要验证什么
+这一栏分成四组：[做出一个项目](#/guide/projects)、[参加一场竞赛](#/guide/competitions)、[完成开源贡献](#/guide/opensource)、[社群活动与公共贡献](#/guide/community)。四者的共同点是**都要留下能被检查的东西**，差别在于评价它的人是谁。
 
-练习新技能、解决真实需求、体验团队协作、接触行业，都是合理目标。不同目标需要不同规模：独立练习可以围绕一个小功能展开；面向真实用户的项目则需要确认使用场景、需求与反馈渠道。不要先选一个听起来很大的题目，再寻找它可以解决的问题。
+## 做出一个项目
 
-开始前，写下最终要交付什么、什么时候结束、怎样判断完成。明确边界能帮助你把精力放在关键环节，也让失败和未完成有具体原因，而不只是笼统地归结为能力不足。
+先破除两个误解：[什么才算真正的项目](#/doc/book/03-做项目、打比赛、进实验室/01-项目与作品/project-what-is-real) 讲「有代码」不等于「有项目」——判断标准是**有人用过、有问题被解决、有你能说清的取舍**；[教程项目有没有价值](#/doc/book/03-做项目、打比赛、进实验室/01-项目与作品/project-tutorial) 承认跟教程做的练习有用，但要说清它到不了哪一步。中职与专科读者可以直接看[中职阶段怎么试出自己想做什么](#/doc/book/01-先决定下一步往哪里走/06-中职与专科阶段的探索与作品/vocational-explore) 与[能拿出什么作品](#/doc/book/01-先决定下一步往哪里走/06-中职与专科阶段的探索与作品/vocational-portfolio)。
 
-## 四种实践形式怎样选择
+动手顺序：[第一个个人项目怎么开始](#/doc/book/03-做项目、打比赛、进实验室/01-项目与作品/project-personal) 给的是选题与收尾标准，[项目选题与问题定义](#/doc/docs/projects/选题与问题定义) 把「我想做点东西」变成可执行的问题，[MVP 与范围控制](#/doc/docs/projects/MVP与范围控制) 防止第一个项目做半年还没能用。团队做的看[团队项目](#/doc/book/03-做项目、打比赛、进实验室/01-项目与作品/project-team)，分工与协作规则比技术选型更影响结果。
 
-项目适合围绕需求完成设计、实现与验证；竞赛具有规则、截止时间和评分要求，需要同时判断投入与可保留的成果；开源强调在现有项目中理解问题、遵守规范并与维护者协作；社群和公共贡献则可能涉及组织、沟通、资料维护及长期服务。
+**证据决定项目能不能变现**：[数据、测试和指标](#/doc/book/03-做项目、打比赛、进实验室/01-项目与作品/project-data-test-metrics) 与[工程项目的测试、指标与证据](#/doc/docs/projects/测试与指标体系) 讲怎么留下别人能验证的东西，[真实用户与反馈](#/doc/book/03-做项目、打比赛、进实验室/01-项目与作品/project-users-feedback) 是最难也最值的一类证据。想判断自己的项目在同类里算什么水平，看[项目类型专项：什么证据才算做得好](#/doc/docs/projects/项目类型专项)。
 
-没有经验时，选择一个范围小、反馈明确的任务通常更容易推进。加入现有项目也应先阅读贡献说明、了解维护状况，再确认自己的改动是否被需要。团队实践要提前约定分工、署名、交付方式和出现分歧时怎样处理。
+收尾动作：写 [README（三档对比）](#/doc/docs/projects/README对比)、做 [Demo](#/doc/book/03-做项目、打比赛、进实验室/01-项目与作品/project-demo)（时长场合不同做法不同，见[Demo 怎么做](#/doc/docs/projects/Demo制作)）、整理[作品集](#/doc/book/03-做项目、打比赛、进实验室/01-项目与作品/project-portfolio)。把项目写进简历与面试另有讲究，见[项目如何写进简历与面试](#/doc/docs/projects/项目写进简历)。日志与排障看[日志、可观测性与故障分析](#/doc/docs/projects/日志与故障分析)。
 
-## 过程记录决定成果能否复用
+工具：[项目设计 Canvas](#/doc/docs/tools/项目设计Canvas)、[项目测试计划模板](#/doc/docs/tools/项目测试计划)、[Benchmark 记录表](#/doc/docs/tools/Benchmark记录表)、[README 检查表](#/doc/docs/tools/README检查表)、[项目发布检查表](#/doc/docs/tools/发布检查表)、[职校作品清单](#/doc/docs/tools/职校作品清单)。完整流程见 [Playbook：第一次做项目](#/doc/docs/playbooks/第一次做项目)，两个参考案例：[第一次做真正的项目](#/doc/docs/cases/第一次做真正项目) 与[从教程项目到工程作品](#/doc/docs/cases/教程项目到工程作品)。
 
-保留需求、尝试、测试与取舍，能帮助别人理解作品为什么这样做。一个能运行的演示不等于已经可靠交付；根据任务补充测试、说明文档和已知限制，才方便用户或合作者接手。竞赛结束后，也可以把合规可公开的部分整理成作品，说明个人贡献与团队成果的界限。
+## 参加一场竞赛
 
-## 怎样使用本章继续行动
+先判断值不值得投入：[要不要参加比赛](#/doc/book/03-做项目、打比赛、进实验室/02-竞赛/competition-should-i-join)、[什么比赛值得参加](#/doc/book/03-做项目、打比赛、进实验室/02-竞赛/competition-what-worth-joining)（看主办方、评审方式、往届含金量），以及[奖项和过程哪个更重要](#/doc/book/03-做项目、打比赛、进实验室/02-竞赛/competition-award-vs-process)——多数情况下**能讲清过程比拿到奖更耐用**。
 
-先读相应实践形式的判断与方法，再使用步骤清单启动任务，遇到具体困难时查模板和案例。完成后做一次复盘：什么达到了预期、哪里需要重做、下一次可以减少什么投入。将这些证据带入实习求职或科研章节，比只列项目名称更能说明你的能力。
+按类型选择：[学科竞赛](#/doc/book/03-做项目、打比赛、进实验室/02-竞赛/competition-mathematical-modeling)、[工程竞赛](#/doc/book/03-做项目、打比赛、进实验室/02-竞赛/competition-engineering)、[编程与数据竞赛](#/doc/book/03-做项目、打比赛、进实验室/02-竞赛/competition-programming-contest)、[商业与创业竞赛](#/doc/book/03-做项目、打比赛、进实验室/02-竞赛/competition-business)、[设计与创作竞赛](#/doc/book/03-做项目、打比赛、进实验室/02-竞赛/competition-design-creative)、[职业技能竞赛](#/doc/book/03-做项目、打比赛、进实验室/02-竞赛/competition-vocational-skills)。
 
-需要围绕真实需求交付成果，可以读[做出一个项目](#/guide/projects)；希望在明确规则和期限内接受检验，可以比较[竞赛](#/guide/competitions)。想在已有项目里解决问题，从[完成开源贡献](#/guide/opensource)了解协作方式；擅长组织、沟通或资料维护，也可以从[社群活动与公共贡献](#/guide/community)找到具体任务。
+真要参赛，这五篇按顺序用：[组队与分工](#/doc/docs/competition-playbooks/组队与分工)、[读规则与评分函数](#/doc/docs/competition-playbooks/读规则与评分函数)（**先算清评分函数，再决定做什么**）、[赛期时间分配与版本管理](#/doc/docs/competition-playbooks/时间分配与版本管理)、[Demo、路演与答辩](#/doc/docs/competition-playbooks/Demo与路演答辩)、[赛后整理与复用](#/doc/docs/competition-playbooks/赛后整理)。专题页有[学科竞赛](#/doc/docs/competitions/学科竞赛)、[数据与 AI 竞赛](#/doc/docs/competitions/数据与AI竞赛)、[商业与创业竞赛](#/doc/docs/competitions/商业与创业竞赛)、[Hackathon 与 Game Jam](#/doc/docs/competitions/Hackathon与GameJam)。总览在[竞赛手册](#/doc/docs/manuals/竞赛手册)，完整流程见 [Playbook：第一次参加 Hackathon](#/doc/docs/playbooks/第一次参加 Hackathon)，转化案例见[把一次竞赛变成作品集与简历素材](#/doc/docs/cases/从竞赛到作品集)。
+
+**核实比赛本身**：国内面向学生的全国性竞赛有官方名单可查，赛事白名单以教育部公布为准（https://www.moe.gov.cn/）；收费就能拿奖、或要求缴费才能「参赛」「晋级」的，先看[竞赛避坑](#/doc/book/15-避坑/trap-paid-competitions)。
+
+## 完成开源贡献
+
+[什么是开源贡献](#/doc/book/03-做项目、打比赛、进实验室/04-开源与公共贡献/opensource-what-is) 说明它不只有写代码——文档、测试、评审、答疑都算；[第一次贡献怎么开始](#/doc/book/03-做项目、打比赛、进实验室/04-开源与公共贡献/opensource-first-contribution) 给的是挑选项目的标准（**选你真正在用的**）。
+
+按动作拆分：[Issue](#/doc/book/03-做项目、打比赛、进实验室/04-开源与公共贡献/project-issue-pr) 与[第一个 Issue 怎么写](#/doc/docs/open-source/第一个Issue)（一个能复现的最小例子胜过十句描述）、[PR](#/doc/book/03-做项目、打比赛、进实验室/04-开源与公共贡献/opensource-pr) 与[第一次 PR：从发现到合并](#/doc/docs/open-source/第一个PR)、[Documentation](#/doc/book/03-做项目、打比赛、进实验室/04-开源与公共贡献/project-documentation)、[Review](#/doc/book/03-做项目、打比赛、进实验室/04-开源与公共贡献/project-code-review) 与[Code Review 怎么做](#/doc/docs/open-source/评审与合并)、[Maintainer](#/doc/book/03-做项目、打比赛、进实验室/04-开源与公共贡献/project-maintainer) 与[Maintainer、Release 与项目治理](#/doc/docs/open-source/维护者与治理)。
+
+找入门任务：[怎么找 Good First Issue](#/doc/docs/open-source/GoodFirstIssue)——注意它常常找不到，因为**大多数项目的入口不是标记好的 issue，而是你自己用出来的问题**。读大型项目看[如何读一个大型代码库](#/doc/docs/open-source/读大型代码库)。总览在[开源手册](#/doc/docs/manuals/开源手册)，提交前过一遍 [PR 检查表](#/doc/docs/tools/PR检查表)，完整流程见 [Playbook：第一次开源贡献](#/doc/docs/playbooks/第一次开源贡献) 与 [Case：第一次开源贡献](#/doc/docs/cases/第一次开源贡献)。
+
+## 社群活动与公共贡献
+
+[社团有没有价值](#/doc/book/03-做项目、打比赛、进实验室/05-社群与活动/community-club-value) 讲的是**角色**比参与更重要；[专业协会](#/doc/book/03-做项目、打比赛、进实验室/05-社群与活动/community-professional-association) 与 [Student Chapter](#/doc/book/03-做项目、打比赛、进实验室/05-社群与活动/community-student-chapter) 是行业型社群的两个入口，[志愿活动](#/doc/book/03-做项目、打比赛、进实验室/05-社群与活动/paths-volunteering) 与 [Meetup](#/doc/book/03-做项目、打比赛、进实验室/05-社群与活动/community-meetup) 更轻。关键一步是[怎么从「参加」变成真正的贡献](#/doc/book/03-做项目、打比赛、进实验室/05-社群与活动/community-from-join-to-contribute)——**组织一次活动、维护一个小组，与坐在台下听，在简历上不是同一件事**。

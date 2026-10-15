@@ -10,7 +10,7 @@
 
 目标是掌握一项能力时，可以用[把新技术学到能用](#/doc/docs/playbooks/第一次学新技术)设计最小任务。准备考试，则结合[四六级](#/doc/docs/playbooks/第一次考四六级)或[考公笔试](#/doc/docs/playbooks/第一次准备考公笔试)的行动方法；在投入一种资格前，先完成[证书价值判断](#/doc/docs/playbooks/第一次评估证书)，明确它与目标的关系。
 
-有了基础，可以尝试[第一次做项目](#/doc/docs/playbooks/第一次做项目)，把选题、范围、测试和发布接起来。加入别人的项目时，使用[第一次开源贡献](#/doc/docs/playbooks/第一次开源贡献)理解问题、改动和评审；准备短期团队挑战时，再看[第一次参加 Hackathon](#/doc/docs/playbooks/第一次参加%20Hackathon)，提前安排组队与交付边界。
+有了基础，可以尝试[第一次做项目](#/doc/docs/playbooks/第一次做项目)，把选题、范围、测试和发布接起来。加入别人的项目时，使用[第一次开源贡献](#/doc/docs/playbooks/第一次开源贡献)理解问题、改动和评审；准备短期团队挑战时，再看[第一次参加 Hackathon](#/doc/docs/playbooks/第一次参加 Hackathon)，提前安排组队与交付边界。
 
 ## 研究与求职怎样一步步推进
 
