@@ -47,21 +47,24 @@ jobs:
       - name: 断言构建产物齐全
         run: |
           test -f site/data/index.json
+          test -f site/data/reader.json
+          test -f site/reader.js
+          test -f site/reader.css
           test -f site/sitemap.xml
           test -f site/robots.txt
           test -f "site/content/book/02-在学校里先把基础打好.html"
-          test -f "site/content/book/09-专题手册.html"
-          test -f "site/content/book/10-路径时间线.html"
-          test -f "site/content/book/11-工具与模板.html"
-          test -f "site/content/book/12-完整案例.html"
-          test -f "site/content/book/13-操作手册.html"
-          test -f "site/content/book/14-避坑.html"
+          test -f "site/content/book/10-专题手册.html"
+          test -f "site/content/book/11-路径时间线.html"
+          test -f "site/content/book/12-工具与模板.html"
+          test -f "site/content/book/13-完整案例.html"
+          test -f "site/content/book/14-操作手册.html"
+          test -f "site/content/book/15-避坑.html"
           test -f "site/content/docs/manuals/科研手册.html"
           test -f "site/content/docs/countries/日本.html"
           test -f "site/content/docs/tools/Offer对比表.html"
           test -f "site/pages/research-undergrad-start/index.html"
           test -f "site/pages/offer-comparison/index.html"
-          # 左栏导航必须来自 navigation.json：一级栏目与 Canonical IA 完全一致
+          # 原始来源目录保持 Canonical IA；网页使用独立的读者目录
           python3 - <<'PYEOF'
           import json, pathlib
           idx = json.loads(pathlib.Path("site/data/index.json").read_text())
@@ -69,8 +72,15 @@ jobs:
           # 左栏显示名可以是 nav_label；章节标题(title)保持不变
           labels = [n["label"] for n in idx["nav"]]
           want = [(n.get("nav_label") or n["title"]) for n in nav["items"]]
-          assert labels == want, f"左栏一级栏目与 Canonical IA 不一致：{labels} != {want}"
-          print("一级栏目一致：", len(labels), "个")
+          assert labels == want, f"来源栏目与 Canonical IA 不一致：{labels} != {want}"
+          reader = json.loads(pathlib.Path("site/data/reader.json").read_text())["reader"]
+          groups = reader["topics"] + reader["atlases"] + [reader["resources"]]
+          assert [n["nav_id"] for n in reader["navigation"]] == [n["id"] for n in groups]
+          assert "public-sector" in {n["id"] for n in reader["topics"]}, "缺少考公考编一级章节"
+          assert all(n.get("intro_html") for n in groups), "一级概览缺少导读正文"
+          coverage = reader["coverage"]
+          assert coverage["source_routes"] == coverage["assigned_routes"] == len(reader["owners"])
+          print("来源栏目：", len(labels), "个；读者栏目：", len(groups), "个；内容覆盖完整")
           PYEOF
           # 旧地址的重定向表必须随构建产物一起存在
           python3 - <<'PYEOF'
