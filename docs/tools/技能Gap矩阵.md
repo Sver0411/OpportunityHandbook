@@ -3,8 +3,8 @@ id: depth-tool-技能Gap矩阵
 title: 技能 Gap 矩阵
 type: doc
 order: 811
-section: 11 工具与模板
-section_order: 110
+section: 12 工具与模板
+section_order: 120
 subsection: 工具与模板
 sub_order: 11
 status: complete

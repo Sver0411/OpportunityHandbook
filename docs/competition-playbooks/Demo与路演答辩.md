@@ -3,8 +3,8 @@ id: depth-comp-Demo与路演答辩
 title: Demo、路演与答辩
 type: doc
 order: 584
-section: 09 专题手册
-section_order: 90
+section: 10 专题手册
+section_order: 100
 subsection: 深度教程 · 竞赛实战
 sub_order: 4
 status: complete

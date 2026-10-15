@@ -3,8 +3,8 @@ id: doc-competition-hackathon-gamejam
 title: Hackathon 与 Game Jam
 type: doc
 order: 4
-section: 09 专题手册
-section_order: 90
+section: 10 专题手册
+section_order: 100
 subsection: 竞赛手册
 sub_order: 2
 status: complete

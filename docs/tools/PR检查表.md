@@ -3,8 +3,8 @@ id: depth-tool-PR检查表
 title: PR 检查表
 type: doc
 order: 815
-section: 11 工具与模板
-section_order: 110
+section: 12 工具与模板
+section_order: 120
 subsection: 工具与模板
 sub_order: 15
 status: complete

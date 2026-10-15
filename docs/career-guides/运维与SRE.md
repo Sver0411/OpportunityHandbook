@@ -3,8 +3,8 @@ id: depth-guide-运维与SRE
 title: 运维与 SRE
 type: doc
 order: 1011
-section: 09 专题手册
-section_order: 90
+section: 10 专题手册
+section_order: 100
 subsection: 职业指南
 sub_order: 11
 status: complete
@@ -118,4 +118,4 @@ SRE 把可靠性当作工程问题：哪些服务必须多可靠、失败预算�
 这份资料解决「怎么做」，判断「值不值得、要不要做」请看主线：
 
 - [怎么了解一个岗位](../../book/02-在学校里先把基础打好/02-开始认识真实世界.md#understand-role)
-- [行业还是岗位](../../book/05-从学校走向第一份工作/06-第一份工作.md#first-job-role-vs-industry)
+- [行业还是岗位](../../book/06-从学校走向第一份工作/06-第一份工作.md#first-job-role-vs-industry)

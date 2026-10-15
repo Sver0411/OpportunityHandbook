@@ -3,8 +3,8 @@ id: depth-playbook-第一次参加 Hackathon
 title: Playbook：第一次参加 Hackathon
 type: doc
 order: 805
-section: 13 操作手册
-section_order: 130
+section: 14 操作手册
+section_order: 140
 subsection: 操作手册
 sub_order: 1
 status: complete

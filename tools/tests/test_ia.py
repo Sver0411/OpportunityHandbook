@@ -87,9 +87,9 @@ class Architecture(unittest.TestCase):
                 continue
             front, _ = M.split_front_matter(p.read_text(encoding="utf-8"))
             self.assertIn(str(front.get("section")),
-                          ("09 专题手册", "10 路径时间线", "11 工具与模板",
-                           "12 完整案例", "13 操作手册"),
-                          f"{p} 未归入 09–13")
+                          ("10 专题手册", "11 路径时间线", "12 工具与模板",
+                           "13 完整案例", "14 操作手册"),
+                          f"{p} 未归入 10–14")
             self.assertTrue(front.get("subsection"), f"{p} 缺少 subsection")
 
 
@@ -263,15 +263,15 @@ class TopicManual(unittest.TestCase):
         09–13 章是 docs/ 的入口；漏掉一个文件，读者就少一条可发现的路。
         """
         INDEX = {
-            "book/09-专题手册.md": ["countries", "country-playbooks", "careers", "career-guides",
+            "book/10-专题手册.md": ["countries", "country-playbooks", "careers", "career-guides",
                                     "research", "research-deep", "competitions", "competition-playbooks",
                                     "open-source", "projects", "learning", "certifications", "networking",
                                     "job-search", "career-growth", "entrepreneurship", "admissions",
                                     "manuals", "sources", "rights", "learning"],
-            "book/10-路径时间线.md": ["timelines"],
-            "book/11-工具与模板.md": ["tools"],
-            "book/12-完整案例.md": ["cases"],
-            "book/13-操作手册.md": ["playbooks"],
+            "book/11-路径时间线.md": ["timelines"],
+            "book/12-工具与模板.md": ["tools"],
+            "book/13-完整案例.md": ["cases"],
+            "book/14-操作手册.md": ["playbooks"],
         }
         missing = []
         for idx, dirs in INDEX.items():

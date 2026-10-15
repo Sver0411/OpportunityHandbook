@@ -3,8 +3,8 @@ id: depth-case-两个Offer怎么选
 title: Case：两个 Offer 怎么选
 type: doc
 order: 902
-section: 12 完整案例
-section_order: 120
+section: 13 完整案例
+section_order: 130
 subsection: 完整案例
 sub_order: 6
 status: complete
@@ -82,7 +82,7 @@ last_verified: 2026-09-29
 
 ## 相关
 
-[Offer 怎么比较](../../book/05-从学校走向第一份工作/05-Offer.md#offer-comparison)、[薪资和总包怎么看](../../book/05-从学校走向第一份工作/05-Offer.md#offer-total-comp)、[Offer 对比表](../tools/Offer对比表.md)。
+[Offer 怎么比较](../../book/06-从学校走向第一份工作/05-Offer.md#offer-comparison)、[薪资和总包怎么看](../../book/06-从学校走向第一份工作/05-Offer.md#offer-total-comp)、[Offer 对比表](../tools/Offer对比表.md)。
 
 ## 来源与更新
 

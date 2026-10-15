@@ -3,8 +3,8 @@ id: depth-project-Demo制作
 title: Demo 怎么做（30 秒 / 2 分钟 / 面试 / 比赛）
 type: doc
 order: 207
-section: 09 专题手册
-section_order: 90
+section: 10 专题手册
+section_order: 100
 subsection: 深度教程 · 项目与作品
 sub_order: 7
 status: complete

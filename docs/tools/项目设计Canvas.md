@@ -3,8 +3,8 @@ id: depth-tool-项目设计Canvas
 title: 项目设计 Canvas
 type: doc
 order: 802
-section: 11 工具与模板
-section_order: 110
+section: 12 工具与模板
+section_order: 120
 subsection: 工具与模板
 sub_order: 2
 status: complete

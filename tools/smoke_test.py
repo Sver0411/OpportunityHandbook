@@ -640,7 +640,13 @@ def main() -> int:
 
     probe_path = SITE / "_smoke.html"
     src = (SITE / "index.html").read_text(encoding="utf-8")
-    src = src.replace("<script src=\"app.js\"></script>", STUBS + "<script src=\"app.js\"></script>")
+    # 资源引用可能带内容哈希版本参数（见 tools/stamp_assets.py），
+    # 不能用精确字符串匹配，否则 stub 注入会静默失败。
+    _app_pat = re.compile(r'<script src="app\.js(?:\?v=[0-9a-f]+)?"></script>')
+    if not _app_pat.search(src):
+        print("在 index.html 里找不到 app.js 的 script 标签，无法注入 stub。")
+        return 1
+    src = _app_pat.sub(lambda m: STUBS + m.group(0), src, count=1)
     INDEX_JSON = json.loads((SITE / "data" / "index.json").read_text(encoding="utf-8"))
     cases = nav_cases()
     probe = PROBE.replace("window.__NAV_CASES__", json.dumps(cases, ensure_ascii=False))

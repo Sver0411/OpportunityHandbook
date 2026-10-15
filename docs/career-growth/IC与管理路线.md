@@ -3,8 +3,8 @@ id: depth-career-IC与管理路线
 title: IC 还是 Manager：一个完整人物案例
 type: doc
 order: 455
-section: 09 专题手册
-section_order: 90
+section: 10 专题手册
+section_order: 100
 subsection: 深度教程 · 职业成长
 sub_order: 5
 status: complete
@@ -78,7 +78,7 @@ last_verified: 2026-09-29
 
 ## 相关
 
-[晋升：证据、影响与流程](晋升材料.md)、[要不要转管理](../../book/07-晋升、跳槽还是转行/03-管理路线.md#mgmt-ic-or-manager)、[技术还是管理（对照表）](../../book/07-晋升、跳槽还是转行/03-管理路线.md#career-management-track)。
+[晋升：证据、影响与流程](晋升材料.md)、[要不要转管理](../../book/08-晋升、跳槽还是转行/03-管理路线.md#mgmt-ic-or-manager)、[技术还是管理（对照表）](../../book/08-晋升、跳槽还是转行/03-管理路线.md#career-management-track)。
 
 ## 来源与更新
 

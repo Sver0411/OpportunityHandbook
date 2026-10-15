@@ -3,8 +3,8 @@ id: tool-offer-comparison-table
 title: Offer 对比表
 type: doc
 order: 1
-section: 11 工具与模板
-section_order: 110
+section: 12 工具与模板
+section_order: 120
 subsection: 工具与模板
 sub_order: 2
 status: complete
@@ -68,9 +68,9 @@ last_verified: 2026-09-21
 
 ## 相关
 
-- [Offer 应该怎么比较](../../book/05-从学校走向第一份工作/05-Offer.md#offer-comparison)
-- [第一份工作最应该换回什么](../../book/05-从学校走向第一份工作/06-第一份工作.md#first-job-what-to-trade-for)
-- [三方协议与毁约](../../book/05-从学校走向第一份工作/05-Offer.md#job-hunting-tripartite-agreement)
+- [Offer 应该怎么比较](../../book/06-从学校走向第一份工作/05-Offer.md#offer-comparison)
+- [第一份工作最应该换回什么](../../book/06-从学校走向第一份工作/06-第一份工作.md#first-job-what-to-trade-for)
+- [三方协议与毁约](../../book/06-从学校走向第一份工作/05-Offer.md#job-hunting-tripartite-agreement)
 
 ## 来源与更新
 - 试用期期限与试用期工资下限：《中华人民共和国劳动合同法》第十九条、第二十条。来源：中国政府网 https://www.gov.cn/

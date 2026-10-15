@@ -3,8 +3,8 @@ id: depth-tool-JD拆解表
 title: JD 拆解表
 type: doc
 order: 801
-section: 11 工具与模板
-section_order: 110
+section: 12 工具与模板
+section_order: 120
 subsection: 工具与模板
 sub_order: 1
 status: complete
@@ -78,7 +78,7 @@ JD 是招聘方写的广告，不是岗位说明书。拆之前先判断它值�
 
 - [Case：第一次找技术实习](../cases/第一次找技术实习.md) —— 走完全程的案例
 - [Playbook：第一次找实习](../playbooks/第一次找实习.md) —— 照着执行的流程
-- [从学校走向第一份工作](../../book/05-从学校走向第一份工作.md) —— 主线章节（判断与取舍在这里）
+- [从学校走向第一份工作](../../book/06-从学校走向第一份工作.md) —— 主线章节（判断与取舍在这里）
 
 ## 来源与更新
 

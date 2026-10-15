@@ -109,7 +109,13 @@ def main() -> int:
 
     probe_path = SITE / "_typography.html"
     src = (SITE / "index.html").read_text(encoding="utf-8")
-    src = src.replace("<script src=\"app.js\"></script>", PROBE + "\n<script src=\"app.js\"></script>")
+    # index.html 里的资源引用可能带内容哈希版本参数（见 tools/stamp_assets.py），
+    # 因此不能用精确字符串匹配，否则注入会静默失败、表现为「未取到测量结果」。
+    pat = re.compile(r'<script src="app\.js(?:\?v=[0-9a-f]+)?"></script>')
+    if not pat.search(src):
+        print("在 index.html 里找不到 app.js 的 script 标签，无法注入探针。")
+        return 1
+    src = pat.sub(lambda m: PROBE + "\n" + m.group(0), src, count=1)
     probe_path.write_text(src, encoding="utf-8")
 
     failures = 0

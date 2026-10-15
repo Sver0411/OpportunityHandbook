@@ -77,23 +77,6 @@ TREE = """
   没有资源时怎么起步 @d:book/01-先决定下一步往哪里走/09-没有资源时怎么起步
     家里第一个上大学或进大厂的人怎么找规则 @e:first-gen-navigate
     没有资源时怎么积累关系 @e:build-social-capital
-  考公与考编怎么准备 @d:book/01-先决定下一步往哪里走/10-考公与考编怎么准备
-    岗位表怎么读 @e:exam-job-table
-    从报名到上岸的完整流程 @e:exam-apply-to-onboard
-    应届身份与基层年限怎么算 @e:exam-fresh-grad-and-years
-  笔试：行测与申论 @d:book/01-先决定下一步往哪里走/11-笔试：行测与申论
-    行测怎么准备 @e:exam-xingce
-    申论怎么准备 @e:exam-shenlun
-  面试与后续环节 @d:book/01-先决定下一步往哪里走/12-面试与后续环节
-    结构化面试怎么准备 @e:exam-structured-interview
-    无领导小组讨论怎么应对 @e:exam-leaderless-discussion
-    体检与考察（政审）要注意什么 @e:exam-medical-and-review
-  事业单位与基层项目 @d:book/01-先决定下一步往哪里走/13-事业单位与基层项目
-    事业单位考试怎么选 @e:exam-public-institution
-    三支一扶、西部计划、特岗教师：政策怎么核 @e:exam-grassroots-programs
-  专升本怎么准备 @d:book/01-先决定下一步往哪里走/14-专升本怎么准备
-    统招专升本与成人教育怎么选 @e:zsb-path-choice
-    专升本报名到录取的完整流程 @e:zsb-apply-process
   专科生的上升通道 @d:book/01-先决定下一步往哪里走/15-专科生的上升通道
     专科生有哪几条上升通道 @e:vocational-pathways
     怎么按现在的分数和状态排序 @e:zsb-channel-sorting
@@ -132,15 +115,6 @@ TREE = """
     IELTS / TOEFL / TOEIC @n:english-standardized-tests
     第二外语 @n:skill-second-language
     如果以后可能留学，什么时候准备 @n:language-timing-for-abroad
-  四六级怎么准备 @d:book/02-在学校里先把基础打好/07-四六级怎么准备
-    四六级分项怎么练：哪部分提分性价比最高 @e:cet-section-training
-    四六级报名与考试流程 @e:cet-apply-process
-  四六级分数的用途与校内规定 @d:book/02-在学校里先把基础打好/08-四六级分数的用途与校内规定
-    四六级分数在各场景的用途对照 @e:cet-score-usage
-    校内规定说不过就不给毕业，怎么办 @e:cet-school-requirement
-  留学语言考试怎么准备 @d:book/02-在学校里先把基础打好/09-留学语言考试怎么准备
-    雅思还是托福：按目标项目倒推，不按难度选 @e:lang-test-choice
-    小分不达标、成绩复议与二刷 @e:lang-test-score-issues
   证书
     哪些证书值得考 @e:certificate-what-is-worth-it
     法定准入型证书 @e:skill-occupational-certificates
@@ -217,20 +191,6 @@ TREE = """
     复试要不要准备 @e:study-second-round-interview
     调剂值不值得 @e:study-transfer-adjustment
     二战值不值得 @e:study-retake-exam
-  考研择校与信息透明度 @d:book/04-升学、就业还是出国/09-考研择校与信息透明度
-    怎么判断压分与信息透明度 @e:kaoyan-school-picking
-    考研怎么定目标校：择校的操作步骤 @e:kaoyan-choose-school-steps
-  考研科目复习与专业课 @d:book/04-升学、就业还是出国/10-考研科目复习与专业课
-    数学一还是数学二、数学三怎么选 @e:kaoyan-math-track
-    英语怎么准备：长线科目与阅读为核心 @e:kaoyan-english
-    政治怎么复习：什么时候开始、怎么分配 @e:kaoyan-politics
-    专业课怎么准备：什么时候开始、怎么找真题 @e:kaoyan-major-studies
-  考研报名、初试与复试 @d:book/04-升学、就业还是出国/11-考研报名、初试与复试
-    考研报名与初试：九个环节和它们的卡点 @e:kaoyan-apply-process
-    复试前两周的准备安排 @e:kaoyan-retest-schedule
-  考研调剂与二战 @d:book/04-升学、就业还是出国/12-考研调剂与二战
-    调剂系统怎么操作：从开放到确认 @e:kaoyan-adjustment-system
-    二战该不该打：复盘、止损与三条替代方案 @e:kaoyan-retake-decision
   海外升学
     留学值不值得 @e:overseas-is-it-for-me
     国家和地区怎么选 @n:overseas-choose-country
@@ -276,7 +236,49 @@ TREE = """
     Travel Grant @e:funding-travel-and-conference-grant
     怎么找全额资助机会 @e:funding-full-funding
 
-05 从学校走向第一份工作
+05 备考与应试
+  四六级怎么准备 @d:book/05-备考与应试/01-四六级怎么准备
+    四六级分项怎么练：哪部分提分性价比最高 @e:cet-section-training
+    四六级报名与考试流程 @e:cet-apply-process
+  四六级分数的用途与校内规定 @d:book/05-备考与应试/02-四六级分数的用途与校内规定
+    四六级分数在各场景的用途对照 @e:cet-score-usage
+    校内规定说不过就不给毕业，怎么办 @e:cet-school-requirement
+  留学语言考试怎么准备 @d:book/05-备考与应试/03-留学语言考试怎么准备
+    雅思还是托福：按目标项目倒推，不按难度选 @e:lang-test-choice
+    小分不达标、成绩复议与二刷 @e:lang-test-score-issues
+  专升本怎么准备 @d:book/05-备考与应试/04-专升本怎么准备
+    统招专升本与成人教育怎么选 @e:zsb-path-choice
+    专升本报名到录取的完整流程 @e:zsb-apply-process
+  考研择校与信息透明度 @d:book/05-备考与应试/05-考研择校与信息透明度
+    怎么判断压分与信息透明度 @e:kaoyan-school-picking
+    考研怎么定目标校：择校的操作步骤 @e:kaoyan-choose-school-steps
+  考研科目复习与专业课 @d:book/05-备考与应试/06-考研科目复习与专业课
+    数学一还是数学二、数学三怎么选 @e:kaoyan-math-track
+    英语怎么准备：长线科目与阅读为核心 @e:kaoyan-english
+    政治怎么复习：什么时候开始、怎么分配 @e:kaoyan-politics
+    专业课怎么准备：什么时候开始、怎么找真题 @e:kaoyan-major-studies
+  考研报名、初试与复试 @d:book/05-备考与应试/07-考研报名、初试与复试
+    考研报名与初试：九个环节和它们的卡点 @e:kaoyan-apply-process
+    复试前两周的准备安排 @e:kaoyan-retest-schedule
+  考研调剂与二战 @d:book/05-备考与应试/08-考研调剂与二战
+    调剂系统怎么操作：从开放到确认 @e:kaoyan-adjustment-system
+    二战该不该打：复盘、止损与三条替代方案 @e:kaoyan-retake-decision
+  考公与考编怎么准备 @d:book/05-备考与应试/09-考公与考编怎么准备
+    岗位表怎么读 @e:exam-job-table
+    从报名到上岸的完整流程 @e:exam-apply-to-onboard
+    应届身份与基层年限怎么算 @e:exam-fresh-grad-and-years
+  笔试：行测与申论 @d:book/05-备考与应试/10-笔试：行测与申论
+    行测怎么准备 @e:exam-xingce
+    申论怎么准备 @e:exam-shenlun
+  面试与后续环节 @d:book/05-备考与应试/11-面试与后续环节
+    结构化面试怎么准备 @e:exam-structured-interview
+    无领导小组讨论怎么应对 @e:exam-leaderless-discussion
+    体检与考察（政审）要注意什么 @e:exam-medical-and-review
+  事业单位与基层项目 @d:book/05-备考与应试/12-事业单位与基层项目
+    事业单位考试怎么选 @e:exam-public-institution
+    三支一扶、西部计划、特岗教师：政策怎么核 @e:exam-grassroots-programs
+
+06 从学校走向第一份工作
   校招是怎么运作的
     提前批 @n:recruit-early-batch
     秋招 @e:campus-recruiting-timeline
@@ -311,7 +313,7 @@ TREE = """
     三方 @e:job-hunting-tripartite-agreement
     背调 @e:job-hunting-background-check
     毁约 @n:offer-renege
-  入职前的核实 @d:book/05-从学校走向第一份工作/08-入职前的核实
+  入职前的核实 @d:book/06-从学校走向第一份工作/08-入职前的核实
     怎么判断一家公司值不值得去 @e:employer-due-diligence
   第一份工作
     第一份工作最应该换回什么 @e:first-job-what-to-trade-for
@@ -320,7 +322,7 @@ TREE = """
     行业还是岗位 @e:first-job-role-vs-industry
     城市还是机会 @e:first-job-city
     工资还是成长 @e:first-job-pay-vs-growth
-  毕业前后的衔接 @d:book/05-从学校走向第一份工作/09-毕业前后的衔接
+  毕业前后的衔接 @d:book/06-从学校走向第一份工作/09-毕业前后的衔接
     应届生身份到底值什么 @e:fresh-grad-status
     毕业到入职之间的几个月怎么用 @e:graduation-to-job-gap
   如果没有顺利进入下一站
@@ -331,11 +333,11 @@ TREE = """
     空窗期怎么处理 @n:job-gap-period
     第一次选择错了怎么办 @n:job-first-choice-wrong
     被裁或失业后怎么走 @e:after-layoff
-  失败之后 @d:book/05-从学校走向第一份工作/10-失败之后
+  失败之后 @d:book/06-从学校走向第一份工作/10-失败之后
     失败之后怎么复盘 @e:recover-failure-review
     怎么讲一次失败 @e:recover-tell-your-story
 
-06 从新人到能独立负责
+07 从新人到能独立负责
   刚进入职场
     怎么度过试用期 @n:work-probation
     怎么真正学会一份工作 @n:work-learn-the-job
@@ -349,7 +351,7 @@ TREE = """
     怎么积累业务影响 @n:work-business-impact
     怎么记录职业成果 @n:work-record-achievements
     和同事或上级起了冲突怎么办 @e:workplace-conflict
-  工作后的学习与外部投入 @d:book/06-从新人到能独立负责/03-工作后的学习与外部投入
+  工作后的学习与外部投入 @d:book/07-从新人到能独立负责/03-工作后的学习与外部投入
     下班后的时间该投到哪里 @e:work-after-hours-investment
     技能还要不要继续学 @e:work-learn-skills
     工作后考证 @n:work-certificates
@@ -368,7 +370,7 @@ TREE = """
     Speaker @n:community-speaker
     Reviewer @n:community-reviewer
     行业影响力 @e:community-industry-influence
-  海外工作 @d:book/06-从新人到能独立负责/07-海外工作
+  海外工作 @d:book/07-从新人到能独立负责/07-海外工作
     海外工作第一年要处理什么 @e:overseas-work-first-year
     海外工作的合同、签证与税务 @e:overseas-work-contract
   第一次重新选择
@@ -378,7 +380,7 @@ TREE = """
     工作后读研 @n:work-grad-school-after-work
     海外工作 @n:work-overseas-job
 
-07 晋升、跳槽还是转行
+08 晋升、跳槽还是转行
   晋升
     Senior 意味着什么 @e:career-senior-ic-track
     晋升标准 @n:promotion-criteria
@@ -390,7 +392,7 @@ TREE = """
     跨团队影响 @n:track-ic-cross-team
     行业影响 @n:track-ic-industry
     Staff / Principal 等角色 @n:track-staff-principal
-  资深阶段：技能与收入 @d:book/07-晋升、跳槽还是转行/07-资深阶段：技能与收入
+  资深阶段：技能与收入 @d:book/08-晋升、跳槽还是转行/07-资深阶段：技能与收入
     技能过时了怎么补 @e:career-skill-decay
     资深阶段的收入结构怎么安排 @e:career-income-mix
   管理路线
@@ -415,10 +417,10 @@ TREE = """
     Bridge Opportunity @e:career-bridge-opportunity
     Side Project @n:switch-side-project
     降薪转行 @e:career-pay-cut-transition
-  转行期的钱与关系 @d:book/07-晋升、跳槽还是转行/09-转行期的钱与关系
+  转行期的钱与关系 @d:book/08-晋升、跳槽还是转行/09-转行期的钱与关系
     转行期的钱怎么安排 @e:career-change-cashflow
     转行时怎么重建行业关系 @e:career-change-network
-  照护与职业节奏 @d:book/07-晋升、跳槽还是转行/10-照护与职业节奏
+  照护与职业节奏 @d:book/08-晋升、跳槽还是转行/10-照护与职业节奏
     成为被依赖的人之后 @e:care-family-role
     父母生病时的决策与分工 @e:care-elder-medical
   再次进入教育体系
@@ -427,11 +429,11 @@ TREE = """
     第二硕士 @n:edu-second-master
     博士 @e:research-phd-worth-it
     海外教育 @n:edu-abroad-again
-  职业中段与年龄 @d:book/07-晋升、跳槽还是转行/08-职业中段与年龄
+  职业中段与年龄 @d:book/08-晋升、跳槽还是转行/08-职业中段与年龄
     40 岁以后怎么规划工作 @e:career-after-40
     中年重新开始前先算什么 @e:career-midlife-reset
 
-08 自由职业、副业与创业
+09 自由职业、副业与创业
   自由职业
     怎么开始 @e:startup-freelance
     找客户 @n:freelance-clients
@@ -460,15 +462,15 @@ TREE = """
     第二职业 @n:second-career
     再次不知道方向时怎么办 @n:direction-again
 
-09 专题手册
-  升学与申请 @d:book/09-专题手册#升学与申请
+10 专题手册
+  升学与申请 @d:book/10-专题手册#升学与申请
     选校：从几十个项目到申请列表 @d:docs/admissions/选校与短名单
     推荐信：怎么拿到一封有力的信 @d:docs/admissions/推荐信
     SOP / PS：从空洞到具体 @d:docs/admissions/个人陈述改写
     Research Proposal 逐段拆解 @d:docs/admissions/研究计划拆解
     复试与申请面试 @d:docs/admissions/复试与申请面试
     奖学金与资助 @d:docs/manuals/奖学金与资助
-  科研 @d:book/09-专题手册#科研
+  科研 @d:book/10-专题手册#科研
     科研手册 @d:docs/manuals/科研手册
     如何提出 Research Question @d:docs/research-deep/研究问题的提出
     Baseline 怎么设计 @d:docs/research-deep/Baseline设计
@@ -482,7 +484,7 @@ TREE = """
     文献阅读与综述 @d:docs/research/文献阅读与综述
     论文写作与投稿 @d:docs/research/论文写作与投稿
     联系导师与套磁 @d:docs/research/联系导师与套磁
-  竞赛 @d:book/09-专题手册#竞赛
+  竞赛 @d:book/10-专题手册#竞赛
     竞赛手册 @d:docs/manuals/竞赛手册
     竞赛组队与分工 @d:docs/competition-playbooks/组队与分工
     读规则与评分函数 @d:docs/competition-playbooks/读规则与评分函数
@@ -493,7 +495,7 @@ TREE = """
     数据与 AI 竞赛专题 @d:docs/competitions/数据与AI竞赛
     商业与创业竞赛专题 @d:docs/competitions/商业与创业竞赛
     Hackathon 与 Game Jam @d:docs/competitions/Hackathon与GameJam
-  项目与作品 @d:book/09-专题手册#项目与作品
+  项目与作品 @d:book/10-专题手册#项目与作品
     项目与作品手册 @d:docs/manuals/项目与作品手册
     项目选题与问题定义 @d:docs/projects/选题与问题定义
     从教程 Demo 到真正作品 @d:docs/projects/从教程到作品
@@ -504,7 +506,7 @@ TREE = """
     Demo 怎么做（30 秒 / 2 分钟 / 面试 / 比赛） @d:docs/projects/Demo制作
     项目如何写进简历与面试（5 组 Before / After） @d:docs/projects/项目写进简历
     项目类型专项：什么证据才算做得好 @d:docs/projects/项目类型专项
-  开源 @d:book/09-专题手册#开源
+  开源 @d:book/10-专题手册#开源
     开源手册 @d:docs/manuals/开源手册
     如何读一个大型代码库 @d:docs/open-source/读大型代码库
     Code Review 怎么做（给与被给） @d:docs/open-source/评审与合并
@@ -512,7 +514,7 @@ TREE = """
     第一个 Issue 怎么写 @d:docs/open-source/第一个Issue
     第一次 PR：从发现到合并 @d:docs/open-source/第一个PR
     怎么找 Good First Issue（以及为什么常常找不到） @d:docs/open-source/GoodFirstIssue
-  学习与数字生活 @d:book/09-专题手册#学习与数字生活
+  学习与数字生活 @d:book/10-专题手册#学习与数字生活
     技能学习手册 @d:docs/manuals/技能学习手册
     从零学一项技术（三种类型） @d:docs/learning/从零学一项技术
     如何读官方文档 @d:docs/learning/读官方文档
@@ -520,7 +522,7 @@ TREE = """
     如何判断自己真的掌握 @d:docs/learning/掌握程度的判断
     用 AI 学习与工作 @d:docs/learning/用AI学习与工作
     账号、数据与隐私 @d:docs/learning/账号数据与隐私
-  求职 @d:book/09-专题手册#求职
+  求职 @d:book/10-专题手册#求职
     一份 JD 到底怎么拆 @d:docs/job-search/JD拆解
     简历从差到好（六种背景完整改写） @d:docs/job-search/简历改造
     技术面试全流程 @d:docs/job-search/技术面试
@@ -528,26 +530,26 @@ TREE = """
     项目面试：从第一句开始的追问链 @d:docs/job-search/项目面试
     求职失败诊断：从 0 回复到 Offer 质量差 @d:docs/job-search/求职漏斗诊断
     Offer、薪酬结构与劳动合同 @d:docs/job-search/Offer与合同
-  职业成长 @d:book/09-专题手册#职业成长
+  职业成长 @d:book/10-专题手册#职业成长
     入职前 90 天：建立可信度 @d:docs/career-growth/入职前三个月
     如何真正学会一份工作 @d:docs/career-growth/学会一份工作
     如何获得更大的 scope @d:docs/career-growth/扩大责任范围
     晋升：证据、影响与流程 @d:docs/career-growth/晋升材料
     IC 还是 Manager：一个完整人物案例 @d:docs/career-growth/IC与管理路线
     在职跳槽全流程 @d:docs/career-growth/在职跳槽
-  人脉与社群 @d:book/09-专题手册#人脉与社群
+  人脉与社群 @d:book/10-专题手册#人脉与社群
     社群与行业组织 @d:docs/manuals/社群与行业组织
     怎么联系陌生从业者（含完整对话） @d:docs/networking/联系陌生人
     会议与线下活动：第一次去做什么 @d:docs/networking/会议与线下活动
     关系维护与内推请求 @d:docs/networking/关系维护与内推
     如何给社群做贡献 @d:docs/networking/贡献社群
-  证书与语言考试 @d:book/09-专题手册#证书与语言考试
+  证书与语言考试 @d:book/10-专题手册#证书与语言考试
     证书 @d:docs/manuals/证书
     证书值不值得考：六步判断 @d:docs/certifications/判断体系
     证书类型对照：准入 / 等级 / 行业 / 厂商 / 微证书 @d:docs/certifications/类型对照
     证书考试的准备方式 @d:docs/certifications/考试准备
     语言与考试 @d:docs/manuals/语言与考试
-  创业与自由职业 @d:book/09-专题手册#创业与自由职业
+  创业与自由职业 @d:book/10-专题手册#创业与自由职业
     创业与自由职业 @d:docs/manuals/创业与自由职业
     找问题与用户访谈 @d:docs/entrepreneurship/找问题与用户访谈
     定价与报价 @d:docs/entrepreneurship/定价与报价
@@ -555,7 +557,7 @@ TREE = """
     第一个客户：从发现到复购 @d:docs/entrepreneurship/第一单客户
     现金流、发票与合同边界 @d:docs/entrepreneurship/现金流与合同
     从自由职业到工作室 / 副业到主业 @d:docs/entrepreneurship/从自由职业到工作室
-  国家与地区 · 制度与概念 @d:book/09-专题手册#国家与地区-制度与概念
+  国家与地区 · 制度与概念 @d:book/10-专题手册#国家与地区-制度与概念
     中国大陆 @d:docs/countries/中国大陆
     中国香港 @d:docs/countries/中国香港
     日本 @d:docs/countries/日本
@@ -567,7 +569,7 @@ TREE = """
     欧洲大陆 @d:docs/countries/欧洲大陆
     澳大利亚 @d:docs/countries/澳大利亚
     新西兰 @d:docs/countries/新西兰
-  国家与地区 · 申请与操作 @d:book/09-专题手册#国家与地区-申请与操作
+  国家与地区 · 申请与操作 @d:book/10-专题手册#国家与地区-申请与操作
     中国大陆 @d:docs/country-playbooks/中国大陆
     中国香港 @d:docs/country-playbooks/中国香港
     日本 @d:docs/country-playbooks/日本
@@ -579,7 +581,7 @@ TREE = """
     欧洲大陆 @d:docs/country-playbooks/欧洲大陆
     澳大利亚 @d:docs/country-playbooks/澳大利亚
     新西兰 @d:docs/country-playbooks/新西兰
-  行业与职业 · 行业概览 @d:book/09-专题手册#行业与职业-行业概览
+  行业与职业 · 行业概览 @d:book/10-专题手册#行业与职业-行业概览
     技术与工程 @d:docs/careers/技术与工程
     AI 与数据 @d:docs/careers/AI与数据
     制造 @d:docs/careers/制造
@@ -592,7 +594,7 @@ TREE = """
     科研与高校 @d:docs/careers/科研与高校
     公共服务 @d:docs/careers/公共服务
     技能型职业 @d:docs/careers/技能型职业
-  行业与职业 · 具体岗位怎么干 @d:book/09-专题手册#行业与职业-具体岗位怎么干
+  行业与职业 · 具体岗位怎么干 @d:book/10-专题手册#行业与职业-具体岗位怎么干
     软件工程师 @d:docs/career-guides/软件工程师
     前端工程师 @d:docs/career-guides/前端工程师
     后端工程师 @d:docs/career-guides/后端工程师
@@ -616,25 +618,25 @@ TREE = """
     教师（中小学 / 高校 / 培训） @d:docs/career-guides/教师
     公共部门与事业单位 @d:docs/career-guides/公共部门
     技能型职业（电工 / 焊工 / 护理等） @d:docs/career-guides/技能型职业
-  权益与制度 @d:book/09-专题手册#权益与制度
+  权益与制度 @d:book/10-专题手册#权益与制度
     离职、换工作与社保衔接 @d:docs/rights/离职与社保衔接
     劳动合同要看哪些条款 @d:docs/rights/劳动合同要看哪些条款
     被欠薪与劳动仲裁 @d:docs/rights/被欠薪与劳动仲裁
     遇到纠纷找谁：求助顺序 @d:docs/rights/遇到纠纷找谁
-  参考与来源 @d:book/09-专题手册#参考与来源
+  参考与来源 @d:book/10-专题手册#参考与来源
     术语表 @d:docs/manuals/术语表
     常用官方来源清单 @d:docs/sources/常用官方来源清单
     官方入口速查：你要办的事去哪办 @d:docs/sources/官方入口速查
     二手来源与识别方法 @d:docs/sources/二手来源与识别方法
     核实记录 @d:docs/sources/核实记录
 
-10 路径时间线
-  中学到本科 @d:book/10-路径时间线#中学到本科
+11 路径时间线
+  中学到本科 @d:book/11-路径时间线#中学到本科
     高中毕业后的选择 @d:docs/timelines/高中到大学
     中职升学 @d:docs/timelines/中职升学时间线
     专升本 @d:docs/timelines/专升本时间线
     本科四年 @d:docs/timelines/本科四年
-  升学与考试申请 @d:book/10-路径时间线#升学与考试申请
+  升学与考试申请 @d:book/11-路径时间线#升学与考试申请
     保研 @d:docs/timelines/保研时间线
     考研 @d:docs/timelines/考研时间线
     考公 @d:docs/timelines/考公时间线
@@ -642,25 +644,25 @@ TREE = """
     留学语言考试 @d:docs/timelines/留学语言考试时间线
     四六级 @d:docs/timelines/四六级时间线
     博士申请 @d:docs/timelines/博士申请时间线
-  科研与实习 @d:book/10-路径时间线#科研与实习
+  科研与实习 @d:book/11-路径时间线#科研与实习
     科研入门 @d:docs/timelines/科研入门时间线
     实习准备 @d:docs/timelines/实习准备时间线
-  求职与入职 @d:book/10-路径时间线#求职与入职
+  求职与入职 @d:book/11-路径时间线#求职与入职
     校招 @d:docs/timelines/校招时间线
     入职第一年 @d:docs/timelines/入职第一年
-  职业发展与权益 @d:book/10-路径时间线#职业发展与权益
+  职业发展与权益 @d:book/11-路径时间线#职业发展与权益
     转行 @d:docs/timelines/转行时间线
     海外工作与签证 @d:docs/timelines/海外工作与签证时间线
     离职与纠纷维权 @d:docs/timelines/离职与纠纷维权
 
-11 工具与模板
-  做决定与盘点 @d:book/11-工具与模板#做决定与盘点
+12 工具与模板
+  做决定与盘点 @d:book/12-工具与模板#做决定与盘点
     机会价值判断表 @d:docs/tools/机会价值判断表
     Offer 对比表 @d:docs/tools/Offer对比表
     探索复盘模板 @d:docs/tools/探索复盘模板
     职业资本盘点表 @d:docs/tools/职业资本盘点表
     转行 Bridge Plan @d:docs/tools/转行BridgePlan
-  升学与考试 @d:book/11-工具与模板#升学与考试
+  升学与考试 @d:book/12-工具与模板#升学与考试
     导师筛选表 @d:docs/tools/导师筛选表
     联系导师邮件模板 @d:docs/tools/联系导师邮件模板
     留学选校表 @d:docs/tools/留学选校表
@@ -668,19 +670,19 @@ TREE = """
     上升通道对比表 @d:docs/tools/上升通道对比表
     四六级备考排期表 @d:docs/tools/四六级备考排期表
     留学语言考试排期表 @d:docs/tools/留学语言考试排期表
-  科研 @d:book/11-工具与模板#科研
+  科研 @d:book/12-工具与模板#科研
     Research Question Canvas @d:docs/tools/ResearchQuestionCanvas
     Baseline 与消融设计表 @d:docs/tools/Baseline与消融设计表
     实验记录模板 @d:docs/tools/实验记录模板
     论文精读表（Paper Reading Sheet） @d:docs/tools/论文精读表
     文献地图（Literature Map） @d:docs/tools/文献地图
-  求职 @d:book/11-工具与模板#求职
+  求职 @d:book/12-工具与模板#求职
     岗位筛选表 @d:docs/tools/岗位筛选表
     求职追踪表 @d:docs/tools/求职追踪表
     JD 拆解表 @d:docs/tools/JD拆解表
     面试复盘表 @d:docs/tools/面试复盘表
     求职漏斗诊断表 @d:docs/tools/求职漏斗诊断表
-  做项目与工程 @d:book/11-工具与模板#做项目与工程
+  做项目与工程 @d:book/12-工具与模板#做项目与工程
     项目设计 Canvas @d:docs/tools/项目设计Canvas
     项目测试计划模板 @d:docs/tools/项目测试计划
     Benchmark 记录表 @d:docs/tools/Benchmark记录表
@@ -689,67 +691,67 @@ TREE = """
     README 检查表 @d:docs/tools/README检查表
     项目发布检查表 @d:docs/tools/发布检查表
     PR 检查表 @d:docs/tools/PR检查表
-  自由职业与协作 @d:book/11-工具与模板#自由职业与协作
+  自由职业与协作 @d:book/12-工具与模板#自由职业与协作
     客户沟通与需求确认表 @d:docs/tools/客户沟通表
     自由职业报价单模板 @d:docs/tools/自由职业报价单
-  钱、健康与权益 @d:book/11-工具与模板#钱健康与权益
+  钱、健康与权益 @d:book/12-工具与模板#钱健康与权益
     日常账本与月度预算 @d:docs/tools/日常账本与月度预算
     转行现金流表 @d:docs/tools/转行现金流表
     体检项目对照表 @d:docs/tools/体检项目对照表
     精力预算表 @d:docs/tools/精力预算表
     纠纷证据清单 @d:docs/tools/纠纷证据清单
     时间线检查表 @d:docs/tools/时间线检查表
-  规划与作品 @d:book/11-工具与模板#规划与作品
+  规划与作品 @d:book/12-工具与模板#规划与作品
     读博规划表 @d:docs/tools/读博规划表
     职校作品清单 @d:docs/tools/职校作品清单
 
-12 完整案例
-  项目与科研 @d:book/12-完整案例#项目与科研
+13 完整案例
+  项目与科研 @d:book/13-完整案例#项目与科研
     Case：第一次做真正的项目 @d:docs/cases/第一次做真正项目
     Case：本科生第一次进实验室 @d:docs/cases/本科生第一次科研
     Case：从教程项目到工程作品（三种项目） @d:docs/cases/教程项目到工程作品
     Case：联系导师的完整过程 @d:docs/cases/联系导师
     Case：第一次开源贡献 @d:docs/cases/第一次开源贡献
-  升学与作品 @d:book/12-完整案例#升学与作品
+  升学与作品 @d:book/13-完整案例#升学与作品
     Case：留学选校从几十个到一份名单 @d:docs/cases/留学选校
     Case：把一次竞赛变成作品集与简历素材 @d:docs/cases/从竞赛到作品集
-  求职 @d:book/12-完整案例#求职
+  求职 @d:book/13-完整案例#求职
     Case：第一次找技术实习 @d:docs/cases/第一次找技术实习
     Case：两个 Offer 怎么选 @d:docs/cases/两个Offer怎么选
     Case：第一次面试失败之后 @d:docs/cases/第一次面试失败
-  工作、钱与权益 @d:book/12-完整案例#工作钱与权益
+  工作、钱与权益 @d:book/13-完整案例#工作钱与权益
     Case：第一次转行 @d:docs/cases/第一次转行
     Case：第一次自由职业客户 @d:docs/cases/第一次自由职业客户
     Case：第一次被欠薪 @d:docs/cases/第一次被欠薪
     Case：第一次自己买保险 @d:docs/cases/第一次买保险
-  健康 @d:book/12-完整案例#健康
+  健康 @d:book/13-完整案例#健康
     Case：第一次去看心理科 @d:docs/cases/第一次看心理科
 
-13 操作手册
-  项目与开源 @d:book/13-操作手册#项目与开源
+14 操作手册
+  项目与开源 @d:book/14-操作手册#项目与开源
     Playbook：第一次做项目 @d:docs/playbooks/第一次做项目
     Playbook：第一次开源贡献 @d:docs/playbooks/第一次开源贡献
     Playbook：第一次参加 Hackathon @d:docs/playbooks/第一次参加 Hackathon
-  科研 @d:book/13-操作手册#科研
+  科研 @d:book/14-操作手册#科研
     Playbook：第一次做实验与记录 @d:docs/playbooks/第一次做实验
     Playbook：第一次写论文 @d:docs/playbooks/第一次写论文
     Playbook：第一次联系导师 @d:docs/playbooks/第一次联系导师
-  求职 @d:book/13-操作手册#求职
+  求职 @d:book/14-操作手册#求职
     Playbook：第一次找实习 @d:docs/playbooks/第一次找实习
     Playbook：第一次技术面试 @d:docs/playbooks/第一次技术面试
     Playbook：第一次谈薪 @d:docs/playbooks/第一次谈薪
-  考试备考 @d:book/13-操作手册#考试备考
+  考试备考 @d:book/14-操作手册#考试备考
     Playbook：第一次准备考公笔试 @d:docs/playbooks/第一次准备考公笔试
     Playbook：第一次准备考研 @d:docs/playbooks/第一次准备考研
     Playbook：第一次考四六级 @d:docs/playbooks/第一次考四六级
     Playbook：第一次准备专升本 @d:docs/playbooks/第一次准备专升本
-  自由职业 @d:book/13-操作手册#自由职业
+  自由职业 @d:book/14-操作手册#自由职业
     Playbook：第一次接单 @d:docs/playbooks/第一次接单
-  合同与权益 @d:book/13-操作手册#合同与权益
+  合同与权益 @d:book/14-操作手册#合同与权益
     Playbook：第一次核对合同与社保 @d:docs/playbooks/第一次核对合同与社保
     Playbook：第一次处理劳动争议 @d:docs/playbooks/第一次处理劳动争议
 
-14 避坑
+15 避坑
   升学与留学 @e:trap-guaranteed-admission
   求职与实习 @e:trap-fake-internships-and-paid-research
   科研 @e:trap-predatory-journals
@@ -763,7 +765,7 @@ TREE = """
   付费理财课与「带你投资」 @e:trap-money-course
   体检套餐升级与「免费加项」 @e:trap-checkup-upsell
   付费法律咨询与「包追回」 @e:trap-paid-legal-service
-15 钱与生活基本盘
+16 钱与生活基本盘
   拿到钱的第一年
     第一个月的工资怎么分配 @e:money-first-salary-split
     应急金该留多少 @e:money-emergency-fund
@@ -776,16 +778,16 @@ TREE = """
     该买与不该买的保险 @e:money-insurance-basics
     负债与征信：先还哪一笔 @e:money-debt-and-credit
     大额支出怎么决策 @e:money-big-purchase
-16 身体与心理的可持续性
+17 身体与心理的可持续性
   节奏与身体
     长期高强度怎么不垮 @e:health-sustainable-pace
     睡眠与久坐：能改的三件事 @e:health-sleep-and-sitting
     精力怎么分配：一周精力预算 @e:health-energy-budget
-  心理与求助 @d:book/16-身体与心理的可持续性/02-心理与求助
+  心理与求助 @d:book/17-身体与心理的可持续性/02-心理与求助
     情绪持续不好时找谁 @e:health-mental-support
     日常怎么维护心理状态 @e:health-mental-habits
-  生病与照护自己 @d:book/16-身体与心理的可持续性/03-生病与照护自己
+  生病与照护自己 @d:book/17-身体与心理的可持续性/03-生病与照护自己
     什么时候该去看医生，而不是再扛一周 @e:health-when-to-see-doctor
     体检怎么选、医保怎么用 @e:health-checkup-and-insurance
-17 内容地图
+18 内容地图
 """

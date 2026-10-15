@@ -3,8 +3,8 @@ id: depth-tool-ResearchQuestionCanvas
 title: Research Question Canvas
 type: doc
 order: 818
-section: 11 工具与模板
-section_order: 110
+section: 12 工具与模板
+section_order: 120
 subsection: 工具与模板
 sub_order: 18
 status: complete

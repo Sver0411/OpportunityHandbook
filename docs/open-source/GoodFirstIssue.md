@@ -3,8 +3,8 @@ id: depth-oss-GoodFirstIssue
 title: 怎么找 Good First Issue（以及为什么常常找不到）
 type: doc
 order: 556
-section: 09 专题手册
-section_order: 90
+section: 10 专题手册
+section_order: 100
 subsection: 深度教程 · 开源协作
 sub_order: 6
 status: complete

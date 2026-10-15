@@ -3,8 +3,8 @@ id: doc-competition-ai-data
 title: 数据与 AI 竞赛
 type: doc
 order: 2
-section: 09 专题手册
-section_order: 90
+section: 10 专题手册
+section_order: 100
 subsection: 竞赛手册
 sub_order: 2
 status: complete

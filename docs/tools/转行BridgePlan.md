@@ -3,8 +3,8 @@ id: doc-tools-bridgeplan
 title: 转行 Bridge Plan
 type: doc
 order: 9
-section: 11 工具与模板
-section_order: 110
+section: 12 工具与模板
+section_order: 120
 subsection: 工具与模板
 sub_order: 9
 status: complete
@@ -16,7 +16,7 @@ last_verified: 2026-09-22
 
 # 转行 Bridge Plan
 
-转行前先判断什么，见主线 [转行前先判断什么](../../book/07-晋升、跳槽还是转行/05-转行.md#switch-before-decide)；过渡机会的概念见 [Bridge Opportunity](../../book/07-晋升、跳槽还是转行/05-转行.md#career-bridge-opportunity)。
+转行前先判断什么，见主线 [转行前先判断什么](../../book/08-晋升、跳槽还是转行/05-转行.md#switch-before-decide)；过渡机会的概念见 [Bridge Opportunity](../../book/08-晋升、跳槽还是转行/05-转行.md#career-bridge-opportunity)。
 
 ## 计划模板（可直接复制填写）
 
@@ -82,7 +82,7 @@ Bridge 选项（先用现有岗位做过渡）
 
 ## 相关条目
 
-[降薪转行](../../book/07-晋升、跳槽还是转行/05-转行.md#career-pay-cut-transition)、[换行业](../../book/07-晋升、跳槽还是转行/04-跳槽.md#hop-change-industry)、[职业资本盘点表](职业资本盘点表.md)。
+[降薪转行](../../book/08-晋升、跳槽还是转行/05-转行.md#career-pay-cut-transition)、[换行业](../../book/08-晋升、跳槽还是转行/04-跳槽.md#hop-change-industry)、[职业资本盘点表](职业资本盘点表.md)。
 
 ## 来源与更新
 

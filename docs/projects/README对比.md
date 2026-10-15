@@ -3,8 +3,8 @@ id: depth-project-README对比
 title: README 的技术写作（三档对比）
 type: doc
 order: 206
-section: 09 专题手册
-section_order: 90
+section: 10 专题手册
+section_order: 100
 subsection: 深度教程 · 项目与作品
 sub_order: 6
 status: complete

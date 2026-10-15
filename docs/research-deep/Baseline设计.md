@@ -3,8 +3,8 @@ id: depth-research-Baseline设计
 title: Baseline 怎么设计
 type: doc
 order: 302
-section: 09 专题手册
-section_order: 90
+section: 10 专题手册
+section_order: 100
 subsection: 深度教程 · 科研方法
 sub_order: 2
 status: complete

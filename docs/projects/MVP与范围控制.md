@@ -3,8 +3,8 @@ id: depth-project-MVP与范围控制
 title: MVP 与范围控制
 type: doc
 order: 203
-section: 09 专题手册
-section_order: 90
+section: 10 专题手册
+section_order: 100
 subsection: 深度教程 · 项目与作品
 sub_order: 3
 status: complete

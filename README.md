@@ -8,7 +8,7 @@
 
 一份从升学、科研、求职，到晋升、转行、出国与重新开始的现实选择手册。
 
-<p><a href="https://sver0411.github.io/OpportunityHandbook/">在线阅读</a>&nbsp;·&nbsp;<a href="book/17-内容地图.md">内容地图</a>&nbsp;·&nbsp;<a href="https://sver0411.github.io/OpportunityHandbook/#/browse">按条件筛选</a>&nbsp;·&nbsp;<a href="#你可以直接从这些问题开始">从问题开始</a>&nbsp;·&nbsp;<a href="#opportunityhandbook--opportunityradar">搭配 OpportunityRadar</a></p>
+<p><a href="https://sver0411.github.io/OpportunityHandbook/">在线阅读</a>&nbsp;·&nbsp;<a href="book/18-内容地图.md">内容地图</a>&nbsp;·&nbsp;<a href="https://sver0411.github.io/OpportunityHandbook/#/browse">按条件筛选</a>&nbsp;·&nbsp;<a href="#你可以直接从这些问题开始">从问题开始</a>&nbsp;·&nbsp;<a href="#opportunityhandbook--opportunityradar">搭配 OpportunityRadar</a></p>
 
 <p>
   <a href="https://github.com/Sver0411/OpportunityHandbook/actions/workflows/ci.yml"><img alt="内容校验" src="https://img.shields.io/github/actions/workflow/status/Sver0411/OpportunityHandbook/ci.yml?branch=main&amp;style=flat-square&amp;label=%E5%86%85%E5%AE%B9%E6%A0%A1%E9%AA%8C"></a>&nbsp;&nbsp;
@@ -158,41 +158,41 @@
 - [怎么联系导师 / 要不要套磁？](docs/playbooks/第一次联系导师.md)
 - [家里预算有限，还能留学吗？](book/04-升学、就业还是出国/03-海外升学.md#overseas-funding)
 - [怎么和父母沟通升学与职业选择？](book/01-先决定下一步往哪里走/07-家庭沟通与支持.md#family-talk)
-- [考研该考哪所学校？怎么看才靠谱？](book/04-升学、就业还是出国/09-考研择校与信息透明度.md#kaoyan-choose-school-steps)
-- [四六级到底要不要考？不过会影响毕业吗？](book/02-在学校里先把基础打好/08-四六级分数的用途与校内规定.md#cet-school-requirement)
-- [四六级怎么练才有效？](book/02-在学校里先把基础打好/07-四六级怎么准备.md#cet-section-training)
-- [考研没考上，该二战还是直接工作？](book/04-升学、就业还是出国/12-考研调剂与二战.md#kaoyan-retake-decision)
-- [专升本值不值得？统招和成人教育怎么选？](book/01-先决定下一步往哪里走/14-专升本怎么准备.md#zsb-path-choice)
-- [专升本怎么报名？志愿怎么排？](book/01-先决定下一步往哪里走/14-专升本怎么准备.md#zsb-apply-process)
+- [考研该考哪所学校？怎么看才靠谱？](book/05-备考与应试/05-考研择校与信息透明度.md#kaoyan-choose-school-steps)
+- [四六级到底要不要考？不过会影响毕业吗？](book/05-备考与应试/02-四六级分数的用途与校内规定.md#cet-school-requirement)
+- [四六级怎么练才有效？](book/05-备考与应试/01-四六级怎么准备.md#cet-section-training)
+- [考研没考上，该二战还是直接工作？](book/05-备考与应试/08-考研调剂与二战.md#kaoyan-retake-decision)
+- [专升本值不值得？统招和成人教育怎么选？](book/05-备考与应试/04-专升本怎么准备.md#zsb-path-choice)
+- [专升本怎么报名？志愿怎么排？](book/05-备考与应试/04-专升本怎么准备.md#zsb-apply-process)
 - [专科生还有哪些路可以往上走？](book/01-先决定下一步往哪里走/15-专科生的上升通道.md#vocational-pathways)
-- [雅思还是托福？小分不够还能补救吗？](book/02-在学校里先把基础打好/09-留学语言考试怎么准备.md#lang-test-score-issues)
+- [雅思还是托福？小分不够还能补救吗？](book/05-备考与应试/03-留学语言考试怎么准备.md#lang-test-score-issues)
 
 ### 我快毕业了
 
-- [第一份工作应该怎么看？](book/05-从学校走向第一份工作/06-第一份工作.md#first-job-what-to-trade-for)
-- [两个 Offer 应该怎么比较？](book/05-从学校走向第一份工作/05-Offer.md#offer-comparison)
-- [大公司还是小公司？](book/05-从学校走向第一份工作/06-第一份工作.md#first-job-big-vs-small)
-- [工资还是成长？](book/05-从学校走向第一份工作/06-第一份工作.md#first-job-pay-vs-growth)
-- [一直找不到工作怎么办？](book/05-从学校走向第一份工作/07-如果没有顺利进入下一站.md#job-hunting-long-search)
+- [第一份工作应该怎么看？](book/06-从学校走向第一份工作/06-第一份工作.md#first-job-what-to-trade-for)
+- [两个 Offer 应该怎么比较？](book/06-从学校走向第一份工作/05-Offer.md#offer-comparison)
+- [大公司还是小公司？](book/06-从学校走向第一份工作/06-第一份工作.md#first-job-big-vs-small)
+- [工资还是成长？](book/06-从学校走向第一份工作/06-第一份工作.md#first-job-pay-vs-growth)
+- [一直找不到工作怎么办？](book/06-从学校走向第一份工作/07-如果没有顺利进入下一站.md#job-hunting-long-search)
 - [投了很多简历都没回音，问题在哪？](docs/job-search/求职漏斗诊断.md)
 - [博士毕业以后有哪些出口？](book/04-升学、就业还是出国/07-读博与博士毕业.md#phd-career-paths)
 - [要不要考公 / 进体制？](book/01-先决定下一步往哪里走/01-认识你面前的几条主要路线.md#paths-public-sector)
 
 ### 我已经工作了
 
-- [工作几年以后应该怎么升职？](book/06-从新人到能独立负责/02-从执行到独立负责.md#work-record-achievements)
-- [什么时候适合第一次跳槽？](book/06-从新人到能独立负责/05-第一次重新选择.md#career-job-hopping)
-- [技术路线还是管理路线？](book/07-晋升、跳槽还是转行/03-管理路线.md#mgmt-ic-or-manager)
-- [转行前应该先判断什么？](book/07-晋升、跳槽还是转行/05-转行.md#switch-before-decide)
-- [转行要不要从零开始？](book/07-晋升、跳槽还是转行/05-转行.md#career-change-keep-capital)
-- [工作以后还值得读硕士吗？](book/07-晋升、跳槽还是转行/06-再次进入教育体系.md#edu-master-after-work)
-- [40 岁以后还能换方向吗？](book/07-晋升、跳槽还是转行/08-职业中段与年龄.md#career-after-40)
-- [技能过时了怎么办？](book/07-晋升、跳槽还是转行/07-资深阶段：技能与收入.md#career-skill-decay)
+- [工作几年以后应该怎么升职？](book/07-从新人到能独立负责/02-从执行到独立负责.md#work-record-achievements)
+- [什么时候适合第一次跳槽？](book/07-从新人到能独立负责/05-第一次重新选择.md#career-job-hopping)
+- [技术路线还是管理路线？](book/08-晋升、跳槽还是转行/03-管理路线.md#mgmt-ic-or-manager)
+- [转行前应该先判断什么？](book/08-晋升、跳槽还是转行/05-转行.md#switch-before-decide)
+- [转行要不要从零开始？](book/08-晋升、跳槽还是转行/05-转行.md#career-change-keep-capital)
+- [工作以后还值得读硕士吗？](book/08-晋升、跳槽还是转行/06-再次进入教育体系.md#edu-master-after-work)
+- [40 岁以后还能换方向吗？](book/08-晋升、跳槽还是转行/08-职业中段与年龄.md#career-after-40)
+- [技能过时了怎么办？](book/08-晋升、跳槽还是转行/07-资深阶段：技能与收入.md#career-skill-decay)
 
 
-- [第一个月的工资怎么分配？](book/15-钱与生活基本盘/01-拿到钱的第一年.md#money-first-salary-split)
-- [社保和公积金到底有什么用？](book/15-钱与生活基本盘/02-社保公积金与税.md#money-social-insurance)
-- [状态持续不好，什么时候该找专业帮助？](book/16-身体与心理的可持续性/02-心理与求助.md#health-mental-support)
+- [第一个月的工资怎么分配？](book/16-钱与生活基本盘/01-拿到钱的第一年.md#money-first-salary-split)
+- [社保和公积金到底有什么用？](book/16-钱与生活基本盘/02-社保公积金与税.md#money-social-insurance)
+- [状态持续不好，什么时候该找专业帮助？](book/17-身体与心理的可持续性/02-心理与求助.md#health-mental-support)
 - [被欠薪或被违法辞退怎么办？](docs/rights/被欠薪与劳动仲裁.md)
 - [家里需要我出钱，应该怎么安排？](book/01-先决定下一步往哪里走/07-家庭沟通与支持.md#care-family-budget)
 
@@ -207,13 +207,13 @@
 
 | 入口 | 适合什么时候用 | 从哪里开始 |
 | --- | --- | --- |
-| **内容地图** | 还不知道该从哪一篇开始 | [`book/17-内容地图.md`](book/17-内容地图.md) |
+| **内容地图** | 还不知道该从哪一篇开始 | [`book/18-内容地图.md`](book/18-内容地图.md) |
 | **主线正文** | 想理解一条路径从哪里开始、后来会遇到什么 | [`book/`](book) |
 | **时间线** | 已经知道目标，但不知道什么时候准备什么 | [`docs/timelines/`](docs/timelines) |
 | **实用工具** | 手上已经有具体选择，需要比较、记录或复盘 | [`docs/tools/`](docs/tools) |
 | **专题手册** | 想集中了解国家、行业、科研、竞赛、开源、证书或资助 | [`docs/`](docs) |
-| **钱与生活** | 拿到第一笔收入之后：分配、社保公积金与税、保险与风险 | [`book/15-钱与生活基本盘.md`](book/15-钱与生活基本盘.md) |
-| **身体与心理** | 长期投入的前提：节奏、什么时候找专业人士、就医与医保 | [`book/16-身体与心理的可持续性.md`](book/16-身体与心理的可持续性.md) |
+| **钱与生活** | 拿到第一笔收入之后：分配、社保公积金与税、保险与风险 | [`book/16-钱与生活基本盘.md`](book/16-钱与生活基本盘.md) |
+| **身体与心理** | 长期投入的前提：节奏、什么时候找专业人士、就医与医保 | [`book/17-身体与心理的可持续性.md`](book/17-身体与心理的可持续性.md) |
 
 在线阅读页还可以按人生阶段、方向、预期成果、投入大小和证据类型筛选。你可以查“本科阶段 + 想留下作品 + 低投入”，也可以查“工作三到五年 + 准备转行 + 能接受短期降薪”。
 

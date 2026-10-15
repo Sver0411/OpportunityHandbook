@@ -3,8 +3,8 @@ id: depth-oss-第一个Issue
 title: 第一个 Issue 怎么写
 type: doc
 order: 554
-section: 09 专题手册
-section_order: 90
+section: 10 专题手册
+section_order: 100
 subsection: 深度教程 · 开源协作
 sub_order: 4
 status: complete

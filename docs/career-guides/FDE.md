@@ -3,8 +3,8 @@ id: depth-guide-fde
 title: Forward Deployed Engineer（FDE）
 type: doc
 order: 1013
-section: 09 专题手册
-section_order: 90
+section: 10 专题手册
+section_order: 100
 subsection: 职业指南
 sub_order: 13
 status: complete
@@ -99,4 +99,4 @@ AI 方向还可能要求数据处理、模型/API 调用、评测和 agent 工�
 这份资料解决「怎么做」，判断「值不值得、要不要做」请看主线：
 
 - [怎么了解一个岗位](../../book/02-在学校里先把基础打好/02-开始认识真实世界.md#understand-role)
-- [行业还是岗位](../../book/05-从学校走向第一份工作/06-第一份工作.md#first-job-role-vs-industry)
+- [行业还是岗位](../../book/06-从学校走向第一份工作/06-第一份工作.md#first-job-role-vs-industry)

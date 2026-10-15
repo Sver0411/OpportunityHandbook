@@ -936,7 +936,7 @@
 
   // 同义词表：缺失也不影响搜索（只是没有别名扩展）
   function loadAliases() {
-    return fetch("search_aliases.json")
+    return fetch("search_aliases.json", { cache: "no-cache" })
       .then(function (r) { return r.ok ? r.json() : {}; })
       .then(function (data) {
         var out = {};
@@ -951,7 +951,7 @@
   }
 
   loadAliases().then(function () {
-    return fetch("data/index.json")
+    return fetch("data/index.json", { cache: "no-cache" })
       .then(function (r) { if (!r.ok) throw new Error("HTTP " + r.status); return r.json(); })
       .then(function (data) {
         state.index = data;
