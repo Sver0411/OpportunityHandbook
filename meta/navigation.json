@@ -660,6 +660,33 @@
           "nav_id": "01-13"
         },
         {
+          "title": "专科生的上升通道",
+          "target": {
+            "type": "doc",
+            "location": "book/01-先决定下一步往哪里走/15-专科生的上升通道",
+            "anchor": ""
+          },
+          "children": [
+            {
+              "title": "专科生有哪几条上升通道",
+              "target": {
+                "type": "entry",
+                "entry_id": "vocational-pathways"
+              },
+              "nav_id": "01-14-01"
+            },
+            {
+              "title": "怎么按现在的分数和状态排序",
+              "target": {
+                "type": "entry",
+                "entry_id": "zsb-channel-sorting"
+              },
+              "nav_id": "01-14-02"
+            }
+          ],
+          "nav_id": "01-14"
+        },
+        {
           "title": "给自己保留退路",
           "children": [
             {
@@ -668,7 +695,7 @@
                 "type": "entry",
                 "entry_id": "optionality-why-not-lock"
               },
-              "nav_id": "01-14-01"
+              "nav_id": "01-15-01"
             },
             {
               "title": "哪些能力可以跨路线使用",
@@ -676,7 +703,7 @@
                 "type": "entry",
                 "entry_id": "optionality-transferable"
               },
-              "nav_id": "01-14-02"
+              "nav_id": "01-15-02"
             },
             {
               "title": "走错以后怎么切换",
@@ -684,7 +711,7 @@
                 "type": "entry",
                 "entry_id": "paths-switching-between-paths"
               },
-              "nav_id": "01-14-03"
+              "nav_id": "01-15-03"
             }
           ],
           "target": {
@@ -692,7 +719,7 @@
             "location": "book/01-先决定下一步往哪里走/05-给自己保留退路",
             "anchor": ""
           },
-          "nav_id": "01-14"
+          "nav_id": "01-15"
         }
       ],
       "nav_id": "01"

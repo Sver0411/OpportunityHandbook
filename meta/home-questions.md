@@ -502,3 +502,63 @@ stages: [undergraduate, new_grad, work_1_3]
 
 先问「上次为什么没考上」，再问「这次有什么不同」。三个变量都没有，就是把上一年重复一遍。已有可接受的工作时，二战的机会成本已经从「无」变成「很高」。
 见 [二战该不该打](../book/04-升学、就业还是出国/12-考研调剂与二战.md#kaoyan-retake-decision) 与 [调剂系统怎么操作](../book/04-升学、就业还是出国/12-考研调剂与二战.md#kaoyan-adjustment-system)。
+
+### 专升本值不值得？统招和成人教育怎么选？
+
+```meta
+id: q-zsb-path
+kind: question
+status: complete
+link: zsb-path-choice
+summary: 先翻目标岗位的招聘公告看它写「本科及以上」还是「全日制本科」，再据此决定要不要走统招；第一学历标注无法事后更改。
+topics: [study]
+stages: [secondary_vocational, college]
+```
+
+只有统招专升本通常能改变第一学历，成人教育改变的是学历层次而非第一学历标注。选之前先确认目标单位承不承认非全日制——很多岗位写的是「全日制本科」。
+见 [统招专升本与成人教育怎么选](../book/01-先决定下一步往哪里走/14-专升本怎么准备.md#zsb-path-choice) 与 [专科生有哪几条上升通道](../book/01-先决定下一步往哪里走/15-专科生的上升通道.md#vocational-pathways)。
+
+### 专升本怎么报名？志愿怎么排？
+
+```meta
+id: q-zsb-apply
+kind: question
+status: complete
+link: zsb-apply-process
+summary: 八个环节：查本省文件 → 查专业目录 → 资格初审 → 报名缴费 → 准考证 → 考试 → 查分志愿 → 录取确认与档案；征集志愿别漏。
+topics: [study]
+stages: [secondary_vocational, college]
+```
+
+先看本省的可报考专业目录再定目标（很多省份不允许跨专业）；资格被退回的最常见原因是专科专业名称与目录不一致，用学信网的正式名称逐字填。
+见 [专升本报名到录取的完整流程](../book/01-先决定下一步往哪里走/14-专升本怎么准备.md#zsb-apply-process) 与 [Playbook：第一次准备专升本](../docs/playbooks/第一次准备专升本.md)。
+
+### 专科生还有哪些路可以往上走？
+
+```meta
+id: q-vocational-up
+kind: question
+status: complete
+link: vocational-pathways
+summary: 五条通道（统招专升本、成人教育、职业本科、直接就业、技能路线）并排比较后，按你的起点状态排序，并给每条写好退路。
+topics: [study, job]
+stages: [secondary_vocational, college]
+```
+
+先翻 15–20 条目标岗位 JD 看学历门槛，再按「我现在有资格吗」筛通道。资格是硬条件不是偏好——已毕业就没有应届统招的机会了。
+见 [专科生有哪几条上升通道](../book/01-先决定下一步往哪里走/15-专科生的上升通道.md#vocational-pathways)、[上升通道对比表](../docs/tools/上升通道对比表.md)。
+
+### 雅思还是托福？小分不够还能补救吗？
+
+```meta
+id: q-lang-test
+kind: question
+status: complete
+link: lang-test-score-issues
+summary: 按目标项目接受哪个来选（不看难度）；考位会影响你能报哪些学校；小分差 0.5 常见，三条补救路径按时间是否够来选。
+topics: [study, skill]
+stages: [undergraduate, new_grad]
+```
+
+总分够不等于达标，小分差 0.5 被拒很常见。补救顺序：先看项目能不能接受 → 再考虑二刷（至少留 2 个月）→ 换其他证明。成绩复议不能提高真实水平，有时限，别把申请压在复核上。
+见 [雅思还是托福：按目标项目倒推](../book/02-在学校里先把基础打好/09-留学语言考试怎么准备.md#lang-test-choice) 与 [小分不达标、成绩复议与二刷](../book/02-在学校里先把基础打好/09-留学语言考试怎么准备.md#lang-test-score-issues)。

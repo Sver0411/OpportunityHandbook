@@ -89,6 +89,9 @@ TREE = """
   专升本怎么准备 @d:book/01-先决定下一步往哪里走/14-专升本怎么准备
     统招专升本与成人教育怎么选 @e:zsb-path-choice
     专升本报名到录取的完整流程 @e:zsb-apply-process
+  专科生的上升通道 @d:book/01-先决定下一步往哪里走/15-专科生的上升通道
+    专科生有哪几条上升通道 @e:vocational-pathways
+    怎么按现在的分数和状态排序 @e:zsb-channel-sorting
   给自己保留退路
     为什么不要过早把路线锁死 @n:optionality-why-not-lock
     哪些能力可以跨路线使用 @n:optionality-transferable
