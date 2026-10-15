@@ -443,10 +443,11 @@
   // page. One geometry-based watcher also handles large jumps and reverse scroll.
   var readingWatch = { links: [], context: {}, handler: null, frame: 0, timer: 0,
     observer: null, activeHeading: null, activeLeft: "" };
-  var headingCue = null;
+  var headingCue = null, pageCue = null;
 
   function stopReading() {
     if (headingCue) { headingCue.cancel(); headingCue = null; }
+    if (pageCue) { pageCue.cancel(); pageCue = null; }
     if (readingWatch.handler) {
       window.removeEventListener("scroll", readingWatch.handler);
       window.removeEventListener("resize", readingWatch.handler);
@@ -569,6 +570,14 @@
       readingWatch.observer.observe(main);
     }
     updateReading();
+    // Reused chapter DOM also needs feedback when its title is clicked again.
+    // Opacity leaves heading geometry unchanged while the jump is calculated.
+    var article = main.querySelector(".doc");
+    if (article && typeof article.animate === "function" &&
+        window.matchMedia("(min-width: 901px) and (prefers-reduced-motion: no-preference)").matches) {
+      pageCue = article.animate([{ opacity: 0.58 }, { opacity: 1 }],
+        { duration: 180, easing: "ease-out" });
+    }
   }
 
   function buildDocNav(location) {

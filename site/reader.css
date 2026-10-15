@@ -46,6 +46,8 @@
 
 @media (min-width:901px) {
   /* Keep the existing palette, glass surfaces, fonts and reading typography. */
+  /* Reading navigation explicitly replays this effect, including reused DOM. */
+  .main > .doc { animation:none; }
   .reader-overview .layout { grid-template-columns:minmax(0,1fr); }
   .reader-overview .toc { display:none; }
   .reader-overview .main { max-width:100%; }
