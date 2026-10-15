@@ -461,14 +461,15 @@ TREE = """
     再次不知道方向时怎么办 @n:direction-again
 
 09 专题手册
-  科研手册 @d:docs/manuals/科研手册
-  深度教程 · 升学申请
+  升学与申请 @d:book/09-专题手册#升学与申请
     选校：从几十个项目到申请列表 @d:docs/admissions/选校与短名单
     推荐信：怎么拿到一封有力的信 @d:docs/admissions/推荐信
     SOP / PS：从空洞到具体 @d:docs/admissions/个人陈述改写
     Research Proposal 逐段拆解 @d:docs/admissions/研究计划拆解
     复试与申请面试 @d:docs/admissions/复试与申请面试
-  深度教程 · 科研方法
+    奖学金与资助 @d:docs/manuals/奖学金与资助
+  科研 @d:book/09-专题手册#科研
+    科研手册 @d:docs/manuals/科研手册
     如何提出 Research Question @d:docs/research-deep/研究问题的提出
     Baseline 怎么设计 @d:docs/research-deep/Baseline设计
     Ablation 怎么设计 @d:docs/research-deep/消融实验
@@ -481,8 +482,8 @@ TREE = """
     文献阅读与综述 @d:docs/research/文献阅读与综述
     论文写作与投稿 @d:docs/research/论文写作与投稿
     联系导师与套磁 @d:docs/research/联系导师与套磁
-  竞赛手册 @d:docs/manuals/竞赛手册
-  深度教程 · 竞赛实战
+  竞赛 @d:book/09-专题手册#竞赛
+    竞赛手册 @d:docs/manuals/竞赛手册
     竞赛组队与分工 @d:docs/competition-playbooks/组队与分工
     读规则与评分函数 @d:docs/competition-playbooks/读规则与评分函数
     赛期时间分配与版本管理 @d:docs/competition-playbooks/时间分配与版本管理
@@ -492,8 +493,8 @@ TREE = """
     数据与 AI 竞赛专题 @d:docs/competitions/数据与AI竞赛
     商业与创业竞赛专题 @d:docs/competitions/商业与创业竞赛
     Hackathon 与 Game Jam @d:docs/competitions/Hackathon与GameJam
-  项目与作品手册 @d:docs/manuals/项目与作品手册
-  深度教程 · 项目与作品
+  项目与作品 @d:book/09-专题手册#项目与作品
+    项目与作品手册 @d:docs/manuals/项目与作品手册
     项目选题与问题定义 @d:docs/projects/选题与问题定义
     从教程 Demo 到真正作品 @d:docs/projects/从教程到作品
     MVP 与范围控制 @d:docs/projects/MVP与范围控制
@@ -503,28 +504,23 @@ TREE = """
     Demo 怎么做（30 秒 / 2 分钟 / 面试 / 比赛） @d:docs/projects/Demo制作
     项目如何写进简历与面试（5 组 Before / After） @d:docs/projects/项目写进简历
     项目类型专项：什么证据才算做得好 @d:docs/projects/项目类型专项
-  开源手册 @d:docs/manuals/开源手册
-  深度教程 · 开源协作
+  开源 @d:book/09-专题手册#开源
+    开源手册 @d:docs/manuals/开源手册
     如何读一个大型代码库 @d:docs/open-source/读大型代码库
     Code Review 怎么做（给与被给） @d:docs/open-source/评审与合并
     Maintainer、Release 与项目治理 @d:docs/open-source/维护者与治理
     第一个 Issue 怎么写 @d:docs/open-source/第一个Issue
     第一次 PR：从发现到合并 @d:docs/open-source/第一个PR
     怎么找 Good First Issue（以及为什么常常找不到） @d:docs/open-source/GoodFirstIssue
-  技能学习手册 @d:docs/manuals/技能学习手册
-  用 AI 学习与工作 @d:docs/learning/用AI学习与工作
-  账号、数据与隐私 @d:docs/learning/账号数据与隐私
-  离职、换工作与社保衔接 @d:docs/rights/离职与社保衔接
-  劳动合同要看哪些条款 @d:docs/rights/劳动合同要看哪些条款
-  被欠薪与劳动仲裁 @d:docs/rights/被欠薪与劳动仲裁
-  遇到纠纷找谁：求助顺序 @d:docs/rights/遇到纠纷找谁
-  术语表 @d:docs/manuals/术语表
-  深度教程 · 学习方法
+  学习与数字生活 @d:book/09-专题手册#学习与数字生活
+    技能学习手册 @d:docs/manuals/技能学习手册
     从零学一项技术（三种类型） @d:docs/learning/从零学一项技术
     如何读官方文档 @d:docs/learning/读官方文档
     如何 Debug：从现象到根因 @d:docs/learning/调试方法
     如何判断自己真的掌握 @d:docs/learning/掌握程度的判断
-  深度教程 · 求职训练
+    用 AI 学习与工作 @d:docs/learning/用AI学习与工作
+    账号、数据与隐私 @d:docs/learning/账号数据与隐私
+  求职 @d:book/09-专题手册#求职
     一份 JD 到底怎么拆 @d:docs/job-search/JD拆解
     简历从差到好（六种背景完整改写） @d:docs/job-search/简历改造
     技术面试全流程 @d:docs/job-search/技术面试
@@ -532,28 +528,27 @@ TREE = """
     项目面试：从第一句开始的追问链 @d:docs/job-search/项目面试
     求职失败诊断：从 0 回复到 Offer 质量差 @d:docs/job-search/求职漏斗诊断
     Offer、薪酬结构与劳动合同 @d:docs/job-search/Offer与合同
-  语言与考试 @d:docs/manuals/语言与考试
-  证书 @d:docs/manuals/证书
-  深度教程 · 证书与资格
-    证书值不值得考：六步判断 @d:docs/certifications/判断体系
-    证书类型对照：准入 / 等级 / 行业 / 厂商 / 微证书 @d:docs/certifications/类型对照
-    证书考试的准备方式 @d:docs/certifications/考试准备
-  奖学金与资助 @d:docs/manuals/奖学金与资助
-  社群与行业组织 @d:docs/manuals/社群与行业组织
-  深度教程 · 人脉与社群
-    怎么联系陌生从业者（含完整对话） @d:docs/networking/联系陌生人
-    会议与线下活动：第一次去做什么 @d:docs/networking/会议与线下活动
-    关系维护与内推请求 @d:docs/networking/关系维护与内推
-    如何给社群做贡献 @d:docs/networking/贡献社群
-  深度教程 · 职业成长
+  职业成长 @d:book/09-专题手册#职业成长
     入职前 90 天：建立可信度 @d:docs/career-growth/入职前三个月
     如何真正学会一份工作 @d:docs/career-growth/学会一份工作
     如何获得更大的 scope @d:docs/career-growth/扩大责任范围
     晋升：证据、影响与流程 @d:docs/career-growth/晋升材料
     IC 还是 Manager：一个完整人物案例 @d:docs/career-growth/IC与管理路线
     在职跳槽全流程 @d:docs/career-growth/在职跳槽
-  创业与自由职业 @d:docs/manuals/创业与自由职业
-  深度教程 · 创业与自由职业
+  人脉与社群 @d:book/09-专题手册#人脉与社群
+    社群与行业组织 @d:docs/manuals/社群与行业组织
+    怎么联系陌生从业者（含完整对话） @d:docs/networking/联系陌生人
+    会议与线下活动：第一次去做什么 @d:docs/networking/会议与线下活动
+    关系维护与内推请求 @d:docs/networking/关系维护与内推
+    如何给社群做贡献 @d:docs/networking/贡献社群
+  证书与语言考试 @d:book/09-专题手册#证书与语言考试
+    证书 @d:docs/manuals/证书
+    证书值不值得考：六步判断 @d:docs/certifications/判断体系
+    证书类型对照：准入 / 等级 / 行业 / 厂商 / 微证书 @d:docs/certifications/类型对照
+    证书考试的准备方式 @d:docs/certifications/考试准备
+    语言与考试 @d:docs/manuals/语言与考试
+  创业与自由职业 @d:book/09-专题手册#创业与自由职业
+    创业与自由职业 @d:docs/manuals/创业与自由职业
     找问题与用户访谈 @d:docs/entrepreneurship/找问题与用户访谈
     定价与报价 @d:docs/entrepreneurship/定价与报价
     分销与获客 @d:docs/entrepreneurship/分销与获客
@@ -621,107 +616,138 @@ TREE = """
     教师（中小学 / 高校 / 培训） @d:docs/career-guides/教师
     公共部门与事业单位 @d:docs/career-guides/公共部门
     技能型职业（电工 / 焊工 / 护理等） @d:docs/career-guides/技能型职业
-  常用官方来源清单 @d:docs/sources/常用官方来源清单
-  官方入口速查：你要办的事去哪办 @d:docs/sources/官方入口速查
-  二手来源与识别方法 @d:docs/sources/二手来源与识别方法
-  核实记录 @d:docs/sources/核实记录
+  权益与制度 @d:book/09-专题手册#权益与制度
+    离职、换工作与社保衔接 @d:docs/rights/离职与社保衔接
+    劳动合同要看哪些条款 @d:docs/rights/劳动合同要看哪些条款
+    被欠薪与劳动仲裁 @d:docs/rights/被欠薪与劳动仲裁
+    遇到纠纷找谁：求助顺序 @d:docs/rights/遇到纠纷找谁
+  参考与来源 @d:book/09-专题手册#参考与来源
+    术语表 @d:docs/manuals/术语表
+    常用官方来源清单 @d:docs/sources/常用官方来源清单
+    官方入口速查：你要办的事去哪办 @d:docs/sources/官方入口速查
+    二手来源与识别方法 @d:docs/sources/二手来源与识别方法
+    核实记录 @d:docs/sources/核实记录
 
 10 路径时间线
-  高中毕业后的选择 @d:docs/timelines/高中到大学
-  中职升学 @d:docs/timelines/中职升学时间线
-  专升本 @d:docs/timelines/专升本时间线
-  实习准备 @d:docs/timelines/实习准备时间线
-  海外工作与签证 @d:docs/timelines/海外工作与签证时间线
-  本科四年 @d:docs/timelines/本科四年
-  保研 @d:docs/timelines/保研时间线
-  考研 @d:docs/timelines/考研时间线
-  考公 @d:docs/timelines/考公时间线
-  四六级 @d:docs/timelines/四六级时间线
-  留学语言考试 @d:docs/timelines/留学语言考试时间线
-  留学申请 @d:docs/timelines/留学申请时间线
-  博士申请 @d:docs/timelines/博士申请时间线
-  校招 @d:docs/timelines/校招时间线
-  科研入门 @d:docs/timelines/科研入门时间线
-  转行 @d:docs/timelines/转行时间线
-  入职第一年 @d:docs/timelines/入职第一年
-  离职与纠纷维权 @d:docs/timelines/离职与纠纷维权
+  中学到本科 @d:book/10-路径时间线#中学到本科
+    高中毕业后的选择 @d:docs/timelines/高中到大学
+    中职升学 @d:docs/timelines/中职升学时间线
+    专升本 @d:docs/timelines/专升本时间线
+    本科四年 @d:docs/timelines/本科四年
+  升学与考试申请 @d:book/10-路径时间线#升学与考试申请
+    保研 @d:docs/timelines/保研时间线
+    考研 @d:docs/timelines/考研时间线
+    考公 @d:docs/timelines/考公时间线
+    留学申请 @d:docs/timelines/留学申请时间线
+    留学语言考试 @d:docs/timelines/留学语言考试时间线
+    四六级 @d:docs/timelines/四六级时间线
+    博士申请 @d:docs/timelines/博士申请时间线
+  科研与实习 @d:book/10-路径时间线#科研与实习
+    科研入门 @d:docs/timelines/科研入门时间线
+    实习准备 @d:docs/timelines/实习准备时间线
+  求职与入职 @d:book/10-路径时间线#求职与入职
+    校招 @d:docs/timelines/校招时间线
+    入职第一年 @d:docs/timelines/入职第一年
+  职业发展与权益 @d:book/10-路径时间线#职业发展与权益
+    转行 @d:docs/timelines/转行时间线
+    海外工作与签证 @d:docs/timelines/海外工作与签证时间线
+    离职与纠纷维权 @d:docs/timelines/离职与纠纷维权
 
 11 工具与模板
-  机会价值判断表 @d:docs/tools/机会价值判断表
-  Offer 对比表 @d:docs/tools/Offer对比表
-  探索复盘模板 @d:docs/tools/探索复盘模板
-  职业资本盘点表 @d:docs/tools/职业资本盘点表
-  转行 Bridge Plan @d:docs/tools/转行BridgePlan
-  导师筛选表 @d:docs/tools/导师筛选表
-  联系导师邮件模板 @d:docs/tools/联系导师邮件模板
-  留学选校表 @d:docs/tools/留学选校表
-  考研择校对比表 @d:docs/tools/择校对比表
-  留学语言考试排期表 @d:docs/tools/留学语言考试排期表
-  四六级备考排期表 @d:docs/tools/四六级备考排期表
-  上升通道对比表 @d:docs/tools/上升通道对比表
-  Research Question Canvas @d:docs/tools/ResearchQuestionCanvas
-  Baseline 与消融设计表 @d:docs/tools/Baseline与消融设计表
-  实验记录模板 @d:docs/tools/实验记录模板
-  论文精读表（Paper Reading Sheet） @d:docs/tools/论文精读表
-  文献地图（Literature Map） @d:docs/tools/文献地图
-  求职追踪表 @d:docs/tools/求职追踪表
-  JD 拆解表 @d:docs/tools/JD拆解表
-  面试复盘表 @d:docs/tools/面试复盘表
-  求职漏斗诊断表 @d:docs/tools/求职漏斗诊断表
-  项目设计 Canvas @d:docs/tools/项目设计Canvas
-  项目测试计划模板 @d:docs/tools/项目测试计划
-  Benchmark 记录表 @d:docs/tools/Benchmark记录表
-  技能 Gap 矩阵 @d:docs/tools/技能Gap矩阵
-  Failure Log @d:docs/tools/Failure日志
-  README 检查表 @d:docs/tools/README检查表
-  项目发布检查表 @d:docs/tools/发布检查表
-  PR 检查表 @d:docs/tools/PR检查表
-  客户沟通与需求确认表 @d:docs/tools/客户沟通表
-  自由职业报价单模板 @d:docs/tools/自由职业报价单
-  时间线检查表 @d:docs/tools/时间线检查表
-  读博规划表 @d:docs/tools/读博规划表
-  转行现金流表 @d:docs/tools/转行现金流表
-  职校作品清单 @d:docs/tools/职校作品清单
-  日常账本与月度预算 @d:docs/tools/日常账本与月度预算
-  体检项目对照表 @d:docs/tools/体检项目对照表
-  精力预算表 @d:docs/tools/精力预算表
-  纠纷证据清单 @d:docs/tools/纠纷证据清单
-  岗位筛选表 @d:docs/tools/岗位筛选表
+  做决定与盘点 @d:book/11-工具与模板#做决定与盘点
+    机会价值判断表 @d:docs/tools/机会价值判断表
+    Offer 对比表 @d:docs/tools/Offer对比表
+    探索复盘模板 @d:docs/tools/探索复盘模板
+    职业资本盘点表 @d:docs/tools/职业资本盘点表
+    转行 Bridge Plan @d:docs/tools/转行BridgePlan
+  升学与考试 @d:book/11-工具与模板#升学与考试
+    导师筛选表 @d:docs/tools/导师筛选表
+    联系导师邮件模板 @d:docs/tools/联系导师邮件模板
+    留学选校表 @d:docs/tools/留学选校表
+    考研择校对比表 @d:docs/tools/择校对比表
+    上升通道对比表 @d:docs/tools/上升通道对比表
+    四六级备考排期表 @d:docs/tools/四六级备考排期表
+    留学语言考试排期表 @d:docs/tools/留学语言考试排期表
+  科研 @d:book/11-工具与模板#科研
+    Research Question Canvas @d:docs/tools/ResearchQuestionCanvas
+    Baseline 与消融设计表 @d:docs/tools/Baseline与消融设计表
+    实验记录模板 @d:docs/tools/实验记录模板
+    论文精读表（Paper Reading Sheet） @d:docs/tools/论文精读表
+    文献地图（Literature Map） @d:docs/tools/文献地图
+  求职 @d:book/11-工具与模板#求职
+    岗位筛选表 @d:docs/tools/岗位筛选表
+    求职追踪表 @d:docs/tools/求职追踪表
+    JD 拆解表 @d:docs/tools/JD拆解表
+    面试复盘表 @d:docs/tools/面试复盘表
+    求职漏斗诊断表 @d:docs/tools/求职漏斗诊断表
+  做项目与工程 @d:book/11-工具与模板#做项目与工程
+    项目设计 Canvas @d:docs/tools/项目设计Canvas
+    项目测试计划模板 @d:docs/tools/项目测试计划
+    Benchmark 记录表 @d:docs/tools/Benchmark记录表
+    技能 Gap 矩阵 @d:docs/tools/技能Gap矩阵
+    Failure Log @d:docs/tools/Failure日志
+    README 检查表 @d:docs/tools/README检查表
+    项目发布检查表 @d:docs/tools/发布检查表
+    PR 检查表 @d:docs/tools/PR检查表
+  自由职业与协作 @d:book/11-工具与模板#自由职业与协作
+    客户沟通与需求确认表 @d:docs/tools/客户沟通表
+    自由职业报价单模板 @d:docs/tools/自由职业报价单
+  钱、健康与权益 @d:book/11-工具与模板#钱健康与权益
+    日常账本与月度预算 @d:docs/tools/日常账本与月度预算
+    转行现金流表 @d:docs/tools/转行现金流表
+    体检项目对照表 @d:docs/tools/体检项目对照表
+    精力预算表 @d:docs/tools/精力预算表
+    纠纷证据清单 @d:docs/tools/纠纷证据清单
+    时间线检查表 @d:docs/tools/时间线检查表
+  规划与作品 @d:book/11-工具与模板#规划与作品
+    读博规划表 @d:docs/tools/读博规划表
+    职校作品清单 @d:docs/tools/职校作品清单
 
 12 完整案例
-  Case：第一次做真正的项目 @d:docs/cases/第一次做真正项目
-  Case：本科生第一次进实验室 @d:docs/cases/本科生第一次科研
-  Case：第一次找技术实习 @d:docs/cases/第一次找技术实习
-  Case：第一次开源贡献 @d:docs/cases/第一次开源贡献
-  Case：从教程项目到工程作品（三种项目） @d:docs/cases/教程项目到工程作品
-  Case：两个 Offer 怎么选 @d:docs/cases/两个Offer怎么选
-  Case：第一次转行 @d:docs/cases/第一次转行
-  Case：留学选校从几十个到一份名单 @d:docs/cases/留学选校
-  Case：联系导师的完整过程 @d:docs/cases/联系导师
-  Case：把一次竞赛变成作品集与简历素材 @d:docs/cases/从竞赛到作品集
-  Case：第一次面试失败之后 @d:docs/cases/第一次面试失败
-  Case：第一次自由职业客户 @d:docs/cases/第一次自由职业客户
-  Case：第一次被欠薪 @d:docs/cases/第一次被欠薪
-  Case：第一次去看心理科 @d:docs/cases/第一次看心理科
-  Case：第一次自己买保险 @d:docs/cases/第一次买保险
+  项目与科研 @d:book/12-完整案例#项目与科研
+    Case：第一次做真正的项目 @d:docs/cases/第一次做真正项目
+    Case：本科生第一次进实验室 @d:docs/cases/本科生第一次科研
+    Case：从教程项目到工程作品（三种项目） @d:docs/cases/教程项目到工程作品
+    Case：联系导师的完整过程 @d:docs/cases/联系导师
+    Case：第一次开源贡献 @d:docs/cases/第一次开源贡献
+  升学与作品 @d:book/12-完整案例#升学与作品
+    Case：留学选校从几十个到一份名单 @d:docs/cases/留学选校
+    Case：把一次竞赛变成作品集与简历素材 @d:docs/cases/从竞赛到作品集
+  求职 @d:book/12-完整案例#求职
+    Case：第一次找技术实习 @d:docs/cases/第一次找技术实习
+    Case：两个 Offer 怎么选 @d:docs/cases/两个Offer怎么选
+    Case：第一次面试失败之后 @d:docs/cases/第一次面试失败
+  工作、钱与权益 @d:book/12-完整案例#工作钱与权益
+    Case：第一次转行 @d:docs/cases/第一次转行
+    Case：第一次自由职业客户 @d:docs/cases/第一次自由职业客户
+    Case：第一次被欠薪 @d:docs/cases/第一次被欠薪
+    Case：第一次自己买保险 @d:docs/cases/第一次买保险
+  健康 @d:book/12-完整案例#健康
+    Case：第一次去看心理科 @d:docs/cases/第一次看心理科
 
 13 操作手册
-  Playbook：第一次做项目 @d:docs/playbooks/第一次做项目
-  Playbook：第一次联系导师 @d:docs/playbooks/第一次联系导师
-  Playbook：第一次开源贡献 @d:docs/playbooks/第一次开源贡献
-  Playbook：第一次找实习 @d:docs/playbooks/第一次找实习
-  Playbook：第一次技术面试 @d:docs/playbooks/第一次技术面试
-  Playbook：第一次谈薪 @d:docs/playbooks/第一次谈薪
-  Playbook：第一次接单 @d:docs/playbooks/第一次接单
-  Playbook：第一次参加 Hackathon @d:docs/playbooks/第一次参加 Hackathon
-  Playbook：第一次写论文 @d:docs/playbooks/第一次写论文
-  Playbook：第一次做实验与记录 @d:docs/playbooks/第一次做实验
-  Playbook：第一次核对合同与社保 @d:docs/playbooks/第一次核对合同与社保
-  Playbook：第一次处理劳动争议 @d:docs/playbooks/第一次处理劳动争议
-  Playbook：第一次准备考公笔试 @d:docs/playbooks/第一次准备考公笔试
-  Playbook：第一次准备考研 @d:docs/playbooks/第一次准备考研
-  Playbook：第一次考四六级 @d:docs/playbooks/第一次考四六级
-  Playbook：第一次准备专升本 @d:docs/playbooks/第一次准备专升本
+  项目与开源 @d:book/13-操作手册#项目与开源
+    Playbook：第一次做项目 @d:docs/playbooks/第一次做项目
+    Playbook：第一次开源贡献 @d:docs/playbooks/第一次开源贡献
+    Playbook：第一次参加 Hackathon @d:docs/playbooks/第一次参加 Hackathon
+  科研 @d:book/13-操作手册#科研
+    Playbook：第一次做实验与记录 @d:docs/playbooks/第一次做实验
+    Playbook：第一次写论文 @d:docs/playbooks/第一次写论文
+    Playbook：第一次联系导师 @d:docs/playbooks/第一次联系导师
+  求职 @d:book/13-操作手册#求职
+    Playbook：第一次找实习 @d:docs/playbooks/第一次找实习
+    Playbook：第一次技术面试 @d:docs/playbooks/第一次技术面试
+    Playbook：第一次谈薪 @d:docs/playbooks/第一次谈薪
+  考试备考 @d:book/13-操作手册#考试备考
+    Playbook：第一次准备考公笔试 @d:docs/playbooks/第一次准备考公笔试
+    Playbook：第一次准备考研 @d:docs/playbooks/第一次准备考研
+    Playbook：第一次考四六级 @d:docs/playbooks/第一次考四六级
+    Playbook：第一次准备专升本 @d:docs/playbooks/第一次准备专升本
+  自由职业 @d:book/13-操作手册#自由职业
+    Playbook：第一次接单 @d:docs/playbooks/第一次接单
+  合同与权益 @d:book/13-操作手册#合同与权益
+    Playbook：第一次核对合同与社保 @d:docs/playbooks/第一次核对合同与社保
+    Playbook：第一次处理劳动争议 @d:docs/playbooks/第一次处理劳动争议
 
 14 避坑
   升学与留学 @e:trap-guaranteed-admission
