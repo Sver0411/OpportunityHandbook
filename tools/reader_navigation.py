@@ -219,8 +219,11 @@ def build(index, root=None):
     topics = catalog()
     # 「先花 30 秒」不是分组，而是全站的分流入口：点一次直接落到 00 章首屏的分流表。
     # 它必须是「选择与方向」里的第一项——读者不必再展开子分组找标题。
+    # overview 与 document 都指向 00 章：document 用于跳转，overview 让前端认得出
+    # 「这一页属于 start-here」，否则会用「第一个以该文档开头的条目」猜主人（会猜错）。
     start_here = topics[0]["children"][0]
     start_here["document"] = "#/doc/book/00-从这里开始"
+    start_here["overview"] = "#/doc/book/00-从这里开始"
     content_map = node("content-map", "内容地图", "从当前问题出发，找到合适的章节与下一步。")
     content_map["document"] = "#/doc/book/18-内容地图"
     atlases = [node("places", "国家与地区", "同一地区的制度说明与申请操作，在一个入口查找。"),

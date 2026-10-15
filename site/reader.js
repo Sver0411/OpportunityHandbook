@@ -67,7 +67,13 @@
         main.replaceChildren(header("找不到这个入口", "从目录继续查找", "这个分组可能已经调整。"), el("a", { href: "#/", text: "返回首页 →" }));
         return;
       }
-      if (n.document) { options.openOverview(n.document); return; }
+      if (n.document) {
+        // 带上 from：文档可能是几个入口共用的（例如 00 章分给多个分组），
+        // 没有它前端就只能按文档前缀猜归属，高亮会落到别的组上。
+        var sep = n.document.indexOf("?") < 0 ? "?from=" : "&from=";
+        options.openOverview(n.document + sep + encodeURIComponent(id));
+        return;
+      }
       // Task headings keep their existing overview and body. Resource guides
       // use authored prose, just like the first-level chapter introductions.
       if (parents[id] && n.refs.length && !n.role) {
