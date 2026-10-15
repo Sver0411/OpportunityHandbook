@@ -325,8 +325,10 @@ body.nav-collapsed .shell { margin-left: 0; }
 .main { padding: 44px 0 40px; min-width: 0; }
 .toc {
   position: sticky; top: 68px; max-height: calc(100vh - 96px); overflow-y: auto;
+  scrollbar-width: none;
   padding: 48px 0 40px;
 }
+.toc::-webkit-scrollbar { display: none; }
 
 /* ---------------------------------------------------------------- 页内目录 */
 
