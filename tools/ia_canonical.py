@@ -280,6 +280,7 @@ TREE = """
     结构化面试怎么准备 @e:exam-structured-interview
     无领导小组讨论怎么应对 @e:exam-leaderless-discussion
     体检与考察（政审）要注意什么 @e:exam-medical-and-review
+    上岸之后的试用期与服务期 @e:exam-after-onboard
   事业单位与基层项目 @d:book/05-备考与应试
     事业单位考试怎么选 @e:exam-public-institution
     三支一扶、西部计划、特岗教师：政策怎么核 @e:exam-grassroots-programs
