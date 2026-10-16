@@ -3571,12 +3571,20 @@
           },
           "children": [
             {
+              "title": "30 岁前后这三年怎么布局",
+              "target": {
+                "type": "entry",
+                "entry_id": "career-thirties-layout"
+              },
+              "nav_id": "08-10-01"
+            },
+            {
               "title": "40 岁以后怎么规划工作",
               "target": {
                 "type": "entry",
                 "entry_id": "career-after-40"
               },
-              "nav_id": "08-10-01"
+              "nav_id": "08-10-02"
             },
             {
               "title": "中年重新开始前先算什么",
@@ -3584,7 +3592,7 @@
                 "type": "entry",
                 "entry_id": "career-midlife-reset"
               },
-              "nav_id": "08-10-02"
+              "nav_id": "08-10-03"
             }
           ],
           "nav_id": "08-10"

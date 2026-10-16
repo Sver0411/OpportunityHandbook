@@ -439,6 +439,7 @@ TREE = """
     博士 @e:research-phd-worth-it
     海外教育 @n:edu-abroad-again
   职业中段与年龄 @d:book/08-晋升、跳槽还是转行
+    30 岁前后这三年怎么布局 @e:career-thirties-layout
     40 岁以后怎么规划工作 @e:career-after-40
     中年重新开始前先算什么 @e:career-midlife-reset
 
