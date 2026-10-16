@@ -6870,6 +6870,25 @@
             }
           ],
           "nav_id": "17-03"
+        },
+        {
+          "title": "照护家人",
+          "target": {
+            "type": "doc",
+            "location": "book/17-身体与心理的可持续性",
+            "anchor": ""
+          },
+          "children": [
+            {
+              "title": "照顾家人的同时怎么不把自己搭进去",
+              "target": {
+                "type": "entry",
+                "entry_id": "health-caregiver-load"
+              },
+              "nav_id": "17-04-01"
+            }
+          ],
+          "nav_id": "17-04"
         }
       ],
       "nav_id": "17"

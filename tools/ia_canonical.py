@@ -805,5 +805,7 @@ TREE = """
     体检怎么选、医保怎么用 @e:health-checkup-and-insurance
     长期用药与定期复查怎么安排 @e:health-chronic-care
     看病的时间与钱怎么安排 @e:health-care-process
+  照护家人 @d:book/17-身体与心理的可持续性
+    照顾家人的同时怎么不把自己搭进去 @e:health-caregiver-load
 18 内容地图
 """
