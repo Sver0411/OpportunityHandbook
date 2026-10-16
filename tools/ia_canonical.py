@@ -125,6 +125,11 @@ TREE = """
     行业认证 @e:skill-industry-certification
     厂商认证 @n:certificate-vendor
     不要为了证书而考证 @n:certificate-not-for-certificates
+  校内资源与规则
+    图书馆与数据库怎么用 @e:campus-library-and-databases
+    实验室、机房与设备怎么申请用 @e:campus-labs-and-equipment
+    综测、第二课堂与实践学分怎么核 @e:campus-credit-rules
+    辅导员、班主任与教务：谁管什么 @e:campus-staff-roles
 
 03 做项目、打比赛、进实验室
   项目与作品
@@ -168,6 +173,8 @@ TREE = """
     志愿活动 @e:paths-volunteering
     Meetup @n:community-meetup
     怎么从“参加”变成真正的贡献 @n:community-from-join-to-contribute
+    学生会、班委与学生工作值不值得做 @e:community-student-org
+    校内活动与讲座怎么用 @e:community-campus-events
   实习准备
     实习有什么用 @e:internship-worth-it
     什么时候开始找第一段实习 @e:internship-types
@@ -810,6 +817,10 @@ TREE = """
     长期高强度怎么不垮 @e:health-sustainable-pace
     睡眠与久坐：能改的三件事 @e:health-sleep-and-sitting
     精力怎么分配：一周精力预算 @e:health-energy-budget
+  运动与身体能力
+    怎么把运动变成习惯 @e:health-exercise-habit
+    体测与体育课：毕业与评优的硬条件 @e:health-fitness-test
+    运动损伤与恢复 @e:health-sports-injury
   心理与求助 @d:book/17-身体与心理的可持续性
     情绪持续不好时找谁 @e:health-mental-support
     日常怎么维护心理状态 @e:health-mental-habits

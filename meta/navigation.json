@@ -934,6 +934,49 @@
             "anchor": "证书"
           },
           "nav_id": "02-06"
+        },
+        {
+          "title": "校内资源与规则",
+          "children": [
+            {
+              "title": "图书馆与数据库怎么用",
+              "target": {
+                "type": "entry",
+                "entry_id": "campus-library-and-databases"
+              },
+              "nav_id": "02-07-01"
+            },
+            {
+              "title": "实验室、机房与设备怎么申请用",
+              "target": {
+                "type": "entry",
+                "entry_id": "campus-labs-and-equipment"
+              },
+              "nav_id": "02-07-02"
+            },
+            {
+              "title": "综测、第二课堂与实践学分怎么核",
+              "target": {
+                "type": "entry",
+                "entry_id": "campus-credit-rules"
+              },
+              "nav_id": "02-07-03"
+            },
+            {
+              "title": "辅导员、班主任与教务：谁管什么",
+              "target": {
+                "type": "entry",
+                "entry_id": "campus-staff-roles"
+              },
+              "nav_id": "02-07-04"
+            }
+          ],
+          "target": {
+            "type": "doc",
+            "location": "book/02-在学校里先把基础打好",
+            "anchor": "校内资源与规则"
+          },
+          "nav_id": "02-07"
         }
       ],
       "nav_id": "02"
@@ -1280,6 +1323,22 @@
                 "entry_id": "community-from-join-to-contribute"
               },
               "nav_id": "03-05-06"
+            },
+            {
+              "title": "学生会、班委与学生工作值不值得做",
+              "target": {
+                "type": "entry",
+                "entry_id": "community-student-org"
+              },
+              "nav_id": "03-05-07"
+            },
+            {
+              "title": "校内活动与讲座怎么用",
+              "target": {
+                "type": "entry",
+                "entry_id": "community-campus-events"
+              },
+              "nav_id": "03-05-08"
             }
           ],
           "target": {
@@ -6909,6 +6968,41 @@
           "nav_id": "17-01"
         },
         {
+          "title": "运动与身体能力",
+          "children": [
+            {
+              "title": "怎么把运动变成习惯",
+              "target": {
+                "type": "entry",
+                "entry_id": "health-exercise-habit"
+              },
+              "nav_id": "17-02-01"
+            },
+            {
+              "title": "体测与体育课：毕业与评优的硬条件",
+              "target": {
+                "type": "entry",
+                "entry_id": "health-fitness-test"
+              },
+              "nav_id": "17-02-02"
+            },
+            {
+              "title": "运动损伤与恢复",
+              "target": {
+                "type": "entry",
+                "entry_id": "health-sports-injury"
+              },
+              "nav_id": "17-02-03"
+            }
+          ],
+          "target": {
+            "type": "doc",
+            "location": "book/17-身体与心理的可持续性",
+            "anchor": "运动与身体能力"
+          },
+          "nav_id": "17-02"
+        },
+        {
           "title": "心理与求助",
           "target": {
             "type": "doc",
@@ -6922,7 +7016,7 @@
                 "type": "entry",
                 "entry_id": "health-mental-support"
               },
-              "nav_id": "17-02-01"
+              "nav_id": "17-03-01"
             },
             {
               "title": "日常怎么维护心理状态",
@@ -6930,7 +7024,7 @@
                 "type": "entry",
                 "entry_id": "health-mental-habits"
               },
-              "nav_id": "17-02-02"
+              "nav_id": "17-03-02"
             },
             {
               "title": "第一次咨询或就诊：从预约到判断有没有用",
@@ -6938,10 +7032,10 @@
                 "type": "entry",
                 "entry_id": "health-therapy-first-time"
               },
-              "nav_id": "17-02-03"
+              "nav_id": "17-03-03"
             }
           ],
-          "nav_id": "17-02"
+          "nav_id": "17-03"
         },
         {
           "title": "生病与照护自己",
@@ -6957,7 +7051,7 @@
                 "type": "entry",
                 "entry_id": "health-when-to-see-doctor"
               },
-              "nav_id": "17-03-01"
+              "nav_id": "17-04-01"
             },
             {
               "title": "体检怎么选、医保怎么用",
@@ -6965,7 +7059,7 @@
                 "type": "entry",
                 "entry_id": "health-checkup-and-insurance"
               },
-              "nav_id": "17-03-02"
+              "nav_id": "17-04-02"
             },
             {
               "title": "长期用药与定期复查怎么安排",
@@ -6973,7 +7067,7 @@
                 "type": "entry",
                 "entry_id": "health-chronic-care"
               },
-              "nav_id": "17-03-03"
+              "nav_id": "17-04-03"
             },
             {
               "title": "看病的时间与钱怎么安排",
@@ -6981,10 +7075,10 @@
                 "type": "entry",
                 "entry_id": "health-care-process"
               },
-              "nav_id": "17-03-04"
+              "nav_id": "17-04-04"
             }
           ],
-          "nav_id": "17-03"
+          "nav_id": "17-04"
         },
         {
           "title": "照护家人",
@@ -7000,10 +7094,10 @@
                 "type": "entry",
                 "entry_id": "health-caregiver-load"
               },
-              "nav_id": "17-04-01"
+              "nav_id": "17-05-01"
             }
           ],
-          "nav_id": "17-04"
+          "nav_id": "17-05"
         }
       ],
       "nav_id": "17"
