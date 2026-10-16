@@ -3674,6 +3674,14 @@
                 "entry_id": "freelance-client-concentration"
               },
               "nav_id": "09-01-07"
+            },
+            {
+              "title": "自由职业的第一年怎么活下来",
+              "target": {
+                "type": "entry",
+                "entry_id": "freelance-first-year"
+              },
+              "nav_id": "09-01-08"
             }
           ],
           "target": {

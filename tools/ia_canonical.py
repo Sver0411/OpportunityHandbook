@@ -453,6 +453,7 @@ TREE = """
     收入稳定性 @n:freelance-stability
     自由职业的成本结构与定价底线 @e:freelance-cost-structure
     客户太集中怎么办 @e:freelance-client-concentration
+    自由职业的第一年怎么活下来 @e:freelance-first-year
   副业
     什么副业值得做 @e:startup-side-project
     接单 @n:side-gig-orders
