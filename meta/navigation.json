@@ -2591,6 +2591,14 @@
                 "entry_id": "employer-due-diligence"
               },
               "nav_id": "06-06-01"
+            },
+            {
+              "title": "从签约到报到的清单",
+              "target": {
+                "type": "entry",
+                "entry_id": "offer-to-onboarding-checklist"
+              },
+              "nav_id": "06-06-02"
             }
           ],
           "nav_id": "06-06"

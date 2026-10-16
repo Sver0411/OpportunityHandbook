@@ -323,6 +323,7 @@ TREE = """
     毁约 @n:offer-renege
   入职前的核实 @d:book/06-从学校走向第一份工作
     怎么判断一家公司值不值得去 @e:employer-due-diligence
+    从签约到报到的清单 @e:offer-to-onboarding-checklist
   第一份工作
     第一份工作最应该换回什么 @e:first-job-what-to-trade-for
     大公司还是小公司 @e:first-job-big-vs-small
