@@ -264,6 +264,7 @@ TREE = """
   考研报名、初试与复试 @d:book/05-备考与应试
     考研报名与初试：九个环节和它们的卡点 @e:kaoyan-apply-process
     复试前两周的准备安排 @e:kaoyan-retest-schedule
+    拟录取之后到入学要办的事 @e:kaoyan-after-admission
   考研调剂与二战 @d:book/05-备考与应试
     调剂系统怎么操作：从开放到确认 @e:kaoyan-adjustment-system
     二战该不该打：复盘、止损与三条替代方案 @e:kaoyan-retake-decision

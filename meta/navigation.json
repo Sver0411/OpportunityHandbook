@@ -2091,6 +2091,14 @@
                 "entry_id": "kaoyan-retest-schedule"
               },
               "nav_id": "05-07-02"
+            },
+            {
+              "title": "拟录取之后到入学要办的事",
+              "target": {
+                "type": "entry",
+                "entry_id": "kaoyan-after-admission"
+              },
+              "nav_id": "05-07-03"
             }
           ],
           "nav_id": "05-07"
