@@ -166,6 +166,7 @@
 - [专升本怎么报名？志愿怎么排？](book/05-备考与应试.md#zsb-apply-process)
 - [专科生还有哪些路可以往上走？](book/01-先决定下一步往哪里走.md#vocational-pathways)
 - [雅思还是托福？小分不够还能补救吗？](book/05-备考与应试.md#lang-test-score-issues)
+- [考研拟录取之后还要办哪些手续？](book/05-备考与应试.md#kaoyan-after-admission)
 
 ### 我快毕业了
 
@@ -177,6 +178,7 @@
 - [投了很多简历都没回音，问题在哪？](docs/job-search/求职漏斗诊断.md)
 - [博士毕业以后有哪些出口？](book/04-升学、就业还是出国.md#phd-career-paths)
 - [要不要考公 / 进体制？](book/01-先决定下一步往哪里走.md#paths-public-sector)
+- [考上公务员之后，试用期与服务期要注意什么？](book/05-备考与应试.md#exam-after-onboard)
 
 ### 我已经工作了
 
@@ -195,6 +197,10 @@
 - [状态持续不好，什么时候该找专业帮助？](book/17-身体与心理的可持续性.md#health-mental-support)
 - [被欠薪或被违法辞退怎么办？](docs/rights/被欠薪与劳动仲裁.md)
 - [家里需要我出钱，应该怎么安排？](book/01-先决定下一步往哪里走.md#care-family-budget)
+- [在海外工作几年，要不要回国？](book/07-从新人到能独立负责.md#overseas-work-return)
+- [租房的钱要怎么算清楚？](book/16-钱与生活基本盘.md#money-rent-and-deposit)
+- [没有单位交社保，我自己怎么缴？](docs/rights/灵活就业与自缴社保.md)
+- [照顾家人的时候，怎么不把自己搭进去？](book/17-身体与心理的可持续性.md#health-caregiver-load)
 
 ### 我不知道自己想做什么
 
@@ -202,6 +208,8 @@
 - [怎么比较两个完全不同的机会？](book/00-从这里开始.md#judge-compare-two-opportunities)
 - [什么东西值得长期积累？](book/00-从这里开始.md#judge-long-term-accumulation)
 - [什么叫未来选择权？](book/00-从这里开始.md#judge-optionality)
+- [信息不够、拿不定主意时怎么决定？](book/00-从这里开始.md#decide-under-uncertainty)
+- [怎么判断该坚持还是该止损？](book/00-从这里开始.md#decide-when-to-stop)
 
 ## 一份手册，五种入口
 

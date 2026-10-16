@@ -562,3 +562,123 @@ stages: [undergraduate, new_grad]
 
 总分够不等于达标，小分差 0.5 被拒很常见。补救顺序：先看项目能不能接受 → 再考虑二刷（至少留 2 个月）→ 换其他证明。成绩复议不能提高真实水平，有时限，别把申请压在复核上。
 见 [雅思还是托福：按目标项目倒推](../book/05-备考与应试.md#lang-test-choice) 与 [小分不达标、成绩复议与二刷](../book/05-备考与应试.md#lang-test-score-issues)。
+
+### 考研拟录取之后还要办哪些手续？
+
+```meta
+id: q-after-admission
+kind: question
+status: complete
+link: kaoyan-after-admission
+summary: 拟录取不等于录取：政审表要盖章、调档函要及时转交、学籍学历要在线核验、录取通知书要核对信息，各有截止时间。
+topics: [study]
+stages: [undergraduate, new_grad, work_1_3]
+```
+
+名字出现在拟录取名单上之后，真正要盯的是材料与时限：政审表盖章寄出、调档函转交档案保管单位、学信网的学籍或学历验证、录取通知书上的专业与学习方式。漏掉任何一项都可能被取消资格。
+见 [拟录取之后到入学要办的事](../book/05-备考与应试.md#kaoyan-after-admission)。
+
+### 考上公务员之后，试用期与服务期要注意什么？
+
+```meta
+id: q-civil-after-onboard
+kind: question
+status: complete
+link: exam-after-onboard
+summary: 公示不等于稳：报到要备齐材料并有时间限制，试用期考核不合格会取消录用，部分岗位还有最低服务年限。
+topics: [job, rights]
+stages: [undergraduate, new_grad, work_1_3]
+```
+
+公示之后还有三关：报到材料（含档案转递与党团关系）、试用期考核、以及部分岗位的最低服务年限。报名时读过、签约时才生效的条款，都是自己要看的那一栏。
+见 [上岸之后的试用期与服务期](../book/05-备考与应试.md#exam-after-onboard)。
+
+### 在海外工作几年，要不要回国？
+
+```meta
+id: q-overseas-return
+kind: question
+status: complete
+link: overseas-work-return
+summary: 把它当成有触发条件的时点决策：家庭、职业、身份三类信号出现就该启动准备，提前两三年处理职业叙事、国内关系与手续。
+topics: [job, explore]
+stages: [work_3_5, senior, career_change]
+```
+
+默认选项是「再待一年」，而每推迟一次，国内的对接成本都会上升。先看三类触发点，再提前准备职业叙事、国内人脉与手续（学历认证、社保接续、税务居民身份、档案），并留出 3–6 个月支出的过渡金。
+见 [海外几年之后怎么决定回不回国](../book/07-从新人到能独立负责.md#overseas-work-return)。
+
+### 没有单位交社保，我自己怎么缴？
+
+```meta
+id: q-flexible-insurance
+kind: question
+status: complete
+link: money-social-insurance
+summary: 以灵活就业身份参保职工养老与医疗，选一个能长期坚持的缴费档次，签好代扣协议；「代缴挂靠」有被核查后不予认可的风险。
+topics: [rights, money]
+stages: [new_grad, work_1_3, career_change]
+```
+
+自由职业、空窗期、二战备考都要自己接上：参保对象与入口、缴费档次怎么选、公积金能不能自愿缴存、断缴会真正影响什么，以及为什么代缴挂靠有风险。
+见 [灵活就业与自缴社保](../docs/rights/灵活就业与自缴社保.md)。
+
+### 怎么判断该坚持还是该止损？
+
+```meta
+id: q-when-to-stop
+kind: question
+status: complete
+link: decide-when-to-stop
+summary: 止损线要在开始前设好（时间、结果、费用、状态四条），每三个月自检一次；连续两个检查点没有可验证进展就该调整。
+topics: [explore]
+stages: [college, undergraduate, new_grad, work_1_3, career_change]
+```
+
+沉没成本不构成继续的理由，要算的是「再投一个周期能换回什么」。止损也有三种：降投入、换路径、完全退出——多数人只想到最后一种，所以迟迟不做决定。
+见 [什么时候该止损](../book/00-从这里开始.md#decide-when-to-stop)。
+
+### 信息不够、拿不定主意时怎么决定？
+
+```meta
+id: q-decide-uncertain
+kind: question
+status: complete
+link: decide-under-uncertainty
+summary: 先分可逆与不可逆：可逆的快速做，不可逆的慢做；缺信息就查一手来源、问做过的人、做两到六周的小实验。
+topics: [explore]
+stages: [college, undergraduate, new_grad, work_1_3, career_change]
+```
+
+拖延本身也是一种选择，而且往往是最差的那种。把决定分成可逆与不可逆两类，再用三个问题过一遍：可逆吗、缺的是信息还是决心、拖下去会不会让选项变少。
+见 [信息不够时怎么决定](../book/00-从这里开始.md#decide-under-uncertainty)。
+
+### 照顾家人的时候，怎么不把自己搭进去？
+
+```meta
+id: q-caregiver-load
+kind: question
+status: complete
+link: health-caregiver-load
+summary: 照护是长期项目：先把阶段与分工写清、把请假与费用提前算出来，再用固定时段与「允许请人帮忙」保住照护者自己。
+topics: [health, care]
+stages: [new_grad, work_1_3, work_3_5, senior]
+```
+
+照护者的耗竭有可观察的信号（反复内疚、放弃运动与社交、自己的检查一拖再拖）。出现两项以上持续两周，就该调整分工，而不是再咬咬牙。
+见 [照顾家人的同时怎么不把自己搭进去](../book/17-身体与心理的可持续性.md#health-caregiver-load)。
+
+### 租房的钱要怎么算清楚？
+
+```meta
+id: q-rent-money
+kind: question
+status: complete
+link: money-rent-and-deposit
+summary: 先算「入住第一个月」的总支出（押金、中介费、搬家、首月租金），再看租金与通勤合起来的真实成本；押金靠入住留证保住。
+topics: [money]
+stages: [new_grad, work_1_3, work_3_5]
+```
+
+第一次租房最容易只盯月租。把集中支出单独准备（不要混进应急金），合同里写清押金退还、涨租与维修责任，并避开「先交定金再看房」与租金贷这类安排。
+见 [租房的钱怎么算清楚](../book/16-钱与生活基本盘.md#money-rent-and-deposit)。
