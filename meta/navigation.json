@@ -6816,6 +6816,14 @@
                 "entry_id": "health-mental-habits"
               },
               "nav_id": "17-02-02"
+            },
+            {
+              "title": "第一次咨询或就诊：从预约到判断有没有用",
+              "target": {
+                "type": "entry",
+                "entry_id": "health-therapy-first-time"
+              },
+              "nav_id": "17-02-03"
             }
           ],
           "nav_id": "17-02"
