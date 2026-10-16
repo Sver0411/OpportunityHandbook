@@ -6843,6 +6843,14 @@
                 "entry_id": "health-checkup-and-insurance"
               },
               "nav_id": "17-03-02"
+            },
+            {
+              "title": "长期用药与定期复查怎么安排",
+              "target": {
+                "type": "entry",
+                "entry_id": "health-chronic-care"
+              },
+              "nav_id": "17-03-03"
             }
           ],
           "nav_id": "17-03"

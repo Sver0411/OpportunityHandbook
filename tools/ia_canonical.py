@@ -802,5 +802,6 @@ TREE = """
   生病与照护自己 @d:book/17-身体与心理的可持续性
     什么时候该去看医生，而不是再扛一周 @e:health-when-to-see-doctor
     体检怎么选、医保怎么用 @e:health-checkup-and-insurance
+    长期用药与定期复查怎么安排 @e:health-chronic-care
 18 内容地图
 """
