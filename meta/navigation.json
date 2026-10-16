@@ -96,6 +96,14 @@
             "entry_id": "start-when-no-direction"
           },
           "nav_id": "00-11"
+        },
+        {
+          "title": "信息不够时怎么决定",
+          "target": {
+            "type": "entry",
+            "entry_id": "decide-under-uncertainty"
+          },
+          "nav_id": "00-12"
         }
       ],
       "nav_id": "00"
