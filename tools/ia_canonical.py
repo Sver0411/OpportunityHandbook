@@ -789,6 +789,8 @@ TREE = """
     大额支出怎么决策 @e:money-big-purchase
   家庭与共同财务
     给家里的钱怎么安排 @e:money-supporting-family
+    借出去的钱与担保：怎么答应、怎么拒绝 @e:money-lending-and-guarantee
+    两个人一起管钱：共同生活的财务安排 @e:money-couple-finance
 17 身体与心理的可持续性
   节奏与身体
     长期高强度怎么不垮 @e:health-sustainable-pace

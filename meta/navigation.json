@@ -6722,6 +6722,22 @@
                 "entry_id": "money-supporting-family"
               },
               "nav_id": "16-04-01"
+            },
+            {
+              "title": "借出去的钱与担保：怎么答应、怎么拒绝",
+              "target": {
+                "type": "entry",
+                "entry_id": "money-lending-and-guarantee"
+              },
+              "nav_id": "16-04-02"
+            },
+            {
+              "title": "两个人一起管钱：共同生活的财务安排",
+              "target": {
+                "type": "entry",
+                "entry_id": "money-couple-finance"
+              },
+              "nav_id": "16-04-03"
             }
           ],
           "target": {
