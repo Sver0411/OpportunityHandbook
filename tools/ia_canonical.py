@@ -25,6 +25,7 @@ TREE = """
   起点不平等怎么算清楚 @e:judge-starting-line
   不知道自己想做什么时怎么办 @e:start-when-no-direction
   信息不够时怎么决定 @e:decide-under-uncertainty
+  什么时候该止损 @e:decide-when-to-stop
 
 01 先决定下一步往哪里走
   认识你面前的几条主要路线

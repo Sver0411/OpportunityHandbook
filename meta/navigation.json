@@ -104,6 +104,14 @@
             "entry_id": "decide-under-uncertainty"
           },
           "nav_id": "00-12"
+        },
+        {
+          "title": "什么时候该止损",
+          "target": {
+            "type": "entry",
+            "entry_id": "decide-when-to-stop"
+          },
+          "nav_id": "00-13"
         }
       ],
       "nav_id": "00"
