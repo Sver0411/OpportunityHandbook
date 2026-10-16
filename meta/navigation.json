@@ -6595,12 +6595,20 @@
           "title": "拿到钱的第一年",
           "children": [
             {
+              "title": "第一份合同的薪资结构怎么读",
+              "target": {
+                "type": "entry",
+                "entry_id": "money-offer-pay-structure"
+              },
+              "nav_id": "16-01-01"
+            },
+            {
               "title": "第一个月的工资怎么分配",
               "target": {
                 "type": "entry",
                 "entry_id": "money-first-salary-split"
               },
-              "nav_id": "16-01-01"
+              "nav_id": "16-01-02"
             },
             {
               "title": "应急金该留多少",
@@ -6608,7 +6616,7 @@
                 "type": "entry",
                 "entry_id": "money-emergency-fund"
               },
-              "nav_id": "16-01-02"
+              "nav_id": "16-01-03"
             },
             {
               "title": "钱不知道去哪了怎么办",
@@ -6616,7 +6624,7 @@
                 "type": "entry",
                 "entry_id": "money-spending-audit"
               },
-              "nav_id": "16-01-03"
+              "nav_id": "16-01-04"
             }
           ],
           "target": {

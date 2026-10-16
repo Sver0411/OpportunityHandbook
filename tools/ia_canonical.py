@@ -774,6 +774,7 @@ TREE = """
   付费法律咨询与「包追回」 @e:trap-paid-legal-service
 16 钱与生活基本盘
   拿到钱的第一年
+    第一份合同的薪资结构怎么读 @e:money-offer-pay-structure
     第一个月的工资怎么分配 @e:money-first-salary-split
     应急金该留多少 @e:money-emergency-fund
     钱不知道去哪了怎么办 @e:money-spending-audit
