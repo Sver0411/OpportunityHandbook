@@ -625,6 +625,7 @@ TREE = """
     劳动合同要看哪些条款 @d:docs/rights/劳动合同要看哪些条款
     被欠薪与劳动仲裁 @d:docs/rights/被欠薪与劳动仲裁
     遇到纠纷找谁：求助顺序 @d:docs/rights/遇到纠纷找谁
+    工伤与职业伤害怎么处理 @d:docs/rights/工伤与职业伤害
   参考与来源 @d:book/10-专题手册#参考与来源
     术语表 @d:docs/manuals/术语表
     常用官方来源清单 @d:docs/sources/常用官方来源清单
