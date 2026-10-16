@@ -1994,6 +1994,14 @@
                 "entry_id": "zsb-apply-process"
               },
               "nav_id": "05-04-02"
+            },
+            {
+              "title": "上岸之后两年怎么用",
+              "target": {
+                "type": "entry",
+                "entry_id": "zsb-after-admission"
+              },
+              "nav_id": "05-04-03"
             }
           ],
           "nav_id": "05-04"

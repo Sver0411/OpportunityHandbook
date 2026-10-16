@@ -253,6 +253,7 @@ TREE = """
   专升本怎么准备 @d:book/05-备考与应试
     统招专升本与成人教育怎么选 @e:zsb-path-choice
     专升本报名到录取的完整流程 @e:zsb-apply-process
+    上岸之后两年怎么用 @e:zsb-after-admission
   考研择校与信息透明度 @d:book/05-备考与应试
     怎么判断压分与信息透明度 @e:kaoyan-school-picking
     考研怎么定目标校：择校的操作步骤 @e:kaoyan-choose-school-steps
