@@ -5258,6 +5258,15 @@
                 "anchor": ""
               },
               "nav_id": "10-16-05"
+            },
+            {
+              "title": "竞业限制与保密协议",
+              "target": {
+                "type": "doc",
+                "location": "docs/rights/竞业限制与保密协议",
+                "anchor": ""
+              },
+              "nav_id": "10-16-06"
             }
           ],
           "nav_id": "10-16"
