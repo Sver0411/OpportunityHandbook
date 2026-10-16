@@ -6625,6 +6625,14 @@
                 "entry_id": "money-spending-audit"
               },
               "nav_id": "16-01-04"
+            },
+            {
+              "title": "租房的钱怎么算清楚",
+              "target": {
+                "type": "entry",
+                "entry_id": "money-rent-and-deposit"
+              },
+              "nav_id": "16-01-05"
             }
           ],
           "target": {
