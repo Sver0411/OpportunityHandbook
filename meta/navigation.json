@@ -2126,6 +2126,14 @@
                 "entry_id": "kaoyan-retake-decision"
               },
               "nav_id": "05-08-02"
+            },
+            {
+              "title": "二战这一年怎么安排",
+              "target": {
+                "type": "entry",
+                "entry_id": "kaoyan-retake-year"
+              },
+              "nav_id": "05-08-03"
             }
           ],
           "nav_id": "05-08"

@@ -268,6 +268,7 @@ TREE = """
   考研调剂与二战 @d:book/05-备考与应试
     调剂系统怎么操作：从开放到确认 @e:kaoyan-adjustment-system
     二战该不该打：复盘、止损与三条替代方案 @e:kaoyan-retake-decision
+    二战这一年怎么安排 @e:kaoyan-retake-year
   考公与考编怎么准备 @d:book/05-备考与应试
     岗位表怎么读 @e:exam-job-table
     从报名到上岸的完整流程 @e:exam-apply-to-onboard
