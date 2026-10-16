@@ -382,6 +382,7 @@ TREE = """
   海外工作 @d:book/07-从新人到能独立负责
     海外工作第一年要处理什么 @e:overseas-work-first-year
     海外工作的合同、签证与税务 @e:overseas-work-contract
+    海外几年之后怎么决定回不回国 @e:overseas-work-return
   第一次重新选择
     什么时候适合第一次跳槽 @e:career-job-hopping
     什么情况下应该留下 @n:work-when-to-stay
