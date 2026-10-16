@@ -787,6 +787,8 @@ TREE = """
     该买与不该买的保险 @e:money-insurance-basics
     负债与征信：先还哪一笔 @e:money-debt-and-credit
     大额支出怎么决策 @e:money-big-purchase
+  家庭与共同财务
+    给家里的钱怎么安排 @e:money-supporting-family
 17 身体与心理的可持续性
   节奏与身体
     长期高强度怎么不垮 @e:health-sustainable-pace

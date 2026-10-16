@@ -6711,6 +6711,25 @@
             "anchor": "保险与风险"
           },
           "nav_id": "16-03"
+        },
+        {
+          "title": "家庭与共同财务",
+          "children": [
+            {
+              "title": "给家里的钱怎么安排",
+              "target": {
+                "type": "entry",
+                "entry_id": "money-supporting-family"
+              },
+              "nav_id": "16-04-01"
+            }
+          ],
+          "target": {
+            "type": "doc",
+            "location": "book/16-钱与生活基本盘",
+            "anchor": "家庭与共同财务"
+          },
+          "nav_id": "16-04"
         }
       ],
       "nav_id": "16"

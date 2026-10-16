@@ -121,7 +121,8 @@ GROUP_TASKS = {
            "求职": "applications", "职业成长": "ownership", "人脉与社群": "network",
            "证书与语言考试": "certificates", "创业与自由职业": "customers",
            "权益与制度": "rights", "参考与来源": "references"},
-    "16": {"拿到钱的第一年": "money", "社保、公积金与税": "insurance", "保险与风险": "insurance"},
+    "16": {"拿到钱的第一年": "money", "社保、公积金与税": "insurance", "保险与风险": "insurance",
+           "家庭与共同财务": "care"},
     "17": "wellbeing",
     "18": "content-map",
 }
