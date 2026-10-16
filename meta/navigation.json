@@ -6851,6 +6851,14 @@
                 "entry_id": "health-chronic-care"
               },
               "nav_id": "17-03-03"
+            },
+            {
+              "title": "看病的时间与钱怎么安排",
+              "target": {
+                "type": "entry",
+                "entry_id": "health-care-process"
+              },
+              "nav_id": "17-03-04"
             }
           ],
           "nav_id": "17-03"
