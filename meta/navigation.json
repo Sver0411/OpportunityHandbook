@@ -112,6 +112,14 @@
             "entry_id": "decide-when-to-stop"
           },
           "nav_id": "00-13"
+        },
+        {
+          "title": "半年一次的复盘怎么做",
+          "target": {
+            "type": "entry",
+            "entry_id": "decide-periodic-review"
+          },
+          "nav_id": "00-14"
         }
       ],
       "nav_id": "00"
