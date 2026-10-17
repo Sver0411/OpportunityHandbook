@@ -5491,6 +5491,15 @@
                 "anchor": ""
               },
               "nav_id": "10-15-26"
+            },
+            {
+              "title": "人力资源（HR）",
+              "target": {
+                "type": "doc",
+                "location": "docs/career-guides/人力资源",
+                "anchor": ""
+              },
+              "nav_id": "10-15-27"
             }
           ],
           "nav_id": "10-15"
