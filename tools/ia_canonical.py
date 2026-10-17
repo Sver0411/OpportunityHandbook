@@ -781,6 +781,7 @@ TREE = """
     Playbook：本科毕业论文与毕业设计 @d:docs/playbooks/本科毕业论文与毕业设计
     Playbook：毕业去向与离校手续总清单 @d:docs/playbooks/毕业去向与离校手续总清单
     Playbook：大学生兼职与校园诈骗风险 @d:docs/playbooks/兼职与校园诈骗风险
+    Playbook：学籍异常与学校事务申诉 @d:docs/playbooks/学籍异常与学校事务申诉
   项目与开源 @d:book/14-操作手册#项目与开源
     Playbook：第一次做项目 @d:docs/playbooks/第一次做项目
     Playbook：把一项新技术学到「能用」 @d:docs/playbooks/第一次学新技术

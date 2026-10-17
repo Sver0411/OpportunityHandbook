@@ -173,6 +173,7 @@ RESOURCE_TASKS = {
     "Playbook：本科毕业论文与毕业设计": "publishing",
     "Playbook：毕业去向与离校手续总清单": "offers",
     "Playbook：大学生兼职与校园诈骗风险": "rights",
+    "Playbook：学籍异常与学校事务申诉": "academic",
     "Playbook：第一次判断一个证书值不值得考": "certificates",
     "Playbook：第一次申请奖学金或研究资助": "funding", "Playbook：第一次接单": "delivery",
     "Playbook：第一次核对合同与社保": "rights", "Playbook：第一次处理劳动争议": "rights",

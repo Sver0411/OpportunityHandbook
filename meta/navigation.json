@@ -6639,6 +6639,15 @@
                 "anchor": ""
               },
               "nav_id": "14-01-04"
+            },
+            {
+              "title": "Playbook：学籍异常与学校事务申诉",
+              "target": {
+                "type": "doc",
+                "location": "docs/playbooks/学籍异常与学校事务申诉",
+                "anchor": ""
+              },
+              "nav_id": "14-01-05"
             }
           ],
           "nav_id": "14-01"
