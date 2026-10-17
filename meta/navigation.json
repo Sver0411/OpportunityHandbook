@@ -6380,6 +6380,15 @@
                 "anchor": ""
               },
               "nav_id": "12-08-04"
+            },
+            {
+              "title": "学籍问题记录表",
+              "target": {
+                "type": "doc",
+                "location": "docs/tools/学籍问题记录表",
+                "anchor": ""
+              },
+              "nav_id": "12-08-05"
             }
           ],
           "nav_id": "12-08"
