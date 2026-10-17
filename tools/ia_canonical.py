@@ -138,7 +138,7 @@ TREE = """
     第一个个人项目怎么开始 @e:project-personal
     团队项目 @e:project-team
     作品集 @e:project-portfolio
-    Demo @n:project-demo
+    Demo 要做到什么程度 @n:project-demo
     数据、测试和指标 @n:project-data-test-metrics
     真实用户与反馈 @n:project-users-feedback
   竞赛
@@ -161,11 +161,11 @@ TREE = """
   开源与公共贡献
     什么是开源贡献 @n:opensource-what-is
     第一次贡献怎么开始 @e:opensource-first-contribution
-    Issue @e:project-issue-pr
-    PR @n:opensource-pr
-    Documentation @n:project-documentation
-    Review @n:project-code-review
-    Maintainer @e:project-maintainer
+    Issue：一个问题从提出到关闭 @e:project-issue-pr
+    PR：一次可以被验证的贡献 @n:opensource-pr
+    文档要写到什么程度 @n:project-documentation
+    代码评审：怎么提意见、怎么被评 @n:project-code-review
+    维护者：接手一个项目之后 @e:project-maintainer
   社群与活动
     社团有没有价值 @n:community-club-value
     专业协会 @n:community-professional-association
@@ -361,7 +361,7 @@ TREE = """
     怎么和直属领导合作 @n:work-with-manager
     怎么找职场 Mentor @e:find-workplace-mentor
   从执行到独立负责
-    Ownership @n:work-ownership
+    Ownership：从「做完」到「负责到底」 @n:work-ownership
     怎么承担更大的项目 @n:work-bigger-projects
     怎么证明自己的成果 @n:work-prove-results
     怎么积累业务影响 @n:work-business-impact
@@ -381,7 +381,7 @@ TREE = """
   建立行业关系
     Networking @e:community-networking
     专业社群 @n:community-professional-group
-    Mentor @n:work-mentor-role
+    Mentor：怎么找到、怎么用好 @n:work-mentor-role
     Organizer @n:community-organizer
     Speaker @n:community-speaker
     Reviewer @n:community-reviewer
@@ -414,8 +414,8 @@ TREE = """
     资深阶段的收入结构怎么安排 @e:career-income-mix
   管理路线
     第一次带人 @n:mgmt-first-team
-    Team Lead @n:mgmt-team-lead
-    Manager @e:career-management-track
+    Team Lead：第一次带一个小组 @n:mgmt-team-lead
+    Manager：管理岗到底换走了什么 @e:career-management-track
     招聘 @n:mgmt-hiring
     绩效 @n:mgmt-performance
     技术还是管理 @n:mgmt-ic-or-manager

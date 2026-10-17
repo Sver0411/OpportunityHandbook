@@ -1033,7 +1033,7 @@
               "nav_id": "03-01-05"
             },
             {
-              "title": "Demo",
+              "title": "Demo 要做到什么程度",
               "target": {
                 "type": "entry",
                 "entry_id": "project-demo"
@@ -1226,7 +1226,7 @@
               "nav_id": "03-04-02"
             },
             {
-              "title": "Issue",
+              "title": "Issue：一个问题从提出到关闭",
               "target": {
                 "type": "entry",
                 "entry_id": "project-issue-pr"
@@ -1234,7 +1234,7 @@
               "nav_id": "03-04-03"
             },
             {
-              "title": "PR",
+              "title": "PR：一次可以被验证的贡献",
               "target": {
                 "type": "entry",
                 "entry_id": "opensource-pr"
@@ -1242,7 +1242,7 @@
               "nav_id": "03-04-04"
             },
             {
-              "title": "Documentation",
+              "title": "文档要写到什么程度",
               "target": {
                 "type": "entry",
                 "entry_id": "project-documentation"
@@ -1250,7 +1250,7 @@
               "nav_id": "03-04-05"
             },
             {
-              "title": "Review",
+              "title": "代码评审：怎么提意见、怎么被评",
               "target": {
                 "type": "entry",
                 "entry_id": "project-code-review"
@@ -1258,7 +1258,7 @@
               "nav_id": "03-04-06"
             },
             {
-              "title": "Maintainer",
+              "title": "维护者：接手一个项目之后",
               "target": {
                 "type": "entry",
                 "entry_id": "project-maintainer"
@@ -2908,7 +2908,7 @@
           "title": "从执行到独立负责",
           "children": [
             {
-              "title": "Ownership",
+              "title": "Ownership：从「做完」到「负责到底」",
               "target": {
                 "type": "entry",
                 "entry_id": "work-ownership"
@@ -3074,7 +3074,7 @@
               "nav_id": "07-04-02"
             },
             {
-              "title": "Mentor",
+              "title": "Mentor：怎么找到、怎么用好",
               "target": {
                 "type": "entry",
                 "entry_id": "work-mentor-role"
@@ -3351,7 +3351,7 @@
               "nav_id": "08-04-01"
             },
             {
-              "title": "Team Lead",
+              "title": "Team Lead：第一次带一个小组",
               "target": {
                 "type": "entry",
                 "entry_id": "mgmt-team-lead"
@@ -3359,7 +3359,7 @@
               "nav_id": "08-04-02"
             },
             {
-              "title": "Manager",
+              "title": "Manager：管理岗到底换走了什么",
               "target": {
                 "type": "entry",
                 "entry_id": "career-management-track"
