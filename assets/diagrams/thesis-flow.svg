@@ -1,0 +1,59 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 546" width="760" height="546" font-family="PingFang SC, Noto Sans CJK SC, Source Han Sans SC, Microsoft YaHei, sans-serif">
+<defs><marker id="a" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M2 1L8 5L2 9" fill="none" stroke="#9c9c9c" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></marker></defs>
+<title>本科毕业论文流程</title>
+<text x="40" y="52" font-size="13" fill="#8a8a8a" font-weight="400" text-anchor="start">场景 3 · 毕业论文</text>
+<text x="40" y="92" font-size="27" fill="#1f1f1f" font-weight="500" text-anchor="start">从选题到归档的八个环节</text>
+<text x="40" y="122" font-size="15" fill="#5f5f5f" font-weight="400" text-anchor="start">每个环节都有一次「过或不过」的判断，不是走完就算。</text>
+<rect x="40" y="160" width="140" height="62" rx="8" fill="#ffffff" stroke="#2f5d8a" stroke-width="0.9"/>
+<circle cx="60" cy="191" r="12" fill="#2f5d8a"/>
+<text x="60" y="195" font-size="13" fill="#ffffff" font-weight="500" text-anchor="middle">1</text>
+<text x="80" y="196" font-size="16" fill="#1f1f1f" font-weight="500" text-anchor="start">选题</text>
+<path d="M182 191 L208 191" fill="none" stroke="#9c9c9c" stroke-width="1.4" marker-end="url(#a)"/>
+<rect x="212" y="160" width="140" height="62" rx="8" fill="#ffffff" stroke="#2f5d8a" stroke-width="0.9"/>
+<circle cx="232" cy="191" r="12" fill="#2f5d8a"/>
+<text x="232" y="195" font-size="13" fill="#ffffff" font-weight="500" text-anchor="middle">2</text>
+<text x="252" y="196" font-size="16" fill="#1f1f1f" font-weight="500" text-anchor="start">开题</text>
+<path d="M354 191 L380 191" fill="none" stroke="#9c9c9c" stroke-width="1.4" marker-end="url(#a)"/>
+<rect x="384" y="160" width="140" height="62" rx="8" fill="#ffffff" stroke="#2f5d8a" stroke-width="0.9"/>
+<circle cx="404" cy="191" r="12" fill="#2f5d8a"/>
+<text x="404" y="195" font-size="13" fill="#ffffff" font-weight="500" text-anchor="middle">3</text>
+<text x="424" y="196" font-size="16" fill="#1f1f1f" font-weight="500" text-anchor="start">中期检查</text>
+<path d="M526 191 L552 191" fill="none" stroke="#9c9c9c" stroke-width="1.4" marker-end="url(#a)"/>
+<rect x="556" y="160" width="140" height="62" rx="8" fill="#ffffff" stroke="#2f5d8a" stroke-width="0.9"/>
+<circle cx="576" cy="191" r="12" fill="#2f5d8a"/>
+<text x="576" y="195" font-size="13" fill="#ffffff" font-weight="500" text-anchor="middle">4</text>
+<text x="596" y="196" font-size="16" fill="#1f1f1f" font-weight="500" text-anchor="start">初稿</text>
+<rect x="40" y="300" width="140" height="62" rx="8" fill="#ffffff" stroke="#2f5d8a" stroke-width="0.9"/>
+<circle cx="60" cy="331" r="12" fill="#2f5d8a"/>
+<text x="60" y="335" font-size="13" fill="#ffffff" font-weight="500" text-anchor="middle">5</text>
+<text x="80" y="336" font-size="16" fill="#1f1f1f" font-weight="500" text-anchor="start">查重</text>
+<path d="M182 331 L208 331" fill="none" stroke="#9c9c9c" stroke-width="1.4" marker-end="url(#a)"/>
+<rect x="212" y="300" width="140" height="62" rx="8" fill="#ffffff" stroke="#2f5d8a" stroke-width="0.9"/>
+<circle cx="232" cy="331" r="12" fill="#2f5d8a"/>
+<text x="232" y="335" font-size="13" fill="#ffffff" font-weight="500" text-anchor="middle">6</text>
+<text x="252" y="336" font-size="16" fill="#1f1f1f" font-weight="500" text-anchor="start">送审</text>
+<path d="M354 331 L380 331" fill="none" stroke="#9c9c9c" stroke-width="1.4" marker-end="url(#a)"/>
+<rect x="384" y="300" width="140" height="62" rx="8" fill="#ffffff" stroke="#2f5d8a" stroke-width="0.9"/>
+<circle cx="404" cy="331" r="12" fill="#2f5d8a"/>
+<text x="404" y="335" font-size="13" fill="#ffffff" font-weight="500" text-anchor="middle">7</text>
+<text x="424" y="336" font-size="16" fill="#1f1f1f" font-weight="500" text-anchor="start">答辩</text>
+<path d="M526 331 L552 331" fill="none" stroke="#9c9c9c" stroke-width="1.4" marker-end="url(#a)"/>
+<rect x="556" y="300" width="140" height="62" rx="8" fill="#ffffff" stroke="#2f5d8a" stroke-width="0.9"/>
+<circle cx="576" cy="331" r="12" fill="#2f5d8a"/>
+<text x="576" y="335" font-size="13" fill="#ffffff" font-weight="500" text-anchor="middle">8</text>
+<text x="596" y="336" font-size="16" fill="#1f1f1f" font-weight="500" text-anchor="start">终稿归档</text>
+<path d="M626 222 L626 266 Q626 272 620 272 L116 272 Q110 272 110 278 L110 296" fill="none" stroke="#9c9c9c" stroke-width="1.4" marker-end="url(#a)"/>
+<text x="212" y="244" font-size="12" fill="#a33b36" font-weight="400" text-anchor="start">开题不过要重来</text>
+<text x="212" y="262" font-size="12" fill="#a33b36" font-weight="400" text-anchor="start">换题成本最高</text>
+<text x="40" y="384" font-size="12" fill="#a33b36" font-weight="400" text-anchor="start">查重率上限</text>
+<text x="40" y="402" font-size="12" fill="#a33b36" font-weight="400" text-anchor="start">以学校规定为准</text>
+<text x="212" y="384" font-size="12" fill="#a33b36" font-weight="400" text-anchor="start">外审不通过</text>
+<text x="212" y="402" font-size="12" fill="#a33b36" font-weight="400" text-anchor="start">可能延期半年</text>
+<text x="556" y="384" font-size="12" fill="#a33b36" font-weight="400" text-anchor="start">归档晚了</text>
+<text x="556" y="402" font-size="12" fill="#a33b36" font-weight="400" text-anchor="start">影响离校手续</text>
+<rect x="40" y="428" width="680" height="52" rx="8" fill="#fbf3e4" stroke="#9a6a20" stroke-width="0.8"/>
+<text x="56" y="451" font-size="13.5" fill="#9a6a20" font-weight="400" text-anchor="start">本图只排顺序，不写日期：开题、中期、送审、答辩的时间点由学院当年通知决定。</text>
+<text x="56" y="471" font-size="13.5" fill="#9a6a20" font-weight="400" text-anchor="start">提前问清三件事：查重系统是哪个、送审是校内还是校外、答辩后多久交终稿。</text>
+<line x1="40" y1="496" x2="720" y2="496" stroke="#d9d6cf" stroke-width="1"/>
+<text x="40" y="524" font-size="13" fill="#8a8a8a" font-weight="400" text-anchor="start">卡点集中在开题与送审：这两步不过，后面所有安排都要顺延。</text>
+</svg>

@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 490" width="760" height="490" font-family="PingFang SC, Noto Sans CJK SC, Source Han Sans SC, Microsoft YaHei, sans-serif">
+<defs><marker id="a" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M2 1L8 5L2 9" fill="none" stroke="#9c9c9c" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></marker></defs>
+<title>从筛岗到入职</title>
+<text x="40" y="52" font-size="13" fill="#8a8a8a" font-weight="400" text-anchor="start">场景 10 · 求职</text>
+<text x="40" y="92" font-size="27" fill="#1f1f1f" font-weight="500" text-anchor="start">六个环节，两个容易翻车的地方</text>
+<text x="40" y="122" font-size="15" fill="#5f5f5f" font-weight="400" text-anchor="start">筛岗决定上限，签约决定下限。</text>
+<rect x="40" y="158" width="200" height="70" rx="9" fill="#ffffff" stroke="#2f5d8a" stroke-width="0.9"/>
+<text x="56" y="188" font-size="16" fill="#1f1f1f" font-weight="500" text-anchor="start">筛岗位</text>
+<text x="56" y="212" font-size="12.5" fill="#5f5f5f" font-weight="400" text-anchor="start">职责、门槛、地点</text>
+<path d="M242 193 L268 193" fill="none" stroke="#9c9c9c" stroke-width="1.4" marker-end="url(#a)"/>
+<rect x="272" y="158" width="200" height="70" rx="9" fill="#ffffff" stroke="#2f5d8a" stroke-width="0.9"/>
+<text x="288" y="188" font-size="16" fill="#1f1f1f" font-weight="500" text-anchor="start">投递</text>
+<text x="288" y="212" font-size="12.5" fill="#5f5f5f" font-weight="400" text-anchor="start">一岗一版，留记录</text>
+<path d="M474 193 L500 193" fill="none" stroke="#9c9c9c" stroke-width="1.4" marker-end="url(#a)"/>
+<rect x="504" y="158" width="200" height="70" rx="9" fill="#ffffff" stroke="#2f5d8a" stroke-width="0.9"/>
+<text x="520" y="188" font-size="16" fill="#1f1f1f" font-weight="500" text-anchor="start">笔试面试</text>
+<text x="520" y="212" font-size="12.5" fill="#5f5f5f" font-weight="400" text-anchor="start">问清团队与考核</text>
+<path d="M604 230 L604 270" fill="none" stroke="#9c9c9c" stroke-width="1.4" marker-end="url(#a)"/>
+<rect x="40" y="276" width="200" height="70" rx="9" fill="#ffffff" stroke="#2f5d8a" stroke-width="0.9"/>
+<text x="56" y="306" font-size="16" fill="#1f1f1f" font-weight="500" text-anchor="start">Offer 比较</text>
+<text x="56" y="330" font-size="12.5" fill="#5f5f5f" font-weight="400" text-anchor="start">不只比月薪</text>
+<path d="M242 311 L268 311" fill="none" stroke="#9c9c9c" stroke-width="1.4" marker-end="url(#a)"/>
+<rect x="272" y="276" width="200" height="70" rx="9" fill="#ffffff" stroke="#2f5d8a" stroke-width="0.9"/>
+<text x="288" y="306" font-size="16" fill="#1f1f1f" font-weight="500" text-anchor="start">签约</text>
+<text x="288" y="330" font-size="12.5" fill="#5f5f5f" font-weight="400" text-anchor="start">试用期、违约、地点</text>
+<path d="M474 311 L500 311" fill="none" stroke="#9c9c9c" stroke-width="1.4" marker-end="url(#a)"/>
+<rect x="504" y="276" width="200" height="70" rx="9" fill="#ffffff" stroke="#2f5d8a" stroke-width="0.9"/>
+<text x="520" y="306" font-size="16" fill="#1f1f1f" font-weight="500" text-anchor="start">入职材料</text>
+<text x="520" y="330" font-size="12.5" fill="#5f5f5f" font-weight="400" text-anchor="start">证件、体检、档案</text>
+<rect x="40" y="396" width="332" height="44" rx="8" fill="#fbf3e4" stroke="#9a6a20" stroke-width="0.8"/>
+<text x="56" y="423" font-size="12.5" fill="#9a6a20" font-weight="400" text-anchor="start">比较项：内容、薪酬结构、地点、成长、合同</text>
+<rect x="388" y="396" width="332" height="44" rx="8" fill="#fbeceb" stroke="#a33b36" stroke-width="0.8"/>
+<text x="404" y="423" font-size="12.5" fill="#a33b36" font-weight="400" text-anchor="start">签约前确认：试用期、违约金、工作地点</text>
+<line x1="40" y1="452" x2="720" y2="452" stroke="#d9d6cf" stroke-width="1"/>
+<text x="40" y="480" font-size="13" fill="#8a8a8a" font-weight="400" text-anchor="start">薪酬结构要拆开看：固定、绩效、补贴、年终奖的算法完全不同。</text>
+</svg>

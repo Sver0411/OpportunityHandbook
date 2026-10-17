@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 570" width="760" height="570" font-family="PingFang SC, Noto Sans CJK SC, Source Han Sans SC, Microsoft YaHei, sans-serif">
+<defs><marker id="a" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M2 1L8 5L2 9" fill="none" stroke="#9c9c9c" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></marker></defs>
+<title>毕业去向与档案户口</title>
+<text x="40" y="52" font-size="13" fill="#8a8a8a" font-weight="400" text-anchor="start">场景 6 · 毕业离校</text>
+<text x="40" y="92" font-size="27" fill="#1f1f1f" font-weight="500" text-anchor="start">先定去向，再定档案和户口</text>
+<text x="40" y="122" font-size="15" fill="#5f5f5f" font-weight="400" text-anchor="start">去向不同，档案、户口、报到手续的走法完全不同。</text>
+<rect x="40" y="150" width="680" height="44" rx="8" fill="#f6f5f1" stroke="#d9d6cf" stroke-width="0.8"/>
+<text x="56" y="178" font-size="15" fill="#1f1f1f" font-weight="500" text-anchor="start">毕业前 6 个月：你的下一站定了吗？</text>
+<rect x="40" y="214" width="128" height="176" rx="9" fill="#eef3f8" stroke="#2f5d8a" stroke-width="0.9"/>
+<text x="104" y="242" font-size="14.5" fill="#2f5d8a" font-weight="500" text-anchor="middle">已签约就业</text>
+<text x="52" y="272" font-size="12" fill="#5f5f5f" font-weight="400" text-anchor="start">三方或劳动合同</text>
+<text x="52" y="306" font-size="12" fill="#5f5f5f" font-weight="400" text-anchor="start">档案转单位或人才</text>
+<text x="52" y="340" font-size="12" fill="#5f5f5f" font-weight="400" text-anchor="start">户口看城市政策</text>
+<rect x="178" y="214" width="128" height="176" rx="9" fill="#edf4ee" stroke="#3d6b45" stroke-width="0.9"/>
+<text x="242" y="242" font-size="14.5" fill="#3d6b45" font-weight="500" text-anchor="middle">国内升学</text>
+<text x="190" y="272" font-size="12" fill="#5f5f5f" font-weight="400" text-anchor="start">录取通知书调档函</text>
+<text x="190" y="306" font-size="12" fill="#5f5f5f" font-weight="400" text-anchor="start">档案转录取学校</text>
+<text x="190" y="340" font-size="12" fill="#5f5f5f" font-weight="400" text-anchor="start">户口可迁可留</text>
+<rect x="316" y="214" width="128" height="176" rx="9" fill="#edf4ee" stroke="#3d6b45" stroke-width="0.9"/>
+<text x="380" y="242" font-size="14.5" fill="#3d6b45" font-weight="500" text-anchor="middle">出国（境）</text>
+<text x="328" y="272" font-size="12" fill="#5f5f5f" font-weight="400" text-anchor="start">录取与签证材料</text>
+<text x="328" y="306" font-size="12" fill="#5f5f5f" font-weight="400" text-anchor="start">档案回原籍或留校</text>
+<text x="328" y="340" font-size="12" fill="#5f5f5f" font-weight="400" text-anchor="start">户口按当地政策</text>
+<rect x="454" y="214" width="128" height="176" rx="9" fill="#fbf3e4" stroke="#9a6a20" stroke-width="0.9"/>
+<text x="518" y="242" font-size="14.5" fill="#9a6a20" font-weight="500" text-anchor="middle">考公考编</text>
+<text x="466" y="272" font-size="12" fill="#5f5f5f" font-weight="400" text-anchor="start">政审与档案核查</text>
+<text x="466" y="306" font-size="12" fill="#5f5f5f" font-weight="400" text-anchor="start">按录用通知报到</text>
+<text x="466" y="340" font-size="12" fill="#5f5f5f" font-weight="400" text-anchor="start">注意服务期约定</text>
+<rect x="592" y="214" width="128" height="176" rx="9" fill="#fbeceb" stroke="#a33b36" stroke-width="0.9"/>
+<text x="656" y="242" font-size="14.5" fill="#a33b36" font-weight="500" text-anchor="middle">还没定</text>
+<text x="604" y="272" font-size="12" fill="#5f5f5f" font-weight="400" text-anchor="start">先确认档案去哪</text>
+<text x="604" y="306" font-size="12" fill="#5f5f5f" font-weight="400" text-anchor="start">问清应届生期限</text>
+<text x="604" y="340" font-size="12" fill="#5f5f5f" font-weight="400" text-anchor="start">档案别自己拿着</text>
+<line x1="380" y1="194" x2="380" y2="214" stroke="#d9d6cf" stroke-width="1"/>
+<rect x="40" y="410" width="680" height="76" rx="8" fill="#ffffff" stroke="#d9d6cf" stroke-width="0.9"/>
+<text x="56" y="434" font-size="13.5" fill="#1f1f1f" font-weight="500" text-anchor="start">离校前必须确认的三件事</text>
+<text x="56" y="456" font-size="13" fill="#5f5f5f" font-weight="400" text-anchor="start">① 档案寄到哪、单号是多少　② 户口迁不迁、迁到哪　③ 毕业证与学位证的领取方式</text>
+<text x="56" y="476" font-size="13" fill="#5f5f5f" font-weight="400" text-anchor="start">三件都办了再离校，比事后补办省事得多。</text>
+<line x1="40" y1="512" x2="720" y2="512" stroke="#d9d6cf" stroke-width="1"/>
+<text x="40" y="540" font-size="13" fill="#8a8a8a" font-weight="400" text-anchor="start">各校就业部门与省市人社部门的流程不同，具体以本校离校通知与当地政策为准。</text>
+</svg>

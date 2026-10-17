@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 490" width="760" height="490" font-family="PingFang SC, Noto Sans CJK SC, Source Han Sans SC, Microsoft YaHei, sans-serif">
+<defs><marker id="a" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M2 1L8 5L2 9" fill="none" stroke="#9c9c9c" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></marker></defs>
+<title>第一次找实习的流程</title>
+<text x="40" y="52" font-size="13" fill="#8a8a8a" font-weight="400" text-anchor="start">场景 4 · 实习</text>
+<text x="40" y="92" font-size="27" fill="#1f1f1f" font-weight="500" text-anchor="start">从找岗位到入职，中间有一道核验</text>
+<text x="40" y="122" font-size="15" fill="#5f5f5f" font-weight="400" text-anchor="start">多数人跳过核验直接投递，问题都出在这道关口。</text>
+<rect x="40" y="160" width="140" height="66" rx="8" fill="#ffffff" stroke="#2f5d8a" stroke-width="0.9"/>
+<text x="54" y="188" font-size="16" fill="#1f1f1f" font-weight="500" text-anchor="start">筛岗位</text>
+<text x="54" y="210" font-size="12.5" fill="#5f5f5f" font-weight="400" text-anchor="start">看职责是否具体</text>
+<path d="M182 193 L208 193" fill="none" stroke="#9c9c9c" stroke-width="1.4" marker-end="url(#a)"/>
+<rect x="212" y="160" width="140" height="66" rx="8" fill="#fbf3e4" stroke="#9a6a20" stroke-width="1.0"/>
+<text x="226" y="188" font-size="16" fill="#1f1f1f" font-weight="500" text-anchor="start">核验</text>
+<text x="226" y="210" font-size="12.5" fill="#5f5f5f" font-weight="400" text-anchor="start">主体·地点·收费</text>
+<path d="M354 193 L380 193" fill="none" stroke="#9c9c9c" stroke-width="1.4" marker-end="url(#a)"/>
+<rect x="384" y="160" width="140" height="66" rx="8" fill="#ffffff" stroke="#2f5d8a" stroke-width="0.9"/>
+<text x="398" y="188" font-size="16" fill="#1f1f1f" font-weight="500" text-anchor="start">投递</text>
+<text x="398" y="210" font-size="12.5" fill="#5f5f5f" font-weight="400" text-anchor="start">一岗一版简历</text>
+<path d="M526 193 L552 193" fill="none" stroke="#9c9c9c" stroke-width="1.4" marker-end="url(#a)"/>
+<rect x="556" y="160" width="140" height="66" rx="8" fill="#ffffff" stroke="#2f5d8a" stroke-width="0.9"/>
+<text x="570" y="188" font-size="16" fill="#1f1f1f" font-weight="500" text-anchor="start">面试</text>
+<text x="570" y="210" font-size="12.5" fill="#5f5f5f" font-weight="400" text-anchor="start">问清带教与内容</text>
+<path d="M626 228 L626 268" fill="none" stroke="#9c9c9c" stroke-width="1.4" marker-end="url(#a)"/>
+<rect x="40" y="270" width="140" height="66" rx="8" fill="#ffffff" stroke="#2f5d8a" stroke-width="0.9"/>
+<text x="54" y="298" font-size="16" fill="#1f1f1f" font-weight="500" text-anchor="start">Offer</text>
+<text x="54" y="320" font-size="12.5" fill="#5f5f5f" font-weight="400" text-anchor="start">确认时间与报酬</text>
+<path d="M182 303 L208 303" fill="none" stroke="#9c9c9c" stroke-width="1.4" marker-end="url(#a)"/>
+<rect x="212" y="270" width="140" height="66" rx="8" fill="#ffffff" stroke="#2f5d8a" stroke-width="0.9"/>
+<text x="226" y="298" font-size="16" fill="#1f1f1f" font-weight="500" text-anchor="start">签协议</text>
+<text x="226" y="320" font-size="12.5" fill="#5f5f5f" font-weight="400" text-anchor="start">看清性质与条款</text>
+<path d="M354 303 L380 303" fill="none" stroke="#9c9c9c" stroke-width="1.4" marker-end="url(#a)"/>
+<rect x="384" y="270" width="140" height="66" rx="8" fill="#ffffff" stroke="#2f5d8a" stroke-width="0.9"/>
+<text x="398" y="298" font-size="16" fill="#1f1f1f" font-weight="500" text-anchor="start">入职</text>
+<text x="398" y="320" font-size="12.5" fill="#5f5f5f" font-weight="400" text-anchor="start">材料与报到</text>
+<path d="M526 303 L552 303" fill="none" stroke="#9c9c9c" stroke-width="1.4" marker-end="url(#a)"/>
+<rect x="424" y="270" width="276" height="62" rx="8" fill="#ffffff" stroke="#9a6a20" stroke-width="0.9" stroke-dasharray="5 4"/>
+<text x="438" y="292" font-size="13.5" fill="#9a6a20" font-weight="500" text-anchor="start">核验三问</text>
+<text x="438" y="313" font-size="12.5" fill="#5f5f5f" font-weight="400" text-anchor="start">主体真实吗 · 职责具体吗 · 要收费吗</text>
+<rect x="40" y="386" width="680" height="34" rx="8" fill="#f6f5f1" stroke="#d9d6cf" stroke-width="0.8"/>
+<text x="56" y="408" font-size="13.5" fill="#5f5f5f" font-weight="400" text-anchor="start">任何环节先收费（押金、培训费、服装费、内推费）都是风险信号，先停下来核实。</text>
+<line x1="40" y1="442" x2="720" y2="442" stroke="#d9d6cf" stroke-width="1"/>
+<text x="40" y="470" font-size="13" fill="#8a8a8a" font-weight="400" text-anchor="start">实习不等于劳动关系；报酬、工时、保险以协议约定与适用法律为准。</text>
+</svg>

@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 574" width="760" height="574" font-family="PingFang SC, Noto Sans CJK SC, Source Han Sans SC, Microsoft YaHei, sans-serif">
+<defs><marker id="a" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M2 1L8 5L2 9" fill="none" stroke="#9c9c9c" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></marker></defs>
+<title>大学四年的四条线</title>
+<text x="40" y="52" font-size="13" fill="#8a8a8a" font-weight="400" text-anchor="start">场景 9 · 四年规划</text>
+<text x="40" y="92" font-size="27" fill="#1f1f1f" font-weight="500" text-anchor="start">四条线并行，但不必都满</text>
+<text x="40" y="122" font-size="15" fill="#5f5f5f" font-weight="400" text-anchor="start">目标是升学就看前两条，目标是就业就看后两条，另一条保持及格。</text>
+<text x="116" y="144" font-size="12" fill="#1f1f1f" font-weight="400" text-anchor="start"></text>
+<text x="256" y="146" font-size="13" fill="#8a8a8a" font-weight="400" text-anchor="middle">大一</text>
+<text x="388" y="146" font-size="13" fill="#8a8a8a" font-weight="400" text-anchor="middle">大二</text>
+<text x="520" y="146" font-size="13" fill="#8a8a8a" font-weight="400" text-anchor="middle">大三</text>
+<text x="652" y="146" font-size="13" fill="#8a8a8a" font-weight="400" text-anchor="middle">大四</text>
+<text x="40" y="194" font-size="14" fill="#1f1f1f" font-weight="500" text-anchor="start">课程与 GPA</text>
+<rect x="196" y="160" width="122" height="68" rx="7" fill="#f6f5f1" stroke="#d9d6cf" stroke-width="0.8"/>
+<text x="207" y="186" font-size="12" fill="#5f5f5f" font-weight="400" text-anchor="start">适应节奏别挂科</text>
+<rect x="328" y="160" width="122" height="68" rx="7" fill="#ffffff" stroke="#d9d6cf" stroke-width="0.8"/>
+<text x="339" y="186" font-size="12" fill="#5f5f5f" font-weight="400" text-anchor="start">稳住绩点补短板</text>
+<rect x="460" y="160" width="122" height="68" rx="7" fill="#f6f5f1" stroke="#d9d6cf" stroke-width="0.8"/>
+<text x="471" y="186" font-size="12" fill="#5f5f5f" font-weight="400" text-anchor="start">核心课与方向课</text>
+<rect x="592" y="160" width="122" height="68" rx="7" fill="#ffffff" stroke="#d9d6cf" stroke-width="0.8"/>
+<text x="603" y="186" font-size="12" fill="#5f5f5f" font-weight="400" text-anchor="start">补学分、清欠课</text>
+<text x="40" y="278" font-size="14" fill="#1f1f1f" font-weight="500" text-anchor="start">科研与竞赛</text>
+<rect x="196" y="244" width="122" height="68" rx="7" fill="#f6f5f1" stroke="#d9d6cf" stroke-width="0.8"/>
+<text x="207" y="270" font-size="12" fill="#5f5f5f" font-weight="400" text-anchor="start">先看，进实验室</text>
+<rect x="328" y="244" width="122" height="68" rx="7" fill="#ffffff" stroke="#d9d6cf" stroke-width="0.8"/>
+<text x="339" y="270" font-size="12" fill="#5f5f5f" font-weight="400" text-anchor="start">跟一个项目做到底</text>
+<rect x="460" y="244" width="122" height="68" rx="7" fill="#f6f5f1" stroke="#d9d6cf" stroke-width="0.8"/>
+<text x="471" y="270" font-size="12" fill="#5f5f5f" font-weight="400" text-anchor="start">出成果或参赛</text>
+<rect x="592" y="244" width="122" height="68" rx="7" fill="#ffffff" stroke="#d9d6cf" stroke-width="0.8"/>
+<text x="603" y="270" font-size="12" fill="#5f5f5f" font-weight="400" text-anchor="start">写进简历与材料</text>
+<text x="40" y="362" font-size="14" fill="#1f1f1f" font-weight="500" text-anchor="start">实习与实践</text>
+<rect x="196" y="328" width="122" height="68" rx="7" fill="#f6f5f1" stroke="#d9d6cf" stroke-width="0.8"/>
+<text x="207" y="354" font-size="12" fill="#5f5f5f" font-weight="400" text-anchor="start">社团志愿校内岗</text>
+<rect x="328" y="328" width="122" height="68" rx="7" fill="#ffffff" stroke="#d9d6cf" stroke-width="0.8"/>
+<text x="339" y="354" font-size="12" fill="#5f5f5f" font-weight="400" text-anchor="start">第一段实习</text>
+<rect x="460" y="328" width="122" height="68" rx="7" fill="#f6f5f1" stroke="#d9d6cf" stroke-width="0.8"/>
+<text x="471" y="354" font-size="12" fill="#5f5f5f" font-weight="400" text-anchor="start">对口实习争转正</text>
+<rect x="592" y="328" width="122" height="68" rx="7" fill="#ffffff" stroke="#d9d6cf" stroke-width="0.8"/>
+<text x="603" y="354" font-size="12" fill="#5f5f5f" font-weight="400" text-anchor="start">毕业实习或补短板</text>
+<text x="40" y="446" font-size="14" fill="#1f1f1f" font-weight="500" text-anchor="start">升学与就业</text>
+<rect x="196" y="412" width="122" height="68" rx="7" fill="#f6f5f1" stroke="#d9d6cf" stroke-width="0.8"/>
+<text x="207" y="438" font-size="12" fill="#5f5f5f" font-weight="400" text-anchor="start">了解出口，别急</text>
+<rect x="328" y="412" width="122" height="68" rx="7" fill="#ffffff" stroke="#d9d6cf" stroke-width="0.8"/>
+<text x="339" y="438" font-size="12" fill="#5f5f5f" font-weight="400" text-anchor="start">试水夏令营招聘会</text>
+<rect x="460" y="412" width="122" height="68" rx="7" fill="#f6f5f1" stroke="#d9d6cf" stroke-width="0.8"/>
+<text x="471" y="438" font-size="12" fill="#5f5f5f" font-weight="400" text-anchor="start">定方向并投递</text>
+<rect x="592" y="412" width="122" height="68" rx="7" fill="#ffffff" stroke="#d9d6cf" stroke-width="0.8"/>
+<text x="603" y="438" font-size="12" fill="#5f5f5f" font-weight="400" text-anchor="start">拿结果、做选择</text>
+<rect x="40" y="486" width="680" height="26" rx="7" fill="#eef3f8" stroke="#2f5d8a" stroke-width="0.8"/>
+<text x="56" y="504" font-size="13" fill="#2f5d8a" font-weight="400" text-anchor="start">每条线只写一件事：同时推进四件事，通常四件都做不完。</text>
+<line x1="40" y1="528" x2="720" y2="528" stroke="#d9d6cf" stroke-width="1"/>
+<text x="40" y="556" font-size="13" fill="#8a8a8a" font-weight="400" text-anchor="start">时间点因专业与学校而异；这张图用来分配精力，不用来当截止日期表。</text>
+</svg>

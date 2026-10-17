@@ -706,3 +706,36 @@ body.nav-collapsed .shell { margin-left: 0; }
 .facet-active { background: rgba(120, 120, 128, 0.04); }
 .facet-chip-active { background: var(--surface-2); border-color: transparent; color: var(--ink); }
 .facet-chip-active:hover { border-color: transparent; background: rgba(120, 120, 128, 0.16); }
+
+/* 图解：与正文同宽，点击可打开原图 */
+.figure { margin: 26px 0 30px; }
+.figure-link { display: block; }
+.figure img {
+  display: block; width: 100%; height: auto;
+  border: 1px solid var(--line); border-radius: var(--radius);
+  background: #fff;
+}
+.figure figcaption {
+  margin-top: 8px; font-size: 12.5px; color: var(--muted); line-height: 1.65;
+}
+.figure figcaption a { color: var(--ink-2); text-decoration: underline; }
+
+/* 下载卡片：一篇文章里最多三四个，靠文字区分用途而不是靠颜色 */
+.res-cards { margin: 24px 0 28px; display: grid; gap: 10px; }
+.res-card {
+  display: flex; gap: 14px; align-items: flex-start;
+  padding: 13px 15px; border: 1px solid var(--line); border-radius: var(--radius);
+  background: #fff; text-decoration: none;
+  transition: border-color var(--dur-fast) ease, background var(--dur-fast) ease;
+}
+.res-card:hover { border-color: var(--line-strong); background: var(--surface-2); }
+.res-fmt {
+  flex: 0 0 auto; min-width: 46px; padding: 3px 0; text-align: center;
+  font-size: 11px; letter-spacing: 0.04em; color: var(--muted);
+  border: 1px solid var(--line); border-radius: 5px;
+}
+.res-body { display: flex; flex-direction: column; gap: 3px; min-width: 0; }
+.res-name { font-size: 14px; color: var(--ink); line-height: 1.45; }
+.res-desc { font-size: 13px; color: var(--ink-2); line-height: 1.6; }
+.res-meta { font-size: 11.5px; color: var(--muted); }
+

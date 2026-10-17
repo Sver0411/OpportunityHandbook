@@ -92,6 +92,7 @@ def assemble(n, docs, index, routes):
         mdrender.begin_document()
         mdrender.set_context(doc.rel, routes)
         mdrender.set_id_prefix(prefix)
+        mdrender.set_asset_prefix("../")
         fragment = B.wrap_sources(mdrender.render(text)[0])
         return fix_anchors(fragment, doc, prefix) if resolve_links else fragment
 
@@ -137,7 +138,8 @@ def assemble(n, docs, index, routes):
             _, fragment = B.render_entry_section(seg, threshold, M.datetime.date.today().isoformat())
             fragment = fragment.replace('class="entry"', 'class="entry reader-chapter-section" data-nav-id="' + html.escape(ref["id"]) + '"', 1)
         else:
-            rendered = B.render_doc(doc, threshold, ref["id"])
+            mdrender.set_asset_prefix("../")
+            rendered = B.render_doc(doc, threshold, ref["id"], "../")
             body = rendered.split('</header>', 1)[1].rsplit('</article>', 1)[0].lstrip()
             original_lead = overview_origins.get(ref["id"])
             if original_lead:

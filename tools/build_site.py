@@ -10,6 +10,7 @@ import argparse
 import html
 import json
 import re
+import shutil
 import sys
 import textwrap
 import urllib.parse
@@ -112,10 +113,11 @@ def render_entry_section(seg: dict, threshold: str, today_iso: str) -> tuple[str
     return eid, html_str
 
 
-def render_doc(doc: M.Doc, threshold: str, id_prefix: str = "") -> str:
+def render_doc(doc: M.Doc, threshold: str, id_prefix: str = "", asset_prefix: str = "") -> str:
     today_iso = M.datetime.date.today().isoformat()
     mdrender.begin_document()            # 每个 HTML 文档的 heading id 从零计数
     mdrender.set_id_prefix(id_prefix)
+    mdrender.set_asset_prefix(asset_prefix)
     body_parts: list[str] = []
     dropped_h1 = False
     for seg in doc.segments:
@@ -223,7 +225,7 @@ def build_permalinks(root: Path, docs: list[M.Doc], index: dict, threshold: str)
     for doc in docs:
         if doc_nav_visible(doc):
             parts = ["doc"] + doc.location.split("/")
-            body = render_doc(doc, threshold)
+            body = render_doc(doc, threshold, asset_prefix="../../")
             write(parts, PAGE_SHELL.format(
                 title=f"{doc.title}｜机会手册",
                 desc=_description(str(doc.front.get("summary") or doc.title)),
@@ -240,6 +242,7 @@ def build_permalinks(root: Path, docs: list[M.Doc], index: dict, threshold: str)
                 continue
             if str(meta_block.get("kind") or "") == "question":
                 continue          # 首页问题条目只是入口，不单独生成页面（避免重复内容）
+            mdrender.set_asset_prefix("../../")
             eid, body = render_entry_section(seg, threshold, today_iso)
             parts = [eid]
             write(parts, PAGE_SHELL.format(
@@ -279,6 +282,25 @@ def build_permalinks(root: Path, docs: list[M.Doc], index: dict, threshold: str)
 
 def doc_nav_visible(doc: M.Doc) -> bool:
     return not M.doc_nav_hidden(doc) and M.doc_user_visible(doc)
+
+
+def copy_static(root: Path) -> int:
+    """把 assets/ 与 downloads/ 复制成站点可访问的静态资源。
+
+    源文件入库（便于审阅与复用），构建产物站点只做一次拷贝；
+    这样 GitHub Pages 拿到的是与 Markdown 同版本的资源。
+    """
+    copied = 0
+    for name in ("assets", "downloads"):
+        src = root / name
+        if not src.is_dir():
+            continue
+        dst = root / "site" / name
+        if dst.exists():
+            shutil.rmtree(dst)
+        shutil.copytree(src, dst)
+        copied += sum(1 for p in dst.rglob("*") if p.is_file())
+    return copied
 
 
 def main() -> int:
@@ -327,9 +349,12 @@ def main() -> int:
         json.dumps(index, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
 
     pages, _, removed = build_permalinks(root, docs, index, threshold)
+    static_files = copy_static(root)
     if not args.quiet:
         extra = f"，清理 {removed} 个陈旧页面" if removed else ""
         print(f"已生成 {pages} 个静态入口页（pages/）+ sitemap.xml + robots.txt{extra}")
+        if static_files:
+            print(f"已复制 {static_files} 个静态资源（assets/ + downloads/）")
 
     if not args.quiet:
         extra = f"，清理 {stale_removed} 个陈旧页面" if stale_removed else ""

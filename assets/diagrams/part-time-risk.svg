@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 546" width="760" height="546" font-family="PingFang SC, Noto Sans CJK SC, Source Han Sans SC, Microsoft YaHei, sans-serif">
+<defs><marker id="a" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M2 1L8 5L2 9" fill="none" stroke="#9c9c9c" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></marker></defs>
+<title>兼职与招聘风险识别</title>
+<text x="40" y="52" font-size="13" fill="#8a8a8a" font-weight="400" text-anchor="start">场景 8 · 防骗</text>
+<text x="40" y="92" font-size="27" fill="#1f1f1f" font-weight="500" text-anchor="start">五种高频套路与对应动作</text>
+<text x="40" y="122" font-size="15" fill="#5f5f5f" font-weight="400" text-anchor="start">共同点：先让你付出（钱、账号、时间），再谈回报。</text>
+<text x="40" y="156" font-size="12.5" fill="#8a8a8a" font-weight="400" text-anchor="start">类型</text>
+<text x="160" y="156" font-size="12.5" fill="#8a8a8a" font-weight="400" text-anchor="start">典型话术 / 信号</text>
+<text x="470" y="156" font-size="12.5" fill="#8a8a8a" font-weight="400" text-anchor="start">立刻做什么</text>
+<line x1="40" y1="166" x2="720" y2="166" stroke="#d9d6cf" stroke-width="1"/>
+<rect x="40" y="178" width="680" height="46" rx="6" fill="#ffffff" stroke="#d9d6cf" stroke-width="0.7"/>
+<text x="52" y="206" font-size="14" fill="#a33b36" font-weight="500" text-anchor="start">异常收费</text>
+<text x="160" y="206" font-size="13" fill="#5f5f5f" font-weight="400" text-anchor="start">押金、服装费、体检费、内推费</text>
+<text x="470" y="206" font-size="13" fill="#1f1f1f" font-weight="400" text-anchor="start">不交；要合同与收费依据</text>
+<rect x="40" y="232" width="680" height="46" rx="6" fill="#f6f5f1" stroke="#d9d6cf" stroke-width="0.7"/>
+<text x="52" y="260" font-size="14" fill="#a33b36" font-weight="500" text-anchor="start">刷单返利</text>
+<text x="160" y="260" font-size="13" fill="#5f5f5f" font-weight="400" text-anchor="start">先小单返现，再诱导大额垫付</text>
+<text x="470" y="260" font-size="13" fill="#1f1f1f" font-weight="400" text-anchor="start">立刻停；保存聊天与转账记录</text>
+<rect x="40" y="286" width="680" height="46" rx="6" fill="#ffffff" stroke="#d9d6cf" stroke-width="0.7"/>
+<text x="52" y="314" font-size="14" fill="#9a6a20" font-weight="500" text-anchor="start">虚假兼职</text>
+<text x="160" y="314" font-size="13" fill="#5f5f5f" font-weight="400" text-anchor="start">高薪、无门槛、只留私人联系方式</text>
+<text x="470" y="314" font-size="13" fill="#1f1f1f" font-weight="400" text-anchor="start">查企业主体；不私下转账</text>
+<rect x="40" y="340" width="680" height="46" rx="6" fill="#f6f5f1" stroke="#d9d6cf" stroke-width="0.7"/>
+<text x="52" y="368" font-size="14" fill="#9a6a20" font-weight="500" text-anchor="start">培训贷</text>
+<text x="160" y="368" font-size="13" fill="#5f5f5f" font-weight="400" text-anchor="start">先培训后上岗，让你签贷款</text>
+<text x="470" y="368" font-size="13" fill="#1f1f1f" font-weight="400" text-anchor="start">不签金融合同；问清退款条款</text>
+<rect x="40" y="394" width="680" height="46" rx="6" fill="#ffffff" stroke="#d9d6cf" stroke-width="0.7"/>
+<text x="52" y="422" font-size="14" fill="#a33b36" font-weight="500" text-anchor="start">出借账户</text>
+<text x="160" y="422" font-size="13" fill="#5f5f5f" font-weight="400" text-anchor="start">借你的卡、微信、收款码走账</text>
+<text x="470" y="422" font-size="13" fill="#1f1f1f" font-weight="400" text-anchor="start">不借；这可能涉刑</text>
+<rect x="40" y="444" width="680" height="44" rx="8" fill="#fbeceb" stroke="#a33b36" stroke-width="0.8"/>
+<text x="56" y="471" font-size="13" fill="#a33b36" font-weight="400" text-anchor="start">已经转出去：先联系银行或支付平台止付，再报警，同时告知辅导员与家长；不要为了面子拖时间。</text>
+<line x1="40" y1="504" x2="720" y2="504" stroke="#d9d6cf" stroke-width="1"/>
+<text x="40" y="532" font-size="13" fill="#8a8a8a" font-weight="400" text-anchor="start">不承诺能追回资金；处理渠道以公安机关与金融机构的实际流程为准。</text>
+</svg>

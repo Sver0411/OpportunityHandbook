@@ -1,0 +1,59 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 570" width="760" height="570" font-family="PingFang SC, Noto Sans CJK SC, Source Han Sans SC, Microsoft YaHei, sans-serif">
+<defs><marker id="a" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M2 1L8 5L2 9" fill="none" stroke="#9c9c9c" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></marker></defs>
+<title>大学新生报到时间线</title>
+<text x="40" y="52" font-size="13" fill="#8a8a8a" font-weight="400" text-anchor="start">场景 1 · 新生入学</text>
+<text x="40" y="92" font-size="27" fill="#1f1f1f" font-weight="500" text-anchor="start">报到前、报到当天与第一个月</text>
+<text x="40" y="122" font-size="15" fill="#5f5f5f" font-weight="400" text-anchor="start">四段时间，各自要做的事不同；先做完左边，再进下一段。</text>
+<rect x="40" y="156" width="164" height="250" rx="10" fill="#f6f5f1" stroke="#d9d6cf" stroke-width="1.2"/>
+<circle cx="62" cy="182" r="12" fill="#2f5d8a"/>
+<text x="62" y="186" font-size="13" fill="#ffffff" font-weight="500" text-anchor="middle">1</text>
+<text x="82" y="187" font-size="16" fill="#1f1f1f" font-weight="500" text-anchor="start">报到前 2 周</text>
+<text x="54" y="220" font-size="14" fill="#5f5f5f" font-weight="400" text-anchor="start">核对通知书与须知</text>
+<text x="54" y="245" font-size="14" fill="#5f5f5f" font-weight="400" text-anchor="start">办助学贷款回执</text>
+<text x="54" y="270" font-size="14" fill="#5f5f5f" font-weight="400" text-anchor="start">户口迁移看个人</text>
+<text x="54" y="295" font-size="14" fill="#5f5f5f" font-weight="400" text-anchor="start">证件照片装文件袋</text>
+<rect x="40" y="334" width="164" height="58" rx="8" fill="#fbf3e4" stroke="#9a6a20" stroke-width="0.8"/>
+<text x="52" y="356" font-size="12.5" fill="#9a6a20" font-weight="400" text-anchor="start">绿色通道与回执</text>
+<text x="52" y="375" font-size="12.5" fill="#9a6a20" font-weight="400" text-anchor="start">报到当天带去</text>
+<path d="M206 184 L218 184" fill="none" stroke="#c9c5bd" stroke-width="1.4" marker-end="url(#a)"/>
+<rect x="220" y="156" width="164" height="250" rx="10" fill="#ffffff" stroke="#d9d6cf" stroke-width="1.2"/>
+<circle cx="242" cy="182" r="12" fill="#2f5d8a"/>
+<text x="242" y="186" font-size="13" fill="#ffffff" font-weight="500" text-anchor="middle">2</text>
+<text x="262" y="187" font-size="16" fill="#1f1f1f" font-weight="500" text-anchor="start">报到当天</text>
+<text x="234" y="220" font-size="14" fill="#5f5f5f" font-weight="400" text-anchor="start">核验录取信息</text>
+<text x="234" y="245" font-size="14" fill="#5f5f5f" font-weight="400" text-anchor="start">缴费或走绿色通道</text>
+<text x="234" y="270" font-size="14" fill="#5f5f5f" font-weight="400" text-anchor="start">领钥匙与校园卡</text>
+<text x="234" y="295" font-size="14" fill="#5f5f5f" font-weight="400" text-anchor="start">预约入学体检</text>
+<rect x="220" y="334" width="164" height="58" rx="8" fill="#fbf3e4" stroke="#9a6a20" stroke-width="0.8"/>
+<text x="232" y="356" font-size="12.5" fill="#9a6a20" font-weight="400" text-anchor="start">钱不够走绿色通道</text>
+<text x="232" y="375" font-size="12.5" fill="#9a6a20" font-weight="400" text-anchor="start">别因缴费卡住报到</text>
+<path d="M386 184 L398 184" fill="none" stroke="#c9c5bd" stroke-width="1.4" marker-end="url(#a)"/>
+<rect x="400" y="156" width="164" height="250" rx="10" fill="#f6f5f1" stroke="#d9d6cf" stroke-width="1.2"/>
+<circle cx="422" cy="182" r="12" fill="#2f5d8a"/>
+<text x="422" y="186" font-size="13" fill="#ffffff" font-weight="500" text-anchor="middle">3</text>
+<text x="442" y="187" font-size="16" fill="#1f1f1f" font-weight="500" text-anchor="start">第一周</text>
+<text x="414" y="220" font-size="14" fill="#5f5f5f" font-weight="400" text-anchor="start">看培养方案与选课</text>
+<text x="414" y="245" font-size="14" fill="#5f5f5f" font-weight="400" text-anchor="start">班会与导师见面</text>
+<text x="414" y="270" font-size="14" fill="#5f5f5f" font-weight="400" text-anchor="start">开通图书馆数据库</text>
+<text x="414" y="295" font-size="14" fill="#5f5f5f" font-weight="400" text-anchor="start">社团讲座先看再选</text>
+<rect x="400" y="334" width="164" height="58" rx="8" fill="#fbf3e4" stroke="#9a6a20" stroke-width="0.8"/>
+<text x="412" y="356" font-size="12.5" fill="#9a6a20" font-weight="400" text-anchor="start">选课开放时间</text>
+<text x="412" y="375" font-size="12.5" fill="#9a6a20" font-weight="400" text-anchor="start">以本院通知为准</text>
+<path d="M566 184 L578 184" fill="none" stroke="#c9c5bd" stroke-width="1.4" marker-end="url(#a)"/>
+<rect x="580" y="156" width="164" height="250" rx="10" fill="#ffffff" stroke="#d9d6cf" stroke-width="1.2"/>
+<circle cx="602" cy="182" r="12" fill="#2f5d8a"/>
+<text x="602" y="186" font-size="13" fill="#ffffff" font-weight="500" text-anchor="middle">4</text>
+<text x="622" y="187" font-size="16" fill="#1f1f1f" font-weight="500" text-anchor="start">第一个月</text>
+<text x="594" y="220" font-size="14" fill="#5f5f5f" font-weight="400" text-anchor="start">跟上作业与测验</text>
+<text x="594" y="245" font-size="14" fill="#5f5f5f" font-weight="400" text-anchor="start">记一个月账复盘</text>
+<text x="594" y="270" font-size="14" fill="#5f5f5f" font-weight="400" text-anchor="start">有困难尽早申请</text>
+<text x="594" y="295" font-size="14" fill="#5f5f5f" font-weight="400" text-anchor="start">决定社团去留</text>
+<rect x="580" y="334" width="164" height="58" rx="8" fill="#fbf3e4" stroke="#9a6a20" stroke-width="0.8"/>
+<text x="592" y="356" font-size="12.5" fill="#9a6a20" font-weight="400" text-anchor="start">资助申请通常看</text>
+<text x="592" y="375" font-size="12.5" fill="#9a6a20" font-weight="400" text-anchor="start">困难认定结果</text>
+<rect x="40" y="424" width="680" height="66" rx="8" fill="#eef3f8" stroke="#2f5d8a" stroke-width="0.8"/>
+<text x="56" y="448" font-size="14" fill="#2f5d8a" font-weight="400" text-anchor="start">顺序不能反：先完成报到与注册，才有学籍；没有学籍，后面的选课、考试、资助都办不了。</text>
+<text x="56" y="472" font-size="14" fill="#2f5d8a" font-weight="400" text-anchor="start">具体时间、地点、缴费方式以录取通知书和学校迎新通知为准，各校差别很大。</text>
+<line x1="40" y1="512" x2="720" y2="512" stroke="#d9d6cf" stroke-width="1"/>
+<text x="40" y="540" font-size="13" fill="#8a8a8a" font-weight="400" text-anchor="start">图中不给日期：报到时间每年、每校都不同。以通知书与迎新系统为准。</text>
+</svg>

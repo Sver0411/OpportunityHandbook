@@ -5,6 +5,8 @@ site/data/
 site/pages/
 site/sitemap.xml
 site/robots.txt
+site/assets/
+site/downloads/
 site/_smoke.html
 site/_reader-smoke.html
 

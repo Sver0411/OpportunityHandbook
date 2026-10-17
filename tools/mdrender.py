@@ -10,11 +10,39 @@
 from __future__ import annotations
 
 import html
+import json
 import re
+from pathlib import Path
 
 from meta import _FENCE_RE, _HEADING_RE, _LIST_RE, slugify
 
 CJK = re.compile(r"[\u3000-\u303f\u4e00-\u9fff\uff00-\uffef]")
+
+ROOT = Path(__file__).resolve().parent.parent
+
+IMG_LINE = re.compile(r"^!\[([^\]]*)\]\(([^)\s]+)\)\s*$")
+RES_OPEN = re.compile(r"^:::\s*resources\s*(.*)$")
+
+_MANIFEST: dict | None = None
+
+
+def _manifest() -> dict:
+    """模板与下载中心的清单：单一事实源，构建时按 id 取文件名与用途。"""
+    global _MANIFEST
+    if _MANIFEST is None:
+        path = ROOT / "downloads" / "manifest.json"
+        try:
+            _MANIFEST = json.loads(path.read_text(encoding="utf-8"))
+        except (OSError, ValueError):
+            _MANIFEST = {"items": []}
+    return _MANIFEST
+
+
+def _human_size(n: int) -> str:
+    if n >= 1024 * 1024:
+        return f"{n / 1024 / 1024:.1f} MB"
+    return f"{max(1, round(n / 1024))} KB"
+
 
 
 def _join(lines: list[str]) -> str:
@@ -49,13 +77,22 @@ def _inline(text: str) -> str:
     return t
 
 
-_CTX: dict = {"path": "", "routes": {}, "id_prefix": "", "used_ids": {}}
+_CTX: dict = {"path": "", "routes": {}, "id_prefix": "", "used_ids": {}, "asset_prefix": ""}
 
 
 def begin_document() -> None:
     """开始渲染一个 HTML 文档：清空全局唯一 id 计数器。"""
     _CTX["used_ids"] = {}
     _CTX["id_prefix"] = ""
+
+
+def set_asset_prefix(prefix: str) -> None:
+    """资源（图片、下载文件）的 URL 前缀。
+
+    站点根部的 SPA 用空串；`site/pages/*/index.html` 用 `../../`；
+    `site/chapters/*.html` 用 `../`。这样同一份 Markdown 在三处都能取到文件。
+    """
+    _CTX["asset_prefix"] = prefix or ""
 
 
 def set_id_prefix(prefix: str) -> None:
@@ -95,6 +132,68 @@ def _rewrite(href: str) -> str:
     if route is None:
         return href
     return route + ("/" + anchor if anchor else "")
+
+
+def _asset_url(src: str) -> str:
+    """把 Markdown 里的相对资源路径，换算成站点可用的 URL。
+
+    源文件里的写法始终相对 Markdown 文件本身（例如 `../../assets/diagrams/x.svg`），
+    这里按当前文档路径归一化成仓库相对路径，再补上目标页面的深度前缀。
+    """
+    src = src.strip()
+    if src.startswith(("http://", "https://", "data:", "//")):
+        return src
+    import posixpath
+    base = posixpath.dirname(_CTX["path"])
+    rel = posixpath.normpath(posixpath.join(base, src)) if base else src
+    return (_CTX.get("asset_prefix") or "") + rel.lstrip("./")
+
+
+def _figure(m: re.Match) -> str:
+    alt, src = m.group(1).strip(), m.group(2).strip()
+    url = html.escape(_asset_url(src), quote=True)
+    cap = f"<figcaption>{_inline(alt)}</figcaption>" if alt else ""
+    return (
+        f'<figure class="figure"><a class="figure-link" href="{url}" target="_blank" rel="noopener">'
+        f'<img src="{url}" alt="{html.escape(alt, quote=True)}" loading="lazy" decoding="async">'
+        f"</a>{cap}</figure>"
+    )
+
+
+def _resource_cards(ids: list[str]) -> str:
+    """把 `:::resources id1, id2` 渲染成下载卡片；清单里没有的 id 直接跳过。"""
+    by_id = {str(it.get("id")): it for it in _manifest().get("items", [])}
+    cards: list[str] = []
+    for rid in ids:
+        it = by_id.get(rid)
+        if not it:
+            continue
+        rel = str(it.get("path") or "")
+        url = html.escape(_asset_url(rel), quote=True)
+        fmt = str(it.get("format") or rel.rsplit(".", 1)[-1]).upper()
+        size = ""
+        try:
+            size = _human_size((ROOT / rel).stat().st_size)
+        except OSError:
+            size = str(it.get("size") or "")
+        meta_bits = " · ".join(x for x in [str(it.get("note") or ""), size] if x)
+        cards.append(
+            '<a class="res-card" href="%s" download>'
+            '<span class="res-fmt">%s</span>'
+            '<span class="res-body"><span class="res-name">%s</span>'
+            '<span class="res-desc">%s</span>'
+            '<span class="res-meta">%s</span></span>'
+            "</a>" % (
+                url,
+                html.escape(fmt),
+                _inline(str(it.get("title") or rid)),
+                _inline(str(it.get("desc") or "")),
+                html.escape(meta_bits),
+            )
+        )
+    if not cards:
+        return ""
+    return '<div class="res-cards">' + "".join(cards) + "</div>"
 
 
 def _table(lines: list[str]) -> str:
@@ -192,6 +291,27 @@ def render(text: str) -> tuple[str, list[dict]]:
             out.append(_list(block))
             continue
 
+        if IMG_LINE.match(line):
+            out.append(_figure(IMG_LINE.match(line)))
+            i += 1
+            continue
+
+        rm = RES_OPEN.match(line)
+        if rm:
+            parts = [rm.group(1)]
+            i += 1
+            while i < n and not lines[i].strip().startswith(":::"):
+                if lines[i].strip():
+                    parts.append(lines[i].strip())
+                i += 1
+            if i < n:
+                i += 1
+            ids = [x for x in re.split(r"[,\s、]+", " ".join(parts)) if x]
+            block = _resource_cards(ids)
+            if block:
+                out.append(block)
+            continue
+
         if not line.strip():
             i += 1
             continue
@@ -200,6 +320,7 @@ def render(text: str) -> tuple[str, list[dict]]:
         while i < n and lines[i].strip() and not (
             _FENCE_RE.match(lines[i]) or _HEADING_RE.match(lines[i])
             or _LIST_RE.match(lines[i]) or lines[i].lstrip().startswith(("|", ">"))
+            or IMG_LINE.match(lines[i]) or RES_OPEN.match(lines[i])
             or lines[i].strip() in ("---", "***", "___")
         ):
             buf.append(lines[i])

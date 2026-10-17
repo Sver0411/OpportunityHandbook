@@ -1,0 +1,65 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 526" width="760" height="526" font-family="PingFang SC, Noto Sans CJK SC, Source Han Sans SC, Microsoft YaHei, sans-serif">
+<defs><marker id="a" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M2 1L8 5L2 9" fill="none" stroke="#9c9c9c" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></marker></defs>
+<title>实习前、中、后的关键事项</title>
+<text x="40" y="52" font-size="13" fill="#8a8a8a" font-weight="400" text-anchor="start">场景 5 · 实习权益</text>
+<text x="40" y="92" font-size="27" fill="#1f1f1f" font-weight="500" text-anchor="start">三个阶段各自要留下什么</text>
+<text x="40" y="122" font-size="15" fill="#5f5f5f" font-weight="400" text-anchor="start">实习的权益靠协议与记录，不靠口头承诺。</text>
+<rect x="40" y="152" width="216" height="286" rx="10" fill="#eef3f8" stroke="#2f5d8a" stroke-width="0.9"/>
+<text x="58" y="182" font-size="17" fill="#2f5d8a" font-weight="500" text-anchor="start">实习前</text>
+<line x1="58" y1="194" x2="238" y2="194" stroke="#2f5d8a" stroke-width="0.8"/>
+<circle cx="70" cy="218" r="12" fill="#2f5d8a"/>
+<text x="70" y="222" font-size="13" fill="#ffffff" font-weight="500" text-anchor="middle">1</text>
+<text x="88" y="223" font-size="13" fill="#5f5f5f" font-weight="400" text-anchor="start">协议性质：实习还是劳务</text>
+<circle cx="70" cy="250" r="12" fill="#2f5d8a"/>
+<text x="70" y="254" font-size="13" fill="#ffffff" font-weight="500" text-anchor="middle">2</text>
+<text x="88" y="255" font-size="13" fill="#5f5f5f" font-weight="400" text-anchor="start">岗位职责与工作地点</text>
+<circle cx="70" cy="282" r="12" fill="#2f5d8a"/>
+<text x="70" y="286" font-size="13" fill="#ffffff" font-weight="500" text-anchor="middle">3</text>
+<text x="88" y="287" font-size="13" fill="#5f5f5f" font-weight="400" text-anchor="start">报酬标准与发放时间</text>
+<circle cx="70" cy="314" r="12" fill="#2f5d8a"/>
+<text x="70" y="318" font-size="13" fill="#ffffff" font-weight="500" text-anchor="middle">4</text>
+<text x="88" y="319" font-size="13" fill="#5f5f5f" font-weight="400" text-anchor="start">工作时间与加班安排</text>
+<circle cx="70" cy="346" r="12" fill="#2f5d8a"/>
+<text x="70" y="350" font-size="13" fill="#ffffff" font-weight="500" text-anchor="middle">5</text>
+<text x="88" y="351" font-size="13" fill="#5f5f5f" font-weight="400" text-anchor="start">保险、安全与培训</text>
+<circle cx="70" cy="378" r="12" fill="#2f5d8a"/>
+<text x="70" y="382" font-size="13" fill="#ffffff" font-weight="500" text-anchor="middle">6</text>
+<text x="88" y="383" font-size="13" fill="#5f5f5f" font-weight="400" text-anchor="start">保密与成果归属</text>
+<rect x="272" y="152" width="216" height="286" rx="10" fill="#edf4ee" stroke="#3d6b45" stroke-width="0.9"/>
+<text x="290" y="182" font-size="17" fill="#3d6b45" font-weight="500" text-anchor="start">实习中</text>
+<line x1="290" y1="194" x2="470" y2="194" stroke="#3d6b45" stroke-width="0.8"/>
+<circle cx="302" cy="218" r="12" fill="#3d6b45"/>
+<text x="302" y="222" font-size="13" fill="#ffffff" font-weight="500" text-anchor="middle">1</text>
+<text x="320" y="223" font-size="13" fill="#5f5f5f" font-weight="400" text-anchor="start">每周留一份周报或记录</text>
+<circle cx="302" cy="250" r="12" fill="#3d6b45"/>
+<text x="302" y="254" font-size="13" fill="#ffffff" font-weight="500" text-anchor="middle">2</text>
+<text x="320" y="255" font-size="13" fill="#5f5f5f" font-weight="400" text-anchor="start">任务范围变化要书面确认</text>
+<circle cx="302" cy="282" r="12" fill="#3d6b45"/>
+<text x="302" y="286" font-size="13" fill="#ffffff" font-weight="500" text-anchor="middle">3</text>
+<text x="320" y="287" font-size="13" fill="#5f5f5f" font-weight="400" text-anchor="start">加班、调休留痕</text>
+<circle cx="302" cy="314" r="12" fill="#3d6b45"/>
+<text x="302" y="318" font-size="13" fill="#ffffff" font-weight="500" text-anchor="middle">4</text>
+<text x="320" y="319" font-size="13" fill="#5f5f5f" font-weight="400" text-anchor="start">遇到问题先记录再沟通</text>
+<circle cx="302" cy="346" r="12" fill="#3d6b45"/>
+<text x="302" y="350" font-size="13" fill="#ffffff" font-weight="500" text-anchor="middle">5</text>
+<text x="320" y="351" font-size="13" fill="#5f5f5f" font-weight="400" text-anchor="start">定期向带教要反馈</text>
+<rect x="504" y="152" width="216" height="286" rx="10" fill="#fbf3e4" stroke="#9a6a20" stroke-width="0.9"/>
+<text x="522" y="182" font-size="17" fill="#9a6a20" font-weight="500" text-anchor="start">结束后</text>
+<line x1="522" y1="194" x2="702" y2="194" stroke="#9a6a20" stroke-width="0.8"/>
+<circle cx="534" cy="218" r="12" fill="#9a6a20"/>
+<text x="534" y="222" font-size="13" fill="#ffffff" font-weight="500" text-anchor="middle">1</text>
+<text x="552" y="223" font-size="13" fill="#5f5f5f" font-weight="400" text-anchor="start">实习证明与评价</text>
+<circle cx="534" cy="250" r="12" fill="#9a6a20"/>
+<text x="534" y="254" font-size="13" fill="#ffffff" font-weight="500" text-anchor="middle">2</text>
+<text x="552" y="255" font-size="13" fill="#5f5f5f" font-weight="400" text-anchor="start">成果与作品归档</text>
+<circle cx="534" cy="282" r="12" fill="#9a6a20"/>
+<text x="534" y="286" font-size="13" fill="#ffffff" font-weight="500" text-anchor="middle">3</text>
+<text x="552" y="287" font-size="13" fill="#5f5f5f" font-weight="400" text-anchor="start">转正或推荐沟通</text>
+<circle cx="534" cy="314" r="12" fill="#9a6a20"/>
+<text x="534" y="318" font-size="13" fill="#ffffff" font-weight="500" text-anchor="middle">4</text>
+<text x="552" y="319" font-size="13" fill="#5f5f5f" font-weight="400" text-anchor="start">复盘：留下什么、缺什么</text>
+<rect x="40" y="452" width="680" height="30" rx="8" fill="#f6f5f1" stroke="#d9d6cf" stroke-width="0.8"/>
+<text x="56" y="472" font-size="13" fill="#5f5f5f" font-weight="400" text-anchor="start">实习关系是否构成劳动关系，要看主体资格、管理程度与报酬方式，不能一概而论。</text>
+<line x1="40" y1="486" x2="720" y2="486" stroke="#d9d6cf" stroke-width="1"/>
+<text x="40" y="514" font-size="13" fill="#8a8a8a" font-weight="400" text-anchor="start">协议条款与争议处理，以签署的协议文本和现行法律为准。</text>
+</svg>

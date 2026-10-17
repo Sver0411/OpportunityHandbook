@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 546" width="760" height="546" font-family="PingFang SC, Noto Sans CJK SC, Source Han Sans SC, Microsoft YaHei, sans-serif">
+<defs><marker id="a" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M2 1L8 5L2 9" fill="none" stroke="#9c9c9c" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></marker></defs>
+<title>学籍异常的处理流程</title>
+<text x="40" y="52" font-size="13" fill="#8a8a8a" font-weight="400" text-anchor="start">场景 7 · 学籍与申诉</text>
+<text x="40" y="92" font-size="27" fill="#1f1f1f" font-weight="500" text-anchor="start">从发现异常到书面答复</text>
+<text x="40" y="122" font-size="15" fill="#5f5f5f" font-weight="400" text-anchor="start">先查规定，再动笔；口头沟通要留痕。</text>
+<rect x="40" y="158" width="200" height="76" rx="9" fill="#ffffff" stroke="#2f5d8a" stroke-width="0.9"/>
+<circle cx="62" cy="182" r="12" fill="#2f5d8a"/>
+<text x="62" y="186" font-size="13" fill="#ffffff" font-weight="500" text-anchor="middle">1</text>
+<text x="84" y="187" font-size="15.5" fill="#1f1f1f" font-weight="500" text-anchor="start">发现异常</text>
+<text x="60" y="210" font-size="12.5" fill="#5f5f5f" font-weight="400" text-anchor="start">成绩缺失、学籍状态</text>
+<text x="60" y="228" font-size="12.5" fill="#5f5f5f" font-weight="400" text-anchor="start">不符、处分通知</text>
+<path d="M242 196 L268 196" fill="none" stroke="#9c9c9c" stroke-width="1.4" marker-end="url(#a)"/>
+<rect x="272" y="158" width="200" height="76" rx="9" fill="#ffffff" stroke="#2f5d8a" stroke-width="0.9"/>
+<circle cx="294" cy="182" r="12" fill="#2f5d8a"/>
+<text x="294" y="186" font-size="13" fill="#ffffff" font-weight="500" text-anchor="middle">2</text>
+<text x="316" y="187" font-size="15.5" fill="#1f1f1f" font-weight="500" text-anchor="start">查规定</text>
+<text x="292" y="210" font-size="12.5" fill="#5f5f5f" font-weight="400" text-anchor="start">学生手册、学籍管理</text>
+<text x="292" y="228" font-size="12.5" fill="#5f5f5f" font-weight="400" text-anchor="start">办法、学院细则</text>
+<path d="M474 196 L500 196" fill="none" stroke="#9c9c9c" stroke-width="1.4" marker-end="url(#a)"/>
+<rect x="504" y="158" width="200" height="76" rx="9" fill="#ffffff" stroke="#2f5d8a" stroke-width="0.9"/>
+<circle cx="526" cy="182" r="12" fill="#2f5d8a"/>
+<text x="526" y="186" font-size="13" fill="#ffffff" font-weight="500" text-anchor="middle">3</text>
+<text x="548" y="187" font-size="15.5" fill="#1f1f1f" font-weight="500" text-anchor="start">收集证据</text>
+<text x="524" y="210" font-size="12.5" fill="#5f5f5f" font-weight="400" text-anchor="start">系统截图、邮件、</text>
+<text x="524" y="228" font-size="12.5" fill="#5f5f5f" font-weight="400" text-anchor="start">通知、时间线</text>
+<path d="M604 236 L604 284" fill="none" stroke="#9c9c9c" stroke-width="1.4" marker-end="url(#a)"/>
+<rect x="40" y="290" width="200" height="76" rx="9" fill="#ffffff" stroke="#2f5d8a" stroke-width="0.9"/>
+<circle cx="62" cy="314" r="12" fill="#2f5d8a"/>
+<text x="62" y="318" font-size="13" fill="#ffffff" font-weight="500" text-anchor="middle">4</text>
+<text x="84" y="319" font-size="15.5" fill="#1f1f1f" font-weight="500" text-anchor="start">书面申请</text>
+<text x="60" y="342" font-size="12.5" fill="#5f5f5f" font-weight="400" text-anchor="start">事实、依据、请求</text>
+<text x="60" y="360" font-size="12.5" fill="#5f5f5f" font-weight="400" text-anchor="start">三项写清</text>
+<path d="M242 328 L268 328" fill="none" stroke="#9c9c9c" stroke-width="1.4" marker-end="url(#a)"/>
+<rect x="272" y="290" width="200" height="76" rx="9" fill="#ffffff" stroke="#2f5d8a" stroke-width="0.9"/>
+<circle cx="294" cy="314" r="12" fill="#2f5d8a"/>
+<text x="294" y="318" font-size="13" fill="#ffffff" font-weight="500" text-anchor="middle">5</text>
+<text x="316" y="319" font-size="15.5" fill="#1f1f1f" font-weight="500" text-anchor="start">等书面答复</text>
+<text x="292" y="342" font-size="12.5" fill="#5f5f5f" font-weight="400" text-anchor="start">记下受理日期与</text>
+<text x="292" y="360" font-size="12.5" fill="#5f5f5f" font-weight="400" text-anchor="start">答复期限</text>
+<path d="M474 328 L500 328" fill="none" stroke="#9c9c9c" stroke-width="1.4" marker-end="url(#a)"/>
+<rect x="504" y="290" width="200" height="76" rx="9" fill="#ffffff" stroke="#2f5d8a" stroke-width="0.9"/>
+<circle cx="526" cy="314" r="12" fill="#2f5d8a"/>
+<text x="526" y="318" font-size="13" fill="#ffffff" font-weight="500" text-anchor="middle">6</text>
+<text x="548" y="319" font-size="15.5" fill="#1f1f1f" font-weight="500" text-anchor="start">复核或申诉</text>
+<text x="524" y="342" font-size="12.5" fill="#5f5f5f" font-weight="400" text-anchor="start">按校内渠道逐级</text>
+<text x="524" y="360" font-size="12.5" fill="#5f5f5f" font-weight="400" text-anchor="start">走，注意时限</text>
+<rect x="40" y="424" width="680" height="58" rx="8" fill="#fbeceb" stroke="#a33b36" stroke-width="0.8"/>
+<text x="56" y="447" font-size="13.5" fill="#a33b36" font-weight="400" text-anchor="start">三个最容易吃亏的地方：错过申请期限、只有口头沟通没有书面记录、材料交了没要回执。</text>
+<text x="56" y="469" font-size="13.5" fill="#a33b36" font-weight="400" text-anchor="start">申诉渠道、期限与受理部门由学校规定，不全国统一；先在学校官网找到现行办法。</text>
+<line x1="40" y1="502" x2="720" y2="502" stroke="#d9d6cf" stroke-width="1"/>
+<text x="40" y="530" font-size="13" fill="#8a8a8a" font-weight="400" text-anchor="start">本图是处理顺序示意，不构成法律意见；涉及处分与退学，建议同时咨询学校法律援助。</text>
+</svg>
