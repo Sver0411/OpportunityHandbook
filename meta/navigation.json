@@ -977,6 +977,14 @@
                 "entry_id": "campus-party-and-leadership"
               },
               "nav_id": "02-07-05"
+            },
+            {
+              "title": "校际交换与联合培养",
+              "target": {
+                "type": "entry",
+                "entry_id": "campus-exchange-programs"
+              },
+              "nav_id": "02-07-06"
             }
           ],
           "target": {

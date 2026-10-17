@@ -131,6 +131,7 @@ TREE = """
     综测、第二课堂与实践学分怎么核 @e:campus-credit-rules
     辅导员、班主任与教务：谁管什么 @e:campus-staff-roles
     入党与学生干部 @e:campus-party-and-leadership
+    校际交换与联合培养 @e:campus-exchange-programs
 
 03 做项目、打比赛、进实验室
   项目与作品
