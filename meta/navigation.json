@@ -619,6 +619,22 @@
                 "entry_id": "paths-public-interest"
               },
               "nav_id": "01-09-03"
+            },
+            {
+              "title": "国际组织与 NGO",
+              "target": {
+                "type": "entry",
+                "entry_id": "international-org-careers"
+              },
+              "nav_id": "01-09-04"
+            },
+            {
+              "title": "打工度假",
+              "target": {
+                "type": "entry",
+                "entry_id": "working-holiday"
+              },
+              "nav_id": "01-09-05"
             }
           ],
           "nav_id": "01-09"

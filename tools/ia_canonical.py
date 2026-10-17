@@ -88,6 +88,8 @@ TREE = """
     手艺人自己接活：从雇员到接活 @e:paths-trades-own-business
     返乡与县域生活 @e:paths-return-home
     公益与公共服务方向 @e:paths-public-interest
+    国际组织与 NGO @e:international-org-careers
+    打工度假 @e:working-holiday
   没有资源时怎么起步 @d:book/01-先决定下一步往哪里走
     家里第一个上大学或进大厂的人怎么找规则 @e:first-gen-navigate
     没有资源时怎么积累关系 @e:build-social-capital
