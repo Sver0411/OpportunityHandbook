@@ -375,6 +375,22 @@
                 "entry_id": "gaokao-free-tuition"
               },
               "nav_id": "01-04-04"
+            },
+            {
+              "title": "军校、警校与定向培养军士",
+              "target": {
+                "type": "entry",
+                "entry_id": "gaokao-military-police"
+              },
+              "nav_id": "01-04-05"
+            },
+            {
+              "title": "艺考与体育单招",
+              "target": {
+                "type": "entry",
+                "entry_id": "gaokao-art-sports"
+              },
+              "nav_id": "01-04-06"
             }
           ],
           "target": {

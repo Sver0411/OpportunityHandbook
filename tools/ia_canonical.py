@@ -60,6 +60,8 @@ TREE = """
     强基计划与综合评价 @e:gaokao-qiangji-zongping
     三大专项计划 @e:gaokao-special-programs
     公费师范、优师计划与免费医学定向 @e:gaokao-free-tuition
+    军校、警校与定向培养军士 @e:gaokao-military-police
+    艺考与体育单招 @e:gaokao-art-sports
   专科与职业教育
     专科毕业后的主要出口 @n:vocational-outcomes
     专升本 @e:study-zhuanshengben
