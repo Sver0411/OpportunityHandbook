@@ -6371,6 +6371,15 @@
                 "anchor": ""
               },
               "nav_id": "12-08-03"
+            },
+            {
+              "title": "兼职风险检查表",
+              "target": {
+                "type": "doc",
+                "location": "docs/tools/兼职风险检查表",
+                "anchor": ""
+              },
+              "nav_id": "12-08-04"
             }
           ],
           "nav_id": "12-08"

@@ -152,7 +152,7 @@ RESOURCE_TASKS = {
     "项目发布检查表": "projects", "PR 检查表": "opensource", "客户沟通与需求确认表": "delivery",
     "自由职业报价单模板": "delivery", "日常账本与月度预算": "money", "转行现金流表": "change",
     "体检项目对照表": "wellbeing", "精力预算表": "wellbeing", "纠纷证据清单": "rights",
-    "时间线检查表": "decide", "读博规划表": "postgraduate", "职校作品清单": "projects", "毕业与离校清单": "offers",
+    "时间线检查表": "decide", "读博规划表": "postgraduate", "职校作品清单": "projects", "毕业与离校清单": "offers", "兼职风险检查表": "rights",
     "Case：第一次做真正的项目": "projects", "Case：本科生第一次进实验室": "research-first",
     "Case：从教程项目到工程作品（三种项目）": "projects", "Case：联系导师的完整过程": "supervisor",
     "Case：第一次开源贡献": "opensource", "Case：留学选校从几十个到一份名单": "overseas-study",
