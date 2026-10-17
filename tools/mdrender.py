@@ -149,13 +149,18 @@ def _asset_url(src: str) -> str:
     return (_CTX.get("asset_prefix") or "") + rel.lstrip("./")
 
 
+def _root_url(rel: str) -> str:
+    """清单里的路径已经是仓库根相对路径，不能再按 Markdown 所在目录拼接。"""
+    return (_CTX.get("asset_prefix") or "") + rel.strip().lstrip("./")
+
+
 def _figure(m: re.Match) -> str:
     alt, src = m.group(1).strip(), m.group(2).strip()
     url = html.escape(_asset_url(src), quote=True)
     cap = f"<figcaption>{_inline(alt)}</figcaption>" if alt else ""
     return (
         f'<figure class="figure"><a class="figure-link" href="{url}" target="_blank" rel="noopener">'
-        f'<img src="{url}" alt="{html.escape(alt, quote=True)}" loading="lazy" decoding="async">'
+        f'<img src="{url}" alt="{html.escape(alt, quote=True)}" decoding="async">'
         f"</a>{cap}</figure>"
     )
 
@@ -169,7 +174,7 @@ def _resource_cards(ids: list[str]) -> str:
         if not it:
             continue
         rel = str(it.get("path") or "")
-        url = html.escape(_asset_url(rel), quote=True)
+        url = html.escape(_root_url(rel), quote=True)
         fmt = str(it.get("format") or rel.rsplit(".", 1)[-1]).upper()
         size = ""
         try:

@@ -212,11 +212,12 @@ def build_permalinks(root: Path, docs: list[M.Doc], index: dict, threshold: str)
     count = 0
     written: set[Path] = set()
 
-    def write(rel_parts: list[str], html_text: str) -> None:
+    def write(rel_parts: list[str], html_text: str) -> str:
         target = out_root.joinpath(*rel_parts) / "index.html"
         target.parent.mkdir(parents=True, exist_ok=True)
         target.write_text(html_text, encoding="utf-8")
         written.add(target)
+        return "../" * (len(rel_parts) + 1)   # 从页面回到站点根：pages/<各段>/index.html
 
     def url_for(rel_parts: list[str]) -> str:
         quoted = "/".join(urllib.parse.quote(p) for p in rel_parts)
@@ -225,12 +226,13 @@ def build_permalinks(root: Path, docs: list[M.Doc], index: dict, threshold: str)
     for doc in docs:
         if doc_nav_visible(doc):
             parts = ["doc"] + doc.location.split("/")
-            body = render_doc(doc, threshold, asset_prefix="../../")
+            depth = "../" * (len(parts) + 1)
+            body = render_doc(doc, threshold, asset_prefix=depth)
             write(parts, PAGE_SHELL.format(
                 title=f"{doc.title}｜机会手册",
                 desc=_description(str(doc.front.get("summary") or doc.title)),
-                url=url_for(parts), og_type="article", depth="../../",
-                spa=f"../../#/doc/{doc.location}", body=body))
+                url=url_for(parts), og_type="article", depth=depth,
+                spa=f"{depth}#/doc/{doc.location}", body=body))
             indexable.append(url_for(parts))
             count += 1
 
@@ -242,14 +244,15 @@ def build_permalinks(root: Path, docs: list[M.Doc], index: dict, threshold: str)
                 continue
             if str(meta_block.get("kind") or "") == "question":
                 continue          # 首页问题条目只是入口，不单独生成页面（避免重复内容）
-            mdrender.set_asset_prefix("../../")
+            depth = "../../"
+            mdrender.set_asset_prefix(depth)
             eid, body = render_entry_section(seg, threshold, today_iso)
             parts = [eid]
             write(parts, PAGE_SHELL.format(
                 title=f"{seg['title']}｜机会手册",
                 desc=_description(M.first_sentence("\n".join(seg["lines"])) or seg["title"]),
-                url=url_for(parts), og_type="article", depth="../../",
-                spa=f"../../#/doc/{doc.location}/{eid}", body=body))
+                url=url_for(parts), og_type="article", depth=depth,
+                spa=f"{depth}#/doc/{doc.location}/{eid}", body=body))
             indexable.append(url_for(parts))
             count += 1
 
@@ -350,11 +353,19 @@ def main() -> int:
 
     pages, _, removed = build_permalinks(root, docs, index, threshold)
     static_files = copy_static(root)
+    center = ""
+    try:                              # 下载中心必须在上面的拷盘之后生成，否则会被覆盖
+        import gen_download_center
+        n_items, center = gen_download_center.build()
+    except (OSError, ValueError) as e:
+        print(f"下载中心生成跳过：{e}", file=sys.stderr)
     if not args.quiet:
         extra = f"，清理 {removed} 个陈旧页面" if removed else ""
         print(f"已生成 {pages} 个静态入口页（pages/）+ sitemap.xml + robots.txt{extra}")
         if static_files:
             print(f"已复制 {static_files} 个静态资源（assets/ + downloads/）")
+        if center:
+            print(f"下载中心：{n_items} 个资源 → {center}")
 
     if not args.quiet:
         extra = f"，清理 {stale_removed} 个陈旧页面" if stale_removed else ""

@@ -442,10 +442,145 @@ def job_flow():
     c.save("job-to-onboard.svg")
 
 
+# ---------------------------------------------------------------- 11 资助核验
+def funding_lookup():
+    c = Canvas(760, 470, "怎么找到学校的资助部门与正式政策")
+    header(c, "场景 2 · 奖助学金", "从学校官网走到具体科室",
+           "先找到「谁发通知」，再找「通知原文」；不要在搜索结果的转载页上做决定。")
+    steps = [
+        ("学校官网", "首页找「机构设置」\n或「职能部门」"),
+        ("学生工作部（处）", "多数学校资助业务\n挂在这里"),
+        ("学生资助管理中心", "科室页通常有\n办公地点与电话"),
+        ("通知与文件", "看原文，不看摘要"),
+    ]
+    for i, (name, sub) in enumerate(steps):
+        x = 40 + i * 172
+        c.rect(x, 158, 148, 100, "#ffffff" if i % 2 == 0 else GRAY_F, BLUE_S, rx=9, sw=0.9)
+        c.badge(x + 20, 180, i + 1)
+        c.text(x + 14, 214, name, 14, INK, 500, maxw=122)
+        for j, ln in enumerate(sub.split("\n")):
+            c.text(x + 14, 236 + j * 18, ln, 11.5, MUTED, maxw=122)
+        if i < 3:
+            c.arrow(x + 150, 208, x + 168, 208)
+    c.rect(40, 276, 680, 98, AMBER_F, AMBER_S, rx=9, sw=0.8)
+    c.text(56, 300, "判断一份通知是否可信，看三件事", 13.5, AMBER_S, 500)
+    checks = ["① 发布单位是学校或学院，不是个人或机构转载",
+              "② 有发布日期与适用学年，不是往年的旧文件",
+              "③ 写清适用对象、材料与截止时间，不是只有一句「可以申请」"]
+    for j, ln in enumerate(checks):
+        c.text(56, 324 + j * 20, ln, 12.5, MUTED, maxw=650)
+    c.rect(40, 386, 680, 34, GRAY_F, LINE, rx=8, sw=0.8)
+    c.text(56, 408, "国家级政策可到全国学生资助管理中心核对；校级细则一律以本校文件为准。",
+           13, MUTED, maxw=650)
+    footer(c, 442, "学校机构名称各不相同（学生处 / 学工部 / 研工部），找不到就问辅导员要科室名。")
+    c.save("funding-lookup.svg")
+
+
+# ---------------------------------------------------------------- 12 毕业时间线
+def graduation_timeline():
+    c = Canvas(760, 430, "毕业前到离校后的时间线")
+    header(c, "场景 6 · 毕业离校", "五个节点的硬事项",
+           "线上是节点，节点上下分开写：上面是有截止日的，下面是能提前做的。")
+    c.line(60, 212, 700, 212, "#cfcbc3", 2)
+    nodes = [
+        ("前 6 个月", ["论文中期", "学位申请材料", "去向登记"], 70),
+        ("前 3 个月", ["成绩单多开几份", "问清档案流程", "就业协议或录取"], 230),
+        ("前 1 个月", ["答辩与查重", "毕业资格公示", "离校手续单"], 390),
+        ("毕业当月", ["领证", "档案转递", "户口迁移"], 550),
+        ("离校后 1 个月", ["入职或入学", "社保起缴", "确认档案到达"], 700),
+    ]
+    for i, (name, items, x) in enumerate(nodes):
+        c.parts.append(f'<circle cx="{x}" cy="212" r="6" fill="{BLUE_S}"/>')
+        if i % 2 == 0:
+            c.text(x + 10, 200, name, 13.5, INK, 500, maxw=150)
+            for j, it in enumerate(items):
+                c.text(x, 180 - j * 18, it, 11.5, MUTED, maxw=150)
+            c.line(x, 202, x, 208, "#cfcbc3", 1)
+        elif i == 4:
+            c.text(x - 6, 236, name, 13.5, INK, 500, "end", maxw=150)
+            for j, it in enumerate(items):
+                c.text(x, 258 + j * 18, it, 11.5, MUTED, "end", maxw=150)
+            c.line(x, 216, x, 222, "#cfcbc3", 1)
+        else:
+            c.text(x + 10, 236, name, 13.5, INK, 500, maxw=150)
+            for j, it in enumerate(items):
+                c.text(x, 258 + j * 18, it, 11.5, MUTED, maxw=150)
+            c.line(x, 216, x, 222, "#cfcbc3", 1)
+    c.rect(40, 330, 680, 34, AMBER_F, AMBER_S, rx=8, sw=0.8)
+    c.text(56, 352, "档案与户口必须在离校前确认去向；具体日期以本校就业部门与学院通知为准。",
+           13, AMBER_S, maxw=650)
+    footer(c, 382, "本图只给先后顺序，不写具体日期：各校答辩、公示与派遣时间不同。")
+    c.save("graduation-timeline.svg")
+
+
+# ---------------------------------------------------------------- 13 诈骗处置
+def scam_response():
+    c = Canvas(760, 400, "遭遇诈骗后的处理步骤")
+    header(c, "场景 8 · 防骗", "已经转出去了，按这个顺序做",
+           "先止损，再留证，最后才是追。顺序反了，证据会丢。")
+    steps = [
+        ("1 立刻停止", "不再转账、不再充值\n不再按对方指令操作"),
+        ("2 保存证据", "聊天记录、转账凭证\n对方账号与电话"),
+        ("3 联系机构", "银行或支付平台\n申请止付、冻结"),
+        ("4 报警", "110 或 96110\n带上证据与时间线"),
+        ("5 告知学校", "辅导员、保卫处\n同步家长"),
+        ("6 复盘", "复盘怎么被骗\n避免二次受骗"),
+    ]
+    for i, (name, sub) in enumerate(steps):
+        col, row = i % 3, i // 3
+        x = 40 + col * 232
+        y = 156 + row * 108
+        fill, stroke = (RED_F, RED_S) if i < 3 else ("#ffffff", BLUE_S)
+        c.rect(x, y, 200, 82, fill, stroke, rx=9, sw=0.9)
+        c.text(x + 14, y + 26, name, 15, INK, 500)
+        for j, ln in enumerate(sub.split("\n")):
+            c.text(x + 14, y + 48 + j * 17, ln, 12, MUTED, maxw=172)
+        if col < 2:
+            c.arrow(x + 202, y + 40, x + 228, y + 40)
+        elif i == 2:
+            c.arrow(x + 100, y + 84, x + 100, y + 102)
+    c.rect(40, 366, 680, 30, RED_F, RED_S, rx=8, sw=0.8)
+    c.text(56, 386, "不承诺能追回资金；越早止付，可能性越高。不要相信「付费追款」的二次诈骗。",
+           12.5, RED_S, maxw=650)
+    footer(c, 410, "处理渠道以公安机关与金融机构的实际流程为准；学校可协助出具情况说明。")
+    c.save("scam-response.svg")
+
+
+# ---------------------------------------------------------------- 14 机会关系
+def opportunity_relations():
+    c = Canvas(760, 546, "科研、竞赛、实习与升学就业的关系")
+    header(c, "场景 9 · 四年规划", "四条线之间怎么互相供料",
+           "课程是底座，中间两条线产出材料，出口那条线用材料。")
+    c.rect(280, 150, 200, 52, "#ffffff", BLUE_S, rx=9, sw=0.9)
+    c.text(380, 182, "升学 or 就业", 15, INK, 500, "middle")
+    c.rect(280, 232, 200, 52, "#ffffff", AMBER_S, rx=9, sw=0.9)
+    c.text(380, 264, "简历 / 陈述 / 推荐信", 13, AMBER_S, 500, "middle")
+    c.rect(80, 316, 200, 72, BLUE_F, BLUE_S, rx=9, sw=0.9)
+    c.text(96, 344, "科研与竞赛", 15, INK, 500)
+    c.text(96, 368, "问题、方法、成果", 12, MUTED, maxw=170)
+    c.rect(480, 316, 200, 72, GREEN_F, GREEN_S, rx=9, sw=0.9)
+    c.text(496, 344, "实习与实践", 15, INK, 500)
+    c.text(496, 368, "经历、作品、评价", 12, MUTED, maxw=170)
+    c.rect(280, 420, 200, 48, GRAY_F, LINE, rx=8, sw=0.8)
+    c.text(380, 449, "课程与 GPA（底座）", 13.5, INK, 500, "middle")
+    c.arrow(380, 232, 380, 204)
+    c.arrow(210, 316, 300, 286)
+    c.arrow(550, 316, 460, 286)
+    c.line(180, 402, 580, 402, "#b9b5ad", 1.4)
+    c.line(180, 388, 180, 402, "#b9b5ad", 1.4)
+    c.line(580, 388, 580, 402, "#b9b5ad", 1.4)
+    c.line(380, 420, 380, 402, "#b9b5ad", 1.4)
+    c.text(196, 300, "产出可写的项目", 11.5, MUTED)
+    c.text(470, 300, "产出可讲的经历", 11.5, MUTED)
+    footer(c, 500, "两条中间线不必都满：升学看科研与竞赛，就业看实习与作品，另一条保持及格。")
+    c.save("opportunity-relations.svg")
+
+
 def main():
     OUT.mkdir(parents=True, exist_ok=True)
     for fn in (new_student, funding, thesis, internship_flow, internship_phases,
-               graduation, appeal, scam, four_years, job_flow):
+               graduation, appeal, scam, four_years, job_flow,
+               funding_lookup, graduation_timeline, scam_response, opportunity_relations):
         fn()
     files = sorted(OUT.glob("*.svg"))
     for f in files:

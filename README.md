@@ -8,7 +8,7 @@
 
 一份以**大学前、大学期间、毕业过渡**为主线的现实选择手册：从填志愿、入学，到学业、科研、实习、求职，再到毕业论文与离校去向。毕业后的职业发展内容作为延伸资源保留。
 
-<p><a href="https://sver0411.github.io/OpportunityHandbook/">在线阅读</a>&nbsp;·&nbsp;<a href="book/18-内容地图.md">内容地图</a>&nbsp;·&nbsp;<a href="https://sver0411.github.io/OpportunityHandbook/#/browse">按条件筛选</a>&nbsp;·&nbsp;<a href="#你可以直接从这些问题开始">从问题开始</a>&nbsp;·&nbsp;<a href="#opportunityhandbook--opportunityradar">搭配 OpportunityRadar</a></p>
+<p><a href="https://sver0411.github.io/OpportunityHandbook/">在线阅读</a>&nbsp;·&nbsp;<a href="book/18-内容地图.md">内容地图</a>&nbsp;·&nbsp;<a href="https://sver0411.github.io/OpportunityHandbook/#/browse">按条件筛选</a>&nbsp;·&nbsp;<a href="https://sver0411.github.io/OpportunityHandbook/downloads/">模板与下载</a>&nbsp;·&nbsp;<a href="#你可以直接从这些问题开始">从问题开始</a>&nbsp;·&nbsp;<a href="#opportunityhandbook--opportunityradar">搭配 OpportunityRadar</a></p>
 
 <p>
   <a href="https://github.com/Sver0411/OpportunityHandbook/actions/workflows/ci.yml"><img alt="内容校验" src="https://img.shields.io/github/actions/workflow/status/Sver0411/OpportunityHandbook/ci.yml?branch=main&amp;style=flat-square&amp;label=%E5%86%85%E5%AE%B9%E6%A0%A1%E9%AA%8C"></a>&nbsp;&nbsp;
