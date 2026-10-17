@@ -1293,7 +1293,7 @@
               "nav_id": "03-05-02"
             },
             {
-              "title": "Student Chapter",
+              "title": "Student Chapter：校内分会怎么用",
               "target": {
                 "type": "entry",
                 "entry_id": "community-student-chapter"
@@ -1309,7 +1309,7 @@
               "nav_id": "03-05-04"
             },
             {
-              "title": "Meetup",
+              "title": "Meetup：一次线下活动怎么参加才有用",
               "target": {
                 "type": "entry",
                 "entry_id": "community-meetup"
@@ -3058,7 +3058,7 @@
           "title": "建立行业关系",
           "children": [
             {
-              "title": "Networking",
+              "title": "Networking：怎么建立能用得上的关系",
               "target": {
                 "type": "entry",
                 "entry_id": "community-networking"
@@ -3082,7 +3082,7 @@
               "nav_id": "07-04-03"
             },
             {
-              "title": "Organizer",
+              "title": "组织者：把一场活动从想法办到落地",
               "target": {
                 "type": "entry",
                 "entry_id": "community-organizer"
@@ -3090,7 +3090,7 @@
               "nav_id": "07-04-04"
             },
             {
-              "title": "Speaker",
+              "title": "讲者：把做过的事讲成别人能用的内容",
               "target": {
                 "type": "entry",
                 "entry_id": "community-speaker"
@@ -3098,7 +3098,7 @@
               "nav_id": "07-04-05"
             },
             {
-              "title": "Reviewer",
+              "title": "评审：怎么给别人的工作提意见",
               "target": {
                 "type": "entry",
                 "entry_id": "community-reviewer"
@@ -3493,7 +3493,7 @@
               "nav_id": "08-06-04"
             },
             {
-              "title": "Bridge Opportunity",
+              "title": "Bridge：转行用的过渡岗位",
               "target": {
                 "type": "entry",
                 "entry_id": "career-bridge-opportunity"
@@ -3501,7 +3501,7 @@
               "nav_id": "08-06-05"
             },
             {
-              "title": "Side Project",
+              "title": "Side Project：为转行做的项目",
               "target": {
                 "type": "entry",
                 "entry_id": "switch-side-project"
@@ -3845,7 +3845,7 @@
               "nav_id": "09-03-04"
             },
             {
-              "title": "Incubator",
+              "title": "孵化器：它给什么、值不值得进",
               "target": {
                 "type": "entry",
                 "entry_id": "startup-incubator"
@@ -3853,7 +3853,7 @@
               "nav_id": "09-03-05"
             },
             {
-              "title": "Accelerator",
+              "title": "加速器：股权与条款怎么看",
               "target": {
                 "type": "entry",
                 "entry_id": "startup-accelerator"

@@ -169,9 +169,9 @@ TREE = """
   社群与活动
     社团有没有价值 @n:community-club-value
     专业协会 @n:community-professional-association
-    Student Chapter @e:community-student-chapter
+    Student Chapter：校内分会怎么用 @e:community-student-chapter
     志愿活动 @e:paths-volunteering
-    Meetup @n:community-meetup
+    Meetup：一次线下活动怎么参加才有用 @n:community-meetup
     怎么从“参加”变成真正的贡献 @n:community-from-join-to-contribute
     学生会、班委与学生工作值不值得做 @e:community-student-org
     校内活动与讲座怎么用 @e:community-campus-events
@@ -379,12 +379,12 @@ TREE = """
     工作后参加比赛和评比值不值 @e:work-competition-value
     怎么把行业信息变成判断力 @e:work-industry-judgment
   建立行业关系
-    Networking @e:community-networking
+    Networking：怎么建立能用得上的关系 @e:community-networking
     专业社群 @n:community-professional-group
     Mentor：怎么找到、怎么用好 @n:work-mentor-role
-    Organizer @n:community-organizer
-    Speaker @n:community-speaker
-    Reviewer @n:community-reviewer
+    组织者：把一场活动从想法办到落地 @n:community-organizer
+    讲者：把做过的事讲成别人能用的内容 @n:community-speaker
+    评审：怎么给别人的工作提意见 @n:community-reviewer
     行业影响力 @e:community-industry-influence
   海外工作 @d:book/07-从新人到能独立负责
     海外工作第一年要处理什么 @e:overseas-work-first-year
@@ -431,8 +431,8 @@ TREE = """
     为什么不要清零过去经历 @e:career-change-keep-capital
     可迁移技能 @e:career-transferable-capital
     可迁移行业经验 @n:switch-transferable-domain
-    Bridge Opportunity @e:career-bridge-opportunity
-    Side Project @n:switch-side-project
+    Bridge：转行用的过渡岗位 @e:career-bridge-opportunity
+    Side Project：为转行做的项目 @n:switch-side-project
     降薪转行 @e:career-pay-cut-transition
   转行期的钱与关系 @d:book/08-晋升、跳槽还是转行
     转行期的钱怎么安排 @e:career-change-cashflow
@@ -473,8 +473,8 @@ TREE = """
     MVP @n:startup-mvp
     第一批用户 @n:startup-first-users
     商业模式 @n:startup-business-model
-    Incubator @n:startup-incubator
-    Accelerator @n:startup-accelerator
+    孵化器：它给什么、值不值得进 @n:startup-incubator
+    加速器：股权与条款怎么看 @n:startup-accelerator
     融资 @e:startup-funding
     副业转主业 @e:side-project-to-main-business
     职业中断后重新进入职场 @n:career-break-return
