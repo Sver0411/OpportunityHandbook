@@ -6026,6 +6026,15 @@
                 "anchor": ""
               },
               "nav_id": "12-02-08"
+            },
+            {
+              "title": "新生入学检查表",
+              "target": {
+                "type": "doc",
+                "location": "docs/tools/新生入学检查表",
+                "anchor": ""
+              },
+              "nav_id": "12-02-09"
             }
           ],
           "nav_id": "12-02"
