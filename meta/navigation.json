@@ -5482,6 +5482,15 @@
                 "anchor": ""
               },
               "nav_id": "10-15-25"
+            },
+            {
+              "title": "律师与法务",
+              "target": {
+                "type": "doc",
+                "location": "docs/career-guides/律师与法务",
+                "anchor": ""
+              },
+              "nav_id": "10-15-26"
             }
           ],
           "nav_id": "10-15"
