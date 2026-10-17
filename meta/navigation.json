@@ -6621,6 +6621,15 @@
                 "anchor": ""
               },
               "nav_id": "14-01-03"
+            },
+            {
+              "title": "Playbook：大学生兼职与校园诈骗风险",
+              "target": {
+                "type": "doc",
+                "location": "docs/playbooks/兼职与校园诈骗风险",
+                "anchor": ""
+              },
+              "nav_id": "14-01-04"
             }
           ],
           "nav_id": "14-01"
