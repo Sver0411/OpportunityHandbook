@@ -58,6 +58,8 @@ TREE = """
   高考的几条通道
     高考不只是统招：先看有哪几条通道 @e:gaokao-channels-overview
     强基计划与综合评价 @e:gaokao-qiangji-zongping
+    三大专项计划 @e:gaokao-special-programs
+    公费师范、优师计划与免费医学定向 @e:gaokao-free-tuition
   专科与职业教育
     专科毕业后的主要出口 @n:vocational-outcomes
     专升本 @e:study-zhuanshengben

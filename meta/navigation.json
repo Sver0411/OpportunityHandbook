@@ -359,6 +359,22 @@
                 "entry_id": "gaokao-qiangji-zongping"
               },
               "nav_id": "01-04-02"
+            },
+            {
+              "title": "三大专项计划",
+              "target": {
+                "type": "entry",
+                "entry_id": "gaokao-special-programs"
+              },
+              "nav_id": "01-04-03"
+            },
+            {
+              "title": "公费师范、优师计划与免费医学定向",
+              "target": {
+                "type": "entry",
+                "entry_id": "gaokao-free-tuition"
+              },
+              "nav_id": "01-04-04"
             }
           ],
           "target": {
