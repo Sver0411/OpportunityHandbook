@@ -6,7 +6,7 @@
 
 **A field guide for the choices that shape what you can do next.**
 
-Study, research, work, promotion, a career change, a move abroad, or a fresh start: understand the routes before you commit to one.
+Before university, during university, and the transition out: understand the routes before you commit to one. Post-graduation material (career growth, promotion, career change, starting again) is kept as an extension.
 
 [Read the handbook (Chinese)](https://sver0411.github.io/OpportunityHandbook/) · [Browse by situation (Chinese)](https://sver0411.github.io/OpportunityHandbook/#/browse) · [Meet OpportunityRadar](https://github.com/Sver0411/OpportunityRadar/blob/main/README.en.md)
 
@@ -24,17 +24,23 @@ Its starting point is simple: an attractive label tells you very little. What ma
 
 ## Who it is for
 
-The book begins with choices made in school, but it follows the questions that appear long after graduation.
+The handbook is built around three stages: **before university, during university, and the transition out**. Career growth after graduation is kept as an extension, not the main audience.
 
-| If you are… | Questions the handbook helps you work through |
+| Core stage | Questions the handbook helps you work through |
 | --- | --- |
-| **Still studying** | Which course, project, internship, competition, or research experience deserves your limited time? Is further study worth it? |
+| **Before university** | How do I fill in my application? Which admission routes exist? What should I prepare between admission and arrival? What if my family cannot cover the cost? |
+| **During university** | How should I plan courses, research, internships, competitions, and projects? Is further study worth it? How do I handle a thesis or an academic-status problem? |
+| **Transition out** | Thesis and defence, graduation and degree requirements, files and household registration, leaving procedures, and the five destinations: work, further study, abroad, public sector, or not yet decided. |
+
+### After graduation (extension)
+
+| If you are… | Questions the extension covers |
+| --- | --- |
 | **Entering work** | How should you compare a first job, two offers, pay, team quality, and room to learn? |
 | **Building a career** | What evidence of your work will travel with you? When is a move, promotion, or management track worth pursuing? |
 | **Changing direction** | Which skills and relationships can cross into a new field, and which gaps need a deliberate bridge? |
 | **Considering another country** | How do qualifications, language, cost, visas, and local rules affect an otherwise appealing route? |
 | **Starting again** | What changes when you return to study or work, freelance, or try to build something of your own? |
-| **Unsure what you want** | Which small experiments can teach you something before a large, expensive commitment? |
 
 Many examples come from Chinese education and employment systems. Treat country-specific rules as local information to verify, not as universal advice.
 
