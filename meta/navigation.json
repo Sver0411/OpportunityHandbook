@@ -5473,6 +5473,15 @@
                 "anchor": ""
               },
               "nav_id": "10-15-24"
+            },
+            {
+              "title": "护士",
+              "target": {
+                "type": "doc",
+                "location": "docs/career-guides/护士",
+                "anchor": ""
+              },
+              "nav_id": "10-15-25"
             }
           ],
           "nav_id": "10-15"
