@@ -5500,6 +5500,15 @@
                 "anchor": ""
               },
               "nav_id": "10-15-27"
+            },
+            {
+              "title": "销售",
+              "target": {
+                "type": "doc",
+                "location": "docs/career-guides/销售",
+                "anchor": ""
+              },
+              "nav_id": "10-15-28"
             }
           ],
           "nav_id": "10-15"
