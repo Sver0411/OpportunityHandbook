@@ -687,3 +687,63 @@ stages: [new_grad, work_1_3, work_3_5]
 
 第一次租房最容易只盯月租。把集中支出单独准备（不要混进应急金），合同里写清押金退还、涨租与维修责任，并避开「先交定金再看房」与租金贷这类安排。
 见 [租房的钱怎么算清楚](../book/16-钱与生活基本盘.md#money-rent-and-deposit)。
+
+### 刚被录取，入学前要准备什么？
+
+```meta
+id: q-freshman
+kind: question
+status: complete
+link: campus-credit-rules
+summary: 先核通知书与报到通知，再备材料、办缴费或绿色通道、判断户口与档案要不要动；报到第一周办六件事。
+topics: [study, money]
+stages: [highschool, college]
+```
+
+顺序是：核对录取信息与通知书真伪 → 确认报到日期与校区 → 备材料 → 官方渠道缴费（凑不齐走绿色通道）→ 判断户口迁不迁、档案怎么寄。到校第一周把报到、住宿、校园网、辅导员、教务/图书馆/资助中心、参保六件事办完。
+见 [Playbook：大学新生入学与第一个月](../docs/playbooks/大学新生入学与第一个月.md) 与 [新生入学检查表](../docs/tools/新生入学检查表.md)。
+
+### 本科毕业论文怎么从选题做到答辩？
+
+```meta
+id: q-thesis
+kind: question
+status: complete
+link: coursework-depth
+summary: 选题先过五问、按十二步倒排、做不出来按缩题优先级退、查重与 AI 使用先看校规、答辩讲清四件事。
+topics: [study, research]
+stages: [undergraduate]
+```
+
+选题五问：时间、资源、能力、指导、验收。五问里两问答不上来就把题目砍一半。做不出来时按「砍扩展→砍次要章节→缩范围」的顺序退，不要编数据。答辩 10–15 分钟讲清问题、方法、结果、局限，不会的题直接承认。
+见 [Playbook：本科毕业论文与毕业设计](../docs/playbooks/本科毕业论文与毕业设计.md) 与 [本科毕设进度表](../docs/tools/毕设进度表.md)。
+
+### 实习协议要注意什么？
+
+```meta
+id: q-internship-agreement
+kind: question
+status: complete
+link: internship-agreement-rights
+summary: 先分清四种关系（自行实习/职校岗位实习/勤工助学/正式用工），再核主体、收费、期限、报酬、保险、知识产权六项。
+topics: [job, rights]
+stages: [college, undergraduate, master]
+```
+
+先确认你属于哪一种实习——职校岗位实习受《职业学校学生实习管理规定》约束（不得收费、不得安排加班夜班、报酬有参考下限），普通高校自行实习主要看协议。签字前核主体、收费、期限、工时、报酬、保险、知识产权、解除条件八项。
+见 [实习协议与实习权益](../book/04-升学、就业还是出国.md#internship-agreement-rights) 与 [实习协议核对表](../docs/tools/实习协议核对表.md)。
+
+### 毕业离校要办哪些手续？
+
+```meta
+id: q-leaving-school
+kind: question
+status: complete
+link: job-hunting-tripartite-agreement
+summary: 共同事项十四项加五条去向分支；档案不能自带，报到证 2023 年起已取消，应届身份看具体公告。
+topics: [job, study, rights]
+stages: [undergraduate, master]
+```
+
+先分清毕业资格、毕业证、学位证三件事，再按共同事项跑：学分、论文、离校单、费用、材料、档案、户口、党团关系。档案按去向转递（单位/人才机构/录取学校），个人不能自带；报到证已取消，任何"补办报到证"的说法先核实。
+见 [Playbook：毕业去向与离校手续总清单](../docs/playbooks/毕业去向与离校手续总清单.md) 与 [毕业与离校清单](../docs/tools/毕业与离校清单.md)。

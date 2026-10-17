@@ -153,6 +153,9 @@
 - [什么证书值得考？](book/02-在学校里先把基础打好.md#certificate-what-is-worth-it)
 - [专业不喜欢，要不要转？](book/01-先决定下一步往哪里走.md#choose-major-mismatch)
 - [实习应该什么时候开始找？](docs/playbooks/第一次找实习.md)
+- [刚被录取，入学前要准备什么？](docs/playbooks/大学新生入学与第一个月.md)
+- [本科毕业论文怎么从选题做到答辩？](docs/playbooks/本科毕业论文与毕业设计.md)
+- [实习协议要注意什么？](book/04-升学、就业还是出国.md#internship-agreement-rights)
 - [中职毕业，能不能继续升学？](book/01-先决定下一步往哪里走.md#vocational-exam-path)
 - [中职和专科阶段有哪些资助？](book/01-先决定下一步往哪里走.md#vocational-subsidy)
 - [怎么联系导师 / 要不要套磁？](docs/playbooks/第一次联系导师.md)
@@ -169,6 +172,8 @@
 - [考研拟录取之后还要办哪些手续？](book/05-备考与应试.md#kaoyan-after-admission)
 
 ### 我快毕业了
+
+- [毕业离校要办哪些手续？](docs/playbooks/毕业去向与离校手续总清单.md)
 
 - [第一份工作应该怎么看？](book/06-从学校走向第一份工作.md#first-job-what-to-trade-for)
 - [两个 Offer 应该怎么比较？](book/06-从学校走向第一份工作.md#offer-comparison)
