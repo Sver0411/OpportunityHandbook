@@ -6603,6 +6603,15 @@
                 "anchor": ""
               },
               "nav_id": "14-01-02"
+            },
+            {
+              "title": "Playbook：毕业去向与离校手续总清单",
+              "target": {
+                "type": "doc",
+                "location": "docs/playbooks/毕业去向与离校手续总清单",
+                "anchor": ""
+              },
+              "nav_id": "14-01-03"
             }
           ],
           "nav_id": "14-01"
