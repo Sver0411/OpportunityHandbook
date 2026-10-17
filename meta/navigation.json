@@ -6035,6 +6035,15 @@
                 "anchor": ""
               },
               "nav_id": "12-02-09"
+            },
+            {
+              "title": "本科毕设进度表",
+              "target": {
+                "type": "doc",
+                "location": "docs/tools/毕设进度表",
+                "anchor": ""
+              },
+              "nav_id": "12-02-10"
             }
           ],
           "nav_id": "12-02"

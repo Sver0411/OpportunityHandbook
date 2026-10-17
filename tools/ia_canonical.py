@@ -715,6 +715,7 @@ TREE = """
     留学语言考试排期表 @d:docs/tools/留学语言考试排期表
     志愿梯度表 @d:docs/tools/志愿梯度表
     新生入学检查表 @d:docs/tools/新生入学检查表
+    本科毕设进度表 @d:docs/tools/毕设进度表
   科研 @d:book/12-工具与模板#科研
     Research Question Canvas @d:docs/tools/ResearchQuestionCanvas
     Baseline 与消融设计表 @d:docs/tools/Baseline与消融设计表
