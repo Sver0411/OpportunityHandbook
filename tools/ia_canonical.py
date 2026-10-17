@@ -780,19 +780,25 @@ TREE = """
     Playbook：第一次处理劳动争议 @d:docs/playbooks/第一次处理劳动争议
 
 15 避坑
-  升学与留学 @e:trap-guaranteed-admission
-  求职与实习 @e:trap-fake-internships-and-paid-research
-  科研 @e:trap-predatory-journals
-  竞赛 @e:trap-paid-competitions
-  证书与培训 @e:trap-certificate-hoarding
-  项目与履历 @e:trap-collecting-courses-and-half-projects
-  创业与副业 @n:trap-startup-side-gig
-  信息差、机会焦虑与从众 @e:trap-information-asymmetry
-  把 AI 当替身 @e:trap-ai-shortcut
-  只听得建议、拿不到资源 @e:trap-survivor-advice
-  付费理财课与「带你投资」 @e:trap-money-course
-  体检套餐升级与「免费加项」 @e:trap-checkup-upsell
-  付费法律咨询与「包追回」 @e:trap-paid-legal-service
+  升学与留学
+    保录取、内部名额与包过 @e:trap-guaranteed-admission
+  求职与实习
+    收费实习与付费科研 @e:trap-fake-internships-and-paid-research
+  科研、竞赛与证书
+    科研 @e:trap-predatory-journals
+    竞赛 @e:trap-paid-competitions
+    证书与培训 @e:trap-certificate-hoarding
+  项目、创业与副业
+    项目与履历 @e:trap-collecting-courses-and-half-projects
+    创业与副业 @n:trap-startup-side-gig
+    把 AI 当替身 @e:trap-ai-shortcut
+  信息差与话术
+    信息差、机会焦虑与从众 @e:trap-information-asymmetry
+    只听得建议、拿不到资源 @e:trap-survivor-advice
+  钱、健康与法律
+    付费理财课与「带你投资」 @e:trap-money-course
+    体检套餐升级与「免费加项」 @e:trap-checkup-upsell
+    付费法律咨询与「包追回」 @e:trap-paid-legal-service
 16 钱与生活基本盘
   拿到钱的第一年
     第一份合同的薪资结构怎么读 @e:money-offer-pay-structure

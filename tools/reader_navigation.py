@@ -122,6 +122,9 @@ GROUP_TASKS = {
            "求职": "applications", "职业成长": "ownership", "人脉与社群": "network",
            "证书与语言考试": "certificates", "创业与自由职业": "customers",
            "权益与制度": "rights", "参考与来源": "references"},
+    "15": {"升学与留学": "graduate", "求职与实习": "applications",
+           "科研、竞赛与证书": "competitions", "项目、创业与副业": "projects",
+           "信息差与话术": "explore", "钱、健康与法律": "rights"},
     "16": {"拿到钱的第一年": "money", "社保、公积金与税": "insurance", "保险与风险": "insurance",
            "家庭与共同财务": "care"},
     "17": "wellbeing",
@@ -267,12 +270,21 @@ def build(index, root=None):
         elif chapter in {"11", "12", "13", "14"}:
             destination = RESOURCE_TASKS.get(title.replace("「", "“").replace("」", "”")) or RESOURCE_TASKS.get(record.get("title", ""))
         elif chapter == "15":
-            destination = {"升学与留学": "overseas-study", "求职与实习": "internships", "科研": "publishing",
-                           "竞赛": "competitions", "证书与培训": "certificates", "项目与履历": "projects",
-                           "创业与副业": "business", "信息差、机会焦虑与从众": "decide",
-                           "把 AI 当替身": "digital", "只听得建议、拿不到资源": "resources",
-                           "付费理财课与「带你投资」": "money", "体检套餐升级与「免费加项」": "wellbeing",
-                           "付费法律咨询与「包追回」": "rights"}.get(title)
+            # 按条目 id 归属：同一组里的坑指向的任务不同（科研→发表、理财→钱、体检→健康）。
+            destination = {"trap-guaranteed-admission": "overseas-study",
+                           "trap-fake-internships-and-paid-research": "internships",
+                           "trap-predatory-journals": "publishing",
+                           "trap-paid-competitions": "competitions",
+                           "trap-certificate-hoarding": "certificates",
+                           "trap-collecting-courses-and-half-projects": "projects",
+                           "trap-startup-side-gig": "business",
+                           "trap-ai-shortcut": "digital",
+                           "trap-information-asymmetry": "decide",
+                           "trap-survivor-advice": "resources",
+                           "trap-money-course": "money",
+                           "trap-checkup-upsell": "wellbeing",
+                           "trap-paid-legal-service": "rights"}.get(record.get("id")) \
+                or (GROUP_TASKS["15"].get(group) if isinstance(GROUP_TASKS["15"], dict) else None)
         else:
             mapping = GROUP_TASKS.get(chapter)
             destination = mapping if isinstance(mapping, str) else (mapping or {}).get(group)

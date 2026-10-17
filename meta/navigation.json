@@ -6652,107 +6652,173 @@
       "children": [
         {
           "title": "升学与留学",
+          "children": [
+            {
+              "title": "保录取、内部名额与包过",
+              "target": {
+                "type": "entry",
+                "entry_id": "trap-guaranteed-admission"
+              },
+              "nav_id": "15-01-01"
+            }
+          ],
           "target": {
-            "type": "entry",
-            "entry_id": "trap-guaranteed-admission"
+            "type": "doc",
+            "location": "book/15-避坑",
+            "anchor": "升学与留学"
           },
           "nav_id": "15-01"
         },
         {
           "title": "求职与实习",
+          "children": [
+            {
+              "title": "收费实习与付费科研",
+              "target": {
+                "type": "entry",
+                "entry_id": "trap-fake-internships-and-paid-research"
+              },
+              "nav_id": "15-02-01"
+            }
+          ],
           "target": {
-            "type": "entry",
-            "entry_id": "trap-fake-internships-and-paid-research"
+            "type": "doc",
+            "location": "book/15-避坑",
+            "anchor": "求职与实习"
           },
           "nav_id": "15-02"
         },
         {
-          "title": "科研",
+          "title": "科研、竞赛与证书",
+          "children": [
+            {
+              "title": "科研",
+              "target": {
+                "type": "entry",
+                "entry_id": "trap-predatory-journals"
+              },
+              "nav_id": "15-03-01"
+            },
+            {
+              "title": "竞赛",
+              "target": {
+                "type": "entry",
+                "entry_id": "trap-paid-competitions"
+              },
+              "nav_id": "15-03-02"
+            },
+            {
+              "title": "证书与培训",
+              "target": {
+                "type": "entry",
+                "entry_id": "trap-certificate-hoarding"
+              },
+              "nav_id": "15-03-03"
+            }
+          ],
           "target": {
-            "type": "entry",
-            "entry_id": "trap-predatory-journals"
+            "type": "doc",
+            "location": "book/15-避坑",
+            "anchor": "科研竞赛与证书"
           },
           "nav_id": "15-03"
         },
         {
-          "title": "竞赛",
+          "title": "项目、创业与副业",
+          "children": [
+            {
+              "title": "项目与履历",
+              "target": {
+                "type": "entry",
+                "entry_id": "trap-collecting-courses-and-half-projects"
+              },
+              "nav_id": "15-04-01"
+            },
+            {
+              "title": "创业与副业",
+              "target": {
+                "type": "entry",
+                "entry_id": "trap-startup-side-gig"
+              },
+              "nav_id": "15-04-02"
+            },
+            {
+              "title": "把 AI 当替身",
+              "target": {
+                "type": "entry",
+                "entry_id": "trap-ai-shortcut"
+              },
+              "nav_id": "15-04-03"
+            }
+          ],
           "target": {
-            "type": "entry",
-            "entry_id": "trap-paid-competitions"
+            "type": "doc",
+            "location": "book/15-避坑",
+            "anchor": "项目创业与副业"
           },
           "nav_id": "15-04"
         },
         {
-          "title": "证书与培训",
+          "title": "信息差与话术",
+          "children": [
+            {
+              "title": "信息差、机会焦虑与从众",
+              "target": {
+                "type": "entry",
+                "entry_id": "trap-information-asymmetry"
+              },
+              "nav_id": "15-05-01"
+            },
+            {
+              "title": "只听得建议、拿不到资源",
+              "target": {
+                "type": "entry",
+                "entry_id": "trap-survivor-advice"
+              },
+              "nav_id": "15-05-02"
+            }
+          ],
           "target": {
-            "type": "entry",
-            "entry_id": "trap-certificate-hoarding"
+            "type": "doc",
+            "location": "book/15-避坑",
+            "anchor": "信息差与话术"
           },
           "nav_id": "15-05"
         },
         {
-          "title": "项目与履历",
+          "title": "钱、健康与法律",
+          "children": [
+            {
+              "title": "付费理财课与「带你投资」",
+              "target": {
+                "type": "entry",
+                "entry_id": "trap-money-course"
+              },
+              "nav_id": "15-06-01"
+            },
+            {
+              "title": "体检套餐升级与「免费加项」",
+              "target": {
+                "type": "entry",
+                "entry_id": "trap-checkup-upsell"
+              },
+              "nav_id": "15-06-02"
+            },
+            {
+              "title": "付费法律咨询与「包追回」",
+              "target": {
+                "type": "entry",
+                "entry_id": "trap-paid-legal-service"
+              },
+              "nav_id": "15-06-03"
+            }
+          ],
           "target": {
-            "type": "entry",
-            "entry_id": "trap-collecting-courses-and-half-projects"
+            "type": "doc",
+            "location": "book/15-避坑",
+            "anchor": "钱健康与法律"
           },
           "nav_id": "15-06"
-        },
-        {
-          "title": "创业与副业",
-          "target": {
-            "type": "entry",
-            "entry_id": "trap-startup-side-gig"
-          },
-          "nav_id": "15-07"
-        },
-        {
-          "title": "信息差、机会焦虑与从众",
-          "target": {
-            "type": "entry",
-            "entry_id": "trap-information-asymmetry"
-          },
-          "nav_id": "15-08"
-        },
-        {
-          "title": "把 AI 当替身",
-          "target": {
-            "type": "entry",
-            "entry_id": "trap-ai-shortcut"
-          },
-          "nav_id": "15-09"
-        },
-        {
-          "title": "只听得建议、拿不到资源",
-          "target": {
-            "type": "entry",
-            "entry_id": "trap-survivor-advice"
-          },
-          "nav_id": "15-10"
-        },
-        {
-          "title": "付费理财课与「带你投资」",
-          "target": {
-            "type": "entry",
-            "entry_id": "trap-money-course"
-          },
-          "nav_id": "15-11"
-        },
-        {
-          "title": "体检套餐升级与「免费加项」",
-          "target": {
-            "type": "entry",
-            "entry_id": "trap-checkup-upsell"
-          },
-          "nav_id": "15-12"
-        },
-        {
-          "title": "付费法律咨询与「包追回」",
-          "target": {
-            "type": "entry",
-            "entry_id": "trap-paid-legal-service"
-          },
-          "nav_id": "15-13"
         }
       ],
       "nav_id": "15"
