@@ -5464,6 +5464,15 @@
                 "anchor": ""
               },
               "nav_id": "10-15-23"
+            },
+            {
+              "title": "临床医生",
+              "target": {
+                "type": "doc",
+                "location": "docs/career-guides/临床医生",
+                "anchor": ""
+              },
+              "nav_id": "10-15-24"
             }
           ],
           "nav_id": "10-15"

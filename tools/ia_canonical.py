@@ -652,6 +652,7 @@ TREE = """
     教师（中小学 / 高校 / 培训） @d:docs/career-guides/教师
     公共部门与事业单位 @d:docs/career-guides/公共部门
     技能型职业（电工 / 焊工 / 护理等） @d:docs/career-guides/技能型职业
+    临床医生 @d:docs/career-guides/临床医生
   权益与制度 @d:book/10-专题手册#权益与制度
     离职、换工作与社保衔接 @d:docs/rights/离职与社保衔接
     劳动合同要看哪些条款 @d:docs/rights/劳动合同要看哪些条款
