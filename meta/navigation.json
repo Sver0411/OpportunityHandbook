@@ -391,6 +391,14 @@
                 "entry_id": "gaokao-art-sports"
               },
               "nav_id": "01-04-06"
+            },
+            {
+              "title": "按位次填志愿",
+              "target": {
+                "type": "entry",
+                "entry_id": "gaokao-volunteer-ranking"
+              },
+              "nav_id": "01-04-07"
             }
           ],
           "target": {
