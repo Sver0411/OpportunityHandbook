@@ -6164,6 +6164,15 @@
                 "anchor": ""
               },
               "nav_id": "12-04-05"
+            },
+            {
+              "title": "实习协议核对表",
+              "target": {
+                "type": "doc",
+                "location": "docs/tools/实习协议核对表",
+                "anchor": ""
+              },
+              "nav_id": "12-04-06"
             }
           ],
           "nav_id": "12-04"

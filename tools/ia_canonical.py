@@ -729,6 +729,7 @@ TREE = """
     JD 拆解表 @d:docs/tools/JD拆解表
     面试复盘表 @d:docs/tools/面试复盘表
     求职漏斗诊断表 @d:docs/tools/求职漏斗诊断表
+    实习协议核对表 @d:docs/tools/实习协议核对表
   做项目与工程 @d:book/12-工具与模板#做项目与工程
     项目设计 Canvas @d:docs/tools/项目设计Canvas
     项目测试计划模板 @d:docs/tools/项目测试计划

@@ -145,7 +145,7 @@ RESOURCE_TASKS = {
     "上升通道对比表": "vocational", "志愿梯度表": "school", "新生入学检查表": "school", "本科毕设进度表": "publishing", "四六级备考排期表": "language", "留学语言考试排期表": "language",
     "Research Question Canvas": "literature", "Baseline 与消融设计表": "experiments",
     "实验记录模板": "experiments", "论文精读表（Paper Reading Sheet）": "literature",
-    "文献地图（Literature Map）": "literature", "岗位筛选表": "roles", "求职追踪表": "applications",
+    "文献地图（Literature Map）": "literature", "岗位筛选表": "roles", "求职追踪表": "applications", "实习协议核对表": "internships",
     "JD 拆解表": "roles", "面试复盘表": "interviews", "求职漏斗诊断表": "job-setbacks",
     "项目设计 Canvas": "projects", "项目测试计划模板": "projects", "Benchmark 记录表": "projects",
     "技能 Gap 矩阵": "skills", "Failure Log": "skills", "README 检查表": "projects",
