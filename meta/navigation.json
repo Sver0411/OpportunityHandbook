@@ -6362,6 +6362,15 @@
                 "anchor": ""
               },
               "nav_id": "12-08-02"
+            },
+            {
+              "title": "毕业与离校清单",
+              "target": {
+                "type": "doc",
+                "location": "docs/tools/毕业与离校清单",
+                "anchor": ""
+              },
+              "nav_id": "12-08-03"
             }
           ],
           "nav_id": "12-08"
