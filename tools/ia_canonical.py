@@ -772,6 +772,8 @@ TREE = """
     Case：第一次去看心理科 @d:docs/cases/第一次看心理科
 
 14 操作手册
+  入学与毕业 @d:book/14-操作手册#入学与毕业
+    Playbook：大学新生入学与第一个月 @d:docs/playbooks/大学新生入学与第一个月
   项目与开源 @d:book/14-操作手册#项目与开源
     Playbook：第一次做项目 @d:docs/playbooks/第一次做项目
     Playbook：把一项新技术学到「能用」 @d:docs/playbooks/第一次学新技术

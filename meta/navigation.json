@@ -6561,6 +6561,26 @@
       },
       "children": [
         {
+          "title": "入学与毕业",
+          "target": {
+            "type": "doc",
+            "location": "book/14-操作手册",
+            "anchor": "入学与毕业"
+          },
+          "children": [
+            {
+              "title": "Playbook：大学新生入学与第一个月",
+              "target": {
+                "type": "doc",
+                "location": "docs/playbooks/大学新生入学与第一个月",
+                "anchor": ""
+              },
+              "nav_id": "14-01-01"
+            }
+          ],
+          "nav_id": "14-01"
+        },
+        {
           "title": "项目与开源",
           "target": {
             "type": "doc",
@@ -6575,7 +6595,7 @@
                 "location": "docs/playbooks/第一次做项目",
                 "anchor": ""
               },
-              "nav_id": "14-01-01"
+              "nav_id": "14-02-01"
             },
             {
               "title": "Playbook：把一项新技术学到「能用」",
@@ -6584,7 +6604,7 @@
                 "location": "docs/playbooks/第一次学新技术",
                 "anchor": ""
               },
-              "nav_id": "14-01-02"
+              "nav_id": "14-02-02"
             },
             {
               "title": "Playbook：第一次开源贡献",
@@ -6593,7 +6613,7 @@
                 "location": "docs/playbooks/第一次开源贡献",
                 "anchor": ""
               },
-              "nav_id": "14-01-03"
+              "nav_id": "14-02-03"
             },
             {
               "title": "Playbook：第一次参加 Hackathon",
@@ -6602,10 +6622,10 @@
                 "location": "docs/playbooks/第一次参加 Hackathon",
                 "anchor": ""
               },
-              "nav_id": "14-01-04"
+              "nav_id": "14-02-04"
             }
           ],
-          "nav_id": "14-01"
+          "nav_id": "14-02"
         },
         {
           "title": "科研",
@@ -6622,7 +6642,7 @@
                 "location": "docs/playbooks/第一次做实验",
                 "anchor": ""
               },
-              "nav_id": "14-02-01"
+              "nav_id": "14-03-01"
             },
             {
               "title": "Playbook：第一次写论文",
@@ -6631,7 +6651,7 @@
                 "location": "docs/playbooks/第一次写论文",
                 "anchor": ""
               },
-              "nav_id": "14-02-02"
+              "nav_id": "14-03-02"
             },
             {
               "title": "Playbook：第一次联系导师",
@@ -6640,10 +6660,10 @@
                 "location": "docs/playbooks/第一次联系导师",
                 "anchor": ""
               },
-              "nav_id": "14-02-03"
+              "nav_id": "14-03-03"
             }
           ],
-          "nav_id": "14-02"
+          "nav_id": "14-03"
         },
         {
           "title": "求职",
@@ -6660,7 +6680,7 @@
                 "location": "docs/playbooks/第一次找实习",
                 "anchor": ""
               },
-              "nav_id": "14-03-01"
+              "nav_id": "14-04-01"
             },
             {
               "title": "Playbook：第一次信息访谈",
@@ -6669,7 +6689,7 @@
                 "location": "docs/playbooks/第一次信息访谈",
                 "anchor": ""
               },
-              "nav_id": "14-03-02"
+              "nav_id": "14-04-02"
             },
             {
               "title": "Playbook：第一次技术面试",
@@ -6678,7 +6698,7 @@
                 "location": "docs/playbooks/第一次技术面试",
                 "anchor": ""
               },
-              "nav_id": "14-03-03"
+              "nav_id": "14-04-03"
             },
             {
               "title": "Playbook：第一次谈薪",
@@ -6687,10 +6707,10 @@
                 "location": "docs/playbooks/第一次谈薪",
                 "anchor": ""
               },
-              "nav_id": "14-03-04"
+              "nav_id": "14-04-04"
             }
           ],
-          "nav_id": "14-03"
+          "nav_id": "14-04"
         },
         {
           "title": "考试与证书",
@@ -6707,7 +6727,7 @@
                 "location": "docs/playbooks/第一次准备考公笔试",
                 "anchor": ""
               },
-              "nav_id": "14-04-01"
+              "nav_id": "14-05-01"
             },
             {
               "title": "Playbook：第一次准备考研",
@@ -6716,7 +6736,7 @@
                 "location": "docs/playbooks/第一次准备考研",
                 "anchor": ""
               },
-              "nav_id": "14-04-02"
+              "nav_id": "14-05-02"
             },
             {
               "title": "Playbook：第一次考四六级",
@@ -6725,7 +6745,7 @@
                 "location": "docs/playbooks/第一次考四六级",
                 "anchor": ""
               },
-              "nav_id": "14-04-03"
+              "nav_id": "14-05-03"
             },
             {
               "title": "Playbook：第一次准备专升本",
@@ -6734,7 +6754,7 @@
                 "location": "docs/playbooks/第一次准备专升本",
                 "anchor": ""
               },
-              "nav_id": "14-04-04"
+              "nav_id": "14-05-04"
             },
             {
               "title": "Playbook：第一次填志愿",
@@ -6743,7 +6763,7 @@
                 "location": "docs/playbooks/第一次填志愿",
                 "anchor": ""
               },
-              "nav_id": "14-04-05"
+              "nav_id": "14-05-05"
             },
             {
               "title": "Playbook：第一次评估证书",
@@ -6752,10 +6772,10 @@
                 "location": "docs/playbooks/第一次评估证书",
                 "anchor": ""
               },
-              "nav_id": "14-04-06"
+              "nav_id": "14-05-06"
             }
           ],
-          "nav_id": "14-04"
+          "nav_id": "14-05"
         },
         {
           "title": "资助申请",
@@ -6772,10 +6792,10 @@
                 "location": "docs/playbooks/第一次申请资助",
                 "anchor": ""
               },
-              "nav_id": "14-05-01"
+              "nav_id": "14-06-01"
             }
           ],
-          "nav_id": "14-05"
+          "nav_id": "14-06"
         },
         {
           "title": "自由职业",
@@ -6792,10 +6812,10 @@
                 "location": "docs/playbooks/第一次接单",
                 "anchor": ""
               },
-              "nav_id": "14-06-01"
+              "nav_id": "14-07-01"
             }
           ],
-          "nav_id": "14-06"
+          "nav_id": "14-07"
         },
         {
           "title": "合同与权益",
@@ -6812,7 +6832,7 @@
                 "location": "docs/playbooks/第一次核对合同与社保",
                 "anchor": ""
               },
-              "nav_id": "14-07-01"
+              "nav_id": "14-08-01"
             },
             {
               "title": "Playbook：第一次处理劳动争议",
@@ -6821,10 +6841,10 @@
                 "location": "docs/playbooks/第一次处理劳动争议",
                 "anchor": ""
               },
-              "nav_id": "14-07-02"
+              "nav_id": "14-08-02"
             }
           ],
-          "nav_id": "14-07"
+          "nav_id": "14-08"
         }
       ],
       "nav_id": "14"
