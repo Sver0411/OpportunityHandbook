@@ -5931,6 +5931,15 @@
                 "anchor": ""
               },
               "nav_id": "12-02-07"
+            },
+            {
+              "title": "志愿梯度表",
+              "target": {
+                "type": "doc",
+                "location": "docs/tools/志愿梯度表",
+                "anchor": ""
+              },
+              "nav_id": "12-02-08"
             }
           ],
           "nav_id": "12-02"

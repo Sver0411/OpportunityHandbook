@@ -142,7 +142,7 @@ RESOURCE_TASKS = {
     "机会价值判断表": "decide", "Offer 对比表": "offers", "探索复盘模板": "explore",
     "职业资本盘点表": "growth", "转行 Bridge Plan": "change", "导师筛选表": "supervisor",
     "联系导师邮件模板": "supervisor", "留学选校表": "overseas-study", "考研择校对比表": "kaoyan",
-    "上升通道对比表": "vocational", "四六级备考排期表": "language", "留学语言考试排期表": "language",
+    "上升通道对比表": "vocational", "志愿梯度表": "school", "四六级备考排期表": "language", "留学语言考试排期表": "language",
     "Research Question Canvas": "literature", "Baseline 与消融设计表": "experiments",
     "实验记录模板": "experiments", "论文精读表（Paper Reading Sheet）": "literature",
     "文献地图（Literature Map）": "literature", "岗位筛选表": "roles", "求职追踪表": "applications",
