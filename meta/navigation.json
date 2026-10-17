@@ -1939,12 +1939,20 @@
               "nav_id": "04-07-01"
             },
             {
+              "title": "实习协议与实习权益",
+              "target": {
+                "type": "entry",
+                "entry_id": "internship-agreement-rights"
+              },
+              "nav_id": "04-07-02"
+            },
+            {
               "title": "暑期实习",
               "target": {
                 "type": "entry",
                 "entry_id": "internship-summer"
               },
-              "nav_id": "04-07-02"
+              "nav_id": "04-07-03"
             },
             {
               "title": "Off-cycle 实习：错峰找实习",
@@ -1952,7 +1960,7 @@
                 "type": "entry",
                 "entry_id": "internship-off-cycle"
               },
-              "nav_id": "04-07-03"
+              "nav_id": "04-07-04"
             },
             {
               "title": "留用实习",
@@ -1960,7 +1968,7 @@
                 "type": "entry",
                 "entry_id": "internship-return-offer"
               },
-              "nav_id": "04-07-04"
+              "nav_id": "04-07-05"
             },
             {
               "title": "海外实习",
@@ -1968,7 +1976,7 @@
                 "type": "entry",
                 "entry_id": "internship-overseas"
               },
-              "nav_id": "04-07-05"
+              "nav_id": "04-07-06"
             },
             {
               "title": "科研实习：和普通实习有什么区别",
@@ -1976,7 +1984,7 @@
                 "type": "entry",
                 "entry_id": "internship-research-intern"
               },
-              "nav_id": "04-07-06"
+              "nav_id": "04-07-07"
             }
           ],
           "target": {

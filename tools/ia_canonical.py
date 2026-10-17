@@ -247,6 +247,7 @@ TREE = """
     延期、换方向还是退出 @e:phd-delay-or-quit
   实习进一步升级
     日常实习 @n:internship-daily
+    实习协议与实习权益 @e:internship-agreement-rights
     暑期实习 @n:internship-summer
     Off-cycle 实习：错峰找实习 @e:internship-off-cycle
     留用实习 @e:internship-return-offer
