@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 400" width="760" height="400" font-family="PingFang SC, Noto Sans CJK SC, Source Han Sans SC, Microsoft YaHei, sans-serif">
+<defs><marker id="a" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M2 1L8 5L2 9" fill="none" stroke="#9c9c9c" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></marker></defs>
+<title>遭遇诈骗后的处理步骤</title>
+<text x="40" y="52" font-size="13" fill="#8a8a8a" font-weight="400" text-anchor="start">场景 8 · 防骗</text>
+<text x="40" y="92" font-size="27" fill="#1f1f1f" font-weight="500" text-anchor="start">已经转出去了，按这个顺序做</text>
+<text x="40" y="122" font-size="15" fill="#5f5f5f" font-weight="400" text-anchor="start">先止损，再留证，最后才是追。顺序反了，证据会丢。</text>
+<rect x="40" y="156" width="200" height="82" rx="9" fill="#fbeceb" stroke="#a33b36" stroke-width="0.9"/>
+<text x="54" y="182" font-size="15" fill="#1f1f1f" font-weight="500" text-anchor="start">1 立刻停止</text>
+<text x="54" y="204" font-size="12" fill="#5f5f5f" font-weight="400" text-anchor="start">不再转账、不再充值</text>
+<text x="54" y="221" font-size="12" fill="#5f5f5f" font-weight="400" text-anchor="start">不再按对方指令操作</text>
+<path d="M242 196 L268 196" fill="none" stroke="#9c9c9c" stroke-width="1.4" marker-end="url(#a)"/>
+<rect x="272" y="156" width="200" height="82" rx="9" fill="#fbeceb" stroke="#a33b36" stroke-width="0.9"/>
+<text x="286" y="182" font-size="15" fill="#1f1f1f" font-weight="500" text-anchor="start">2 保存证据</text>
+<text x="286" y="204" font-size="12" fill="#5f5f5f" font-weight="400" text-anchor="start">聊天记录、转账凭证</text>
+<text x="286" y="221" font-size="12" fill="#5f5f5f" font-weight="400" text-anchor="start">对方账号与电话</text>
+<path d="M474 196 L500 196" fill="none" stroke="#9c9c9c" stroke-width="1.4" marker-end="url(#a)"/>
+<rect x="504" y="156" width="200" height="82" rx="9" fill="#fbeceb" stroke="#a33b36" stroke-width="0.9"/>
+<text x="518" y="182" font-size="15" fill="#1f1f1f" font-weight="500" text-anchor="start">3 联系机构</text>
+<text x="518" y="204" font-size="12" fill="#5f5f5f" font-weight="400" text-anchor="start">银行或支付平台</text>
+<text x="518" y="221" font-size="12" fill="#5f5f5f" font-weight="400" text-anchor="start">申请止付、冻结</text>
+<path d="M604 240 L604 258" fill="none" stroke="#9c9c9c" stroke-width="1.4" marker-end="url(#a)"/>
+<rect x="40" y="264" width="200" height="82" rx="9" fill="#ffffff" stroke="#2f5d8a" stroke-width="0.9"/>
+<text x="54" y="290" font-size="15" fill="#1f1f1f" font-weight="500" text-anchor="start">4 报警</text>
+<text x="54" y="312" font-size="12" fill="#5f5f5f" font-weight="400" text-anchor="start">110 或 96110</text>
+<text x="54" y="329" font-size="12" fill="#5f5f5f" font-weight="400" text-anchor="start">带上证据与时间线</text>
+<path d="M242 304 L268 304" fill="none" stroke="#9c9c9c" stroke-width="1.4" marker-end="url(#a)"/>
+<rect x="272" y="264" width="200" height="82" rx="9" fill="#ffffff" stroke="#2f5d8a" stroke-width="0.9"/>
+<text x="286" y="290" font-size="15" fill="#1f1f1f" font-weight="500" text-anchor="start">5 告知学校</text>
+<text x="286" y="312" font-size="12" fill="#5f5f5f" font-weight="400" text-anchor="start">辅导员、保卫处</text>
+<text x="286" y="329" font-size="12" fill="#5f5f5f" font-weight="400" text-anchor="start">同步家长</text>
+<path d="M474 304 L500 304" fill="none" stroke="#9c9c9c" stroke-width="1.4" marker-end="url(#a)"/>
+<rect x="504" y="264" width="200" height="82" rx="9" fill="#ffffff" stroke="#2f5d8a" stroke-width="0.9"/>
+<text x="518" y="290" font-size="15" fill="#1f1f1f" font-weight="500" text-anchor="start">6 复盘</text>
+<text x="518" y="312" font-size="12" fill="#5f5f5f" font-weight="400" text-anchor="start">复盘怎么被骗</text>
+<text x="518" y="329" font-size="12" fill="#5f5f5f" font-weight="400" text-anchor="start">避免二次受骗</text>
+<rect x="40" y="366" width="680" height="30" rx="8" fill="#fbeceb" stroke="#a33b36" stroke-width="0.8"/>
+<text x="56" y="386" font-size="12.5" fill="#a33b36" font-weight="400" text-anchor="start">不承诺能追回资金；越早止付，可能性越高。不要相信「付费追款」的二次诈骗。</text>
+<line x1="40" y1="410" x2="720" y2="410" stroke="#d9d6cf" stroke-width="1"/>
+<text x="40" y="438" font-size="13" fill="#8a8a8a" font-weight="400" text-anchor="start">处理渠道以公安机关与金融机构的实际流程为准；学校可协助出具情况说明。</text>
+</svg>
