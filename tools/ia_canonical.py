@@ -657,6 +657,7 @@ TREE = """
     律师与法务 @d:docs/career-guides/律师与法务
     人力资源（HR） @d:docs/career-guides/人力资源
     销售 @d:docs/career-guides/销售
+    运营 @d:docs/career-guides/运营
   权益与制度 @d:book/10-专题手册#权益与制度
     离职、换工作与社保衔接 @d:docs/rights/离职与社保衔接
     劳动合同要看哪些条款 @d:docs/rights/劳动合同要看哪些条款
