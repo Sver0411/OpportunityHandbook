@@ -6585,6 +6585,15 @@
                 "anchor": ""
               },
               "nav_id": "14-01-01"
+            },
+            {
+              "title": "Playbook：本科毕业论文与毕业设计",
+              "target": {
+                "type": "doc",
+                "location": "docs/playbooks/本科毕业论文与毕业设计",
+                "anchor": ""
+              },
+              "nav_id": "14-01-02"
             }
           ],
           "nav_id": "14-01"
