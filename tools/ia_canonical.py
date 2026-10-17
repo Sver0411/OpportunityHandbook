@@ -780,6 +780,7 @@ TREE = """
     Playbook：第一次准备考研 @d:docs/playbooks/第一次准备考研
     Playbook：第一次考四六级 @d:docs/playbooks/第一次考四六级
     Playbook：第一次准备专升本 @d:docs/playbooks/第一次准备专升本
+    Playbook：第一次填志愿 @d:docs/playbooks/第一次填志愿
     Playbook：第一次评估证书 @d:docs/playbooks/第一次评估证书
   资助申请 @d:book/14-操作手册#资助申请
     Playbook：第一次申请资助 @d:docs/playbooks/第一次申请资助

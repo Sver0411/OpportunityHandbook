@@ -6642,13 +6642,22 @@
               "nav_id": "14-04-04"
             },
             {
+              "title": "Playbook：第一次填志愿",
+              "target": {
+                "type": "doc",
+                "location": "docs/playbooks/第一次填志愿",
+                "anchor": ""
+              },
+              "nav_id": "14-04-05"
+            },
+            {
               "title": "Playbook：第一次评估证书",
               "target": {
                 "type": "doc",
                 "location": "docs/playbooks/第一次评估证书",
                 "anchor": ""
               },
-              "nav_id": "14-04-05"
+              "nav_id": "14-04-06"
             }
           ],
           "nav_id": "14-04"

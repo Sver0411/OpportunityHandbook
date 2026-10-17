@@ -168,6 +168,7 @@ RESOURCE_TASKS = {
     "Playbook：第一次谈薪": "offers", "Playbook：第一次做信息访谈": "explore",
     "Playbook：第一次准备考公笔试": "civil-written", "Playbook：第一次准备考研": "kaoyan",
     "Playbook：第一次考四六级": "language", "Playbook：第一次准备专升本": "vocational",
+    "Playbook：第一次填志愿": "school",
     "Playbook：第一次判断一个证书值不值得考": "certificates",
     "Playbook：第一次申请奖学金或研究资助": "funding", "Playbook：第一次接单": "delivery",
     "Playbook：第一次核对合同与社保": "rights", "Playbook：第一次处理劳动争议": "rights",
