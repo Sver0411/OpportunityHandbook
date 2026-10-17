@@ -215,9 +215,9 @@ TREE = """
     奖学金与 Funding @e:overseas-funding
     留学总成本 @e:overseas-total-cost
   深入科研
-    RA @n:research-ra
+    RA：进实验室的第一份真实工作 @n:research-ra
     暑研 @e:research-summer-program
-    Research Internship @e:overseas-research-internship
+    Research Internship：八到十二周做出一件事 @e:overseas-research-internship
     文献阅读 @e:research-literature-reading
     研究问题 @e:research-question
     实验与数据 @n:research-experiment-data
@@ -234,17 +234,17 @@ TREE = """
   实习进一步升级
     日常实习 @n:internship-daily
     暑期实习 @n:internship-summer
-    Off-cycle @e:internship-off-cycle
+    Off-cycle 实习：错峰找实习 @e:internship-off-cycle
     留用实习 @e:internship-return-offer
     海外实习 @e:internship-overseas
-    Research Intern @e:internship-research-intern
+    科研实习：和普通实习有什么区别 @e:internship-research-intern
   资助
-    Scholarship @n:funding-scholarship
-    Fellowship @e:funding-fellowship-grant
-    Grant @n:funding-grant
-    Stipend @e:funding-stipend
-    Fee Waiver @e:funding-fee-waiver
-    Travel Grant @e:funding-travel-and-conference-grant
+    Scholarship：奖学金在看什么 @n:funding-scholarship
+    Fellowship：带义务的资助 @e:funding-fellowship-grant
+    Grant：项目经费怎么申请 @n:funding-grant
+    Stipend：按月发的生活费 @e:funding-stipend
+    Fee Waiver：申请费与学费减免 @e:funding-fee-waiver
+    Travel Grant：开会差旅的钱 @e:funding-travel-and-conference-grant
     怎么找全额资助机会 @e:funding-full-funding
 
 05 备考与应试

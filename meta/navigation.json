@@ -1671,7 +1671,7 @@
           "title": "深入科研",
           "children": [
             {
-              "title": "RA",
+              "title": "RA：进实验室的第一份真实工作",
               "target": {
                 "type": "entry",
                 "entry_id": "research-ra"
@@ -1687,7 +1687,7 @@
               "nav_id": "04-04-02"
             },
             {
-              "title": "Research Internship",
+              "title": "Research Internship：八到十二周做出一件事",
               "target": {
                 "type": "entry",
                 "entry_id": "overseas-research-internship"
@@ -1832,7 +1832,7 @@
               "nav_id": "04-07-02"
             },
             {
-              "title": "Off-cycle",
+              "title": "Off-cycle 实习：错峰找实习",
               "target": {
                 "type": "entry",
                 "entry_id": "internship-off-cycle"
@@ -1856,7 +1856,7 @@
               "nav_id": "04-07-05"
             },
             {
-              "title": "Research Intern",
+              "title": "科研实习：和普通实习有什么区别",
               "target": {
                 "type": "entry",
                 "entry_id": "internship-research-intern"
@@ -1875,7 +1875,7 @@
           "title": "资助",
           "children": [
             {
-              "title": "Scholarship",
+              "title": "Scholarship：奖学金在看什么",
               "target": {
                 "type": "entry",
                 "entry_id": "funding-scholarship"
@@ -1883,7 +1883,7 @@
               "nav_id": "04-08-01"
             },
             {
-              "title": "Fellowship",
+              "title": "Fellowship：带义务的资助",
               "target": {
                 "type": "entry",
                 "entry_id": "funding-fellowship-grant"
@@ -1891,7 +1891,7 @@
               "nav_id": "04-08-02"
             },
             {
-              "title": "Grant",
+              "title": "Grant：项目经费怎么申请",
               "target": {
                 "type": "entry",
                 "entry_id": "funding-grant"
@@ -1899,7 +1899,7 @@
               "nav_id": "04-08-03"
             },
             {
-              "title": "Stipend",
+              "title": "Stipend：按月发的生活费",
               "target": {
                 "type": "entry",
                 "entry_id": "funding-stipend"
@@ -1907,7 +1907,7 @@
               "nav_id": "04-08-04"
             },
             {
-              "title": "Fee Waiver",
+              "title": "Fee Waiver：申请费与学费减免",
               "target": {
                 "type": "entry",
                 "entry_id": "funding-fee-waiver"
@@ -1915,7 +1915,7 @@
               "nav_id": "04-08-05"
             },
             {
-              "title": "Travel Grant",
+              "title": "Travel Grant：开会差旅的钱",
               "target": {
                 "type": "entry",
                 "entry_id": "funding-travel-and-conference-grant"
