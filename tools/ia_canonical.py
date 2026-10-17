@@ -55,6 +55,9 @@ TREE = """
     转专业 @n:choose-change-major
     辅修与双学位 @n:choose-minor-double-degree
     如果第一次选择不理想怎么办 @n:choose-major-mismatch
+  高考的几条通道
+    高考不只是统招：先看有哪几条通道 @e:gaokao-channels-overview
+    强基计划与综合评价 @e:gaokao-qiangji-zongping
   专科与职业教育
     专科毕业后的主要出口 @n:vocational-outcomes
     专升本 @e:study-zhuanshengben

@@ -342,6 +342,33 @@
           "nav_id": "01-03"
         },
         {
+          "title": "高考的几条通道",
+          "children": [
+            {
+              "title": "高考不只是统招：先看有哪几条通道",
+              "target": {
+                "type": "entry",
+                "entry_id": "gaokao-channels-overview"
+              },
+              "nav_id": "01-04-01"
+            },
+            {
+              "title": "强基计划与综合评价",
+              "target": {
+                "type": "entry",
+                "entry_id": "gaokao-qiangji-zongping"
+              },
+              "nav_id": "01-04-02"
+            }
+          ],
+          "target": {
+            "type": "doc",
+            "location": "book/01-先决定下一步往哪里走",
+            "anchor": "高考的几条通道"
+          },
+          "nav_id": "01-04"
+        },
+        {
           "title": "专科与职业教育",
           "children": [
             {
@@ -350,7 +377,7 @@
                 "type": "entry",
                 "entry_id": "vocational-outcomes"
               },
-              "nav_id": "01-04-01"
+              "nav_id": "01-05-01"
             },
             {
               "title": "专升本",
@@ -358,7 +385,7 @@
                 "type": "entry",
                 "entry_id": "study-zhuanshengben"
               },
-              "nav_id": "01-04-02"
+              "nav_id": "01-05-02"
             },
             {
               "title": "职业本科",
@@ -366,7 +393,7 @@
                 "type": "entry",
                 "entry_id": "vocational-undergraduate"
               },
-              "nav_id": "01-04-03"
+              "nav_id": "01-05-03"
             },
             {
               "title": "学徒制与技能路线",
@@ -374,7 +401,7 @@
                 "type": "entry",
                 "entry_id": "apprenticeship"
               },
-              "nav_id": "01-04-04"
+              "nav_id": "01-05-04"
             },
             {
               "title": "技能型职业的发展空间",
@@ -382,7 +409,7 @@
                 "type": "entry",
                 "entry_id": "trades-career-room"
               },
-              "nav_id": "01-04-05"
+              "nav_id": "01-05-05"
             },
             {
               "title": "中职与专科阶段有哪些资助",
@@ -390,7 +417,7 @@
                 "type": "entry",
                 "entry_id": "vocational-subsidy"
               },
-              "nav_id": "01-04-06"
+              "nav_id": "01-05-06"
             },
             {
               "title": "中职毕业后的升学路怎么走",
@@ -398,7 +425,7 @@
                 "type": "entry",
                 "entry_id": "vocational-exam-path"
               },
-              "nav_id": "01-04-07"
+              "nav_id": "01-05-07"
             }
           ],
           "target": {
@@ -406,7 +433,7 @@
             "location": "book/01-先决定下一步往哪里走",
             "anchor": "专科与职业教育"
           },
-          "nav_id": "01-04"
+          "nav_id": "01-05"
         },
         {
           "title": "中职与专科阶段的探索与作品",
@@ -422,7 +449,7 @@
                 "type": "entry",
                 "entry_id": "vocational-explore"
               },
-              "nav_id": "01-05-01"
+              "nav_id": "01-06-01"
             },
             {
               "title": "中职与专科阶段能拿出什么作品",
@@ -430,10 +457,10 @@
                 "type": "entry",
                 "entry_id": "vocational-portfolio"
               },
-              "nav_id": "01-05-02"
+              "nav_id": "01-06-02"
             }
           ],
-          "nav_id": "01-05"
+          "nav_id": "01-06"
         },
         {
           "title": "家庭经济与教育成本",
@@ -444,7 +471,7 @@
                 "type": "entry",
                 "entry_id": "education-tuition-living"
               },
-              "nav_id": "01-06-01"
+              "nav_id": "01-07-01"
             },
             {
               "title": "奖助学金",
@@ -452,7 +479,7 @@
                 "type": "entry",
                 "entry_id": "funding-scholarship-system"
               },
-              "nav_id": "01-06-02"
+              "nav_id": "01-07-02"
             },
             {
               "title": "助学贷款",
@@ -460,7 +487,7 @@
                 "type": "entry",
                 "entry_id": "funding-student-loan"
               },
-              "nav_id": "01-06-03"
+              "nav_id": "01-07-03"
             },
             {
               "title": "为教育投入多少钱才合理",
@@ -468,7 +495,7 @@
                 "type": "entry",
                 "entry_id": "education-cost-budget"
               },
-              "nav_id": "01-06-04"
+              "nav_id": "01-07-04"
             }
           ],
           "target": {
@@ -476,7 +503,7 @@
             "location": "book/01-先决定下一步往哪里走",
             "anchor": "家庭经济与教育成本"
           },
-          "nav_id": "01-06"
+          "nav_id": "01-07"
         },
         {
           "title": "家庭沟通与支持",
@@ -492,7 +519,7 @@
                 "type": "entry",
                 "entry_id": "family-talk"
               },
-              "nav_id": "01-07-01"
+              "nav_id": "01-08-01"
             },
             {
               "title": "家里需要你出钱时怎么安排",
@@ -500,10 +527,10 @@
                 "type": "entry",
                 "entry_id": "care-family-budget"
               },
-              "nav_id": "01-07-02"
+              "nav_id": "01-08-02"
             }
           ],
-          "nav_id": "01-07"
+          "nav_id": "01-08"
         },
         {
           "title": "不走常规的几条路",
@@ -519,7 +546,7 @@
                 "type": "entry",
                 "entry_id": "paths-trades-own-business"
               },
-              "nav_id": "01-08-01"
+              "nav_id": "01-09-01"
             },
             {
               "title": "返乡与县域生活",
@@ -527,7 +554,7 @@
                 "type": "entry",
                 "entry_id": "paths-return-home"
               },
-              "nav_id": "01-08-02"
+              "nav_id": "01-09-02"
             },
             {
               "title": "公益与公共服务方向",
@@ -535,10 +562,10 @@
                 "type": "entry",
                 "entry_id": "paths-public-interest"
               },
-              "nav_id": "01-08-03"
+              "nav_id": "01-09-03"
             }
           ],
-          "nav_id": "01-08"
+          "nav_id": "01-09"
         },
         {
           "title": "没有资源时怎么起步",
@@ -554,7 +581,7 @@
                 "type": "entry",
                 "entry_id": "first-gen-navigate"
               },
-              "nav_id": "01-09-01"
+              "nav_id": "01-10-01"
             },
             {
               "title": "没有资源时怎么积累关系",
@@ -562,10 +589,10 @@
                 "type": "entry",
                 "entry_id": "build-social-capital"
               },
-              "nav_id": "01-09-02"
+              "nav_id": "01-10-02"
             }
           ],
-          "nav_id": "01-09"
+          "nav_id": "01-10"
         },
         {
           "title": "专科生的上升通道",
@@ -581,7 +608,7 @@
                 "type": "entry",
                 "entry_id": "vocational-pathways"
               },
-              "nav_id": "01-10-01"
+              "nav_id": "01-11-01"
             },
             {
               "title": "怎么按现在的分数和状态排序",
@@ -589,10 +616,10 @@
                 "type": "entry",
                 "entry_id": "zsb-channel-sorting"
               },
-              "nav_id": "01-10-02"
+              "nav_id": "01-11-02"
             }
           ],
-          "nav_id": "01-10"
+          "nav_id": "01-11"
         }
       ],
       "nav_id": "01"

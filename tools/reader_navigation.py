@@ -89,7 +89,7 @@ GROUP_TASKS = {
     "01": {"认识你面前的几条主要路线": "routes", "给自己保留退路": "fallback",
            "选学校与选专业": "school", "专科与职业教育": "vocational",
            "中职与专科阶段的探索与作品": "projects", "家庭经济与教育成本": "funding",
-           "家庭沟通与支持": "care", "不走常规的几条路": "routes",
+           "家庭沟通与支持": "care", "高考的几条通道": "school", "不走常规的几条路": "routes",
            "没有资源时怎么起步": "resources", "专科生的上升通道": "vocational"},
     "02": {"学业": "academic", "开始认识真实世界": "explore", "通用能力": "general",
            "专业技能": "skills", "英语与其他语言 · 判断层": "language", "证书": "certificates",
