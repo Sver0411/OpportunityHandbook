@@ -969,6 +969,14 @@
                 "entry_id": "campus-staff-roles"
               },
               "nav_id": "02-07-04"
+            },
+            {
+              "title": "入党与学生干部",
+              "target": {
+                "type": "entry",
+                "entry_id": "campus-party-and-leadership"
+              },
+              "nav_id": "02-07-05"
             }
           ],
           "target": {

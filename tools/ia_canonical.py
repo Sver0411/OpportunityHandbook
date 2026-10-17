@@ -130,6 +130,7 @@ TREE = """
     实验室、机房与设备怎么申请用 @e:campus-labs-and-equipment
     综测、第二课堂与实践学分怎么核 @e:campus-credit-rules
     辅导员、班主任与教务：谁管什么 @e:campus-staff-roles
+    入党与学生干部 @e:campus-party-and-leadership
 
 03 做项目、打比赛、进实验室
   项目与作品
