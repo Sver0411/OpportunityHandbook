@@ -38,6 +38,8 @@ TREE = """
     考公、选调与事业单位 @e:paths-public-sector
     进入体制之后的发展怎么看 @e:public-sector-growth
     体制内怎么积累可迁移能力 @e:public-sector-transferable
+    军队文职 @e:civil-military-civilian
+    社区工作者、辅警与网格员 @e:grassroots-community-jobs
     Gap Year @e:paths-gap-year
     自由职业 @n:paths-freelance
     创业 @n:paths-startup

@@ -200,12 +200,28 @@
               "nav_id": "01-01-08"
             },
             {
+              "title": "军队文职",
+              "target": {
+                "type": "entry",
+                "entry_id": "civil-military-civilian"
+              },
+              "nav_id": "01-01-09"
+            },
+            {
+              "title": "社区工作者、辅警与网格员",
+              "target": {
+                "type": "entry",
+                "entry_id": "grassroots-community-jobs"
+              },
+              "nav_id": "01-01-10"
+            },
+            {
               "title": "Gap Year",
               "target": {
                 "type": "entry",
                 "entry_id": "paths-gap-year"
               },
-              "nav_id": "01-01-09"
+              "nav_id": "01-01-11"
             },
             {
               "title": "自由职业",
@@ -213,7 +229,7 @@
                 "type": "entry",
                 "entry_id": "paths-freelance"
               },
-              "nav_id": "01-01-10"
+              "nav_id": "01-01-12"
             },
             {
               "title": "创业",
@@ -221,7 +237,7 @@
                 "type": "entry",
                 "entry_id": "paths-startup"
               },
-              "nav_id": "01-01-11"
+              "nav_id": "01-01-13"
             }
           ],
           "target": {
