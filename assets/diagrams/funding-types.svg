@@ -42,5 +42,5 @@
 <rect x="40" y="386" width="680" height="44" rx="8" fill="#f6f5f1" stroke="#d9d6cf" stroke-width="0.8"/>
 <text x="56" y="413" font-size="13.5" fill="#5f5f5f" font-weight="400" text-anchor="start">额度、比例、名额、申请时间每年每校都不同：一律以本校学生资助管理部门当年通知为准。</text>
 <line x1="40" y1="444" x2="720" y2="444" stroke="#d9d6cf" stroke-width="1"/>
-<text x="40" y="472" font-size="13" fill="#8a8a8a" font-weight="400" text-anchor="start">判断顺序：先问「这笔钱要不要还」，再问「谁评定」，最后才看金额。</text>
+<text x="40" y="472" font-size="13" fill="#8a8a8a" font-weight="400" text-anchor="start">示意图 ｜ 判断顺序：先问「这笔钱要不要还」，再问「谁评定」，最后才看金额。</text>
 </svg>

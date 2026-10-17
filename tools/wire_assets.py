@@ -39,6 +39,8 @@ FIGS = {
                       "遭遇诈骗后的六步处置顺序"),
     "four-year-plan": ("assets/diagrams/four-year-plan.svg",
                        "大一到大四的四条线：课程、科研竞赛、实习实践、升学就业"),
+    "job-to-onboard": ("assets/diagrams/job-to-onboard.svg",
+                       "从筛岗到入职的六个环节，以及签约前要确认的条款"),
     "opportunity-relations": ("assets/diagrams/opportunity-relations.svg",
                               "科研、竞赛、实习与升学就业之间怎么互相供料"),
 }
@@ -79,6 +81,10 @@ BOOK: list[dict] = [
      "res": ["funding-materials-checklist", "funding-policy-tracker"]},
     {"file": "book/06-从学校走向第一份工作.md", "entry": "### Offer 怎么比较",
      "figs": [], "res": ["offer-comparison"]},
+    {"file": "book/06-从学校走向第一份工作.md", "entry": "### 从签约到报到的清单",
+     "figs": ["job-to-onboard"], "res": ["onboarding-materials-checklist"]},
+    {"file": "book/06-从学校走向第一份工作.md", "entry": "### 失败之后怎么复盘",
+     "figs": [], "res": ["job-search-retro"]},
 ]
 
 

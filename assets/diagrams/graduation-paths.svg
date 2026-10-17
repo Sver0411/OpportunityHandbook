@@ -37,5 +37,5 @@
 <text x="56" y="456" font-size="13" fill="#5f5f5f" font-weight="400" text-anchor="start">① 档案寄到哪、单号是多少　② 户口迁不迁、迁到哪　③ 毕业证与学位证的领取方式</text>
 <text x="56" y="476" font-size="13" fill="#5f5f5f" font-weight="400" text-anchor="start">三件都办了再离校，比事后补办省事得多。</text>
 <line x1="40" y1="512" x2="720" y2="512" stroke="#d9d6cf" stroke-width="1"/>
-<text x="40" y="540" font-size="13" fill="#8a8a8a" font-weight="400" text-anchor="start">各校就业部门与省市人社部门的流程不同，具体以本校离校通知与当地政策为准。</text>
+<text x="40" y="540" font-size="13" fill="#8a8a8a" font-weight="400" text-anchor="start">示意图 ｜ 各校就业部门与省市人社部门的流程不同，具体以本校离校通知与当地政策为准。</text>
 </svg>

@@ -48,5 +48,5 @@
 <rect x="40" y="486" width="680" height="26" rx="7" fill="#eef3f8" stroke="#2f5d8a" stroke-width="0.8"/>
 <text x="56" y="504" font-size="13" fill="#2f5d8a" font-weight="400" text-anchor="start">每条线只写一件事：同时推进四件事，通常四件都做不完。</text>
 <line x1="40" y1="528" x2="720" y2="528" stroke="#d9d6cf" stroke-width="1"/>
-<text x="40" y="556" font-size="13" fill="#8a8a8a" font-weight="400" text-anchor="start">时间点因专业与学校而异；这张图用来分配精力，不用来当截止日期表。</text>
+<text x="40" y="556" font-size="13" fill="#8a8a8a" font-weight="400" text-anchor="start">示意图 ｜ 时间点因专业与学校而异；这张图用来分配精力，不用来当截止日期表。</text>
 </svg>

@@ -95,8 +95,9 @@ def header(c: Canvas, kicker: str, title: str, lead: str = ""):
 
 
 def footer(c: Canvas, y: int, note: str):
+    """页脚统一加「示意图」标记：这些图是自绘的，不是官方页面截图。"""
     c.line(40, y, c.w - 40, y, LINE, 1)
-    c.text(40, y + 28, note, 13, FAINT, maxw=c.w - 80)
+    c.text(40, y + 28, "示意图 ｜ " + note, 13, FAINT, maxw=c.w - 80)
 
 
 # ---------------------------------------------------------------- 1 新生报到

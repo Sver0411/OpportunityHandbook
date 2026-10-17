@@ -55,5 +55,5 @@
 <text x="56" y="451" font-size="13.5" fill="#9a6a20" font-weight="400" text-anchor="start">本图只排顺序，不写日期：开题、中期、送审、答辩的时间点由学院当年通知决定。</text>
 <text x="56" y="471" font-size="13.5" fill="#9a6a20" font-weight="400" text-anchor="start">提前问清三件事：查重系统是哪个、送审是校内还是校外、答辩后多久交终稿。</text>
 <line x1="40" y1="496" x2="720" y2="496" stroke="#d9d6cf" stroke-width="1"/>
-<text x="40" y="524" font-size="13" fill="#8a8a8a" font-weight="400" text-anchor="start">卡点集中在开题与送审：这两步不过，后面所有安排都要顺延。</text>
+<text x="40" y="524" font-size="13" fill="#8a8a8a" font-weight="400" text-anchor="start">示意图 ｜ 卡点集中在开题与送审：这两步不过，后面所有安排都要顺延。</text>
 </svg>

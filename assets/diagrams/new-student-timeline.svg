@@ -55,5 +55,5 @@
 <text x="56" y="448" font-size="14" fill="#2f5d8a" font-weight="400" text-anchor="start">顺序不能反：先完成报到与注册，才有学籍；没有学籍，后面的选课、考试、资助都办不了。</text>
 <text x="56" y="472" font-size="14" fill="#2f5d8a" font-weight="400" text-anchor="start">具体时间、地点、缴费方式以录取通知书和学校迎新通知为准，各校差别很大。</text>
 <line x1="40" y1="512" x2="720" y2="512" stroke="#d9d6cf" stroke-width="1"/>
-<text x="40" y="540" font-size="13" fill="#8a8a8a" font-weight="400" text-anchor="start">图中不给日期：报到时间每年、每校都不同。以通知书与迎新系统为准。</text>
+<text x="40" y="540" font-size="13" fill="#8a8a8a" font-weight="400" text-anchor="start">示意图 ｜ 图中不给日期：报到时间每年、每校都不同。以通知书与迎新系统为准。</text>
 </svg>

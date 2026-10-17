@@ -38,5 +38,5 @@
 <rect x="40" y="330" width="680" height="34" rx="8" fill="#fbf3e4" stroke="#9a6a20" stroke-width="0.8"/>
 <text x="56" y="352" font-size="13" fill="#9a6a20" font-weight="400" text-anchor="start">档案与户口必须在离校前确认去向；具体日期以本校就业部门与学院通知为准。</text>
 <line x1="40" y1="382" x2="720" y2="382" stroke="#d9d6cf" stroke-width="1"/>
-<text x="40" y="410" font-size="13" fill="#8a8a8a" font-weight="400" text-anchor="start">本图只给先后顺序，不写具体日期：各校答辩、公示与派遣时间不同。</text>
+<text x="40" y="410" font-size="13" fill="#8a8a8a" font-weight="400" text-anchor="start">示意图 ｜ 本图只给先后顺序，不写具体日期：各校答辩、公示与派遣时间不同。</text>
 </svg>

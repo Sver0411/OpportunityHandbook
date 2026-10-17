@@ -31,5 +31,5 @@
 <rect x="40" y="444" width="680" height="44" rx="8" fill="#fbeceb" stroke="#a33b36" stroke-width="0.8"/>
 <text x="56" y="471" font-size="13" fill="#a33b36" font-weight="400" text-anchor="start">已经转出去：先联系银行或支付平台止付，再报警，同时告知辅导员与家长；不要为了面子拖时间。</text>
 <line x1="40" y1="504" x2="720" y2="504" stroke="#d9d6cf" stroke-width="1"/>
-<text x="40" y="532" font-size="13" fill="#8a8a8a" font-weight="400" text-anchor="start">不承诺能追回资金；处理渠道以公安机关与金融机构的实际流程为准。</text>
+<text x="40" y="532" font-size="13" fill="#8a8a8a" font-weight="400" text-anchor="start">示意图 ｜ 不承诺能追回资金；处理渠道以公安机关与金融机构的实际流程为准。</text>
 </svg>
