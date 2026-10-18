@@ -41,7 +41,7 @@ def build() -> tuple[int, str]:
         return f"""
       <li class="res-row" data-scene="{html.escape(it['scene'])}" data-format="{html.escape(it['format'])}"
           data-text="{html.escape((it['title'] + ' ' + it['desc'] + ' ' + it['scene'] + ' ' + it['audience']).lower())}">
-        <a class="res-main" href="{html.escape(it['path'])}" download>
+        <a class="res-main" href="../{html.escape(it['path'])}" download>
           <span class="res-fmt">{fmt}</span>
           <span class="res-body">
             <span class="res-name">{html.escape(it['title'])}</span>
@@ -188,6 +188,20 @@ def build() -> tuple[int, str]:
     out = ROOT / "site" / "downloads" / "index.html"
     out.parent.mkdir(parents=True, exist_ok=True)
     out.write_text(doc, encoding="utf-8")
+
+    # 自检：页面在 /downloads/ 下，相对链接必须能落到真实文件上。
+    # 这里按「输出文件所在目录」解析每个 href/src，缺文件直接报错，
+    # 避免再出现 /downloads/downloads/... 这种 404。
+    import re
+    bad = []
+    for attr in re.findall(r'(?:href|src)="([^"#?]+)"', doc):
+        if attr.startswith(("http://", "https://", "//", "mailto:")):
+            continue
+        target = (out.parent / attr).resolve()
+        if not target.exists():
+            bad.append(attr)
+    if bad:
+        raise ValueError("下载中心存在无法解析的链接：" + ", ".join(sorted(set(bad))[:5]))
     return len(items), str(out.relative_to(ROOT))
 
 
