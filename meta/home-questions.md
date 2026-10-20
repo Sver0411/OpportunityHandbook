@@ -718,6 +718,36 @@ stages: [undergraduate]
 选题五问：时间、资源、能力、指导、验收。五问里两问答不上来就把题目砍一半。做不出来时按「砍扩展→砍次要章节→缩范围」的顺序退，不要编数据。答辩 10–15 分钟讲清问题、方法、结果、局限，不会的题直接承认。
 见 [Playbook：本科毕业论文与毕业设计](../docs/playbooks/本科毕业论文与毕业设计.md) 与 [本科毕设进度表](../docs/tools/毕设进度表.md)。
 
+### 读研期间，开题、实习和秋招怎么排？
+
+```meta
+id: q-master-schedule
+kind: question
+status: complete
+link: master-use-two-years
+summary: 先确认两年制还是三年制，再把培养方案读成五个日期；真正的毕业线是送审截止，成果要见刊就再往前推六个月投稿。
+topics: [study, job]
+stages: [master]
+```
+
+两年制的研二要把秋招、论文、送审压在同一年，三年制则把秋招推到研三。顺序是倒着排：学位评定委员会的开会日期 → 送审截止 → 论文定稿 → 投稿（若要求见刊，再减半年）。实习只放得下暑期那一段，与论文二选一。
+见 [硕士阶段](../docs/timelines/硕士阶段时间线.md) 与 [读研这两年怎么用](../book/04-升学、就业还是出国.md#master-use-two-years)。
+
+### 读博期间有哪些必须过的关卡？
+
+```meta
+id: q-phd-milestones
+kind: question
+status: complete
+link: phd-during-plan
+summary: 资格考、开题、中期考核、预答辩、送审、答辩六道关卡，每道不通过都改变毕业年份；判断是否落后看有没有稿子进入审稿流程。
+topics: [research, study]
+stages: [phd, master]
+```
+
+六道关卡的位置各校不同，以本校研究生院文件为准。要读出三个信息：在第几学期、不通过会怎样、要提前多久准备。用「有没有一篇在审的稿子」判断进度，比看做了多少实验准确。
+见 [博士阶段](../docs/timelines/博士阶段时间线.md) 与 [读博期间该积累什么](../book/04-升学、就业还是出国.md#phd-during-plan)。
+
 ### 实习协议要注意什么？
 
 ```meta
@@ -747,3 +777,63 @@ stages: [undergraduate, master]
 
 先分清毕业资格、毕业证、学位证三件事，再按共同事项跑：学分、论文、离校单、费用、材料、档案、户口、党团关系。档案按去向转递（单位/人才机构/录取学校），个人不能自带；报到证已取消，任何"补办报到证"的说法先核实。
 见 [Playbook：毕业去向与离校手续总清单](../docs/playbooks/毕业去向与离校手续总清单.md) 与 [毕业与离校清单](../docs/tools/毕业与离校清单.md)。
+
+### 工作后想补学历，自考和成考怎么排？
+
+```meta
+id: q-working-degree
+kind: question
+status: complete
+link: zsb-path-choice
+summary: 先核用途与"认不认非全日制"，再选通道；自考按考期推进、成考一年一次报名、开放大学春秋注册、非全与全日制同卷，学位条件第一年就要核。
+topics: [study, job]
+stages: [work_1_3, work_3_5, senior, college]
+```
+
+四条路的差别不在难度，在时间结构：自考按考期走，报几门决定几年；成考一年只有一次报名，错过等明年；开放大学春秋两季注册，节奏最可预测；非全日制研究生与全日制同卷同线。选之前先翻目标岗位公告，写明"全日制"的岗位读完了也报不了。毕业证与学位证是两件事，学位条件（平均分、学位外语、论文成绩）要在第一年核完。
+见 [在职学历提升](../docs/timelines/在职学历提升时间线.md) 与 [在职学历提升进度表](../docs/tools/在职学历提升进度表.md)。
+
+### 出国读书那几年，实习和工签怎么安排？
+
+```meta
+id: q-overseas-during
+kind: question
+status: complete
+link: overseas-during-study
+summary: 入学第一个月问清工作权利，第一学期就要投实习，许可审批要提前几个月，毕业前后的工签窗口不可错过。
+topics: [study, job, rights]
+stages: [undergraduate, master, phd]
+```
+
+顺序不能颠倒：先有 offer → 再申请许可 → 获批后上岗。求职季按毕业前一年启动，一年制与两年制硕士都是入学第一个学期就开始投。毕业后工签有申请窗口与失业期上限，规则每年可能调整，以学校国际学生办公室与移民主管部门官网为准。
+见 [海外在读与身份转换](../docs/timelines/海外在读与身份转换时间线.md) 与 [留学在读期间怎么用](../book/04-升学、就业还是出国.md#overseas-during-study)。
+
+### 研究生入学的第一个月要做什么？
+
+```meta
+id: q-master-first-month
+kind: question
+status: complete
+link: master-use-two-years
+summary: 把培养方案读成五个日期、与导师做一次有准备的正式谈话、课程为论文让路、进组先复现。
+topics: [study, research]
+stages: [master, phd]
+```
+
+研究生没有人替你排课表：培养方案是文件，不是学期计划；导师是合作方，不是班主任。第一个月要办完四件事——读出学分、开题、中期、成果要求、送审五个日期；带四个问题与导师谈一次并写纪要；把难课前置；进组先复现一篇已完成的工作。
+见 [研究生入学第一个月](../docs/playbooks/研究生入学第一个月.md) 与 [硕士阶段](../docs/timelines/硕士阶段时间线.md)。
+
+### 家里第一个上大学，要注意什么？
+
+```meta
+id: q-first-gen-start
+kind: question
+status: complete
+link: first-gen-navigate
+summary: 出发前把贷款、助学金、绿色通道排清；第一周问出八个没人主动说的规则；家里要钱时给固定额度、不做担保。
+topics: [study, money, care]
+stages: [highschool, undergraduate, college, master]
+```
+
+缺的不是能力，是别人家餐桌上就有的信息。先把钱排清（生源地贷款、困难认定、绿色通道、勤工助学，只走官方渠道），再问八个具体问题（转专业窗口、保研细则、奖学金评定、交换项目、文献库、进组时间等）。家里要钱时给固定数字、区分急难与周转、一律不做担保。
+见 [家里第一个上大学](../docs/playbooks/家里第一个上大学.md) 与 [家里第一个上大学的人怎么找规则](../book/01-先决定下一步往哪里走.md#first-gen-navigate)。

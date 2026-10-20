@@ -228,6 +228,7 @@ TREE = """
     联系教授 @e:overseas-contacting-professors
     奖学金与 Funding @e:overseas-funding
     留学总成本 @e:overseas-total-cost
+    留学在读期间怎么用 @e:overseas-during-study
   深入科研
     RA：进实验室的第一份真实工作 @n:research-ra
     暑研 @e:research-summer-program
@@ -688,6 +689,10 @@ TREE = """
     留学语言考试 @d:docs/timelines/留学语言考试时间线
     四六级 @d:docs/timelines/四六级时间线
     博士申请 @d:docs/timelines/博士申请时间线
+  在读期间 @d:book/11-路径时间线#在读期间
+    硕士阶段 @d:docs/timelines/硕士阶段时间线
+    博士阶段 @d:docs/timelines/博士阶段时间线
+    海外在读与身份转换 @d:docs/timelines/海外在读与身份转换时间线
   科研与实习 @d:book/11-路径时间线#科研与实习
     科研入门 @d:docs/timelines/科研入门时间线
     实习准备 @d:docs/timelines/实习准备时间线
@@ -695,6 +700,7 @@ TREE = """
     校招 @d:docs/timelines/校招时间线
     入职第一年 @d:docs/timelines/入职第一年
   职业发展与权益 @d:book/11-路径时间线#职业发展与权益
+    在职学历提升 @d:docs/timelines/在职学历提升时间线
     转行 @d:docs/timelines/转行时间线
     海外工作与签证 @d:docs/timelines/海外工作与签证时间线
     离职与纠纷维权 @d:docs/timelines/离职与纠纷维权
@@ -717,6 +723,7 @@ TREE = """
     志愿梯度表 @d:docs/tools/志愿梯度表
     新生入学检查表 @d:docs/tools/新生入学检查表
     本科毕设进度表 @d:docs/tools/毕设进度表
+    在职学历提升进度表 @d:docs/tools/在职学历提升进度表
   科研 @d:book/12-工具与模板#科研
     Research Question Canvas @d:docs/tools/ResearchQuestionCanvas
     Baseline 与消融设计表 @d:docs/tools/Baseline与消融设计表
@@ -763,11 +770,14 @@ TREE = """
     Case：从教程项目到工程作品（三种项目） @d:docs/cases/教程项目到工程作品
     Case：联系导师的完整过程 @d:docs/cases/联系导师
     Case：第一次开源贡献 @d:docs/cases/第一次开源贡献
+    Case：第一次投稿被拒 @d:docs/cases/第一次投稿被拒
   升学与作品 @d:book/13-完整案例#升学与作品
     Case：留学选校从几十个到一份名单 @d:docs/cases/留学选校
     Case：把一次竞赛变成作品集与简历素材 @d:docs/cases/从竞赛到作品集
+    Case：第一次在职读本科 @d:docs/cases/第一次在职读本科
   求职 @d:book/13-完整案例#求职
     Case：第一次找技术实习 @d:docs/cases/第一次找技术实习
+    Case：第一次在海外找实习 @d:docs/cases/第一次在海外找实习
     Case：两个 Offer 怎么选 @d:docs/cases/两个Offer怎么选
     Case：第一次面试失败之后 @d:docs/cases/第一次面试失败
   工作、钱与权益 @d:book/13-完整案例#工作钱与权益
@@ -785,6 +795,8 @@ TREE = """
     Playbook：毕业去向与离校手续总清单 @d:docs/playbooks/毕业去向与离校手续总清单
     Playbook：大学生兼职与校园诈骗风险 @d:docs/playbooks/兼职与校园诈骗风险
     Playbook：学籍异常与学校事务申诉 @d:docs/playbooks/学籍异常与学校事务申诉
+    Playbook：研究生入学第一个月 @d:docs/playbooks/研究生入学第一个月
+    Playbook：家里第一个上大学 @d:docs/playbooks/家里第一个上大学
   项目与开源 @d:book/14-操作手册#项目与开源
     Playbook：第一次做项目 @d:docs/playbooks/第一次做项目
     Playbook：把一项新技术学到「能用」 @d:docs/playbooks/第一次学新技术
@@ -799,6 +811,7 @@ TREE = """
     Playbook：第一次信息访谈 @d:docs/playbooks/第一次信息访谈
     Playbook：第一次技术面试 @d:docs/playbooks/第一次技术面试
     Playbook：第一次谈薪 @d:docs/playbooks/第一次谈薪
+    Playbook：上岸后第一年 @d:docs/playbooks/上岸后第一年
   考试与证书 @d:book/14-操作手册#考试与证书
     Playbook：第一次准备考公笔试 @d:docs/playbooks/第一次准备考公笔试
     Playbook：第一次准备考研 @d:docs/playbooks/第一次准备考研

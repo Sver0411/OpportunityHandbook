@@ -1773,6 +1773,14 @@
                 "entry_id": "overseas-total-cost"
               },
               "nav_id": "04-03-11"
+            },
+            {
+              "title": "留学在读期间怎么用",
+              "target": {
+                "type": "entry",
+                "entry_id": "overseas-during-study"
+              },
+              "nav_id": "04-03-12"
             }
           ],
           "target": {
@@ -5793,6 +5801,44 @@
           "nav_id": "11-02"
         },
         {
+          "title": "在读期间",
+          "target": {
+            "type": "doc",
+            "location": "book/11-路径时间线",
+            "anchor": "在读期间"
+          },
+          "children": [
+            {
+              "title": "硕士阶段",
+              "target": {
+                "type": "doc",
+                "location": "docs/timelines/硕士阶段时间线",
+                "anchor": ""
+              },
+              "nav_id": "11-03-01"
+            },
+            {
+              "title": "博士阶段",
+              "target": {
+                "type": "doc",
+                "location": "docs/timelines/博士阶段时间线",
+                "anchor": ""
+              },
+              "nav_id": "11-03-02"
+            },
+            {
+              "title": "海外在读与身份转换",
+              "target": {
+                "type": "doc",
+                "location": "docs/timelines/海外在读与身份转换时间线",
+                "anchor": ""
+              },
+              "nav_id": "11-03-03"
+            }
+          ],
+          "nav_id": "11-03"
+        },
+        {
           "title": "科研与实习",
           "target": {
             "type": "doc",
@@ -5807,7 +5853,7 @@
                 "location": "docs/timelines/科研入门时间线",
                 "anchor": ""
               },
-              "nav_id": "11-03-01"
+              "nav_id": "11-04-01"
             },
             {
               "title": "实习准备",
@@ -5816,10 +5862,10 @@
                 "location": "docs/timelines/实习准备时间线",
                 "anchor": ""
               },
-              "nav_id": "11-03-02"
+              "nav_id": "11-04-02"
             }
           ],
-          "nav_id": "11-03"
+          "nav_id": "11-04"
         },
         {
           "title": "求职与入职",
@@ -5836,7 +5882,7 @@
                 "location": "docs/timelines/校招时间线",
                 "anchor": ""
               },
-              "nav_id": "11-04-01"
+              "nav_id": "11-05-01"
             },
             {
               "title": "入职第一年",
@@ -5845,10 +5891,10 @@
                 "location": "docs/timelines/入职第一年",
                 "anchor": ""
               },
-              "nav_id": "11-04-02"
+              "nav_id": "11-05-02"
             }
           ],
-          "nav_id": "11-04"
+          "nav_id": "11-05"
         },
         {
           "title": "职业发展与权益",
@@ -5859,13 +5905,22 @@
           },
           "children": [
             {
+              "title": "在职学历提升",
+              "target": {
+                "type": "doc",
+                "location": "docs/timelines/在职学历提升时间线",
+                "anchor": ""
+              },
+              "nav_id": "11-06-01"
+            },
+            {
               "title": "转行",
               "target": {
                 "type": "doc",
                 "location": "docs/timelines/转行时间线",
                 "anchor": ""
               },
-              "nav_id": "11-05-01"
+              "nav_id": "11-06-02"
             },
             {
               "title": "海外工作与签证",
@@ -5874,7 +5929,7 @@
                 "location": "docs/timelines/海外工作与签证时间线",
                 "anchor": ""
               },
-              "nav_id": "11-05-02"
+              "nav_id": "11-06-03"
             },
             {
               "title": "离职与纠纷维权",
@@ -5883,10 +5938,10 @@
                 "location": "docs/timelines/离职与纠纷维权",
                 "anchor": ""
               },
-              "nav_id": "11-05-03"
+              "nav_id": "11-06-04"
             }
           ],
-          "nav_id": "11-05"
+          "nav_id": "11-06"
         }
       ],
       "nav_id": "11"
@@ -6052,6 +6107,15 @@
                 "anchor": ""
               },
               "nav_id": "12-02-10"
+            },
+            {
+              "title": "在职学历提升进度表",
+              "target": {
+                "type": "doc",
+                "location": "docs/tools/在职学历提升进度表",
+                "anchor": ""
+              },
+              "nav_id": "12-02-11"
             }
           ],
           "nav_id": "12-02"
@@ -6473,6 +6537,15 @@
                 "anchor": ""
               },
               "nav_id": "13-01-05"
+            },
+            {
+              "title": "Case：第一次投稿被拒",
+              "target": {
+                "type": "doc",
+                "location": "docs/cases/第一次投稿被拒",
+                "anchor": ""
+              },
+              "nav_id": "13-01-06"
             }
           ],
           "nav_id": "13-01"
@@ -6502,6 +6575,15 @@
                 "anchor": ""
               },
               "nav_id": "13-02-02"
+            },
+            {
+              "title": "Case：第一次在职读本科",
+              "target": {
+                "type": "doc",
+                "location": "docs/cases/第一次在职读本科",
+                "anchor": ""
+              },
+              "nav_id": "13-02-03"
             }
           ],
           "nav_id": "13-02"
@@ -6524,13 +6606,22 @@
               "nav_id": "13-03-01"
             },
             {
+              "title": "Case：第一次在海外找实习",
+              "target": {
+                "type": "doc",
+                "location": "docs/cases/第一次在海外找实习",
+                "anchor": ""
+              },
+              "nav_id": "13-03-02"
+            },
+            {
               "title": "Case：两个 Offer 怎么选",
               "target": {
                 "type": "doc",
                 "location": "docs/cases/两个Offer怎么选",
                 "anchor": ""
               },
-              "nav_id": "13-03-02"
+              "nav_id": "13-03-03"
             },
             {
               "title": "Case：第一次面试失败之后",
@@ -6539,7 +6630,7 @@
                 "location": "docs/cases/第一次面试失败",
                 "anchor": ""
               },
-              "nav_id": "13-03-03"
+              "nav_id": "13-03-04"
             }
           ],
           "nav_id": "13-03"
@@ -6674,6 +6765,24 @@
                 "anchor": ""
               },
               "nav_id": "14-01-05"
+            },
+            {
+              "title": "Playbook：研究生入学第一个月",
+              "target": {
+                "type": "doc",
+                "location": "docs/playbooks/研究生入学第一个月",
+                "anchor": ""
+              },
+              "nav_id": "14-01-06"
+            },
+            {
+              "title": "Playbook：家里第一个上大学",
+              "target": {
+                "type": "doc",
+                "location": "docs/playbooks/家里第一个上大学",
+                "anchor": ""
+              },
+              "nav_id": "14-01-07"
             }
           ],
           "nav_id": "14-01"
@@ -6806,6 +6915,15 @@
                 "anchor": ""
               },
               "nav_id": "14-04-04"
+            },
+            {
+              "title": "Playbook：上岸后第一年",
+              "target": {
+                "type": "doc",
+                "location": "docs/playbooks/上岸后第一年",
+                "anchor": ""
+              },
+              "nav_id": "14-04-05"
             }
           ],
           "nav_id": "14-04"

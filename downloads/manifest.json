@@ -336,6 +336,18 @@
       "audience": "拿到多个 Offer 的应届生",
       "note": "2 表 / 9726 单元格",
       "updated": "2026-10-18"
+    },
+    {
+      "id": "working-degree-tracker",
+      "title": "在职学历提升进度表",
+      "format": "xlsx",
+      "path": "downloads/xlsx/在职学历提升进度表.xlsx",
+      "desc": "四条通道的横向对比 + 节点日历 + 学位条件四项自查，把「大概」落成日期。",
+      "scene": "工作后补学历",
+      "article": "docs/timelines/在职学历提升时间线.md",
+      "audience": "工作后想补专科/本科学历，或准备非全日制研究生的人",
+      "note": "3 表 / 197 单元格",
+      "updated": "2026-10-18"
     }
   ]
 }

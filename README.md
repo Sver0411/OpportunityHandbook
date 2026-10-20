@@ -160,6 +160,8 @@
 - [实习应该什么时候开始找？](docs/playbooks/第一次找实习.md)
 - [刚被录取，入学前要准备什么？](docs/playbooks/大学新生入学与第一个月.md)
 - [本科毕业论文怎么从选题做到答辩？](docs/playbooks/本科毕业论文与毕业设计.md)
+- [读研期间，开题、实习和秋招怎么排？](docs/timelines/硕士阶段时间线.md)
+- [读博期间有哪些必须过的关卡？](docs/timelines/博士阶段时间线.md)
 - [实习协议要注意什么？](book/04-升学、就业还是出国.md#internship-agreement-rights)
 - [中职毕业，能不能继续升学？](book/01-先决定下一步往哪里走.md#vocational-exam-path)
 - [中职和专科阶段有哪些资助？](book/01-先决定下一步往哪里走.md#vocational-subsidy)
@@ -175,6 +177,9 @@
 - [专科生还有哪些路可以往上走？](book/01-先决定下一步往哪里走.md#vocational-pathways)
 - [雅思还是托福？小分不够还能补救吗？](book/05-备考与应试.md#lang-test-score-issues)
 - [考研拟录取之后还要办哪些手续？](book/05-备考与应试.md#kaoyan-after-admission)
+- [研究生入学的第一个月要做什么？](docs/playbooks/研究生入学第一个月.md)
+- [出国读书那几年，实习和工签怎么安排？](docs/timelines/海外在读与身份转换时间线.md)
+- [家里第一个上大学，要注意什么？](docs/playbooks/家里第一个上大学.md)
 
 ### 我快毕业了
 
@@ -192,6 +197,7 @@
 
 ### 我已经工作了
 
+- [工作后想补学历，自考和成考怎么排？](docs/timelines/在职学历提升时间线.md)
 - [工作几年以后应该怎么升职？](book/07-从新人到能独立负责.md#work-record-achievements)
 - [什么时候适合第一次跳槽？](book/07-从新人到能独立负责.md#career-job-hopping)
 - [技术路线还是管理路线？](book/08-晋升、跳槽还是转行.md#mgmt-ic-or-manager)

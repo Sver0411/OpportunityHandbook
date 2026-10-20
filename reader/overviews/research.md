@@ -8,7 +8,7 @@
 
 找机会的方式按投入递增：[怎么找到第一次科研机会](#/doc/book/03-做项目、打比赛、进实验室/research-undergrad-start) 讲本校路径（进实验室、做课程项目延伸），[RA](#/doc/book/04-升学、就业还是出国/research-ra)、[暑研](#/doc/book/04-升学、就业还是出国/research-summer-program)、[Research Internship](#/doc/book/04-升学、就业还是出国/overseas-research-internship)、[Research Intern](#/doc/book/04-升学、就业还是出国/internship-research-intern) 是更进一步的形态。**先做一段再看要不要继续**——[怎么判断自己是否喜欢科研](#/doc/book/03-做项目、打比赛、进实验室/research-do-i-like-it) 给的是判断信号，不是鸡汤。
 
-总览见[科研手册](#/doc/docs/manuals/科研手册)，节奏见[科研入门时间线](#/doc/docs/timelines/科研入门时间线)，完整样本见 [Case：本科生第一次进实验室](#/doc/docs/cases/本科生第一次科研)。
+总览见[科研手册](#/doc/docs/manuals/科研手册)，节奏见[科研入门时间线](#/doc/docs/timelines/科研入门时间线)，完整样本见 [Case：本科生第一次进实验室](#/doc/docs/cases/本科生第一次科研)。已经进入研究生阶段的人，开题、送审、答辩这些关卡的位置看[硕士阶段](#/doc/docs/timelines/硕士阶段时间线)与[博士阶段](#/doc/docs/timelines/博士阶段时间线)。
 
 ## 导师与实验室
 
