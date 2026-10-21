@@ -676,6 +676,8 @@ TREE = """
     官方入口速查：你要办的事去哪办 @d:docs/sources/官方入口速查
     二手来源与识别方法 @d:docs/sources/二手来源与识别方法
     核实记录 @d:docs/sources/核实记录
+    怎么读就业质量报告 @d:docs/sources/怎么读就业质量报告
+    怎么读报录比与专业就业率 @d:docs/sources/怎么读报录比
 
 11 路径时间线
   中学到本科 @d:book/11-路径时间线#中学到本科
@@ -735,6 +737,7 @@ TREE = """
     本科毕设进度表 @d:docs/tools/毕设进度表
     在职学历提升进度表 @d:docs/tools/在职学历提升进度表
     职业资格路径对照表 @d:docs/tools/职业资格路径对照表
+    目标院校与专业数据核对表 @d:docs/tools/目标院校与专业数据核对表
   科研 @d:book/12-工具与模板#科研
     Research Question Canvas @d:docs/tools/ResearchQuestionCanvas
     Baseline 与消融设计表 @d:docs/tools/Baseline与消融设计表

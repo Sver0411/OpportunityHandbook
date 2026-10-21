@@ -85,7 +85,7 @@ last_verified: 2026-09-21
 
 ## 工具、案例与操作手册
 
-`docs/tools/`（49 份表格模板）、`docs/cases/`（19 个完整案例）与 `docs/playbooks/`（29 份操作手册）
+`docs/tools/`（50 份表格模板）、`docs/cases/`（19 个完整案例）与 `docs/playbooks/`（29 份操作手册）
 按用途分别汇总在主线的三章里，避免两处维护：
 
 - [12 工具与模板](../book/12-工具与模板.md)
@@ -159,6 +159,8 @@ last_verified: 2026-09-21
 - [官方入口速查](sources/官方入口速查.md)
 - [二手来源与识别方法](sources/二手来源与识别方法.md)
 - [核实记录](sources/核实记录.md)
+- [怎么读就业质量报告](sources/怎么读就业质量报告.md)
+- [怎么读报录比与专业就业率](sources/怎么读报录比.md)
 
 ## 当前状态
 

@@ -155,6 +155,8 @@ RESOURCE_TASKS = {
     "法考与实习律师": "certificates", "规培与执业医师": "certificates",
     "会计与金融证书": "certificates", "职业资格路径对照表": "certificates",
     "城市选择": "switching", "城市选择与落户": "applications",
+    "怎么读就业质量报告": "references", "怎么读报录比与专业就业率": "kaoyan",
+    "目标院校与专业数据核对表": "kaoyan",
     "港澳升学与内地读研": "overseas-study", "Case：第一次考教师编": "applications",
     "在职学历提升进度表": "continuing",
     "Case：第一次在职读本科": "continuing", "Case：第一次投稿被拒": "publishing",

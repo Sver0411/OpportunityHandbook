@@ -5682,6 +5682,24 @@
                 "anchor": ""
               },
               "nav_id": "10-17-05"
+            },
+            {
+              "title": "怎么读就业质量报告",
+              "target": {
+                "type": "doc",
+                "location": "docs/sources/怎么读就业质量报告",
+                "anchor": ""
+              },
+              "nav_id": "10-17-06"
+            },
+            {
+              "title": "怎么读报录比与专业就业率",
+              "target": {
+                "type": "doc",
+                "location": "docs/sources/怎么读报录比",
+                "anchor": ""
+              },
+              "nav_id": "10-17-07"
             }
           ],
           "nav_id": "10-17"
@@ -6217,6 +6235,15 @@
                 "anchor": ""
               },
               "nav_id": "12-02-12"
+            },
+            {
+              "title": "目标院校与专业数据核对表",
+              "target": {
+                "type": "doc",
+                "location": "docs/tools/目标院校与专业数据核对表",
+                "anchor": ""
+              },
+              "nav_id": "12-02-13"
             }
           ],
           "nav_id": "12-02"
