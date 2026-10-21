@@ -4600,13 +4600,31 @@
               "nav_id": "10-06-06"
             },
             {
+              "title": "AI 与入门岗位",
+              "target": {
+                "type": "doc",
+                "location": "docs/learning/AI与入门岗位",
+                "anchor": ""
+              },
+              "nav_id": "10-06-07"
+            },
+            {
+              "title": "AI 辅助的边界",
+              "target": {
+                "type": "doc",
+                "location": "docs/learning/AI辅助的边界",
+                "anchor": ""
+              },
+              "nav_id": "10-06-08"
+            },
+            {
               "title": "账号、数据与隐私",
               "target": {
                 "type": "doc",
                 "location": "docs/learning/账号数据与隐私",
                 "anchor": ""
               },
-              "nav_id": "10-06-07"
+              "nav_id": "10-06-09"
             }
           ],
           "nav_id": "10-06"
@@ -6674,6 +6692,15 @@
                 "anchor": ""
               },
               "nav_id": "13-01-06"
+            },
+            {
+              "title": "Case：第一次用 AI 做项目",
+              "target": {
+                "type": "doc",
+                "location": "docs/cases/第一次用AI做项目",
+                "anchor": ""
+              },
+              "nav_id": "13-01-07"
             }
           ],
           "nav_id": "13-01"

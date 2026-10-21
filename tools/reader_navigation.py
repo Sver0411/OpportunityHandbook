@@ -156,6 +156,8 @@ RESOURCE_TASKS = {
     "会计与金融证书": "certificates", "职业资格路径对照表": "certificates",
     "城市选择": "switching", "城市选择与落户": "applications",
     "怎么读就业质量报告": "references", "怎么读报录比与专业就业率": "kaoyan",
+    "AI 与入门岗位": "digital", "AI 辅助的边界": "digital",
+    "Case：第一次用 AI 做项目": "projects",
     "目标院校与专业数据核对表": "kaoyan",
     "港澳升学与内地读研": "overseas-study", "Case：第一次考教师编": "applications",
     "在职学历提升进度表": "continuing",

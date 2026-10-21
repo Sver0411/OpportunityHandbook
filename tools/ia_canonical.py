@@ -558,6 +558,8 @@ TREE = """
     如何 Debug：从现象到根因 @d:docs/learning/调试方法
     如何判断自己真的掌握 @d:docs/learning/掌握程度的判断
     用 AI 学习与工作 @d:docs/learning/用AI学习与工作
+    AI 与入门岗位 @d:docs/learning/AI与入门岗位
+    AI 辅助的边界 @d:docs/learning/AI辅助的边界
     账号、数据与隐私 @d:docs/learning/账号数据与隐私
   求职 @d:book/10-专题手册#求职
     一份 JD 到底怎么拆 @d:docs/job-search/JD拆解
@@ -785,6 +787,7 @@ TREE = """
     Case：联系导师的完整过程 @d:docs/cases/联系导师
     Case：第一次开源贡献 @d:docs/cases/第一次开源贡献
     Case：第一次投稿被拒 @d:docs/cases/第一次投稿被拒
+    Case：第一次用 AI 做项目 @d:docs/cases/第一次用AI做项目
   升学与作品 @d:book/13-完整案例#升学与作品
     Case：留学选校从几十个到一份名单 @d:docs/cases/留学选校
     Case：把一次竞赛变成作品集与简历素材 @d:docs/cases/从竞赛到作品集
