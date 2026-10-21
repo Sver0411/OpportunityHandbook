@@ -5796,6 +5796,15 @@
                 "anchor": ""
               },
               "nav_id": "11-02-07"
+            },
+            {
+              "title": "教师资格与教师编",
+              "target": {
+                "type": "doc",
+                "location": "docs/timelines/教师资格与教师编时间线",
+                "anchor": ""
+              },
+              "nav_id": "11-02-08"
             }
           ],
           "nav_id": "11-02"
@@ -5885,13 +5894,31 @@
               "nav_id": "11-05-01"
             },
             {
+              "title": "银行校招",
+              "target": {
+                "type": "doc",
+                "location": "docs/timelines/银行校招时间线",
+                "anchor": ""
+              },
+              "nav_id": "11-05-02"
+            },
+            {
+              "title": "国企与央企校招",
+              "target": {
+                "type": "doc",
+                "location": "docs/timelines/国企央企校招时间线",
+                "anchor": ""
+              },
+              "nav_id": "11-05-03"
+            },
+            {
               "title": "入职第一年",
               "target": {
                 "type": "doc",
                 "location": "docs/timelines/入职第一年",
                 "anchor": ""
               },
-              "nav_id": "11-05-02"
+              "nav_id": "11-05-04"
             }
           ],
           "nav_id": "11-05"
@@ -6989,6 +7016,15 @@
                 "anchor": ""
               },
               "nav_id": "14-05-06"
+            },
+            {
+              "title": "Playbook：第一次考教师资格证",
+              "target": {
+                "type": "doc",
+                "location": "docs/playbooks/第一次考教师资格证",
+                "anchor": ""
+              },
+              "nav_id": "14-05-07"
             }
           ],
           "nav_id": "14-05"

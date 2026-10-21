@@ -699,6 +699,8 @@ TREE = """
     实习准备 @d:docs/timelines/实习准备时间线
   求职与入职 @d:book/11-路径时间线#求职与入职
     校招 @d:docs/timelines/校招时间线
+    银行校招 @d:docs/timelines/银行校招时间线
+    国企与央企校招 @d:docs/timelines/国企央企校招时间线
     入职第一年 @d:docs/timelines/入职第一年
   职业发展与权益 @d:book/11-路径时间线#职业发展与权益
     在职学历提升 @d:docs/timelines/在职学历提升时间线
@@ -820,6 +822,7 @@ TREE = """
     Playbook：第一次准备专升本 @d:docs/playbooks/第一次准备专升本
     Playbook：第一次填志愿 @d:docs/playbooks/第一次填志愿
     Playbook：第一次评估证书 @d:docs/playbooks/第一次评估证书
+    Playbook：第一次考教师资格证 @d:docs/playbooks/第一次考教师资格证
   资助申请 @d:book/14-操作手册#资助申请
     Playbook：第一次申请资助 @d:docs/playbooks/第一次申请资助
   自由职业 @d:book/14-操作手册#自由职业
