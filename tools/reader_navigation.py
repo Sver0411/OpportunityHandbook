@@ -29,6 +29,10 @@ def catalog():
             node("fallback", "主线、备选与退出", "决定投入多少，以及什么时候调整或停止。"),
             node("resources", "资源约束与起步", "信息、时间、经济与关系的差距，分别怎么处理。"),
         ]),
+        node("gaokao", "高考与志愿", "从选科与通道，到出分后的位次、梯度与章程核对。", [
+            node("gaokao-tracks", "通道与特殊类型"),
+            node("gaokao-apply", "志愿填报"),
+        ]),
         node("education", "升学与继续教育", "从学校与专业选择，到读研、留学和工作后进修。", [
             node("school", "学校、专业与城市"), node("vocational", "中职、专科与职业教育"),
             node("graduate", "国内读研", "读研是否值得，以及保研、考研的准备。", [
@@ -133,7 +137,7 @@ GROUP_TASKS = {
 
 # Exact titles for resources whose old parent groups mix unrelated tasks.
 RESOURCE_TASKS = {
-    "高中毕业后的选择": "school", "高中到大学": "school", "中职升学": "vocational",
+    "高中毕业后的选择": "gaokao-tracks", "高中到大学": "gaokao-tracks", "中职升学": "vocational",
     "专升本": "vocational", "本科四年": "academic", "保研": "graduate", "考研": "kaoyan",
     "考公": "civil-apply", "留学申请": "overseas-study", "留学语言考试": "language",
     "四六级": "language", "博士申请": "postgraduate", "硕士阶段": "postgraduate",
@@ -149,7 +153,8 @@ RESOURCE_TASKS = {
     "机会价值判断表": "decide", "Offer 对比表": "offers", "探索复盘模板": "explore",
     "职业资本盘点表": "growth", "转行 Bridge Plan": "change", "导师筛选表": "supervisor",
     "联系导师邮件模板": "supervisor", "留学选校表": "overseas-study", "考研择校对比表": "kaoyan",
-    "上升通道对比表": "vocational", "志愿梯度表": "school", "新生入学检查表": "school", "本科毕设进度表": "publishing", "四六级备考排期表": "language", "留学语言考试排期表": "language",
+    "上升通道对比表": "vocational", "志愿梯度表": "gaokao-apply", "新生入学检查表": "school", "本科毕设进度表": "publishing", "四六级备考排期表": "language", "留学语言考试排期表": "language",
+    "Playbook：第一次填志愿": "gaokao-apply",
     "Research Question Canvas": "literature", "Baseline 与消融设计表": "experiments",
     "实验记录模板": "experiments", "论文精读表（Paper Reading Sheet）": "literature",
     "文献地图（Literature Map）": "literature", "岗位筛选表": "roles", "求职追踪表": "applications", "实习协议核对表": "internships",
@@ -197,7 +202,15 @@ OVERRIDES = {
     "work-study-again": "continuing", "work-postgrad": "continuing",
     "research-choosing-a-lab": "supervisor", "research-literature-reading": "literature",
     "research-writing-and-submission": "publishing", "research-recommendation-letter": "publishing",
-    "work-grad-school-after-work": "continuing", "work-overseas-job": "overseas-work",
+    "work-grad-school-after-work": "continuing",
+    "choose-highschool-subjects": "gaokao-tracks",
+    "gaokao-channels-overview": "gaokao-tracks",
+    "gaokao-qiangji-zongping": "gaokao-tracks",
+    "gaokao-special-programs": "gaokao-tracks",
+    "gaokao-free-tuition": "gaokao-tracks",
+    "gaokao-military-police": "gaokao-tracks",
+    "gaokao-art-sports": "gaokao-tracks",
+    "gaokao-volunteer-ranking": "gaokao-apply", "work-overseas-job": "overseas-work",
     "work-parttime-study-cost": "continuing", "startup-freelance": "independent-start",
     "freelance-clients": "customers", "freelance-stability": "business",
     "freelance-client-concentration": "business", "startup-business-model": "business",

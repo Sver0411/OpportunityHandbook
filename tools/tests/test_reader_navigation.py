@@ -52,12 +52,12 @@ class ReaderNavigation(unittest.TestCase):
         graduate = self.nodes["graduate"]
         self.assertIn("kaoyan", {n["id"] for n in graduate["children"]})
         self.assertTrue(self.nodes["kaoyan"]["refs"])
-        self.assertEqual(len(self.model["topics"]), 10)
+        self.assertEqual(len(self.model["topics"]), 11)
 
     def test_single_catalogue_uses_existing_secondary_overviews(self):
-        self.assertEqual(len(self.model["navigation"]), 14)
+        self.assertEqual(len(self.model["navigation"]), 15)
         self.assertEqual(self.model["navigation"][0]["label"], "内容地图")
-        self.assertEqual([n["label"] for n in self.model["navigation"][1:11]], [n["label"] for n in self.model["topics"]])
+        self.assertEqual([n["label"] for n in self.model["navigation"][1:12]], [n["label"] for n in self.model["topics"]])
         source_docs = {d["location"] for d in self.index["all_docs"]}
         for n in self.nodes.values():
             if n.get("overview"):
