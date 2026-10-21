@@ -87,7 +87,7 @@ last_verified: 2026-09-21
 
 ## 工具、案例与操作手册
 
-`docs/tools/`（50 份表格模板）、`docs/cases/`（20 个完整案例）与 `docs/playbooks/`（29 份操作手册）
+`docs/tools/`（50 份表格模板）、`docs/cases/`（20 个完整案例）与 `docs/playbooks/`（30 份操作手册）
 按用途分别汇总在主线的三章里，避免两处维护：
 
 - [12 工具与模板](../book/12-工具与模板.md)
@@ -101,12 +101,12 @@ last_verified: 2026-09-21
 - 求职：[第一次找技术实习](cases/第一次找技术实习.md) · [第一次在海外找实习](cases/第一次在海外找实习.md) · [两个 Offer 怎么选](cases/两个Offer怎么选.md) · [第一次面试失败](cases/第一次面试失败.md)
 - 工作与生活：[第一次转行](cases/第一次转行.md) · [第一次自由职业客户](cases/第一次自由职业客户.md) · [第一次被欠薪](cases/第一次被欠薪.md) · [第一次买保险](cases/第一次买保险.md) · [第一次看心理科](cases/第一次看心理科.md)
 
-**操作手册一览**（29 份）
+**操作手册一览**（30 份）
 
 - 入学与毕业：[大学新生入学与第一个月](playbooks/大学新生入学与第一个月.md) · [研究生入学第一个月](playbooks/研究生入学第一个月.md) · [家里第一个上大学](playbooks/家里第一个上大学.md) · [本科毕业论文与毕业设计](playbooks/本科毕业论文与毕业设计.md) · [毕业去向与离校手续总清单](playbooks/毕业去向与离校手续总清单.md) · [学籍异常与学校事务申诉](playbooks/学籍异常与学校事务申诉.md) · [兼职与校园诈骗风险](playbooks/兼职与校园诈骗风险.md)
 - 项目与科研：[第一次做项目](playbooks/第一次做项目.md) · [第一次开源贡献](playbooks/第一次开源贡献.md) · [把一项新技术学到能用](playbooks/第一次学新技术.md) · [第一次参加 Hackathon](../book/14-操作手册.md) · [第一次做实验与记录](playbooks/第一次做实验.md) · [第一次写论文](playbooks/第一次写论文.md) · [第一次联系导师](playbooks/第一次联系导师.md)
 - 求职与入职：[第一次找实习](playbooks/第一次找实习.md) · [第一次信息访谈](playbooks/第一次信息访谈.md) · [第一次技术面试](playbooks/第一次技术面试.md) · [第一次谈薪](playbooks/第一次谈薪.md) · [上岸后第一年](playbooks/上岸后第一年.md)
-- 考试与证书：[第一次准备考公笔试](playbooks/第一次准备考公笔试.md) · [第一次准备考研](playbooks/第一次准备考研.md) · [第一次考四六级](playbooks/第一次考四六级.md) · [第一次准备专升本](playbooks/第一次准备专升本.md) · [第一次填志愿](playbooks/第一次填志愿.md) · [第一次评估证书](playbooks/第一次评估证书.md)
+- 考试与证书：[第一次考教师资格证](playbooks/第一次考教师资格证.md) · [第一次准备考公笔试](playbooks/第一次准备考公笔试.md) · [第一次准备考研](playbooks/第一次准备考研.md) · [第一次考四六级](playbooks/第一次考四六级.md) · [第一次准备专升本](playbooks/第一次准备专升本.md) · [第一次填志愿](playbooks/第一次填志愿.md) · [第一次评估证书](playbooks/第一次评估证书.md)
 - 资助、合同与其他：[第一次申请资助](playbooks/第一次申请资助.md) · [第一次接单](playbooks/第一次接单.md) · [第一次核对合同与社保](playbooks/第一次核对合同与社保.md) · [第一次处理劳动争议](playbooks/第一次处理劳动争议.md)
 
 ## 国家与地区 `docs/countries/`
