@@ -4120,6 +4120,15 @@
                 "anchor": ""
               },
               "nav_id": "10-01-07"
+            },
+            {
+              "title": "港澳升学与内地读研",
+              "target": {
+                "type": "doc",
+                "location": "docs/admissions/港澳升学与内地读研",
+                "anchor": ""
+              },
+              "nav_id": "10-01-08"
             }
           ],
           "nav_id": "10-01"
@@ -4672,6 +4681,15 @@
                 "anchor": ""
               },
               "nav_id": "10-07-07"
+            },
+            {
+              "title": "城市选择与落户",
+              "target": {
+                "type": "doc",
+                "location": "docs/cities/城市选择与落户",
+                "anchor": ""
+              },
+              "nav_id": "10-07-08"
             }
           ],
           "nav_id": "10-07"
@@ -5932,13 +5950,22 @@
               "nav_id": "11-06-01"
             },
             {
+              "title": "城市选择",
+              "target": {
+                "type": "doc",
+                "location": "docs/timelines/城市选择时间线",
+                "anchor": ""
+              },
+              "nav_id": "11-06-02"
+            },
+            {
               "title": "转行",
               "target": {
                 "type": "doc",
                 "location": "docs/timelines/转行时间线",
                 "anchor": ""
               },
-              "nav_id": "11-06-02"
+              "nav_id": "11-06-03"
             },
             {
               "title": "海外工作与签证",
@@ -5947,7 +5974,7 @@
                 "location": "docs/timelines/海外工作与签证时间线",
                 "anchor": ""
               },
-              "nav_id": "11-06-03"
+              "nav_id": "11-06-04"
             },
             {
               "title": "离职与纠纷维权",
@@ -5956,7 +5983,7 @@
                 "location": "docs/timelines/离职与纠纷维权",
                 "anchor": ""
               },
-              "nav_id": "11-06-04"
+              "nav_id": "11-06-05"
             }
           ],
           "nav_id": "11-06"
@@ -6689,13 +6716,22 @@
               "nav_id": "13-03-02"
             },
             {
+              "title": "Case：第一次考教师编",
+              "target": {
+                "type": "doc",
+                "location": "docs/cases/第一次考教师编",
+                "anchor": ""
+              },
+              "nav_id": "13-03-03"
+            },
+            {
               "title": "Case：两个 Offer 怎么选",
               "target": {
                 "type": "doc",
                 "location": "docs/cases/两个Offer怎么选",
                 "anchor": ""
               },
-              "nav_id": "13-03-03"
+              "nav_id": "13-03-04"
             },
             {
               "title": "Case：第一次面试失败之后",
@@ -6704,7 +6740,7 @@
                 "location": "docs/cases/第一次面试失败",
                 "anchor": ""
               },
-              "nav_id": "13-03-04"
+              "nav_id": "13-03-05"
             }
           ],
           "nav_id": "13-03"

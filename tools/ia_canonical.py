@@ -506,6 +506,7 @@ TREE = """
     复试与申请面试 @d:docs/admissions/复试与申请面试
     奖学金与资助 @d:docs/manuals/奖学金与资助
     全额资助到底怎么找、怎么看、怎么比较 @d:docs/funding/全额资助与资金包
+    港澳升学与内地读研 @d:docs/admissions/港澳升学与内地读研
   科研 @d:book/10-专题手册#科研
     科研手册 @d:docs/manuals/科研手册
     如何提出 Research Question @d:docs/research-deep/研究问题的提出
@@ -566,6 +567,7 @@ TREE = """
     项目面试：从第一句开始的追问链 @d:docs/job-search/项目面试
     求职失败诊断：从 0 回复到 Offer 质量差 @d:docs/job-search/求职漏斗诊断
     Offer、薪酬结构与劳动合同 @d:docs/job-search/Offer与合同
+    城市选择与落户 @d:docs/cities/城市选择与落户
   职业成长 @d:book/10-专题手册#职业成长
     入职前 90 天：建立可信度 @d:docs/career-growth/入职前三个月
     如何真正学会一份工作 @d:docs/career-growth/学会一份工作
@@ -703,6 +705,7 @@ TREE = """
     入职第一年 @d:docs/timelines/入职第一年
   职业发展与权益 @d:book/11-路径时间线#职业发展与权益
     在职学历提升 @d:docs/timelines/在职学历提升时间线
+    城市选择 @d:docs/timelines/城市选择时间线
     转行 @d:docs/timelines/转行时间线
     海外工作与签证 @d:docs/timelines/海外工作与签证时间线
     离职与纠纷维权 @d:docs/timelines/离职与纠纷维权
@@ -786,6 +789,7 @@ TREE = """
   求职 @d:book/13-完整案例#求职
     Case：第一次找技术实习 @d:docs/cases/第一次找技术实习
     Case：第一次在海外找实习 @d:docs/cases/第一次在海外找实习
+    Case：第一次考教师编 @d:docs/cases/第一次考教师编
     Case：两个 Offer 怎么选 @d:docs/cases/两个Offer怎么选
     Case：第一次面试失败之后 @d:docs/cases/第一次面试失败
   工作、钱与权益 @d:book/13-完整案例#工作钱与权益
