@@ -52,6 +52,7 @@ last_verified: 2026-09-21
 - [留学语言考试时间线](timelines/留学语言考试时间线.md)
 - [四六级时间线](timelines/四六级时间线.md)
 - [博士申请时间线](timelines/博士申请时间线.md)
+- [教师资格与教师编时间线](timelines/教师资格与教师编时间线.md)
 - [硕士阶段时间线](timelines/硕士阶段时间线.md)
 - [博士阶段时间线](timelines/博士阶段时间线.md)
 - [海外在读与身份转换时间线](timelines/海外在读与身份转换时间线.md)

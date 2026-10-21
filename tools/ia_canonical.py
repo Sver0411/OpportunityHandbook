@@ -689,6 +689,7 @@ TREE = """
     留学语言考试 @d:docs/timelines/留学语言考试时间线
     四六级 @d:docs/timelines/四六级时间线
     博士申请 @d:docs/timelines/博士申请时间线
+    教师资格与教师编 @d:docs/timelines/教师资格与教师编时间线
   在读期间 @d:book/11-路径时间线#在读期间
     硕士阶段 @d:docs/timelines/硕士阶段时间线
     博士阶段 @d:docs/timelines/博士阶段时间线
