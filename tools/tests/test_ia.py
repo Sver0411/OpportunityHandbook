@@ -47,7 +47,7 @@ NATURALIZED = [
 # 2026-10-21：首页问题新增 2 条（读研排期 / 读博关卡），对应新增的硕士、博士阶段时间线。
 # 2026-10-21（同日第二批）：首页问题新增 4 条（在职补学历 / 海外在读 / 研究生入学 / 第一代大学生），
 # 并在 04 章新增条目 overseas-during-study（留学在读期间怎么用）。
-BASELINE_ENTRIES = 487
+BASELINE_ENTRIES = 490
 BASELINE_COMPLETE = 432
 
 

@@ -837,3 +837,48 @@ stages: [highschool, undergraduate, college, master]
 
 缺的不是能力，是别人家餐桌上就有的信息。先把钱排清（生源地贷款、困难认定、绿色通道、勤工助学，只走官方渠道），再问八个具体问题（转专业窗口、保研细则、奖学金评定、交换项目、文献库、进组时间等）。家里要钱时给固定数字、区分急难与周转、一律不做担保。
 见 [家里第一个上大学](../docs/playbooks/家里第一个上大学.md) 与 [家里第一个上大学的人怎么找规则](../book/01-先决定下一步往哪里走.md#first-gen-navigate)。
+
+### 想当老师，教资和教师编怎么排？
+
+```meta
+id: q-teacher-path
+kind: question
+status: complete
+link: certificate-what-is-worth-it
+summary: 教资是准入、教师编是上岗，两场考试规则完全不同；先拿证再考编，普通话越早考越好。
+topics: [job, study]
+stages: [undergraduate, new_grad, work_1_3]
+```
+
+教资全国统考、一年两次（笔试面试各两次），教师编各地自组织、时间不统一。顺序是先把证拿到（含普通话与认定），再盯目标地区的招聘公告。注意岗位多限师范与专业对口，年龄也常有上限。
+见 [教师资格与教师编](../docs/timelines/教师资格与教师编时间线.md) 与 [Playbook：第一次考教师资格证](../docs/playbooks/第一次考教师资格证.md)。
+
+### 该去哪个城市工作？
+
+```meta
+id: q-city-choice
+kind: question
+status: complete
+link: choose-city
+summary: 城市要看四笔账：收入、成本、落户、退路；应届落户是唯一的一次性机会，补贴有时限。
+topics: [job, money]
+stages: [undergraduate, master, new_grad]
+```
+
+不要只比月薪，算"到手月薪 − 房租 − 通勤 − 日常"的可支配结余；再确认能不能走应届落户（过期要走社保年限），以及补贴的申请时限。最后一行最容易忽略：那座城市里同行业还有几家可跳。
+见 [城市选择](../docs/timelines/城市选择时间线.md) 与 [城市选择与落户](../docs/cities/城市选择与落户.md)。
+
+### AI 会不会取代我这个岗位？
+
+```meta
+id: q-ai-jobs
+kind: question
+status: complete
+link: skill-ai-tools
+summary: 分三类看：被替代、被放大、几乎不变；用招聘数据与团队实践判断，别信没有口径的百分比。
+topics: [job, digital]
+stages: [undergraduate, master, new_grad, work_1_3]
+```
+
+把岗位拆成十个日常动作，逐个问"产出能否用一段话描述清楚、错了能不能重来"。能的是被替代区，不能的是被放大或不变区。看到"某行业将减少 X%"先问样本、口径与时间范围。
+见 [AI 与入门岗位](../docs/learning/AI与入门岗位.md) 与 [AI 辅助的边界](../docs/learning/AI辅助的边界.md)。

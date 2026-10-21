@@ -162,6 +162,8 @@
 - [本科毕业论文怎么从选题做到答辩？](docs/playbooks/本科毕业论文与毕业设计.md)
 - [读研期间，开题、实习和秋招怎么排？](docs/timelines/硕士阶段时间线.md)
 - [读博期间有哪些必须过的关卡？](docs/timelines/博士阶段时间线.md)
+- [想当老师，教资和教师编怎么排？](docs/timelines/教师资格与教师编时间线.md)
+- [AI 会不会取代我这个岗位？](docs/learning/AI与入门岗位.md)
 - [实习协议要注意什么？](book/04-升学、就业还是出国.md#internship-agreement-rights)
 - [中职毕业，能不能继续升学？](book/01-先决定下一步往哪里走.md#vocational-exam-path)
 - [中职和专科阶段有哪些资助？](book/01-先决定下一步往哪里走.md#vocational-subsidy)
@@ -198,6 +200,7 @@
 ### 我已经工作了
 
 - [工作后想补学历，自考和成考怎么排？](docs/timelines/在职学历提升时间线.md)
+- [该去哪个城市工作？](docs/timelines/城市选择时间线.md)
 - [工作几年以后应该怎么升职？](book/07-从新人到能独立负责.md#work-record-achievements)
 - [什么时候适合第一次跳槽？](book/07-从新人到能独立负责.md#career-job-hopping)
 - [技术路线还是管理路线？](book/08-晋升、跳槽还是转行.md#mgmt-ic-or-manager)
