@@ -153,7 +153,21 @@ python3 tools/audit_claims.py             # 高风险绝对化措辞报告（只
 
 ## 许可证
 
-提交即表示同意正文以 CC BY 4.0、代码以 MIT 发布（见 [LICENSE-CONTENT](LICENSE-CONTENT) 与 [LICENSE](LICENSE)）。
+正文与代码采用不同的许可（见 [LICENSE-CONTENT](LICENSE-CONTENT) 与 [LICENSE](LICENSE)）：
+
+- **正文贡献**（`book/`、`docs/`、`meta/` 与项目介绍文档）：CC BY-NC-ND 4.0（署名—非商业性使用—禁止演绎）；
+- **代码贡献**（`tools/`、`site/`、`.github/` 及其它脚本与配置）：MIT。
+
+提交正文贡献前，请确认以下几点：
+
+1. 内容**由你本人创作**，或你已取得足够授权，可以按 CC BY-NC-ND 4.0 发布；
+2. 不提交未经授权的第三方受版权保护内容（论文全文、官方文件原文、他人图表与图片等）；引用时注明来源，并控制在合理引用的范围内；
+3. 同意你提交的正文贡献以 **CC BY-NC-ND 4.0** 发布，并允许维护者为出版做**必要的编辑**——校对、纠错、统一术语与格式、调整标题层级与链接；代码贡献以 **MIT** 发布；
+4. 提交 PR **不代表转让版权**，也不代表授予本项目商业使用或改编授权，你仍然保留自己作品的版权。
+
+若需要对内容做超出上述范围的改写（改变观点、重写段落、合并条目），维护者会先与你确认，而不会默认视为已获授权。
+
+历史说明：本次变更前接收的正文贡献曾按 CC BY 4.0 发布，那些版本仍可按当时的许可使用，详见 [LICENSE-CONTENT](LICENSE-CONTENT) 的「历史许可说明」。
 
 连续章节由 `tools/build_reader_chapters.py` 输出到 `site/chapters/`，不编辑或另存正文 Markdown。
 `chapter_root` 和 `chapter_for` 指定组合范围；资料与工具、行业岗位查阅入口保留独立文章。

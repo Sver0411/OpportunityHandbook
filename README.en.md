@@ -120,7 +120,7 @@ python3 tools/validate_release.py
 
 ## Reuse and attribution
 
-The handbook text, including this English introduction, is available under [CC BY 4.0](LICENSE-CONTENT). You may share, adapt, and translate it, including for commercial use, with attribution. The site and tooling are available under the [MIT licence](LICENSE).
+The original handbook content is licensed under [CC BY-NC-ND 4.0](LICENSE-CONTENT). Unmodified content may be shared for non-commercial purposes, subject to the license conditions. Commercial use and distribution of adapted material require separate authorization. The site and tooling code is licensed under the [MIT licence](LICENSE).
 
 ---
 

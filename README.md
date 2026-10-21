@@ -13,7 +13,7 @@
 <p>
   <a href="https://github.com/Sver0411/OpportunityHandbook/actions/workflows/ci.yml"><img alt="内容校验" src="https://img.shields.io/github/actions/workflow/status/Sver0411/OpportunityHandbook/ci.yml?branch=main&amp;style=flat-square&amp;label=%E5%86%85%E5%AE%B9%E6%A0%A1%E9%AA%8C"></a>&nbsp;&nbsp;
   <a href="https://github.com/Sver0411/OpportunityHandbook/actions/workflows/pages.yml"><img alt="在线阅读" src="https://img.shields.io/github/actions/workflow/status/Sver0411/OpportunityHandbook/pages.yml?branch=main&amp;style=flat-square&amp;label=%E5%9C%A8%E7%BA%BF%E9%98%85%E8%AF%BB"></a>&nbsp;&nbsp;
-  <a href="LICENSE-CONTENT"><img alt="正文许可：CC BY 4.0" src="https://img.shields.io/badge/%E6%AD%A3%E6%96%87-CC_BY_4.0-5B7F67?style=flat-square"></a>&nbsp;&nbsp;
+  <a href="LICENSE-CONTENT"><img alt="正文许可：CC BY-NC-ND 4.0" src="https://img.shields.io/badge/%E6%AD%A3%E6%96%87-CC_BY--NC--ND_4.0-5B7F67?style=flat-square"></a>&nbsp;&nbsp;
   <a href="LICENSE"><img alt="代码许可：MIT" src="https://img.shields.io/badge/%E4%BB%A3%E7%A0%81-MIT-202620?style=flat-square"></a>
 </p>
 
@@ -309,9 +309,9 @@ python3 tools/validate_release.py
 
 ## 许可
 
-正文（`book/`、`docs/`、`meta/` 和 README）采用 [CC BY 4.0](LICENSE-CONTENT)：署名后可以复制、修改、翻译与商用。站点和工具代码采用 [MIT](LICENSE)。
+正文（`book/`、`docs/`、`meta/` 与项目介绍文档）采用 [CC BY-NC-ND 4.0](LICENSE-CONTENT) 许可。在遵守许可条件的前提下，可以非商业性地分享未修改的内容。未经另行授权，不得将正文用于商业目的或传播修改后的衍生作品。站点和工具代码采用 [MIT](LICENSE)。
 
-知识只有在被用起来以后才有价值。如果你想把它带进课堂、社团、公司培训或翻译成其他语言，不需要事先申请。
+知识只有在被用起来以后才有价值。课堂、社团与读书会可以原样分享；如果要用在公司培训、付费课程，或翻译、改写成其他版本，请先取得授权（说明见 [LICENSE-CONTENT](LICENSE-CONTENT)）。
 
 ---
 

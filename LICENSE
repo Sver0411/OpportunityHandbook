@@ -24,4 +24,9 @@ SOFTWARE.
 
 本文件适用于本仓库的代码部分：tools/、site/、.github/ 及其它脚本与配置文件。
 
-正文内容（book/、docs/、meta/、README.md）采用 CC BY 4.0，见 LICENSE-CONTENT。
+正文内容（book/、docs/、meta/ 与 README 等项目介绍文档）**不适用本许可**，
+采用 CC BY-NC-ND 4.0（署名—非商业性使用—禁止演绎 4.0 国际），详见 LICENSE-CONTENT。
+正文允许非商业性地原样分享，但**不允许商业使用，也不允许传播修改后的衍生版本**。
+
+历史说明：2026-09-21 起至本次变更前的正文版本曾采用 CC BY 4.0。
+已按该许可取得的副本与授权不因本次变更而失效，详见 LICENSE-CONTENT 的「历史许可说明」。
