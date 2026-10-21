@@ -5796,15 +5796,6 @@
                 "anchor": ""
               },
               "nav_id": "11-02-07"
-            },
-            {
-              "title": "教师资格与教师编",
-              "target": {
-                "type": "doc",
-                "location": "docs/timelines/教师资格与教师编时间线",
-                "anchor": ""
-              },
-              "nav_id": "11-02-08"
             }
           ],
           "nav_id": "11-02"
@@ -5969,6 +5960,53 @@
             }
           ],
           "nav_id": "11-06"
+        },
+        {
+          "title": "职业资格与编制",
+          "target": {
+            "type": "doc",
+            "location": "book/11-路径时间线",
+            "anchor": "职业资格与编制"
+          },
+          "children": [
+            {
+              "title": "教师资格与教师编",
+              "target": {
+                "type": "doc",
+                "location": "docs/timelines/教师资格与教师编时间线",
+                "anchor": ""
+              },
+              "nav_id": "11-07-01"
+            },
+            {
+              "title": "法考与实习律师",
+              "target": {
+                "type": "doc",
+                "location": "docs/timelines/法考与实习律师时间线",
+                "anchor": ""
+              },
+              "nav_id": "11-07-02"
+            },
+            {
+              "title": "规培与执业医师",
+              "target": {
+                "type": "doc",
+                "location": "docs/timelines/规培与执业医师时间线",
+                "anchor": ""
+              },
+              "nav_id": "11-07-03"
+            },
+            {
+              "title": "会计与金融证书",
+              "target": {
+                "type": "doc",
+                "location": "docs/timelines/会计与金融证书路径",
+                "anchor": ""
+              },
+              "nav_id": "11-07-04"
+            }
+          ],
+          "nav_id": "11-07"
         }
       ],
       "nav_id": "11"
@@ -6143,6 +6181,15 @@
                 "anchor": ""
               },
               "nav_id": "12-02-11"
+            },
+            {
+              "title": "职业资格路径对照表",
+              "target": {
+                "type": "doc",
+                "location": "docs/tools/职业资格路径对照表",
+                "anchor": ""
+              },
+              "nav_id": "12-02-12"
             }
           ],
           "nav_id": "12-02"

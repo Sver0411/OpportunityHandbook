@@ -689,7 +689,6 @@ TREE = """
     留学语言考试 @d:docs/timelines/留学语言考试时间线
     四六级 @d:docs/timelines/四六级时间线
     博士申请 @d:docs/timelines/博士申请时间线
-    教师资格与教师编 @d:docs/timelines/教师资格与教师编时间线
   在读期间 @d:book/11-路径时间线#在读期间
     硕士阶段 @d:docs/timelines/硕士阶段时间线
     博士阶段 @d:docs/timelines/博士阶段时间线
@@ -707,6 +706,11 @@ TREE = """
     转行 @d:docs/timelines/转行时间线
     海外工作与签证 @d:docs/timelines/海外工作与签证时间线
     离职与纠纷维权 @d:docs/timelines/离职与纠纷维权
+  职业资格与编制 @d:book/11-路径时间线#职业资格与编制
+    教师资格与教师编 @d:docs/timelines/教师资格与教师编时间线
+    法考与实习律师 @d:docs/timelines/法考与实习律师时间线
+    规培与执业医师 @d:docs/timelines/规培与执业医师时间线
+    会计与金融证书 @d:docs/timelines/会计与金融证书路径
 
 12 工具与模板
   做决定与盘点 @d:book/12-工具与模板#做决定与盘点
@@ -727,6 +731,7 @@ TREE = """
     新生入学检查表 @d:docs/tools/新生入学检查表
     本科毕设进度表 @d:docs/tools/毕设进度表
     在职学历提升进度表 @d:docs/tools/在职学历提升进度表
+    职业资格路径对照表 @d:docs/tools/职业资格路径对照表
   科研 @d:book/12-工具与模板#科研
     Research Question Canvas @d:docs/tools/ResearchQuestionCanvas
     Baseline 与消融设计表 @d:docs/tools/Baseline与消融设计表

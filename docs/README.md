@@ -53,6 +53,9 @@ last_verified: 2026-09-21
 - [四六级时间线](timelines/四六级时间线.md)
 - [博士申请时间线](timelines/博士申请时间线.md)
 - [教师资格与教师编时间线](timelines/教师资格与教师编时间线.md)
+- [法考与实习律师时间线](timelines/法考与实习律师时间线.md)
+- [规培与执业医师时间线](timelines/规培与执业医师时间线.md)
+- [会计与金融证书路径](timelines/会计与金融证书路径.md)
 - [硕士阶段时间线](timelines/硕士阶段时间线.md)
 - [博士阶段时间线](timelines/博士阶段时间线.md)
 - [海外在读与身份转换时间线](timelines/海外在读与身份转换时间线.md)
@@ -81,7 +84,7 @@ last_verified: 2026-09-21
 
 ## 工具、案例与操作手册
 
-`docs/tools/`（48 份表格模板）、`docs/cases/`（18 个完整案例）与 `docs/playbooks/`（29 份操作手册）
+`docs/tools/`（49 份表格模板）、`docs/cases/`（18 个完整案例）与 `docs/playbooks/`（29 份操作手册）
 按用途分别汇总在主线的三章里，避免两处维护：
 
 - [12 工具与模板](../book/12-工具与模板.md)
